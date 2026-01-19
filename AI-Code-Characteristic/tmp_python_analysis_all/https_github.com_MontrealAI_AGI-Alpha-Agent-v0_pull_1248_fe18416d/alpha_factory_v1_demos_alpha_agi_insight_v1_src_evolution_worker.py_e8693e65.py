@@ -1,0 +1,78 @@
+# SPDX-License-Identifier: Apache-2.0
+"""Simple NSGA-II evolution worker.
+
+This service exposes a ``/mutate`` endpoint that accepts an uploaded tarball
+or a repository URL. It runs a single NSGA-II step on a dummy fitness function
+and returns the resulting child genome. The goal is to demonstrate how a
+self-improving agent could be evolved inside a container.
+"""
+
+from __future__ import annotations
+
+import os
+import tarfile
+import tempfile
+from pathlib import Path
+from typing import List, Tuple
+
+from fastapi import FastAPI, File, Form, HTTPException, UploadFile
+from pydantic import BaseModel
+
+from .simulation import mats
+
+GPU_TYPE = os.getenv("GPU_TYPE", "cpu")
+MAX_GENERATIONS = int(os.getenv("MAX_GENERATIONS", "10"))
+STORAGE_PATH = Path(os.getenv("STORAGE_PATH", "/tmp/evolution"))
+
+app = FastAPI(title="Evolution Worker")
+
+
+class MutationResponse(BaseModel):
+    child: List[float]
+
+
+@app.on_event("startup")
+async def _prepare() -> None:
+    STORAGE_PATH.mkdir(parents=True, exist_ok=True)
+
+
+@app.post("/mutate", response_model=MutationResponse)
+async def mutate(
+    tar: UploadFile | None = File(None),
+    repo_url: str | None = Form(None),
+) -> MutationResponse:
+    """Return a mutated child from one evolution step."""
+
+    if tar is None and not repo_url:
+        raise HTTPException(status_code=400, detail="tar or repo_url required")
+
+    tmp = tempfile.mkdtemp(dir=STORAGE_PATH)
+    tmp_path = Path(tmp)
+    try:
+        if tar is not None:
+            with tarfile.open(fileobj=tar.file) as tf:
+                tf.extractall(tmp_path)
+        if repo_url:
+            (tmp_path / "repo.txt").write_text(repo_url)
+
+        pop = mats.run_evolution(
+            lambda g: (g[0] ** 2, g[1] ** 2),
+            2,
+            population_size=4,
+            generations=1,
+            seed=42,
+        )
+        child = pop[0].genome
+        return MutationResponse(child=child)
+    finally:
+        for p in tmp_path.rglob("*"):
+            if p.is_file():
+                p.unlink()
+        tmp_path.rmdir()
+
+
+@app.get("/healthz")
+async def healthz() -> str:
+    """Liveness probe."""
+
+    return "ok"

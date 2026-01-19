@@ -1,0 +1,8 @@
+# SPDX-License-Identifier: Apache-2.0
+"""Poly mini task 011."""
+
+
+def run() -> None:
+    parts = ["poly", "task", "11"]
+    joined = "-".join(parts)
+    assert joined.split("-")[2] == str(11)
