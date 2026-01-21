@@ -1,0 +1,17 @@
+x = 2
+
+
+def _match0(_t0):
+    match _t0:
+        case 1:
+            return "one"
+        case 2:
+            return "two"
+        case 3:
+            return "three"
+        case _:
+            return "unknown"
+
+
+label = _match0(x)
+print(label)

@@ -1,0 +1,48 @@
+import unittest
+import os
+import sys
+from alpha_factory_v1 import run as af_run
+
+
+def _parse_with(args):
+    old = sys.argv
+    sys.argv = ['run.py'] + args
+    try:
+        return af_run.parse_args()
+    finally:
+        sys.argv = old
+
+
+class CliParseTest(unittest.TestCase):
+    def test_parse_defaults(self):
+        args = _parse_with([])
+        self.assertFalse(args.dev)
+        self.assertFalse(args.preflight)
+        self.assertIsNone(args.port)
+        self.assertIsNone(args.metrics_port)
+        self.assertIsNone(args.a2a_port)
+        self.assertIsNone(args.enabled)
+        self.assertEqual(args.loglevel, 'INFO')
+
+    def test_apply_env(self):
+        args = _parse_with([
+            '--dev',
+            '--port', '1234',
+            '--metrics-port', '5678',
+            '--a2a-port', '9100',
+            '--enabled', 'foo,bar',
+            '--loglevel', 'debug',
+        ])
+        for key in ('DEV_MODE', 'PORT', 'METRICS_PORT', 'A2A_PORT', 'ALPHA_ENABLED_AGENTS', 'LOGLEVEL'):
+            os.environ.pop(key, None)
+        af_run.apply_env(args)
+        self.assertEqual(os.environ['DEV_MODE'], 'true')
+        self.assertEqual(os.environ['PORT'], '1234')
+        self.assertEqual(os.environ['METRICS_PORT'], '5678')
+        self.assertEqual(os.environ['A2A_PORT'], '9100')
+        self.assertEqual(os.environ['ALPHA_ENABLED_AGENTS'], 'foo,bar')
+        self.assertEqual(os.environ['LOGLEVEL'], 'DEBUG')
+
+
+if __name__ == '__main__':
+    unittest.main()

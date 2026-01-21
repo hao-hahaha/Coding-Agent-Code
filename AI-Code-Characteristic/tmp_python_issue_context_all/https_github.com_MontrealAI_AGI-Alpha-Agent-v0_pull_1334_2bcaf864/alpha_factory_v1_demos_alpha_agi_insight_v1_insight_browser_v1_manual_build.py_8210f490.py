@@ -1,0 +1,74 @@
+import os, re, sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+index_html = ROOT / 'index.html'
+dist_dir = ROOT / 'dist'
+lib_dir = ROOT / 'lib'
+src_dir = ROOT / 'src'
+
+html = index_html.read_text()
+match = re.search(r'<script type="module">([\s\S]*?)</script>', html)
+if not match:
+    sys.exit('inline module not found')
+entry = match.group(1)
+
+def find_deps(code):
+    deps = []
+    for imp in re.findall(r"import[^'\"]*['\"](.*?)['\"]", code):
+        if imp.startswith('.'): # relative
+            deps.append(imp)
+    return deps
+
+processed = {}
+order = []
+
+def process_module(path):
+    path = Path(path)
+    if path in processed:
+        return
+    code = path.read_text()
+    for dep in find_deps(code):
+        dep_path = (path.parent / dep).resolve()
+        if not dep_path.exists():
+            dep_path = (ROOT / dep.lstrip('./')).resolve()
+        if dep_path.exists():
+            process_module(dep_path)
+    # strip import lines
+    code = re.sub(r'^\s*import[^\n]*\n', '', code, flags=re.MULTILINE)
+    # strip export keywords
+    code = re.sub(r'^\s*export\s+', '', code, flags=re.MULTILINE)
+    processed[path] = code
+    order.append(path)
+
+for dep in find_deps(entry):
+    dep_path = (ROOT / dep).resolve()
+    process_module(dep_path)
+
+# process lib/bundle.esm.min.js if referenced
+if (lib_dir / 'bundle.esm.min.js').exists():
+    lib_code = (lib_dir / 'bundle.esm.min.js').read_text()
+    lib_code = re.sub(r'^\s*export\s+', '', lib_code, flags=re.MULTILINE)
+    processed[lib_dir / 'bundle.esm.min.js'] = lib_code
+    order.insert(0, lib_dir / 'bundle.esm.min.js')
+
+entry_code = re.sub(r'^\s*import[^\n]*\n', '', entry, flags=re.MULTILINE)
+
+bundle = '(function() {\n' + '\n'.join(processed[p] for p in order) + '\n' + entry_code + '\n})();\n'
+
+dist_dir.mkdir(exist_ok=True)
+(dist_dir / 'app.js').write_text(bundle)
+
+out_html = re.sub(r'<script type="module">([\s\S]*?)</script>', '<script src="app.js"></script>', html)
+out_html = out_html.replace('src/ui/controls.css', 'controls.css')
+(dist_dir / 'index.html').write_text(out_html)
+
+# copy assets
+for src, dest in [
+    ('style.css', 'style.css'),
+    ('src/ui/controls.css', 'controls.css'),
+    ('d3.v7.min.js', 'd3.v7.min.js'),
+    ('lib/bundle.esm.min.js', 'bundle.esm.min.js'),
+]:
+    if (ROOT / src).exists():
+        (dist_dir / dest).write_bytes((ROOT / src).read_bytes())

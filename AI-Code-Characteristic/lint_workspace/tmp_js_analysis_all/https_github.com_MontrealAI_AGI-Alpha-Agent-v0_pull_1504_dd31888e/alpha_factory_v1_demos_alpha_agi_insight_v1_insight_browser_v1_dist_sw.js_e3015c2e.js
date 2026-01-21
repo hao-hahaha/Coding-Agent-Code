@@ -1,0 +1,3 @@
+importScripts('workbox-sw.js');
+
+const CACHE_VERSION="0.1.0";workbox.core.setCacheNameDetails({prefix:CACHE_VERSION});workbox.precaching.precacheAndRoute(self.__WB_MANIFEST||[]);workbox.routing.registerRoute(({request:urlrequest,url})=>urlrequest.destination==="script"||urlrequest.destination==="worker"||urlrequest.destination==="font"||url.pathname.endsWith(".wasm")||url.pathname.includes("/ipfs/")&&url.pathname.endsWith(".json"),new workbox.strategies.CacheFirst({cacheName:`${CACHE_VERSION}-assets`}));self.addEventListener("message",e=>{e.data&&"SKIP_WAITING"===e.data.type&&self.skipWaiting()});self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(n=>Promise.all(n.map(n=>n.startsWith(CACHE_VERSION)?void 0:caches.delete(n)))))})

@@ -1,0 +1,65 @@
+import os
+import shutil
+import sys
+from pathlib import Path
+
+MIN_PY = (3, 9)
+
+COLORS = {
+    'RED': '\033[31m',
+    'GREEN': '\033[32m',
+    'YELLOW': '\033[33m',
+    'RESET': '\033[0m',
+}
+
+def banner(msg: str, color: str = 'GREEN') -> None:
+    color_code = COLORS.get(color.upper(), '')
+    reset = COLORS['RESET']
+    print(f"{color_code}{msg}{reset}")
+
+
+def check_python() -> bool:
+    if sys.version_info < MIN_PY:
+        banner(f"Python {MIN_PY[0]}.{MIN_PY[1]}+ required", 'RED')
+        return False
+    banner(f"Python {sys.version.split()[0]} detected", 'GREEN')
+    return True
+
+
+def check_cmd(cmd: str) -> bool:
+    if shutil.which(cmd):
+        banner(f"{cmd} found", 'GREEN')
+        return True
+    banner(f"{cmd} missing", 'RED')
+    return False
+
+
+def ensure_dir(path: Path) -> None:
+    if not path.exists():
+        path.mkdir(parents=True, exist_ok=True)
+        banner(f"Created {path}", 'YELLOW')
+    else:
+        banner(f"Using {path}", 'GREEN')
+
+
+def main() -> None:
+    banner("Alpha-Factory Preflight Check", 'YELLOW')
+    ok = True
+    ok &= check_python()
+    ok &= check_cmd('docker')
+    ensure_dir(Path('/var/alphafactory'))
+
+    for key in ('OPENAI_API_KEY', 'ANTHROPIC_API_KEY'):
+        if os.getenv(key):
+            banner(f"{key} set", 'GREEN')
+        else:
+            banner(f"{key} not set", 'YELLOW')
+
+    if not ok:
+        banner('Preflight checks failed. Please install required dependencies.', 'RED')
+        sys.exit(1)
+
+    banner('Environment looks good. You can now run install_alpha_factory_pro.sh', 'GREEN')
+
+if __name__ == '__main__':
+    main()
