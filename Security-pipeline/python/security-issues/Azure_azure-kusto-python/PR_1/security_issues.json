@@ -1,0 +1,174 @@
+{
+  "sarif_path": "codeql-reports/Azure_azure-kusto-python/PR_1/python_security_report.sarif",
+  "security_issue_count": 6,
+  "issues": [
+    {
+      "rule_id": "py/incomplete-url-substring-sanitization",
+      "message": "The string [https://cluster.kusto.windows.net](1) may be at an arbitrary position in the sanitized URL.",
+      "level": null,
+      "file": "azure-kusto-data/tests/test_cloud_settings.py",
+      "start_line": 96,
+      "end_line": null,
+      "start_column": 12,
+      "end_column": 77,
+      "rule": {
+        "rule_id": "py/incomplete-url-substring-sanitization",
+        "name": "py/incomplete-url-substring-sanitization",
+        "short_description": "Incomplete URL substring sanitization",
+        "full_description": "Security checks on the substrings of an unparsed URL are often vulnerable to bypassing.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/incomplete-url-substring-sanitization",
+      "message": "The string [https://cluster.kusto.windows.net:443](1) may be at an arbitrary position in the sanitized URL.",
+      "level": null,
+      "file": "azure-kusto-data/tests/test_cloud_settings.py",
+      "start_line": 97,
+      "end_line": null,
+      "start_column": 12,
+      "end_column": 81,
+      "rule": {
+        "rule_id": "py/incomplete-url-substring-sanitization",
+        "name": "py/incomplete-url-substring-sanitization",
+        "short_description": "Incomplete URL substring sanitization",
+        "full_description": "Security checks on the substrings of an unparsed URL are often vulnerable to bypassing.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/incomplete-url-substring-sanitization",
+      "message": "The string [.kusto.windows.net](1) may be at an arbitrary position in the sanitized URL.",
+      "level": null,
+      "file": "azure-kusto-data/tests/test_well_known_kusto_endpoints.py",
+      "start_line": 23,
+      "end_line": null,
+      "start_column": 26,
+      "end_column": 60,
+      "rule": {
+        "rule_id": "py/incomplete-url-substring-sanitization",
+        "name": "py/incomplete-url-substring-sanitization",
+        "short_description": "Incomplete URL substring sanitization",
+        "full_description": "Security checks on the substrings of an unparsed URL are often vulnerable to bypassing.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/incomplete-url-substring-sanitization",
+      "message": "The string [kusto.aria.microsoft.com](1) may be at an arbitrary position in the sanitized URL.",
+      "level": null,
+      "file": "azure-kusto-data/tests/test_well_known_kusto_endpoints.py",
+      "start_line": 24,
+      "end_line": null,
+      "start_column": 24,
+      "end_column": 62,
+      "rule": {
+        "rule_id": "py/incomplete-url-substring-sanitization",
+        "name": "py/incomplete-url-substring-sanitization",
+        "short_description": "Incomplete URL substring sanitization",
+        "full_description": "Security checks on the substrings of an unparsed URL are often vulnerable to bypassing.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/incomplete-url-substring-sanitization",
+      "message": "The string [data.microsoft.com](1) may be at an arbitrary position in the sanitized URL.",
+      "level": null,
+      "file": "azure-kusto-data/tests/test_well_known_kusto_endpoints.py",
+      "start_line": 111,
+      "end_line": null,
+      "start_column": 42,
+      "end_column": 67,
+      "rule": {
+        "rule_id": "py/incomplete-url-substring-sanitization",
+        "name": "py/incomplete-url-substring-sanitization",
+        "short_description": "Incomplete URL substring sanitization",
+        "full_description": "Security checks on the substrings of an unparsed URL are often vulnerable to bypassing.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/incomplete-url-substring-sanitization",
+      "message": "The string [fabric.microsoft.com](1) may be at an arbitrary position in the sanitized URL.",
+      "level": null,
+      "file": "azure-kusto-data/tests/test_well_known_kusto_endpoints.py",
+      "start_line": 111,
+      "end_line": null,
+      "start_column": 71,
+      "end_column": 98,
+      "rule": {
+        "rule_id": "py/incomplete-url-substring-sanitization",
+        "name": "py/incomplete-url-substring-sanitization",
+        "short_description": "Incomplete URL substring sanitization",
+        "full_description": "Security checks on the substrings of an unparsed URL are often vulnerable to bypassing.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020"
+        ]
+      }
+    }
+  ]
+}

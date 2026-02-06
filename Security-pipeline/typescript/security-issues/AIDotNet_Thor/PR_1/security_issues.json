@@ -1,0 +1,35 @@
+{
+  "sarif_path": "codeql-reports/AIDotNet_Thor/PR_1/typescript_security_report.sarif",
+  "security_issue_count": 1,
+  "issues": [
+    {
+      "rule_id": "js/user-controlled-bypass",
+      "message": "This condition guards a sensitive [action](1), but a [user-provided value](2) controls it.",
+      "level": null,
+      "file": "lobe/src/pages/login/page.tsx",
+      "start_line": 212,
+      "end_line": null,
+      "start_column": 21,
+      "end_column": 33,
+      "rule": {
+        "rule_id": "js/user-controlled-bypass",
+        "name": "js/user-controlled-bypass",
+        "short_description": "User-controlled bypass of security check",
+        "full_description": "Conditions that the user controls are not suited for making security-related decisions.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-807",
+          "external/cwe/cwe-290"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-807",
+          "external/cwe/cwe-290"
+        ]
+      }
+    }
+  ]
+}

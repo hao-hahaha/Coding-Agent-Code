@@ -1,0 +1,34 @@
+{
+  "sarif_path": "codeql-reports/AliAkhtari78_SpotifyScraper/PR_1/python_security_report.sarif",
+  "security_issue_count": 1,
+  "issues": [
+    {
+      "rule_id": "py/incomplete-url-substring-sanitization",
+      "message": "The string [https://open.spotify.com](1) may be at an arbitrary position in the sanitized URL.",
+      "level": null,
+      "file": "track_extractor.py",
+      "start_line": 60,
+      "end_line": null,
+      "start_column": 12,
+      "end_column": 54,
+      "rule": {
+        "rule_id": "py/incomplete-url-substring-sanitization",
+        "name": "py/incomplete-url-substring-sanitization",
+        "short_description": "Incomplete URL substring sanitization",
+        "full_description": "Security checks on the substrings of an unparsed URL are often vulnerable to bypassing.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020"
+        ]
+      }
+    }
+  ]
+}

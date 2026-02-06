@@ -1,0 +1,95 @@
+{
+  "sarif_path": "codeql-reports/Arize-ai_phoenix/PR_5/python_security_report.sarif",
+  "security_issue_count": 3,
+  "issues": [
+    {
+      "rule_id": "py/clear-text-logging-sensitive-data",
+      "message": "This expression logs [sensitive data (secret)](1) as clear text.\nThis expression logs [sensitive data (secret)](2) as clear text.",
+      "level": null,
+      "file": "src/phoenix/server/app.py",
+      "start_line": 940,
+      "end_line": 943,
+      "start_column": 13,
+      "end_column": 37,
+      "rule": {
+        "rule_id": "py/clear-text-logging-sensitive-data",
+        "name": "py/clear-text-logging-sensitive-data",
+        "short_description": "Clear-text logging of sensitive information",
+        "full_description": "Logging sensitive information without encryption or hashing can expose it to an attacker.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-312",
+          "external/cwe/cwe-359",
+          "external/cwe/cwe-532"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-312",
+          "external/cwe/cwe-359",
+          "external/cwe/cwe-532"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/polynomial-redos",
+      "message": "This [regular expression](1) that depends on a [user-provided value](2) may run slow on strings starting with '!@!.' and with many repetitions of '!.'.",
+      "level": null,
+      "file": "src/phoenix/auth.py",
+      "start_line": 61,
+      "end_line": null,
+      "start_column": 28,
+      "end_column": 33,
+      "rule": {
+        "rule_id": "py/polynomial-redos",
+        "name": "py/polynomial-redos",
+        "short_description": "Polynomial regular expression used on uncontrolled data",
+        "full_description": "A regular expression that can require polynomial time to match may be vulnerable to denial-of-service attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/jinja2/autoescape-false",
+      "message": "Using jinja2 templates with autoescape=False can potentially allow XSS attacks.",
+      "level": null,
+      "file": "src/phoenix/server/main.py",
+      "start_line": 86,
+      "end_line": null,
+      "start_column": 20,
+      "end_column": 52,
+      "rule": {
+        "rule_id": "py/jinja2/autoescape-false",
+        "name": "py/jinja2/autoescape-false",
+        "short_description": "Jinja2 templating with autoescape=False",
+        "full_description": "Using jinja2 templates with 'autoescape=False' can cause a cross-site scripting vulnerability.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-079"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079"
+        ]
+      }
+    }
+  ]
+}

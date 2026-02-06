@@ -1,0 +1,60 @@
+{
+  "sarif_path": "codeql-reports/DannyMac180_meta-agent/PR_45/python_security_report.sarif",
+  "security_issue_count": 2,
+  "issues": [
+    {
+      "rule_id": "py/jinja2/autoescape-false",
+      "message": "Using jinja2 templates with autoescape=False can potentially allow XSS attacks.",
+      "level": null,
+      "file": "src/meta_agent/template_engine.py",
+      "start_line": 13,
+      "end_line": null,
+      "start_column": 20,
+      "end_column": 71,
+      "rule": {
+        "rule_id": "py/jinja2/autoescape-false",
+        "name": "py/jinja2/autoescape-false",
+        "short_description": "Jinja2 templating with autoescape=False",
+        "full_description": "Using jinja2 templates with 'autoescape=False' can cause a cross-site scripting vulnerability.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-079"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/jinja2/autoescape-false",
+      "message": "Using jinja2 templates with autoescape=False can potentially allow XSS attacks.",
+      "level": null,
+      "file": "src/meta_agent/generators/tool_code_generator.py",
+      "start_line": 43,
+      "end_line": 47,
+      "start_column": 38,
+      "end_column": 14,
+      "rule": {
+        "rule_id": "py/jinja2/autoescape-false",
+        "name": "py/jinja2/autoescape-false",
+        "short_description": "Jinja2 templating with autoescape=False",
+        "full_description": "Using jinja2 templates with 'autoescape=False' can cause a cross-site scripting vulnerability.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-079"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079"
+        ]
+      }
+    }
+  ]
+}

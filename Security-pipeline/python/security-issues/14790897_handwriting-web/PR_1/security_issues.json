@@ -1,0 +1,320 @@
+{
+  "sarif_path": "codeql-reports/14790897_handwriting-web/PR_1/python_security_report.sarif",
+  "security_issue_count": 11,
+  "issues": [
+    {
+      "rule_id": "py/stack-trace-exposure",
+      "message": "[Stack trace information](1) flows to this location and may be exposed to an external user.",
+      "level": null,
+      "file": "backend/app.py",
+      "start_line": 370,
+      "end_line": null,
+      "start_column": 28,
+      "end_column": 66,
+      "rule": {
+        "rule_id": "py/stack-trace-exposure",
+        "name": "py/stack-trace-exposure",
+        "short_description": "Information exposure through an exception",
+        "full_description": "Leaking information about an exception, such as messages and stack traces, to an external user can expose implementation details that are useful to an attacker for developing a subsequent exploit.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-209",
+          "external/cwe/cwe-497"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "5.4",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-209",
+          "external/cwe/cwe-497"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/stack-trace-exposure",
+      "message": "[Stack trace information](1) flows to this location and may be exposed to an external user.",
+      "level": null,
+      "file": "backend/app.py",
+      "start_line": 775,
+      "end_line": null,
+      "start_column": 28,
+      "end_column": 70,
+      "rule": {
+        "rule_id": "py/stack-trace-exposure",
+        "name": "py/stack-trace-exposure",
+        "short_description": "Information exposure through an exception",
+        "full_description": "Leaking information about an exception, such as messages and stack traces, to an external user can expose implementation details that are useful to an attacker for developing a subsequent exploit.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-209",
+          "external/cwe/cwe-497"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "5.4",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-209",
+          "external/cwe/cwe-497"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/flask-debug",
+      "message": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "level": null,
+      "file": "backend/app.py",
+      "start_line": 997,
+      "end_line": null,
+      "start_column": 5,
+      "end_column": 51,
+      "rule": {
+        "rule_id": "py/flask-debug",
+        "name": "py/flask-debug",
+        "short_description": "Flask app is run in debug mode",
+        "full_description": "Running a Flask app in debug mode may allow an attacker to run arbitrary code through the Werkzeug debugger.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-215",
+          "external/cwe/cwe-489"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-215",
+          "external/cwe/cwe-489"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/flask-debug",
+      "message": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "level": null,
+      "file": "backend/app.py",
+      "start_line": 992,
+      "end_line": null,
+      "start_column": 5,
+      "end_column": 51,
+      "rule": {
+        "rule_id": "py/flask-debug",
+        "name": "py/flask-debug",
+        "short_description": "Flask app is run in debug mode",
+        "full_description": "Running a Flask app in debug mode may allow an attacker to run arbitrary code through the Werkzeug debugger.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-215",
+          "external/cwe/cwe-489"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-215",
+          "external/cwe/cwe-489"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/insecure-temporary-file",
+      "message": "Call to deprecated function tempfile.mktemp may be insecure.",
+      "level": null,
+      "file": "backend/pdf.py",
+      "start_line": 37,
+      "end_line": null,
+      "start_column": 30,
+      "end_column": 74,
+      "rule": {
+        "rule_id": "py/insecure-temporary-file",
+        "name": "py/insecure-temporary-file",
+        "short_description": "Insecure temporary file",
+        "full_description": "Creating a temporary file using this method may be insecure.",
+        "tags": [
+          "external/cwe/cwe-377",
+          "security"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.0",
+        "sub_severity": "high",
+        "cwe": [
+          "external/cwe/cwe-377"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/path-injection",
+      "message": "This path depends on a [user-provided value](1).",
+      "level": null,
+      "file": "backend/app.py",
+      "start_line": 564,
+      "end_line": null,
+      "start_column": 23,
+      "end_column": 32,
+      "rule": {
+        "rule_id": "py/path-injection",
+        "name": "py/path-injection",
+        "short_description": "Uncontrolled data used in path expression",
+        "full_description": "Accessing paths influenced by users can allow an attacker to access unexpected resources.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-022",
+          "external/cwe/cwe-023",
+          "external/cwe/cwe-036",
+          "external/cwe/cwe-073",
+          "external/cwe/cwe-099"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.5",
+        "sub_severity": "high",
+        "cwe": [
+          "external/cwe/cwe-022",
+          "external/cwe/cwe-023",
+          "external/cwe/cwe-036",
+          "external/cwe/cwe-073",
+          "external/cwe/cwe-099"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/overly-permissive-file",
+      "message": "Overly permissive mask in chmod sets file to world writable.",
+      "level": null,
+      "file": "backend/app.py",
+      "start_line": 127,
+      "end_line": null,
+      "start_column": 13,
+      "end_column": 39,
+      "rule": {
+        "rule_id": "py/overly-permissive-file",
+        "name": "py/overly-permissive-file",
+        "short_description": "Overly permissive file permissions",
+        "full_description": "Allowing files to be readable or writable by users other than the owner may allow sensitive information to be accessed.",
+        "tags": [
+          "external/cwe/cwe-732",
+          "security"
+        ],
+        "precision": "medium",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": "high",
+        "cwe": [
+          "external/cwe/cwe-732"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/log-injection",
+      "message": "This log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "backend/app.py",
+      "start_line": 444,
+      "end_line": null,
+      "start_column": 25,
+      "end_column": 50,
+      "rule": {
+        "rule_id": "py/log-injection",
+        "name": "py/log-injection",
+        "short_description": "Log Injection",
+        "full_description": "Building log entries from user-controlled data is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/log-injection",
+      "message": "This log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "backend/app.py",
+      "start_line": 557,
+      "end_line": null,
+      "start_column": 21,
+      "end_column": 50,
+      "rule": {
+        "rule_id": "py/log-injection",
+        "name": "py/log-injection",
+        "short_description": "Log Injection",
+        "full_description": "Building log entries from user-controlled data is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/log-injection",
+      "message": "This log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "backend/app.py",
+      "start_line": 562,
+      "end_line": null,
+      "start_column": 25,
+      "end_column": 50,
+      "rule": {
+        "rule_id": "py/log-injection",
+        "name": "py/log-injection",
+        "short_description": "Log Injection",
+        "full_description": "Building log entries from user-controlled data is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/log-injection",
+      "message": "This log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "backend/app.py",
+      "start_line": 616,
+      "end_line": null,
+      "start_column": 17,
+      "end_column": 54,
+      "rule": {
+        "rule_id": "py/log-injection",
+        "name": "py/log-injection",
+        "short_description": "Log Injection",
+        "full_description": "Building log entries from user-controlled data is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    }
+  ]
+}

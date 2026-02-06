@@ -1,0 +1,616 @@
+{
+  "sarif_path": "codeql-reports/Azure_autorest.typescript/PR_1/typescript_security_report.sarif",
+  "security_issue_count": 20,
+  "issues": [
+    {
+      "rule_id": "js/identity-replacement",
+      "message": "This replaces '>' with itself.",
+      "level": null,
+      "file": "packages/autorest.typescript/src/utils/valueHelpers.ts",
+      "start_line": 158,
+      "end_line": null,
+      "start_column": 18,
+      "end_column": 22,
+      "rule": {
+        "rule_id": "js/identity-replacement",
+        "name": "js/identity-replacement",
+        "short_description": "Replacement of a substring with itself",
+        "full_description": "Replacing a substring with itself has no effect and may indicate a mistake.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "very-high",
+        "problem_severity": "warning",
+        "security_severity": "5.0",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/identity-replacement",
+      "message": "This replaces '<' with itself.",
+      "level": null,
+      "file": "packages/autorest.typescript/src/utils/valueHelpers.ts",
+      "start_line": 159,
+      "end_line": null,
+      "start_column": 18,
+      "end_column": 22,
+      "rule": {
+        "rule_id": "js/identity-replacement",
+        "name": "js/identity-replacement",
+        "short_description": "Replacement of a substring with itself",
+        "full_description": "Replacing a substring with itself has no effect and may indicate a mistake.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "very-high",
+        "problem_severity": "warning",
+        "security_severity": "5.0",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/identity-replacement",
+      "message": "This replaces '>' with itself.",
+      "level": null,
+      "file": "packages/typespec-ts/src/modular/emitSamples.ts",
+      "start_line": 418,
+      "end_line": null,
+      "start_column": 22,
+      "end_column": 26,
+      "rule": {
+        "rule_id": "js/identity-replacement",
+        "name": "js/identity-replacement",
+        "short_description": "Replacement of a substring with itself",
+        "full_description": "Replacing a substring with itself has no effect and may indicate a mistake.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "very-high",
+        "problem_severity": "warning",
+        "security_severity": "5.0",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/identity-replacement",
+      "message": "This replaces '<' with itself.",
+      "level": null,
+      "file": "packages/typespec-ts/src/modular/emitSamples.ts",
+      "start_line": 419,
+      "end_line": null,
+      "start_column": 22,
+      "end_column": 26,
+      "rule": {
+        "rule_id": "js/identity-replacement",
+        "name": "js/identity-replacement",
+        "short_description": "Replacement of a substring with itself",
+        "full_description": "Replacing a substring with itself has no effect and may indicate a mistake.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "very-high",
+        "problem_severity": "warning",
+        "security_severity": "5.0",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/incomplete-url-substring-sanitization",
+      "message": "'[http://usethisone.com](1)' may be followed by an arbitrary host name.",
+      "level": null,
+      "file": "packages/autorest.typescript/test/integration/azureSpecialProperties.spec.ts",
+      "start_line": 426,
+      "end_line": null,
+      "start_column": 21,
+      "end_column": 79,
+      "rule": {
+        "rule_id": "js/incomplete-url-substring-sanitization",
+        "name": "js/incomplete-url-substring-sanitization",
+        "short_description": "Incomplete URL substring sanitization",
+        "full_description": "Security checks on the substrings of an unparsed URL are often vulnerable to bypassing.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/incomplete-sanitization",
+      "message": "This does not escape backslash characters in the input.",
+      "level": null,
+      "file": "packages/autorest.typescript/src/restLevelClient/mutateCodeModel.ts",
+      "start_line": 43,
+      "end_line": null,
+      "start_column": 41,
+      "end_column": 84,
+      "rule": {
+        "rule_id": "js/incomplete-sanitization",
+        "name": "js/incomplete-sanitization",
+        "short_description": "Incomplete string escaping or encoding",
+        "full_description": "A string transformer that does not replace or escape all occurrences of a meta-character may be ineffective.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-080",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-080",
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/incomplete-sanitization",
+      "message": "This does not escape backslash characters in the input.",
+      "level": null,
+      "file": "packages/autorest.typescript/src/restLevelClient/mutateCodeModel.ts",
+      "start_line": 47,
+      "end_line": null,
+      "start_column": 41,
+      "end_column": 84,
+      "rule": {
+        "rule_id": "js/incomplete-sanitization",
+        "name": "js/incomplete-sanitization",
+        "short_description": "Incomplete string escaping or encoding",
+        "full_description": "A string transformer that does not replace or escape all occurrences of a meta-character may be ineffective.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-080",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-080",
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/incomplete-sanitization",
+      "message": "This does not escape backslash characters in the input.",
+      "level": null,
+      "file": "packages/autorest.typescript/src/restLevelClient/mutateCodeModel.ts",
+      "start_line": 51,
+      "end_line": null,
+      "start_column": 41,
+      "end_column": 84,
+      "rule": {
+        "rule_id": "js/incomplete-sanitization",
+        "name": "js/incomplete-sanitization",
+        "short_description": "Incomplete string escaping or encoding",
+        "full_description": "A string transformer that does not replace or escape all occurrences of a meta-character may be ineffective.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-080",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-080",
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/incomplete-sanitization",
+      "message": "This does not escape backslash characters in the input.",
+      "level": null,
+      "file": "packages/rlc-common/src/buildClientDefinitions.ts",
+      "start_line": 181,
+      "end_line": 183,
+      "start_column": 26,
+      "end_column": 19,
+      "rule": {
+        "rule_id": "js/incomplete-sanitization",
+        "name": "js/incomplete-sanitization",
+        "short_description": "Incomplete string escaping or encoding",
+        "full_description": "A string transformer that does not replace or escape all occurrences of a meta-character may be ineffective.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-080",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-080",
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/incomplete-sanitization",
+      "message": "This does not escape backslash characters in the input.",
+      "level": null,
+      "file": "packages/rlc-common/src/buildClientDefinitions.ts",
+      "start_line": 181,
+      "end_line": 182,
+      "start_column": 26,
+      "end_column": 19,
+      "rule": {
+        "rule_id": "js/incomplete-sanitization",
+        "name": "js/incomplete-sanitization",
+        "short_description": "Incomplete string escaping or encoding",
+        "full_description": "A string transformer that does not replace or escape all occurrences of a meta-character may be ineffective.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-080",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-080",
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/redos",
+      "message": "This part of the regular expression may cause exponential backtracking on strings starting with 'HTTPS://' and containing many repetitions of '-'.",
+      "level": null,
+      "file": "packages/autorest.typescript/test/integration/generated/healthcareapis/src/models/mappers.ts",
+      "start_line": 170,
+      "end_line": null,
+      "start_column": 66,
+      "end_column": 79,
+      "rule": {
+        "rule_id": "js/redos",
+        "name": "js/redos",
+        "short_description": "Inefficient regular expression",
+        "full_description": "A regular expression that requires exponential time to match certain inputs can be a performance bottleneck, and may be vulnerable to denial-of-service attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/redos",
+      "message": "This part of the regular expression may cause exponential backtracking on strings starting with 'HTTPS://' and containing many repetitions of '-'.",
+      "level": null,
+      "file": "packages/autorest.typescript/test/integration/generated/healthcareapis/src/models/mappers.ts",
+      "start_line": 1084,
+      "end_line": null,
+      "start_column": 66,
+      "end_column": 79,
+      "rule": {
+        "rule_id": "js/redos",
+        "name": "js/redos",
+        "short_description": "Inefficient regular expression",
+        "full_description": "A regular expression that requires exponential time to match certain inputs can be a performance bottleneck, and may be vulnerable to denial-of-service attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/polynomial-redos",
+      "message": "This [regular expression](1) that depends on [library input](2) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](3) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](4) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](5) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](6) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](7) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](8) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](9) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](10) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](11) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](12) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](13) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](14) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](15) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](16) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](17) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](18) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](19) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](20) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](21) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](22) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](23) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](24) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](25) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](26) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](27) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](28) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](29) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](30) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](31) may run slow on strings with many repetitions of 'a'.",
+      "level": null,
+      "file": "packages/rlc-common/src/helpers/nameUtils.ts",
+      "start_line": 245,
+      "end_line": 246,
+      "start_column": 10,
+      "end_column": 42,
+      "rule": {
+        "rule_id": "js/polynomial-redos",
+        "name": "js/polynomial-redos",
+        "short_description": "Polynomial regular expression used on uncontrolled data",
+        "full_description": "A regular expression that can require polynomial time to match may be vulnerable to denial-of-service attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/polynomial-redos",
+      "message": "This [regular expression](1) that depends on [library input](2) may run slow on strings starting with 'Record<A,' and with many repetitions of ' '.\nThis [regular expression](1) that depends on [library input](3) may run slow on strings starting with 'Record<A,' and with many repetitions of ' '.",
+      "level": null,
+      "file": "packages/rlc-common/src/helpers/typeUtil.ts",
+      "start_line": 7,
+      "end_line": null,
+      "start_column": 10,
+      "end_column": 61,
+      "rule": {
+        "rule_id": "js/polynomial-redos",
+        "name": "js/polynomial-redos",
+        "short_description": "Polynomial regular expression used on uncontrolled data",
+        "full_description": "A regular expression that can require polynomial time to match may be vulnerable to denial-of-service attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/polynomial-redos",
+      "message": "This [regular expression](1) that depends on [library input](2) may run slow on strings starting with 'Record<A,' and with many repetitions of ' '.\nThis [regular expression](1) that depends on [library input](3) may run slow on strings starting with 'Record<A,' and with many repetitions of ' '.",
+      "level": null,
+      "file": "packages/rlc-common/src/helpers/typeUtil.ts",
+      "start_line": 11,
+      "end_line": null,
+      "start_column": 10,
+      "end_column": 61,
+      "rule": {
+        "rule_id": "js/polynomial-redos",
+        "name": "js/polynomial-redos",
+        "short_description": "Polynomial regular expression used on uncontrolled data",
+        "full_description": "A regular expression that can require polynomial time to match may be vulnerable to denial-of-service attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/polynomial-redos",
+      "message": "This [regular expression](1) that depends on [library input](2) may run slow on strings with many repetitions of 'a'.\nThis [regular expression](1) that depends on [library input](3) may run slow on strings with many repetitions of 'a'.",
+      "level": null,
+      "file": "packages/rlc-common/src/helpers/typeUtil.ts",
+      "start_line": 31,
+      "end_line": null,
+      "start_column": 10,
+      "end_column": 39,
+      "rule": {
+        "rule_id": "js/polynomial-redos",
+        "name": "js/polynomial-redos",
+        "short_description": "Polynomial regular expression used on uncontrolled data",
+        "full_description": "A regular expression that can require polynomial time to match may be vulnerable to denial-of-service attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/polynomial-redos",
+      "message": "This [regular expression](1) that depends on [library input](2) may run slow on strings with many repetitions of 'a'.",
+      "level": null,
+      "file": "packages/rlc-common/src/metadata/buildReadmeFile.ts",
+      "start_line": 455,
+      "end_line": null,
+      "start_column": 5,
+      "end_column": 38,
+      "rule": {
+        "rule_id": "js/polynomial-redos",
+        "name": "js/polynomial-redos",
+        "short_description": "Polynomial regular expression used on uncontrolled data",
+        "full_description": "A regular expression that can require polynomial time to match may be vulnerable to denial-of-service attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/polynomial-redos",
+      "message": "This [regular expression](1) that depends on [library input](2) may run slow on strings with many repetitions of 'a'.",
+      "level": null,
+      "file": "packages/rlc-common/src/metadata/buildReadmeFile.ts",
+      "start_line": 456,
+      "end_line": null,
+      "start_column": 5,
+      "end_column": 37,
+      "rule": {
+        "rule_id": "js/polynomial-redos",
+        "name": "js/polynomial-redos",
+        "short_description": "Polynomial regular expression used on uncontrolled data",
+        "full_description": "A regular expression that can require polynomial time to match may be vulnerable to denial-of-service attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/polynomial-redos",
+      "message": "This [regular expression](1) that depends on [library input](2) may run slow on strings with many repetitions of 'a'.",
+      "level": null,
+      "file": "packages/rlc-common/src/metadata/buildReadmeFile.ts",
+      "start_line": 457,
+      "end_line": null,
+      "start_column": 5,
+      "end_column": 36,
+      "rule": {
+        "rule_id": "js/polynomial-redos",
+        "name": "js/polynomial-redos",
+        "short_description": "Polynomial regular expression used on uncontrolled data",
+        "full_description": "A regular expression that can require polynomial time to match may be vulnerable to denial-of-service attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/polynomial-redos",
+      "message": "This [regular expression](1) that depends on [library input](2) may run slow on strings with many repetitions of 'a'.",
+      "level": null,
+      "file": "packages/rlc-common/src/metadata/buildReadmeFile.ts",
+      "start_line": 458,
+      "end_line": null,
+      "start_column": 5,
+      "end_column": 39,
+      "rule": {
+        "rule_id": "js/polynomial-redos",
+        "name": "js/polynomial-redos",
+        "short_description": "Polynomial regular expression used on uncontrolled data",
+        "full_description": "A regular expression that can require polynomial time to match may be vulnerable to denial-of-service attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ]
+      }
+    }
+  ]
+}

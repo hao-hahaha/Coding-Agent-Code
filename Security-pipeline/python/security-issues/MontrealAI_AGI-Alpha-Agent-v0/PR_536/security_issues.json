@@ -1,0 +1,195 @@
+{
+  "sarif_path": "codeql-reports/MontrealAI_AGI-Alpha-Agent-v0/PR_536/python_security_report.sarif",
+  "security_issue_count": 6,
+  "issues": [
+    {
+      "rule_id": "py/insecure-temporary-file",
+      "message": "Call to deprecated function tempfile.mktemp may be insecure.",
+      "level": null,
+      "file": "alpha_factory_v1/demos/omni_factory_demo/omni_ledger_cli.py",
+      "start_line": 279,
+      "end_line": null,
+      "start_column": 16,
+      "end_column": 49,
+      "rule": {
+        "rule_id": "py/insecure-temporary-file",
+        "name": "py/insecure-temporary-file",
+        "short_description": "Insecure temporary file",
+        "full_description": "Creating a temporary file using this method may be insecure.",
+        "tags": [
+          "external/cwe/cwe-377",
+          "security"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.0",
+        "sub_severity": "high",
+        "cwe": [
+          "external/cwe/cwe-377"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/path-injection",
+      "message": "This path depends on a [user-provided value](1).",
+      "level": null,
+      "file": "alpha_factory_v1/demos/alpha_agi_insight_v0/insight_demo.py",
+      "start_line": 141,
+      "end_line": null,
+      "start_column": 12,
+      "end_column": 26,
+      "rule": {
+        "rule_id": "py/path-injection",
+        "name": "py/path-injection",
+        "short_description": "Uncontrolled data used in path expression",
+        "full_description": "Accessing paths influenced by users can allow an attacker to access unexpected resources.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-022",
+          "external/cwe/cwe-023",
+          "external/cwe/cwe-036",
+          "external/cwe/cwe-073",
+          "external/cwe/cwe-099"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.5",
+        "sub_severity": "high",
+        "cwe": [
+          "external/cwe/cwe-022",
+          "external/cwe/cwe-023",
+          "external/cwe/cwe-036",
+          "external/cwe/cwe-073",
+          "external/cwe/cwe-099"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/path-injection",
+      "message": "This path depends on a [user-provided value](1).",
+      "level": null,
+      "file": "alpha_factory_v1/demos/alpha_agi_insight_v0/insight_demo.py",
+      "start_line": 142,
+      "end_line": null,
+      "start_column": 21,
+      "end_column": 35,
+      "rule": {
+        "rule_id": "py/path-injection",
+        "name": "py/path-injection",
+        "short_description": "Uncontrolled data used in path expression",
+        "full_description": "Accessing paths influenced by users can allow an attacker to access unexpected resources.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-022",
+          "external/cwe/cwe-023",
+          "external/cwe/cwe-036",
+          "external/cwe/cwe-073",
+          "external/cwe/cwe-099"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.5",
+        "sub_severity": "high",
+        "cwe": [
+          "external/cwe/cwe-022",
+          "external/cwe/cwe-023",
+          "external/cwe/cwe-036",
+          "external/cwe/cwe-073",
+          "external/cwe/cwe-099"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/path-injection",
+      "message": "This path depends on a [user-provided value](1).\nThis path depends on a [user-provided value](2).",
+      "level": null,
+      "file": "alpha_factory_v1/backend/orchestrator.py",
+      "start_line": 391,
+      "end_line": null,
+      "start_column": 29,
+      "end_column": 49,
+      "rule": {
+        "rule_id": "py/path-injection",
+        "name": "py/path-injection",
+        "short_description": "Uncontrolled data used in path expression",
+        "full_description": "Accessing paths influenced by users can allow an attacker to access unexpected resources.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-022",
+          "external/cwe/cwe-023",
+          "external/cwe/cwe-036",
+          "external/cwe/cwe-073",
+          "external/cwe/cwe-099"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.5",
+        "sub_severity": "high",
+        "cwe": [
+          "external/cwe/cwe-022",
+          "external/cwe/cwe-023",
+          "external/cwe/cwe-036",
+          "external/cwe/cwe-073",
+          "external/cwe/cwe-099"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/partial-ssrf",
+      "message": "Part of the URL of this request depends on a [user-provided value](1).\nPart of the URL of this request depends on a [user-provided value](2).",
+      "level": null,
+      "file": "alpha_factory_v1/af_requests.py",
+      "start_line": 84,
+      "end_line": null,
+      "start_column": 11,
+      "end_column": 79,
+      "rule": {
+        "rule_id": "py/partial-ssrf",
+        "name": "py/partial-ssrf",
+        "short_description": "Partial server-side request forgery",
+        "full_description": "Making a network request to a URL that is partially user-controlled allows for request forgery attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-918"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "9.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-918"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/log-injection",
+      "message": "This log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "alpha_factory_v1/backend/rpc_server.py",
+      "start_line": 57,
+      "end_line": null,
+      "start_column": 44,
+      "end_column": 54,
+      "rule": {
+        "rule_id": "py/log-injection",
+        "name": "py/log-injection",
+        "short_description": "Log Injection",
+        "full_description": "Building log entries from user-controlled data is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    }
+  ]
+}

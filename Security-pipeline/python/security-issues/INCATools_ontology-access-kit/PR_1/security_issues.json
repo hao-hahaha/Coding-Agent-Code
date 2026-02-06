@@ -1,0 +1,68 @@
+{
+  "sarif_path": "codeql-reports/INCATools_ontology-access-kit/PR_1/python_security_report.sarif",
+  "security_issue_count": 2,
+  "issues": [
+    {
+      "rule_id": "py/clear-text-logging-sensitive-data",
+      "message": "This expression logs [sensitive data (password)](1) as clear text.",
+      "level": null,
+      "file": "src/oaklib/utilities/apikey_manager.py",
+      "start_line": 27,
+      "end_line": null,
+      "start_column": 18,
+      "end_column": 39,
+      "rule": {
+        "rule_id": "py/clear-text-logging-sensitive-data",
+        "name": "py/clear-text-logging-sensitive-data",
+        "short_description": "Clear-text logging of sensitive information",
+        "full_description": "Logging sensitive information without encryption or hashing can expose it to an attacker.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-312",
+          "external/cwe/cwe-359",
+          "external/cwe/cwe-532"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-312",
+          "external/cwe/cwe-359",
+          "external/cwe/cwe-532"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/clear-text-logging-sensitive-data",
+      "message": "This expression logs [sensitive data (password)](1) as clear text.",
+      "level": null,
+      "file": "src/oaklib/utilities/apikey_manager.py",
+      "start_line": 40,
+      "end_line": null,
+      "start_column": 13,
+      "end_column": 92,
+      "rule": {
+        "rule_id": "py/clear-text-logging-sensitive-data",
+        "name": "py/clear-text-logging-sensitive-data",
+        "short_description": "Clear-text logging of sensitive information",
+        "full_description": "Logging sensitive information without encryption or hashing can expose it to an attacker.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-312",
+          "external/cwe/cwe-359",
+          "external/cwe/cwe-532"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-312",
+          "external/cwe/cwe-359",
+          "external/cwe/cwe-532"
+        ]
+      }
+    }
+  ]
+}

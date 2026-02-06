@@ -1,0 +1,168 @@
+{
+  "sarif_path": "codeql-reports/Azure-Samples_azure-ai-travel-agents/PR_1/typescript_security_report.sarif",
+  "security_issue_count": 6,
+  "issues": [
+    {
+      "rule_id": "js/tainted-format-string",
+      "message": "Format string depends on a [user-provided value](1).",
+      "level": null,
+      "file": "src/tools/echo-ping/src/server.ts",
+      "start_line": 38,
+      "end_line": null,
+      "start_column": 17,
+      "end_column": 65,
+      "rule": {
+        "rule_id": "js/tainted-format-string",
+        "name": "js/tainted-format-string",
+        "short_description": "Use of externally-controlled format string",
+        "full_description": "Using external input in format strings can lead to garbled output.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-134"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.3",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-134"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "src/tools/echo-ping/src/index.ts",
+      "start_line": 37,
+      "end_line": null,
+      "start_column": 15,
+      "end_column": 70,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "src/tools/echo-ping/src/index.ts",
+      "start_line": 57,
+      "end_line": null,
+      "start_column": 15,
+      "end_column": 70,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).\nLog entry depends on a [user-provided value](2).",
+      "level": null,
+      "file": "src/tools/echo-ping/src/index.ts",
+      "start_line": 69,
+      "end_line": null,
+      "start_column": 7,
+      "end_column": 74,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "src/tools/echo-ping/src/server.ts",
+      "start_line": 38,
+      "end_line": null,
+      "start_column": 17,
+      "end_column": 65,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "src/tools/echo-ping/src/server.ts",
+      "start_line": 38,
+      "end_line": null,
+      "start_column": 67,
+      "end_column": 75,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    }
+  ]
+}

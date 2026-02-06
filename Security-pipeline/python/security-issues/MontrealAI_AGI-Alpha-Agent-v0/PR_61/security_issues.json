@@ -1,0 +1,33 @@
+{
+  "sarif_path": "codeql-reports/MontrealAI_AGI-Alpha-Agent-v0/PR_61/python_security_report.sarif",
+  "security_issue_count": 1,
+  "issues": [
+    {
+      "rule_id": "py/insecure-temporary-file",
+      "message": "Call to deprecated function tempfile.mktemp may be insecure.",
+      "level": null,
+      "file": "alpha_factory_v1/demos/omni_factory_demo/omni_ledger_cli.py",
+      "start_line": 279,
+      "end_line": null,
+      "start_column": 16,
+      "end_column": 49,
+      "rule": {
+        "rule_id": "py/insecure-temporary-file",
+        "name": "py/insecure-temporary-file",
+        "short_description": "Insecure temporary file",
+        "full_description": "Creating a temporary file using this method may be insecure.",
+        "tags": [
+          "external/cwe/cwe-377",
+          "security"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.0",
+        "sub_severity": "high",
+        "cwe": [
+          "external/cwe/cwe-377"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "sarif_path": "codeql-reports/FoundationAgents_AFlow/PR_2/python_security_report.sarif",
+  "security_issue_count": 1,
+  "issues": [
+    {
+      "rule_id": "py/tarslip",
+      "message": "This file extraction depends on a [potentially untrusted source](1).",
+      "level": null,
+      "file": "data/download_data.py",
+      "start_line": 34,
+      "end_line": null,
+      "start_column": 9,
+      "end_column": 12,
+      "rule": {
+        "rule_id": "py/tarslip",
+        "name": "py/tarslip",
+        "short_description": "Arbitrary file write during tarfile extraction",
+        "full_description": "Extracting files from a malicious tar archive without validating that the destination file path is within the destination directory can cause files outside the destination directory to be overwritten.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-022"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-022"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "sarif_path": "codeql-reports/EvolvingLMMs-Lab_lmms-eval/PR_1/python_security_report.sarif",
+  "security_issue_count": 4,
+  "issues": [
+    {
+      "rule_id": "py/redos",
+      "message": "This part of the regular expression may cause exponential backtracking on strings starting with '\\\\boxed{{' and containing many repetitions of 'z'.",
+      "level": null,
+      "file": "lmms_eval/tasks/megabench/metrics/scoring/general_numerical_match.py",
+      "start_line": 229,
+      "end_line": null,
+      "start_column": 34,
+      "end_column": 42,
+      "rule": {
+        "rule_id": "py/redos",
+        "name": "py/redos",
+        "short_description": "Inefficient regular expression",
+        "full_description": "A regular expression that requires exponential time to match certain inputs can be a performance bottleneck, and may be vulnerable to denial-of-service attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/redos",
+      "message": "This part of the regular expression may cause exponential backtracking on strings starting with '\\n' and containing many repetitions of '\\n'.",
+      "level": null,
+      "file": "lmms_eval/tasks/megabench/metrics/parsing/common/utils.py",
+      "start_line": 83,
+      "end_line": null,
+      "start_column": 36,
+      "end_column": 39,
+      "rule": {
+        "rule_id": "py/redos",
+        "name": "py/redos",
+        "short_description": "Inefficient regular expression",
+        "full_description": "A regular expression that requires exponential time to match certain inputs can be a performance bottleneck, and may be vulnerable to denial-of-service attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/tarslip",
+      "message": "This file extraction depends on a [potentially untrusted source](1).",
+      "level": null,
+      "file": "lmms_eval/api/task.py",
+      "start_line": 974,
+      "end_line": null,
+      "start_column": 29,
+      "end_column": 36,
+      "rule": {
+        "rule_id": "py/tarslip",
+        "name": "py/tarslip",
+        "short_description": "Arbitrary file write during tarfile extraction",
+        "full_description": "Extracting files from a malicious tar archive without validating that the destination file path is within the destination directory can cause files outside the destination directory to be overwritten.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-022"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-022"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/jinja2/autoescape-false",
+      "message": "Using jinja2 templates with autoescape=False can potentially allow XSS attacks.",
+      "level": null,
+      "file": "lmms_eval/utils.py",
+      "start_line": 679,
+      "end_line": null,
+      "start_column": 7,
+      "end_column": 64,
+      "rule": {
+        "rule_id": "py/jinja2/autoescape-false",
+        "name": "py/jinja2/autoescape-false",
+        "short_description": "Jinja2 templating with autoescape=False",
+        "full_description": "Using jinja2 templates with 'autoescape=False' can cause a cross-site scripting vulnerability.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-079"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079"
+        ]
+      }
+    }
+  ]
+}

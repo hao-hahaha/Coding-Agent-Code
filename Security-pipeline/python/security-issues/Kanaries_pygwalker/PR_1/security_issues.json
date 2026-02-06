@@ -1,0 +1,64 @@
+{
+  "sarif_path": "codeql-reports/Kanaries_pygwalker/PR_1/python_security_report.sarif",
+  "security_issue_count": 2,
+  "issues": [
+    {
+      "rule_id": "py/http-response-splitting",
+      "message": "This HTTP header is constructed from a [user-provided value](1).",
+      "level": null,
+      "file": "pygwalker/services/kanaries_cli_login.py",
+      "start_line": 39,
+      "end_line": null,
+      "start_column": 42,
+      "end_column": 92,
+      "rule": {
+        "rule_id": "py/http-response-splitting",
+        "name": "py/http-response-splitting",
+        "short_description": "HTTP Response Splitting",
+        "full_description": "Writing user input directly to an HTTP header makes code vulnerable to attack by header splitting.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-113",
+          "external/cwe/cwe-079"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-113",
+          "external/cwe/cwe-079"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/reflective-xss",
+      "message": "Cross-site scripting vulnerability due to a [user-provided value](1).",
+      "level": null,
+      "file": "pygwalker/communications/streamlit_comm.py",
+      "start_line": 34,
+      "end_line": null,
+      "start_column": 24,
+      "end_column": 76,
+      "rule": {
+        "rule_id": "py/reflective-xss",
+        "name": "py/reflective-xss",
+        "short_description": "Reflected server-side cross-site scripting",
+        "full_description": "Writing user input directly to a web page allows for a cross-site scripting vulnerability.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": "high",
+        "cwe": [
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ]
+      }
+    }
+  ]
+}

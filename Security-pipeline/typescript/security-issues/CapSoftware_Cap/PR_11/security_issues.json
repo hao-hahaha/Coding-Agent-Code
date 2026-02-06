@@ -1,0 +1,1827 @@
+{
+  "sarif_path": "codeql-reports/CapSoftware_Cap/PR_11/typescript_security_report.sarif",
+  "security_issue_count": 65,
+  "issues": [
+    {
+      "rule_id": "js/stack-trace-exposure",
+      "message": "This information exposed to the user depends on [stack trace information](1).",
+      "level": null,
+      "file": "apps/web/app/api/revalidate/route.ts",
+      "start_line": 58,
+      "end_line": 61,
+      "start_column": 7,
+      "end_column": 9,
+      "rule": {
+        "rule_id": "js/stack-trace-exposure",
+        "name": "js/stack-trace-exposure",
+        "short_description": "Information exposure through a stack trace",
+        "full_description": "Propagating stack trace information to an external user can unintentionally reveal implementation details that are useful to an attacker for developing a subsequent exploit.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-209",
+          "external/cwe/cwe-497"
+        ],
+        "precision": "very-high",
+        "problem_severity": "warning",
+        "security_severity": "5.4",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-209",
+          "external/cwe/cwe-497"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/stack-trace-exposure",
+      "message": "This information exposed to the user depends on [stack trace information](1).",
+      "level": null,
+      "file": "apps/web/app/api/screenshot/route.ts",
+      "start_line": 105,
+      "end_line": 108,
+      "start_column": 7,
+      "end_column": 9,
+      "rule": {
+        "rule_id": "js/stack-trace-exposure",
+        "name": "js/stack-trace-exposure",
+        "short_description": "Information exposure through a stack trace",
+        "full_description": "Propagating stack trace information to an external user can unintentionally reveal implementation details that are useful to an attacker for developing a subsequent exploit.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-209",
+          "external/cwe/cwe-497"
+        ],
+        "precision": "very-high",
+        "problem_severity": "warning",
+        "security_severity": "5.4",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-209",
+          "external/cwe/cwe-497"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/request-forgery",
+      "message": "The [URL](1) of this request depends on a [user-provided value](2).",
+      "level": null,
+      "file": "apps/tasks/src/api/mergeAudioSegments.ts",
+      "start_line": 42,
+      "end_line": 48,
+      "start_column": 36,
+      "end_column": 9,
+      "rule": {
+        "rule_id": "js/request-forgery",
+        "name": "js/request-forgery",
+        "short_description": "Server-side request forgery",
+        "full_description": "Making a network request with user-controlled data in the URL allows for request forgery attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-918"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "9.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-918"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/request-forgery",
+      "message": "The [URL](1) of this request depends on a [user-provided value](2).",
+      "level": null,
+      "file": "apps/web/actions/organization/domain-utils.ts",
+      "start_line": 2,
+      "end_line": 14,
+      "start_column": 26,
+      "end_column": 4,
+      "rule": {
+        "rule_id": "js/request-forgery",
+        "name": "js/request-forgery",
+        "short_description": "Server-side request forgery",
+        "full_description": "Making a network request with user-controlled data in the URL allows for request forgery attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-918"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "9.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-918"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/request-forgery",
+      "message": "The [URL](1) of this request depends on a [user-provided value](2).",
+      "level": null,
+      "file": "apps/web/actions/organization/domain-utils.ts",
+      "start_line": 19,
+      "end_line": 31,
+      "start_column": 26,
+      "end_column": 4,
+      "rule": {
+        "rule_id": "js/request-forgery",
+        "name": "js/request-forgery",
+        "short_description": "Server-side request forgery",
+        "full_description": "Making a network request with user-controlled data in the URL allows for request forgery attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-918"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "9.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-918"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/request-forgery",
+      "message": "The [URL](1) of this request depends on a [user-provided value](2).",
+      "level": null,
+      "file": "apps/web/actions/organization/domain-utils.ts",
+      "start_line": 36,
+      "end_line": 49,
+      "start_column": 26,
+      "end_column": 4,
+      "rule": {
+        "rule_id": "js/request-forgery",
+        "name": "js/request-forgery",
+        "short_description": "Server-side request forgery",
+        "full_description": "Making a network request with user-controlled data in the URL allows for request forgery attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-918"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "9.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-918"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/request-forgery",
+      "message": "The [URL](1) of this request depends on a [user-provided value](2).",
+      "level": null,
+      "file": "apps/web/actions/organization/domain-utils.ts",
+      "start_line": 73,
+      "end_line": 85,
+      "start_column": 35,
+      "end_column": 6,
+      "rule": {
+        "rule_id": "js/request-forgery",
+        "name": "js/request-forgery",
+        "short_description": "Server-side request forgery",
+        "full_description": "Making a network request with user-controlled data in the URL allows for request forgery attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-918"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "9.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-918"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/request-forgery",
+      "message": "The [URL](1) of this request depends on a [user-provided value](2).",
+      "level": null,
+      "file": "apps/web/actions/organization/domain-utils.ts",
+      "start_line": 105,
+      "end_line": 117,
+      "start_column": 26,
+      "end_column": 4,
+      "rule": {
+        "rule_id": "js/request-forgery",
+        "name": "js/request-forgery",
+        "short_description": "Server-side request forgery",
+        "full_description": "Making a network request with user-controlled data in the URL allows for request forgery attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-918"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "9.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-918"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/incomplete-url-substring-sanitization",
+      "message": "'[amazonaws.com](1)' can be anywhere in the URL, and arbitrary hosts may come before or after it.",
+      "level": null,
+      "file": "apps/web/actions/video/upload.ts",
+      "start_line": 114,
+      "end_line": null,
+      "start_column": 28,
+      "end_column": 68,
+      "rule": {
+        "rule_id": "js/incomplete-url-substring-sanitization",
+        "name": "js/incomplete-url-substring-sanitization",
+        "short_description": "Incomplete URL substring sanitization",
+        "full_description": "Security checks on the substrings of an unparsed URL are often vulnerable to bypassing.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/incomplete-url-substring-sanitization",
+      "message": "'[s3.amazonaws.com](1)' may be preceded by an arbitrary host name.",
+      "level": null,
+      "file": "apps/web/utils/s3.ts",
+      "start_line": 106,
+      "end_line": null,
+      "start_column": 21,
+      "end_column": 59,
+      "rule": {
+        "rule_id": "js/incomplete-url-substring-sanitization",
+        "name": "js/incomplete-url-substring-sanitization",
+        "short_description": "Incomplete URL substring sanitization",
+        "full_description": "Security checks on the substrings of an unparsed URL are often vulnerable to bypassing.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/missing-rate-limiting",
+      "message": "This route handler performs [a file system access](1), but is not rate-limited.\nThis route handler performs [a file system access](2), but is not rate-limited.",
+      "level": null,
+      "file": "apps/tasks/src/api/mergeAudioSegments.ts",
+      "start_line": 7,
+      "end_line": 61,
+      "start_column": 22,
+      "end_column": 2,
+      "rule": {
+        "rule_id": "js/missing-rate-limiting",
+        "name": "js/missing-rate-limiting",
+        "short_description": "Missing rate limiting",
+        "full_description": "An HTTP request handler that performs expensive operations without restricting the rate at which operations can be carried out is vulnerable to denial-of-service attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-770",
+          "external/cwe/cwe-307",
+          "external/cwe/cwe-400"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-770",
+          "external/cwe/cwe-307",
+          "external/cwe/cwe-400"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/tainted-format-string",
+      "message": "Format string depends on a [user-provided value](1).\nFormat string depends on a [user-provided value](2).\nFormat string depends on a [user-provided value](3).\nFormat string depends on a [user-provided value](4).",
+      "level": null,
+      "file": "apps/web/actions/videos/generate-ai-metadata.ts",
+      "start_line": 226,
+      "end_line": null,
+      "start_column": 19,
+      "end_column": 69,
+      "rule": {
+        "rule_id": "js/tainted-format-string",
+        "name": "js/tainted-format-string",
+        "short_description": "Use of externally-controlled format string",
+        "full_description": "Using external input in format strings can lead to garbled output.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-134"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.3",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-134"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/tainted-format-string",
+      "message": "Format string depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/web/actions/videos/get-status.ts",
+      "start_line": 47,
+      "end_line": null,
+      "start_column": 23,
+      "end_column": 88,
+      "rule": {
+        "rule_id": "js/tainted-format-string",
+        "name": "js/tainted-format-string",
+        "short_description": "Use of externally-controlled format string",
+        "full_description": "Using external input in format strings can lead to garbled output.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-134"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.3",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-134"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/tainted-format-string",
+      "message": "Format string depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/web/actions/videos/get-status.ts",
+      "start_line": 59,
+      "end_line": null,
+      "start_column": 21,
+      "end_column": 88,
+      "rule": {
+        "rule_id": "js/tainted-format-string",
+        "name": "js/tainted-format-string",
+        "short_description": "Use of externally-controlled format string",
+        "full_description": "Using external input in format strings can lead to garbled output.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-134"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.3",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-134"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/tainted-format-string",
+      "message": "Format string depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/web/actions/videos/get-status.ts",
+      "start_line": 147,
+      "end_line": null,
+      "start_column": 25,
+      "end_column": 90,
+      "rule": {
+        "rule_id": "js/tainted-format-string",
+        "name": "js/tainted-format-string",
+        "short_description": "Use of externally-controlled format string",
+        "full_description": "Using external input in format strings can lead to garbled output.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-134"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.3",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-134"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/tainted-format-string",
+      "message": "Format string depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/web/actions/videos/get-status.ts",
+      "start_line": 165,
+      "end_line": null,
+      "start_column": 27,
+      "end_column": 98,
+      "rule": {
+        "rule_id": "js/tainted-format-string",
+        "name": "js/tainted-format-string",
+        "short_description": "Use of externally-controlled format string",
+        "full_description": "Using external input in format strings can lead to garbled output.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-134"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.3",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-134"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/tainted-format-string",
+      "message": "Format string depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/web/actions/videos/transcribe.ts",
+      "start_line": 109,
+      "end_line": null,
+      "start_column": 13,
+      "end_column": 83,
+      "rule": {
+        "rule_id": "js/tainted-format-string",
+        "name": "js/tainted-format-string",
+        "short_description": "Use of externally-controlled format string",
+        "full_description": "Using external input in format strings can lead to garbled output.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-134"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.3",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-134"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/tainted-format-string",
+      "message": "Format string depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/web/actions/videos/transcribe.ts",
+      "start_line": 115,
+      "end_line": null,
+      "start_column": 11,
+      "end_column": 90,
+      "rule": {
+        "rule_id": "js/tainted-format-string",
+        "name": "js/tainted-format-string",
+        "short_description": "Use of externally-controlled format string",
+        "full_description": "Using external input in format strings can lead to garbled output.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-134"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.3",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-134"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/path-injection",
+      "message": "This path depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/tasks/src/api/mergeAudioSegments.ts",
+      "start_line": 40,
+      "end_line": null,
+      "start_column": 38,
+      "end_column": 46,
+      "rule": {
+        "rule_id": "js/path-injection",
+        "name": "js/path-injection",
+        "short_description": "Uncontrolled data used in path expression",
+        "full_description": "Accessing paths influenced by users can allow an attacker to access unexpected resources.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-022",
+          "external/cwe/cwe-023",
+          "external/cwe/cwe-036",
+          "external/cwe/cwe-073",
+          "external/cwe/cwe-099"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-022",
+          "external/cwe/cwe-023",
+          "external/cwe/cwe-036",
+          "external/cwe/cwe-073",
+          "external/cwe/cwe-099"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/path-injection",
+      "message": "This path depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/tasks/src/api/mergeAudioSegments.ts",
+      "start_line": 50,
+      "end_line": null,
+      "start_column": 21,
+      "end_column": 29,
+      "rule": {
+        "rule_id": "js/path-injection",
+        "name": "js/path-injection",
+        "short_description": "Uncontrolled data used in path expression",
+        "full_description": "Accessing paths influenced by users can allow an attacker to access unexpected resources.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-022",
+          "external/cwe/cwe-023",
+          "external/cwe/cwe-036",
+          "external/cwe/cwe-073",
+          "external/cwe/cwe-099"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-022",
+          "external/cwe/cwe-023",
+          "external/cwe/cwe-036",
+          "external/cwe/cwe-073",
+          "external/cwe/cwe-099"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/shell-command-injection-from-environment",
+      "message": "This shell command depends on an uncontrolled [absolute path](1).",
+      "level": null,
+      "file": "apps/desktop/scripts/prodBeforeBundle.js",
+      "start_line": 40,
+      "end_line": null,
+      "start_column": 7,
+      "end_column": 80,
+      "rule": {
+        "rule_id": "js/shell-command-injection-from-environment",
+        "name": "js/shell-command-injection-from-environment",
+        "short_description": "Shell command built from environment values",
+        "full_description": "Building a shell command string with values from the enclosing environment may cause subtle bugs or vulnerabilities.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "6.3",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/shell-command-injection-from-environment",
+      "message": "This shell command depends on an uncontrolled [absolute path](1).\nThis shell command depends on an uncontrolled [absolute path](2).",
+      "level": null,
+      "file": "scripts/setup.js",
+      "start_line": 58,
+      "end_line": null,
+      "start_column": 18,
+      "end_column": 67,
+      "rule": {
+        "rule_id": "js/shell-command-injection-from-environment",
+        "name": "js/shell-command-injection-from-environment",
+        "short_description": "Shell command built from environment values",
+        "full_description": "Building a shell command string with values from the enclosing environment may cause subtle bugs or vulnerabilities.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "6.3",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/shell-command-injection-from-environment",
+      "message": "This shell command depends on an uncontrolled [absolute path](1).\nThis shell command depends on an uncontrolled [absolute path](2).",
+      "level": null,
+      "file": "scripts/setup.js",
+      "start_line": 111,
+      "end_line": null,
+      "start_column": 18,
+      "end_column": 59,
+      "rule": {
+        "rule_id": "js/shell-command-injection-from-environment",
+        "name": "js/shell-command-injection-from-environment",
+        "short_description": "Shell command built from environment values",
+        "full_description": "Building a shell command string with values from the enclosing environment may cause subtle bugs or vulnerabilities.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "6.3",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/shell-command-injection-from-environment",
+      "message": "This shell command depends on an uncontrolled [absolute path](1).\nThis shell command depends on an uncontrolled [absolute path](2).",
+      "level": null,
+      "file": "scripts/symbolicate-macos-crash.js",
+      "start_line": 40,
+      "end_line": null,
+      "start_column": 7,
+      "end_column": 69,
+      "rule": {
+        "rule_id": "js/shell-command-injection-from-environment",
+        "name": "js/shell-command-injection-from-environment",
+        "short_description": "Shell command built from environment values",
+        "full_description": "Building a shell command string with values from the enclosing environment may cause subtle bugs or vulnerabilities.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "6.3",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/xss-through-dom",
+      "message": "[DOM text](1) is reinterpreted as HTML without escaping meta-characters.",
+      "level": null,
+      "file": "apps/web/components/tools/MediaFormatConverter.tsx",
+      "start_line": 482,
+      "end_line": null,
+      "start_column": 26,
+      "end_column": 56,
+      "rule": {
+        "rule_id": "js/xss-through-dom",
+        "name": "js/xss-through-dom",
+        "short_description": "DOM text reinterpreted as HTML",
+        "full_description": "Reinterpreting text from the DOM as HTML can lead to a cross-site scripting vulnerability.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/xss-through-dom",
+      "message": "[DOM text](1) is reinterpreted as HTML without escaping meta-characters.",
+      "level": null,
+      "file": "apps/web/components/tools/SpeedController.tsx",
+      "start_line": 90,
+      "end_line": null,
+      "start_column": 24,
+      "end_column": 57,
+      "rule": {
+        "rule_id": "js/xss-through-dom",
+        "name": "js/xss-through-dom",
+        "short_description": "DOM text reinterpreted as HTML",
+        "full_description": "Reinterpreting text from the DOM as HTML can lead to a cross-site scripting vulnerability.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/xss-through-dom",
+      "message": "[DOM text](1) is reinterpreted as HTML without escaping meta-characters.",
+      "level": null,
+      "file": "apps/web/components/tools/SpeedController.tsx",
+      "start_line": 163,
+      "end_line": null,
+      "start_column": 19,
+      "end_column": 27,
+      "rule": {
+        "rule_id": "js/xss-through-dom",
+        "name": "js/xss-through-dom",
+        "short_description": "DOM text reinterpreted as HTML",
+        "full_description": "Reinterpreting text from the DOM as HTML can lead to a cross-site scripting vulnerability.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/xss-through-dom",
+      "message": "[DOM text](1) is reinterpreted as HTML without escaping meta-characters.",
+      "level": null,
+      "file": "apps/web/components/tools/TrimmingTool.tsx",
+      "start_line": 738,
+      "end_line": null,
+      "start_column": 16,
+      "end_column": 47,
+      "rule": {
+        "rule_id": "js/xss-through-dom",
+        "name": "js/xss-through-dom",
+        "short_description": "DOM text reinterpreted as HTML",
+        "full_description": "Reinterpreting text from the DOM as HTML can lead to a cross-site scripting vulnerability.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/stored-xss",
+      "message": "Stored cross-site scripting vulnerability due to [stored value](1).",
+      "level": null,
+      "file": "apps/web/app/(site)/docs/%5B...slug%5D/page.tsx",
+      "start_line": 137,
+      "end_line": null,
+      "start_column": 26,
+      "end_column": 34,
+      "rule": {
+        "rule_id": "js/stored-xss",
+        "name": "js/stored-xss",
+        "short_description": "Stored cross-site scripting",
+        "full_description": "Using uncontrolled stored values in HTML allows for a stored cross-site scripting vulnerability.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/stored-xss",
+      "message": "Stored cross-site scripting vulnerability due to [stored value](1).",
+      "level": null,
+      "file": "apps/web/app/(site)/docs/%5B...slug%5D/page.tsx",
+      "start_line": 138,
+      "end_line": null,
+      "start_column": 27,
+      "end_column": 46,
+      "rule": {
+        "rule_id": "js/stored-xss",
+        "name": "js/stored-xss",
+        "short_description": "Stored cross-site scripting",
+        "full_description": "Using uncontrolled stored values in HTML allows for a stored cross-site scripting vulnerability.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/stored-xss",
+      "message": "Stored cross-site scripting vulnerability due to [stored value](1).",
+      "level": null,
+      "file": "apps/web/components/pages/DocsPage.tsx",
+      "start_line": 19,
+      "end_line": null,
+      "start_column": 25,
+      "end_column": 44,
+      "rule": {
+        "rule_id": "js/stored-xss",
+        "name": "js/stored-xss",
+        "short_description": "Stored cross-site scripting",
+        "full_description": "Using uncontrolled stored values in HTML allows for a stored cross-site scripting vulnerability.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/stored-xss",
+      "message": "Stored cross-site scripting vulnerability due to [stored value](1).",
+      "level": null,
+      "file": "apps/web/components/pages/UpdatesPage.tsx",
+      "start_line": 48,
+      "end_line": null,
+      "start_column": 29,
+      "end_column": 49,
+      "rule": {
+        "rule_id": "js/stored-xss",
+        "name": "js/stored-xss",
+        "short_description": "Stored cross-site scripting",
+        "full_description": "Using uncontrolled stored values in HTML allows for a stored cross-site scripting vulnerability.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/stored-xss",
+      "message": "Stored cross-site scripting vulnerability due to [stored value](1).",
+      "level": null,
+      "file": "apps/web/components/pages/UpdatesPage.tsx",
+      "start_line": 111,
+      "end_line": null,
+      "start_column": 27,
+      "end_column": 47,
+      "rule": {
+        "rule_id": "js/stored-xss",
+        "name": "js/stored-xss",
+        "short_description": "Stored cross-site scripting",
+        "full_description": "Using uncontrolled stored values in HTML allows for a stored cross-site scripting vulnerability.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/file-access-to-http",
+      "message": "Outbound network request depends on [file data](1).",
+      "level": null,
+      "file": "apps/tasks/src/api/mergeAudioSegments.ts",
+      "start_line": 44,
+      "end_line": null,
+      "start_column": 15,
+      "end_column": 21,
+      "rule": {
+        "rule_id": "js/file-access-to-http",
+        "name": "js/file-access-to-http",
+        "short_description": "File data in outbound network request",
+        "full_description": "Directly sending file data in an outbound network request can indicate unauthorized information disclosure.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-200"
+        ],
+        "precision": "medium",
+        "problem_severity": "warning",
+        "security_severity": "6.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-200"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/web/actions/organization/delete-space.ts",
+      "start_line": 77,
+      "end_line": null,
+      "start_column": 11,
+      "end_column": 82,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).\nLog entry depends on a [user-provided value](2).\nLog entry depends on a [user-provided value](3).\nLog entry depends on a [user-provided value](4).",
+      "level": null,
+      "file": "apps/web/actions/videos/generate-ai-metadata.ts",
+      "start_line": 25,
+      "end_line": null,
+      "start_column": 7,
+      "end_column": 68,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).\nLog entry depends on a [user-provided value](2).\nLog entry depends on a [user-provided value](3).\nLog entry depends on a [user-provided value](4).",
+      "level": null,
+      "file": "apps/web/actions/videos/generate-ai-metadata.ts",
+      "start_line": 105,
+      "end_line": null,
+      "start_column": 21,
+      "end_column": 79,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).\nLog entry depends on a [user-provided value](2).\nLog entry depends on a [user-provided value](3).\nLog entry depends on a [user-provided value](4).",
+      "level": null,
+      "file": "apps/web/actions/videos/generate-ai-metadata.ts",
+      "start_line": 112,
+      "end_line": null,
+      "start_column": 9,
+      "end_column": 69,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).\nLog entry depends on a [user-provided value](2).\nLog entry depends on a [user-provided value](3).\nLog entry depends on a [user-provided value](4).",
+      "level": null,
+      "file": "apps/web/actions/videos/generate-ai-metadata.ts",
+      "start_line": 122,
+      "end_line": null,
+      "start_column": 9,
+      "end_column": 73,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).\nLog entry depends on a [user-provided value](2).\nLog entry depends on a [user-provided value](3).\nLog entry depends on a [user-provided value](4).",
+      "level": null,
+      "file": "apps/web/actions/videos/generate-ai-metadata.ts",
+      "start_line": 226,
+      "end_line": null,
+      "start_column": 19,
+      "end_column": 69,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).\nLog entry depends on a [user-provided value](2).\nLog entry depends on a [user-provided value](3).\nLog entry depends on a [user-provided value](4).",
+      "level": null,
+      "file": "apps/web/actions/videos/generate-ai-metadata.ts",
+      "start_line": 226,
+      "end_line": null,
+      "start_column": 71,
+      "end_column": 76,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/web/actions/videos/get-status.ts",
+      "start_line": 44,
+      "end_line": null,
+      "start_column": 17,
+      "end_column": 104,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/web/actions/videos/get-status.ts",
+      "start_line": 47,
+      "end_line": null,
+      "start_column": 23,
+      "end_column": 88,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/web/actions/videos/get-status.ts",
+      "start_line": 59,
+      "end_line": null,
+      "start_column": 21,
+      "end_column": 88,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/web/actions/videos/get-status.ts",
+      "start_line": 89,
+      "end_line": null,
+      "start_column": 19,
+      "end_column": 161,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/web/actions/videos/get-status.ts",
+      "start_line": 139,
+      "end_line": null,
+      "start_column": 19,
+      "end_column": 101,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/web/actions/videos/get-status.ts",
+      "start_line": 143,
+      "end_line": null,
+      "start_column": 23,
+      "end_column": 90,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/web/actions/videos/get-status.ts",
+      "start_line": 145,
+      "end_line": null,
+      "start_column": 23,
+      "end_column": 91,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/web/actions/videos/get-status.ts",
+      "start_line": 147,
+      "end_line": null,
+      "start_column": 25,
+      "end_column": 90,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/web/actions/videos/get-status.ts",
+      "start_line": 165,
+      "end_line": null,
+      "start_column": 27,
+      "end_column": 98,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/web/actions/videos/transcribe.ts",
+      "start_line": 99,
+      "end_line": null,
+      "start_column": 7,
+      "end_column": 71,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/web/actions/videos/transcribe.ts",
+      "start_line": 104,
+      "end_line": null,
+      "start_column": 9,
+      "end_column": 106,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/web/actions/videos/transcribe.ts",
+      "start_line": 109,
+      "end_line": null,
+      "start_column": 13,
+      "end_column": 83,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/web/actions/videos/transcribe.ts",
+      "start_line": 115,
+      "end_line": null,
+      "start_column": 11,
+      "end_column": 90,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/web/actions/videos/transcribe.ts",
+      "start_line": 121,
+      "end_line": null,
+      "start_column": 9,
+      "end_column": 105,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/web/app/api/email/new-comment/route.ts",
+      "start_line": 24,
+      "end_line": null,
+      "start_column": 17,
+      "end_column": 71,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/web/app/api/email/new-comment/route.ts",
+      "start_line": 40,
+      "end_line": null,
+      "start_column": 21,
+      "end_column": 68,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/web/app/api/selfhosted/checkout/route.ts",
+      "start_line": 6,
+      "end_line": null,
+      "start_column": 55,
+      "end_column": 59,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/web/app/api/settings/billing/subscribe/route.ts",
+      "start_line": 16,
+      "end_line": null,
+      "start_column": 49,
+      "end_column": 56,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/web/app/api/video/ai/route.ts",
+      "start_line": 36,
+      "end_line": null,
+      "start_column": 19,
+      "end_column": 81,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/web/app/api/video/ai/route.ts",
+      "start_line": 49,
+      "end_line": null,
+      "start_column": 19,
+      "end_column": 84,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/insecure-temporary-file",
+      "message": "Insecure creation of file in [the os temp dir](1).",
+      "level": null,
+      "file": "apps/web/tools/compress-images.js",
+      "start_line": 46,
+      "end_line": null,
+      "start_column": 22,
+      "end_column": 33,
+      "rule": {
+        "rule_id": "js/insecure-temporary-file",
+        "name": "js/insecure-temporary-file",
+        "short_description": "Insecure temporary file",
+        "full_description": "Creating a temporary file that is accessible by other users can lead to information disclosure and sometimes remote code execution.",
+        "tags": [
+          "external/cwe/cwe-377",
+          "external/cwe/cwe-378",
+          "security"
+        ],
+        "precision": "medium",
+        "problem_severity": "warning",
+        "security_severity": "7.0",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-377",
+          "external/cwe/cwe-378"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/insecure-temporary-file",
+      "message": "Insecure creation of file in [the os temp dir](1).",
+      "level": null,
+      "file": "apps/web/tools/compress-images.js",
+      "start_line": 62,
+      "end_line": null,
+      "start_column": 24,
+      "end_column": 36,
+      "rule": {
+        "rule_id": "js/insecure-temporary-file",
+        "name": "js/insecure-temporary-file",
+        "short_description": "Insecure temporary file",
+        "full_description": "Creating a temporary file that is accessible by other users can lead to information disclosure and sometimes remote code execution.",
+        "tags": [
+          "external/cwe/cwe-377",
+          "external/cwe/cwe-378",
+          "security"
+        ],
+        "precision": "medium",
+        "problem_severity": "warning",
+        "security_severity": "7.0",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-377",
+          "external/cwe/cwe-378"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/indirect-command-line-injection",
+      "message": "This command depends on an unsanitized [environment variable](1).",
+      "level": null,
+      "file": "apps/desktop/scripts/prodBeforeBundle.js",
+      "start_line": 40,
+      "end_line": null,
+      "start_column": 7,
+      "end_column": 80,
+      "rule": {
+        "rule_id": "js/indirect-command-line-injection",
+        "name": "js/indirect-command-line-injection",
+        "short_description": "Indirect uncontrolled command line",
+        "full_description": "Forwarding command-line arguments to a child process executed within a shell may indirectly introduce command-line injection vulnerabilities.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ],
+        "precision": "medium",
+        "problem_severity": "warning",
+        "security_severity": "6.3",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/indirect-command-line-injection",
+      "message": "This command depends on an unsanitized [environment variable](1).",
+      "level": null,
+      "file": "scripts/setup.js",
+      "start_line": 230,
+      "end_line": 233,
+      "start_column": 15,
+      "end_column": 19,
+      "rule": {
+        "rule_id": "js/indirect-command-line-injection",
+        "name": "js/indirect-command-line-injection",
+        "short_description": "Indirect uncontrolled command line",
+        "full_description": "Forwarding command-line arguments to a child process executed within a shell may indirectly introduce command-line injection vulnerabilities.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ],
+        "precision": "medium",
+        "problem_severity": "warning",
+        "security_severity": "6.3",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "sarif_path": "codeql-reports/LorenFrankLab_spyglass/PR_1/python_security_report.sarif",
+  "security_issue_count": 3,
+  "issues": [
+    {
+      "rule_id": "py/clear-text-logging-sensitive-data",
+      "message": "This expression logs [sensitive data (private)](1) as clear text.\nThis expression logs [sensitive data (private)](2) as clear text.",
+      "level": null,
+      "file": "src/spyglass/utils/dj_helper_fn.py",
+      "start_line": 452,
+      "end_line": null,
+      "start_column": 17,
+      "end_column": 77,
+      "rule": {
+        "rule_id": "py/clear-text-logging-sensitive-data",
+        "name": "py/clear-text-logging-sensitive-data",
+        "short_description": "Clear-text logging of sensitive information",
+        "full_description": "Logging sensitive information without encryption or hashing can expose it to an attacker.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-312",
+          "external/cwe/cwe-359",
+          "external/cwe/cwe-532"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-312",
+          "external/cwe/cwe-359",
+          "external/cwe/cwe-532"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/overly-permissive-file",
+      "message": "Overly permissive mask in chmod sets file to world writable.\nOverly permissive mask in chmod sets file to world readable.",
+      "level": null,
+      "file": "src/spyglass/common/common_nwbfile.py",
+      "start_line": 267,
+      "end_line": null,
+      "start_column": 9,
+      "end_column": 54,
+      "rule": {
+        "rule_id": "py/overly-permissive-file",
+        "name": "py/overly-permissive-file",
+        "short_description": "Overly permissive file permissions",
+        "full_description": "Allowing files to be readable or writable by users other than the owner may allow sensitive information to be accessed.",
+        "tags": [
+          "external/cwe/cwe-732",
+          "security"
+        ],
+        "precision": "medium",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": "high",
+        "cwe": [
+          "external/cwe/cwe-732"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/overly-permissive-file",
+      "message": "Overly permissive mask in chmod sets file to world writable.",
+      "level": null,
+      "file": "src/spyglass/spikesorting/v1/sorting.py",
+      "start_line": 295,
+      "end_line": null,
+      "start_column": 13,
+      "end_column": 54,
+      "rule": {
+        "rule_id": "py/overly-permissive-file",
+        "name": "py/overly-permissive-file",
+        "short_description": "Overly permissive file permissions",
+        "full_description": "Allowing files to be readable or writable by users other than the owner may allow sensitive information to be accessed.",
+        "tags": [
+          "external/cwe/cwe-732",
+          "security"
+        ],
+        "precision": "medium",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": "high",
+        "cwe": [
+          "external/cwe/cwe-732"
+        ]
+      }
+    }
+  ]
+}

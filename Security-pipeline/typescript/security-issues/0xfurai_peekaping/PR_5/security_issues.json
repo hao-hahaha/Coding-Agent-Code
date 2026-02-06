@@ -1,0 +1,342 @@
+{
+  "sarif_path": "codeql-reports/0xfurai_peekaping/PR_5/typescript_security_report.sarif",
+  "security_issue_count": 12,
+  "issues": [
+    {
+      "rule_id": "js/disabling-certificate-validation",
+      "message": "Disabling certificate validation is strongly discouraged.",
+      "level": null,
+      "file": "apps/fake-server/mtls-server.js",
+      "start_line": 118,
+      "end_line": null,
+      "start_column": 3,
+      "end_column": 28,
+      "rule": {
+        "rule_id": "js/disabling-certificate-validation",
+        "name": "js/disabling-certificate-validation",
+        "short_description": "Disabling certificate validation",
+        "full_description": "Disabling cryptographic certificate validation can cause security vulnerabilities.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-295",
+          "external/cwe/cwe-297"
+        ],
+        "precision": "very-high",
+        "problem_severity": "error",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-295",
+          "external/cwe/cwe-297"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/resource-exhaustion",
+      "message": "This creates a timer with a user-controlled duration from a [user-provided value](1).",
+      "level": null,
+      "file": "apps/fake-server/index.js",
+      "start_line": 38,
+      "end_line": null,
+      "start_column": 8,
+      "end_column": 13,
+      "rule": {
+        "rule_id": "js/resource-exhaustion",
+        "name": "js/resource-exhaustion",
+        "short_description": "Resource exhaustion",
+        "full_description": "Allocating objects or timers with user-controlled sizes or durations can cause resource exhaustion.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-400",
+          "external/cwe/cwe-770"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-400",
+          "external/cwe/cwe-770"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/resource-exhaustion",
+      "message": "This creates a timer with a user-controlled duration from a [user-provided value](1).",
+      "level": null,
+      "file": "apps/fake-server/index.js",
+      "start_line": 73,
+      "end_line": null,
+      "start_column": 8,
+      "end_column": 18,
+      "rule": {
+        "rule_id": "js/resource-exhaustion",
+        "name": "js/resource-exhaustion",
+        "short_description": "Resource exhaustion",
+        "full_description": "Allocating objects or timers with user-controlled sizes or durations can cause resource exhaustion.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-400",
+          "external/cwe/cwe-770"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-400",
+          "external/cwe/cwe-770"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/resource-exhaustion",
+      "message": "This creates a timer with a user-controlled duration from a [user-provided value](1).",
+      "level": null,
+      "file": "apps/fake-server/index.js",
+      "start_line": 93,
+      "end_line": null,
+      "start_column": 8,
+      "end_column": 13,
+      "rule": {
+        "rule_id": "js/resource-exhaustion",
+        "name": "js/resource-exhaustion",
+        "short_description": "Resource exhaustion",
+        "full_description": "Allocating objects or timers with user-controlled sizes or durations can cause resource exhaustion.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-400",
+          "external/cwe/cwe-770"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-400",
+          "external/cwe/cwe-770"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/resource-exhaustion",
+      "message": "This creates a timer with a user-controlled duration from a [user-provided value](1).",
+      "level": null,
+      "file": "apps/fake-server/index.js",
+      "start_line": 119,
+      "end_line": null,
+      "start_column": 8,
+      "end_column": 13,
+      "rule": {
+        "rule_id": "js/resource-exhaustion",
+        "name": "js/resource-exhaustion",
+        "short_description": "Resource exhaustion",
+        "full_description": "Allocating objects or timers with user-controlled sizes or durations can cause resource exhaustion.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-400",
+          "external/cwe/cwe-770"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-400",
+          "external/cwe/cwe-770"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/resource-exhaustion",
+      "message": "This creates a timer with a user-controlled duration from a [user-provided value](1).",
+      "level": null,
+      "file": "apps/fake-server/mtls-server.js",
+      "start_line": 59,
+      "end_line": null,
+      "start_column": 6,
+      "end_column": 11,
+      "rule": {
+        "rule_id": "js/resource-exhaustion",
+        "name": "js/resource-exhaustion",
+        "short_description": "Resource exhaustion",
+        "full_description": "Allocating objects or timers with user-controlled sizes or durations can cause resource exhaustion.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-400",
+          "external/cwe/cwe-770"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-400",
+          "external/cwe/cwe-770"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/fake-server/index.js",
+      "start_line": 16,
+      "end_line": null,
+      "start_column": 7,
+      "end_column": 72,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/fake-server/index.js",
+      "start_line": 61,
+      "end_line": null,
+      "start_column": 21,
+      "end_column": 79,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/fake-server/index.js",
+      "start_line": 91,
+      "end_line": null,
+      "start_column": 19,
+      "end_column": 70,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/fake-server/index.js",
+      "start_line": 112,
+      "end_line": null,
+      "start_column": 21,
+      "end_column": 58,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/fake-server/index.js",
+      "start_line": 116,
+      "end_line": null,
+      "start_column": 21,
+      "end_column": 58,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "apps/fake-server/mtls-server.js",
+      "start_line": 25,
+      "end_line": null,
+      "start_column": 7,
+      "end_column": 86,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    }
+  ]
+}

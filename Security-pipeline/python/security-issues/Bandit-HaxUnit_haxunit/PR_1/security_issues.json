@@ -1,0 +1,172 @@
+{
+  "sarif_path": "codeql-reports/Bandit-HaxUnit_haxunit/PR_1/python_security_report.sarif",
+  "security_issue_count": 6,
+  "issues": [
+    {
+      "rule_id": "py/clear-text-logging-sensitive-data",
+      "message": "This expression logs [sensitive data (password)](1) as clear text.",
+      "level": null,
+      "file": "main.py",
+      "start_line": 211,
+      "end_line": 214,
+      "start_column": 13,
+      "end_column": 48,
+      "rule": {
+        "rule_id": "py/clear-text-logging-sensitive-data",
+        "name": "py/clear-text-logging-sensitive-data",
+        "short_description": "Clear-text logging of sensitive information",
+        "full_description": "Logging sensitive information without encryption or hashing can expose it to an attacker.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-312",
+          "external/cwe/cwe-359",
+          "external/cwe/cwe-532"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-312",
+          "external/cwe/cwe-359",
+          "external/cwe/cwe-532"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/request-without-cert-validation",
+      "message": "This request may run without certificate validation because [it is disabled](1).",
+      "level": null,
+      "file": "main.py",
+      "start_line": 652,
+      "end_line": null,
+      "start_column": 17,
+      "end_column": 92,
+      "rule": {
+        "rule_id": "py/request-without-cert-validation",
+        "name": "py/request-without-cert-validation",
+        "short_description": "Request without certificate validation",
+        "full_description": "Making a request without certificate validation can allow man-in-the-middle attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-295"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-295"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/request-without-cert-validation",
+      "message": "This request may run without certificate validation because [it is disabled](1).",
+      "level": null,
+      "file": "main.py",
+      "start_line": 672,
+      "end_line": null,
+      "start_column": 26,
+      "end_column": 118,
+      "rule": {
+        "rule_id": "py/request-without-cert-validation",
+        "name": "py/request-without-cert-validation",
+        "short_description": "Request without certificate validation",
+        "full_description": "Making a request without certificate validation can allow man-in-the-middle attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-295"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-295"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/request-without-cert-validation",
+      "message": "This request may run without certificate validation because [it is disabled](1).",
+      "level": null,
+      "file": "main.py",
+      "start_line": 684,
+      "end_line": 690,
+      "start_column": 28,
+      "end_column": 18,
+      "rule": {
+        "rule_id": "py/request-without-cert-validation",
+        "name": "py/request-without-cert-validation",
+        "short_description": "Request without certificate validation",
+        "full_description": "Making a request without certificate validation can allow man-in-the-middle attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-295"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-295"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/request-without-cert-validation",
+      "message": "This request may run without certificate validation because [it is disabled](1).",
+      "level": null,
+      "file": "main.py",
+      "start_line": 730,
+      "end_line": 731,
+      "start_column": 21,
+      "end_column": 39,
+      "rule": {
+        "rule_id": "py/request-without-cert-validation",
+        "name": "py/request-without-cert-validation",
+        "short_description": "Request without certificate validation",
+        "full_description": "Making a request without certificate validation can allow man-in-the-middle attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-295"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-295"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/request-without-cert-validation",
+      "message": "This request may run without certificate validation because [it is disabled](1).",
+      "level": null,
+      "file": "main.py",
+      "start_line": 714,
+      "end_line": 715,
+      "start_column": 28,
+      "end_column": 64,
+      "rule": {
+        "rule_id": "py/request-without-cert-validation",
+        "name": "py/request-without-cert-validation",
+        "short_description": "Request without certificate validation",
+        "full_description": "Making a request without certificate validation can allow man-in-the-middle attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-295"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-295"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "sarif_path": "codeql-reports/MontrealAI_AGI-Alpha-Agent-v0/PR_285/python_security_report.sarif",
+  "security_issue_count": 2,
+  "issues": [
+    {
+      "rule_id": "py/insecure-temporary-file",
+      "message": "Call to deprecated function tempfile.mktemp may be insecure.",
+      "level": null,
+      "file": "alpha_factory_v1/demos/omni_factory_demo/omni_ledger_cli.py",
+      "start_line": 279,
+      "end_line": null,
+      "start_column": 16,
+      "end_column": 49,
+      "rule": {
+        "rule_id": "py/insecure-temporary-file",
+        "name": "py/insecure-temporary-file",
+        "short_description": "Insecure temporary file",
+        "full_description": "Creating a temporary file using this method may be insecure.",
+        "tags": [
+          "external/cwe/cwe-377",
+          "security"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.0",
+        "sub_severity": "high",
+        "cwe": [
+          "external/cwe/cwe-377"
+        ]
+      }
+    },
+    {
+      "rule_id": "py/partial-ssrf",
+      "message": "Part of the URL of this request depends on a [user-provided value](1).\nPart of the URL of this request depends on a [user-provided value](2).",
+      "level": null,
+      "file": "alpha_factory_v1/requests.py",
+      "start_line": 84,
+      "end_line": null,
+      "start_column": 11,
+      "end_column": 79,
+      "rule": {
+        "rule_id": "py/partial-ssrf",
+        "name": "py/partial-ssrf",
+        "short_description": "Partial server-side request forgery",
+        "full_description": "Making a network request to a URL that is partially user-controlled allows for request forgery attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-918"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "9.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-918"
+        ]
+      }
+    }
+  ]
+}

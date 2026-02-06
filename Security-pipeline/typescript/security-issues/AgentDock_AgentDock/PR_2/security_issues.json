@@ -1,0 +1,656 @@
+{
+  "sarif_path": "codeql-reports/AgentDock_AgentDock/PR_2/typescript_security_report.sarif",
+  "security_issue_count": 22,
+  "issues": [
+    {
+      "rule_id": "js/stack-trace-exposure",
+      "message": "This information exposed to the user depends on [stack trace information](1).\nThis information exposed to the user depends on [stack trace information](2).\nThis information exposed to the user depends on [stack trace information](3).\nThis information exposed to the user depends on [stack trace information](4).\nThis information exposed to the user depends on [stack trace information](5).\nThis information exposed to the user depends on [stack trace information](6).\nThis information exposed to the user depends on [stack trace information](7).\nThis information exposed to the user depends on [stack trace information](8).",
+      "level": null,
+      "file": "src/app/api/chat/%5BagentId%5D/route.ts",
+      "start_line": 676,
+      "end_line": null,
+      "start_column": 7,
+      "end_column": 50,
+      "rule": {
+        "rule_id": "js/stack-trace-exposure",
+        "name": "js/stack-trace-exposure",
+        "short_description": "Information exposure through a stack trace",
+        "full_description": "Propagating stack trace information to an external user can unintentionally reveal implementation details that are useful to an attacker for developing a subsequent exploit.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-209",
+          "external/cwe/cwe-497"
+        ],
+        "precision": "very-high",
+        "problem_severity": "warning",
+        "security_severity": "5.4",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-209",
+          "external/cwe/cwe-497"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/client-side-unvalidated-url-redirection",
+      "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+      "level": null,
+      "file": "src/app/image-generation/components/ImageResultDisplay.tsx",
+      "start_line": 54,
+      "end_line": null,
+      "start_column": 17,
+      "end_column": 33,
+      "rule": {
+        "rule_id": "js/client-side-unvalidated-url-redirection",
+        "name": "js/client-side-unvalidated-url-redirection",
+        "short_description": "Client-side URL redirect",
+        "full_description": "Client-side URL redirection based on unvalidated user input may cause redirection to malicious web sites.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116",
+          "external/cwe/cwe-601"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116",
+          "external/cwe/cwe-601"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/client-side-unvalidated-url-redirection",
+      "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+      "level": null,
+      "file": "src/app/image-generation/components/ImageResultDisplay.tsx",
+      "start_line": 87,
+      "end_line": null,
+      "start_column": 40,
+      "end_column": 56,
+      "rule": {
+        "rule_id": "js/client-side-unvalidated-url-redirection",
+        "name": "js/client-side-unvalidated-url-redirection",
+        "short_description": "Client-side URL redirect",
+        "full_description": "Client-side URL redirection based on unvalidated user input may cause redirection to malicious web sites.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116",
+          "external/cwe/cwe-601"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116",
+          "external/cwe/cwe-601"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/client-side-unvalidated-url-redirection",
+      "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+      "level": null,
+      "file": "src/app/image-generation/components/ImageResultDisplay.tsx",
+      "start_line": 140,
+      "end_line": null,
+      "start_column": 46,
+      "end_column": 62,
+      "rule": {
+        "rule_id": "js/client-side-unvalidated-url-redirection",
+        "name": "js/client-side-unvalidated-url-redirection",
+        "short_description": "Client-side URL redirect",
+        "full_description": "Client-side URL redirection based on unvalidated user input may cause redirection to malicious web sites.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116",
+          "external/cwe/cwe-601"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116",
+          "external/cwe/cwe-601"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/client-side-unvalidated-url-redirection",
+      "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+      "level": null,
+      "file": "src/app/image-generation/components/ImageResultDisplay.tsx",
+      "start_line": 151,
+      "end_line": null,
+      "start_column": 18,
+      "end_column": 34,
+      "rule": {
+        "rule_id": "js/client-side-unvalidated-url-redirection",
+        "name": "js/client-side-unvalidated-url-redirection",
+        "short_description": "Client-side URL redirect",
+        "full_description": "Client-side URL redirection based on unvalidated user input may cause redirection to malicious web sites.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116",
+          "external/cwe/cwe-601"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116",
+          "external/cwe/cwe-601"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/client-side-unvalidated-url-redirection",
+      "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+      "level": null,
+      "file": "src/app/image-generation/components/ImageUpload.tsx",
+      "start_line": 139,
+      "end_line": null,
+      "start_column": 20,
+      "end_column": 32,
+      "rule": {
+        "rule_id": "js/client-side-unvalidated-url-redirection",
+        "name": "js/client-side-unvalidated-url-redirection",
+        "short_description": "Client-side URL redirect",
+        "full_description": "Client-side URL redirection based on unvalidated user input may cause redirection to malicious web sites.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116",
+          "external/cwe/cwe-601"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116",
+          "external/cwe/cwe-601"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/client-side-unvalidated-url-redirection",
+      "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+      "level": null,
+      "file": "src/app/image-generation/page.tsx",
+      "start_line": 509,
+      "end_line": null,
+      "start_column": 26,
+      "end_column": 34,
+      "rule": {
+        "rule_id": "js/client-side-unvalidated-url-redirection",
+        "name": "js/client-side-unvalidated-url-redirection",
+        "short_description": "Client-side URL redirect",
+        "full_description": "Client-side URL redirection based on unvalidated user input may cause redirection to malicious web sites.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116",
+          "external/cwe/cwe-601"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116",
+          "external/cwe/cwe-601"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/client-side-unvalidated-url-redirection",
+      "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+      "level": null,
+      "file": "src/app/image-generation/page.tsx",
+      "start_line": 553,
+      "end_line": null,
+      "start_column": 37,
+      "end_column": 45,
+      "rule": {
+        "rule_id": "js/client-side-unvalidated-url-redirection",
+        "name": "js/client-side-unvalidated-url-redirection",
+        "short_description": "Client-side URL redirect",
+        "full_description": "Client-side URL redirection based on unvalidated user input may cause redirection to malicious web sites.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116",
+          "external/cwe/cwe-601"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116",
+          "external/cwe/cwe-601"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/request-forgery",
+      "message": "The [URL](1) of this request depends on a [user-provided value](2).",
+      "level": null,
+      "file": "src/app/image-generation/page.tsx",
+      "start_line": 27,
+      "end_line": null,
+      "start_column": 28,
+      "end_column": 38,
+      "rule": {
+        "rule_id": "js/request-forgery",
+        "name": "js/request-forgery",
+        "short_description": "Server-side request forgery",
+        "full_description": "Making a network request with user-controlled data in the URL allows for request forgery attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-918"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "9.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-918"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/incomplete-url-substring-sanitization",
+      "message": "'[arxiv.org](1)' can be anywhere in the URL, and arbitrary hosts may come before or after it.",
+      "level": null,
+      "file": "src/nodes/science/arxiv/api/fetch.ts",
+      "start_line": 28,
+      "end_line": null,
+      "start_column": 7,
+      "end_column": 36,
+      "rule": {
+        "rule_id": "js/incomplete-url-substring-sanitization",
+        "name": "js/incomplete-url-substring-sanitization",
+        "short_description": "Incomplete URL substring sanitization",
+        "full_description": "Security checks on the substrings of an unparsed URL are often vulnerable to bypassing.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/incomplete-sanitization",
+      "message": "This does not escape backslash characters in the input.",
+      "level": null,
+      "file": "scripts/post-build.ts",
+      "start_line": 71,
+      "end_line": null,
+      "start_column": 22,
+      "end_column": 35,
+      "rule": {
+        "rule_id": "js/incomplete-sanitization",
+        "name": "js/incomplete-sanitization",
+        "short_description": "Incomplete string escaping or encoding",
+        "full_description": "A string transformer that does not replace or escape all occurrences of a meta-character may be ineffective.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-080",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-080",
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/incomplete-sanitization",
+      "message": "This does not escape backslash characters in the input.",
+      "level": null,
+      "file": "scripts/post-build.ts",
+      "start_line": 87,
+      "end_line": null,
+      "start_column": 22,
+      "end_column": 35,
+      "rule": {
+        "rule_id": "js/incomplete-sanitization",
+        "name": "js/incomplete-sanitization",
+        "short_description": "Incomplete string escaping or encoding",
+        "full_description": "A string transformer that does not replace or escape all occurrences of a meta-character may be ineffective.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-080",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-080",
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/incomplete-multi-character-sanitization",
+      "message": "This string may still contain [<script](1), which may cause an HTML element injection vulnerability.",
+      "level": null,
+      "file": "src/lib/utils/markdown-utils.ts",
+      "start_line": 30,
+      "end_line": null,
+      "start_column": 13,
+      "end_column": 44,
+      "rule": {
+        "rule_id": "js/incomplete-multi-character-sanitization",
+        "name": "js/incomplete-multi-character-sanitization",
+        "short_description": "Incomplete multi-character sanitization",
+        "full_description": "A sanitizer that removes a sequence of characters may reintroduce the dangerous sequence.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-080",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-080",
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/insecure-randomness",
+      "message": "This uses a cryptographically insecure random number generated at [Math.random()](1) in a security context.",
+      "level": null,
+      "file": "agentdock-core/src/session/index.ts",
+      "start_line": 99,
+      "end_line": null,
+      "start_column": 25,
+      "end_column": 70,
+      "rule": {
+        "rule_id": "js/insecure-randomness",
+        "name": "js/insecure-randomness",
+        "short_description": "Insecure randomness",
+        "full_description": "Using a cryptographically weak pseudo-random number generator to generate a security-sensitive value may allow an attacker to predict what value will be generated.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-338"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-338"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/xss",
+      "message": "Cross-site scripting vulnerability due to [user-provided value](1).",
+      "level": null,
+      "file": "src/app/image-generation/components/ImageResultDisplay.tsx",
+      "start_line": 54,
+      "end_line": null,
+      "start_column": 17,
+      "end_column": 33,
+      "rule": {
+        "rule_id": "js/xss",
+        "name": "js/xss",
+        "short_description": "Client-side cross-site scripting",
+        "full_description": "Writing user input directly to the DOM allows for a cross-site scripting vulnerability.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/xss",
+      "message": "Cross-site scripting vulnerability due to [user-provided value](1).",
+      "level": null,
+      "file": "src/app/image-generation/components/ImageResultDisplay.tsx",
+      "start_line": 151,
+      "end_line": null,
+      "start_column": 18,
+      "end_column": 34,
+      "rule": {
+        "rule_id": "js/xss",
+        "name": "js/xss",
+        "short_description": "Client-side cross-site scripting",
+        "full_description": "Writing user input directly to the DOM allows for a cross-site scripting vulnerability.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/xss",
+      "message": "Cross-site scripting vulnerability due to [user-provided value](1).",
+      "level": null,
+      "file": "src/app/image-generation/components/ImageUpload.tsx",
+      "start_line": 139,
+      "end_line": null,
+      "start_column": 20,
+      "end_column": 32,
+      "rule": {
+        "rule_id": "js/xss",
+        "name": "js/xss",
+        "short_description": "Client-side cross-site scripting",
+        "full_description": "Writing user input directly to the DOM allows for a cross-site scripting vulnerability.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/xss",
+      "message": "Cross-site scripting vulnerability due to [user-provided value](1).",
+      "level": null,
+      "file": "src/app/image-generation/page.tsx",
+      "start_line": 509,
+      "end_line": null,
+      "start_column": 26,
+      "end_column": 34,
+      "rule": {
+        "rule_id": "js/xss",
+        "name": "js/xss",
+        "short_description": "Client-side cross-site scripting",
+        "full_description": "Writing user input directly to the DOM allows for a cross-site scripting vulnerability.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/xss",
+      "message": "Cross-site scripting vulnerability due to [user-provided value](1).",
+      "level": null,
+      "file": "src/app/image-generation/page.tsx",
+      "start_line": 553,
+      "end_line": null,
+      "start_column": 37,
+      "end_column": 45,
+      "rule": {
+        "rule_id": "js/xss",
+        "name": "js/xss",
+        "short_description": "Client-side cross-site scripting",
+        "full_description": "Writing user input directly to the DOM allows for a cross-site scripting vulnerability.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/file-system-race",
+      "message": "The file may have changed since it [was checked](1).",
+      "level": null,
+      "file": "src/lib/docs-utils.ts",
+      "start_line": 162,
+      "end_line": null,
+      "start_column": 23,
+      "end_column": 56,
+      "rule": {
+        "rule_id": "js/file-system-race",
+        "name": "js/file-system-race",
+        "short_description": "Potential file system race condition",
+        "full_description": "Separately checking the state of a file before operating on it may allow an attacker to modify the file between the two operations.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-367"
+        ],
+        "precision": "medium",
+        "problem_severity": "warning",
+        "security_severity": "7.7",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-367"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).\nLog entry depends on a [user-provided value](2).\nLog entry depends on a [user-provided value](3).\nLog entry depends on a [user-provided value](4).\nLog entry depends on a [user-provided value](5).\nLog entry depends on a [user-provided value](6).\nLog entry depends on a [user-provided value](7).",
+      "level": null,
+      "file": "agentdock-core/src/logging/index.ts",
+      "start_line": 92,
+      "end_line": null,
+      "start_column": 17,
+      "end_column": 83,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/log-injection",
+      "message": "Log entry depends on a [user-provided value](1).",
+      "level": null,
+      "file": "src/app/image-generation/components/ImageResultDisplay.tsx",
+      "start_line": 157,
+      "end_line": null,
+      "start_column": 29,
+      "end_column": 72,
+      "rule": {
+        "rule_id": "js/log-injection",
+        "name": "js/log-injection",
+        "short_description": "Log injection",
+        "full_description": "Building log entries from user-controlled sources is vulnerable to insertion of forged log entries by a malicious user.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-117"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-117"
+        ]
+      }
+    }
+  ]
+}

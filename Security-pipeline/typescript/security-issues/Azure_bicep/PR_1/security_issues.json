@@ -1,0 +1,295 @@
+{
+  "sarif_path": "codeql-reports/Azure_bicep/PR_1/typescript_security_report.sarif",
+  "security_issue_count": 10,
+  "issues": [
+    {
+      "rule_id": "js/functionality-from-untrusted-source",
+      "message": "Script loaded from content delivery network with no integrity check.",
+      "level": null,
+      "file": "src/highlightjs/example/es.html",
+      "start_line": 5,
+      "end_line": null,
+      "start_column": 3,
+      "end_column": 102,
+      "rule": {
+        "rule_id": "js/functionality-from-untrusted-source",
+        "name": "js/functionality-from-untrusted-source",
+        "short_description": "Inclusion of functionality from an untrusted source",
+        "full_description": "Including functionality from an untrusted source may allow an attacker to control the functionality and execute arbitrary code.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-830"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "6.0",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-830"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/functionality-from-untrusted-source",
+      "message": "Script loaded from content delivery network with no integrity check.",
+      "level": null,
+      "file": "src/highlightjs/example/index.html",
+      "start_line": 5,
+      "end_line": null,
+      "start_column": 3,
+      "end_column": 102,
+      "rule": {
+        "rule_id": "js/functionality-from-untrusted-source",
+        "name": "js/functionality-from-untrusted-source",
+        "short_description": "Inclusion of functionality from an untrusted source",
+        "full_description": "Including functionality from an untrusted source may allow an attacker to control the functionality and execute arbitrary code.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-830"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "6.0",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-830"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/client-side-unvalidated-url-redirection",
+      "message": "Untrusted URL redirection depends on a [user-provided value](1).",
+      "level": null,
+      "file": "src/vscode-bicep-ui/apps/deploy-pane/src/components/sections/PortalButton.tsx",
+      "start_line": 29,
+      "end_line": null,
+      "start_column": 73,
+      "end_column": 95,
+      "rule": {
+        "rule_id": "js/client-side-unvalidated-url-redirection",
+        "name": "js/client-side-unvalidated-url-redirection",
+        "short_description": "Client-side URL redirect",
+        "full_description": "Client-side URL redirection based on unvalidated user input may cause redirection to malicious web sites.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116",
+          "external/cwe/cwe-601"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116",
+          "external/cwe/cwe-601"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/xml-bomb",
+      "message": "XML parsing depends on a [user-provided value](1) without guarding against uncontrolled entity expansion.",
+      "level": null,
+      "file": "src/vscode-bicep/src/visualizer/app/components/Graph/style.ts",
+      "start_line": 41,
+      "end_line": null,
+      "start_column": 48,
+      "end_column": 51,
+      "rule": {
+        "rule_id": "js/xml-bomb",
+        "name": "js/xml-bomb",
+        "short_description": "XML internal entity expansion",
+        "full_description": "Parsing user input as an XML document with arbitrary internal entity expansion is vulnerable to denial-of-service attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-776",
+          "external/cwe/cwe-400"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-776",
+          "external/cwe/cwe-400"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/unvalidated-dynamic-method-call",
+      "message": "Invocation of method with [user-controlled](1) name may dispatch to unexpected target and cause an exception.",
+      "level": null,
+      "file": "src/vscode-bicep-ui/packages/messaging/src/webviewMessageChannel.ts",
+      "start_line": 53,
+      "end_line": null,
+      "start_column": 9,
+      "end_column": 35,
+      "rule": {
+        "rule_id": "js/unvalidated-dynamic-method-call",
+        "name": "js/unvalidated-dynamic-method-call",
+        "short_description": "Unvalidated dynamic method call",
+        "full_description": "Calling a method with a user-controlled name may dispatch to an unexpected target, which could cause an exception.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-754"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-754"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/xss",
+      "message": "Cross-site scripting vulnerability due to [user-provided value](1).",
+      "level": null,
+      "file": "src/vscode-bicep-ui/apps/deploy-pane/src/components/sections/PortalButton.tsx",
+      "start_line": 29,
+      "end_line": null,
+      "start_column": 73,
+      "end_column": 95,
+      "rule": {
+        "rule_id": "js/xss",
+        "name": "js/xss",
+        "short_description": "Client-side cross-site scripting",
+        "full_description": "Writing user input directly to the DOM allows for a cross-site scripting vulnerability.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/missing-origin-check",
+      "message": "Postmessage handler has no origin check.",
+      "level": null,
+      "file": "src/vscode-bicep/src/visualizer/app/components/App.tsx",
+      "start_line": 59,
+      "end_line": null,
+      "start_column": 31,
+      "end_column": 32,
+      "rule": {
+        "rule_id": "js/missing-origin-check",
+        "name": "js/missing-origin-check",
+        "short_description": "Missing origin verification in `postMessage` handler",
+        "full_description": "Missing origin verification in a `postMessage` handler allows any windows to send arbitrary data to the handler.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-940"
+        ],
+        "precision": "medium",
+        "problem_severity": "warning",
+        "security_severity": "5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-940"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/missing-origin-check",
+      "message": "Postmessage handler has no origin check.",
+      "level": null,
+      "file": "src/vscode-bicep-ui/apps/deploy-pane/src/components/hooks/useMessageHandler.ts",
+      "start_line": 60,
+      "end_line": null,
+      "start_column": 33,
+      "end_column": 34,
+      "rule": {
+        "rule_id": "js/missing-origin-check",
+        "name": "js/missing-origin-check",
+        "short_description": "Missing origin verification in `postMessage` handler",
+        "full_description": "Missing origin verification in a `postMessage` handler allows any windows to send arbitrary data to the handler.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-940"
+        ],
+        "precision": "medium",
+        "problem_severity": "warning",
+        "security_severity": "5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-940"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/missing-origin-check",
+      "message": "Postmessage handler has no origin check.",
+      "level": null,
+      "file": "src/vscode-bicep-ui/packages/messaging/src/webviewMessageChannel.ts",
+      "start_line": 45,
+      "end_line": null,
+      "start_column": 23,
+      "end_column": 35,
+      "rule": {
+        "rule_id": "js/missing-origin-check",
+        "name": "js/missing-origin-check",
+        "short_description": "Missing origin verification in `postMessage` handler",
+        "full_description": "Missing origin verification in a `postMessage` handler allows any windows to send arbitrary data to the handler.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-940"
+        ],
+        "precision": "medium",
+        "problem_severity": "warning",
+        "security_severity": "5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-940"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/remote-property-injection",
+      "message": "A property name to write to depends on a [user-provided value](1).",
+      "level": null,
+      "file": "src/vscode-bicep-ui/apps/deploy-pane/src/components/utils.tsx",
+      "start_line": 45,
+      "end_line": null,
+      "start_column": 17,
+      "end_column": 20,
+      "rule": {
+        "rule_id": "js/remote-property-injection",
+        "name": "js/remote-property-injection",
+        "short_description": "Remote property injection",
+        "full_description": "Allowing writes to arbitrary properties of an object may lead to denial-of-service attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-250",
+          "external/cwe/cwe-400"
+        ],
+        "precision": "medium",
+        "problem_severity": "warning",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-250",
+          "external/cwe/cwe-400"
+        ]
+      }
+    }
+  ]
+}

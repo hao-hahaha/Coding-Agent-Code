@@ -1,0 +1,1499 @@
+{
+  "sarif_path": "codeql-reports/4ian_GDevelop/PR_1/typescript_security_report.sarif",
+  "security_issue_count": 50,
+  "issues": [
+    {
+      "rule_id": "js/cross-window-information-leak",
+      "message": "[Sensitive data](1) is sent to another window without origin restriction.",
+      "level": null,
+      "file": "Extensions/PlayerAuthentication/playerauthenticationtools.ts",
+      "start_line": 1008,
+      "end_line": 1012,
+      "start_column": 11,
+      "end_column": 12,
+      "rule": {
+        "rule_id": "js/cross-window-information-leak",
+        "name": "js/cross-window-information-leak",
+        "short_description": "Cross-window communication with unrestricted target origin",
+        "full_description": "When sending sensitive information to another window using `postMessage`, the origin of the target window should be restricted to avoid unintentional information leaks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-201",
+          "external/cwe/cwe-359"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "4.3",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-201",
+          "external/cwe/cwe-359"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/functionality-from-untrusted-source",
+      "message": "Iframe loaded using unencrypted connection.",
+      "level": null,
+      "file": "GDJS/tests/games/iframe-playground/embed.html",
+      "start_line": 15,
+      "end_line": 26,
+      "start_column": 5,
+      "end_column": 15,
+      "rule": {
+        "rule_id": "js/functionality-from-untrusted-source",
+        "name": "js/functionality-from-untrusted-source",
+        "short_description": "Inclusion of functionality from an untrusted source",
+        "full_description": "Including functionality from an untrusted source may allow an attacker to control the functionality and execute arbitrary code.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-830"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "6.0",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-830"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/functionality-from-untrusted-source",
+      "message": "Iframe loaded using unencrypted connection.",
+      "level": null,
+      "file": "GDJS/tests/games/iframe-playground/fullscreen.html",
+      "start_line": 14,
+      "end_line": 25,
+      "start_column": 5,
+      "end_column": 15,
+      "rule": {
+        "rule_id": "js/functionality-from-untrusted-source",
+        "name": "js/functionality-from-untrusted-source",
+        "short_description": "Inclusion of functionality from an untrusted source",
+        "full_description": "Including functionality from an untrusted source may allow an attacker to control the functionality and execute arbitrary code.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-830"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "6.0",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-830"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/biased-cryptographic-random",
+      "message": "Using addition on a [cryptographically secure random number](1) produces biased results.",
+      "level": null,
+      "file": "GDJS/Runtime/gd.ts",
+      "start_line": 579,
+      "end_line": 582,
+      "start_column": 7,
+      "end_column": 16,
+      "rule": {
+        "rule_id": "js/biased-cryptographic-random",
+        "name": "js/biased-cryptographic-random",
+        "short_description": "Creating biased random numbers from a cryptographically secure source",
+        "full_description": "Some mathematical operations on random numbers can cause bias in the results and compromise security.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-327"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-327"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/biased-cryptographic-random",
+      "message": "Using addition on a [cryptographically secure random number](1) produces biased results.",
+      "level": null,
+      "file": "GDJS/Runtime/gd.ts",
+      "start_line": 579,
+      "end_line": 581,
+      "start_column": 7,
+      "end_column": 16,
+      "rule": {
+        "rule_id": "js/biased-cryptographic-random",
+        "name": "js/biased-cryptographic-random",
+        "short_description": "Creating biased random numbers from a cryptographically secure source",
+        "full_description": "Some mathematical operations on random numbers can cause bias in the results and compromise security.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-327"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-327"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/biased-cryptographic-random",
+      "message": "Using addition on a [cryptographically secure random number](1) produces biased results.",
+      "level": null,
+      "file": "GDJS/Runtime/gd.ts",
+      "start_line": 579,
+      "end_line": 580,
+      "start_column": 7,
+      "end_column": 16,
+      "rule": {
+        "rule_id": "js/biased-cryptographic-random",
+        "name": "js/biased-cryptographic-random",
+        "short_description": "Creating biased random numbers from a cryptographically secure source",
+        "full_description": "Some mathematical operations on random numbers can cause bias in the results and compromise security.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-327"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-327"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/incorrect-suffix-check",
+      "message": "This suffix check is missing a length comparison to correctly handle indexOf returning -1.",
+      "level": null,
+      "file": "newIDE/app/src/ExportAndShare/BrowserExporters/BrowserFileSystem.js",
+      "start_line": 226,
+      "end_line": 227,
+      "start_column": 9,
+      "end_column": 46,
+      "rule": {
+        "rule_id": "js/incorrect-suffix-check",
+        "name": "js/incorrect-suffix-check",
+        "short_description": "Incorrect suffix check",
+        "full_description": "Using indexOf to implement endsWith functionality is error-prone if the -1 case is not explicitly handled.",
+        "tags": [
+          "security",
+          "correctness",
+          "external/cwe/cwe-020"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/incorrect-suffix-check",
+      "message": "This suffix check is missing a length comparison to correctly handle indexOf returning -1.",
+      "level": null,
+      "file": "newIDE/app/src/ExportAndShare/BrowserExporters/BrowserS3FileSystem.js",
+      "start_line": 167,
+      "end_line": null,
+      "start_column": 11,
+      "end_column": 73,
+      "rule": {
+        "rule_id": "js/incorrect-suffix-check",
+        "name": "js/incorrect-suffix-check",
+        "short_description": "Incorrect suffix check",
+        "full_description": "Using indexOf to implement endsWith functionality is error-prone if the -1 case is not explicitly handled.",
+        "tags": [
+          "security",
+          "correctness",
+          "external/cwe/cwe-020"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/incomplete-url-substring-sanitization",
+      "message": "'[https://gd.games](1)' may be followed by an arbitrary host name.",
+      "level": null,
+      "file": "Extensions/PlayerAuthentication/playerauthenticationtools.ts",
+      "start_line": 201,
+      "end_line": null,
+      "start_column": 10,
+      "end_column": 61,
+      "rule": {
+        "rule_id": "js/incomplete-url-substring-sanitization",
+        "name": "js/incomplete-url-substring-sanitization",
+        "short_description": "Incomplete URL substring sanitization",
+        "full_description": "Security checks on the substrings of an unparsed URL are often vulnerable to bypassing.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/incomplete-url-substring-sanitization",
+      "message": "'[https://editor.gdevelop.io](1)' may be followed by an arbitrary host name.",
+      "level": null,
+      "file": "newIDE/app/src/AnnouncementsFeed/AnnouncementFormatting.js",
+      "start_line": 21,
+      "end_line": null,
+      "start_column": 9,
+      "end_column": 65,
+      "rule": {
+        "rule_id": "js/incomplete-url-substring-sanitization",
+        "name": "js/incomplete-url-substring-sanitization",
+        "short_description": "Incomplete URL substring sanitization",
+        "full_description": "Security checks on the substrings of an unparsed URL are often vulnerable to bypassing.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/incomplete-url-substring-sanitization",
+      "message": "'[https://editor.gdevelop.io](1)' may be followed by an arbitrary host name.",
+      "level": null,
+      "file": "newIDE/app/src/Promotions/PromotionHelper.js",
+      "start_line": 9,
+      "end_line": null,
+      "start_column": 7,
+      "end_column": 52,
+      "rule": {
+        "rule_id": "js/incomplete-url-substring-sanitization",
+        "name": "js/incomplete-url-substring-sanitization",
+        "short_description": "Incomplete URL substring sanitization",
+        "full_description": "Security checks on the substrings of an unparsed URL are often vulnerable to bypassing.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/resource-exhaustion",
+      "message": "This creates a timer with a user-controlled duration from a [user-provided value](1).",
+      "level": null,
+      "file": "Extensions/Multiplayer/multiplayertools.ts",
+      "start_line": 964,
+      "end_line": null,
+      "start_column": 12,
+      "end_column": 41,
+      "rule": {
+        "rule_id": "js/resource-exhaustion",
+        "name": "js/resource-exhaustion",
+        "short_description": "Resource exhaustion",
+        "full_description": "Allocating objects or timers with user-controlled sizes or durations can cause resource exhaustion.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-400",
+          "external/cwe/cwe-770"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-400",
+          "external/cwe/cwe-770"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/resource-exhaustion",
+      "message": "This creates a timer with a user-controlled duration from a [user-provided value](1).",
+      "level": null,
+      "file": "Extensions/Multiplayer/multiplayertools.ts",
+      "start_line": 1159,
+      "end_line": null,
+      "start_column": 12,
+      "end_column": 41,
+      "rule": {
+        "rule_id": "js/resource-exhaustion",
+        "name": "js/resource-exhaustion",
+        "short_description": "Resource exhaustion",
+        "full_description": "Allocating objects or timers with user-controlled sizes or durations can cause resource exhaustion.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-400",
+          "external/cwe/cwe-770"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-400",
+          "external/cwe/cwe-770"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/incomplete-sanitization",
+      "message": "This replaces only the first occurrence of '|'.",
+      "level": null,
+      "file": "GDevelop.js/__tests__/ExpressionCompletionFinder.spec.js",
+      "start_line": 21,
+      "end_line": null,
+      "start_column": 24,
+      "end_column": 51,
+      "rule": {
+        "rule_id": "js/incomplete-sanitization",
+        "name": "js/incomplete-sanitization",
+        "short_description": "Incomplete string escaping or encoding",
+        "full_description": "A string transformer that does not replace or escape all occurrences of a meta-character may be ineffective.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-080",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-080",
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/incomplete-sanitization",
+      "message": "This replaces only the first occurrence of '&'.",
+      "level": null,
+      "file": "GDevelop.js/update-bindings.js",
+      "start_line": 107,
+      "end_line": null,
+      "start_column": 22,
+      "end_column": 60,
+      "rule": {
+        "rule_id": "js/incomplete-sanitization",
+        "name": "js/incomplete-sanitization",
+        "short_description": "Incomplete string escaping or encoding",
+        "full_description": "A string transformer that does not replace or escape all occurrences of a meta-character may be ineffective.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-080",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-080",
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/incomplete-sanitization",
+      "message": "This replaces only the first occurrence of /\\n/.",
+      "level": null,
+      "file": "newIDE/app/scripts/lib/ExtensionReferenceGenerator.js",
+      "start_line": 256,
+      "end_line": null,
+      "start_column": 7,
+      "end_column": 51,
+      "rule": {
+        "rule_id": "js/incomplete-sanitization",
+        "name": "js/incomplete-sanitization",
+        "short_description": "Incomplete string escaping or encoding",
+        "full_description": "A string transformer that does not replace or escape all occurrences of a meta-character may be ineffective.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-080",
+          "external/cwe/cwe-116"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-080",
+          "external/cwe/cwe-116"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/prototype-polluting-assignment",
+      "message": "This assignment may alter Object.prototype if a malicious '__proto__' string is injected from [library input](1).",
+      "level": null,
+      "file": "SharedLibs/TileMapHelper/src/model/TileMapModel.ts",
+      "start_line": 786,
+      "end_line": null,
+      "start_column": 5,
+      "end_column": 13,
+      "rule": {
+        "rule_id": "js/prototype-polluting-assignment",
+        "name": "js/prototype-polluting-assignment",
+        "short_description": "Prototype-polluting assignment",
+        "full_description": "Modifying an object obtained via a user-controlled property name may lead to accidental mutation of the built-in Object prototype, and possibly escalate to remote code execution or cross-site scripting.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-094",
+          "external/cwe/cwe-400",
+          "external/cwe/cwe-471",
+          "external/cwe/cwe-915"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-094",
+          "external/cwe/cwe-400",
+          "external/cwe/cwe-471",
+          "external/cwe/cwe-915"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/prototype-polluting-assignment",
+      "message": "This assignment may alter Object.prototype if a malicious '__proto__' string is injected from [library input](1).",
+      "level": null,
+      "file": "SharedLibs/TileMapHelper/src/model/TileMapModel.ts",
+      "start_line": 802,
+      "end_line": null,
+      "start_column": 5,
+      "end_column": 13,
+      "rule": {
+        "rule_id": "js/prototype-polluting-assignment",
+        "name": "js/prototype-polluting-assignment",
+        "short_description": "Prototype-polluting assignment",
+        "full_description": "Modifying an object obtained via a user-controlled property name may lead to accidental mutation of the built-in Object prototype, and possibly escalate to remote code execution or cross-site scripting.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-094",
+          "external/cwe/cwe-400",
+          "external/cwe/cwe-471",
+          "external/cwe/cwe-915"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-094",
+          "external/cwe/cwe-400",
+          "external/cwe/cwe-471",
+          "external/cwe/cwe-915"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/prototype-polluting-assignment",
+      "message": "This assignment may alter Object.prototype if a malicious '__proto__' string is injected from [library input](1).",
+      "level": null,
+      "file": "SharedLibs/TileMapHelper/src/model/TileMapModel.ts",
+      "start_line": 874,
+      "end_line": null,
+      "start_column": 5,
+      "end_column": 13,
+      "rule": {
+        "rule_id": "js/prototype-polluting-assignment",
+        "name": "js/prototype-polluting-assignment",
+        "short_description": "Prototype-polluting assignment",
+        "full_description": "Modifying an object obtained via a user-controlled property name may lead to accidental mutation of the built-in Object prototype, and possibly escalate to remote code execution or cross-site scripting.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-094",
+          "external/cwe/cwe-400",
+          "external/cwe/cwe-471",
+          "external/cwe/cwe-915"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-094",
+          "external/cwe/cwe-400",
+          "external/cwe/cwe-471",
+          "external/cwe/cwe-915"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/prototype-polluting-assignment",
+      "message": "This assignment may alter Object.prototype if a malicious '__proto__' string is injected from [library input](1).",
+      "level": null,
+      "file": "SharedLibs/TileMapHelper/src/model/TileMapModel.ts",
+      "start_line": 897,
+      "end_line": null,
+      "start_column": 5,
+      "end_column": 13,
+      "rule": {
+        "rule_id": "js/prototype-polluting-assignment",
+        "name": "js/prototype-polluting-assignment",
+        "short_description": "Prototype-polluting assignment",
+        "full_description": "Modifying an object obtained via a user-controlled property name may lead to accidental mutation of the built-in Object prototype, and possibly escalate to remote code execution or cross-site scripting.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-094",
+          "external/cwe/cwe-400",
+          "external/cwe/cwe-471",
+          "external/cwe/cwe-915"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-094",
+          "external/cwe/cwe-400",
+          "external/cwe/cwe-471",
+          "external/cwe/cwe-915"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/prototype-polluting-assignment",
+      "message": "This assignment may alter Object.prototype if a malicious '__proto__' string is injected from [library input](1).",
+      "level": null,
+      "file": "SharedLibs/TileMapHelper/src/model/TileMapModel.ts",
+      "start_line": 923,
+      "end_line": null,
+      "start_column": 5,
+      "end_column": 13,
+      "rule": {
+        "rule_id": "js/prototype-polluting-assignment",
+        "name": "js/prototype-polluting-assignment",
+        "short_description": "Prototype-polluting assignment",
+        "full_description": "Modifying an object obtained via a user-controlled property name may lead to accidental mutation of the built-in Object prototype, and possibly escalate to remote code execution or cross-site scripting.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-094",
+          "external/cwe/cwe-400",
+          "external/cwe/cwe-471",
+          "external/cwe/cwe-915"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-094",
+          "external/cwe/cwe-400",
+          "external/cwe/cwe-471",
+          "external/cwe/cwe-915"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/prototype-polluting-assignment",
+      "message": "This assignment may alter Object.prototype if a malicious '__proto__' string is injected from [library input](1).",
+      "level": null,
+      "file": "SharedLibs/TileMapHelper/src/model/TileMapModel.ts",
+      "start_line": 949,
+      "end_line": null,
+      "start_column": 5,
+      "end_column": 13,
+      "rule": {
+        "rule_id": "js/prototype-polluting-assignment",
+        "name": "js/prototype-polluting-assignment",
+        "short_description": "Prototype-polluting assignment",
+        "full_description": "Modifying an object obtained via a user-controlled property name may lead to accidental mutation of the built-in Object prototype, and possibly escalate to remote code execution or cross-site scripting.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-094",
+          "external/cwe/cwe-400",
+          "external/cwe/cwe-471",
+          "external/cwe/cwe-915"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-079",
+          "external/cwe/cwe-094",
+          "external/cwe/cwe-400",
+          "external/cwe/cwe-471",
+          "external/cwe/cwe-915"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/insecure-randomness",
+      "message": "This uses a cryptographically insecure random number generated at [Math.random()](1) in a security context.",
+      "level": null,
+      "file": "newIDE/app/src/Utils/Analytics/UserUUID.js",
+      "start_line": 15,
+      "end_line": null,
+      "start_column": 23,
+      "end_column": 37,
+      "rule": {
+        "rule_id": "js/insecure-randomness",
+        "name": "js/insecure-randomness",
+        "short_description": "Insecure randomness",
+        "full_description": "Using a cryptographically weak pseudo-random number generator to generate a security-sensitive value may allow an attacker to predict what value will be generated.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-338"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-338"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/insecure-randomness",
+      "message": "This uses a cryptographically insecure random number generated at [Math.random()](1) in a security context.",
+      "level": null,
+      "file": "newIDE/app/src/stories/componentStories/HomePage/TeamSection.stories.js",
+      "start_line": 350,
+      "end_line": null,
+      "start_column": 19,
+      "end_column": 48,
+      "rule": {
+        "rule_id": "js/insecure-randomness",
+        "name": "js/insecure-randomness",
+        "short_description": "Insecure randomness",
+        "full_description": "Using a cryptographically weak pseudo-random number generator to generate a security-sensitive value may allow an attacker to predict what value will be generated.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-338"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-338"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/insecure-randomness",
+      "message": "This uses a cryptographically insecure random number generated at [Math.random()](1) in a security context.",
+      "level": null,
+      "file": "newIDE/app/src/stories/componentStories/HomePage/TeamSection.stories.js",
+      "start_line": 378,
+      "end_line": 381,
+      "start_column": 11,
+      "end_column": 30,
+      "rule": {
+        "rule_id": "js/insecure-randomness",
+        "name": "js/insecure-randomness",
+        "short_description": "Insecure randomness",
+        "full_description": "Using a cryptographically weak pseudo-random number generator to generate a security-sensitive value may allow an attacker to predict what value will be generated.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-338"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-338"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/insecure-randomness",
+      "message": "This uses a cryptographically insecure random number generated at [Math.random()](1) in a security context.",
+      "level": null,
+      "file": "newIDE/app/src/stories/componentStories/HomePage/TeamSection.stories.js",
+      "start_line": 406,
+      "end_line": null,
+      "start_column": 25,
+      "end_column": 52,
+      "rule": {
+        "rule_id": "js/insecure-randomness",
+        "name": "js/insecure-randomness",
+        "short_description": "Insecure randomness",
+        "full_description": "Using a cryptographically weak pseudo-random number generator to generate a security-sensitive value may allow an attacker to predict what value will be generated.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-338"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-338"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/shell-command-injection-from-environment",
+      "message": "This shell command depends on an uncontrolled [absolute path](1).",
+      "level": null,
+      "file": "GDJS/scripts/codemod-all-to-ts.js",
+      "start_line": 32,
+      "end_line": null,
+      "start_column": 7,
+      "end_column": 78,
+      "rule": {
+        "rule_id": "js/shell-command-injection-from-environment",
+        "name": "js/shell-command-injection-from-environment",
+        "short_description": "Shell command built from environment values",
+        "full_description": "Building a shell command string with values from the enclosing environment may cause subtle bugs or vulnerabilities.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "6.3",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/shell-command-injection-from-environment",
+      "message": "This shell command depends on an uncontrolled [absolute path](1).",
+      "level": null,
+      "file": "newIDE/app/scripts/create-new-theme.js",
+      "start_line": 72,
+      "end_line": null,
+      "start_column": 27,
+      "end_column": 71,
+      "rule": {
+        "rule_id": "js/shell-command-injection-from-environment",
+        "name": "js/shell-command-injection-from-environment",
+        "short_description": "Shell command built from environment values",
+        "full_description": "Building a shell command string with values from the enclosing environment may cause subtle bugs or vulnerabilities.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "6.3",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/shell-command-injection-from-environment",
+      "message": "This shell command depends on an uncontrolled [absolute path](1).\nThis shell command depends on an uncontrolled [absolute path](2).",
+      "level": null,
+      "file": "newIDE/app/scripts/import-GDJS-Runtime.js",
+      "start_line": 30,
+      "end_line": null,
+      "start_column": 29,
+      "end_column": 69,
+      "rule": {
+        "rule_id": "js/shell-command-injection-from-environment",
+        "name": "js/shell-command-injection-from-environment",
+        "short_description": "Shell command built from environment values",
+        "full_description": "Building a shell command string with values from the enclosing environment may cause subtle bugs or vulnerabilities.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "6.3",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/shell-command-injection-from-environment",
+      "message": "This shell command depends on an uncontrolled [absolute path](1).",
+      "level": null,
+      "file": "newIDE/app/scripts/import-libGD.js",
+      "start_line": 30,
+      "end_line": null,
+      "start_column": 14,
+      "end_column": 46,
+      "rule": {
+        "rule_id": "js/shell-command-injection-from-environment",
+        "name": "js/shell-command-injection-from-environment",
+        "short_description": "Shell command built from environment values",
+        "full_description": "Building a shell command string with values from the enclosing environment may cause subtle bugs or vulnerabilities.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "6.3",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/shell-command-injection-from-environment",
+      "message": "This shell command depends on an uncontrolled [absolute path](1).",
+      "level": null,
+      "file": "newIDE/web-app/scripts/deploy-GDJS-Runtime.js",
+      "start_line": 20,
+      "end_line": null,
+      "start_column": 3,
+      "end_column": 63,
+      "rule": {
+        "rule_id": "js/shell-command-injection-from-environment",
+        "name": "js/shell-command-injection-from-environment",
+        "short_description": "Shell command built from environment values",
+        "full_description": "Building a shell command string with values from the enclosing environment may cause subtle bugs or vulnerabilities.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ],
+        "precision": "high",
+        "problem_severity": "warning",
+        "security_severity": "6.3",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/redos",
+      "message": "This part of the regular expression may cause exponential backtracking on strings starting with ' * @param {{' and containing many repetitions of '}}\\t * @param {{'.",
+      "level": null,
+      "file": "GDJS/scripts/codemod-file-to-ts.js",
+      "start_line": 124,
+      "end_line": null,
+      "start_column": 34,
+      "end_column": 36,
+      "rule": {
+        "rule_id": "js/redos",
+        "name": "js/redos",
+        "short_description": "Inefficient regular expression",
+        "full_description": "A regular expression that requires exponential time to match certain inputs can be a performance bottleneck, and may be vulnerable to denial-of-service attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/redos",
+      "message": "This part of the regular expression may cause exponential backtracking on strings starting with ' * @param {{}}' and containing many repetitions of '\\t * @param {{}}'.",
+      "level": null,
+      "file": "GDJS/scripts/codemod-file-to-ts.js",
+      "start_line": 124,
+      "end_line": null,
+      "start_column": 38,
+      "end_column": 40,
+      "rule": {
+        "rule_id": "js/redos",
+        "name": "js/redos",
+        "short_description": "Inefficient regular expression",
+        "full_description": "A regular expression that requires exponential time to match certain inputs can be a performance bottleneck, and may be vulnerable to denial-of-service attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ],
+        "precision": "high",
+        "problem_severity": "error",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-1333",
+          "external/cwe/cwe-730",
+          "external/cwe/cwe-400"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/disabling-electron-websecurity",
+      "message": "Disabling webSecurity is strongly discouraged.",
+      "level": null,
+      "file": "newIDE/electron-app/app/LocalExternalEditorWindow.js",
+      "start_line": 37,
+      "end_line": null,
+      "start_column": 9,
+      "end_column": 27,
+      "rule": {
+        "rule_id": "js/disabling-electron-websecurity",
+        "name": "js/disabling-electron-websecurity",
+        "short_description": "Disabling Electron webSecurity",
+        "full_description": "Disabling webSecurity can cause critical security vulnerabilities.",
+        "tags": [
+          "security",
+          "frameworks/electron",
+          "external/cwe/cwe-079"
+        ],
+        "precision": "very-high",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/disabling-electron-websecurity",
+      "message": "Disabling webSecurity is strongly discouraged.",
+      "level": null,
+      "file": "newIDE/electron-app/app/main.js",
+      "start_line": 100,
+      "end_line": null,
+      "start_column": 7,
+      "end_column": 25,
+      "rule": {
+        "rule_id": "js/disabling-electron-websecurity",
+        "name": "js/disabling-electron-websecurity",
+        "short_description": "Disabling Electron webSecurity",
+        "full_description": "Disabling webSecurity can cause critical security vulnerabilities.",
+        "tags": [
+          "security",
+          "frameworks/electron",
+          "external/cwe/cwe-079"
+        ],
+        "precision": "very-high",
+        "problem_severity": "error",
+        "security_severity": "6.1",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-079"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/user-controlled-bypass",
+      "message": "This condition guards a sensitive [action](1), but a [user-provided value](2) controls it.\nThis condition guards a sensitive [action](3), but a [user-provided value](2) controls it.\nThis condition guards a sensitive [action](1), but a [user-provided value](4) controls it.\nThis condition guards a sensitive [action](3), but a [user-provided value](4) controls it.\nThis condition guards a sensitive [action](1), but a [user-provided value](5) controls it.\nThis condition guards a sensitive [action](3), but a [user-provided value](5) controls it.\nThis condition guards a sensitive [action](1), but a [user-provided value](6) controls it.\nThis condition guards a sensitive [action](3), but a [user-provided value](6) controls it.\nThis condition guards a sensitive [action](1), but a [user-provided value](7) controls it.\nThis condition guards a sensitive [action](3), but a [user-provided value](7) controls it.",
+      "level": null,
+      "file": "Extensions/PlayerAuthentication/playerauthenticationtools.ts",
+      "start_line": 632,
+      "end_line": null,
+      "start_column": 14,
+      "end_column": 24,
+      "rule": {
+        "rule_id": "js/user-controlled-bypass",
+        "name": "js/user-controlled-bypass",
+        "short_description": "User-controlled bypass of security check",
+        "full_description": "Conditions that the user controls are not suited for making security-related decisions.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-807",
+          "external/cwe/cwe-290"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-807",
+          "external/cwe/cwe-290"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/user-controlled-bypass",
+      "message": "This condition guards a sensitive [action](1), but a [user-provided value](2) controls it.\nThis condition guards a sensitive [action](3), but a [user-provided value](2) controls it.",
+      "level": null,
+      "file": "Extensions/PlayerAuthentication/playerauthenticationtools.ts",
+      "start_line": 745,
+      "end_line": null,
+      "start_column": 15,
+      "end_column": 25,
+      "rule": {
+        "rule_id": "js/user-controlled-bypass",
+        "name": "js/user-controlled-bypass",
+        "short_description": "User-controlled bypass of security check",
+        "full_description": "Conditions that the user controls are not suited for making security-related decisions.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-807",
+          "external/cwe/cwe-290"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "7.8",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-807",
+          "external/cwe/cwe-290"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/file-access-to-http",
+      "message": "Outbound network request depends on [file data](1).",
+      "level": null,
+      "file": "newIDE/electron-app/app/LocalFileUploader.js",
+      "start_line": 39,
+      "end_line": 50,
+      "start_column": 17,
+      "end_column": 12,
+      "rule": {
+        "rule_id": "js/file-access-to-http",
+        "name": "js/file-access-to-http",
+        "short_description": "File data in outbound network request",
+        "full_description": "Directly sending file data in an outbound network request can indicate unauthorized information disclosure.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-200"
+        ],
+        "precision": "medium",
+        "problem_severity": "warning",
+        "security_severity": "6.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-200"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/file-access-to-http",
+      "message": "Outbound network request depends on [file data](1).",
+      "level": null,
+      "file": "newIDE/electron-app/app/LocalFileUploader.js",
+      "start_line": 42,
+      "end_line": null,
+      "start_column": 19,
+      "end_column": 45,
+      "rule": {
+        "rule_id": "js/file-access-to-http",
+        "name": "js/file-access-to-http",
+        "short_description": "File data in outbound network request",
+        "full_description": "Directly sending file data in an outbound network request can indicate unauthorized information disclosure.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-200"
+        ],
+        "precision": "medium",
+        "problem_severity": "warning",
+        "security_severity": "6.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-200"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/client-side-request-forgery",
+      "message": "The [URL](1) of this request depends on a [user-provided value](2).",
+      "level": null,
+      "file": "Extensions/Multiplayer/multiplayertools.ts",
+      "start_line": 87,
+      "end_line": 91,
+      "start_column": 28,
+      "end_column": 7,
+      "rule": {
+        "rule_id": "js/client-side-request-forgery",
+        "name": "js/client-side-request-forgery",
+        "short_description": "Client-side request forgery",
+        "full_description": "Making a client-to-server request with user-controlled data in the URL allows a request forgery attack against the client.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-918"
+        ],
+        "precision": "medium",
+        "problem_severity": "error",
+        "security_severity": "5.0",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-918"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/missing-origin-check",
+      "message": "Postmessage handler has no origin check.",
+      "level": null,
+      "file": "Extensions/Leaderboards/leaderboardstools.ts",
+      "start_line": 866,
+      "end_line": null,
+      "start_column": 46,
+      "end_column": 51,
+      "rule": {
+        "rule_id": "js/missing-origin-check",
+        "name": "js/missing-origin-check",
+        "short_description": "Missing origin verification in `postMessage` handler",
+        "full_description": "Missing origin verification in a `postMessage` handler allows any windows to send arbitrary data to the handler.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-940"
+        ],
+        "precision": "medium",
+        "problem_severity": "warning",
+        "security_severity": "5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-940"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/missing-origin-check",
+      "message": "Postmessage handler has no origin check.",
+      "level": null,
+      "file": "GDJS/Runtime/debugger-client/window-message-debugger-client.ts",
+      "start_line": 20,
+      "end_line": null,
+      "start_column": 43,
+      "end_column": 48,
+      "rule": {
+        "rule_id": "js/missing-origin-check",
+        "name": "js/missing-origin-check",
+        "short_description": "Missing origin verification in `postMessage` handler",
+        "full_description": "Missing origin verification in a `postMessage` handler allows any windows to send arbitrary data to the handler.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-940"
+        ],
+        "precision": "medium",
+        "problem_severity": "warning",
+        "security_severity": "5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-940"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/missing-origin-check",
+      "message": "Postmessage handler has no origin check.",
+      "level": null,
+      "file": "newIDE/app/public/external/utils/parent-editor-interface.js",
+      "start_line": 45,
+      "end_line": null,
+      "start_column": 40,
+      "end_column": 45,
+      "rule": {
+        "rule_id": "js/missing-origin-check",
+        "name": "js/missing-origin-check",
+        "short_description": "Missing origin verification in `postMessage` handler",
+        "full_description": "Missing origin verification in a `postMessage` handler allows any windows to send arbitrary data to the handler.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-940"
+        ],
+        "precision": "medium",
+        "problem_severity": "warning",
+        "security_severity": "5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-940"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/missing-origin-check",
+      "message": "Postmessage handler has no origin check.",
+      "level": null,
+      "file": "newIDE/app/src/ResourcesList/ResourcePreview/Resource3DPreview.worker.js",
+      "start_line": 187,
+      "end_line": null,
+      "start_column": 24,
+      "end_column": 29,
+      "rule": {
+        "rule_id": "js/missing-origin-check",
+        "name": "js/missing-origin-check",
+        "short_description": "Missing origin verification in `postMessage` handler",
+        "full_description": "Missing origin verification in a `postMessage` handler allows any windows to send arbitrary data to the handler.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-940"
+        ],
+        "precision": "medium",
+        "problem_severity": "warning",
+        "security_severity": "5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-020",
+          "external/cwe/cwe-940"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/remote-property-injection",
+      "message": "A property name to write to depends on a [user-provided value](1).\nA property name to write to depends on a [user-provided value](2).",
+      "level": null,
+      "file": "GDJS/Runtime/variable.ts",
+      "start_line": 603,
+      "end_line": null,
+      "start_column": 29,
+      "end_column": 34,
+      "rule": {
+        "rule_id": "js/remote-property-injection",
+        "name": "js/remote-property-injection",
+        "short_description": "Remote property injection",
+        "full_description": "Allowing writes to arbitrary properties of an object may lead to denial-of-service attacks.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-250",
+          "external/cwe/cwe-400"
+        ],
+        "precision": "medium",
+        "problem_severity": "warning",
+        "security_severity": "7.5",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-250",
+          "external/cwe/cwe-400"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/http-to-file-access",
+      "message": "Write to file system depends on [Untrusted data](1).",
+      "level": null,
+      "file": "newIDE/app/scripts/extract-extensions-document.js",
+      "start_line": 214,
+      "end_line": null,
+      "start_column": 50,
+      "end_column": 70,
+      "rule": {
+        "rule_id": "js/http-to-file-access",
+        "name": "js/http-to-file-access",
+        "short_description": "Network data written to file",
+        "full_description": "Writing network data directly to the file system allows arbitrary file upload and might indicate a backdoor.",
+        "tags": [
+          "security",
+          "external/cwe/cwe-912",
+          "external/cwe/cwe-434"
+        ],
+        "precision": "medium",
+        "problem_severity": "warning",
+        "security_severity": "6.3",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-912",
+          "external/cwe/cwe-434"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/indirect-command-line-injection",
+      "message": "This command depends on an unsanitized [command-line argument](1).",
+      "level": null,
+      "file": "GDJS/scripts/codemod-file-to-ts.js",
+      "start_line": 149,
+      "end_line": null,
+      "start_column": 5,
+      "end_column": 92,
+      "rule": {
+        "rule_id": "js/indirect-command-line-injection",
+        "name": "js/indirect-command-line-injection",
+        "short_description": "Indirect uncontrolled command line",
+        "full_description": "Forwarding command-line arguments to a child process executed within a shell may indirectly introduce command-line injection vulnerabilities.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ],
+        "precision": "medium",
+        "problem_severity": "warning",
+        "security_severity": "6.3",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/indirect-command-line-injection",
+      "message": "This command depends on an unsanitized [environment variable](1).",
+      "level": null,
+      "file": "GDevelop.js/update-bindings.js",
+      "start_line": 43,
+      "end_line": null,
+      "start_column": 7,
+      "end_column": 78,
+      "rule": {
+        "rule_id": "js/indirect-command-line-injection",
+        "name": "js/indirect-command-line-injection",
+        "short_description": "Indirect uncontrolled command line",
+        "full_description": "Forwarding command-line arguments to a child process executed within a shell may indirectly introduce command-line injection vulnerabilities.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ],
+        "precision": "medium",
+        "problem_severity": "warning",
+        "security_severity": "6.3",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/indirect-command-line-injection",
+      "message": "This command depends on an unsanitized [command-line argument](1).",
+      "level": null,
+      "file": "newIDE/electron-app/scripts/build.js",
+      "start_line": 23,
+      "end_line": 27,
+      "start_column": 3,
+      "end_column": 14,
+      "rule": {
+        "rule_id": "js/indirect-command-line-injection",
+        "name": "js/indirect-command-line-injection",
+        "short_description": "Indirect uncontrolled command line",
+        "full_description": "Forwarding command-line arguments to a child process executed within a shell may indirectly introduce command-line injection vulnerabilities.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ],
+        "precision": "medium",
+        "problem_severity": "warning",
+        "security_severity": "6.3",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ]
+      }
+    },
+    {
+      "rule_id": "js/indirect-command-line-injection",
+      "message": "This command depends on an unsanitized [command-line argument](1).",
+      "level": null,
+      "file": "newIDE/web-app/scripts/deploy.js",
+      "start_line": 113,
+      "end_line": null,
+      "start_column": 13,
+      "end_column": 108,
+      "rule": {
+        "rule_id": "js/indirect-command-line-injection",
+        "name": "js/indirect-command-line-injection",
+        "short_description": "Indirect uncontrolled command line",
+        "full_description": "Forwarding command-line arguments to a child process executed within a shell may indirectly introduce command-line injection vulnerabilities.",
+        "tags": [
+          "correctness",
+          "security",
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ],
+        "precision": "medium",
+        "problem_severity": "warning",
+        "security_severity": "6.3",
+        "sub_severity": null,
+        "cwe": [
+          "external/cwe/cwe-078",
+          "external/cwe/cwe-088"
+        ]
+      }
+    }
+  ]
+}

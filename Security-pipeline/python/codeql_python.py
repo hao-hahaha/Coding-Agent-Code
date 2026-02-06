@@ -1,9 +1,3 @@
-# run_codeql_python.py
-# ================================
-# Python-only CodeQL pipeline
-# Input: python_pr_df
-# ================================
-
 import os
 import shutil
 import subprocess
@@ -17,6 +11,8 @@ BASE_REPORT_DIR = "codeql-reports"
 PYTHON_CLI_LANG = "python"
 PYTHON_QUERY_SUITE = "python-security-extended.qls"
 PYTHON_BUILD_MODE = "none"
+
+MAX_REPOS_PER_RUN = 10
 
 
 # ========= helpers =========
@@ -111,7 +107,16 @@ def main(python_pr_df: pd.DataFrame):
     # group by repo_url
     grouped = python_pr_df.groupby("repo_url")
 
+    processed_repo_count = 0
+
     for repo_url, df_repo in grouped:
+
+        if processed_repo_count >= MAX_REPOS_PER_RUN:
+            print(
+                f"\n⏹️  Reached MAX_REPOS_PER_RUN={MAX_REPOS_PER_RUN}, stopping."
+            )
+            break
+
         print("\n" + "=" * 60)
         print(f"📦 Repo: {repo_url}")
 
@@ -124,6 +129,8 @@ def main(python_pr_df: pd.DataFrame):
         if os.path.exists(done_marker):
             print("⏭️  Skipped (already done)")
             continue
+
+        processed_repo_count += 1
 
         # 🔑 关键：按 merged_at 排序（越早 merge，PR_1 越早）
         df_repo = df_repo.sort_values("merged_at")
@@ -165,10 +172,12 @@ def main(python_pr_df: pd.DataFrame):
 
 # ========= ENTRY =========
 if __name__ == "__main__":
-    # 👇 你在外面先准备好 python_pr_df
-    # 比如：
-    # python_pr_df = pd.read_csv("python_prs.csv")
+
 
     python_pr_df = pd.read_parquet('python_pr.parquet')
+
+    python_pr_df = python_pr_df[
+        python_pr_df['repo'] != 'azure-sdk-for-python'
+    ]
 
     main(python_pr_df)
