@@ -1,0 +1,20 @@
+RQ1:
+
+1. get merged PRs with .py file changes
+2. checkout the merged PRs' codebase and the PRs' based codebase
+3. then we apply SAST tool (SonarQube, SnykCode) on both prev and post PR based codebases, then we use post-prev get security issues introduced agent pr
+
+Bandit [7], Dlint [23], DevSkim [21], CodeQL [16], Graudit [33], and Semgrep [70] from paper: https://arxiv.org/pdf/2407.16235
+Bandit, Semgrep, SonarQube, CodeQL
+Semgrep - security audit
+4. then we split both codebase into functions then use LLM check security issues (I'm still looking into it), then we do the same thing post-prev get issues introduced by agent pr
+5. in the end, we cover as many security issues as possible, we need to deal with false positives
+6. we may manually verify security issues 20%? 40%? or we could use LLM to verify the secuirty issues (I'm still looking into it)
+
+LLM detect security issue prompt: https://arxiv.org/pdf/2508.04448
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+[
+  {
+    "code": "113                 formatted_files.append(f\"File: {rel_path}\\n{content}\\n{'='*50}\")\n114             except Exception:\n115                 continue\n116         return \"\\n\\n\".join(formatted_files)\n",
+    "col_offset": 12,
+    "end_col_offset": 24,
+    "filename": "./src/praisonai-agents/praisonaiagents/agent/context_agent.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Continue detected.",
+    "line_number": 114,
+    "line_range": [
+      114,
+      115
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b112_try_except_continue.html",
+    "test_id": "B112",
+    "test_name": "try_except_continue"
+  },
+  {
+    "code": "130                     doc_content.append(f\"Doc: {rel_path}\\n{content}\\n{'='*40}\")\n131                 except Exception:\n132                     continue\n133         \n",
+    "col_offset": 16,
+    "end_col_offset": 28,
+    "filename": "./src/praisonai-agents/praisonaiagents/agent/context_agent.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Continue detected.",
+    "line_number": 131,
+    "line_range": [
+      131,
+      132
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b112_try_except_continue.html",
+    "test_id": "B112",
+    "test_name": "try_except_continue"
+  },
+  {
+    "code": "860                                     inline_comments += 1\n861                         except Exception:\n862                             continue\n863             \n",
+    "col_offset": 24,
+    "end_col_offset": 36,
+    "filename": "./src/praisonai-agents/praisonaiagents/agent/context_agent.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Continue detected.",
+    "line_number": 861,
+    "line_range": [
+      861,
+      862
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b112_try_except_continue.html",
+    "test_id": "B112",
+    "test_name": "try_except_continue"
+  }
+]

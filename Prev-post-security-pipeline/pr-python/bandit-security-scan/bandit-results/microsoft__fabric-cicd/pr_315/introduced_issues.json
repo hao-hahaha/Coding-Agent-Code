@@ -1,0 +1,1302 @@
+[
+  {
+    "code": "147     # Verify folders are correctly identified\n148     assert \"/Folder1\" in workspace.repository_folders\n149     assert \"/Folder2\" in workspace.repository_folders\n",
+    "col_offset": 4,
+    "end_col_offset": 53,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 148,
+    "line_range": [
+      148
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "148     assert \"/Folder1\" in workspace.repository_folders\n149     assert \"/Folder2\" in workspace.repository_folders\n150     assert \"/Folder1/Subfolder1\" in workspace.repository_folders\n",
+    "col_offset": 4,
+    "end_col_offset": 53,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 149,
+    "line_range": [
+      149
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "149     assert \"/Folder2\" in workspace.repository_folders\n150     assert \"/Folder1/Subfolder1\" in workspace.repository_folders\n151     assert \"/Folder2/Subfolder2\" in workspace.repository_folders\n",
+    "col_offset": 4,
+    "end_col_offset": 64,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 150,
+    "line_range": [
+      150
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "150     assert \"/Folder1/Subfolder1\" in workspace.repository_folders\n151     assert \"/Folder2/Subfolder2\" in workspace.repository_folders\n152     \n",
+    "col_offset": 4,
+    "end_col_offset": 64,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 151,
+    "line_range": [
+      151
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "153     # Verify empty folders are not included\n154     assert \"/EmptyFolder\" not in workspace.repository_folders\n155     assert \"/FolderWithEmptySubfolders\" not in workspace.repository_folders\n",
+    "col_offset": 4,
+    "end_col_offset": 61,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 154,
+    "line_range": [
+      154
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "154     assert \"/EmptyFolder\" not in workspace.repository_folders\n155     assert \"/FolderWithEmptySubfolders\" not in workspace.repository_folders\n156     assert \"/FolderWithEmptySubfolders/EmptySubfolder\" not in workspace.repository_folders\n",
+    "col_offset": 4,
+    "end_col_offset": 75,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 155,
+    "line_range": [
+      155
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "155     assert \"/FolderWithEmptySubfolders\" not in workspace.repository_folders\n156     assert \"/FolderWithEmptySubfolders/EmptySubfolder\" not in workspace.repository_folders\n157     \n",
+    "col_offset": 4,
+    "end_col_offset": 90,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 156,
+    "line_range": [
+      156
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "159     for folder_id in workspace.repository_folders.values():\n160         assert folder_id == \"\"\n161 \n",
+    "col_offset": 8,
+    "end_col_offset": 30,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 160,
+    "line_range": [
+      160
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "174     # Verify folders are correctly identified\n175     assert \"/Folder1\" in workspace.repository_folders\n176     assert \"/Folder2\" in workspace.repository_folders\n",
+    "col_offset": 4,
+    "end_col_offset": 53,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 175,
+    "line_range": [
+      175
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "175     assert \"/Folder1\" in workspace.repository_folders\n176     assert \"/Folder2\" in workspace.repository_folders\n177     assert \"/Folder1/Subfolder1\" in workspace.repository_folders\n",
+    "col_offset": 4,
+    "end_col_offset": 53,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 176,
+    "line_range": [
+      176
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "176     assert \"/Folder2\" in workspace.repository_folders\n177     assert \"/Folder1/Subfolder1\" in workspace.repository_folders\n178     assert \"/Folder2/Subfolder2\" in workspace.repository_folders\n",
+    "col_offset": 4,
+    "end_col_offset": 64,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 177,
+    "line_range": [
+      177
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "177     assert \"/Folder1/Subfolder1\" in workspace.repository_folders\n178     assert \"/Folder2/Subfolder2\" in workspace.repository_folders\n179     \n",
+    "col_offset": 4,
+    "end_col_offset": 64,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 178,
+    "line_range": [
+      178
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "184     # Parents should always come before their children\n185     assert sorted_folders.index(\"/Folder1\") < sorted_folders.index(\"/Folder1/Subfolder1\")\n186     assert sorted_folders.index(\"/Folder2\") < sorted_folders.index(\"/Folder2/Subfolder2\")\n",
+    "col_offset": 4,
+    "end_col_offset": 89,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 185,
+    "line_range": [
+      185
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "185     assert sorted_folders.index(\"/Folder1\") < sorted_folders.index(\"/Folder1/Subfolder1\")\n186     assert sorted_folders.index(\"/Folder2\") < sorted_folders.index(\"/Folder2/Subfolder2\")\n187     \n",
+    "col_offset": 4,
+    "end_col_offset": 89,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 186,
+    "line_range": [
+      186
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "191             parent_path = \"/\".join(folder_path.split(\"/\")[:-1])\n192             assert parent_path in workspace.repository_folders, f\"Parent folder {parent_path} not found for {folder_path}\"\n193 \n",
+    "col_offset": 12,
+    "end_col_offset": 122,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 192,
+    "line_range": [
+      192
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "239     # Verify the folder hierarchy remains intact\n240     assert set(workspace.repository_folders.keys()) == initial_folders\n241     \n",
+    "col_offset": 4,
+    "end_col_offset": 70,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 240,
+    "line_range": [
+      240
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "242     # Verify deployed folder IDs were detected correctly\n243     assert workspace.deployed_folders[\"/Folder1\"] == folder1_id\n244     assert workspace.deployed_folders[\"/Folder2\"] == folder2_id\n",
+    "col_offset": 4,
+    "end_col_offset": 63,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 243,
+    "line_range": [
+      243
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "243     assert workspace.deployed_folders[\"/Folder1\"] == folder1_id\n244     assert workspace.deployed_folders[\"/Folder2\"] == folder2_id\n245     \n",
+    "col_offset": 4,
+    "end_col_offset": 63,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 244,
+    "line_range": [
+      244
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "246     # Verify subfolder paths still exist in repository (even if not deployed)\n247     assert \"/Folder1/Subfolder1\" in workspace.repository_folders\n248     assert \"/Folder2/Subfolder2\" in workspace.repository_folders\n",
+    "col_offset": 4,
+    "end_col_offset": 64,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 247,
+    "line_range": [
+      247
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "247     assert \"/Folder1/Subfolder1\" in workspace.repository_folders\n248     assert \"/Folder2/Subfolder2\" in workspace.repository_folders\n249 \n",
+    "col_offset": 4,
+    "end_col_offset": 64,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 248,
+    "line_range": [
+      248
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "329         # Verify folder IDs are correctly assigned to items\n330         assert workspace.repository_items[\"Notebook\"][\"Root Notebook\"].folder_id == \"\"\n331         assert workspace.repository_items[\"Notebook\"][\"Folder1 Notebook\"].folder_id == folder1_id\n",
+    "col_offset": 8,
+    "end_col_offset": 86,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 330,
+    "line_range": [
+      330
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "330         assert workspace.repository_items[\"Notebook\"][\"Root Notebook\"].folder_id == \"\"\n331         assert workspace.repository_items[\"Notebook\"][\"Folder1 Notebook\"].folder_id == folder1_id\n332         assert workspace.repository_items[\"Notebook\"][\"Subfolder1 Notebook\"].folder_id == subfolder1_id\n",
+    "col_offset": 8,
+    "end_col_offset": 97,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 331,
+    "line_range": [
+      331
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "331         assert workspace.repository_items[\"Notebook\"][\"Folder1 Notebook\"].folder_id == folder1_id\n332         assert workspace.repository_items[\"Notebook\"][\"Subfolder1 Notebook\"].folder_id == subfolder1_id\n333         \n",
+    "col_offset": 8,
+    "end_col_offset": 103,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 332,
+    "line_range": [
+      332
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "333         \n334         assert workspace.repository_items[\"DataPipeline\"][\"Root Pipeline\"].folder_id == \"\"\n335         assert workspace.repository_items[\"DataPipeline\"][\"Folder2 Pipeline\"].folder_id == folder2_id\n",
+    "col_offset": 8,
+    "end_col_offset": 90,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 334,
+    "line_range": [
+      334
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "334         assert workspace.repository_items[\"DataPipeline\"][\"Root Pipeline\"].folder_id == \"\"\n335         assert workspace.repository_items[\"DataPipeline\"][\"Folder2 Pipeline\"].folder_id == folder2_id\n336         assert workspace.repository_items[\"DataPipeline\"][\"Subfolder2 Pipeline\"].folder_id == subfolder2_id\n",
+    "col_offset": 8,
+    "end_col_offset": 101,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 335,
+    "line_range": [
+      335
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "335         assert workspace.repository_items[\"DataPipeline\"][\"Folder2 Pipeline\"].folder_id == folder2_id\n336         assert workspace.repository_items[\"DataPipeline\"][\"Subfolder2 Pipeline\"].folder_id == subfolder2_id\n337 \n",
+    "col_offset": 8,
+    "end_col_offset": 107,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 336,
+    "line_range": [
+      336
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "360     # Check if invalid folder was detected\n361     assert \"/Invalid*Folder\" in workspace.repository_folders\n362     \n",
+    "col_offset": 4,
+    "end_col_offset": 60,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 361,
+    "line_range": [
+      361
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "373     has_invalid_chars = bool(re.search(constants.INVALID_FOLDER_CHAR_REGEX, folder_name))\n374     assert has_invalid_chars, \"Invalid folder name should match the invalid character regex\"\n375     \n",
+    "col_offset": 4,
+    "end_col_offset": 92,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 374,
+    "line_range": [
+      374
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "381     # Verify the error message\n382     assert \"Folder name 'Invalid*Folder' contains invalid characters\" in str(excinfo.value)\n383 \n",
+    "col_offset": 4,
+    "end_col_offset": 91,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 382,
+    "line_range": [
+      382
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "427     \n428     assert expected_deep_path in workspace.repository_folders\n429     assert expected_mid_path in workspace.repository_folders\n",
+    "col_offset": 4,
+    "end_col_offset": 61,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 428,
+    "line_range": [
+      428
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "428     assert expected_deep_path in workspace.repository_folders\n429     assert expected_mid_path in workspace.repository_folders\n430     \n",
+    "col_offset": 4,
+    "end_col_offset": 60,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 429,
+    "line_range": [
+      429
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "439             if next_level_path in workspace.repository_folders:\n440                 assert sorted_folders.index(current_level_path) < sorted_folders.index(next_level_path)\n441     \n",
+    "col_offset": 16,
+    "end_col_offset": 103,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 440,
+    "line_range": [
+      440
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "448     # Should complete in reasonable time (< 1 second for 15 levels)\n449     assert execution_time < 1.0, f\"Deep folder processing took too long: {execution_time:.2f}s\"\n450 \n",
+    "col_offset": 4,
+    "end_col_offset": 95,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 449,
+    "line_range": [
+      449
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "480     \n481     assert \"/OriginalFolder\" in workspace.repository_folders\n482     assert \"/OriginalFolder/OriginalSubfolder\" in workspace.repository_folders\n",
+    "col_offset": 4,
+    "end_col_offset": 60,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 481,
+    "line_range": [
+      481
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "481     assert \"/OriginalFolder\" in workspace.repository_folders\n482     assert \"/OriginalFolder/OriginalSubfolder\" in workspace.repository_folders\n483     \n",
+    "col_offset": 4,
+    "end_col_offset": 78,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 482,
+    "line_range": [
+      482
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "517     # Verify old folder paths are no longer present in renamed workspace\n518     assert \"/OriginalFolder\" not in renamed_workspace.repository_folders\n519     assert \"/OriginalFolder/OriginalSubfolder\" not in renamed_workspace.repository_folders\n",
+    "col_offset": 4,
+    "end_col_offset": 72,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 518,
+    "line_range": [
+      518
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "518     assert \"/OriginalFolder\" not in renamed_workspace.repository_folders\n519     assert \"/OriginalFolder/OriginalSubfolder\" not in renamed_workspace.repository_folders\n520     \n",
+    "col_offset": 4,
+    "end_col_offset": 90,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 519,
+    "line_range": [
+      519
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "521     # Verify new folder paths are detected in renamed workspace\n522     assert \"/RenamedFolder\" in renamed_workspace.repository_folders\n523     assert \"/RenamedFolder/RenamedSubfolder\" in renamed_workspace.repository_folders\n",
+    "col_offset": 4,
+    "end_col_offset": 67,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 522,
+    "line_range": [
+      522
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "522     assert \"/RenamedFolder\" in renamed_workspace.repository_folders\n523     assert \"/RenamedFolder/RenamedSubfolder\" in renamed_workspace.repository_folders\n524     \n",
+    "col_offset": 4,
+    "end_col_offset": 84,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 523,
+    "line_range": [
+      523
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "525     # Verify items are detected in new locations\n526     assert \"Parent Notebook\" in renamed_workspace.repository_items[\"Notebook\"]\n527     assert \"Child Notebook\" in renamed_workspace.repository_items[\"Notebook\"]\n",
+    "col_offset": 4,
+    "end_col_offset": 78,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 526,
+    "line_range": [
+      526
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "526     assert \"Parent Notebook\" in renamed_workspace.repository_items[\"Notebook\"]\n527     assert \"Child Notebook\" in renamed_workspace.repository_items[\"Notebook\"]\n528     \n",
+    "col_offset": 4,
+    "end_col_offset": 77,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 527,
+    "line_range": [
+      527
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "530     sorted_folders = sorted(renamed_workspace.repository_folders.keys(), key=lambda path: path.count(\"/\"))\n531     assert sorted_folders.index(\"/RenamedFolder\") < sorted_folders.index(\"/RenamedFolder/RenamedSubfolder\")\n532 \n",
+    "col_offset": 4,
+    "end_col_offset": 107,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 531,
+    "line_range": [
+      531
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "571         if should_be_valid:\n572             assert not has_invalid_chars, f\"{description}: '{folder_name}' should be valid but was rejected\"\n573         else:\n",
+    "col_offset": 12,
+    "end_col_offset": 108,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 572,
+    "line_range": [
+      572
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "573         else:\n574             assert has_invalid_chars, f\"{description}: '{folder_name}' should be invalid but was accepted\"\n575     \n",
+    "col_offset": 12,
+    "end_col_offset": 106,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 574,
+    "line_range": [
+      574
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "602         expected_path = f\"/{folder_name}\"\n603         assert expected_path in workspace.repository_folders, f\"Valid folder '{folder_name}' was not detected\"\n604     \n",
+    "col_offset": 8,
+    "end_col_offset": 110,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 603,
+    "line_range": [
+      603
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "626     # Verify invalid folder was detected\n627     assert \"/Invalid*Folder\" in invalid_workspace.repository_folders\n628     \n",
+    "col_offset": 4,
+    "end_col_offset": 68,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 627,
+    "line_range": [
+      627
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "632     \n633     assert \"contains invalid characters\" in str(excinfo.value)\n634 \n",
+    "col_offset": 4,
+    "end_col_offset": 62,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 633,
+    "line_range": [
+      633
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "668     # Verify parent folders are detected even though they have no direct items\n669     assert \"/ParentWithNoDirectItems\" in workspace.repository_folders\n670     assert \"/ParentWithNoDirectItems/SubfolderWithItems\" in workspace.repository_folders\n",
+    "col_offset": 4,
+    "end_col_offset": 69,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 669,
+    "line_range": [
+      669
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "669     assert \"/ParentWithNoDirectItems\" in workspace.repository_folders\n670     assert \"/ParentWithNoDirectItems/SubfolderWithItems\" in workspace.repository_folders\n671     \n",
+    "col_offset": 4,
+    "end_col_offset": 88,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 670,
+    "line_range": [
+      670
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "672     # Verify deeply nested scenario\n673     assert \"/Level1EmptyParent\" in workspace.repository_folders  \n674     assert \"/Level1EmptyParent/Level2EmptyParent\" in workspace.repository_folders\n",
+    "col_offset": 4,
+    "end_col_offset": 63,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 673,
+    "line_range": [
+      673
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "673     assert \"/Level1EmptyParent\" in workspace.repository_folders  \n674     assert \"/Level1EmptyParent/Level2EmptyParent\" in workspace.repository_folders\n675     assert \"/Level1EmptyParent/Level2EmptyParent/FinalSubfolder\" in workspace.repository_folders\n",
+    "col_offset": 4,
+    "end_col_offset": 81,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 674,
+    "line_range": [
+      674
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "674     assert \"/Level1EmptyParent/Level2EmptyParent\" in workspace.repository_folders\n675     assert \"/Level1EmptyParent/Level2EmptyParent/FinalSubfolder\" in workspace.repository_folders\n676     \n",
+    "col_offset": 4,
+    "end_col_offset": 96,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 675,
+    "line_range": [
+      675
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "681     subfolder_idx = sorted_folders.index(\"/ParentWithNoDirectItems/SubfolderWithItems\")\n682     assert parent_idx < subfolder_idx, \"Parent folder should come before subfolder\"\n683     \n",
+    "col_offset": 4,
+    "end_col_offset": 83,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 682,
+    "line_range": [
+      682
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "684     # Verify items are correctly associated with their folders\n685     assert \"Subfolder Notebook\" in workspace.repository_items[\"Notebook\"]\n686     assert \"Deep Nested Notebook\" in workspace.repository_items[\"Notebook\"]\n",
+    "col_offset": 4,
+    "end_col_offset": 73,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 685,
+    "line_range": [
+      685
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "685     assert \"Subfolder Notebook\" in workspace.repository_items[\"Notebook\"]\n686     assert \"Deep Nested Notebook\" in workspace.repository_items[\"Notebook\"]\n687     \n",
+    "col_offset": 4,
+    "end_col_offset": 75,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 686,
+    "line_range": [
+      686
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "689     # but their subfolders would get proper folder IDs when deployed\n690     assert workspace.repository_folders[\"/ParentWithNoDirectItems\"] == \"\"\n691     assert workspace.repository_folders[\"/Level1EmptyParent\"] == \"\"\n",
+    "col_offset": 4,
+    "end_col_offset": 73,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 690,
+    "line_range": [
+      690
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "690     assert workspace.repository_folders[\"/ParentWithNoDirectItems\"] == \"\"\n691     assert workspace.repository_folders[\"/Level1EmptyParent\"] == \"\"\n692     assert workspace.repository_folders[\"/Level1EmptyParent/Level2EmptyParent\"] == \"\"\n",
+    "col_offset": 4,
+    "end_col_offset": 67,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 691,
+    "line_range": [
+      691
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "691     assert workspace.repository_folders[\"/Level1EmptyParent\"] == \"\"\n692     assert workspace.repository_folders[\"/Level1EmptyParent/Level2EmptyParent\"] == \"\"\n693 \n",
+    "col_offset": 4,
+    "end_col_offset": 85,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 692,
+    "line_range": [
+      692
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "732     # Verify we detected a reasonable number of folders\n733     assert len(workspace.repository_folders) >= 50, \"Should detect at least 50 folders\"\n734     assert len(workspace.repository_folders) <= 125, \"Should not detect more than 125 folders\"\n",
+    "col_offset": 4,
+    "end_col_offset": 87,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 733,
+    "line_range": [
+      733
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "733     assert len(workspace.repository_folders) >= 50, \"Should detect at least 50 folders\"\n734     assert len(workspace.repository_folders) <= 125, \"Should not detect more than 125 folders\"\n735     \n",
+    "col_offset": 4,
+    "end_col_offset": 94,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 734,
+    "line_range": [
+      734
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "742     expected_items = num_folders * items_per_folder\n743     assert len(workspace.repository_items[\"Notebook\"]) == expected_items\n744     \n",
+    "col_offset": 4,
+    "end_col_offset": 72,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 743,
+    "line_range": [
+      743
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "745     # Performance assertions - should complete in reasonable time\n746     assert folders_time < 5.0, f\"Folder detection took too long: {folders_time:.2f}s\"\n747     assert items_time < 10.0, f\"Item detection took too long: {items_time:.2f}s\"\n",
+    "col_offset": 4,
+    "end_col_offset": 85,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 746,
+    "line_range": [
+      746
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "746     assert folders_time < 5.0, f\"Folder detection took too long: {folders_time:.2f}s\"\n747     assert items_time < 10.0, f\"Item detection took too long: {items_time:.2f}s\"\n748     \n",
+    "col_offset": 4,
+    "end_col_offset": 80,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 747,
+    "line_range": [
+      747
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "754         parent_path = \"/\".join(folder_path.split(\"/\")[:-1])\n755         assert parent_path in workspace.repository_folders, f\"Parent {parent_path} not found for {folder_path}\"\n756     \n",
+    "col_offset": 8,
+    "end_col_offset": 111,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 755,
+    "line_range": [
+      755
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "766         first_level_2_index = min(sorted_folders.index(f) for f in level_2_folders)\n767         assert last_level_1_index < first_level_2_index, \"Folder sorting is incorrect with large numbers\"\n",
+    "col_offset": 8,
+    "end_col_offset": 105,
+    "filename": "./tests/test_subfolders.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 767,
+    "line_range": [
+      767
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

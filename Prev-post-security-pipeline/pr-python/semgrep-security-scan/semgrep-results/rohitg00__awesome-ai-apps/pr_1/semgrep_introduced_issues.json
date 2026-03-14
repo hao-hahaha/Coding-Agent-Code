@@ -1,0 +1,450 @@
+[
+  {
+    "check_id": "generic.html-templates.security.var-in-href.var-in-href",
+    "path": "website/layouts/_default/home.html",
+    "start": {
+      "line": 94,
+      "col": 28,
+      "offset": 5359
+    },
+    "end": {
+      "line": 94,
+      "col": 58,
+      "offset": 5389
+    },
+    "extra": {
+      "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely generate a URL. If using Mustache, use a URL encoding library, or prepend a slash '/' to the variable for relative links (`href=\"/{{link}}\"`). You may also consider setting the Content Security Policy (CSP) header.",
+      "metadata": {
+        "cwe": [
+          "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+        ],
+        "owasp": [
+          "A07:2017 - Cross-Site Scripting (XSS)",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss#:~:text=javascript:%20URI",
+          "https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url",
+          "https://github.com/pugjs/pug/issues/2952",
+          "https://content-security-policy.com/"
+        ],
+        "category": "security",
+        "technology": [
+          "html-templates"
+        ],
+        "confidence": "LOW",
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Cross-Site-Scripting (XSS)"
+        ],
+        "source": "https://semgrep.dev/r/generic.html-templates.security.var-in-href.var-in-href",
+        "shortlink": "https://sg.run/x1kP"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "generic.html-templates.security.var-in-href.var-in-href",
+    "path": "website/layouts/_default/home.html",
+    "start": {
+      "line": 95,
+      "col": 28,
+      "offset": 5464
+    },
+    "end": {
+      "line": 95,
+      "col": 51,
+      "offset": 5487
+    },
+    "extra": {
+      "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely generate a URL. If using Mustache, use a URL encoding library, or prepend a slash '/' to the variable for relative links (`href=\"/{{link}}\"`). You may also consider setting the Content Security Policy (CSP) header.",
+      "metadata": {
+        "cwe": [
+          "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+        ],
+        "owasp": [
+          "A07:2017 - Cross-Site Scripting (XSS)",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss#:~:text=javascript:%20URI",
+          "https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url",
+          "https://github.com/pugjs/pug/issues/2952",
+          "https://content-security-policy.com/"
+        ],
+        "category": "security",
+        "technology": [
+          "html-templates"
+        ],
+        "confidence": "LOW",
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Cross-Site-Scripting (XSS)"
+        ],
+        "source": "https://semgrep.dev/r/generic.html-templates.security.var-in-href.var-in-href",
+        "shortlink": "https://sg.run/x1kP"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "generic.html-templates.security.var-in-href.var-in-href",
+    "path": "website/layouts/_default/list.html",
+    "start": {
+      "line": 46,
+      "col": 28,
+      "offset": 2204
+    },
+    "end": {
+      "line": 46,
+      "col": 58,
+      "offset": 2234
+    },
+    "extra": {
+      "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely generate a URL. If using Mustache, use a URL encoding library, or prepend a slash '/' to the variable for relative links (`href=\"/{{link}}\"`). You may also consider setting the Content Security Policy (CSP) header.",
+      "metadata": {
+        "cwe": [
+          "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+        ],
+        "owasp": [
+          "A07:2017 - Cross-Site Scripting (XSS)",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss#:~:text=javascript:%20URI",
+          "https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url",
+          "https://github.com/pugjs/pug/issues/2952",
+          "https://content-security-policy.com/"
+        ],
+        "category": "security",
+        "technology": [
+          "html-templates"
+        ],
+        "confidence": "LOW",
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Cross-Site-Scripting (XSS)"
+        ],
+        "source": "https://semgrep.dev/r/generic.html-templates.security.var-in-href.var-in-href",
+        "shortlink": "https://sg.run/x1kP"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "generic.html-templates.security.var-in-href.var-in-href",
+    "path": "website/layouts/_default/list.html",
+    "start": {
+      "line": 52,
+      "col": 28,
+      "offset": 3117
+    },
+    "end": {
+      "line": 52,
+      "col": 51,
+      "offset": 3140
+    },
+    "extra": {
+      "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely generate a URL. If using Mustache, use a URL encoding library, or prepend a slash '/' to the variable for relative links (`href=\"/{{link}}\"`). You may also consider setting the Content Security Policy (CSP) header.",
+      "metadata": {
+        "cwe": [
+          "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+        ],
+        "owasp": [
+          "A07:2017 - Cross-Site Scripting (XSS)",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss#:~:text=javascript:%20URI",
+          "https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url",
+          "https://github.com/pugjs/pug/issues/2952",
+          "https://content-security-policy.com/"
+        ],
+        "category": "security",
+        "technology": [
+          "html-templates"
+        ],
+        "confidence": "LOW",
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Cross-Site-Scripting (XSS)"
+        ],
+        "source": "https://semgrep.dev/r/generic.html-templates.security.var-in-href.var-in-href",
+        "shortlink": "https://sg.run/x1kP"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "generic.html-templates.security.var-in-href.var-in-href",
+    "path": "website/layouts/apps/apps.html",
+    "start": {
+      "line": 47,
+      "col": 28,
+      "offset": 2264
+    },
+    "end": {
+      "line": 47,
+      "col": 58,
+      "offset": 2294
+    },
+    "extra": {
+      "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely generate a URL. If using Mustache, use a URL encoding library, or prepend a slash '/' to the variable for relative links (`href=\"/{{link}}\"`). You may also consider setting the Content Security Policy (CSP) header.",
+      "metadata": {
+        "cwe": [
+          "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+        ],
+        "owasp": [
+          "A07:2017 - Cross-Site Scripting (XSS)",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss#:~:text=javascript:%20URI",
+          "https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url",
+          "https://github.com/pugjs/pug/issues/2952",
+          "https://content-security-policy.com/"
+        ],
+        "category": "security",
+        "technology": [
+          "html-templates"
+        ],
+        "confidence": "LOW",
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Cross-Site-Scripting (XSS)"
+        ],
+        "source": "https://semgrep.dev/r/generic.html-templates.security.var-in-href.var-in-href",
+        "shortlink": "https://sg.run/x1kP"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "generic.html-templates.security.var-in-href.var-in-href",
+    "path": "website/layouts/apps/apps.html",
+    "start": {
+      "line": 53,
+      "col": 28,
+      "offset": 3177
+    },
+    "end": {
+      "line": 53,
+      "col": 51,
+      "offset": 3200
+    },
+    "extra": {
+      "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely generate a URL. If using Mustache, use a URL encoding library, or prepend a slash '/' to the variable for relative links (`href=\"/{{link}}\"`). You may also consider setting the Content Security Policy (CSP) header.",
+      "metadata": {
+        "cwe": [
+          "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+        ],
+        "owasp": [
+          "A07:2017 - Cross-Site Scripting (XSS)",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss#:~:text=javascript:%20URI",
+          "https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url",
+          "https://github.com/pugjs/pug/issues/2952",
+          "https://content-security-policy.com/"
+        ],
+        "category": "security",
+        "technology": [
+          "html-templates"
+        ],
+        "confidence": "LOW",
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Cross-Site-Scripting (XSS)"
+        ],
+        "source": "https://semgrep.dev/r/generic.html-templates.security.var-in-href.var-in-href",
+        "shortlink": "https://sg.run/x1kP"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "generic.html-templates.security.var-in-href.var-in-href",
+    "path": "website/layouts/index.html",
+    "start": {
+      "line": 96,
+      "col": 28,
+      "offset": 5462
+    },
+    "end": {
+      "line": 96,
+      "col": 58,
+      "offset": 5492
+    },
+    "extra": {
+      "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely generate a URL. If using Mustache, use a URL encoding library, or prepend a slash '/' to the variable for relative links (`href=\"/{{link}}\"`). You may also consider setting the Content Security Policy (CSP) header.",
+      "metadata": {
+        "cwe": [
+          "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+        ],
+        "owasp": [
+          "A07:2017 - Cross-Site Scripting (XSS)",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss#:~:text=javascript:%20URI",
+          "https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url",
+          "https://github.com/pugjs/pug/issues/2952",
+          "https://content-security-policy.com/"
+        ],
+        "category": "security",
+        "technology": [
+          "html-templates"
+        ],
+        "confidence": "LOW",
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Cross-Site-Scripting (XSS)"
+        ],
+        "source": "https://semgrep.dev/r/generic.html-templates.security.var-in-href.var-in-href",
+        "shortlink": "https://sg.run/x1kP"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "generic.html-templates.security.var-in-href.var-in-href",
+    "path": "website/layouts/index.html",
+    "start": {
+      "line": 97,
+      "col": 28,
+      "offset": 5567
+    },
+    "end": {
+      "line": 97,
+      "col": 51,
+      "offset": 5590
+    },
+    "extra": {
+      "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely generate a URL. If using Mustache, use a URL encoding library, or prepend a slash '/' to the variable for relative links (`href=\"/{{link}}\"`). You may also consider setting the Content Security Policy (CSP) header.",
+      "metadata": {
+        "cwe": [
+          "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+        ],
+        "owasp": [
+          "A07:2017 - Cross-Site Scripting (XSS)",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss#:~:text=javascript:%20URI",
+          "https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url",
+          "https://github.com/pugjs/pug/issues/2952",
+          "https://content-security-policy.com/"
+        ],
+        "category": "security",
+        "technology": [
+          "html-templates"
+        ],
+        "confidence": "LOW",
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Cross-Site-Scripting (XSS)"
+        ],
+        "source": "https://semgrep.dev/r/generic.html-templates.security.var-in-href.var-in-href",
+        "shortlink": "https://sg.run/x1kP"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  }
+]
