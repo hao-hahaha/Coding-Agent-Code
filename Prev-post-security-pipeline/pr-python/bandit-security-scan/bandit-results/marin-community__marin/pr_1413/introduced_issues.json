@@ -1,0 +1,42 @@
+[
+  {
+    "code": "47 \n48             tokenizer = AutoTokenizer.from_pretrained(cfg.model_name)\n49             model = AutoModelForCausalLM.from_pretrained(cfg.model_name)\n",
+    "col_offset": 24,
+    "end_col_offset": 69,
+    "filename": "./marin/generation/logits.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 494,
+      "link": "https://cwe.mitre.org/data/definitions/494.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Unsafe Hugging Face Hub download without revision pinning in from_pretrained()",
+    "line_number": 48,
+    "line_range": [
+      48
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b615_huggingface_unsafe_download.html",
+    "test_id": "B615",
+    "test_name": "huggingface_unsafe_download"
+  },
+  {
+    "code": "48             tokenizer = AutoTokenizer.from_pretrained(cfg.model_name)\n49             model = AutoModelForCausalLM.from_pretrained(cfg.model_name)\n50             device = xm.xla_device()\n",
+    "col_offset": 20,
+    "end_col_offset": 72,
+    "filename": "./marin/generation/logits.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 494,
+      "link": "https://cwe.mitre.org/data/definitions/494.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Unsafe Hugging Face Hub download without revision pinning in from_pretrained()",
+    "line_number": 49,
+    "line_range": [
+      49
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b615_huggingface_unsafe_download.html",
+    "test_id": "B615",
+    "test_name": "huggingface_unsafe_download"
+  }
+]

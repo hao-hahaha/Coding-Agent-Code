@@ -1,0 +1,42 @@
+[
+  {
+    "code": "70             \"timestamp\": time.time(),\n71             \"market_temp\": random.uniform(0.8, 1.2),\n72             \"price_dislocation\": random.gauss(0, 0.05),\n",
+    "col_offset": 27,
+    "end_col_offset": 51,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_business_3_v1/alpha_agi_business_3_v1.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 71,
+    "line_range": [
+      71
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "108         \"\"\"Estimate current market temperature.\"\"\"\n109         return float(bundle.get(\"market_temp\", random.uniform(0.9, 1.1)))\n110 \n",
+    "col_offset": 47,
+    "end_col_offset": 71,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_business_3_v1/alpha_agi_business_3_v1.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 109,
+    "line_range": [
+      109
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  }
+]

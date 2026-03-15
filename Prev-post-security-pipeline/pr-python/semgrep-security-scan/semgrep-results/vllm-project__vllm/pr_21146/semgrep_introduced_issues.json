@@ -1,0 +1,801 @@
+[
+  {
+    "check_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+    "path": "vllm/engine/multiprocessing/client.py",
+    "start": {
+      "line": 203,
+      "col": 35,
+      "offset": 8629
+    },
+    "end": {
+      "line": 203,
+      "col": 63,
+      "offset": 8657
+    },
+    "extra": {
+      "message": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "metadata": {
+        "owasp": [
+          "A08:2017 - Insecure Deserialization",
+          "A08:2021 - Software and Data Integrity Failures",
+          "A08:2025 - Software or Data Integrity Failures"
+        ],
+        "cwe": [
+          "CWE-502: Deserialization of Untrusted Data"
+        ],
+        "references": [
+          "https://docs.python.org/3/library/pickle.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Insecure Deserialization "
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.deserialization.pickle.avoid-pickle",
+        "shortlink": "https://sg.run/OPwB"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+    "path": "vllm/engine/multiprocessing/client.py",
+    "start": {
+      "line": 317,
+      "col": 38,
+      "offset": 14048
+    },
+    "end": {
+      "line": 317,
+      "col": 59,
+      "offset": 14069
+    },
+    "extra": {
+      "message": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "metadata": {
+        "owasp": [
+          "A08:2017 - Insecure Deserialization",
+          "A08:2021 - Software and Data Integrity Failures",
+          "A08:2025 - Software or Data Integrity Failures"
+        ],
+        "cwe": [
+          "CWE-502: Deserialization of Untrusted Data"
+        ],
+        "references": [
+          "https://docs.python.org/3/library/pickle.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Insecure Deserialization "
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.deserialization.pickle.avoid-pickle",
+        "shortlink": "https://sg.run/OPwB"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+    "path": "vllm/engine/multiprocessing/client.py",
+    "start": {
+      "line": 326,
+      "col": 16,
+      "offset": 14422
+    },
+    "end": {
+      "line": 326,
+      "col": 42,
+      "offset": 14448
+    },
+    "extra": {
+      "message": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "metadata": {
+        "owasp": [
+          "A08:2017 - Insecure Deserialization",
+          "A08:2021 - Software and Data Integrity Failures",
+          "A08:2025 - Software or Data Integrity Failures"
+        ],
+        "cwe": [
+          "CWE-502: Deserialization of Untrusted Data"
+        ],
+        "references": [
+          "https://docs.python.org/3/library/pickle.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Insecure Deserialization "
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.deserialization.pickle.avoid-pickle",
+        "shortlink": "https://sg.run/OPwB"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+    "path": "vllm/engine/multiprocessing/client.py",
+    "start": {
+      "line": 343,
+      "col": 38,
+      "offset": 14938
+    },
+    "end": {
+      "line": 343,
+      "col": 59,
+      "offset": 14959
+    },
+    "extra": {
+      "message": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "metadata": {
+        "owasp": [
+          "A08:2017 - Insecure Deserialization",
+          "A08:2021 - Software and Data Integrity Failures",
+          "A08:2025 - Software or Data Integrity Failures"
+        ],
+        "cwe": [
+          "CWE-502: Deserialization of Untrusted Data"
+        ],
+        "references": [
+          "https://docs.python.org/3/library/pickle.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Insecure Deserialization "
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.deserialization.pickle.avoid-pickle",
+        "shortlink": "https://sg.run/OPwB"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+    "path": "vllm/engine/multiprocessing/client.py",
+    "start": {
+      "line": 365,
+      "col": 20,
+      "offset": 15691
+    },
+    "end": {
+      "line": 365,
+      "col": 46,
+      "offset": 15717
+    },
+    "extra": {
+      "message": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "metadata": {
+        "owasp": [
+          "A08:2017 - Insecure Deserialization",
+          "A08:2021 - Software and Data Integrity Failures",
+          "A08:2025 - Software or Data Integrity Failures"
+        ],
+        "cwe": [
+          "CWE-502: Deserialization of Untrusted Data"
+        ],
+        "references": [
+          "https://docs.python.org/3/library/pickle.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Insecure Deserialization "
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.deserialization.pickle.avoid-pickle",
+        "shortlink": "https://sg.run/OPwB"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+    "path": "vllm/engine/multiprocessing/client.py",
+    "start": {
+      "line": 565,
+      "col": 29,
+      "offset": 23492
+    },
+    "end": {
+      "line": 573,
+      "col": 19,
+      "offset": 23807
+    },
+    "extra": {
+      "message": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "metadata": {
+        "owasp": [
+          "A08:2017 - Insecure Deserialization",
+          "A08:2021 - Software and Data Integrity Failures",
+          "A08:2025 - Software or Data Integrity Failures"
+        ],
+        "cwe": [
+          "CWE-502: Deserialization of Untrusted Data"
+        ],
+        "references": [
+          "https://docs.python.org/3/library/pickle.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Insecure Deserialization "
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.deserialization.pickle.avoid-pickle",
+        "shortlink": "https://sg.run/OPwB"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+    "path": "vllm/engine/multiprocessing/client.py",
+    "start": {
+      "line": 645,
+      "col": 25,
+      "offset": 26576
+    },
+    "end": {
+      "line": 645,
+      "col": 46,
+      "offset": 26597
+    },
+    "extra": {
+      "message": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "metadata": {
+        "owasp": [
+          "A08:2017 - Insecure Deserialization",
+          "A08:2021 - Software and Data Integrity Failures",
+          "A08:2025 - Software or Data Integrity Failures"
+        ],
+        "cwe": [
+          "CWE-502: Deserialization of Untrusted Data"
+        ],
+        "references": [
+          "https://docs.python.org/3/library/pickle.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Insecure Deserialization "
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.deserialization.pickle.avoid-pickle",
+        "shortlink": "https://sg.run/OPwB"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+    "path": "vllm/engine/multiprocessing/client.py",
+    "start": {
+      "line": 665,
+      "col": 25,
+      "offset": 27377
+    },
+    "end": {
+      "line": 665,
+      "col": 46,
+      "offset": 27398
+    },
+    "extra": {
+      "message": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "metadata": {
+        "owasp": [
+          "A08:2017 - Insecure Deserialization",
+          "A08:2021 - Software and Data Integrity Failures",
+          "A08:2025 - Software or Data Integrity Failures"
+        ],
+        "cwe": [
+          "CWE-502: Deserialization of Untrusted Data"
+        ],
+        "references": [
+          "https://docs.python.org/3/library/pickle.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Insecure Deserialization "
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.deserialization.pickle.avoid-pickle",
+        "shortlink": "https://sg.run/OPwB"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+    "path": "vllm/engine/multiprocessing/engine.py",
+    "start": {
+      "line": 386,
+      "col": 28,
+      "offset": 15926
+    },
+    "end": {
+      "line": 386,
+      "col": 49,
+      "offset": 15947
+    },
+    "extra": {
+      "message": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "metadata": {
+        "owasp": [
+          "A08:2017 - Insecure Deserialization",
+          "A08:2021 - Software and Data Integrity Failures",
+          "A08:2025 - Software or Data Integrity Failures"
+        ],
+        "cwe": [
+          "CWE-502: Deserialization of Untrusted Data"
+        ],
+        "references": [
+          "https://docs.python.org/3/library/pickle.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Insecure Deserialization "
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.deserialization.pickle.avoid-pickle",
+        "shortlink": "https://sg.run/OPwB"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+    "path": "vllm/engine/multiprocessing/engine.py",
+    "start": {
+      "line": 397,
+      "col": 27,
+      "offset": 16403
+    },
+    "end": {
+      "line": 397,
+      "col": 46,
+      "offset": 16422
+    },
+    "extra": {
+      "message": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "metadata": {
+        "owasp": [
+          "A08:2017 - Insecure Deserialization",
+          "A08:2021 - Software and Data Integrity Failures",
+          "A08:2025 - Software or Data Integrity Failures"
+        ],
+        "cwe": [
+          "CWE-502: Deserialization of Untrusted Data"
+        ],
+        "references": [
+          "https://docs.python.org/3/library/pickle.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Insecure Deserialization "
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.deserialization.pickle.avoid-pickle",
+        "shortlink": "https://sg.run/OPwB"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.audit.eval-detected.eval-detected",
+    "path": "vllm/entrypoints/openai/tool_parsers/qwen3coder_tool_parser.py",
+    "start": {
+      "line": 212,
+      "col": 39,
+      "offset": 9127
+    },
+    "end": {
+      "line": 212,
+      "col": 56,
+      "offset": 9144
+    },
+    "extra": {
+      "message": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources.",
+      "metadata": {
+        "source-rule-url": "https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b307-eval",
+        "cwe": [
+          "CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+        ],
+        "owasp": [
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "asvs": {
+          "control_id": "5.2.4 Dyanmic Code Execution Features",
+          "control_url": "https://github.com/OWASP/ASVS/blob/master/4.0/en/0x13-V5-Validation-Sanitization-Encoding.md#v52-sanitization-and-sandboxing-requirements",
+          "section": "V5: Validation, Sanitization and Encoding Verification Requirements",
+          "version": "4"
+        },
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "references": [
+          "https://owasp.org/Top10/A03_2021-Injection"
+        ],
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Code Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.audit.eval-detected.eval-detected",
+        "shortlink": "https://sg.run/ZvrD"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+    "path": "vllm/model_executor/models/registry.py",
+    "start": {
+      "line": 679,
+      "col": 20,
+      "offset": 29307
+    },
+    "end": {
+      "line": 679,
+      "col": 34,
+      "offset": 29321
+    },
+    "extra": {
+      "message": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "metadata": {
+        "owasp": [
+          "A08:2017 - Insecure Deserialization",
+          "A08:2021 - Software and Data Integrity Failures",
+          "A08:2025 - Software or Data Integrity Failures"
+        ],
+        "cwe": [
+          "CWE-502: Deserialization of Untrusted Data"
+        ],
+        "references": [
+          "https://docs.python.org/3/library/pickle.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Insecure Deserialization "
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.deserialization.pickle.avoid-pickle",
+        "shortlink": "https://sg.run/OPwB"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+    "path": "vllm/model_executor/models/registry.py",
+    "start": {
+      "line": 687,
+      "col": 23,
+      "offset": 29464
+    },
+    "end": {
+      "line": 687,
+      "col": 60,
+      "offset": 29501
+    },
+    "extra": {
+      "message": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "metadata": {
+        "owasp": [
+          "A08:2017 - Insecure Deserialization",
+          "A08:2021 - Software and Data Integrity Failures",
+          "A08:2025 - Software or Data Integrity Failures"
+        ],
+        "cwe": [
+          "CWE-502: Deserialization of Untrusted Data"
+        ],
+        "references": [
+          "https://docs.python.org/3/library/pickle.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Insecure Deserialization "
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.deserialization.pickle.avoid-pickle",
+        "shortlink": "https://sg.run/OPwB"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+    "path": "vllm/model_executor/models/registry.py",
+    "start": {
+      "line": 692,
+      "col": 17,
+      "offset": 29577
+    },
+    "end": {
+      "line": 692,
+      "col": 37,
+      "offset": 29597
+    },
+    "extra": {
+      "message": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "metadata": {
+        "owasp": [
+          "A08:2017 - Insecure Deserialization",
+          "A08:2021 - Software and Data Integrity Failures",
+          "A08:2025 - Software or Data Integrity Failures"
+        ],
+        "cwe": [
+          "CWE-502: Deserialization of Untrusted Data"
+        ],
+        "references": [
+          "https://docs.python.org/3/library/pickle.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Insecure Deserialization "
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.deserialization.pickle.avoid-pickle",
+        "shortlink": "https://sg.run/OPwB"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+    "path": "vllm/utils/__init__.py",
+    "start": {
+      "line": 3205,
+      "col": 19,
+      "offset": 110099
+    },
+    "end": {
+      "line": 3205,
+      "col": 72,
+      "offset": 110152
+    },
+    "extra": {
+      "message": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "metadata": {
+        "owasp": [
+          "A08:2017 - Insecure Deserialization",
+          "A08:2021 - Software and Data Integrity Failures",
+          "A08:2025 - Software or Data Integrity Failures"
+        ],
+        "cwe": [
+          "CWE-502: Deserialization of Untrusted Data"
+        ],
+        "references": [
+          "https://docs.python.org/3/library/pickle.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Insecure Deserialization "
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.deserialization.pickle.avoid-pickle",
+        "shortlink": "https://sg.run/OPwB"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  }
+]

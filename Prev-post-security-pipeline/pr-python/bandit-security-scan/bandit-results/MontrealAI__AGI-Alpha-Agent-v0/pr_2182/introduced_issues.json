@@ -1,0 +1,62 @@
+[
+  {
+    "code": "5     log = \"E   ValueError: bad\\nline2\\nline3\"\n6     assert llm_client.summarize_error(log) == \"E   ValueError: bad\"\n7 \n",
+    "col_offset": 4,
+    "end_col_offset": 67,
+    "filename": "./tests/test_llm_client_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 6,
+    "line_range": [
+      6
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "11     name = llm_client.generate_branch_name(log)\n12     assert name.startswith(\"e-valueerror-something\")\n13     assert len(name) <= 30\n",
+    "col_offset": 4,
+    "end_col_offset": 52,
+    "filename": "./tests/test_llm_client_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 12,
+    "line_range": [
+      12
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "12     assert name.startswith(\"e-valueerror-something\")\n13     assert len(name) <= 30\n",
+    "col_offset": 4,
+    "end_col_offset": 26,
+    "filename": "./tests/test_llm_client_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 13,
+    "line_range": [
+      13
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

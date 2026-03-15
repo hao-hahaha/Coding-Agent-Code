@@ -49,7 +49,6 @@ def extract_zip(zip_path: Path, extract_to: Path) -> Path:
 
     return subdirs[0]
 
-
 def run_semgrep(scan_dir: Path, output_json: Path) -> None:
     output_json.parent.mkdir(parents=True, exist_ok=True)
 

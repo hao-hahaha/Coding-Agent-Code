@@ -1,0 +1,162 @@
+[
+  {
+    "code": "36         last_fit = pop[-1].fitness\n37         assert first_fit is not None and last_fit is not None\n38         pop[0].crowd = pop[-1].crowd = float(\"inf\")\n",
+    "col_offset": 8,
+    "end_col_offset": 61,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/simulation/mats.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 37,
+    "line_range": [
+      37
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "44             next_fit = pop[j + 1].fitness\n45             assert prev_fit is not None and next_fit is not None\n46             prev_f = prev_fit[i]\n",
+    "col_offset": 12,
+    "end_col_offset": 64,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/simulation/mats.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 45,
+    "line_range": [
+      45
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "55     for ind in pop:\n56         assert ind.fitness is not None\n57     for p in pop:\n",
+    "col_offset": 8,
+    "end_col_offset": 38,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/simulation/mats.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 56,
+    "line_range": [
+      56
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "60                 continue\n61             assert q.fitness is not None\n62             assert p.fitness is not None\n",
+    "col_offset": 12,
+    "end_col_offset": 40,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/simulation/mats.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 61,
+    "line_range": [
+      61
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "61             assert q.fitness is not None\n62             assert p.fitness is not None\n63             if all(pf <= qf for pf, qf in zip(p.fitness, q.fitness)):\n",
+    "col_offset": 12,
+    "end_col_offset": 40,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/simulation/mats.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 62,
+    "line_range": [
+      62
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "96 \n97         assert self.conn is not None\n98         data = json.dumps(asdict(env), sort_keys=True).encode()\n",
+    "col_offset": 8,
+    "end_col_offset": 36,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/utils/logging.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 97,
+    "line_range": [
+      97
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "106     def compute_merkle_root(self) -> str:\n107         assert self.conn is not None\n108         cur = self.conn.execute(\"SELECT hash FROM messages ORDER BY id\")\n",
+    "col_offset": 8,
+    "end_col_offset": 36,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/utils/logging.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 107,
+    "line_range": [
+      107
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "114 \n115         assert self.conn is not None\n116         cur = self.conn.execute(\n",
+    "col_offset": 8,
+    "end_col_offset": 36,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/utils/logging.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 115,
+    "line_range": [
+      115
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

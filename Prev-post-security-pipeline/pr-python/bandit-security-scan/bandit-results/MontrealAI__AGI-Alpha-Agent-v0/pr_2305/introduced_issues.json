@@ -1,0 +1,164 @@
+[
+  {
+    "code": "68 \n69 API_TOKEN_DEFAULT = \"changeme\"\n70 \n",
+    "col_offset": 20,
+    "end_col_offset": 30,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/interface/api_server.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'changeme'",
+    "line_number": 69,
+    "line_range": [
+      69
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b105_hardcoded_password_string.html",
+    "test_id": "B105",
+    "test_name": "hardcoded_password_string"
+  },
+  {
+    "code": "150             \"SIM_RESULTS_DIR\",\n151             os.path.join(os.getenv(\"ALPHA_DATA_DIR\", \"/tmp/alphafactory\"), \"simulations\"),\n152         )\n",
+    "col_offset": 53,
+    "end_col_offset": 72,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/interface/api_server.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 151,
+    "line_range": [
+      151
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "165                 res = ResultsResponse(**data)\n166             except Exception:\n167                 continue\n168             mtime = f.stat().st_mtime\n",
+    "col_offset": 12,
+    "end_col_offset": 24,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/interface/api_server.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Continue detected.",
+    "line_number": 166,
+    "line_range": [
+      166,
+      167
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b112_try_except_continue.html",
+    "test_id": "B112",
+    "test_name": "try_except_continue"
+  },
+  {
+    "code": "300 \n301         scenario = hashlib.sha1(sim_id.encode()).hexdigest()\n302         orch = getattr(app_f.state, \"orchestrator\", None)\n",
+    "col_offset": 19,
+    "end_col_offset": 48,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/interface/api_server.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 327,
+      "link": "https://cwe.mitre.org/data/definitions/327.html"
+    },
+    "issue_severity": "HIGH",
+    "issue_text": "Use of weak SHA1 hash for security. Consider usedforsecurity=False",
+    "line_number": 301,
+    "line_range": [
+      301
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b324_hashlib.html",
+    "test_id": "B324",
+    "test_name": "hashlib"
+  },
+  {
+    "code": "439                 await websocket.receive_text()\n440         except Exception:\n441             pass\n442         finally:\n",
+    "col_offset": 8,
+    "end_col_offset": 16,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/interface/api_server.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 440,
+    "line_range": [
+      440,
+      441
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "457     parser = argparse.ArgumentParser(description=\"Run the α‑AGI Insight API\")\n458     parser.add_argument(\"--host\", default=\"0.0.0.0\", help=\"Bind host\")\n459     parser.add_argument(\"--port\", type=int, default=8000, help=\"Bind port\")\n",
+    "col_offset": 42,
+    "end_col_offset": 51,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/interface/api_server.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 605,
+      "link": "https://cwe.mitre.org/data/definitions/605.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible binding to all interfaces.",
+    "line_number": 458,
+    "line_range": [
+      458
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b104_hardcoded_bind_all_interfaces.html",
+    "test_id": "B104",
+    "test_name": "hardcoded_bind_all_interfaces"
+  },
+  {
+    "code": "26 \n27     assert path.exists()\n28     assert (path.stat().st_mode & 0o777) == 0o700\n",
+    "col_offset": 4,
+    "end_col_offset": 24,
+    "filename": "./tests/test_results_dir_permissions.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 27,
+    "line_range": [
+      27
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "27     assert path.exists()\n28     assert (path.stat().st_mode & 0o777) == 0o700\n",
+    "col_offset": 4,
+    "end_col_offset": 49,
+    "filename": "./tests/test_results_dir_permissions.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 28,
+    "line_range": [
+      28
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

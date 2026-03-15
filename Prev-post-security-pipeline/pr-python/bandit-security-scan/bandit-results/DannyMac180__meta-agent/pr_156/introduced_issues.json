@@ -1,0 +1,22 @@
+[
+  {
+    "code": "30         def seed(self, seed: int) -> None:\n31             self._rand = random.Random(seed)\n32 \n",
+    "col_offset": 25,
+    "end_col_offset": 44,
+    "filename": "./src/meta_agent/embedding_models.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 31,
+    "line_range": [
+      31
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  }
+]

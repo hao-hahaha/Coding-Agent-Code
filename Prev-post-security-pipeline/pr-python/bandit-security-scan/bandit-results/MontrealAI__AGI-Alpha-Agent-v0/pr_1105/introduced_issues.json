@@ -1,0 +1,63 @@
+[
+  {
+    "code": "230                 bytes.fromhex(h)\n231             except Exception:\n232                 continue\n233             hashes.append(h)\n",
+    "col_offset": 12,
+    "end_col_offset": 24,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/utils/logging.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Continue detected.",
+    "line_number": 231,
+    "line_range": [
+      231,
+      232
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b112_try_except_continue.html",
+    "test_id": "B112",
+    "test_name": "try_except_continue"
+  },
+  {
+    "code": "22     ledger.conn.commit()\n23     assert ledger.compute_merkle_root() == baseline\n24 \n",
+    "col_offset": 4,
+    "end_col_offset": 51,
+    "filename": "./tests/test_ledger_corruption.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 23,
+    "line_range": [
+      23
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "27     root = ledger.compute_merkle_root()\n28     assert root == baseline\n29 \n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/test_ledger_malformed_rows.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 28,
+    "line_range": [
+      28
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

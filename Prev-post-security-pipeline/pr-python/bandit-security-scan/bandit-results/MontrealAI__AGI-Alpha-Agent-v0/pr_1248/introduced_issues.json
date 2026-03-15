@@ -1,0 +1,102 @@
+[
+  {
+    "code": "24 MAX_GENERATIONS = int(os.getenv(\"MAX_GENERATIONS\", \"10\"))\n25 STORAGE_PATH = Path(os.getenv(\"STORAGE_PATH\", \"/tmp/evolution\"))\n26 \n",
+    "col_offset": 46,
+    "end_col_offset": 62,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/evolution_worker.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 25,
+    "line_range": [
+      25
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "53             with tarfile.open(fileobj=tar.file) as tf:\n54                 tf.extractall(tmp_path)\n55         if repo_url:\n",
+    "col_offset": 16,
+    "end_col_offset": 39,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/evolution_worker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 22,
+      "link": "https://cwe.mitre.org/data/definitions/22.html"
+    },
+    "issue_severity": "HIGH",
+    "issue_text": "tarfile.extractall used without any validation. Please check and discard dangerous members.",
+    "line_number": 54,
+    "line_range": [
+      54
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b202_tarfile_unsafe_members.html",
+    "test_id": "B202",
+    "test_name": "tarfile_unsafe_members"
+  },
+  {
+    "code": "51         r = client.post(\"/mutate\", files=files)\n52         assert r.status_code == 200\n53         data = r.json()\n",
+    "col_offset": 8,
+    "end_col_offset": 35,
+    "filename": "./tests/test_evolution_worker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 52,
+    "line_range": [
+      52
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "53         data = r.json()\n54         assert \"child\" in data\n55         assert isinstance(data[\"child\"], list)\n",
+    "col_offset": 8,
+    "end_col_offset": 30,
+    "filename": "./tests/test_evolution_worker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 54,
+    "line_range": [
+      54
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "54         assert \"child\" in data\n55         assert isinstance(data[\"child\"], list)\n",
+    "col_offset": 8,
+    "end_col_offset": 46,
+    "filename": "./tests/test_evolution_worker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 55,
+    "line_range": [
+      55
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

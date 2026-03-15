@@ -1,0 +1,42 @@
+[
+  {
+    "code": "12 import re\n13 import subprocess\n14 import sys\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tools/update_actions.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 13,
+    "line_range": [
+      13
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "30         try:\n31             subprocess.check_call([sys.executable, \"-m\", \"pip\", \"install\", \"requests\"])\n32             import requests as _req\n",
+    "col_offset": 12,
+    "end_col_offset": 87,
+    "filename": "./tools/update_actions.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 31,
+    "line_range": [
+      31
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  }
+]

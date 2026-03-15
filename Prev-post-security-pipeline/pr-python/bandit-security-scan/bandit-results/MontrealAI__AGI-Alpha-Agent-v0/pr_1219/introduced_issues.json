@@ -1,0 +1,63 @@
+[
+  {
+    "code": "22             rec = json.loads(line)\n23         except Exception:  # noqa: BLE001 - skip invalid lines\n24             continue\n25         yield ArchiveEntry(\n",
+    "col_offset": 8,
+    "end_col_offset": 20,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/tools/dgm_import.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Continue detected.",
+    "line_number": 23,
+    "line_range": [
+      23,
+      24
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b112_try_except_continue.html",
+    "test_id": "B112",
+    "test_name": "try_except_continue"
+  },
+  {
+    "code": "10     count = dgm_import.import_logs(log_dir, db_path=db_path)\n11     assert count == 80\n12 \n",
+    "col_offset": 4,
+    "end_col_offset": 22,
+    "filename": "./tests/test_dgm_import.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 11,
+    "line_range": [
+      11
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "14     history = list(db.history(\"h79\"))\n15     assert len(history) == 80\n",
+    "col_offset": 4,
+    "end_col_offset": 29,
+    "filename": "./tests/test_dgm_import.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 15,
+    "line_range": [
+      15
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

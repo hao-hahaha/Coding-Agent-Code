@@ -1,0 +1,1226 @@
+[
+  {
+    "code": "75         \"\"\"Return the PDF value ensuring it's at least epsilon.\"\"\"\n76         assert not norm\n77         value = self.pdfs[0].pdf(x, norm=norm, params=params)\n",
+    "col_offset": 8,
+    "end_col_offset": 23,
+    "filename": "./src/zfit/models/postprocess.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 76,
+    "line_range": [
+      76
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "82         \"\"\"Return the extended PDF value ensuring it's at least epsilon.\"\"\"\n83         assert not norm\n84         if not self.pdfs[0].is_extended:\n",
+    "col_offset": 8,
+    "end_col_offset": 23,
+    "filename": "./src/zfit/models/postprocess.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 83,
+    "line_range": [
+      83
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "98         # Images must have same shape\n99         assert truth_img.shape == test_img.shape, f\"Image shapes differ: {truth_img.shape} vs {test_img.shape}\"\n100 \n",
+    "col_offset": 8,
+    "end_col_offset": 111,
+    "filename": "./tests/cli/test_plotting_extended.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 99,
+    "line_range": [
+      99
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "104 \n105         assert max_diff < tolerance, f\"Images differ too much: max difference {max_diff:.4f} > {tolerance}\"\n106 \n",
+    "col_offset": 8,
+    "end_col_offset": 107,
+    "filename": "./tests/cli/test_plotting_extended.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 105,
+    "line_range": [
+      105
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "151     # Verify the plot was created\n152     assert len(plt.gca().lines) > 0 or len(plt.gca().collections) > 0, \"No plot elements were created\"\n153 \n",
+    "col_offset": 4,
+    "end_col_offset": 102,
+    "filename": "./tests/cli/test_plotting_extended.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 152,
+    "line_range": [
+      152
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "227     if hasattr(model, 'pdfs'):\n228         assert len(model.pdfs) > 0, \"Model should have PDF components\"\n229         # For now, just verify we can access the components without plotting them individually\n",
+    "col_offset": 8,
+    "end_col_offset": 70,
+    "filename": "./tests/cli/test_plotting_extended.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 228,
+    "line_range": [
+      228
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "250     # Verify the plot was created\n251     assert len(plt.gca().lines) > 0 or len(plt.gca().collections) > 0, \"No plot elements were created\"\n252 \n",
+    "col_offset": 4,
+    "end_col_offset": 102,
+    "filename": "./tests/cli/test_plotting_extended.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 251,
+    "line_range": [
+      251
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "33         else:\n34             assert bw == orig_bw\n35 \n",
+    "col_offset": 12,
+    "end_col_offset": 32,
+    "filename": "./tests/model/kde/test_kde_funcs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 34,
+    "line_range": [
+      34
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "51         else:\n52             assert bw == orig_bw\n53 \n",
+    "col_offset": 12,
+    "end_col_offset": 32,
+    "filename": "./tests/model/kde/test_kde_funcs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 52,
+    "line_range": [
+      52
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "72         else:\n73             assert bw == orig_bw\n74 \n",
+    "col_offset": 12,
+    "end_col_offset": 32,
+    "filename": "./tests/model/kde/test_kde_funcs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 73,
+    "line_range": [
+      73
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "106         else:\n107             assert bw == orig_bw\n108 \n",
+    "col_offset": 12,
+    "end_col_offset": 32,
+    "filename": "./tests/model/kde/test_kde_funcs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 107,
+    "line_range": [
+      107
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "143         else:\n144             assert bw == orig_bw\n145 \n",
+    "col_offset": 12,
+    "end_col_offset": 32,
+    "filename": "./tests/model/kde/test_kde_funcs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 144,
+    "line_range": [
+      144
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "161         else:\n162             assert bw == orig_bw\n163 \n",
+    "col_offset": 12,
+    "end_col_offset": 32,
+    "filename": "./tests/model/kde/test_kde_funcs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 162,
+    "line_range": [
+      162
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "179         else:\n180             assert bw == orig_bw\n181 \n",
+    "col_offset": 12,
+    "end_col_offset": 32,
+    "filename": "./tests/model/kde/test_kde_funcs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 180,
+    "line_range": [
+      180
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "199         else:\n200             assert bw == orig_bw\n201 \n",
+    "col_offset": 12,
+    "end_col_offset": 32,
+    "filename": "./tests/model/kde/test_kde_funcs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 200,
+    "line_range": [
+      200
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "220         else:\n221             assert bw == orig_bw\n222 \n",
+    "col_offset": 12,
+    "end_col_offset": 32,
+    "filename": "./tests/model/kde/test_kde_funcs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 221,
+    "line_range": [
+      221
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "108     # Manual should be within reasonable performance of TFP (not more than 3x slower)\n109     assert manual_mean < tfp_mean * 3.0, f\"Manual implementation is too slow: {manual_mean/tfp_mean:.2f}x slower\"\n110 \n",
+    "col_offset": 4,
+    "end_col_offset": 113,
+    "filename": "./tests/model/kde/test_kde_performance.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 109,
+    "line_range": [
+      109
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "329         tolfac *= 6\n330     assert pytest.approx(expected_integral, abs=abs_tol * tolfac) == znp.asarray(integral)\n331     assert tuple(sample.shape) == (1, 1)\n",
+    "col_offset": 4,
+    "end_col_offset": 90,
+    "filename": "./tests/model/kde/test_pdf_kde.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 330,
+    "line_range": [
+      330
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "330     assert pytest.approx(expected_integral, abs=abs_tol * tolfac) == znp.asarray(integral)\n331     assert tuple(sample.shape) == (1, 1)\n332     assert tuple(sample2.shape) == (1500, 1)\n",
+    "col_offset": 4,
+    "end_col_offset": 40,
+    "filename": "./tests/model/kde/test_pdf_kde.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 331,
+    "line_range": [
+      331
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "331     assert tuple(sample.shape) == (1, 1)\n332     assert tuple(sample2.shape) == (1500, 1)\n333     assert prob.shape.rank == 1\n",
+    "col_offset": 4,
+    "end_col_offset": 44,
+    "filename": "./tests/model/kde/test_pdf_kde.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 332,
+    "line_range": [
+      332
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "332     assert tuple(sample2.shape) == (1500, 1)\n333     assert prob.shape.rank == 1\n334     assert prob.shape[0] == x.shape[0]\n",
+    "col_offset": 4,
+    "end_col_offset": 31,
+    "filename": "./tests/model/kde/test_pdf_kde.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 333,
+    "line_range": [
+      333
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "333     assert prob.shape.rank == 1\n334     assert prob.shape[0] == x.shape[0]\n335     assert np.mean(prob - prob_true) < 0.07 * tolfac\n",
+    "col_offset": 4,
+    "end_col_offset": 38,
+    "filename": "./tests/model/kde/test_pdf_kde.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 334,
+    "line_range": [
+      334
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "334     assert prob.shape[0] == x.shape[0]\n335     assert np.mean(prob - prob_true) < 0.07 * tolfac\n336     # make sure that on average, most values are close\n",
+    "col_offset": 4,
+    "end_col_offset": 52,
+    "filename": "./tests/model/kde/test_pdf_kde.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 335,
+    "line_range": [
+      335
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "336     # make sure that on average, most values are close\n337     assert pytest.approx(1, abs=0.1 * tolfac) == np.mean(\n338         (prob / prob_true)[prob_true > np.mean(prob_true)] ** 2\n339     )\n340     rtol = 0.05\n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/model/kde/test_pdf_kde.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 337,
+    "line_range": [
+      337,
+      338,
+      339
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "445     abs_tol = 0.05\n446     assert pytest.approx(expected_integral, abs=abs_tol) == (integral)\n447     assert tuple(sample.shape) == (1, 1)\n",
+    "col_offset": 4,
+    "end_col_offset": 70,
+    "filename": "./tests/model/kde/test_pdf_kde.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 446,
+    "line_range": [
+      446
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "446     assert pytest.approx(expected_integral, abs=abs_tol) == (integral)\n447     assert tuple(sample.shape) == (1, 1)\n448     assert tuple(sample2.shape) == (1500, 1)\n",
+    "col_offset": 4,
+    "end_col_offset": 40,
+    "filename": "./tests/model/kde/test_pdf_kde.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 447,
+    "line_range": [
+      447
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "447     assert tuple(sample.shape) == (1, 1)\n448     assert tuple(sample2.shape) == (1500, 1)\n449     assert prob.shape.rank == 1\n",
+    "col_offset": 4,
+    "end_col_offset": 44,
+    "filename": "./tests/model/kde/test_pdf_kde.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 448,
+    "line_range": [
+      448
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "448     assert tuple(sample2.shape) == (1500, 1)\n449     assert prob.shape.rank == 1\n450     assert np.mean(prob - prob_true) < 0.07\n",
+    "col_offset": 4,
+    "end_col_offset": 31,
+    "filename": "./tests/model/kde/test_pdf_kde.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 449,
+    "line_range": [
+      449
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "449     assert prob.shape.rank == 1\n450     assert np.mean(prob - prob_true) < 0.07\n451     # make sure that on average, most values are close\n",
+    "col_offset": 4,
+    "end_col_offset": 43,
+    "filename": "./tests/model/kde/test_pdf_kde.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 450,
+    "line_range": [
+      450
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "451     # make sure that on average, most values are close\n452     assert pytest.approx(1, abs=0.15) == np.mean(\n453         (prob / prob_true)[prob_true > np.mean(prob_true)] ** 2\n454     )\n455     rtol = 0.05\n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/model/kde/test_pdf_kde.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 452,
+    "line_range": [
+      452,
+      453,
+      454
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "475     # Check that no NaN values are produced\n476     assert not np.any(np.isnan(pdf_vals)), \"KDE should not produce NaN values\"\n477 \n",
+    "col_offset": 4,
+    "end_col_offset": 78,
+    "filename": "./tests/model/kde/test_pdf_kde.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 476,
+    "line_range": [
+      476
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "491     pdf_vals_explicit = kde_explicit.pdf(test_x, norm=False).numpy()\n492     assert not np.any(np.isnan(pdf_vals_explicit)), \"KDE with explicit bandwidth should not produce NaN\"\n493     # Note: With negative weights, KDE can produce negative PDF values, which is mathematically correct\n",
+    "col_offset": 4,
+    "end_col_offset": 104,
+    "filename": "./tests/model/kde/test_pdf_kde.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 492,
+    "line_range": [
+      492
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "496     bandwidth = kde.params['bandwidth'].value()\n497     assert bandwidth > 0, \"Bandwidth should be positive\"\n498     assert not np.isnan(bandwidth), \"Bandwidth should not be NaN\"\n",
+    "col_offset": 4,
+    "end_col_offset": 56,
+    "filename": "./tests/model/kde/test_pdf_kde.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 497,
+    "line_range": [
+      497
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "497     assert bandwidth > 0, \"Bandwidth should be positive\"\n498     assert not np.isnan(bandwidth), \"Bandwidth should not be NaN\"\n499 \n",
+    "col_offset": 4,
+    "end_col_offset": 65,
+    "filename": "./tests/model/kde/test_pdf_kde.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 498,
+    "line_range": [
+      498
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "515     pdf_vals = kde_explicit.pdf(test_x, norm=False).numpy()\n516     assert not np.any(np.isnan(pdf_vals)), \"KDE with explicit bandwidth should not produce NaN\"\n517 \n",
+    "col_offset": 4,
+    "end_col_offset": 95,
+    "filename": "./tests/model/kde/test_pdf_kde.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 516,
+    "line_range": [
+      516
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "525         pdf_vals = kde.pdf(test_x, norm=False).numpy()\n526         assert not np.any(np.isnan(pdf_vals)), f\"KDE ({bandwidth}) should not produce NaN with positive weights\"\n",
+    "col_offset": 8,
+    "end_col_offset": 112,
+    "filename": "./tests/model/kde/test_pdf_kde.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 526,
+    "line_range": [
+      526
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "21     # Test that the positive PDF maintains basic properties\n22     assert positive_gauss.obs == gauss.obs\n23     assert positive_gauss.norm == gauss.norm\n",
+    "col_offset": 4,
+    "end_col_offset": 42,
+    "filename": "./tests/model/test_positive_pdf.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 22,
+    "line_range": [
+      22
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "22     assert positive_gauss.obs == gauss.obs\n23     assert positive_gauss.norm == gauss.norm\n24     assert positive_gauss.is_extended == gauss.is_extended\n",
+    "col_offset": 4,
+    "end_col_offset": 44,
+    "filename": "./tests/model/test_positive_pdf.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 23,
+    "line_range": [
+      23
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "23     assert positive_gauss.norm == gauss.norm\n24     assert positive_gauss.is_extended == gauss.is_extended\n25 \n",
+    "col_offset": 4,
+    "end_col_offset": 58,
+    "filename": "./tests/model/test_positive_pdf.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 24,
+    "line_range": [
+      24
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "47     # Test that properties are preserved\n48     assert positive_kde.obs == kde.obs\n49     assert positive_kde.norm == kde.norm\n",
+    "col_offset": 4,
+    "end_col_offset": 38,
+    "filename": "./tests/model/test_positive_pdf.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 48,
+    "line_range": [
+      48
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "48     assert positive_kde.obs == kde.obs\n49     assert positive_kde.norm == kde.norm\n50 \n",
+    "col_offset": 4,
+    "end_col_offset": 40,
+    "filename": "./tests/model/test_positive_pdf.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 49,
+    "line_range": [
+      49
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "55     # Verify no NaN or overly negative values\n56     assert not np.any(np.isnan(positive_vals)), \"Positive PDF should not have NaN values\"\n57     assert np.all(positive_vals >= 1e-310), \"Positive PDF should not have values below epsilon\"\n",
+    "col_offset": 4,
+    "end_col_offset": 89,
+    "filename": "./tests/model/test_positive_pdf.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 56,
+    "line_range": [
+      56
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "56     assert not np.any(np.isnan(positive_vals)), \"Positive PDF should not have NaN values\"\n57     assert np.all(positive_vals >= 1e-310), \"Positive PDF should not have values below epsilon\"\n58 \n",
+    "col_offset": 4,
+    "end_col_offset": 95,
+    "filename": "./tests/model/test_positive_pdf.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 57,
+    "line_range": [
+      57
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "79     # Test that the epsilon is respected (convert to numpy for comparison)\n80     assert positive_gauss.epsilon.numpy() == custom_epsilon\n81 \n",
+    "col_offset": 4,
+    "end_col_offset": 59,
+    "filename": "./tests/model/test_positive_pdf.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 80,
+    "line_range": [
+      80
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "87     # The value should be at least epsilon\n88     assert np.all(positive_vals >= custom_epsilon)\n89 \n",
+    "col_offset": 4,
+    "end_col_offset": 50,
+    "filename": "./tests/model/test_positive_pdf.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 88,
+    "line_range": [
+      88
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "97     # Test that extension is preserved\n98     assert positive_extended.is_extended\n99     assert positive_extended.get_yield().numpy() == 100.0\n",
+    "col_offset": 4,
+    "end_col_offset": 40,
+    "filename": "./tests/model/test_positive_pdf.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 98,
+    "line_range": [
+      98
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "98     assert positive_extended.is_extended\n99     assert positive_extended.get_yield().numpy() == 100.0\n100 \n",
+    "col_offset": 4,
+    "end_col_offset": 57,
+    "filename": "./tests/model/test_positive_pdf.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 99,
+    "line_range": [
+      99
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "109     # Test that default epsilon is set correctly (convert to numpy for comparison)\n110     assert positive_gauss.epsilon.numpy() == 1e-100  # Default epsilon\n111 \n",
+    "col_offset": 4,
+    "end_col_offset": 51,
+    "filename": "./tests/model/test_positive_pdf.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 110,
+    "line_range": [
+      110
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "146     unclamped_vals = poly_pdf.pdf(x_negative, norm=False).numpy()\n147     assert np.any(unclamped_vals < 0), \"Polynomial should produce negative values for x=2\"\n148 \n",
+    "col_offset": 4,
+    "end_col_offset": 90,
+    "filename": "./tests/model/test_positive_pdf.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 147,
+    "line_range": [
+      147
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "154     positive_vals = positive_poly.pdf(x_negative, norm=False).numpy()\n155     assert np.all(positive_vals >= epsilon), \"Positive PDF should not have values below epsilon\"\n156 \n",
+    "col_offset": 4,
+    "end_col_offset": 96,
+    "filename": "./tests/model/test_positive_pdf.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 155,
+    "line_range": [
+      155
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "159     positive_vals = positive_poly.pdf(x_positive, norm=False).numpy()\n160     assert np.all(positive_vals > epsilon), \"Positive values should remain above epsilon\"\n161 \n",
+    "col_offset": 4,
+    "end_col_offset": 89,
+    "filename": "./tests/model/test_positive_pdf.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 160,
+    "line_range": [
+      160
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "177     # Test that extension properties are preserved\n178     assert positive_extended.is_extended\n179     assert positive_extended.get_yield().numpy() == yield_param\n",
+    "col_offset": 4,
+    "end_col_offset": 40,
+    "filename": "./tests/model/test_positive_pdf.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 178,
+    "line_range": [
+      178
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "178     assert positive_extended.is_extended\n179     assert positive_extended.get_yield().numpy() == yield_param\n180 \n",
+    "col_offset": 4,
+    "end_col_offset": 63,
+    "filename": "./tests/model/test_positive_pdf.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 179,
+    "line_range": [
+      179
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "181     # Test that epsilon is set correctly (convert to numpy for comparison)\n182     assert positive_extended.epsilon.numpy() == epsilon\n183 \n",
+    "col_offset": 4,
+    "end_col_offset": 55,
+    "filename": "./tests/model/test_positive_pdf.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 182,
+    "line_range": [
+      182
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "198     unclamped_ext_vals = extended_poly.ext_pdf(x_negative, norm=False).numpy()\n199     assert np.any(unclamped_ext_vals < 0), \"Extended polynomial should produce negative values\"\n200 \n",
+    "col_offset": 4,
+    "end_col_offset": 95,
+    "filename": "./tests/model/test_positive_pdf.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 199,
+    "line_range": [
+      199
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "206     positive_ext_vals = positive_ext_poly.ext_pdf(x_negative, norm=False).numpy()\n207     assert np.all(positive_ext_vals >= epsilon), \"Extended PDF should not have values below epsilon\"\n208 \n",
+    "col_offset": 4,
+    "end_col_offset": 100,
+    "filename": "./tests/model/test_positive_pdf.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 207,
+    "line_range": [
+      207
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "211     positive_ext_vals = positive_ext_poly.ext_pdf(x_positive, norm=False).numpy()\n212     assert np.all(positive_ext_vals > epsilon), \"Positive extended values should remain above epsilon\"\n213 \n",
+    "col_offset": 4,
+    "end_col_offset": 102,
+    "filename": "./tests/model/test_positive_pdf.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 212,
+    "line_range": [
+      212
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "233     # Should inherit obs, norm, and extended status from wrapped PDF\n234     assert positive.obs == extended_gauss.obs\n235     assert positive.norm == extended_gauss.norm\n",
+    "col_offset": 4,
+    "end_col_offset": 45,
+    "filename": "./tests/model/test_positive_pdf.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 234,
+    "line_range": [
+      234
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "234     assert positive.obs == extended_gauss.obs\n235     assert positive.norm == extended_gauss.norm\n236     assert positive.is_extended == extended_gauss.is_extended\n",
+    "col_offset": 4,
+    "end_col_offset": 47,
+    "filename": "./tests/model/test_positive_pdf.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 235,
+    "line_range": [
+      235
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "235     assert positive.norm == extended_gauss.norm\n236     assert positive.is_extended == extended_gauss.is_extended\n237     assert positive.get_yield().numpy() == 75.0\n",
+    "col_offset": 4,
+    "end_col_offset": 61,
+    "filename": "./tests/model/test_positive_pdf.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 236,
+    "line_range": [
+      236
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "236     assert positive.is_extended == extended_gauss.is_extended\n237     assert positive.get_yield().numpy() == 75.0\n",
+    "col_offset": 4,
+    "end_col_offset": 47,
+    "filename": "./tests/model/test_positive_pdf.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 237,
+    "line_range": [
+      237
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

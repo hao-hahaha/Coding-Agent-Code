@@ -1,0 +1,364 @@
+[
+  {
+    "code": "50         # Verify that reasoning_effort is preserved in optional_params for Perplexity\n51         assert \"reasoning_effort\" in optional_params\n52         assert optional_params[\"reasoning_effort\"] == reasoning_effort\n",
+    "col_offset": 8,
+    "end_col_offset": 52,
+    "filename": "./tests/llm_translation/test_perplexity_reasoning.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 51,
+    "line_range": [
+      51
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "51         assert \"reasoning_effort\" in optional_params\n52         assert optional_params[\"reasoning_effort\"] == reasoning_effort\n53 \n",
+    "col_offset": 8,
+    "end_col_offset": 70,
+    "filename": "./tests/llm_translation/test_perplexity_reasoning.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 52,
+    "line_range": [
+      52
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "118             # Verify the call was made\n119             assert mock_client.called\n120             \n",
+    "col_offset": 12,
+    "end_col_offset": 37,
+    "filename": "./tests/llm_translation/test_perplexity_reasoning.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 119,
+    "line_range": [
+      119
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "125             # Verify reasoning_effort was included in the request\n126             assert \"reasoning_effort\" in request_data\n127             assert request_data[\"reasoning_effort\"] == \"high\"\n",
+    "col_offset": 12,
+    "end_col_offset": 53,
+    "filename": "./tests/llm_translation/test_perplexity_reasoning.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 126,
+    "line_range": [
+      126
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "126             assert \"reasoning_effort\" in request_data\n127             assert request_data[\"reasoning_effort\"] == \"high\"\n128             \n",
+    "col_offset": 12,
+    "end_col_offset": 61,
+    "filename": "./tests/llm_translation/test_perplexity_reasoning.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 127,
+    "line_range": [
+      127
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "129             # Verify response structure\n130             assert response.choices[0].message.content is not None\n131             assert response.choices[0].message.content == \"This is a test response from the reasoning model.\"\n",
+    "col_offset": 12,
+    "end_col_offset": 66,
+    "filename": "./tests/llm_translation/test_perplexity_reasoning.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 130,
+    "line_range": [
+      130
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "130             assert response.choices[0].message.content is not None\n131             assert response.choices[0].message.content == \"This is a test response from the reasoning model.\"\n132 \n",
+    "col_offset": 12,
+    "end_col_offset": 109,
+    "filename": "./tests/llm_translation/test_perplexity_reasoning.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 131,
+    "line_range": [
+      131
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "148         for model in reasoning_models:\n149             assert supports_reasoning(model, None), f\"{model} should support reasoning\"\n150 \n",
+    "col_offset": 12,
+    "end_col_offset": 87,
+    "filename": "./tests/llm_translation/test_perplexity_reasoning.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 149,
+    "line_range": [
+      149
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "172                 # If it doesn't raise an exception, it should return False\n173                 assert result is False, f\"{model} should not support reasoning\"\n174             except Exception:\n",
+    "col_offset": 16,
+    "end_col_offset": 79,
+    "filename": "./tests/llm_translation/test_perplexity_reasoning.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 173,
+    "line_range": [
+      173
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "173                 assert result is False, f\"{model} should not support reasoning\"\n174             except Exception:\n175                 # If it raises an exception, that's also acceptable behavior\n176                 pass\n177 \n",
+    "col_offset": 12,
+    "end_col_offset": 20,
+    "filename": "./tests/llm_translation/test_perplexity_reasoning.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 174,
+    "line_range": [
+      174,
+      175,
+      176
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "195         \n196         assert api_base == expected_api_base\n197 \n",
+    "col_offset": 8,
+    "end_col_offset": 44,
+    "filename": "./tests/llm_translation/test_perplexity_reasoning.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 196,
+    "line_range": [
+      196
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "206         \n207         assert \"reasoning_effort\" in supported_params\n",
+    "col_offset": 8,
+    "end_col_offset": 53,
+    "filename": "./tests/llm_translation/test_perplexity_reasoning.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 207,
+    "line_range": [
+      207
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "33             print(f\"✓ {model}: found in model cost map, supports_reasoning={supports_reasoning}\")\n34             assert supports_reasoning, f\"{model} should support reasoning\"\n35         else:\n",
+    "col_offset": 12,
+    "end_col_offset": 74,
+    "filename": "./verify_perplexity_reasoning.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 34,
+    "line_range": [
+      34
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "63     # Verify that reasoning_effort is preserved in optional_params for Perplexity\n64     assert \"reasoning_effort\" in optional_params, \"reasoning_effort should be in optional_params\"\n65     assert optional_params[\"reasoning_effort\"] == reasoning_effort, f\"reasoning_effort should be {reasoning_effort}\"\n",
+    "col_offset": 4,
+    "end_col_offset": 97,
+    "filename": "./verify_perplexity_reasoning.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 64,
+    "line_range": [
+      64
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "64     assert \"reasoning_effort\" in optional_params, \"reasoning_effort should be in optional_params\"\n65     assert optional_params[\"reasoning_effort\"] == reasoning_effort, f\"reasoning_effort should be {reasoning_effort}\"\n66     \n",
+    "col_offset": 4,
+    "end_col_offset": 116,
+    "filename": "./verify_perplexity_reasoning.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 65,
+    "line_range": [
+      65
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "87             print(f\"✓ {model}: supports_reasoning = {result}\")\n88             assert result, f\"{model} should support reasoning\"\n89         except Exception as e:\n",
+    "col_offset": 12,
+    "end_col_offset": 62,
+    "filename": "./verify_perplexity_reasoning.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 88,
+    "line_range": [
+      88
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "109     print(f\"API Base: {api_base}\")\n110     assert api_base == expected_api_base, f\"API base should be {expected_api_base}\"\n111     \n",
+    "col_offset": 4,
+    "end_col_offset": 83,
+    "filename": "./verify_perplexity_reasoning.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 110,
+    "line_range": [
+      110
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "115     \n116     assert \"reasoning_effort\" in supported_params, \"reasoning_effort should be in supported params\"\n117     \n",
+    "col_offset": 4,
+    "end_col_offset": 99,
+    "filename": "./verify_perplexity_reasoning.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 116,
+    "line_range": [
+      116
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

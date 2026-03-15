@@ -1,0 +1,62 @@
+[
+  {
+    "code": "4 def test_add():\n5     assert calc.add(1, 1) == 2\n",
+    "col_offset": 4,
+    "end_col_offset": 30,
+    "filename": "./alpha_factory_v1/demos/self_healing_repo/sample_broken_calc/test_calc.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 5,
+    "line_range": [
+      5
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "4 from alpha_factory_v1.demos.self_healing_repo import agent_selfheal_entrypoint as entrypoint\n5 import subprocess\n6 \n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tests/test_self_heal_clone.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 5,
+    "line_range": [
+      5
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "12     entrypoint.clone_sample_repo()\n13     assert (target / \"calc.py\").exists()\n14 \n",
+    "col_offset": 4,
+    "end_col_offset": 40,
+    "filename": "./tests/test_self_heal_clone.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 13,
+    "line_range": [
+      13
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

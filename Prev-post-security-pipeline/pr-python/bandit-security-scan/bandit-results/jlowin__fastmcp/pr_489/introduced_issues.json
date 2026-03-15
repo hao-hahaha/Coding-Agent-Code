@@ -1,0 +1,82 @@
+[
+  {
+    "code": "7     app = server.http_app()\n8     assert app.state.fastmcp_server is server\n9 \n",
+    "col_offset": 4,
+    "end_col_offset": 45,
+    "filename": "./tests/server/test_app_state.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 8,
+    "line_range": [
+      8
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "13     app = server.http_app(transport=\"sse\")\n14     assert app.state.fastmcp_server is server\n15 \n",
+    "col_offset": 4,
+    "end_col_offset": 45,
+    "filename": "./tests/server/test_app_state.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 14,
+    "line_range": [
+      14
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "19     app = create_streamable_http_app(server, \"/mcp\")\n20     assert app.state.fastmcp_server is server\n21 \n",
+    "col_offset": 4,
+    "end_col_offset": 45,
+    "filename": "./tests/server/test_app_state.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 20,
+    "line_range": [
+      20
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "25     app = create_sse_app(server, message_path=\"/message\", sse_path=\"/sse\")\n26     assert app.state.fastmcp_server is server\n",
+    "col_offset": 4,
+    "end_col_offset": 45,
+    "filename": "./tests/server/test_app_state.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 26,
+    "line_range": [
+      26
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

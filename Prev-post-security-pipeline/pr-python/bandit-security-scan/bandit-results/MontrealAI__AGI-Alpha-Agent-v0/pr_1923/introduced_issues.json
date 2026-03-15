@@ -1,0 +1,62 @@
+[
+  {
+    "code": "421                 break\n422         assert env is not None\n423         self.pool.append(env)\n",
+    "col_offset": 8,
+    "end_col_offset": 30,
+    "filename": "./alpha_factory_v1/demos/alpha_asi_world_model/alpha_asi_world_model_demo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 422,
+    "line_range": [
+      422
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "34     env = gen.propose()\n35     assert env in gen.pool\n36     assert not calls  # second env accepted\n",
+    "col_offset": 4,
+    "end_col_offset": 26,
+    "filename": "./tests/test_world_model_open_endedness.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 35,
+    "line_range": [
+      35
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "35     assert env in gen.pool\n36     assert not calls  # second env accepted\n",
+    "col_offset": 4,
+    "end_col_offset": 20,
+    "filename": "./tests/test_world_model_open_endedness.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 36,
+    "line_range": [
+      36
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

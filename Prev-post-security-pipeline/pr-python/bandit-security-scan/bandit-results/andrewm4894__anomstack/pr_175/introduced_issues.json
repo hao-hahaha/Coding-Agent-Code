@@ -1,0 +1,83 @@
+[
+  {
+    "code": "34             minutes = int(cfg.get(\"kill_sensor\", {}).get(\"kill_after_minutes\", minutes))\n35         except Exception:\n36             pass\n37     return minutes\n",
+    "col_offset": 8,
+    "end_col_offset": 16,
+    "filename": "./anomstack/sensors/timeout.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 35,
+    "line_range": [
+      35,
+      36
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "6     monkeypatch.setenv(\"ANOMSTACK_KILL_RUN_AFTER_MINUTES\", \"30\")\n7     assert get_kill_after_minutes() == 30\n8     monkeypatch.delenv(\"ANOMSTACK_KILL_RUN_AFTER_MINUTES\")\n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./tests/test_timeout_sensor.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 7,
+    "line_range": [
+      7
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "14     monkeypatch.setenv(\"DAGSTER_HOME\", str(tmp_path))\n15     assert get_kill_after_minutes() == 45\n16     monkeypatch.delenv(\"DAGSTER_HOME\")\n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./tests/test_timeout_sensor.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 15,
+    "line_range": [
+      15
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "20     monkeypatch.setenv(\"DAGSTER_HOME\", str(tmp_path))\n21     assert get_kill_after_minutes() == 60\n22     monkeypatch.delenv(\"DAGSTER_HOME\")\n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./tests/test_timeout_sensor.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 21,
+    "line_range": [
+      21
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

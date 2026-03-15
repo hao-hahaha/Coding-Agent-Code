@@ -1,0 +1,202 @@
+[
+  {
+    "code": "30     async with combined(app) as ctx:\n31         assert ctx == {\"a\": 0, \"b\": 2}\n32     assert call_order == [\"first\", \"second\"]\n",
+    "col_offset": 8,
+    "end_col_offset": 38,
+    "filename": "./tests/test_lifespan.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 31,
+    "line_range": [
+      31
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "31         assert ctx == {\"a\": 0, \"b\": 2}\n32     assert call_order == [\"first\", \"second\"]\n33 \n",
+    "col_offset": 4,
+    "end_col_offset": 44,
+    "filename": "./tests/test_lifespan.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 32,
+    "line_range": [
+      32
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "55     async with lifespan(app) as ctx:\n56         assert seed_called is True\n57         session_factory = ctx[\"session_factory\"]\n",
+    "col_offset": 8,
+    "end_col_offset": 34,
+    "filename": "./tests/test_lifespan.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 56,
+    "line_range": [
+      56
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "57         session_factory = ctx[\"session_factory\"]\n58         assert session_factory.kw[\"autoflush\"] is False\n59         async with session_factory() as session:\n",
+    "col_offset": 8,
+    "end_col_offset": 55,
+    "filename": "./tests/test_lifespan.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 58,
+    "line_range": [
+      58
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "60             result = await session.execute(select(User.id))\n61             assert result.scalar_one() == 1\n",
+    "col_offset": 12,
+    "end_col_offset": 43,
+    "filename": "./tests/test_lifespan.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 61,
+    "line_range": [
+      61
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "10 def test_sqlalchemy_type_to_python_extra_types():\n11     assert _sqlalchemy_type_to_python(JSON()) is dict\n12     assert _sqlalchemy_type_to_python(LargeBinary()) is bytes\n",
+    "col_offset": 4,
+    "end_col_offset": 53,
+    "filename": "./tests/test_sqlalchemy_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 11,
+    "line_range": [
+      11
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "11     assert _sqlalchemy_type_to_python(JSON()) is dict\n12     assert _sqlalchemy_type_to_python(LargeBinary()) is bytes\n13     assert _sqlalchemy_type_to_python(Time()) is time\n",
+    "col_offset": 4,
+    "end_col_offset": 61,
+    "filename": "./tests/test_sqlalchemy_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 12,
+    "line_range": [
+      12
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "12     assert _sqlalchemy_type_to_python(LargeBinary()) is bytes\n13     assert _sqlalchemy_type_to_python(Time()) is time\n14 \n",
+    "col_offset": 4,
+    "end_col_offset": 53,
+    "filename": "./tests/test_sqlalchemy_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 13,
+    "line_range": [
+      13
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "17 \n18     assert _sqlalchemy_type_to_python(MyInt()) is int\n19 \n",
+    "col_offset": 4,
+    "end_col_offset": 53,
+    "filename": "./tests/test_sqlalchemy_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 18,
+    "line_range": [
+      18
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "22 \n23     assert _sqlalchemy_type_to_python(Custom()) is Any\n",
+    "col_offset": 4,
+    "end_col_offset": 54,
+    "filename": "./tests/test_sqlalchemy_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 23,
+    "line_range": [
+      23
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

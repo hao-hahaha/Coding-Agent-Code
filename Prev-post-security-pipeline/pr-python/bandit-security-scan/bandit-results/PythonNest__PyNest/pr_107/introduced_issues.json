@@ -1,0 +1,143 @@
+[
+  {
+    "code": "148             # Simplified JWT decoding (use proper library in production)\n149             if token == \"valid-jwt-token\":\n150                 return {\n",
+    "col_offset": 24,
+    "end_col_offset": 41,
+    "filename": "./examples/guard_examples.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'valid-jwt-token'",
+    "line_number": 149,
+    "line_range": [
+      149
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b105_hardcoded_password_string.html",
+    "test_id": "B105",
+    "test_name": "hardcoded_password_string"
+  },
+  {
+    "code": "155                 }\n156             elif token == \"admin-jwt-token\":\n157                 return {\n",
+    "col_offset": 26,
+    "end_col_offset": 43,
+    "filename": "./examples/guard_examples.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'admin-jwt-token'",
+    "line_number": 156,
+    "line_range": [
+      156
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b105_hardcoded_password_string.html",
+    "test_id": "B105",
+    "test_name": "hardcoded_password_string"
+  },
+  {
+    "code": "43 def test_use_guards_sets_attribute():\n44     assert hasattr(GuardController.root, \"__guards__\")\n45     assert SimpleGuard in GuardController.root.__guards__\n",
+    "col_offset": 4,
+    "end_col_offset": 54,
+    "filename": "./tests/test_core/test_decorators/test_guard.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 44,
+    "line_range": [
+      44
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "44     assert hasattr(GuardController.root, \"__guards__\")\n45     assert SimpleGuard in GuardController.root.__guards__\n46 \n",
+    "col_offset": 4,
+    "end_col_offset": 57,
+    "filename": "./tests/test_core/test_decorators/test_guard.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 45,
+    "line_range": [
+      45
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "51     deps = route.dependencies\n52     assert len(deps) == 1\n53     assert callable(deps[0].dependency)\n",
+    "col_offset": 4,
+    "end_col_offset": 25,
+    "filename": "./tests/test_core/test_decorators/test_guard.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 52,
+    "line_range": [
+      52
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "52     assert len(deps) == 1\n53     assert callable(deps[0].dependency)\n54 \n",
+    "col_offset": 4,
+    "end_col_offset": 39,
+    "filename": "./tests/test_core/test_decorators/test_guard.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 53,
+    "line_range": [
+      53
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "79     # Check if security requirements exist anywhere in the dependency tree\n80     assert _has_security_requirements(route.dependant), \\\n81         \"Security requirements should be present in the dependency tree for OpenAPI integration\"\n",
+    "col_offset": 4,
+    "end_col_offset": 96,
+    "filename": "./tests/test_core/test_decorators/test_guard.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 80,
+    "line_range": [
+      80,
+      81
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

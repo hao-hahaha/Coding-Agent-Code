@@ -1,0 +1,282 @@
+[
+  {
+    "code": "38         missing_fields = required_fields - valid_fields\n39         assert not missing_fields, f\"Config class missing required fields: {missing_fields}\"\n40 \n",
+    "col_offset": 8,
+    "end_col_offset": 92,
+    "filename": "./custom_components/smart_irrigation/tests/test_migration_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 39,
+    "line_range": [
+      39
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "78         config = Config(**filtered_config)\n79         assert config.calctime == \"00:00:00\"\n80         assert config.use_weather_service is True\n",
+    "col_offset": 8,
+    "end_col_offset": 44,
+    "filename": "./custom_components/smart_irrigation/tests/test_migration_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 79,
+    "line_range": [
+      79
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "79         assert config.calctime == \"00:00:00\"\n80         assert config.use_weather_service is True\n81 \n",
+    "col_offset": 8,
+    "end_col_offset": 49,
+    "filename": "./custom_components/smart_irrigation/tests/test_migration_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 80,
+    "line_range": [
+      80
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "109         \n110         assert not invalid_keys, f\"Invalid keys not filtered: {invalid_keys}\"\n111         \n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./custom_components/smart_irrigation/tests/test_migration_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 110,
+    "line_range": [
+      110
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "112         # Check that required fields were added\n113         assert CONF_IRRIGATION_START_TRIGGERS in result[\"config\"]\n114         assert CONF_SKIP_IRRIGATION_ON_PRECIPITATION in result[\"config\"]\n",
+    "col_offset": 8,
+    "end_col_offset": 65,
+    "filename": "./custom_components/smart_irrigation/tests/test_migration_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 113,
+    "line_range": [
+      113
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "113         assert CONF_IRRIGATION_START_TRIGGERS in result[\"config\"]\n114         assert CONF_SKIP_IRRIGATION_ON_PRECIPITATION in result[\"config\"]\n115         assert CONF_PRECIPITATION_THRESHOLD_MM in result[\"config\"]\n",
+    "col_offset": 8,
+    "end_col_offset": 72,
+    "filename": "./custom_components/smart_irrigation/tests/test_migration_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 114,
+    "line_range": [
+      114
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "114         assert CONF_SKIP_IRRIGATION_ON_PRECIPITATION in result[\"config\"]\n115         assert CONF_PRECIPITATION_THRESHOLD_MM in result[\"config\"]\n116         \n",
+    "col_offset": 8,
+    "end_col_offset": 66,
+    "filename": "./custom_components/smart_irrigation/tests/test_migration_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 115,
+    "line_range": [
+      115
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "118         config = Config(**result[\"config\"])\n119         assert config.calctime == \"00:00:00\"\n120 \n",
+    "col_offset": 8,
+    "end_col_offset": 44,
+    "filename": "./custom_components/smart_irrigation/tests/test_migration_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 119,
+    "line_range": [
+      119
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "135         # Should have all required fields\n136         assert CONF_IRRIGATION_START_TRIGGERS in result[\"config\"]\n137         assert CONF_SKIP_IRRIGATION_ON_PRECIPITATION in result[\"config\"]\n",
+    "col_offset": 8,
+    "end_col_offset": 65,
+    "filename": "./custom_components/smart_irrigation/tests/test_migration_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 136,
+    "line_range": [
+      136
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "136         assert CONF_IRRIGATION_START_TRIGGERS in result[\"config\"]\n137         assert CONF_SKIP_IRRIGATION_ON_PRECIPITATION in result[\"config\"]\n138         assert CONF_PRECIPITATION_THRESHOLD_MM in result[\"config\"]\n",
+    "col_offset": 8,
+    "end_col_offset": 72,
+    "filename": "./custom_components/smart_irrigation/tests/test_migration_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 137,
+    "line_range": [
+      137
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "137         assert CONF_SKIP_IRRIGATION_ON_PRECIPITATION in result[\"config\"]\n138         assert CONF_PRECIPITATION_THRESHOLD_MM in result[\"config\"]\n139         \n",
+    "col_offset": 8,
+    "end_col_offset": 66,
+    "filename": "./custom_components/smart_irrigation/tests/test_migration_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 138,
+    "line_range": [
+      138
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "141         config = Config(**result[\"config\"])\n142         assert hasattr(config, 'irrigation_start_triggers')\n143         assert hasattr(config, 'skip_irrigation_on_precipitation')\n",
+    "col_offset": 8,
+    "end_col_offset": 59,
+    "filename": "./custom_components/smart_irrigation/tests/test_migration_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 142,
+    "line_range": [
+      142
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "142         assert hasattr(config, 'irrigation_start_triggers')\n143         assert hasattr(config, 'skip_irrigation_on_precipitation')\n144         assert hasattr(config, 'precipitation_threshold_mm')\n",
+    "col_offset": 8,
+    "end_col_offset": 66,
+    "filename": "./custom_components/smart_irrigation/tests/test_migration_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 143,
+    "line_range": [
+      143
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "143         assert hasattr(config, 'skip_irrigation_on_precipitation')\n144         assert hasattr(config, 'precipitation_threshold_mm')\n145 \n",
+    "col_offset": 8,
+    "end_col_offset": 60,
+    "filename": "./custom_components/smart_irrigation/tests/test_migration_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 144,
+    "line_range": [
+      144
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

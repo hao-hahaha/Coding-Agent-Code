@@ -1,0 +1,42 @@
+[
+  {
+    "code": "31             page.wait_for_function(\"navigator.serviceWorker.controller !== null\")\n32             assert page.evaluate(\"(await fetch('insight_browser_quickstart.pdf')).ok\")\n33             context.set_offline(True)\n",
+    "col_offset": 12,
+    "end_col_offset": 86,
+    "filename": "./tests/test_quickstart_offline.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 32,
+    "line_range": [
+      32
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "35             page.wait_for_selector(\"#controls\")\n36             assert page.evaluate(\"(await fetch('insight_browser_quickstart.pdf')).ok\")\n37             browser.close()\n",
+    "col_offset": 12,
+    "end_col_offset": 86,
+    "filename": "./tests/test_quickstart_offline.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 36,
+    "line_range": [
+      36
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

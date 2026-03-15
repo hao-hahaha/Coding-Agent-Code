@@ -92,8 +92,6 @@ def main(part_id=None, num_parts=None):
         & df["merge_commit_sha"].notna()
     ].copy()
 
-    df = df.head(20)
-
     df["pr_number"] = df["pr_number"].astype(int)
 
     # 分块运行

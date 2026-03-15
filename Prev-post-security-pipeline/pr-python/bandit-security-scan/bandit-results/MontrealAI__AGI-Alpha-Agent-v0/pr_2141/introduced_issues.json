@@ -1,0 +1,22 @@
+[
+  {
+    "code": "43         try:\n44             with urlopen(url, timeout=10) as r, open(tmp, \"wb\") as f:\n45                 f.write(r.read())\n",
+    "col_offset": 17,
+    "end_col_offset": 41,
+    "filename": "./alpha_factory_v1/demos/macro_sentinel/refresh_offline_data.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 22,
+      "link": "https://cwe.mitre.org/data/definitions/22.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.",
+    "line_number": 44,
+    "line_range": [
+      44
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b310-urllib-urlopen",
+    "test_id": "B310",
+    "test_name": "blacklist"
+  }
+]

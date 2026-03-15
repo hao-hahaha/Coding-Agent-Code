@@ -1,0 +1,123 @@
+[
+  {
+    "code": "9 \n10 import subprocess\n11 import sys\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./packages/http-client-python/eng/scripts/setup/package_manager.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 10,
+    "line_range": [
+      10
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "24     try:\n25         subprocess.run([command, \"--version\"], capture_output=True, check=True)\n26         return True\n",
+    "col_offset": 8,
+    "end_col_offset": 79,
+    "filename": "./packages/http-client-python/eng/scripts/setup/package_manager.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 25,
+    "line_range": [
+      25
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "49     try:\n50         subprocess.run([sys.executable, \"-m\", \"pip\", \"--version\"], \n51                       capture_output=True, check=True)\n52         return \"python -m pip\"\n",
+    "col_offset": 8,
+    "end_col_offset": 54,
+    "filename": "./packages/http-client-python/eng/scripts/setup/package_manager.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 50,
+    "line_range": [
+      50,
+      51
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "103     try:\n104         subprocess.check_call(install_cmd + packages)\n105     except subprocess.CalledProcessError as e:\n",
+    "col_offset": 8,
+    "end_col_offset": 53,
+    "filename": "./packages/http-client-python/eng/scripts/setup/package_manager.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 104,
+    "line_range": [
+      104
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "122         if not venv_path.exists():\n123             subprocess.check_call([\"uv\", \"venv\", str(venv_path)])\n124         \n",
+    "col_offset": 12,
+    "end_col_offset": 65,
+    "filename": "./packages/http-client-python/eng/scripts/setup/package_manager.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 123,
+    "line_range": [
+      123
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "122         if not venv_path.exists():\n123             subprocess.check_call([\"uv\", \"venv\", str(venv_path)])\n124         \n",
+    "col_offset": 12,
+    "end_col_offset": 65,
+    "filename": "./packages/http-client-python/eng/scripts/setup/package_manager.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 123,
+    "line_range": [
+      123
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  }
+]

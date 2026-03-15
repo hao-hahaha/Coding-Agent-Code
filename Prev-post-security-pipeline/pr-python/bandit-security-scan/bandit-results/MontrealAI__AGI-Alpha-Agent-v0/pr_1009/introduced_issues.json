@@ -1,0 +1,22 @@
+[
+  {
+    "code": "68                 stub = ch.unary_unary(\"/bus.Bus/Send\")\n69                 payload[\"token\"] = \"bad\"\n70                 try:\n",
+    "col_offset": 24,
+    "end_col_offset": 31,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_bus_secure.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'bad'",
+    "line_number": 69,
+    "line_range": [
+      69
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b105_hardcoded_password_string.html",
+    "test_id": "B105",
+    "test_name": "hardcoded_password_string"
+  }
+]

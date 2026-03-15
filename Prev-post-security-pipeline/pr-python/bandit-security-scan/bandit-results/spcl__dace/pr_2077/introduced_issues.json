@@ -1,0 +1,3706 @@
+[
+  {
+    "code": "1294     contained_leaf_scopes = [scope_leaf for scope_leaf in state.scope_leaves() if scope_leaf.entry in nodes_in_scope]\n1295     assert len(contained_leaf_scopes) > 0\n1296     propagate_memlets_scope(\n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./dace/sdfg/propagation.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1295,
+    "line_range": [
+      1295
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "101         second_rng = second_rngs[unmapped_second_param]\n102         assert unmapped_second_param not in final_mapping\n103 \n",
+    "col_offset": 8,
+    "end_col_offset": 57,
+    "filename": "./dace/transformation/dataflow/map_fusion_helper.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 102,
+    "line_range": [
+      102
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "114 \n115     assert len(unused_first_params) == 0\n116     assert len(final_mapping) == len(unmapped_second_params)\n",
+    "col_offset": 4,
+    "end_col_offset": 40,
+    "filename": "./dace/transformation/dataflow/map_fusion_helper.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 115,
+    "line_range": [
+      115
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "115     assert len(unused_first_params) == 0\n116     assert len(final_mapping) == len(unmapped_second_params)\n117     return final_mapping\n",
+    "col_offset": 4,
+    "end_col_offset": 60,
+    "filename": "./dace/transformation/dataflow/map_fusion_helper.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 116,
+    "line_range": [
+      116
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "187     \"\"\"\n188     assert edge_to_move.dst_conn.startswith(\"IN_\")\n189     old_conn = edge_to_move.dst_conn[3:]\n",
+    "col_offset": 4,
+    "end_col_offset": 50,
+    "filename": "./dace/transformation/dataflow/map_fusion_helper.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 188,
+    "line_range": [
+      188
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "275     for edge_to_move in list(state.in_edges(from_node)):\n276         assert isinstance(edge_to_move.dst_conn, str)\n277 \n",
+    "col_offset": 8,
+    "end_col_offset": 53,
+    "filename": "./dace/transformation/dataflow/map_fusion_helper.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 276,
+    "line_range": [
+      276
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "345         )\n346     assert len(from_node.in_connectors) == 0\n347     assert len(from_node.out_connectors) == 0\n",
+    "col_offset": 4,
+    "end_col_offset": 44,
+    "filename": "./dace/transformation/dataflow/map_fusion_helper.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 346,
+    "line_range": [
+      346
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "346     assert len(from_node.in_connectors) == 0\n347     assert len(from_node.out_connectors) == 0\n348 \n",
+    "col_offset": 4,
+    "end_col_offset": 45,
+    "filename": "./dace/transformation/dataflow/map_fusion_helper.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 347,
+    "line_range": [
+      347
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "123         second_map_entry: nodes.MapEntry = self.second_parallel_map_entry\n124         assert isinstance(first_map_entry, nodes.MapEntry)\n125         assert isinstance(second_map_entry, nodes.MapEntry)\n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./dace/transformation/dataflow/map_fusion_horizontal.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 124,
+    "line_range": [
+      124
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "124         assert isinstance(first_map_entry, nodes.MapEntry)\n125         assert isinstance(second_map_entry, nodes.MapEntry)\n126 \n",
+    "col_offset": 8,
+    "end_col_offset": 59,
+    "filename": "./dace/transformation/dataflow/map_fusion_horizontal.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 125,
+    "line_range": [
+      125
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "167         second_map_entry: nodes.MapEntry = self.second_parallel_map_entry\n168         assert isinstance(first_map_entry, nodes.MapEntry)\n169         assert isinstance(second_map_entry, nodes.MapEntry)\n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./dace/transformation/dataflow/map_fusion_horizontal.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 168,
+    "line_range": [
+      168
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "168         assert isinstance(first_map_entry, nodes.MapEntry)\n169         assert isinstance(second_map_entry, nodes.MapEntry)\n170 \n",
+    "col_offset": 8,
+    "end_col_offset": 59,
+    "filename": "./dace/transformation/dataflow/map_fusion_horizontal.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 169,
+    "line_range": [
+      169
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "175 \n176         assert isinstance(first_map_exit, nodes.MapExit)\n177         assert isinstance(second_map_entry, nodes.MapEntry)\n",
+    "col_offset": 8,
+    "end_col_offset": 56,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 176,
+    "line_range": [
+      176
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "176         assert isinstance(first_map_exit, nodes.MapExit)\n177         assert isinstance(second_map_entry, nodes.MapEntry)\n178         assert isinstance(self.array, nodes.AccessNode)\n",
+    "col_offset": 8,
+    "end_col_offset": 59,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 177,
+    "line_range": [
+      177
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "177         assert isinstance(second_map_entry, nodes.MapEntry)\n178         assert isinstance(self.array, nodes.AccessNode)\n179 \n",
+    "col_offset": 8,
+    "end_col_offset": 55,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 178,
+    "line_range": [
+      178
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "259         second_map_entry: nodes.MapEntry = self.second_map_entry\n260         assert isinstance(first_map_exit, nodes.MapExit)\n261         assert isinstance(second_map_entry, nodes.MapEntry)\n",
+    "col_offset": 8,
+    "end_col_offset": 56,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 260,
+    "line_range": [
+      260
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "260         assert isinstance(first_map_exit, nodes.MapExit)\n261         assert isinstance(second_map_entry, nodes.MapEntry)\n262         assert isinstance(self.array, nodes.AccessNode)\n",
+    "col_offset": 8,
+    "end_col_offset": 59,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 261,
+    "line_range": [
+      261
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "261         assert isinstance(second_map_entry, nodes.MapEntry)\n262         assert isinstance(self.array, nodes.AccessNode)\n263 \n",
+    "col_offset": 8,
+    "end_col_offset": 55,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 262,
+    "line_range": [
+      262
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "291         )\n292         assert output_partition is not None  # Make MyPy happy.\n293         pure_outputs, exclusive_outputs, shared_outputs = output_partition\n",
+    "col_offset": 8,
+    "end_col_offset": 43,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 292,
+    "line_range": [
+      292
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "316 \n317         assert pure_outputs == set(graph.out_edges(first_map_exit))\n318         if len(pure_outputs) != 0:\n",
+    "col_offset": 8,
+    "end_col_offset": 67,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 317,
+    "line_range": [
+      317
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "344         for node_to_remove in [first_map_exit, second_map_entry]:\n345             assert graph.degree(node_to_remove) == 0\n346             graph.remove_node(node_to_remove)\n",
+    "col_offset": 12,
+    "end_col_offset": 52,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 345,
+    "line_range": [
+      345
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "556                     consumer_subsets.append(inner_consumer_edge.data.src_subset)\n557             assert found_second_map, (f\"Found '{intermediate_node}' which looked like a pure node, but is not one.\")\n558             assert len(consumer_subsets) != 0\n",
+    "col_offset": 12,
+    "end_col_offset": 116,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 557,
+    "line_range": [
+      557
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "557             assert found_second_map, (f\"Found '{intermediate_node}' which looked like a pure node, but is not one.\")\n558             assert len(consumer_subsets) != 0\n559 \n",
+    "col_offset": 12,
+    "end_col_offset": 45,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 558,
+    "line_range": [
+      558
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "600 \n601         assert len(processed_inter_nodes) == sum(len(x) for x in [pure_outputs, exclusive_outputs, shared_outputs])\n602         return (pure_outputs, exclusive_outputs, shared_outputs)\n",
+    "col_offset": 8,
+    "end_col_offset": 115,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 601,
+    "line_range": [
+      601
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "664             if len(new_inter_shape) == 0:\n665                 assert pre_exit_edge.data.subset.num_elements() == 1\n666                 is_scalar = True\n",
+    "col_offset": 16,
+    "end_col_offset": 68,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 665,
+    "line_range": [
+      665
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "674             else:\n675                 assert (pre_exit_edge.data.subset.num_elements() > 1) or all(x == 1 for x in new_inter_shape)\n676                 is_scalar = False\n",
+    "col_offset": 16,
+    "end_col_offset": 109,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 675,
+    "line_range": [
+      675
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "699             #  refers to the other end of the connection than before.\n700             assert pre_exit_edge.data.dst_subset is not None\n701             new_pre_exit_memlet_src_subset = copy.deepcopy(pre_exit_edge.data.src_subset)\n",
+    "col_offset": 12,
+    "end_col_offset": 60,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 700,
+    "line_range": [
+      700
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "751                 if inter_node_out_edge.dst == second_map_entry:\n752                     assert inter_node_out_edge.dst_conn.startswith(\"IN_\")\n753                     conn_names.add(inter_node_out_edge.dst_conn)\n",
+    "col_offset": 20,
+    "end_col_offset": 73,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 752,
+    "line_range": [
+      752
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "757                     #  i.e. we are not in exclusive mode.\n758                     assert not is_exclusive_set\n759 \n",
+    "col_offset": 20,
+    "end_col_offset": 47,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 758,
+    "line_range": [
+      758
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "768                     #  So we must offset them, we use the original edge for this.\n769                     assert inner_edge.data.src_subset is not None\n770                     consumer_offset = self.compute_offset_subset(\n",
+    "col_offset": 20,
+    "end_col_offset": 65,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 769,
+    "line_range": [
+      769
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "829                 for edge in list(state.in_edges_by_connector(second_map_entry, in_conn_name)):\n830                     assert edge.src == inter_node\n831                     state.remove_edge(edge)\n",
+    "col_offset": 20,
+    "end_col_offset": 49,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 830,
+    "line_range": [
+      830
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "837                 #  This will also remove `out_edge` from the SDFG.\n838                 assert state.degree(inter_node) == 1\n839                 state.remove_edge_and_connectors(out_edge)\n",
+    "col_offset": 16,
+    "end_col_offset": 52,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 838,
+    "line_range": [
+      838
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "848                 # TODO(phimuell): Lift this restriction\n849                 assert pre_exit_edge.data.data == inter_name\n850 \n",
+    "col_offset": 16,
+    "end_col_offset": 60,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 849,
+    "line_range": [
+      849
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "903         \"\"\"\n904         assert producer_subset is not None\n905 \n",
+    "col_offset": 8,
+    "end_col_offset": 42,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 904,
+    "line_range": [
+      904
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "950         \"\"\"\n951         assert not isinstance(intermediate_desc, data.View)\n952         final_offset: subsets.Range = None\n",
+    "col_offset": 8,
+    "end_col_offset": 59,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 951,
+    "line_range": [
+      951
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1127             return True\n1128         assert all(exchange_node.data in exchange_names for exchange_node in exchange_nodes)\n1129 \n",
+    "col_offset": 8,
+    "end_col_offset": 92,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1128,
+    "line_range": [
+      1128
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1243         \"\"\"\n1244         assert len(subsets_to_check) > 1\n1245 \n",
+    "col_offset": 8,
+    "end_col_offset": 40,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1244,
+    "line_range": [
+      1244
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1329 \n1330         assert single_use_data is not None\n1331         assert sdfg in single_use_data, (\n",
+    "col_offset": 8,
+    "end_col_offset": 42,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1330,
+    "line_range": [
+      1330
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1330         assert single_use_data is not None\n1331         assert sdfg in single_use_data, (\n1332             f\"`_single_use_data` was set, but does not contain information about the SDFG '{sdfg.name}'.\")\n1333         single_use_data_sdfg: Set[str] = single_use_data[sdfg]\n",
+    "col_offset": 8,
+    "end_col_offset": 106,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1331,
+    "line_range": [
+      1331,
+      1332
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1495             found_subsets.extend(get_subset(e) for e in get_inner_edges(edge))\n1496         assert len(found_subsets) > 0, \"Could not find any subsets.\"\n1497         assert not any(subset is None for subset in found_subsets)\n",
+    "col_offset": 8,
+    "end_col_offset": 68,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1496,
+    "line_range": [
+      1496
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1496         assert len(found_subsets) > 0, \"Could not find any subsets.\"\n1497         assert not any(subset is None for subset in found_subsets)\n1498 \n",
+    "col_offset": 8,
+    "end_col_offset": 66,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1497,
+    "line_range": [
+      1497
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1538         defining_node = dace.sdfg.utils.get_last_view_node(state, view)\n1539         assert isinstance(defining_node, nodes.AccessNode)\n1540         assert not self.is_view(defining_node, sdfg)\n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1539,
+    "line_range": [
+      1539
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1539         assert isinstance(defining_node, nodes.AccessNode)\n1540         assert not self.is_view(defining_node, sdfg)\n1541         return defining_node\n",
+    "col_offset": 8,
+    "end_col_offset": 52,
+    "filename": "./dace/transformation/dataflow/map_fusion_vertical.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1540,
+    "line_range": [
+      1540
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "289             if isinstance(e.src, nodes.AccessNode) and isinstance(e.src.desc(sdfg), data.View):\n290                 assert state.in_degree(e.src) > 0\n291                 view_edges = sdutil.get_all_view_edges(state, e.src)\n",
+    "col_offset": 16,
+    "end_col_offset": 49,
+    "filename": "./dace/transformation/dataflow/wcr_conversion.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 290,
+    "line_range": [
+      290
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "76     result = addnode.expand(state, 'pure')\n77     assert result == 'pure'\n78 \n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/library/library_node_expand_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 77,
+    "line_range": [
+      77
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "81     result2 = addnode2.expand(state2)\n82     assert result2 == 'pure'\n83 \n",
+    "col_offset": 4,
+    "end_col_offset": 28,
+    "filename": "./tests/library/library_node_expand_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 82,
+    "line_range": [
+      82
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "90     result = addnode.expand(sdfg, state)\n91     assert result == 'pure'\n92 \n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/library/library_node_expand_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 91,
+    "line_range": [
+      91
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "99     result = state.expand_library_node(addnode, 'pure')\n100     assert result == 'pure'\n101 \n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/library/library_node_expand_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 100,
+    "line_range": [
+      100
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "109         state.expand_library_node(addnode, 'nonexistent')\n110     assert 'Unknown implementation for node AddNode: nonexistent' in str(exc_info.value)\n111 \n",
+    "col_offset": 4,
+    "end_col_offset": 88,
+    "filename": "./tests/library/library_node_expand_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 110,
+    "line_range": [
+      110
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "115         state.expand_library_node(addnode2, 'pure')\n116     assert 'is not in this state' in str(exc_info.value)\n117 \n",
+    "col_offset": 4,
+    "end_col_offset": 56,
+    "filename": "./tests/library/library_node_expand_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 116,
+    "line_range": [
+      116
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "126         result = addnode.expand(state, 'pure')\n127         assert result == 'pure'\n128     except TypeError:\n",
+    "col_offset": 8,
+    "end_col_offset": 31,
+    "filename": "./tests/library/library_node_expand_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 127,
+    "line_range": [
+      127
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "133     result2 = state2.expand_library_node(addnode2, 'pure')\n134     assert result2 == 'pure'\n135 \n",
+    "col_offset": 4,
+    "end_col_offset": 28,
+    "filename": "./tests/library/library_node_expand_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 134,
+    "line_range": [
+      134
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "146     library_nodes = [n for n in state.nodes() if isinstance(n, dace.nodes.LibraryNode)]\n147     assert len(library_nodes) == 0  # Should be expanded\n148 \n",
+    "col_offset": 4,
+    "end_col_offset": 34,
+    "filename": "./tests/library/library_node_expand_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 147,
+    "line_range": [
+      147
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "162     # AddNode should add 1 to the input (as per the implementation)\n163     assert B[0] == 6.0\n164 \n",
+    "col_offset": 4,
+    "end_col_offset": 22,
+    "filename": "./tests/library/library_node_expand_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 163,
+    "line_range": [
+      163
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "170     # Initially, the node has no implementation set\n171     assert addnode.implementation is None\n172 \n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./tests/library/library_node_expand_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 171,
+    "line_range": [
+      171
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "177     result = addnode.expand(state, 'pure')\n178     assert result == 'pure'\n179 \n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/library/library_node_expand_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 178,
+    "line_range": [
+      178
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "186     result = addnode.expand(state, 'tiled', tile_size=16)\n187     assert result == 'tiled'\n188 \n",
+    "col_offset": 4,
+    "end_col_offset": 28,
+    "filename": "./tests/library/library_node_expand_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 187,
+    "line_range": [
+      187
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "190     nested_sdfg_nodes = [n for n in state.nodes() if isinstance(n, dace.nodes.NestedSDFG)]\n191     assert len(nested_sdfg_nodes) == 1\n192 \n",
+    "col_offset": 4,
+    "end_col_offset": 38,
+    "filename": "./tests/library/library_node_expand_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 191,
+    "line_range": [
+      191
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "200                 # Check that the map range is \"0:16\" (range end is tile_size-1 since ranges are inclusive)\n201                 assert node.map.range.ranges[0] == (0, 15, 1)  # 0:16 becomes (0, 15, 1)\n202                 found_tiled_map = True\n",
+    "col_offset": 16,
+    "end_col_offset": 61,
+    "filename": "./tests/library/library_node_expand_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 201,
+    "line_range": [
+      201
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "204 \n205     assert found_tiled_map, \"Could not find the tiled_map in the expanded SDFG\"\n206 \n",
+    "col_offset": 4,
+    "end_col_offset": 79,
+    "filename": "./tests/library/library_node_expand_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 205,
+    "line_range": [
+      205
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "209     result2 = addnode2.expand(state2, 'tiled', tile_size=32)\n210     assert result2 == 'tiled'\n211 \n",
+    "col_offset": 4,
+    "end_col_offset": 29,
+    "filename": "./tests/library/library_node_expand_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 210,
+    "line_range": [
+      210
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "218             if isinstance(node, dace.nodes.MapEntry) and node.label == 'tiled_map':\n219                 assert node.map.range.ranges[0] == (0, 31, 1)  # 0:32 becomes (0, 31, 1)\n220                 found_tiled_map2 = True\n",
+    "col_offset": 16,
+    "end_col_offset": 61,
+    "filename": "./tests/library/library_node_expand_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 219,
+    "line_range": [
+      219
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "222 \n223     assert found_tiled_map2, \"Could not find the tiled_map in the second expanded SDFG\"\n224 \n",
+    "col_offset": 4,
+    "end_col_offset": 87,
+    "filename": "./tests/library/library_node_expand_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 223,
+    "line_range": [
+      223
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "17     loop_nodes = [n for n, _ in sdfg.all_nodes_recursive() if isinstance(n, LoopRegion)]\n18     assert len(loop_nodes) == num_loops\n19 \n",
+    "col_offset": 4,
+    "end_col_offset": 39,
+    "filename": "./tests/transformations/interstate/loop_overwrite_elimination_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 18,
+    "line_range": [
+      18
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "35     loop_nodes = [n for n, _ in sdfg.all_nodes_recursive() if isinstance(n, LoopRegion)]\n36     assert len(loop_nodes) == num_loops - num_eliminations\n37 \n",
+    "col_offset": 4,
+    "end_col_offset": 58,
+    "filename": "./tests/transformations/interstate/loop_overwrite_elimination_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 36,
+    "line_range": [
+      36
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "105     sdfg, _ = _make_horizontal_map_sdfg(common_ancestor=False)\n106     assert count_nodes(sdfg, nodes.AccessNode) == 6\n107     assert count_nodes(sdfg, nodes.MapExit) == 4\n",
+    "col_offset": 4,
+    "end_col_offset": 51,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 106,
+    "line_range": [
+      106
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "106     assert count_nodes(sdfg, nodes.AccessNode) == 6\n107     assert count_nodes(sdfg, nodes.MapExit) == 4\n108 \n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 107,
+    "line_range": [
+      107
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "113     )\n114     assert count == 0\n115 \n",
+    "col_offset": 4,
+    "end_col_offset": 21,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 114,
+    "line_range": [
+      114
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "118     sdfg, _ = _make_horizontal_map_sdfg(common_ancestor=False)\n119     assert count_nodes(sdfg, nodes.MapExit) == 4\n120 \n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 119,
+    "line_range": [
+      119
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "121     ac_nodes_before = count_nodes(sdfg, nodes.AccessNode, True)\n122     assert len(ac_nodes_before) == 6\n123     assert {ac.data for ac in ac_nodes_before} == {\"A\", \"B\", \"C\", \"D\", \"out\"}\n",
+    "col_offset": 4,
+    "end_col_offset": 36,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 122,
+    "line_range": [
+      122
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "122     assert len(ac_nodes_before) == 6\n123     assert {ac.data for ac in ac_nodes_before} == {\"A\", \"B\", \"C\", \"D\", \"out\"}\n124     assert len([ac for ac in ac_nodes_before if ac.data == \"A\"]) == 2\n",
+    "col_offset": 4,
+    "end_col_offset": 77,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 123,
+    "line_range": [
+      123
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "123     assert {ac.data for ac in ac_nodes_before} == {\"A\", \"B\", \"C\", \"D\", \"out\"}\n124     assert len([ac for ac in ac_nodes_before if ac.data == \"A\"]) == 2\n125 \n",
+    "col_offset": 4,
+    "end_col_offset": 69,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 124,
+    "line_range": [
+      124
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "130     )\n131     assert count == 3\n132     assert count_nodes(sdfg, nodes.AccessNode) == 5\n",
+    "col_offset": 4,
+    "end_col_offset": 21,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 131,
+    "line_range": [
+      131
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "131     assert count == 3\n132     assert count_nodes(sdfg, nodes.AccessNode) == 5\n133     assert count_nodes(sdfg, nodes.MapExit) == 1\n",
+    "col_offset": 4,
+    "end_col_offset": 51,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 132,
+    "line_range": [
+      132
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "132     assert count_nodes(sdfg, nodes.AccessNode) == 5\n133     assert count_nodes(sdfg, nodes.MapExit) == 1\n134 \n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 133,
+    "line_range": [
+      133
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "137     sdfg, state = _make_horizontal_map_sdfg(common_ancestor=True)\n138     assert count_nodes(sdfg, nodes.MapExit) == 4\n139 \n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 138,
+    "line_range": [
+      138
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "140     ac_nodes_before = count_nodes(sdfg, nodes.AccessNode, True)\n141     assert len(ac_nodes_before) == 5\n142     assert {ac.data for ac in ac_nodes_before} == {\"A\", \"B\", \"C\", \"D\", \"out\"}\n",
+    "col_offset": 4,
+    "end_col_offset": 36,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 141,
+    "line_range": [
+      141
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "141     assert len(ac_nodes_before) == 5\n142     assert {ac.data for ac in ac_nodes_before} == {\"A\", \"B\", \"C\", \"D\", \"out\"}\n143     ac_A_node = next(iter(ac for ac in ac_nodes_before if ac.data == \"A\"))\n",
+    "col_offset": 4,
+    "end_col_offset": 77,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 142,
+    "line_range": [
+      142
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "143     ac_A_node = next(iter(ac for ac in ac_nodes_before if ac.data == \"A\"))\n144     assert state.out_degree(ac_A_node) == 2\n145 \n",
+    "col_offset": 4,
+    "end_col_offset": 43,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 144,
+    "line_range": [
+      144
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "150     )\n151     assert count == 1\n152     assert count_nodes(sdfg, nodes.AccessNode) == 5\n",
+    "col_offset": 4,
+    "end_col_offset": 21,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 151,
+    "line_range": [
+      151
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "151     assert count == 1\n152     assert count_nodes(sdfg, nodes.AccessNode) == 5\n153     assert count_nodes(sdfg, nodes.MapExit) == 3\n",
+    "col_offset": 4,
+    "end_col_offset": 51,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 152,
+    "line_range": [
+      152
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "152     assert count_nodes(sdfg, nodes.AccessNode) == 5\n153     assert count_nodes(sdfg, nodes.MapExit) == 3\n154 \n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 153,
+    "line_range": [
+      153
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "155     # Because of the consolidation it was reduced to 1 node.\n156     assert state.out_degree(ac_A_node) == 1\n157 \n",
+    "col_offset": 4,
+    "end_col_offset": 43,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 156,
+    "line_range": [
+      156
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "160     sdfg, state = _make_horizontal_map_sdfg(common_ancestor=True)\n161     assert count_nodes(sdfg, nodes.MapExit) == 4\n162 \n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 161,
+    "line_range": [
+      161
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "163     ac_nodes_before = count_nodes(sdfg, nodes.AccessNode, True)\n164     assert len(ac_nodes_before) == 5\n165     assert {ac.data for ac in ac_nodes_before} == {\"A\", \"B\", \"C\", \"D\", \"out\"}\n",
+    "col_offset": 4,
+    "end_col_offset": 36,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 164,
+    "line_range": [
+      164
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "164     assert len(ac_nodes_before) == 5\n165     assert {ac.data for ac in ac_nodes_before} == {\"A\", \"B\", \"C\", \"D\", \"out\"}\n166     ac_A_node = next(iter(ac for ac in ac_nodes_before if ac.data == \"A\"))\n",
+    "col_offset": 4,
+    "end_col_offset": 77,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 165,
+    "line_range": [
+      165
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "166     ac_A_node = next(iter(ac for ac in ac_nodes_before if ac.data == \"A\"))\n167     assert state.out_degree(ac_A_node) == 2\n168 \n",
+    "col_offset": 4,
+    "end_col_offset": 43,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 167,
+    "line_range": [
+      167
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "173     )\n174     assert count == 1\n175     assert count_nodes(sdfg, nodes.AccessNode) == 5\n",
+    "col_offset": 4,
+    "end_col_offset": 21,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 174,
+    "line_range": [
+      174
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "174     assert count == 1\n175     assert count_nodes(sdfg, nodes.AccessNode) == 5\n176     assert count_nodes(sdfg, nodes.MapExit) == 3\n",
+    "col_offset": 4,
+    "end_col_offset": 51,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 175,
+    "line_range": [
+      175
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "175     assert count_nodes(sdfg, nodes.AccessNode) == 5\n176     assert count_nodes(sdfg, nodes.MapExit) == 3\n177 \n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 176,
+    "line_range": [
+      176
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "179     ac_A_node_oedges = list(state.out_edges(ac_A_node))\n180     assert len(ac_A_node_oedges) == 2\n181     assert all(isinstance(e.dst, nodes.MapEntry) for e in ac_A_node_oedges)\n",
+    "col_offset": 4,
+    "end_col_offset": 37,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 180,
+    "line_range": [
+      180
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "180     assert len(ac_A_node_oedges) == 2\n181     assert all(isinstance(e.dst, nodes.MapEntry) for e in ac_A_node_oedges)\n182     assert len({e.dst for e in ac_A_node_oedges}) == 1\n",
+    "col_offset": 4,
+    "end_col_offset": 75,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 181,
+    "line_range": [
+      181
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "181     assert all(isinstance(e.dst, nodes.MapEntry) for e in ac_A_node_oedges)\n182     assert len({e.dst for e in ac_A_node_oedges}) == 1\n183 \n",
+    "col_offset": 4,
+    "end_col_offset": 54,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 182,
+    "line_range": [
+      182
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "186     fused_map_iedges = list(state.in_edges(fused_map))\n187     assert len(fused_map_iedges) == 3\n188     assert all(isinstance(e.src, nodes.AccessNode) for e in fused_map_iedges)\n",
+    "col_offset": 4,
+    "end_col_offset": 37,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 187,
+    "line_range": [
+      187
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "187     assert len(fused_map_iedges) == 3\n188     assert all(isinstance(e.src, nodes.AccessNode) for e in fused_map_iedges)\n189     assert {e.src.data for e in fused_map_iedges} == {\"A\", \"D\"}\n",
+    "col_offset": 4,
+    "end_col_offset": 77,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 188,
+    "line_range": [
+      188
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "188     assert all(isinstance(e.src, nodes.AccessNode) for e in fused_map_iedges)\n189     assert {e.src.data for e in fused_map_iedges} == {\"A\", \"D\"}\n190 \n",
+    "col_offset": 4,
+    "end_col_offset": 63,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 189,
+    "line_range": [
+      189
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "193     sdfg = _make_vertical_map_sdfg()\n194     assert count_nodes(sdfg, nodes.MapExit) == 2\n195     assert count_nodes(sdfg, nodes.AccessNode) == 3\n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 194,
+    "line_range": [
+      194
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "194     assert count_nodes(sdfg, nodes.MapExit) == 2\n195     assert count_nodes(sdfg, nodes.AccessNode) == 3\n196 \n",
+    "col_offset": 4,
+    "end_col_offset": 51,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 195,
+    "line_range": [
+      195
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "201     )\n202     assert count == 0\n203 \n",
+    "col_offset": 4,
+    "end_col_offset": 21,
+    "filename": "./tests/transformations/map_fusion_horizontal_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 202,
+    "line_range": [
+      202
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "50         sdfg.view()\n51     except Exception:\n52         pass\n53 \n",
+    "col_offset": 4,
+    "end_col_offset": 12,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 51,
+    "line_range": [
+      51,
+      52
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "144             safe_view(sdfg)\n145         assert rm == removed_maps, f\"Expected to remove {removed_maps} but removed {rm}\"\n146     if final_maps is not None:\n",
+    "col_offset": 8,
+    "end_col_offset": 88,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 145,
+    "line_range": [
+      145
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "149             safe_view(sdfg)\n150         assert final_maps == num_maps_after, f\"Expected that only {final_maps} maps remain, but there are sill {num_maps_after}.\"\n151     if not has_processed:\n",
+    "col_offset": 8,
+    "end_col_offset": 129,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 150,
+    "line_range": [
+      150
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "153             safe_view(sdfg)\n154         assert num_maps_after < num_maps_before, f\"Maps after: {num_maps_after}; Maps before: {num_maps_before}\"\n155     return sdfg\n",
+    "col_offset": 8,
+    "end_col_offset": 112,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 154,
+    "line_range": [
+      154
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "341     print('Difference:', diff)\n342     assert diff <= 1e-3\n343 \n",
+    "col_offset": 4,
+    "end_col_offset": 23,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 342,
+    "line_range": [
+      342
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "355     print('Difference:', diff)\n356     assert diff <= 1e-3\n357 \n",
+    "col_offset": 4,
+    "end_col_offset": 23,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 356,
+    "line_range": [
+      356
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "370 \n371     assert np.allclose(B_res, B)\n372     assert np.allclose(C_res, C)\n",
+    "col_offset": 4,
+    "end_col_offset": 32,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 371,
+    "line_range": [
+      371
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "371     assert np.allclose(B_res, B)\n372     assert np.allclose(C_res, C)\n373 \n",
+    "col_offset": 4,
+    "end_col_offset": 32,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 372,
+    "line_range": [
+      372
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "386 \n387     assert np.allclose(res, out)\n388 \n",
+    "col_offset": 4,
+    "end_col_offset": 32,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 387,
+    "line_range": [
+      387
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "404     print('Difference1:', diff1)\n405     assert diff1 <= 1e-4\n406 \n",
+    "col_offset": 4,
+    "end_col_offset": 24,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 405,
+    "line_range": [
+      405
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "407     print('Difference2:', diff2)\n408     assert diff2 <= 1e-4\n409 \n",
+    "col_offset": 4,
+    "end_col_offset": 24,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 408,
+    "line_range": [
+      408
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "413     sdfg.simplify()\n414     assert count_nodes(sdfg, nodes.MapEntry) > 1\n415     sdfg = apply_fusion(sdfg, final_maps=1)\n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 414,
+    "line_range": [
+      414
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "421     print('Difference:', diff)\n422     assert diff <= 1e-4\n423 \n",
+    "col_offset": 4,
+    "end_col_offset": 23,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 422,
+    "line_range": [
+      422
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "432     compile_and_run_sdfg(sdfg, A=A)\n433     assert np.allclose(A, expected)\n434 \n",
+    "col_offset": 4,
+    "end_col_offset": 35,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 433,
+    "line_range": [
+      433
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "473 \n474     assert np.allclose(B, (A[:, K - 1] + 1))\n475 \n",
+    "col_offset": 4,
+    "end_col_offset": 44,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 474,
+    "line_range": [
+      474
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "491     sdfg(A=val0)\n492     assert np.array_equal(val0, ref)\n493 \n",
+    "col_offset": 4,
+    "end_col_offset": 36,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 492,
+    "line_range": [
+      492
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "498     compile_and_run_sdfg(sdfg, A=val1)\n499     assert np.array_equal(val1, ref), f\"REF: {ref}; VAL: {val1}\"\n500 \n",
+    "col_offset": 4,
+    "end_col_offset": 64,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 499,
+    "line_range": [
+      499
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "525     ref = A @ B\n526     assert np.allclose(val[0], ref)\n527 \n",
+    "col_offset": 4,
+    "end_col_offset": 35,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 526,
+    "line_range": [
+      526
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "681                     dst = state.memlet_path(e1)[-1].dst\n682                 assert isinstance(dst, dace.nodes.AccessNode)\n683 \n",
+    "col_offset": 16,
+    "end_col_offset": 61,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 682,
+    "line_range": [
+      682
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "687     compile_and_run_sdfg(sdfg, **res)\n688     assert all(np.allclose(ref[k], res[k]) for k in ref.keys())\n689 \n",
+    "col_offset": 4,
+    "end_col_offset": 63,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 688,
+    "line_range": [
+      688
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "722                     src = state.memlet_path(e1)[0].src\n723                 assert isinstance(src, dace.nodes.AccessNode)\n724 \n",
+    "col_offset": 16,
+    "end_col_offset": 61,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 723,
+    "line_range": [
+      723
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "738     apply_fusion(sdfg, removed_maps=1)\n739     assert sdfg.number_of_nodes() == 2\n740     assert len([node for node in state1.data_nodes() if node.data == \"B\"]) == 1\n",
+    "col_offset": 4,
+    "end_col_offset": 38,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 739,
+    "line_range": [
+      739
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "739     assert sdfg.number_of_nodes() == 2\n740     assert len([node for node in state1.data_nodes() if node.data == \"B\"]) == 1\n741 \n",
+    "col_offset": 4,
+    "end_col_offset": 79,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 740,
+    "line_range": [
+      740
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "743 \n744     assert np.allclose(C, ref_C)\n745     assert np.allclose(D, ref_D)\n",
+    "col_offset": 4,
+    "end_col_offset": 32,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 744,
+    "line_range": [
+      744
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "744     assert np.allclose(C, ref_C)\n745     assert np.allclose(D, ref_D)\n746 \n",
+    "col_offset": 4,
+    "end_col_offset": 32,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 745,
+    "line_range": [
+      745
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "770     sdfg = inner_product.to_sdfg(simplify=True)\n771     assert sdfg.number_of_nodes() == 1\n772     assert count_nodes(sdfg, nodes.MapEntry) == 3\n",
+    "col_offset": 4,
+    "end_col_offset": 38,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 771,
+    "line_range": [
+      771
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "771     assert sdfg.number_of_nodes() == 1\n772     assert count_nodes(sdfg, nodes.MapEntry) == 3\n773 \n",
+    "col_offset": 4,
+    "end_col_offset": 49,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 772,
+    "line_range": [
+      772
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "777     state = next(iter(sdfg.nodes()))\n778     assert len(list(state.sink_nodes())) == 1\n779     out_node = next(iter(state.sink_nodes()))\n",
+    "col_offset": 4,
+    "end_col_offset": 45,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 778,
+    "line_range": [
+      778
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "779     out_node = next(iter(state.sink_nodes()))\n780     assert out_node.data == \"out\"\n781     assert state.in_degree(out_node) == 1\n",
+    "col_offset": 4,
+    "end_col_offset": 33,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 780,
+    "line_range": [
+      780
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "780     assert out_node.data == \"out\"\n781     assert state.in_degree(out_node) == 1\n782 \n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 781,
+    "line_range": [
+      781
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "785     last_map_entry = state.entry_node(last_map_exit)\n786     assert isinstance(last_map_exit, nodes.MapExit)\n787     assert state.in_degree(last_map_exit) == 1\n",
+    "col_offset": 4,
+    "end_col_offset": 51,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 786,
+    "line_range": [
+      786
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "786     assert isinstance(last_map_exit, nodes.MapExit)\n787     assert state.in_degree(last_map_exit) == 1\n788 \n",
+    "col_offset": 4,
+    "end_col_offset": 46,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 787,
+    "line_range": [
+      787
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "789     indirect_access_tasklet = next(iter(state.in_edges(last_map_exit))).src\n790     assert isinstance(indirect_access_tasklet, nodes.Tasklet)\n791     assert indirect_access_tasklet.code == \"__out = __arr[__idx]\"  # TODO: Regex with connectors\n",
+    "col_offset": 4,
+    "end_col_offset": 61,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 790,
+    "line_range": [
+      790
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "790     assert isinstance(indirect_access_tasklet, nodes.Tasklet)\n791     assert indirect_access_tasklet.code == \"__out = __arr[__idx]\"  # TODO: Regex with connectors\n792 \n",
+    "col_offset": 4,
+    "end_col_offset": 65,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 791,
+    "line_range": [
+      791
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "793     # The tasklet can only be connected to a map entry.\n794     assert all(in_edge.src is last_map_entry for in_edge in state.in_edges(indirect_access_tasklet))\n795 \n",
+    "col_offset": 4,
+    "end_col_offset": 100,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 794,
+    "line_range": [
+      794
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "850     sdfg.validate()\n851     assert sdfg.apply_transformations_repeated(MapExpansion, validate_all=True) > 0\n852     return sdfg\n",
+    "col_offset": 4,
+    "end_col_offset": 83,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 851,
+    "line_range": [
+      851
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "864     compile_and_run_sdfg(sdfg, A=A, C=C)\n865     assert np.allclose(C, exp)\n866     C[:] = 0.0\n",
+    "col_offset": 4,
+    "end_col_offset": 30,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 865,
+    "line_range": [
+      865
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "870     compile_and_run_sdfg(sdfg, A=A, C=C)\n871     assert np.allclose(C, exp)\n872 \n",
+    "col_offset": 4,
+    "end_col_offset": 30,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 871,
+    "line_range": [
+      871
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "883     sdfg(A=A, C=C)\n884     assert np.allclose(C, exp)\n885     C[:] = 0.0\n",
+    "col_offset": 4,
+    "end_col_offset": 30,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 884,
+    "line_range": [
+      884
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "889     sdfg(A=A, C=C)\n890     assert np.allclose(C, exp)\n891 \n",
+    "col_offset": 4,
+    "end_col_offset": 30,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 890,
+    "line_range": [
+      890
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "968     compile_and_run_sdfg(sdfg, A=A, B=B, ret=res)\n969     assert np.allclose(ref, res)\n970 \n",
+    "col_offset": 4,
+    "end_col_offset": 32,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 969,
+    "line_range": [
+      969
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1074     map_exit = next(iter(node for node in state.nodes() if isinstance(node, nodes.MapExit)))\n1075     assert state.out_degree(map_exit) == 2\n1076     assert {\"A\", \"O\"} == {edge.dst.data for edge in state.out_edges(map_exit) if isinstance(edge.dst, nodes.AccessNode)}\n",
+    "col_offset": 4,
+    "end_col_offset": 42,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1075,
+    "line_range": [
+      1075
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1075     assert state.out_degree(map_exit) == 2\n1076     assert {\"A\", \"O\"} == {edge.dst.data for edge in state.out_edges(map_exit) if isinstance(edge.dst, nodes.AccessNode)}\n1077 \n",
+    "col_offset": 4,
+    "end_col_offset": 120,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1076,
+    "line_range": [
+      1076
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1104     output_1 = next(iter(dnode for dnode in state.sink_nodes()))\n1105     assert isinstance(output_1, nodes.AccessNode) and output_1.data == \"output_1\"\n1106 \n",
+    "col_offset": 4,
+    "end_col_offset": 81,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1105,
+    "line_range": [
+      1105
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1132     apply_fusion(sdfg, removed_maps=1, strict_dataflow=False)\n1133     assert state.in_degree(output_1) == 1\n1134     assert state.out_degree(output_1) == 1\n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1133,
+    "line_range": [
+      1133
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1133     assert state.in_degree(output_1) == 1\n1134     assert state.out_degree(output_1) == 1\n1135     assert all(isinstance(edge.src, nodes.MapExit) for edge in state.in_edges(output_1))\n",
+    "col_offset": 4,
+    "end_col_offset": 42,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1134,
+    "line_range": [
+      1134
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1134     assert state.out_degree(output_1) == 1\n1135     assert all(isinstance(edge.src, nodes.MapExit) for edge in state.in_edges(output_1))\n1136     assert all(isinstance(edge.dst, nodes.MapEntry) for edge in state.out_edges(output_1))\n",
+    "col_offset": 4,
+    "end_col_offset": 88,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1135,
+    "line_range": [
+      1135
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1135     assert all(isinstance(edge.src, nodes.MapExit) for edge in state.in_edges(output_1))\n1136     assert all(isinstance(edge.dst, nodes.MapEntry) for edge in state.out_edges(output_1))\n1137 \n",
+    "col_offset": 4,
+    "end_col_offset": 90,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1136,
+    "line_range": [
+      1136
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1138     upper_map_exit = next(iter(edge.src for edge in state.in_edges(output_1)))\n1139     assert isinstance(upper_map_exit, nodes.MapExit)\n1140     assert state.out_degree(upper_map_exit) == 2\n",
+    "col_offset": 4,
+    "end_col_offset": 52,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1139,
+    "line_range": [
+      1139
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1139     assert isinstance(upper_map_exit, nodes.MapExit)\n1140     assert state.out_degree(upper_map_exit) == 2\n1141     assert {\"T\", \"output_1\"\n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1140,
+    "line_range": [
+      1140
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1140     assert state.out_degree(upper_map_exit) == 2\n1141     assert {\"T\", \"output_1\"\n1142             } == {edge.dst.data\n1143                   for edge in state.out_edges(upper_map_exit) if isinstance(edge.dst, nodes.AccessNode)}\n1144 \n",
+    "col_offset": 4,
+    "end_col_offset": 104,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1141,
+    "line_range": [
+      1141,
+      1142,
+      1143
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1411     compile_and_run_sdfg(sdfg, **res)\n1412     assert all(np.allclose(ref[k], res[k]) for k in ref.keys())\n1413 \n",
+    "col_offset": 4,
+    "end_col_offset": 63,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1412,
+    "line_range": [
+      1412
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1525     compile_and_run_sdfg(sdfg, **res)\n1526     assert all(np.allclose(ref[k], res[k]) for k in ref.keys())\n1527 \n",
+    "col_offset": 4,
+    "end_col_offset": 63,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1526,
+    "line_range": [
+      1526
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1619     compile_and_run_sdfg(sdfg, **res)\n1620     assert all(np.allclose(ref[k], res[k]) for k in ref.keys())\n1621 \n",
+    "col_offset": 4,
+    "end_col_offset": 63,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1620,
+    "line_range": [
+      1620
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1676     compile_and_run_sdfg(sdfg, **res)\n1677     assert all(np.allclose(ref[k], res[k]) for k in ref.keys())\n1678 \n",
+    "col_offset": 4,
+    "end_col_offset": 63,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1677,
+    "line_range": [
+      1677
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1730     compile_and_run_sdfg(sdfg, **res)\n1731     assert all(np.allclose(ref[k], res[k]) for k in ref.keys())\n1732 \n",
+    "col_offset": 4,
+    "end_col_offset": 63,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1731,
+    "line_range": [
+      1731
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1845         # There should be no edge, that references `T`.\n1846         assert edge.data.data != \"T\"\n1847 \n",
+    "col_offset": 8,
+    "end_col_offset": 36,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1846,
+    "line_range": [
+      1846
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1851             if edge.src is t or edge.dst is t:\n1852                 assert edge.data.data == t.data\n1853             else:\n",
+    "col_offset": 16,
+    "end_col_offset": 47,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1852,
+    "line_range": [
+      1852
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1853             else:\n1854                 assert edge.data.data != t.data\n1855 \n",
+    "col_offset": 16,
+    "end_col_offset": 47,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1854,
+    "line_range": [
+      1854
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1859     compile_and_run_sdfg(sdfg, **res)\n1860     assert all(np.allclose(ref[k], res[k]) for k in ref.keys())\n1861 \n",
+    "col_offset": 4,
+    "end_col_offset": 63,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1860,
+    "line_range": [
+      1860
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1935     )\n1936     assert not would_transformation_apply\n1937 \n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1936,
+    "line_range": [
+      1936
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "2020     sdfg, state = _make_multi_producer_intermediate()\n2021     assert count_nodes(state, nodes.MapEntry) == 4\n2022 \n",
+    "col_offset": 4,
+    "end_col_offset": 50,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 2021,
+    "line_range": [
+      2021
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "2023     ac_initial = count_nodes(state, nodes.AccessNode, return_nodes=True)\n2024     assert len(ac_initial) == 5\n2025     assert any(state.out_degree(ac) == 1 and state.in_degree(ac) == 3 for ac in ac_initial if ac.data == \"t\")\n",
+    "col_offset": 4,
+    "end_col_offset": 31,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 2024,
+    "line_range": [
+      2024
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "2024     assert len(ac_initial) == 5\n2025     assert any(state.out_degree(ac) == 1 and state.in_degree(ac) == 3 for ac in ac_initial if ac.data == \"t\")\n2026 \n",
+    "col_offset": 4,
+    "end_col_offset": 109,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 2025,
+    "line_range": [
+      2025
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "2032     ac_after = count_nodes(state, nodes.AccessNode, return_nodes=True)\n2033     assert len(ac_after) == 6  # The additional one is the transient.\n2034     assert any(state.out_degree(ac) == 0 and state.in_degree(ac) == 3 for ac in ac_initial if ac.data == \"t\")\n",
+    "col_offset": 4,
+    "end_col_offset": 29,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 2033,
+    "line_range": [
+      2033
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "2033     assert len(ac_after) == 6  # The additional one is the transient.\n2034     assert any(state.out_degree(ac) == 0 and state.in_degree(ac) == 3 for ac in ac_initial if ac.data == \"t\")\n2035 \n",
+    "col_offset": 4,
+    "end_col_offset": 109,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 2034,
+    "line_range": [
+      2034
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "2036     compile_and_run_sdfg(sdfg, **res)\n2037     assert all(np.allclose(ref[name], res[name]) for name in ref)\n2038 \n",
+    "col_offset": 4,
+    "end_col_offset": 65,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 2037,
+    "line_range": [
+      2037
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "2081     ac_nodes_before = count_nodes(sdfg, nodes.AccessNode, return_nodes=True)\n2082     assert len(ac_nodes_before) == 4\n2083     assert count_nodes(sdfg, nodes.MapEntry) == 2\n",
+    "col_offset": 4,
+    "end_col_offset": 36,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 2082,
+    "line_range": [
+      2082
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "2082     assert len(ac_nodes_before) == 4\n2083     assert count_nodes(sdfg, nodes.MapEntry) == 2\n2084 \n",
+    "col_offset": 4,
+    "end_col_offset": 49,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 2083,
+    "line_range": [
+      2083
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "2089             continue\n2090         assert state.out_degree(ac) == 1\n2091         a_nodes_subset_init.add(next(iter(state.out_edges(ac))).data.subset[0])\n",
+    "col_offset": 8,
+    "end_col_offset": 40,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 2090,
+    "line_range": [
+      2090
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "2091         a_nodes_subset_init.add(next(iter(state.out_edges(ac))).data.subset[0])\n2092     assert len(a_nodes_subset_init) == 2\n2093     assert {(0, 4, 1), (5, 9, 1)} == a_nodes_subset_init\n",
+    "col_offset": 4,
+    "end_col_offset": 40,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 2092,
+    "line_range": [
+      2092
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "2092     assert len(a_nodes_subset_init) == 2\n2093     assert {(0, 4, 1), (5, 9, 1)} == a_nodes_subset_init\n2094 \n",
+    "col_offset": 4,
+    "end_col_offset": 56,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 2093,
+    "line_range": [
+      2093
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "2099 \n2100     assert count_nodes(sdfg, nodes.MapEntry) == 1\n2101     ac_nodes = count_nodes(sdfg, nodes.AccessNode, return_nodes=True)\n",
+    "col_offset": 4,
+    "end_col_offset": 49,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 2100,
+    "line_range": [
+      2100
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "2101     ac_nodes = count_nodes(sdfg, nodes.AccessNode, return_nodes=True)\n2102     assert len(ac_nodes) == 3\n2103     a_nodes = [ac for ac in ac_nodes if ac.data == \"a\"]\n",
+    "col_offset": 4,
+    "end_col_offset": 29,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 2102,
+    "line_range": [
+      2102
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "2103     a_nodes = [ac for ac in ac_nodes if ac.data == \"a\"]\n2104     assert len(a_nodes) == 1\n2105     a_node = a_nodes[0]\n",
+    "col_offset": 4,
+    "end_col_offset": 28,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 2104,
+    "line_range": [
+      2104
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "2105     a_node = a_nodes[0]\n2106     assert state.out_degree(a_node) == 1\n2107     a_oedge = next(iter(state.out_edges(a_node)))\n",
+    "col_offset": 4,
+    "end_col_offset": 40,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 2106,
+    "line_range": [
+      2106
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "2108     # Test if the subset has been updated.\n2109     assert a_oedge.data.subset[0] == (0, 9, 1)\n2110 \n",
+    "col_offset": 4,
+    "end_col_offset": 46,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 2109,
+    "line_range": [
+      2109
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "2112 \n2113     assert all(np.allclose(ref[name], res[name]) for name in ref)\n2114 \n",
+    "col_offset": 4,
+    "end_col_offset": 65,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 2113,
+    "line_range": [
+      2113
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "2182     compile_and_run_sdfg(sdfg, **res)\n2183     assert all(np.allclose(ref[k], res[k]) for k in ref)\n2184     assert state.degree(a) == 2\n",
+    "col_offset": 4,
+    "end_col_offset": 56,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 2183,
+    "line_range": [
+      2183
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "2183     assert all(np.allclose(ref[k], res[k]) for k in ref)\n2184     assert state.degree(a) == 2\n2185 \n",
+    "col_offset": 4,
+    "end_col_offset": 31,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 2184,
+    "line_range": [
+      2184
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "2201     compile_and_run_sdfg(sdfg, **res)\n2202     assert all(np.allclose(ref[k], res[k]) for k in ref)\n2203 \n",
+    "col_offset": 4,
+    "end_col_offset": 56,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 2202,
+    "line_range": [
+      2202
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "2204     # Because they consume the same range the edges are consolidated.\n2205     assert state.degree(a) == 1\n2206 \n",
+    "col_offset": 4,
+    "end_col_offset": 31,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 2205,
+    "line_range": [
+      2205
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "2222     compile_and_run_sdfg(sdfg, **res)\n2223     assert all(np.allclose(ref[k], res[k]) for k in ref)\n2224 \n",
+    "col_offset": 4,
+    "end_col_offset": 56,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 2223,
+    "line_range": [
+      2223
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "2226     #  the edges are not consolidated.\n2227     assert state.degree(a) == 2\n2228 \n",
+    "col_offset": 4,
+    "end_col_offset": 31,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 2227,
+    "line_range": [
+      2227
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "2241     compile_and_run_sdfg(sdfg, **res)\n2242     assert all(np.allclose(ref[k], res[k]) for k in ref)\n2243     assert state.degree(a) == 1\n",
+    "col_offset": 4,
+    "end_col_offset": 56,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 2242,
+    "line_range": [
+      2242
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "2242     assert all(np.allclose(ref[k], res[k]) for k in ref)\n2243     assert state.degree(a) == 1\n2244 \n",
+    "col_offset": 4,
+    "end_col_offset": 31,
+    "filename": "./tests/transformations/map_fusion_vertical_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 2243,
+    "line_range": [
+      2243
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

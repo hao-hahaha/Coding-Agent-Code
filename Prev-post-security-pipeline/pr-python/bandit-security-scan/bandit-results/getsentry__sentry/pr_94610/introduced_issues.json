@@ -1,0 +1,22 @@
+[
+  {
+    "code": "186             should_log = (\n187                 effective_sample_log_rate >= 1.0 or random.random() < effective_sample_log_rate\n188             )\n",
+    "col_offset": 52,
+    "end_col_offset": 67,
+    "filename": "./src/sentry/integrations/utils/metrics.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 187,
+    "line_range": [
+      187
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  }
+]

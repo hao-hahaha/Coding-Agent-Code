@@ -1,0 +1,2417 @@
+[
+  {
+    "code": "214 def test_TPCDS_Q1_result():\n215     assert result == [Auto1(c_customer_id=\"C2\")]\n216 \n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q1.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 215,
+    "line_range": [
+      215
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "271 def test_TPCDS_Q10_demographics_count():\n272     assert result == [\n273         Auto1(\n274             cd_gender=\"F\",\n275             cd_marital_status=\"M\",\n276             cd_education_status=\"College\",\n277             cnt1=1,\n278             cd_purchase_estimate=5000,\n279             cnt2=1,\n280             cd_credit_rating=\"Good\",\n281             cnt3=1,\n282             cd_dep_count=1,\n283             cnt4=1,\n284             cd_dep_employed_count=1,\n285             cnt5=1,\n286             cd_dep_college_count=0,\n287             cnt6=1,\n288         )\n289     ]\n290 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q10.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 272,
+    "line_range": [
+      272,
+      273,
+      274,
+      275,
+      276,
+      277,
+      278,
+      279,
+      280,
+      281,
+      282,
+      283,
+      284,
+      285,
+      286,
+      287,
+      288,
+      289
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "91 def test_TPCDS_Q11_growth():\n92     assert result == [\n93         Auto1(customer_id=\"C1\", customer_first_name=\"John\", customer_last_name=\"Doe\")\n94     ]\n95 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q11.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 92,
+    "line_range": [
+      92,
+      93,
+      94
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "261 def test_TPCDS_Q12_revenue_ratio():\n262     assert result == [\n263         Auto1(\n264             i_item_id=\"ITEM1\",\n265             i_item_desc=\"Item One\",\n266             i_category=\"A\",\n267             i_class=\"C1\",\n268             i_current_price=10.0,\n269             itemrevenue=200.0,\n270             revenueratio=50.0,\n271         ),\n272         Auto1(\n273             i_item_id=\"ITEM2\",\n274             i_item_desc=\"Item Two\",\n275             i_category=\"A\",\n276             i_class=\"C1\",\n277             i_current_price=20.0,\n278             itemrevenue=200.0,\n279             revenueratio=50.0,\n280         ),\n281     ]\n282 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q12.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 262,
+    "line_range": [
+      262,
+      263,
+      264,
+      265,
+      266,
+      267,
+      268,
+      269,
+      270,
+      271,
+      272,
+      273,
+      274,
+      275,
+      276,
+      277,
+      278,
+      279,
+      280,
+      281
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "303 def test_TPCDS_Q13_averages():\n304     assert result == [\n305         Auto1(\n306             avg_ss_quantity=10.0,\n307             avg_ss_ext_sales_price=100.0,\n308             avg_ss_ext_wholesale_cost=50.0,\n309             sum_ss_ext_wholesale_cost=50.0,\n310         )\n311     ]\n312 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q13.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 304,
+    "line_range": [
+      304,
+      305,
+      306,
+      307,
+      308,
+      309,
+      310,
+      311
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "304 def test_TPCDS_Q14_cross_channel():\n305     assert result == [\n306         Auto1(\n307             channel=\"store\",\n308             i_brand_id=1,\n309             i_class_id=1,\n310             i_category_id=1,\n311             sales=60.0,\n312             number_sales=1,\n313         )\n314     ]\n315 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q14.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 305,
+    "line_range": [
+      305,
+      306,
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313,
+      314
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "241 def test_TPCDS_Q15_zip():\n242     assert filtered == [Auto1(ca_zip=\"85669\", sum_sales=600.0)]\n243 \n",
+    "col_offset": 4,
+    "end_col_offset": 63,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q15.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 242,
+    "line_range": [
+      242
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "256 def test_TPCDS_Q16_shipping():\n257     assert filtered == [\n258         Auto1(order_count=1, total_shipping_cost=5.0, total_net_profit=20.0)\n259     ]\n260 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q16.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 257,
+    "line_range": [
+      257,
+      258,
+      259
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "306 def test_TPCDS_Q17_stats():\n307     assert result == [\n308         Auto1(\n309             i_item_id=\"I1\",\n310             i_item_desc=\"Item 1\",\n311             s_state=\"CA\",\n312             store_sales_quantitycount=1,\n313             store_sales_quantityave=10.0,\n314             store_sales_quantitystdev=0.0,\n315             store_sales_quantitycov=0.0,\n316             store_returns_quantitycount=1,\n317             store_returns_quantityave=2.0,\n318             store_returns_quantitystdev=0.0,\n319             store_returns_quantitycov=0.0,\n320             catalog_sales_quantitycount=1,\n321             catalog_sales_quantityave=5.0,\n322             catalog_sales_quantitystdev=0.0,\n323             catalog_sales_quantitycov=0.0,\n324         )\n325     ]\n326 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q17.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 307,
+    "line_range": [
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313,
+      314,
+      315,
+      316,
+      317,
+      318,
+      319,
+      320,
+      321,
+      322,
+      323,
+      324,
+      325
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "316 def test_TPCDS_Q18_averages():\n317     assert result == [\n318         Auto1(\n319             i_item_id=\"I1\",\n320             ca_country=\"US\",\n321             ca_state=\"CA\",\n322             ca_county=\"County1\",\n323             agg1=1.0,\n324             agg2=10.0,\n325             agg3=1.0,\n326             agg4=9.0,\n327             agg5=2.0,\n328             agg6=1980.0,\n329             agg7=2.0,\n330         )\n331     ]\n332 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q18.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 317,
+    "line_range": [
+      317,
+      318,
+      319,
+      320,
+      321,
+      322,
+      323,
+      324,
+      325,
+      326,
+      327,
+      328,
+      329,
+      330,
+      331
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "327 def test_TPCDS_Q19_brand():\n328     assert result == [\n329         Auto1(\n330             i_brand=\"B1\",\n331             i_brand_id=1,\n332             i_manufact_id=1,\n333             i_manufact=\"M1\",\n334             ext_price=100.0,\n335         )\n336     ]\n337 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q19.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 328,
+    "line_range": [
+      328,
+      329,
+      330,
+      331,
+      332,
+      333,
+      334,
+      335,
+      336
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "239 def test_TPCDS_Q2_result():\n240     assert result == [Auto1(d_week_seq1=1, sun_ratio=0.5, mon_ratio=0.5)]\n241 \n",
+    "col_offset": 4,
+    "end_col_offset": 73,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q2.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 240,
+    "line_range": [
+      240
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "261 def test_TPCDS_Q20_revenue_ratio():\n262     assert result == [\n263         Auto1(\n264             i_item_id=\"ITEM1\",\n265             i_item_desc=\"Item One\",\n266             i_category=\"A\",\n267             i_class=\"X\",\n268             i_current_price=10.0,\n269             itemrevenue=600.0,\n270             revenueratio=66.66666666666667,\n271         ),\n272         Auto1(\n273             i_item_id=\"ITEM2\",\n274             i_item_desc=\"Item Two\",\n275             i_category=\"A\",\n276             i_class=\"X\",\n277             i_current_price=20.0,\n278             itemrevenue=300.0,\n279             revenueratio=33.333333333333336,\n280         ),\n281     ]\n282 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q20.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 262,
+    "line_range": [
+      262,
+      263,
+      264,
+      265,
+      266,
+      267,
+      268,
+      269,
+      270,
+      271,
+      272,
+      273,
+      274,
+      275,
+      276,
+      277,
+      278,
+      279,
+      280,
+      281
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "282 def test_TPCDS_Q21_inventory_ratio():\n283     assert result == [\n284         Auto1(\n285             w_warehouse_name=\"Backup\", i_item_id=\"ITEM2\", inv_before=20, inv_after=20\n286         ),\n287         Auto1(w_warehouse_name=\"Main\", i_item_id=\"ITEM1\", inv_before=30, inv_after=40),\n288     ]\n289 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q21.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 283,
+    "line_range": [
+      283,
+      284,
+      285,
+      286,
+      287,
+      288
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "228 def test_TPCDS_Q22_average_inventory():\n229     assert qoh == [\n230         Auto1(\n231             i_product_name=\"Prod1\",\n232             i_brand=\"Brand1\",\n233             i_class=\"Class1\",\n234             i_category=\"Cat1\",\n235             qoh=15.0,\n236         ),\n237         Auto1(\n238             i_product_name=\"Prod2\",\n239             i_brand=\"Brand2\",\n240             i_class=\"Class2\",\n241             i_category=\"Cat2\",\n242             qoh=50.0,\n243         ),\n244     ]\n245 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q22.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 229,
+    "line_range": [
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      241,
+      242,
+      243,
+      244
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "291 def test_TPCDS_Q23_cross_channel_sales():\n292     assert result == 50.0\n293 \n",
+    "col_offset": 4,
+    "end_col_offset": 25,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q23.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 292,
+    "line_range": [
+      292
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "339 def test_TPCDS_Q24_customer_net_paid():\n340     assert result == [\n341         Auto1(\n342             c_last_name=\"Smith\", c_first_name=\"Ann\", s_store_name=\"Store1\", paid=100.0\n343         )\n344     ]\n345 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q24.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 340,
+    "line_range": [
+      340,
+      341,
+      342,
+      343,
+      344
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "325 def test_TPCDS_Q25_aggregated_profit():\n326     assert result == [\n327         Auto1(\n328             i_item_id=\"ITEM1\",\n329             i_item_desc=\"Desc1\",\n330             s_store_id=\"S1\",\n331             s_store_name=\"Store1\",\n332             store_sales_profit=50.0,\n333             store_returns_loss=10.0,\n334             catalog_sales_profit=30.0,\n335         ),\n336         Auto1(\n337             i_item_id=\"ITEM2\",\n338             i_item_desc=\"Desc2\",\n339             s_store_id=\"S1\",\n340             s_store_name=\"Store1\",\n341             store_sales_profit=20.0,\n342             store_returns_loss=5.0,\n343             catalog_sales_profit=15.0,\n344         ),\n345     ]\n346 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q25.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 326,
+    "line_range": [
+      326,
+      327,
+      328,
+      329,
+      330,
+      331,
+      332,
+      333,
+      334,
+      335,
+      336,
+      337,
+      338,
+      339,
+      340,
+      341,
+      342,
+      343,
+      344,
+      345
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "266 def test_TPCDS_Q26_demographic_averages():\n267     assert result == [\n268         Auto1(i_item_id=\"ITEM1\", agg1=10.0, agg2=100.0, agg3=5.0, agg4=95.0)\n269     ]\n270 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q26.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 267,
+    "line_range": [
+      267,
+      268,
+      269
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "289 def test_TPCDS_Q27_averages_by_state():\n290     assert result == [\n291         Auto1(\n292             i_item_id=\"ITEM1\", s_state=\"CA\", agg1=5.0, agg2=100.0, agg3=10.0, agg4=90.0\n293         )\n294     ]\n295 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q27.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 290,
+    "line_range": [
+      290,
+      291,
+      292,
+      293,
+      294
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "85 def test_TPCDS_Q28_buckets():\n86     assert result == Auto1(\n87         B1_LP=100.0, B1_CNT=1, B1_CNTD=1, B2_LP=80.0, B2_CNT=1, B2_CNTD=1\n88     )\n89 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q28.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 86,
+    "line_range": [
+      86,
+      87,
+      88
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "320 def test_TPCDS_Q29_quantity_summary():\n321     assert result == [\n322         Auto1(\n323             i_item_id=\"ITEM1\",\n324             i_item_desc=\"Desc1\",\n325             s_store_id=\"S1\",\n326             s_store_name=\"Store1\",\n327             store_sales_quantity=10,\n328             store_returns_quantity=2,\n329             catalog_sales_quantity=5,\n330         )\n331     ]\n332 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q29.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 321,
+    "line_range": [
+      321,
+      322,
+      323,
+      324,
+      325,
+      326,
+      327,
+      328,
+      329,
+      330,
+      331
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "223 def test_TPCDS_Q3_result():\n224     assert result == [\n225         Auto1(d_year=1998, brand_id=2, brand=\"Brand2\", sum_agg=20.0),\n226         Auto1(d_year=1998, brand_id=1, brand=\"Brand1\", sum_agg=10.0),\n227     ]\n228 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q3.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 224,
+    "line_range": [
+      224,
+      225,
+      226,
+      227
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "232 def test_TPCDS_Q30_simplified():\n233     assert result == [\n234         Auto1(\n235             c_customer_id=\"C1\",\n236             c_first_name=\"John\",\n237             c_last_name=\"Doe\",\n238             ctr_total_return=150.0,\n239         )\n240     ]\n241 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q30.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 233,
+    "line_range": [
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "51 def test_TPCDS_Q31_simplified():\n52     assert result == [\n53         Auto1(\n54             ca_county=\"A\",\n55             d_year=2000,\n56             web_q1_q2_increase=1.5,\n57             store_q1_q2_increase=1.2,\n58             web_q2_q3_increase=1.6666666666666667,\n59             store_q2_q3_increase=1.3333333333333333,\n60         )\n61     ]\n62 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q31.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 52,
+    "line_range": [
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "161 def test_TPCDS_Q32_simplified():\n162     assert result == 20.0\n163 \n",
+    "col_offset": 4,
+    "end_col_offset": 25,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q32.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 162,
+    "line_range": [
+      162
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "248 def test_TPCDS_Q33_simplified():\n249     assert result == [\n250         Auto1(i_manufact_id=1, total_sales=150.0),\n251         Auto1(i_manufact_id=2, total_sales=50.0),\n252     ]\n253 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q33.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 249,
+    "line_range": [
+      249,
+      250,
+      251,
+      252
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "246 def test_TPCDS_Q34_simplified():\n247     assert result == [\n248         Auto1(\n249             c_last_name=\"Smith\",\n250             c_first_name=\"John\",\n251             c_salutation=\"Mr.\",\n252             c_preferred_cust_flag=\"Y\",\n253             ss_ticket_number=1,\n254             cnt=16,\n255         )\n256     ]\n257 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q34.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 247,
+    "line_range": [
+      247,
+      248,
+      249,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255,
+      256
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "235 def test_TPCDS_Q35_simplified():\n236     assert groups == [\n237         Auto1(\n238             ca_state=\"CA\",\n239             cd_gender=\"M\",\n240             cd_marital_status=\"S\",\n241             cd_dep_count=1,\n242             cd_dep_employed_count=1,\n243             cd_dep_college_count=0,\n244             cnt=1,\n245         )\n246     ]\n247 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q35.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 236,
+    "line_range": [
+      236,
+      237,
+      238,
+      239,
+      240,
+      241,
+      242,
+      243,
+      244,
+      245,
+      246
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "217 def test_TPCDS_Q36_simplified():\n218     assert result == [\n219         Auto1(i_category=\"Books\", i_class=\"C1\", gross_margin=0.2),\n220         Auto1(i_category=\"Books\", i_class=\"C2\", gross_margin=0.25),\n221         Auto1(i_category=\"Electronics\", i_class=\"C3\", gross_margin=0.2),\n222     ]\n223 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q36.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 218,
+    "line_range": [
+      218,
+      219,
+      220,
+      221,
+      222
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "219 def test_TPCDS_Q37_simplified():\n220     assert result == [Auto1(i_item_id=\"I1\", i_item_desc=\"Item1\", i_current_price=30.0)]\n221 \n",
+    "col_offset": 4,
+    "end_col_offset": 87,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q37.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 220,
+    "line_range": [
+      220
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "64 def test_TPCDS_Q38_simplified():\n65     assert result == 1\n66 \n",
+    "col_offset": 4,
+    "end_col_offset": 22,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q38.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 65,
+    "line_range": [
+      65
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "265 def test_TPCDS_Q39_simplified():\n266     assert summary == [Auto1(w_warehouse_sk=1, i_item_sk=1, cov=1.539600717839002)]\n267 \n",
+    "col_offset": 4,
+    "end_col_offset": 83,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q39.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 266,
+    "line_range": [
+      266
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "265 def test_TPCDS_Q4_result():\n266     assert result == [\n267         Auto1(\n268             customer_id=\"C1\",\n269             customer_first_name=\"Alice\",\n270             customer_last_name=\"A\",\n271             customer_login=\"alice\",\n272         )\n273     ]\n274 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q4.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 266,
+    "line_range": [
+      266,
+      267,
+      268,
+      269,
+      270,
+      271,
+      272,
+      273
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "211 def test_TPCDS_Q40_simplified():\n212     assert result == [\n213         Auto1(w_state=\"CA\", i_item_id=\"I1\", sales_before=100.0, sales_after=0.0)\n214     ]\n215 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q40.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 212,
+    "line_range": [
+      212,
+      213,
+      214
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "24 def test_TPCDS_Q41_simplified():\n25     assert result == [\"Blue Shirt\", \"Red Dress\"]\n26 \n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q41.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 25,
+    "line_range": [
+      25
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "187 def test_TPCDS_Q42_simplified():\n188     assert result == [\n189         Auto1(\n190             d_year=2020,\n191             i_category_id=200,\n192             i_category=\"CatB\",\n193             sum_ss_ext_sales_price=20.0,\n194         ),\n195         Auto1(\n196             d_year=2020,\n197             i_category_id=100,\n198             i_category=\"CatA\",\n199             sum_ss_ext_sales_price=10.0,\n200         ),\n201     ]\n202 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q42.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 188,
+    "line_range": [
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200,
+      201
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "191 def test_TPCDS_Q43_simplified():\n192     assert result == [\n193         Auto1(\n194             s_store_name=\"Main\",\n195             s_store_id=\"S1\",\n196             sun_sales=10.0,\n197             mon_sales=20.0,\n198             tue_sales=30.0,\n199             wed_sales=40.0,\n200             thu_sales=50.0,\n201             fri_sales=60.0,\n202             sat_sales=70.0,\n203         )\n204     ]\n205 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q43.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 192,
+    "line_range": [
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200,
+      201,
+      202,
+      203,
+      204
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "89 def test_TPCDS_Q44_simplified():\n90     assert result == Auto1(best_performing=\"ItemA\", worst_performing=\"ItemB\")\n91 \n",
+    "col_offset": 4,
+    "end_col_offset": 77,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q44.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 90,
+    "line_range": [
+      90
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "219 def test_TPCDS_Q45_simplified():\n220     assert records == [\n221         Auto1(ca_zip=\"85669\", sum_ws_sales_price=50.0),\n222         Auto1(ca_zip=\"99999\", sum_ws_sales_price=30.0),\n223     ]\n224 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q45.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 220,
+    "line_range": [
+      220,
+      221,
+      222,
+      223
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "271 def test_TPCDS_Q46_simplified():\n272     assert result == [\n273         Auto1(\n274             c_last_name=\"Doe\",\n275             c_first_name=\"John\",\n276             ca_city=\"Seattle\",\n277             bought_city=\"Portland\",\n278             ss_ticket_number=1,\n279             amt=5.0,\n280             profit=20.0,\n281         )\n282     ]\n283 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q46.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 272,
+    "line_range": [
+      272,
+      273,
+      274,
+      275,
+      276,
+      277,
+      278,
+      279,
+      280,
+      281,
+      282
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "47 def test_TPCDS_Q47_simplified():\n48     assert result == [\n49         Auto1(d_year=2019, item=\"C\", avg_monthly_sales=50.0, sum_sales=60.0),\n50         Auto1(d_year=2020, item=\"A\", avg_monthly_sales=100.0, sum_sales=120.0),\n51     ]\n52 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q47.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 48,
+    "line_range": [
+      48,
+      49,
+      50,
+      51
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "173 def test_TPCDS_Q48_simplified():\n174     assert result == 35\n175 \n",
+    "col_offset": 4,
+    "end_col_offset": 23,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q48.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 174,
+    "line_range": [
+      174
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "56 def test_TPCDS_Q49_simplified():\n57     assert result == [\n58         Auto1(\n59             channel=\"catalog\",\n60             item=\"A\",\n61             return_ratio=0.3,\n62             return_rank=1,\n63             currency_rank=1,\n64         ),\n65         Auto1(\n66             channel=\"store\", item=\"A\", return_ratio=0.25, return_rank=1, currency_rank=1\n67         ),\n68         Auto1(\n69             channel=\"web\", item=\"A\", return_ratio=0.2, return_rank=1, currency_rank=1\n70         ),\n71         Auto1(\n72             channel=\"web\", item=\"B\", return_ratio=0.5, return_rank=2, currency_rank=2\n73         ),\n74     ]\n75 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q49.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 57,
+    "line_range": [
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "22 def test_TPCDS_Q5_result():\n23     assert len(result) == 3\n24 \n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q5.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 23,
+    "line_range": [
+      23
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "197 def test_TPCDS_Q50_simplified():\n198     assert result == [\n199         Auto1(s_store_name=\"Main\", d30=1, d31_60=1, d61_90=1, d91_120=1, d_gt_120=1)\n200     ]\n201 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q50.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 198,
+    "line_range": [
+      198,
+      199,
+      200
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "150 def test_TPCDS_Q51_simplified():\n151     assert result == [Auto2(item_sk=1, d_date=1), Auto2(item_sk=1, d_date=2)]\n152 \n",
+    "col_offset": 4,
+    "end_col_offset": 77,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q51.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 151,
+    "line_range": [
+      151
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "206 def test_TPCDS_Q52_simplified():\n207     assert result == [\n208         Auto1(d_year=2001, brand_id=1, ext_price=30.0),\n209         Auto1(d_year=2001, brand_id=2, ext_price=22.0),\n210     ]\n211 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q52.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 207,
+    "line_range": [
+      207,
+      208,
+      209,
+      210
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "196 def test_TPCDS_Q53_simplified():\n197     assert result == [\n198         Auto1(i_manufact_id=1, sum_sales=20.0),\n199         Auto1(i_manufact_id=2, sum_sales=53.0),\n200     ]\n201 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q53.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 197,
+    "line_range": [
+      197,
+      198,
+      199,
+      200
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "229 def test_TPCDS_Q54_simplified():\n230     assert result == [\n231         Auto1(segment=1, num_customers=1, segment_base=50),\n232         Auto1(segment=0, num_customers=1, segment_base=0),\n233     ]\n234 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q54.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 230,
+    "line_range": [
+      230,
+      231,
+      232,
+      233
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "202 def test_TPCDS_Q55_simplified():\n203     assert result == [\n204         Auto1(brand_id=10, ext_price=35.0),\n205         Auto1(brand_id=20, ext_price=20.0),\n206     ]\n207 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q55.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 203,
+    "line_range": [
+      203,
+      204,
+      205,
+      206
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "80 def test_TPCDS_Q56_simplified():\n81     assert result == [Auto1(i_item_id=1, total_sales=60.0)]\n82 \n",
+    "col_offset": 4,
+    "end_col_offset": 59,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q56.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 81,
+    "line_range": [
+      81
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "250 def test_TPCDS_Q57_simplified():\n251     assert result == []\n252 \n",
+    "col_offset": 4,
+    "end_col_offset": 23,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q57.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 251,
+    "line_range": [
+      251
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "67 def test_TPCDS_Q58_simplified():\n68     assert result == [Auto1(item_id=1, average=58.0)]\n69 \n",
+    "col_offset": 4,
+    "end_col_offset": 53,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q58.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 68,
+    "line_range": [
+      68
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "117 def test_TPCDS_Q59_simplified():\n118     assert result == [Auto1(s_store_id1=1, ratio=1.5)]\n119 \n",
+    "col_offset": 4,
+    "end_col_offset": 54,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q59.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 118,
+    "line_range": [
+      118
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "217 def test_TPCDS_Q6_result():\n218     assert result == [Auto1(state=\"CA\", cnt=10)]\n219 \n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q6.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 218,
+    "line_range": [
+      218
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "19 def test_TPCDS_Q60_simplified():\n20     assert result == 60\n21 \n",
+    "col_offset": 4,
+    "end_col_offset": 23,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q60.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 20,
+    "line_range": [
+      20
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "19 def test_TPCDS_Q61_simplified():\n20     assert result == 61\n21 \n",
+    "col_offset": 4,
+    "end_col_offset": 23,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q61.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 20,
+    "line_range": [
+      20
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "18 def test_TPCDS_Q62_simplified():\n19     assert result == 62\n20 \n",
+    "col_offset": 4,
+    "end_col_offset": 23,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q62.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 19,
+    "line_range": [
+      19
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "63 def test_TPCDS_Q63_simplified():\n64     assert result == 63\n65 \n",
+    "col_offset": 4,
+    "end_col_offset": 23,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q63.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 64,
+    "line_range": [
+      64
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "33 def test_TPCDS_Q64_simplified():\n34     assert result == 64\n35 \n",
+    "col_offset": 4,
+    "end_col_offset": 23,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q64.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 34,
+    "line_range": [
+      34
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "89 def test_TPCDS_Q65_simplified():\n90     assert result == 65\n91 \n",
+    "col_offset": 4,
+    "end_col_offset": 23,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q65.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 90,
+    "line_range": [
+      90
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "18 def test_TPCDS_Q66_simplified():\n19     assert result == 66\n20 \n",
+    "col_offset": 4,
+    "end_col_offset": 23,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q66.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 19,
+    "line_range": [
+      19
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "116 def test_TPCDS_Q67_simplified():\n117     assert result == 67\n118 \n",
+    "col_offset": 4,
+    "end_col_offset": 23,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q67.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 117,
+    "line_range": [
+      117
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "19 def test_TPCDS_Q68_simplified():\n20     assert result == 68\n21 \n",
+    "col_offset": 4,
+    "end_col_offset": 23,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q68.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 20,
+    "line_range": [
+      20
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "18 def test_TPCDS_Q69_simplified():\n19     assert result == 69\n20 \n",
+    "col_offset": 4,
+    "end_col_offset": 23,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q69.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 19,
+    "line_range": [
+      19
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "239 def test_TPCDS_Q7_result():\n240     assert result == [Auto1(i_item_id=\"I1\", agg1=5.0, agg2=10.0, agg3=2.0, agg4=8.0)]\n241 \n",
+    "col_offset": 4,
+    "end_col_offset": 85,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q7.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 240,
+    "line_range": [
+      240
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "219 def test_TPCDS_Q70_simplified():\n220     assert result == [\n221         Auto1(s_state=\"CA\", s_county=\"Orange\", total_sum=15.0),\n222         Auto1(s_state=\"TX\", s_county=\"Travis\", total_sum=20.0),\n223     ]\n224 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q70.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 220,
+    "line_range": [
+      220,
+      221,
+      222,
+      223
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "281 def test_TPCDS_Q71_simplified():\n282     assert result == [\n283         Auto1(i_brand_id=10, i_brand=\"BrandA\", t_hour=18, t_minute=0, ext_price=200.0),\n284         Auto1(i_brand_id=20, i_brand=\"BrandB\", t_hour=8, t_minute=30, ext_price=150.0),\n285         Auto1(i_brand_id=10, i_brand=\"BrandA\", t_hour=8, t_minute=30, ext_price=100.0),\n286     ]\n287 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q71.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 282,
+    "line_range": [
+      282,
+      283,
+      284,
+      285,
+      286
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "251 def test_TPCDS_Q72_simplified():\n252     assert result == [\n253         Auto1(\n254             i_item_desc=\"ItemA\",\n255             w_warehouse_name=\"Main\",\n256             d_week_seq=10,\n257             no_promo=1,\n258             promo=0,\n259             total_cnt=1,\n260         )\n261     ]\n262 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q72.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 252,
+    "line_range": [
+      252,
+      253,
+      254,
+      255,
+      256,
+      257,
+      258,
+      259,
+      260,
+      261
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "245 def test_TPCDS_Q73_simplified():\n246     assert result == [\n247         Auto1(\n248             c_last_name=\"Smith\",\n249             c_first_name=\"Alice\",\n250             c_salutation=\"Ms.\",\n251             c_preferred_cust_flag=\"Y\",\n252             ss_ticket_number=1,\n253             cnt=1,\n254         )\n255     ]\n256 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q73.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 246,
+    "line_range": [
+      246,
+      247,
+      248,
+      249,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "239 def test_TPCDS_Q74_simplified():\n240     assert result == [\n241         Auto1(customer_id=1, customer_first_name=\"Alice\", customer_last_name=\"Smith\")\n242     ]\n243 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q74.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 240,
+    "line_range": [
+      240,
+      241,
+      242
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "280 def test_TPCDS_Q75_simplified():\n281     assert result == [\n282         Auto1(\n283             prev_year=2000,\n284             year=2001,\n285             i_brand_id=1,\n286             i_class_id=2,\n287             i_category_id=3,\n288             i_manufact_id=4,\n289             prev_yr_cnt=100,\n290             curr_yr_cnt=80,\n291             sales_cnt_diff=-20,\n292             sales_amt_diff=-200.0,\n293         )\n294     ]\n295 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q75.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 281,
+    "line_range": [
+      281,
+      282,
+      283,
+      284,
+      285,
+      286,
+      287,
+      288,
+      289,
+      290,
+      291,
+      292,
+      293,
+      294
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "271 def test_TPCDS_Q76_simplified():\n272     assert result == [\n273         Auto1(\n274             channel=\"store\",\n275             col_name=None,\n276             d_year=1998,\n277             d_qoy=1,\n278             i_category=\"CatA\",\n279             sales_cnt=1,\n280             sales_amt=10.0,\n281         ),\n282         Auto1(\n283             channel=\"web\",\n284             col_name=None,\n285             d_year=1998,\n286             d_qoy=1,\n287             i_category=\"CatB\",\n288             sales_cnt=1,\n289             sales_amt=15.0,\n290         ),\n291         Auto1(\n292             channel=\"catalog\",\n293             col_name=None,\n294             d_year=1998,\n295             d_qoy=1,\n296             i_category=\"CatC\",\n297             sales_cnt=1,\n298             sales_amt=20.0,\n299         ),\n300     ]\n301 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q76.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 272,
+    "line_range": [
+      272,
+      273,
+      274,
+      275,
+      276,
+      277,
+      278,
+      279,
+      280,
+      281,
+      282,
+      283,
+      284,
+      285,
+      286,
+      287,
+      288,
+      289,
+      290,
+      291,
+      292,
+      293,
+      294,
+      295,
+      296,
+      297,
+      298,
+      299,
+      300
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "357 def test_TPCDS_Q77_simplified():\n358     assert result == [\n359         Auto1(channel=\"catalog channel\", id=1, sales=150.0, returns=7.0, profit=12.0),\n360         Auto1(channel=\"store channel\", id=1, sales=100.0, returns=5.0, profit=9.0),\n361         Auto1(channel=\"web channel\", id=1, sales=200.0, returns=10.0, profit=18.0),\n362     ]\n363 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q77.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 358,
+    "line_range": [
+      358,
+      359,
+      360,
+      361,
+      362
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "160 def test_TPCDS_Q78_simplified():\n161     assert result == [\n162         Auto1(\n163             ss_sold_year=1998,\n164             ss_item_sk=1,\n165             ss_customer_sk=1,\n166             ratio=1.25,\n167             store_qty=10,\n168             store_wholesale_cost=50.0,\n169             store_sales_price=100.0,\n170             other_chan_qty=8,\n171             other_chan_wholesale_cost=40.0,\n172             other_chan_sales_price=80.0,\n173         )\n174     ]\n175 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q78.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 161,
+    "line_range": [
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "255 def test_TPCDS_Q79_simplified():\n256     assert result == [\n257         Auto1(\n258             c_last_name=\"Smith\",\n259             c_first_name=\"Alice\",\n260             s_city=\"CityA\",\n261             ss_ticket_number=1,\n262             amt=5.0,\n263             profit=10.0,\n264         )\n265     ]\n266 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q79.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 256,
+    "line_range": [
+      256,
+      257,
+      258,
+      259,
+      260,
+      261,
+      262,
+      263,
+      264,
+      265
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "220 def test_TPCDS_Q8_result():\n221     assert result == [Auto1(s_store_name=\"Store1\", net_profit=10.0)]\n222 \n",
+    "col_offset": 4,
+    "end_col_offset": 68,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q8.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 221,
+    "line_range": [
+      221
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "19 def test_TPCDS_Q80_sample():\n20     assert total_profit == 80.0\n21 \n",
+    "col_offset": 4,
+    "end_col_offset": 31,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q80.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 20,
+    "line_range": [
+      20
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "53 def test_TPCDS_Q81_sample():\n54     assert result == 81.0\n55 \n",
+    "col_offset": 4,
+    "end_col_offset": 25,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q81.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 54,
+    "line_range": [
+      54
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "41 def test_TPCDS_Q82_sample():\n42     assert result == 82\n43 \n",
+    "col_offset": 4,
+    "end_col_offset": 23,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q82.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 42,
+    "line_range": [
+      42
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "18 def test_TPCDS_Q83_sample():\n19     assert result == 83\n20 \n",
+    "col_offset": 4,
+    "end_col_offset": 23,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q83.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 19,
+    "line_range": [
+      19
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "166 def test_TPCDS_Q84_sample():\n167     assert result == 84.0\n168 \n",
+    "col_offset": 4,
+    "end_col_offset": 25,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q84.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 167,
+    "line_range": [
+      167
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "20 def test_TPCDS_Q85_sample():\n21     assert result == 85.0\n22 \n",
+    "col_offset": 4,
+    "end_col_offset": 25,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q85.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 21,
+    "line_range": [
+      21
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "20 def test_TPCDS_Q86_sample():\n21     assert result == 86.0\n22 \n",
+    "col_offset": 4,
+    "end_col_offset": 25,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q86.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 21,
+    "line_range": [
+      21
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "30 def test_TPCDS_Q87_sample():\n31     assert result == 87.0\n32 \n",
+    "col_offset": 4,
+    "end_col_offset": 25,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q87.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 31,
+    "line_range": [
+      31
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "89 def test_TPCDS_Q88_sample():\n90     assert result == 88\n91 \n",
+    "col_offset": 4,
+    "end_col_offset": 23,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q88.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 90,
+    "line_range": [
+      90
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "18 def test_TPCDS_Q89_sample():\n19     assert result == 89.0\n20 \n",
+    "col_offset": 4,
+    "end_col_offset": 25,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q89.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 19,
+    "line_range": [
+      19
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "46 def test_TPCDS_Q9_result():\n47     assert result == [\n48         Auto1(bucket1=7.0, bucket2=15.0, bucket3=30.0, bucket4=35.0, bucket5=50.0)\n49     ]\n50 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q9.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 47,
+    "line_range": [
+      47,
+      48,
+      49
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "151 def test_TPCDS_Q90_ratio():\n152     assert result == 2.0\n153 \n",
+    "col_offset": 4,
+    "end_col_offset": 24,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q90.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 152,
+    "line_range": [
+      152
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "334 def test_TPCDS_Q91_returns():\n335     assert result == Auto1(\n336         Call_Center=\"CC1\", Call_Center_Name=\"Main\", Manager=\"Alice\", Returns_Loss=10.0\n337     )\n338 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q91.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 335,
+    "line_range": [
+      335,
+      336,
+      337
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "54 def test_TPCDS_Q92_threshold():\n55     assert result == 4.0\n56 \n",
+    "col_offset": 4,
+    "end_col_offset": 24,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q92.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 55,
+    "line_range": [
+      55
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "237 def test_TPCDS_Q93_active_sales():\n238     assert result == [\n239         Auto1(ss_customer_sk=1, sumsales=40.0),\n240         Auto1(ss_customer_sk=2, sumsales=60.0),\n241     ]\n242 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q93.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 238,
+    "line_range": [
+      238,
+      239,
+      240,
+      241
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "242 def test_TPCDS_Q94_shipping():\n243     assert result == Auto1(order_count=1, total_shipping_cost=2.0, total_net_profit=5.0)\n244 \n",
+    "col_offset": 4,
+    "end_col_offset": 88,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q94.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 243,
+    "line_range": [
+      243
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "253 def test_TPCDS_Q95_shipping_returns():\n254     assert result == Auto1(order_count=1, total_shipping_cost=2.0, total_net_profit=5.0)\n255 \n",
+    "col_offset": 4,
+    "end_col_offset": 88,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q95.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 254,
+    "line_range": [
+      254
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "180 def test_TPCDS_Q96_count():\n181     assert result == 3\n182 \n",
+    "col_offset": 4,
+    "end_col_offset": 22,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q96.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 181,
+    "line_range": [
+      181
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "173 def test_TPCDS_Q97_overlap():\n174     assert (result[\"store_only\"] == 1 and result[\"catalog_only\"] == 1) and result[\n175         \"store_and_catalog\"\n176     ] == 1\n177 \n",
+    "col_offset": 4,
+    "end_col_offset": 10,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q97.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 174,
+    "line_range": [
+      174,
+      175,
+      176
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "261 def test_TPCDS_Q98_revenue():\n262     assert result == [\n263         Auto1(\n264             i_item_id=\"I1\",\n265             i_item_desc=\"desc1\",\n266             i_category=\"CatA\",\n267             i_class=\"Class1\",\n268             i_current_price=100.0,\n269             itemrevenue=50.0,\n270             revenueratio=33.333333333333336,\n271         ),\n272         Auto1(\n273             i_item_id=\"I2\",\n274             i_item_desc=\"desc2\",\n275             i_category=\"CatB\",\n276             i_class=\"Class1\",\n277             i_current_price=200.0,\n278             itemrevenue=100.0,\n279             revenueratio=66.66666666666667,\n280         ),\n281     ]\n282 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q98.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 262,
+    "line_range": [
+      262,
+      263,
+      264,
+      265,
+      266,
+      267,
+      268,
+      269,
+      270,
+      271,
+      272,
+      273,
+      274,
+      275,
+      276,
+      277,
+      278,
+      279,
+      280,
+      281
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "249 def test_TPCDS_Q99_buckets():\n250     assert grouped == [\n251         Auto1(\n252             warehouse=\"Warehouse1\",\n253             sm_type=\"EXP\",\n254             cc_name=\"CC1\",\n255             d30=1,\n256             d60=1,\n257             d90=1,\n258             d120=1,\n259             dmore=1,\n260         )\n261     ]\n262 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/tpc-ds/compiler/py/q99.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 250,
+    "line_range": [
+      250,
+      251,
+      252,
+      253,
+      254,
+      255,
+      256,
+      257,
+      258,
+      259,
+      260,
+      261
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

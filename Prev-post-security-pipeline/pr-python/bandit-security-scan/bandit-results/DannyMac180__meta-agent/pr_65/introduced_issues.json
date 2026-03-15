@@ -1,0 +1,202 @@
+[
+  {
+    "code": "12     report = module.summarize(result)\n13     assert isinstance(report, SummaryReport)\n14     assert report.exit_code == 0\n",
+    "col_offset": 4,
+    "end_col_offset": 44,
+    "filename": "./tests/unit/test_reporting_module.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 13,
+    "line_range": [
+      13
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "13     assert isinstance(report, SummaryReport)\n14     assert report.exit_code == 0\n15     assert report.passed is True\n",
+    "col_offset": 4,
+    "end_col_offset": 32,
+    "filename": "./tests/unit/test_reporting_module.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 14,
+    "line_range": [
+      14
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "14     assert report.exit_code == 0\n15     assert report.passed is True\n16     assert report.duration == 1.23\n",
+    "col_offset": 4,
+    "end_col_offset": 32,
+    "filename": "./tests/unit/test_reporting_module.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 15,
+    "line_range": [
+      15
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "15     assert report.passed is True\n16     assert report.duration == 1.23\n17     assert report.stdout == \"out\"\n",
+    "col_offset": 4,
+    "end_col_offset": 34,
+    "filename": "./tests/unit/test_reporting_module.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 16,
+    "line_range": [
+      16
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "16     assert report.duration == 1.23\n17     assert report.stdout == \"out\"\n18     assert report.stderr == \"err\"\n",
+    "col_offset": 4,
+    "end_col_offset": 33,
+    "filename": "./tests/unit/test_reporting_module.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 17,
+    "line_range": [
+      17
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "17     assert report.stdout == \"out\"\n18     assert report.stderr == \"err\"\n19 \n",
+    "col_offset": 4,
+    "end_col_offset": 33,
+    "filename": "./tests/unit/test_reporting_module.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 18,
+    "line_range": [
+      18
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "24     json_report = module.generate_report(result, output_format=\"json\")\n25     assert \"\\\"exit_code\\\": 1\" in json_report\n26     assert \"\\\"passed\\\": false\" in json_report\n",
+    "col_offset": 4,
+    "end_col_offset": 44,
+    "filename": "./tests/unit/test_reporting_module.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 25,
+    "line_range": [
+      25
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "25     assert \"\\\"exit_code\\\": 1\" in json_report\n26     assert \"\\\"passed\\\": false\" in json_report\n27 \n",
+    "col_offset": 4,
+    "end_col_offset": 45,
+    "filename": "./tests/unit/test_reporting_module.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 26,
+    "line_range": [
+      26
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "32     html_report = module.generate_report(result, output_format=\"html\")\n33     assert html_report.startswith(\"<html>\")\n34     assert \"PASSED\" in html_report\n",
+    "col_offset": 4,
+    "end_col_offset": 43,
+    "filename": "./tests/unit/test_reporting_module.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 33,
+    "line_range": [
+      33
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "33     assert html_report.startswith(\"<html>\")\n34     assert \"PASSED\" in html_report\n35 \n",
+    "col_offset": 4,
+    "end_col_offset": 34,
+    "filename": "./tests/unit/test_reporting_module.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 34,
+    "line_range": [
+      34
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

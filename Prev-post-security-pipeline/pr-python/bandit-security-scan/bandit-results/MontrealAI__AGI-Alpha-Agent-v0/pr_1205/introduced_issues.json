@@ -1,0 +1,22 @@
+[
+  {
+    "code": "55         weights = [1.0 / (1.0 + math.exp(-lam * (a.score - alpha0))) for a in agents]\n56         chosen = random.choices(agents, weights=weights, k=min(k, len(agents)))\n57         return chosen\n",
+    "col_offset": 17,
+    "end_col_offset": 79,
+    "filename": "./src/archive/__init__.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 56,
+    "line_range": [
+      56
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  }
+]

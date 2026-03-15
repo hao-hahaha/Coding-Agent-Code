@@ -1,0 +1,102 @@
+[
+  {
+    "check_id": "python.flask.security.audit.render-template-string.render-template-string",
+    "path": "mlflow/server/auth/__init__.py",
+    "start": {
+      "line": 873,
+      "col": 12,
+      "offset": 29912
+    },
+    "end": {
+      "line": 887,
+      "col": 6,
+      "offset": 30239
+    },
+    "extra": {
+      "message": "Found a template created with string formatting. This is susceptible to server-side template injection and cross-site scripting attacks.",
+      "metadata": {
+        "cwe": [
+          "CWE-96: Improper Neutralization of Directives in Statically Saved Code ('Static Code Injection')"
+        ],
+        "owasp": [
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://nvisium.com/blog/2016/03/09/exploring-ssti-in-flask-jinja2.html"
+        ],
+        "category": "security",
+        "technology": [
+          "flask"
+        ],
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Code Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.flask.security.audit.render-template-string.render-template-string",
+        "shortlink": "https://sg.run/8yjE"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.flask.security.audit.render-template-string.render-template-string",
+    "path": "mlflow/server/auth/__init__.py",
+    "start": {
+      "line": 891,
+      "col": 12,
+      "offset": 30267
+    },
+    "end": {
+      "line": 963,
+      "col": 6,
+      "offset": 31844
+    },
+    "extra": {
+      "message": "Found a template created with string formatting. This is susceptible to server-side template injection and cross-site scripting attacks.",
+      "metadata": {
+        "cwe": [
+          "CWE-96: Improper Neutralization of Directives in Statically Saved Code ('Static Code Injection')"
+        ],
+        "owasp": [
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://nvisium.com/blog/2016/03/09/exploring-ssti-in-flask-jinja2.html"
+        ],
+        "category": "security",
+        "technology": [
+          "flask"
+        ],
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Code Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.flask.security.audit.render-template-string.render-template-string",
+        "shortlink": "https://sg.run/8yjE"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  }
+]

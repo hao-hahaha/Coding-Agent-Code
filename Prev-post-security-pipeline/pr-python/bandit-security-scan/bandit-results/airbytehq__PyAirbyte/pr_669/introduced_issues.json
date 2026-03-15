@@ -1,0 +1,494 @@
+[
+  {
+    "code": "72         if cursor_overrides:\n73             assert source._cursor_key_overrides == cursor_overrides\n74         else:\n",
+    "col_offset": 12,
+    "end_col_offset": 67,
+    "filename": "./tests/unit_tests/sources/test_source_key_overrides.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 73,
+    "line_range": [
+      73
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "74         else:\n75             assert source._cursor_key_overrides == {}\n76 \n",
+    "col_offset": 12,
+    "end_col_offset": 53,
+    "filename": "./tests/unit_tests/sources/test_source_key_overrides.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 75,
+    "line_range": [
+      75
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "81             }\n82             assert source._primary_key_overrides == expected_pk_overrides\n83         else:\n",
+    "col_offset": 12,
+    "end_col_offset": 73,
+    "filename": "./tests/unit_tests/sources/test_source_key_overrides.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 82,
+    "line_range": [
+      82
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "83         else:\n84             assert source._primary_key_overrides == {}\n85 \n",
+    "col_offset": 12,
+    "end_col_offset": 54,
+    "filename": "./tests/unit_tests/sources/test_source_key_overrides.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 84,
+    "line_range": [
+      84
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "92         source.set_cursor_keys(kwargs={\"stream1\": \"cursor1\"})\n93         assert source._cursor_key_overrides == {\"stream1\": \"cursor1\"}\n94 \n",
+    "col_offset": 8,
+    "end_col_offset": 69,
+    "filename": "./tests/unit_tests/sources/test_source_key_overrides.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 93,
+    "line_range": [
+      93
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "95         source.set_cursor_keys(kwargs={\"stream2\": \"cursor2\"})\n96         assert source._cursor_key_overrides == {\n97             \"stream1\": \"cursor1\",\n98             \"stream2\": \"cursor2\",\n99         }\n100 \n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tests/unit_tests/sources/test_source_key_overrides.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 96,
+    "line_range": [
+      96,
+      97,
+      98,
+      99
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "101         source.set_cursor_keys(kwargs={\"stream1\": \"new_cursor1\"})\n102         assert source._cursor_key_overrides == {\n103             \"stream1\": \"new_cursor1\",\n104             \"stream2\": \"cursor2\",\n105         }\n106 \n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tests/unit_tests/sources/test_source_key_overrides.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 102,
+    "line_range": [
+      102,
+      103,
+      104,
+      105
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "113         source.set_cursor_key(\"stream1\", \"cursor1\")\n114         assert source._cursor_key_overrides == {\"stream1\": \"cursor1\"}\n115 \n",
+    "col_offset": 8,
+    "end_col_offset": 69,
+    "filename": "./tests/unit_tests/sources/test_source_key_overrides.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 114,
+    "line_range": [
+      114
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "116         source.set_cursor_key(\"stream2\", \"cursor2\")\n117         assert source._cursor_key_overrides == {\n118             \"stream1\": \"cursor1\",\n119             \"stream2\": \"cursor2\",\n120         }\n121 \n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tests/unit_tests/sources/test_source_key_overrides.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 117,
+    "line_range": [
+      117,
+      118,
+      119,
+      120
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "122         source.set_cursor_key(\"stream1\", \"new_cursor1\")\n123         assert source._cursor_key_overrides == {\n124             \"stream1\": \"new_cursor1\",\n125             \"stream2\": \"cursor2\",\n126         }\n127 \n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tests/unit_tests/sources/test_source_key_overrides.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 123,
+    "line_range": [
+      123,
+      124,
+      125,
+      126
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "147 \n148         assert source._primary_key_overrides == expected_output\n149 \n",
+    "col_offset": 8,
+    "end_col_offset": 63,
+    "filename": "./tests/unit_tests/sources/test_source_key_overrides.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 148,
+    "line_range": [
+      148
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "154         source.set_primary_keys(kwargs=update_keys)\n155         assert source._primary_key_overrides == expected_after_update\n156 \n",
+    "col_offset": 8,
+    "end_col_offset": 69,
+    "filename": "./tests/unit_tests/sources/test_source_key_overrides.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 155,
+    "line_range": [
+      155
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "172 \n173         assert source._primary_key_overrides == {\"stream1\": expected_output}\n174 \n",
+    "col_offset": 8,
+    "end_col_offset": 76,
+    "filename": "./tests/unit_tests/sources/test_source_key_overrides.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 173,
+    "line_range": [
+      173
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "187 \n188         assert len(catalog.streams) == 1\n189         configured_stream = catalog.streams[0]\n",
+    "col_offset": 8,
+    "end_col_offset": 40,
+    "filename": "./tests/unit_tests/sources/test_source_key_overrides.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 188,
+    "line_range": [
+      188
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "189         configured_stream = catalog.streams[0]\n190         assert configured_stream.cursor_field == [\"custom_cursor\"]\n191         assert configured_stream.primary_key == [[\"custom_pk\"]]\n",
+    "col_offset": 8,
+    "end_col_offset": 66,
+    "filename": "./tests/unit_tests/sources/test_source_key_overrides.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 190,
+    "line_range": [
+      190
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "190         assert configured_stream.cursor_field == [\"custom_cursor\"]\n191         assert configured_stream.primary_key == [[\"custom_pk\"]]\n192 \n",
+    "col_offset": 8,
+    "end_col_offset": 63,
+    "filename": "./tests/unit_tests/sources/test_source_key_overrides.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 191,
+    "line_range": [
+      191
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "200 \n201         assert len(catalog.streams) == 1\n202         configured_stream = catalog.streams[0]\n",
+    "col_offset": 8,
+    "end_col_offset": 40,
+    "filename": "./tests/unit_tests/sources/test_source_key_overrides.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 201,
+    "line_range": [
+      201
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "202         configured_stream = catalog.streams[0]\n203         assert configured_stream.cursor_field == [\"original_cursor\"]\n204         assert configured_stream.primary_key == [[\"original_pk\"]]\n",
+    "col_offset": 8,
+    "end_col_offset": 68,
+    "filename": "./tests/unit_tests/sources/test_source_key_overrides.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 203,
+    "line_range": [
+      203
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "203         assert configured_stream.cursor_field == [\"original_cursor\"]\n204         assert configured_stream.primary_key == [[\"original_pk\"]]\n205 \n",
+    "col_offset": 8,
+    "end_col_offset": 65,
+    "filename": "./tests/unit_tests/sources/test_source_key_overrides.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 204,
+    "line_range": [
+      204
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "218 \n219         assert len(catalog.streams) == 1\n220         configured_stream = catalog.streams[0]\n",
+    "col_offset": 8,
+    "end_col_offset": 40,
+    "filename": "./tests/unit_tests/sources/test_source_key_overrides.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 219,
+    "line_range": [
+      219
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "220         configured_stream = catalog.streams[0]\n221         assert configured_stream.primary_key == [[\"custom_pk1\", \"custom_pk2\"]]\n222 \n",
+    "col_offset": 8,
+    "end_col_offset": 78,
+    "filename": "./tests/unit_tests/sources/test_source_key_overrides.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 221,
+    "line_range": [
+      221
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "255 \n256         assert len(catalog.streams) == 1\n257         configured_stream = catalog.streams[0]\n",
+    "col_offset": 8,
+    "end_col_offset": 40,
+    "filename": "./tests/unit_tests/sources/test_source_key_overrides.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 256,
+    "line_range": [
+      256
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "257         configured_stream = catalog.streams[0]\n258         assert configured_stream.cursor_field == expected_cursor\n259         assert configured_stream.primary_key == expected_pk\n",
+    "col_offset": 8,
+    "end_col_offset": 64,
+    "filename": "./tests/unit_tests/sources/test_source_key_overrides.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 258,
+    "line_range": [
+      258
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "258         assert configured_stream.cursor_field == expected_cursor\n259         assert configured_stream.primary_key == expected_pk\n",
+    "col_offset": 8,
+    "end_col_offset": 59,
+    "filename": "./tests/unit_tests/sources/test_source_key_overrides.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 259,
+    "line_range": [
+      259
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

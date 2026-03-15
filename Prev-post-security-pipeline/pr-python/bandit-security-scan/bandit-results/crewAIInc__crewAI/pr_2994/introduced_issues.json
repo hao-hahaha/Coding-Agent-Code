@@ -1,0 +1,482 @@
+[
+  {
+    "code": "18             formatter.pause_live_updates()\n19             assert formatter._live_paused\n20             \n",
+    "col_offset": 12,
+    "end_col_offset": 41,
+    "filename": "./tests/test_flow_human_input_integration.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 19,
+    "line_range": [
+      19
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "21             formatter.resume_live_updates()\n22             assert not formatter._live_paused\n23         finally:\n",
+    "col_offset": 12,
+    "end_col_offset": 45,
+    "filename": "./tests/test_flow_human_input_integration.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 22,
+    "line_range": [
+      22
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "50                 mock_input.assert_called_once()\n51                 assert result == ''\n52         finally:\n",
+    "col_offset": 16,
+    "end_col_offset": 35,
+    "filename": "./tests/test_flow_human_input_integration.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 51,
+    "line_range": [
+      51
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "82                 result1 = executor._ask_human_input(\"Test result 1\")\n83                 assert result1 == 'feedback'\n84                 \n",
+    "col_offset": 16,
+    "end_col_offset": 44,
+    "filename": "./tests/test_flow_human_input_integration.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 83,
+    "line_range": [
+      83
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "85                 result2 = executor._ask_human_input(\"Test result 2\")\n86                 assert result2 == ''\n87                 \n",
+    "col_offset": 16,
+    "end_col_offset": 36,
+    "filename": "./tests/test_flow_human_input_integration.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 86,
+    "line_range": [
+      86
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "87                 \n88                 assert len(pause_calls) == 2\n89                 assert len(resume_calls) == 2\n",
+    "col_offset": 16,
+    "end_col_offset": 44,
+    "filename": "./tests/test_flow_human_input_integration.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 88,
+    "line_range": [
+      88
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "88                 assert len(pause_calls) == 2\n89                 assert len(resume_calls) == 2\n90         finally:\n",
+    "col_offset": 16,
+    "end_col_offset": 45,
+    "filename": "./tests/test_flow_human_input_integration.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 89,
+    "line_range": [
+      89
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "106             \n107             assert not formatter._live_paused\n108         finally:\n",
+    "col_offset": 12,
+    "end_col_offset": 45,
+    "filename": "./tests/test_flow_human_input_integration.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 107,
+    "line_range": [
+      107
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "159                 mock_resume.assert_called_once()\n160                 assert result == 'training feedback'\n161                 \n",
+    "col_offset": 16,
+    "end_col_offset": 52,
+    "filename": "./tests/test_flow_human_input_integration.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 160,
+    "line_range": [
+      160
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "164                 training_prompt_found = any('TRAINING MODE' in content for content in call_args)\n165                 assert training_prompt_found\n166         finally:\n",
+    "col_offset": 16,
+    "end_col_offset": 44,
+    "filename": "./tests/test_flow_human_input_integration.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 165,
+    "line_range": [
+      165
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "20         mock_live.stop.assert_called_once()\n21         assert formatter._live_paused\n22 \n",
+    "col_offset": 8,
+    "end_col_offset": 37,
+    "filename": "./tests/utilities/test_console_formatter_pause_resume.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 21,
+    "line_range": [
+      21
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "33         mock_live.stop.assert_not_called()\n34         assert formatter._live_paused\n35 \n",
+    "col_offset": 8,
+    "end_col_offset": 37,
+    "filename": "./tests/utilities/test_console_formatter_pause_resume.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 34,
+    "line_range": [
+      34
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "44         \n45         assert formatter._live_paused\n46 \n",
+    "col_offset": 8,
+    "end_col_offset": 37,
+    "filename": "./tests/utilities/test_console_formatter_pause_resume.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 45,
+    "line_range": [
+      45
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "54         \n55         assert not formatter._live_paused\n56 \n",
+    "col_offset": 8,
+    "end_col_offset": 41,
+    "filename": "./tests/utilities/test_console_formatter_pause_resume.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 55,
+    "line_range": [
+      55
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "64         \n65         assert not formatter._live_paused\n66 \n",
+    "col_offset": 8,
+    "end_col_offset": 41,
+    "filename": "./tests/utilities/test_console_formatter_pause_resume.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 65,
+    "line_range": [
+      65
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "74         formatter.resume_live_updates()\n75         assert not formatter._live_paused\n76         \n",
+    "col_offset": 8,
+    "end_col_offset": 41,
+    "filename": "./tests/utilities/test_console_formatter_pause_resume.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 75,
+    "line_range": [
+      75
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "86             mock_live_instance.start.assert_called_once()\n87             assert formatter._live == mock_live_instance\n88 \n",
+    "col_offset": 12,
+    "end_col_offset": 56,
+    "filename": "./tests/utilities/test_console_formatter_pause_resume.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 87,
+    "line_range": [
+      87
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "97         formatter.pause_live_updates()\n98         assert formatter._live_paused\n99         mock_live.stop.assert_called_once()\n",
+    "col_offset": 8,
+    "end_col_offset": 37,
+    "filename": "./tests/utilities/test_console_formatter_pause_resume.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 98,
+    "line_range": [
+      98
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "99         mock_live.stop.assert_called_once()\n100         assert formatter._live is None  # Live session should be cleared\n101         \n",
+    "col_offset": 8,
+    "end_col_offset": 38,
+    "filename": "./tests/utilities/test_console_formatter_pause_resume.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 100,
+    "line_range": [
+      100
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "102         formatter.resume_live_updates()\n103         assert not formatter._live_paused\n104         \n",
+    "col_offset": 8,
+    "end_col_offset": 41,
+    "filename": "./tests/utilities/test_console_formatter_pause_resume.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 103,
+    "line_range": [
+      103
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "105         formatter.pause_live_updates()\n106         assert formatter._live_paused\n107         \n",
+    "col_offset": 8,
+    "end_col_offset": 37,
+    "filename": "./tests/utilities/test_console_formatter_pause_resume.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 106,
+    "line_range": [
+      106
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "108         formatter.resume_live_updates()\n109         assert not formatter._live_paused\n110 \n",
+    "col_offset": 8,
+    "end_col_offset": 41,
+    "filename": "./tests/utilities/test_console_formatter_pause_resume.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 109,
+    "line_range": [
+      109
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "114         \n115         assert hasattr(formatter, '_live_paused')\n116         assert not formatter._live_paused\n",
+    "col_offset": 8,
+    "end_col_offset": 49,
+    "filename": "./tests/utilities/test_console_formatter_pause_resume.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 115,
+    "line_range": [
+      115
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "115         assert hasattr(formatter, '_live_paused')\n116         assert not formatter._live_paused\n",
+    "col_offset": 8,
+    "end_col_offset": 41,
+    "filename": "./tests/utilities/test_console_formatter_pause_resume.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 116,
+    "line_range": [
+      116
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

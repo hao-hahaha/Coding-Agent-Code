@@ -1,0 +1,77 @@
+[
+  {
+    "code": "3 import os\n4 import subprocess\n5 from dataclasses import dataclass\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./src/solidlsp/language_servers/common.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 4,
+    "line_range": [
+      4
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "80                 command,\n81                 shell=True,\n82                 check=True,\n83                 cwd=cwd,\n84                 stdout=subprocess.DEVNULL,\n85                 stderr=subprocess.DEVNULL,\n86             )\n87         else:\n88             import pwd\n89 \n",
+    "col_offset": 12,
+    "end_col_offset": 13,
+    "filename": "./src/solidlsp/language_servers/common.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "HIGH",
+    "issue_text": "subprocess call with shell=True identified, security issue.",
+    "line_number": 81,
+    "line_range": [
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+    "test_id": "B602",
+    "test_name": "subprocess_popen_with_shell_equals_true"
+  },
+  {
+    "code": "92                 command,\n93                 shell=True,\n94                 check=True,\n95                 user=user,\n96                 cwd=cwd,\n97                 stdout=subprocess.DEVNULL,\n98                 stderr=subprocess.DEVNULL,\n99             )\n100 \n101     @staticmethod\n102     def _install_from_url(dep: RuntimeDependency, logger: LanguageServerLogger, target_dir: str) -> None:\n",
+    "col_offset": 12,
+    "end_col_offset": 13,
+    "filename": "./src/solidlsp/language_servers/common.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "HIGH",
+    "issue_text": "subprocess call with shell=True identified, security issue.",
+    "line_number": 93,
+    "line_range": [
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+    "test_id": "B602",
+    "test_name": "subprocess_popen_with_shell_equals_true"
+  }
+]

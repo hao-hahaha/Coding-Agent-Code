@@ -1,0 +1,322 @@
+[
+  {
+    "code": "17     ]\n18     assert sorted(os.listdir(out_dir)) == sorted(expected_files)\n19 \n",
+    "col_offset": 4,
+    "end_col_offset": 64,
+    "filename": "./tests/test_parse_clippings.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 18,
+    "line_range": [
+      18
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "20     contents1 = (out_dir / expected_files[0]).read_text(encoding=\"utf8\")\n21     assert \"This is a highlight text.\" in contents1\n22 \n",
+    "col_offset": 4,
+    "end_col_offset": 51,
+    "filename": "./tests/test_parse_clippings.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 21,
+    "line_range": [
+      21
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "23     contents2 = (out_dir / expected_files[1]).read_text(encoding=\"utf8\")\n24     assert \"Interesting highlight & note?\" in contents2\n",
+    "col_offset": 4,
+    "end_col_offset": 55,
+    "filename": "./tests/test_parse_clippings.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 24,
+    "line_range": [
+      24
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "4 def test_colon_replacement():\n5     assert remove_chars('Title: Subtitle') == 'Title - Subtitle'\n6     assert remove_chars('A:B') == 'A - B'\n",
+    "col_offset": 4,
+    "end_col_offset": 64,
+    "filename": "./tests/test_remove_chars.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 5,
+    "line_range": [
+      5
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "5     assert remove_chars('Title: Subtitle') == 'Title - Subtitle'\n6     assert remove_chars('A:B') == 'A - B'\n7     assert remove_chars('Multi:part:colon') == 'Multi - part - colon'\n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./tests/test_remove_chars.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 6,
+    "line_range": [
+      6
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "6     assert remove_chars('A:B') == 'A - B'\n7     assert remove_chars('Multi:part:colon') == 'Multi - part - colon'\n8     assert remove_chars('Title:Subtitle : Another') == 'Title - Subtitle - Another'\n",
+    "col_offset": 4,
+    "end_col_offset": 69,
+    "filename": "./tests/test_remove_chars.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 7,
+    "line_range": [
+      7
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "7     assert remove_chars('Multi:part:colon') == 'Multi - part - colon'\n8     assert remove_chars('Title:Subtitle : Another') == 'Title - Subtitle - Another'\n9 \n",
+    "col_offset": 4,
+    "end_col_offset": 83,
+    "filename": "./tests/test_remove_chars.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 8,
+    "line_range": [
+      8
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "11 def test_remove_question_and_ampersand():\n12     assert remove_chars('Where & When?') == 'Where and When'\n13     assert remove_chars('Q? & A?') == 'Q and A'\n",
+    "col_offset": 4,
+    "end_col_offset": 60,
+    "filename": "./tests/test_remove_chars.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 12,
+    "line_range": [
+      12
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "12     assert remove_chars('Where & When?') == 'Where and When'\n13     assert remove_chars('Q? & A?') == 'Q and A'\n14     assert remove_chars('This & That & Those') == 'This and That and Those'\n",
+    "col_offset": 4,
+    "end_col_offset": 47,
+    "filename": "./tests/test_remove_chars.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 13,
+    "line_range": [
+      13
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "13     assert remove_chars('Q? & A?') == 'Q and A'\n14     assert remove_chars('This & That & Those') == 'This and That and Those'\n15     assert remove_chars('??What?') == 'What'\n",
+    "col_offset": 4,
+    "end_col_offset": 75,
+    "filename": "./tests/test_remove_chars.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 14,
+    "line_range": [
+      14
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "14     assert remove_chars('This & That & Those') == 'This and That and Those'\n15     assert remove_chars('??What?') == 'What'\n16     assert remove_chars(' weird??? &?? ') == 'weird and'\n",
+    "col_offset": 4,
+    "end_col_offset": 44,
+    "filename": "./tests/test_remove_chars.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 15,
+    "line_range": [
+      15
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "15     assert remove_chars('??What?') == 'What'\n16     assert remove_chars(' weird??? &?? ') == 'weird and'\n17 \n",
+    "col_offset": 4,
+    "end_col_offset": 56,
+    "filename": "./tests/test_remove_chars.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 16,
+    "line_range": [
+      16
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "19 def test_trim_invalid_characters():\n20     assert remove_chars('???Title???') == 'Title'\n21     assert remove_chars('!@#My Book!!!') == 'My Book'\n",
+    "col_offset": 4,
+    "end_col_offset": 49,
+    "filename": "./tests/test_remove_chars.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 20,
+    "line_range": [
+      20
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "20     assert remove_chars('???Title???') == 'Title'\n21     assert remove_chars('!@#My Book!!!') == 'My Book'\n22     assert remove_chars('Book (Edition)') == 'Book - Edition'\n",
+    "col_offset": 4,
+    "end_col_offset": 53,
+    "filename": "./tests/test_remove_chars.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 21,
+    "line_range": [
+      21
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "21     assert remove_chars('!@#My Book!!!') == 'My Book'\n22     assert remove_chars('Book (Edition)') == 'Book - Edition'\n23 \n",
+    "col_offset": 4,
+    "end_col_offset": 61,
+    "filename": "./tests/test_remove_chars.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 22,
+    "line_range": [
+      22
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "25     long_title = 'A' * 300\n26     assert len(remove_chars(long_title)) == 245\n",
+    "col_offset": 4,
+    "end_col_offset": 47,
+    "filename": "./tests/test_remove_chars.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 26,
+    "line_range": [
+      26
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "code": "46         # Make sure the initializer has its shape/type set\n47         assert initializer.const_value is not None\n48         if initializer.shape is None:\n",
+    "col_offset": 8,
+    "end_col_offset": 50,
+    "filename": "./onnxscript/version_converter/_c_api_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 47,
+    "line_range": [
+      47
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "57             initializer.const_value = None\n58             assert initializer.name is not None\n59             model.graph.initializers.pop(initializer.name)\n",
+    "col_offset": 12,
+    "end_col_offset": 47,
+    "filename": "./onnxscript/version_converter/_c_api_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 58,
+    "line_range": [
+      58
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "code": "18     orch.verify_merkle_root(original_root, \"A\")\n19     assert orch.registry.stakes[\"A\"] == 90\n",
+    "col_offset": 4,
+    "end_col_offset": 42,
+    "filename": "./tests/test_slash_e2e.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 19,
+    "line_range": [
+      19
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "12     reg.vote(\"p1\", \"C\", False)\n13     assert reg.accepted(\"p1\")\n14     reg.vote(\"p2\", \"A\", True)\n",
+    "col_offset": 4,
+    "end_col_offset": 29,
+    "filename": "./tests/test_stake_registry.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 13,
+    "line_range": [
+      13
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "16     reg.vote(\"p2\", \"C\", False)\n17     assert not reg.accepted(\"p2\")\n",
+    "col_offset": 4,
+    "end_col_offset": 33,
+    "filename": "./tests/test_stake_registry.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 17,
+    "line_range": [
+      17
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

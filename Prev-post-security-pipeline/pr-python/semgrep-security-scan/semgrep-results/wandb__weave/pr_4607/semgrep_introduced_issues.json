@@ -1,0 +1,1082 @@
+[
+  {
+    "check_id": "python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+    "path": "weave/trace_server/calls_query_builder/calls_query_builder.py",
+    "start": {
+      "line": 906,
+      "col": 21,
+      "offset": 34363
+    },
+    "end": {
+      "line": 906,
+      "col": 75,
+      "offset": 34417
+    },
+    "extra": {
+      "message": "Detected a Custom Expression ''get_field_by_name(\"exception\")'' calling ''as_sql(...).'' This could lead to SQL injection, which can result in attackers exfiltrating sensitive data. Instead, ensure no user input enters this function or that user input is properly sanitized.",
+      "metadata": {
+        "cwe": [
+          "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        ],
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://docs.djangoproject.com/en/3.0/ref/models/expressions/#django.db.models.Func.as_sql",
+          "https://semgrep.dev/blog/2020/preventing-sql-injection-a-django-authors-perspective/"
+        ],
+        "category": "security",
+        "technology": [
+          "django"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "SQL Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+        "shortlink": "https://sg.run/b7bW"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+    "path": "weave/trace_server/calls_query_builder/calls_query_builder.py",
+    "start": {
+      "line": 907,
+      "col": 20,
+      "offset": 34437
+    },
+    "end": {
+      "line": 907,
+      "col": 73,
+      "offset": 34490
+    },
+    "extra": {
+      "message": "Detected a Custom Expression ''get_field_by_name(\"ended_at\")'' calling ''as_sql(...).'' This could lead to SQL injection, which can result in attackers exfiltrating sensitive data. Instead, ensure no user input enters this function or that user input is properly sanitized.",
+      "metadata": {
+        "cwe": [
+          "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        ],
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://docs.djangoproject.com/en/3.0/ref/models/expressions/#django.db.models.Func.as_sql",
+          "https://semgrep.dev/blog/2020/preventing-sql-injection-a-django-authors-perspective/"
+        ],
+        "category": "security",
+        "technology": [
+          "django"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "SQL Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+        "shortlink": "https://sg.run/b7bW"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+    "path": "weave/trace_server/calls_query_builder/calls_query_builder.py",
+    "start": {
+      "line": 908,
+      "col": 25,
+      "offset": 34515
+    },
+    "end": {
+      "line": 910,
+      "col": 6,
+      "offset": 34613
+    },
+    "extra": {
+      "message": "Detected a Custom Expression ''get_field_by_name(\"summary.status_counts.error\")'' calling ''as_sql(...).'' This could lead to SQL injection, which can result in attackers exfiltrating sensitive data. Instead, ensure no user input enters this function or that user input is properly sanitized.",
+      "metadata": {
+        "cwe": [
+          "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        ],
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://docs.djangoproject.com/en/3.0/ref/models/expressions/#django.db.models.Func.as_sql",
+          "https://semgrep.dev/blog/2020/preventing-sql-injection-a-django-authors-perspective/"
+        ],
+        "category": "security",
+        "technology": [
+          "django"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "SQL Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+        "shortlink": "https://sg.run/b7bW"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+    "path": "weave/trace_server/calls_query_builder/calls_query_builder.py",
+    "start": {
+      "line": 930,
+      "col": 22,
+      "offset": 35543
+    },
+    "end": {
+      "line": 930,
+      "col": 77,
+      "offset": 35598
+    },
+    "extra": {
+      "message": "Detected a Custom Expression ''get_field_by_name(\"started_at\")'' calling ''as_sql(...).'' This could lead to SQL injection, which can result in attackers exfiltrating sensitive data. Instead, ensure no user input enters this function or that user input is properly sanitized.",
+      "metadata": {
+        "cwe": [
+          "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        ],
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://docs.djangoproject.com/en/3.0/ref/models/expressions/#django.db.models.Func.as_sql",
+          "https://semgrep.dev/blog/2020/preventing-sql-injection-a-django-authors-perspective/"
+        ],
+        "category": "security",
+        "technology": [
+          "django"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "SQL Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+        "shortlink": "https://sg.run/b7bW"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+    "path": "weave/trace_server/calls_query_builder/calls_query_builder.py",
+    "start": {
+      "line": 931,
+      "col": 20,
+      "offset": 35618
+    },
+    "end": {
+      "line": 931,
+      "col": 73,
+      "offset": 35671
+    },
+    "extra": {
+      "message": "Detected a Custom Expression ''get_field_by_name(\"ended_at\")'' calling ''as_sql(...).'' This could lead to SQL injection, which can result in attackers exfiltrating sensitive data. Instead, ensure no user input enters this function or that user input is properly sanitized.",
+      "metadata": {
+        "cwe": [
+          "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        ],
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://docs.djangoproject.com/en/3.0/ref/models/expressions/#django.db.models.Func.as_sql",
+          "https://semgrep.dev/blog/2020/preventing-sql-injection-a-django-authors-perspective/"
+        ],
+        "category": "security",
+        "technology": [
+          "django"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "SQL Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+        "shortlink": "https://sg.run/b7bW"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+    "path": "weave/trace_server/calls_query_builder/calls_query_builder.py",
+    "start": {
+      "line": 950,
+      "col": 24,
+      "offset": 36358
+    },
+    "end": {
+      "line": 950,
+      "col": 81,
+      "offset": 36415
+    },
+    "extra": {
+      "message": "Detected a Custom Expression ''get_field_by_name(\"display_name\")'' calling ''as_sql(...).'' This could lead to SQL injection, which can result in attackers exfiltrating sensitive data. Instead, ensure no user input enters this function or that user input is properly sanitized.",
+      "metadata": {
+        "cwe": [
+          "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        ],
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://docs.djangoproject.com/en/3.0/ref/models/expressions/#django.db.models.Func.as_sql",
+          "https://semgrep.dev/blog/2020/preventing-sql-injection-a-django-authors-perspective/"
+        ],
+        "category": "security",
+        "technology": [
+          "django"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "SQL Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+        "shortlink": "https://sg.run/b7bW"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+    "path": "weave/trace_server/calls_query_builder/calls_query_builder.py",
+    "start": {
+      "line": 951,
+      "col": 19,
+      "offset": 36434
+    },
+    "end": {
+      "line": 951,
+      "col": 71,
+      "offset": 36486
+    },
+    "extra": {
+      "message": "Detected a Custom Expression ''get_field_by_name(\"op_name\")'' calling ''as_sql(...).'' This could lead to SQL injection, which can result in attackers exfiltrating sensitive data. Instead, ensure no user input enters this function or that user input is properly sanitized.",
+      "metadata": {
+        "cwe": [
+          "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        ],
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://docs.djangoproject.com/en/3.0/ref/models/expressions/#django.db.models.Func.as_sql",
+          "https://semgrep.dev/blog/2020/preventing-sql-injection-a-django-authors-perspective/"
+        ],
+        "category": "security",
+        "technology": [
+          "django"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "SQL Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+        "shortlink": "https://sg.run/b7bW"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+    "path": "weave/trace_server/calls_query_builder/calls_query_builder.py",
+    "start": {
+      "line": 1060,
+      "col": 25,
+      "offset": 41128
+    },
+    "end": {
+      "line": 1062,
+      "col": 18,
+      "offset": 41240
+    },
+    "extra": {
+      "message": "Detected a Custom Expression ''structured_field'' calling ''as_sql(...).'' This could lead to SQL injection, which can result in attackers exfiltrating sensitive data. Instead, ensure no user input enters this function or that user input is properly sanitized.",
+      "metadata": {
+        "cwe": [
+          "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        ],
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://docs.djangoproject.com/en/3.0/ref/models/expressions/#django.db.models.Func.as_sql",
+          "https://semgrep.dev/blog/2020/preventing-sql-injection-a-django-authors-perspective/"
+        ],
+        "category": "security",
+        "technology": [
+          "django"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "SQL Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+        "shortlink": "https://sg.run/b7bW"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+    "path": "weave/trace_server/calls_query_builder/calls_query_builder.py",
+    "start": {
+      "line": 1064,
+      "col": 25,
+      "offset": 41283
+    },
+    "end": {
+      "line": 1064,
+      "col": 76,
+      "offset": 41334
+    },
+    "extra": {
+      "message": "Detected a Custom Expression ''structured_field'' calling ''as_sql(...).'' This could lead to SQL injection, which can result in attackers exfiltrating sensitive data. Instead, ensure no user input enters this function or that user input is properly sanitized.",
+      "metadata": {
+        "cwe": [
+          "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        ],
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://docs.djangoproject.com/en/3.0/ref/models/expressions/#django.db.models.Func.as_sql",
+          "https://semgrep.dev/blog/2020/preventing-sql-injection-a-django-authors-perspective/"
+        ],
+        "category": "security",
+        "technology": [
+          "django"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "SQL Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+        "shortlink": "https://sg.run/b7bW"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+    "path": "weave/trace_server/calls_query_builder/calls_query_builder.py",
+    "start": {
+      "line": 1120,
+      "col": 20,
+      "offset": 43317
+    },
+    "end": {
+      "line": 1120,
+      "col": 81,
+      "offset": 43378
+    },
+    "extra": {
+      "message": "Detected a Custom Expression ''op_field'' calling ''as_sql(...).'' This could lead to SQL injection, which can result in attackers exfiltrating sensitive data. Instead, ensure no user input enters this function or that user input is properly sanitized.",
+      "metadata": {
+        "cwe": [
+          "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        ],
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://docs.djangoproject.com/en/3.0/ref/models/expressions/#django.db.models.Func.as_sql",
+          "https://semgrep.dev/blog/2020/preventing-sql-injection-a-django-authors-perspective/"
+        ],
+        "category": "security",
+        "technology": [
+          "django"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "SQL Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+        "shortlink": "https://sg.run/b7bW"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+    "path": "weave/trace_server/calls_query_builder/calls_query_builder.py",
+    "start": {
+      "line": 1163,
+      "col": 26,
+      "offset": 44879
+    },
+    "end": {
+      "line": 1165,
+      "col": 6,
+      "offset": 44960
+    },
+    "extra": {
+      "message": "Detected a Custom Expression ''trace_id_field'' calling ''as_sql(...).'' This could lead to SQL injection, which can result in attackers exfiltrating sensitive data. Instead, ensure no user input enters this function or that user input is properly sanitized.",
+      "metadata": {
+        "cwe": [
+          "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        ],
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://docs.djangoproject.com/en/3.0/ref/models/expressions/#django.db.models.Func.as_sql",
+          "https://semgrep.dev/blog/2020/preventing-sql-injection-a-django-authors-perspective/"
+        ],
+        "category": "security",
+        "technology": [
+          "django"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "SQL Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+        "shortlink": "https://sg.run/b7bW"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+    "path": "weave/trace_server/calls_query_builder/calls_query_builder.py",
+    "start": {
+      "line": 1191,
+      "col": 27,
+      "offset": 45980
+    },
+    "end": {
+      "line": 1193,
+      "col": 6,
+      "offset": 46062
+    },
+    "extra": {
+      "message": "Detected a Custom Expression ''parent_id_field'' calling ''as_sql(...).'' This could lead to SQL injection, which can result in attackers exfiltrating sensitive data. Instead, ensure no user input enters this function or that user input is properly sanitized.",
+      "metadata": {
+        "cwe": [
+          "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        ],
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://docs.djangoproject.com/en/3.0/ref/models/expressions/#django.db.models.Func.as_sql",
+          "https://semgrep.dev/blog/2020/preventing-sql-injection-a-django-authors-perspective/"
+        ],
+        "category": "security",
+        "technology": [
+          "django"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "SQL Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+        "shortlink": "https://sg.run/b7bW"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+    "path": "weave/trace_server/calls_query_builder/calls_query_builder.py",
+    "start": {
+      "line": 1220,
+      "col": 21,
+      "offset": 47017
+    },
+    "end": {
+      "line": 1220,
+      "col": 79,
+      "offset": 47075
+    },
+    "extra": {
+      "message": "Detected a Custom Expression ''field'' calling ''as_sql(...).'' This could lead to SQL injection, which can result in attackers exfiltrating sensitive data. Instead, ensure no user input enters this function or that user input is properly sanitized.",
+      "metadata": {
+        "cwe": [
+          "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        ],
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://docs.djangoproject.com/en/3.0/ref/models/expressions/#django.db.models.Func.as_sql",
+          "https://semgrep.dev/blog/2020/preventing-sql-injection-a-django-authors-perspective/"
+        ],
+        "category": "security",
+        "technology": [
+          "django"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "SQL Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+        "shortlink": "https://sg.run/b7bW"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+    "path": "weave/trace_server/calls_query_builder/calls_query_builder.py",
+    "start": {
+      "line": 1258,
+      "col": 23,
+      "offset": 48418
+    },
+    "end": {
+      "line": 1258,
+      "col": 89,
+      "offset": 48484
+    },
+    "extra": {
+      "message": "Detected a Custom Expression ''get_field_by_name('input_refs')'' calling ''as_sql(...).'' This could lead to SQL injection, which can result in attackers exfiltrating sensitive data. Instead, ensure no user input enters this function or that user input is properly sanitized.",
+      "metadata": {
+        "cwe": [
+          "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        ],
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://docs.djangoproject.com/en/3.0/ref/models/expressions/#django.db.models.Func.as_sql",
+          "https://semgrep.dev/blog/2020/preventing-sql-injection-a-django-authors-perspective/"
+        ],
+        "category": "security",
+        "technology": [
+          "django"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "SQL Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+        "shortlink": "https://sg.run/b7bW"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+    "path": "weave/trace_server/calls_query_builder/calls_query_builder.py",
+    "start": {
+      "line": 1264,
+      "col": 23,
+      "offset": 48736
+    },
+    "end": {
+      "line": 1264,
+      "col": 90,
+      "offset": 48803
+    },
+    "extra": {
+      "message": "Detected a Custom Expression ''get_field_by_name('output_refs')'' calling ''as_sql(...).'' This could lead to SQL injection, which can result in attackers exfiltrating sensitive data. Instead, ensure no user input enters this function or that user input is properly sanitized.",
+      "metadata": {
+        "cwe": [
+          "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        ],
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://docs.djangoproject.com/en/3.0/ref/models/expressions/#django.db.models.Func.as_sql",
+          "https://semgrep.dev/blog/2020/preventing-sql-injection-a-django-authors-perspective/"
+        ],
+        "category": "security",
+        "technology": [
+          "django"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "SQL Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+        "shortlink": "https://sg.run/b7bW"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+    "path": "weave/trace_server/calls_query_builder/calls_query_builder.py",
+    "start": {
+      "line": 1270,
+      "col": 16,
+      "offset": 49046
+    },
+    "end": {
+      "line": 1270,
+      "col": 81,
+      "offset": 49111
+    },
+    "extra": {
+      "message": "Detected a Custom Expression ''get_field_by_name('parent_id')'' calling ''as_sql(...).'' This could lead to SQL injection, which can result in attackers exfiltrating sensitive data. Instead, ensure no user input enters this function or that user input is properly sanitized.",
+      "metadata": {
+        "cwe": [
+          "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        ],
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://docs.djangoproject.com/en/3.0/ref/models/expressions/#django.db.models.Func.as_sql",
+          "https://semgrep.dev/blog/2020/preventing-sql-injection-a-django-authors-perspective/"
+        ],
+        "category": "security",
+        "technology": [
+          "django"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "SQL Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+        "shortlink": "https://sg.run/b7bW"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+    "path": "weave/trace_server/calls_query_builder/calls_query_builder.py",
+    "start": {
+      "line": 1276,
+      "col": 16,
+      "offset": 49348
+    },
+    "end": {
+      "line": 1276,
+      "col": 74,
+      "offset": 49406
+    },
+    "extra": {
+      "message": "Detected a Custom Expression ''get_field_by_name('id')'' calling ''as_sql(...).'' This could lead to SQL injection, which can result in attackers exfiltrating sensitive data. Instead, ensure no user input enters this function or that user input is properly sanitized.",
+      "metadata": {
+        "cwe": [
+          "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        ],
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://docs.djangoproject.com/en/3.0/ref/models/expressions/#django.db.models.Func.as_sql",
+          "https://semgrep.dev/blog/2020/preventing-sql-injection-a-django-authors-perspective/"
+        ],
+        "category": "security",
+        "technology": [
+          "django"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "SQL Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+        "shortlink": "https://sg.run/b7bW"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+    "path": "weave/trace_server/calls_query_builder/calls_query_builder.py",
+    "start": {
+      "line": 1281,
+      "col": 16,
+      "offset": 49564
+    },
+    "end": {
+      "line": 1281,
+      "col": 82,
+      "offset": 49630
+    },
+    "extra": {
+      "message": "Detected a Custom Expression ''get_field_by_name('wb_user_id')'' calling ''as_sql(...).'' This could lead to SQL injection, which can result in attackers exfiltrating sensitive data. Instead, ensure no user input enters this function or that user input is properly sanitized.",
+      "metadata": {
+        "cwe": [
+          "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        ],
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://docs.djangoproject.com/en/3.0/ref/models/expressions/#django.db.models.Func.as_sql",
+          "https://semgrep.dev/blog/2020/preventing-sql-injection-a-django-authors-perspective/"
+        ],
+        "category": "security",
+        "technology": [
+          "django"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "SQL Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+        "shortlink": "https://sg.run/b7bW"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+    "path": "weave/trace_server/calls_query_builder/calls_query_builder.py",
+    "start": {
+      "line": 1286,
+      "col": 16,
+      "offset": 49790
+    },
+    "end": {
+      "line": 1286,
+      "col": 81,
+      "offset": 49855
+    },
+    "extra": {
+      "message": "Detected a Custom Expression ''get_field_by_name('wb_run_id')'' calling ''as_sql(...).'' This could lead to SQL injection, which can result in attackers exfiltrating sensitive data. Instead, ensure no user input enters this function or that user input is properly sanitized.",
+      "metadata": {
+        "cwe": [
+          "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        ],
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://docs.djangoproject.com/en/3.0/ref/models/expressions/#django.db.models.Func.as_sql",
+          "https://semgrep.dev/blog/2020/preventing-sql-injection-a-django-authors-perspective/"
+        ],
+        "category": "security",
+        "technology": [
+          "django"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "SQL Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+        "shortlink": "https://sg.run/b7bW"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+    "path": "weave/trace_server/calls_query_builder/calls_query_builder.py",
+    "start": {
+      "line": 1337,
+      "col": 19,
+      "offset": 51267
+    },
+    "end": {
+      "line": 1337,
+      "col": 43,
+      "offset": 51291
+    },
+    "extra": {
+      "message": "Detected a Custom Expression ''cq'' calling ''as_sql(...).'' This could lead to SQL injection, which can result in attackers exfiltrating sensitive data. Instead, ensure no user input enters this function or that user input is properly sanitized.",
+      "metadata": {
+        "cwe": [
+          "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        ],
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://docs.djangoproject.com/en/3.0/ref/models/expressions/#django.db.models.Func.as_sql",
+          "https://semgrep.dev/blog/2020/preventing-sql-injection-a-django-authors-perspective/"
+        ],
+        "category": "security",
+        "technology": [
+          "django"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "SQL Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.django.security.audit.custom-expression-as-sql.custom-expression-as-sql",
+        "shortlink": "https://sg.run/b7bW"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  }
+]

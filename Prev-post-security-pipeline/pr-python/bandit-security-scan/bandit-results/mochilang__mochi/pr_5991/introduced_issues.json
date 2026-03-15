@@ -1,0 +1,22 @@
+[
+  {
+    "code": "35 \n36 assert all(a == b for a, b in zip(people, expected))\n37 print(\"ok\")\n",
+    "col_offset": 0,
+    "end_col_offset": 52,
+    "filename": "./tests/human/x/python/update_stmt.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 36,
+    "line_range": [
+      36
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

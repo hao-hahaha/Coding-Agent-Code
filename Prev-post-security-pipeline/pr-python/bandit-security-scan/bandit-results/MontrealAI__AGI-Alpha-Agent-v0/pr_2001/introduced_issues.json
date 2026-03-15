@@ -1,0 +1,82 @@
+[
+  {
+    "code": "31     llm = mod.build_llm()\n32     assert isinstance(llm, DummyAgent)\n33     assert captured.get('base_url') == \"http://testserver\"\n",
+    "col_offset": 4,
+    "end_col_offset": 38,
+    "filename": "./tests/test_external_integrations.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 32,
+    "line_range": [
+      32
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "32     assert isinstance(llm, DummyAgent)\n33     assert captured.get('base_url') == \"http://testserver\"\n34 \n",
+    "col_offset": 4,
+    "end_col_offset": 58,
+    "filename": "./tests/test_external_integrations.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 33,
+    "line_range": [
+      33
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "63     bridge.auto_register([Dummy()])\n64     assert registered\n65 \n",
+    "col_offset": 4,
+    "end_col_offset": 21,
+    "filename": "./tests/test_external_integrations.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 64,
+    "line_range": [
+      64
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "72     bridge.maybe_launch(host=\"127.0.0.1\", port=1234)\n73     assert called == {\"host\": \"127.0.0.1\", \"port\": 1234}\n74 \n",
+    "col_offset": 4,
+    "end_col_offset": 56,
+    "filename": "./tests/test_external_integrations.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 73,
+    "line_range": [
+      73
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

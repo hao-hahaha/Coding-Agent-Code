@@ -1,0 +1,130 @@
+[
+  {
+    "code": "23 from json import JSONEncoder\n24 import xml.etree.ElementTree as ET\n25 from collections.abc import MutableMapping\n",
+    "col_offset": 0,
+    "end_col_offset": 34,
+    "filename": "./sdk/mongodbatlas/azure-mgmt-mongodbatlas/azure/mgmt/mongodbatlas/_utils/model_base.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 20,
+      "link": "https://cwe.mitre.org/data/definitions/20.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Using xml.etree.ElementTree to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.",
+    "line_number": 24,
+    "line_range": [
+      24
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b405-import-xml-etree",
+    "test_id": "B405",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "808             return functools.partial(_deserialize_model, annotation)  # pyright: ignore\n809     except Exception:\n810         pass\n811 \n",
+    "col_offset": 4,
+    "end_col_offset": 12,
+    "filename": "./sdk/mongodbatlas/azure-mgmt-mongodbatlas/azure/mgmt/mongodbatlas/_utils/model_base.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 809,
+    "line_range": [
+      809,
+      810
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "881             return _deserialize_with_callable(deserializer, obj)\n882         except Exception:\n883             pass\n884         return obj\n",
+    "col_offset": 8,
+    "end_col_offset": 16,
+    "filename": "./sdk/mongodbatlas/azure-mgmt-mongodbatlas/azure/mgmt/mongodbatlas/_utils/model_base.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 882,
+    "line_range": [
+      882,
+      883
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "40     from urllib.parse import quote\n41 import xml.etree.ElementTree as ET\n42 \n",
+    "col_offset": 0,
+    "end_col_offset": 34,
+    "filename": "./sdk/mongodbatlas/azure-mgmt-mongodbatlas/azure/mgmt/mongodbatlas/_utils/serialization.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 20,
+      "link": "https://cwe.mitre.org/data/definitions/20.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Using xml.etree.ElementTree to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.",
+    "line_number": 41,
+    "line_range": [
+      41
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b405-import-xml-etree",
+    "test_id": "B405",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "5 import csv\n6 import subprocess\n7 from io import StringIO\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tools/mcp/azure-sdk-python-mcp/main.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 6,
+    "line_range": [
+      6
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "115         # Execute command\n116         result = subprocess.run(\n117             command,\n118             capture_output=True,\n119             text=True,\n120             cwd=cwd,\n121             stdin=subprocess.DEVNULL,\n122         )\n123         \n",
+    "col_offset": 17,
+    "end_col_offset": 9,
+    "filename": "./tools/mcp/azure-sdk-python-mcp/main.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 116,
+    "line_range": [
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  }
+]

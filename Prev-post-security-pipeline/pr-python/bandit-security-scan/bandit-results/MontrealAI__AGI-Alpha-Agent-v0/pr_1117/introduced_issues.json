@@ -1,0 +1,230 @@
+[
+  {
+    "code": "8 import socket\n9 import subprocess\n10 import sys\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_ledger_local_validator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 9,
+    "line_range": [
+      9
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "42                 return True\n43         except Exception:\n44             pass\n45         time.sleep(1)\n",
+    "col_offset": 8,
+    "end_col_offset": 16,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_ledger_local_validator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 43,
+    "line_range": [
+      43,
+      44
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "51     port = _free_port()\n52     cid = subprocess.check_output(\n53         [\n54             \"docker\",\n55             \"run\",\n56             \"-d\",\n57             \"-p\",\n58             f\"{port}:8899\",\n59             \"solanalabs/solana:edge\",\n60             \"solana-test-validator\",\n61             \"--quiet\",\n62         ]\n63     ).decode().strip()\n64     url = f\"http://localhost:{port}\"\n",
+    "col_offset": 10,
+    "end_col_offset": 5,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_ledger_local_validator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 52,
+    "line_range": [
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "51     port = _free_port()\n52     cid = subprocess.check_output(\n53         [\n54             \"docker\",\n55             \"run\",\n56             \"-d\",\n57             \"-p\",\n58             f\"{port}:8899\",\n59             \"solanalabs/solana:edge\",\n60             \"solana-test-validator\",\n61             \"--quiet\",\n62         ]\n63     ).decode().strip()\n64     url = f\"http://localhost:{port}\"\n",
+    "col_offset": 10,
+    "end_col_offset": 5,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_ledger_local_validator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 52,
+    "line_range": [
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "66         if not _wait_rpc(url):\n67             subprocess.run([\"docker\", \"logs\", cid], check=False)\n68             raise RuntimeError(\"validator not ready\")\n",
+    "col_offset": 12,
+    "end_col_offset": 64,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_ledger_local_validator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 67,
+    "line_range": [
+      67
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "66         if not _wait_rpc(url):\n67             subprocess.run([\"docker\", \"logs\", cid], check=False)\n68             raise RuntimeError(\"validator not ready\")\n",
+    "col_offset": 12,
+    "end_col_offset": 64,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_ledger_local_validator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 67,
+    "line_range": [
+      67
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "70     finally:\n71         subprocess.run([\"docker\", \"rm\", \"-f\", cid], check=False)\n72 \n",
+    "col_offset": 8,
+    "end_col_offset": 64,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_ledger_local_validator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 71,
+    "line_range": [
+      71
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "70     finally:\n71         subprocess.run([\"docker\", \"rm\", \"-f\", cid], check=False)\n72 \n",
+    "col_offset": 8,
+    "end_col_offset": 64,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_ledger_local_validator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 71,
+    "line_range": [
+      71
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "80     ledger.log(env)\n81     resp = requests.post(\n82         validator, json={\"jsonrpc\": \"2.0\", \"id\": 1, \"method\": \"getLatestBlockhash\"}\n83     )\n84     start_slot = resp.json()[\"result\"][\"context\"][\"slot\"]\n",
+    "col_offset": 11,
+    "end_col_offset": 5,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_ledger_local_validator.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 400,
+      "link": "https://cwe.mitre.org/data/definitions/400.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Call to requests without timeout",
+    "line_number": 81,
+    "line_range": [
+      81,
+      82,
+      83
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+    "test_id": "B113",
+    "test_name": "request_without_timeout"
+  },
+  {
+    "code": "88             time.sleep(1)\n89             resp = requests.post(\n90                 validator,\n91                 json={\"jsonrpc\": \"2.0\", \"id\": 1, \"method\": \"getLatestBlockhash\"},\n92             )\n93             if resp.json()[\"result\"][\"context\"][\"slot\"] > start_slot:\n",
+    "col_offset": 19,
+    "end_col_offset": 13,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_ledger_local_validator.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 400,
+      "link": "https://cwe.mitre.org/data/definitions/400.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Call to requests without timeout",
+    "line_number": 89,
+    "line_range": [
+      89,
+      90,
+      91,
+      92
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+    "test_id": "B113",
+    "test_name": "request_without_timeout"
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "code": "18     q = mgr.formulate_query(\"foo\", \"does bar\")\n19     assert \"foo\" in q and \"bar\" in q\n20 \n",
+    "col_offset": 4,
+    "end_col_offset": 36,
+    "filename": "./tests/unit/test_tool_research_manager.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 19,
+    "line_range": [
+      19
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "26     r2 = mgr.research(\"foo\", \"bar\")\n27     assert r1 == [\"result line 1\", \"result line 2\"]\n28     assert r2 == r1\n",
+    "col_offset": 4,
+    "end_col_offset": 51,
+    "filename": "./tests/unit/test_tool_research_manager.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 27,
+    "line_range": [
+      27
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "27     assert r1 == [\"result line 1\", \"result line 2\"]\n28     assert r2 == r1\n29     assert len(tool.calls) == 1\n",
+    "col_offset": 4,
+    "end_col_offset": 19,
+    "filename": "./tests/unit/test_tool_research_manager.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 28,
+    "line_range": [
+      28
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "28     assert r2 == r1\n29     assert len(tool.calls) == 1\n30 \n",
+    "col_offset": 4,
+    "end_col_offset": 31,
+    "filename": "./tests/unit/test_tool_research_manager.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 29,
+    "line_range": [
+      29
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

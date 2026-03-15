@@ -1,0 +1,22 @@
+[
+  {
+    "code": "10         data = [{\"alpha\": \"env test\"}]\n11         tmp = Path(\"/tmp/opps.json\")\n12         tmp.write_text(json.dumps(data), encoding=\"utf-8\")\n",
+    "col_offset": 19,
+    "end_col_offset": 35,
+    "filename": "./tests/test_alpha_opportunity_env.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 11,
+    "line_range": [
+      11
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  }
+]

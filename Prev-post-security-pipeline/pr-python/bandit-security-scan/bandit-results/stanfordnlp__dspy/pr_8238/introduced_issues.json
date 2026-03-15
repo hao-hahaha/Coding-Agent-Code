@@ -1,0 +1,278 @@
+[
+  {
+    "code": "38     res = program(question=\"What is 1+1?\")\n39     assert res.answer == \"2\"\n40     assert res.trajectory == {\n",
+    "col_offset": 4,
+    "end_col_offset": 28,
+    "filename": "./tests/predict/test_code_act.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 39,
+    "line_range": [
+      39
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "39     assert res.answer == \"2\"\n40     assert res.trajectory == {\n41         'code_output_0': '\"2\\\\n\"',\n42         'generated_code_0': 'result = add(1,1)\\nprint(result)',\n43     }\n44     assert program.interpreter.deno_process is None\n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/predict/test_code_act.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 40,
+    "line_range": [
+      40,
+      41,
+      42,
+      43
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "43     }\n44     assert program.interpreter.deno_process is None\n45 \n",
+    "col_offset": 4,
+    "end_col_offset": 51,
+    "filename": "./tests/predict/test_code_act.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 44,
+    "line_range": [
+      44
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "70     res = program(input_list=\"2, 3, 5, 6\")\n71     assert res.maximum == \"6\"\n72     assert res.minimum == \"2\"\n",
+    "col_offset": 4,
+    "end_col_offset": 29,
+    "filename": "./tests/predict/test_code_act.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 71,
+    "line_range": [
+      71
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "71     assert res.maximum == \"6\"\n72     assert res.minimum == \"2\"\n73     assert res.trajectory == {\n",
+    "col_offset": 4,
+    "end_col_offset": 29,
+    "filename": "./tests/predict/test_code_act.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 72,
+    "line_range": [
+      72
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "72     assert res.minimum == \"2\"\n73     assert res.trajectory == {\n74         'code_output_0': '\"{\\'maximum\\': 6.0, \\'minimum\\': 2.0}\\\\n\"',\n75         'generated_code_0': \"result = extract_maximum_minimum('2, 3, 5, 6')\\nprint(result)\",\n76     }\n77     assert program.interpreter.deno_process is None\n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/predict/test_code_act.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 73,
+    "line_range": [
+      73,
+      74,
+      75,
+      76
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "76     }\n77     assert program.interpreter.deno_process is None\n78 \n",
+    "col_offset": 4,
+    "end_col_offset": 51,
+    "filename": "./tests/predict/test_code_act.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 77,
+    "line_range": [
+      77
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "99     res = program(question=\"What is 1+1?\")\n100     assert res.answer == \"2\"\n101     assert res.trajectory == {\n",
+    "col_offset": 4,
+    "end_col_offset": 28,
+    "filename": "./tests/predict/test_code_act.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 100,
+    "line_range": [
+      100
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "100     assert res.answer == \"2\"\n101     assert res.trajectory == {\n102         'generated_code_0': 'parse(error',\n103         'observation_0': 'Failed to execute the generated code: Invalid Python syntax. message: ',\n104         'generated_code_1': 'result = add(1,1)\\nprint(result)',\n105         'code_output_1': '\"2\\\\n\"',\n106     }\n107     assert program.interpreter.deno_process is None\n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/predict/test_code_act.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 101,
+    "line_range": [
+      101,
+      102,
+      103,
+      104,
+      105,
+      106
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "106     }\n107     assert program.interpreter.deno_process is None\n108 \n",
+    "col_offset": 4,
+    "end_col_offset": 51,
+    "filename": "./tests/predict/test_code_act.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 107,
+    "line_range": [
+      107
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "129     res = program(question=\"What is 1+1?\")\n130     assert res.answer == \"2\"\n131     assert res.trajectory == {\n",
+    "col_offset": 4,
+    "end_col_offset": 28,
+    "filename": "./tests/predict/test_code_act.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 130,
+    "line_range": [
+      130
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "130     assert res.answer == \"2\"\n131     assert res.trajectory == {\n132         'generated_code_0': 'unknown+1',\n133         'observation_0': 'Failed to execute the generated code: NameError: [\"name \\'unknown\\' is not defined\"]',\n134         'generated_code_1': 'result = add(1,1)\\nprint(result)',\n135         'code_output_1': '\"2\\\\n\"',\n136     }\n137     assert program.interpreter.deno_process is None\n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/predict/test_code_act.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 131,
+    "line_range": [
+      131,
+      132,
+      133,
+      134,
+      135,
+      136
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "136     }\n137     assert program.interpreter.deno_process is None\n138 \n",
+    "col_offset": 4,
+    "end_col_offset": 51,
+    "filename": "./tests/predict/test_code_act.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 137,
+    "line_range": [
+      137
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

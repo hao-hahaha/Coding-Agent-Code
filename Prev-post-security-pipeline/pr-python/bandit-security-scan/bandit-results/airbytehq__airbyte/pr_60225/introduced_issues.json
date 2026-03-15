@@ -1,0 +1,22 @@
+[
+  {
+    "code": "46         master_metadata_url = f\"{github_url_prefix}/{connector.technical_name}/{consts.METADATA_FILE_NAME}\"\n47         response = requests.get(master_metadata_url)\n48 \n",
+    "col_offset": 19,
+    "end_col_offset": 52,
+    "filename": "./airbyte-ci/connectors/connectors_qa/src/connectors_qa/checks/version.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 400,
+      "link": "https://cwe.mitre.org/data/definitions/400.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Call to requests without timeout",
+    "line_number": 47,
+    "line_range": [
+      47
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+    "test_id": "B113",
+    "test_name": "request_without_timeout"
+  }
+]

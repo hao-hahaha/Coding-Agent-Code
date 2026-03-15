@@ -1,0 +1,23 @@
+[
+  {
+    "code": "12                 agent = get_agent(name)\n13             except Exception:\n14                 continue\n15             self.assertEqual(agent.NAME, name)\n",
+    "col_offset": 12,
+    "end_col_offset": 24,
+    "filename": "./tests/test_agents_integrity.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Continue detected.",
+    "line_number": 13,
+    "line_range": [
+      13,
+      14
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b112_try_except_continue.html",
+    "test_id": "B112",
+    "test_name": "try_except_continue"
+  }
+]

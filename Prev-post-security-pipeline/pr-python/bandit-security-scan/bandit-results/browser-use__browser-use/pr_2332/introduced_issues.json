@@ -1,0 +1,46 @@
+[
+  {
+    "code": "49 \t# 5. Assert that the 'done' action schema was successfully found.\n50 \tassert done_action_schema is not None, \"Could not find 'done' action in the optimized schema.\"\n51 \n",
+    "col_offset": 1,
+    "end_col_offset": 95,
+    "filename": "./tests/ci/test_schema_optimizer.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 50,
+    "line_range": [
+      50
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "61 \n62 \tassert original_fields == optimized_fields, (\n63 \t\tf\"Field mismatch between original and optimized structured 'done' action schema.\\n\"\n64 \t\tf'Missing from optimized: {original_fields - optimized_fields}\\n'\n65 \t\tf'Unexpected in optimized: {optimized_fields - original_fields}'\n66 \t)\n",
+    "col_offset": 1,
+    "end_col_offset": 2,
+    "filename": "./tests/ci/test_schema_optimizer.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 62,
+    "line_range": [
+      62,
+      63,
+      64,
+      65,
+      66
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

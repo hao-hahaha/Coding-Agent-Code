@@ -1,0 +1,22 @@
+[
+  {
+    "code": "15         distance = sum(abs(a - self.target) for a in agents)\n16         noise = random.random() * 0.1\n17         return -distance + noise\n",
+    "col_offset": 16,
+    "end_col_offset": 31,
+    "filename": "./alpha_factory_v1/demos/meta_agentic_tree_search_v0/mats/env.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 16,
+    "line_range": [
+      16
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "code": "66     cert, key, ca = _make_cert(tmp_path)\n67     cfg = config.Settings(bus_port=port, bus_cert=cert, bus_key=key, bus_token=\"tok\")\n68     bus = messaging.A2ABus(cfg)\n",
+    "col_offset": 10,
+    "end_col_offset": 85,
+    "filename": "./tests/test_bus_tls.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'tok'",
+    "line_number": 67,
+    "line_range": [
+      67
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b106_hardcoded_password_funcarg.html",
+    "test_id": "B106",
+    "test_name": "hardcoded_password_funcarg"
+  },
+  {
+    "code": "90     asyncio.run(run())\n91     assert received and received[0].payload[\"v\"] == 1\n92 \n",
+    "col_offset": 4,
+    "end_col_offset": 53,
+    "filename": "./tests/test_bus_tls.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 91,
+    "line_range": [
+      91
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "98     cert, key, ca = _make_cert(tmp_path)\n99     cfg = config.Settings(bus_port=port, bus_cert=cert, bus_key=key, bus_token=\"tok\")\n100     bus = messaging.A2ABus(cfg)\n",
+    "col_offset": 10,
+    "end_col_offset": 85,
+    "filename": "./tests/test_bus_tls.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'tok'",
+    "line_number": 99,
+    "line_range": [
+      99
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b106_hardcoded_password_funcarg.html",
+    "test_id": "B106",
+    "test_name": "hardcoded_password_funcarg"
+  }
+]

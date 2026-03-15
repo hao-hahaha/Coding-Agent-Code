@@ -1,0 +1,22 @@
+[
+  {
+    "code": "62     if not env.get(\"API_TOKEN\"):\n63         env[\"API_TOKEN\"] = \"demo-token\"\n64         print(\"API_TOKEN not set; using temporary 'demo-token'\")\n",
+    "col_offset": 12,
+    "end_col_offset": 23,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_business_v1/start_alpha_business.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'demo-token'",
+    "line_number": 63,
+    "line_range": [
+      63
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b105_hardcoded_password_string.html",
+    "test_id": "B105",
+    "test_name": "hardcoded_password_string"
+  }
+]

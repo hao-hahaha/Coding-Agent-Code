@@ -1,0 +1,42 @@
+[
+  {
+    "code": "4 x = 1 + 2\n5 assert x == 3\n6 print(\"ok\")\n",
+    "col_offset": 0,
+    "end_col_offset": 13,
+    "filename": "./tests/transpiler/x/py/test_block.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 5,
+    "line_range": [
+      5
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "19 # test update adult status\n20 assert people == [Person(name=\"Alice\", age=17, status=\"minor\"), Person(name=\"Bob\", age=26, status=\"adult\"), Person(name=\"Charlie\", age=19, status=\"adult\"), Person(name=\"Diana\", age=16, status=\"minor\")]\n21 print(\"ok\")\n",
+    "col_offset": 0,
+    "end_col_offset": 201,
+    "filename": "./tests/transpiler/x/py/update_stmt.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 20,
+    "line_range": [
+      20
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

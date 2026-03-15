@@ -1,0 +1,142 @@
+[
+  {
+    "code": "12 import os\n13 import subprocess\n14 import sys\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./alpha_factory_v1/quickstart.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 13,
+    "line_range": [
+      13
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "35         print(\"\\u2192 Creating virtual environment\")\n36         subprocess.check_call([sys.executable, \"-m\", \"venv\", str(venv)])\n37         pip = _venv_pip(venv)\n",
+    "col_offset": 8,
+    "end_col_offset": 72,
+    "filename": "./alpha_factory_v1/quickstart.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 36,
+    "line_range": [
+      36
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "37         pip = _venv_pip(venv)\n38         subprocess.check_call([str(pip), \"install\", \"-U\", \"pip\"], stdout=subprocess.DEVNULL)\n39         req = Path(\"alpha_factory_v1/requirements.lock\")\n",
+    "col_offset": 8,
+    "end_col_offset": 92,
+    "filename": "./alpha_factory_v1/quickstart.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 38,
+    "line_range": [
+      38
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "41             req = Path(\"alpha_factory_v1/requirements.txt\")\n42         subprocess.check_call([str(pip), \"install\", \"-r\", str(req)])\n43 \n",
+    "col_offset": 8,
+    "end_col_offset": 68,
+    "filename": "./alpha_factory_v1/quickstart.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 42,
+    "line_range": [
+      42
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "59     if args.preflight:\n60         subprocess.check_call([str(py), \"alpha_factory_v1/scripts/preflight.py\"])\n61         return\n",
+    "col_offset": 8,
+    "end_col_offset": 81,
+    "filename": "./alpha_factory_v1/quickstart.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 60,
+    "line_range": [
+      60
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "63     if not args.skip_preflight:\n64         subprocess.check_call([str(py), \"alpha_factory_v1/scripts/preflight.py\"])\n65 \n",
+    "col_offset": 8,
+    "end_col_offset": 81,
+    "filename": "./alpha_factory_v1/quickstart.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 64,
+    "line_range": [
+      64
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "66     cmd = [str(py), \"-m\", \"alpha_factory_v1.run\"] + args.orchestrator_args\n67     subprocess.check_call(cmd)\n68 \n",
+    "col_offset": 4,
+    "end_col_offset": 30,
+    "filename": "./alpha_factory_v1/quickstart.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 67,
+    "line_range": [
+      67
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  }
+]

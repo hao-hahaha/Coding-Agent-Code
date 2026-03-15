@@ -1,0 +1,22 @@
+[
+  {
+    "code": "75         _wait_ready(url)\n76         out = subprocess.check_output([\"curl\", \"-sf\", f\"{url}/metrics\"])\n77         text = out.decode()\n",
+    "col_offset": 14,
+    "end_col_offset": 72,
+    "filename": "./tests/test_metrics.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 76,
+    "line_range": [
+      76
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "code": "12     distance = sum(abs(a - TARGET) for a in agents)\n13     noise = random.random() * 0.1\n14     return -distance + noise\n",
+    "col_offset": 12,
+    "end_col_offset": 27,
+    "filename": "./alpha_factory_v1/demos/meta_agentic_tree_search_v0/mats/evaluators.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 13,
+    "line_range": [
+      13
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "10     new_agents = list(agents)\n11     idx = random.randrange(len(new_agents))\n12     new_agents[idx] += random.choice([-1, 1])\n",
+    "col_offset": 10,
+    "end_col_offset": 43,
+    "filename": "./alpha_factory_v1/demos/meta_agentic_tree_search_v0/mats/meta_rewrite.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 11,
+    "line_range": [
+      11
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "11     idx = random.randrange(len(new_agents))\n12     new_agents[idx] += random.choice([-1, 1])\n13     return new_agents\n",
+    "col_offset": 23,
+    "end_col_offset": 45,
+    "filename": "./alpha_factory_v1/demos/meta_agentic_tree_search_v0/mats/meta_rewrite.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 12,
+    "line_range": [
+      12
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "1 import subprocess\n2 import sys\n3 import unittest\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tests/test_meta_agentic_tree_search_demo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 1,
+    "line_range": [
+      1
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "9     def test_run_demo_short(self) -> None:\n10         result = subprocess.run(\n11             [\n12                 sys.executable,\n13                 \"-m\",\n14                 \"alpha_factory_v1.demos.meta_agentic_tree_search_v0.run_demo\",\n15                 \"--episodes\",\n16                 \"3\",\n17             ],\n18             capture_output=True,\n19             text=True,\n20         )\n21         self.assertEqual(result.returncode, 0, result.stderr)\n",
+    "col_offset": 17,
+    "end_col_offset": 9,
+    "filename": "./tests/test_meta_agentic_tree_search_demo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 10,
+    "line_range": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  }
+]

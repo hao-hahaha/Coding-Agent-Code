@@ -1,0 +1,24 @@
+[
+  {
+    "code": "23         self.head_dim = d_model // num_heads\n24         assert (\n25             d_model % num_heads == 0\n26         ), \"d_model must be divisible by num_heads\"\n27 \n",
+    "col_offset": 8,
+    "end_col_offset": 51,
+    "filename": "./src/model/u2tokenizer/rope.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 24,
+    "line_range": [
+      24,
+      25,
+      26
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

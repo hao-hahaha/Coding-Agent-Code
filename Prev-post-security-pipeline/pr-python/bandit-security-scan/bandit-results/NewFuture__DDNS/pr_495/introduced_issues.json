@@ -1,0 +1,22 @@
+[
+  {
+    "code": "31         # Create a temporary directory for test cache files\n32         self.cache_file = tempfile.mktemp(prefix=\"ddns_test_cache_\", suffix=\"pk1\")\n33         # self.cache_file = os.path.join(self.test_dir, \"test_cache.%d.pkl\" % random.randint(1, 10000))\n",
+    "col_offset": 26,
+    "end_col_offset": 82,
+    "filename": "./tests/test_util_cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Use of insecure and deprecated function (mktemp).",
+    "line_number": 32,
+    "line_range": [
+      32
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b306-mktemp-q",
+    "test_id": "B306",
+    "test_name": "blacklist"
+  }
+]

@@ -1,0 +1,126 @@
+[
+  {
+    "code": "14 import tempfile\n15 import subprocess\n16 from typing import List, Optional\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./sfa_polars_csv_agent_openai_v2.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 15,
+    "line_range": [
+      15
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "318 \n319         result = subprocess.run(['uv', 'run', '--with', 'polars', temp_file], \n320                               capture_output=True, text=True)\n321         os.unlink(temp_file)\n",
+    "col_offset": 17,
+    "end_col_offset": 61,
+    "filename": "./sfa_polars_csv_agent_openai_v2.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 319,
+    "line_range": [
+      319,
+      320
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "318 \n319         result = subprocess.run(['uv', 'run', '--with', 'polars', temp_file], \n320                               capture_output=True, text=True)\n321         os.unlink(temp_file)\n",
+    "col_offset": 17,
+    "end_col_offset": 61,
+    "filename": "./sfa_polars_csv_agent_openai_v2.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 319,
+    "line_range": [
+      319,
+      320
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "418 \n419         result = subprocess.run(['uv', 'run', '--with', 'polars', temp_file],\n420                               capture_output=True, text=True)\n421         os.unlink(temp_file)\n",
+    "col_offset": 17,
+    "end_col_offset": 61,
+    "filename": "./sfa_polars_csv_agent_openai_v2.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 419,
+    "line_range": [
+      419,
+      420
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "418 \n419         result = subprocess.run(['uv', 'run', '--with', 'polars', temp_file],\n420                               capture_output=True, text=True)\n421         os.unlink(temp_file)\n",
+    "col_offset": 17,
+    "end_col_offset": 61,
+    "filename": "./sfa_polars_csv_agent_openai_v2.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 419,
+    "line_range": [
+      419,
+      420
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "498             if response.choices:\n499                 assert len(response.choices) == 1\n500                 message = response.choices[0].message\n",
+    "col_offset": 16,
+    "end_col_offset": 49,
+    "filename": "./sfa_polars_csv_agent_openai_v2.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 499,
+    "line_range": [
+      499
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

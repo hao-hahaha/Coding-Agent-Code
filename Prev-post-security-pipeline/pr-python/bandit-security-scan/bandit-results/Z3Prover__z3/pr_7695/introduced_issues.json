@@ -1,0 +1,64 @@
+[
+  {
+    "code": "6 \n7 import subprocess\n8 import sys\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./src/api/python/demonstrate_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 7,
+    "line_range": [
+      7
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "30     # Test pip detection\n31     result = subprocess.run([sys.executable, '-m', 'pip', 'show', 'z3-solver'], \n32                            capture_output=True, text=True)\n33     if result.returncode == 0:\n",
+    "col_offset": 13,
+    "end_col_offset": 58,
+    "filename": "./src/api/python/demonstrate_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 31,
+    "line_range": [
+      31,
+      32
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "122     \n123     result = subprocess.run([sys.executable, '-c', downstream_check], \n124                            capture_output=True, text=True)\n125     if result.returncode == 0:\n",
+    "col_offset": 13,
+    "end_col_offset": 58,
+    "filename": "./src/api/python/demonstrate_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 123,
+    "line_range": [
+      123,
+      124
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  }
+]

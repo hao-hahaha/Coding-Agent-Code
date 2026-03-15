@@ -1,0 +1,852 @@
+{
+  "errors": [],
+  "generated_at": "2026-03-15T04:14:12Z",
+  "metrics": {
+    "./conftest.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 0,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./korean_romanizer/__init__.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 3,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./korean_romanizer/pronouncer.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 93,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./korean_romanizer/romanizer.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 89,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./korean_romanizer/syllable.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 55,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./setup.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 22,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./tests/test_romanizer.py": {
+      "CONFIDENCE.HIGH": 37,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 37,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 53,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 37,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 37,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 315,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "10 def test_simple():\n11     assert romanize(\"\uc548\ub155\ud558\uc138\uc694\") == \"annyeonghaseyo\"\n12 \n",
+      "col_offset": 4,
+      "end_col_offset": 58,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 11,
+      "line_range": [
+        11
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "14 def test_spaced_text():\n15     assert romanize(\"\uc544\uc774\uc720 \ubc29\ud0c4\uc18c\ub144\ub2e8\") == \"aiyu bangtansonyeondan\"\n16 \n",
+      "col_offset": 4,
+      "end_col_offset": 76,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 15,
+      "line_range": [
+        15
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "18 def test_onset_g_d_b():\n19     assert romanize(\"\uad6c\ubbf8\") == \"gumi\"\n20     assert romanize(\"\uc601\ub3d9\") == \"yeongdong\"\n",
+      "col_offset": 4,
+      "end_col_offset": 39,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 19,
+      "line_range": [
+        19
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "19     assert romanize(\"\uad6c\ubbf8\") == \"gumi\"\n20     assert romanize(\"\uc601\ub3d9\") == \"yeongdong\"\n21     assert romanize(\"\ud55c\ubc2d\") == \"hanbat\"\n",
+      "col_offset": 4,
+      "end_col_offset": 44,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 20,
+      "line_range": [
+        20
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "20     assert romanize(\"\uc601\ub3d9\") == \"yeongdong\"\n21     assert romanize(\"\ud55c\ubc2d\") == \"hanbat\"\n22 \n",
+      "col_offset": 4,
+      "end_col_offset": 41,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 21,
+      "line_range": [
+        21
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "24 def test_coda_g_d_b():\n25     assert romanize(\"\ubc1d\ub2e4\") == \"bakda\"\n26     assert romanize(\"\ubc14\ub2f7\uac00\") == \"badatga\"\n",
+      "col_offset": 4,
+      "end_col_offset": 40,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 25,
+      "line_range": [
+        25
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "25     assert romanize(\"\ubc1d\ub2e4\") == \"bakda\"\n26     assert romanize(\"\ubc14\ub2f7\uac00\") == \"badatga\"\n27     assert romanize(\"\uc5c6\ub2e4\") == \"eopda\"\n",
+      "col_offset": 4,
+      "end_col_offset": 45,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 26,
+      "line_range": [
+        26
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "26     assert romanize(\"\ubc14\ub2f7\uac00\") == \"badatga\"\n27     assert romanize(\"\uc5c6\ub2e4\") == \"eopda\"\n28     assert romanize(\"\uc55e\ub9cc\") == \"apman\"\n",
+      "col_offset": 4,
+      "end_col_offset": 40,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 27,
+      "line_range": [
+        27
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "27     assert romanize(\"\uc5c6\ub2e4\") == \"eopda\"\n28     assert romanize(\"\uc55e\ub9cc\") == \"apman\"\n29     assert romanize(\"\uc74a\ub2e4\") == \"eupda\"\n",
+      "col_offset": 4,
+      "end_col_offset": 40,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 28,
+      "line_range": [
+        28
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "28     assert romanize(\"\uc55e\ub9cc\") == \"apman\"\n29     assert romanize(\"\uc74a\ub2e4\") == \"eupda\"\n30 \n",
+      "col_offset": 4,
+      "end_col_offset": 40,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 29,
+      "line_range": [
+        29
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "32 def test_r_l():\n33     assert romanize(\"\uad6c\ub9ac\") == \"guri\"\n34     assert romanize(\"\uc124\uc545\") == \"seorak\"\n",
+      "col_offset": 4,
+      "end_col_offset": 39,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 33,
+      "line_range": [
+        33
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "33     assert romanize(\"\uad6c\ub9ac\") == \"guri\"\n34     assert romanize(\"\uc124\uc545\") == \"seorak\"\n35 #    assert romanize(\"\uc6b8\ub989\") == \"ulleung\"\n",
+      "col_offset": 4,
+      "end_col_offset": 41,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 34,
+      "line_range": [
+        34
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "39 def test_next_syllable_null_initial():\n40     assert romanize(\"\uac15\uc57d\") == \"gangyak\"\n41     assert romanize(\"\uac15\uc6d0\") == \"gangwon\"\n",
+      "col_offset": 4,
+      "end_col_offset": 42,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 40,
+      "line_range": [
+        40
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "40     assert romanize(\"\uac15\uc57d\") == \"gangyak\"\n41     assert romanize(\"\uac15\uc6d0\") == \"gangwon\"\n42     assert romanize(\"\uc88b\uc544\ud558\uace0\") == \"joahago\"\n",
+      "col_offset": 4,
+      "end_col_offset": 42,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 41,
+      "line_range": [
+        41
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "41     assert romanize(\"\uac15\uc6d0\") == \"gangwon\"\n42     assert romanize(\"\uc88b\uc544\ud558\uace0\") == \"joahago\"\n43     assert romanize(\"\uc88b\uc740\") == \"joeun\"\n",
+      "col_offset": 4,
+      "end_col_offset": 48,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 42,
+      "line_range": [
+        42
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "42     assert romanize(\"\uc88b\uc544\ud558\uace0\") == \"joahago\"\n43     assert romanize(\"\uc88b\uc740\") == \"joeun\"\n44 \n",
+      "col_offset": 4,
+      "end_col_offset": 40,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 43,
+      "line_range": [
+        43
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "46 def test_double_consonant_final_and_next_syllable_null_initial():\n47     assert romanize(\"\ud588\uc5c8\uc5b4\uc694\") == \"haesseosseoyo\"\n48     assert romanize(\"\uc5c6\uc5c8\ub2e4\") == \"eopseotda\"\n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 47,
+      "line_range": [
+        47
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "47     assert romanize(\"\ud588\uc5c8\uc5b4\uc694\") == \"haesseosseoyo\"\n48     assert romanize(\"\uc5c6\uc5c8\ub2e4\") == \"eopseotda\"\n49     assert romanize(\"\uc549\uc544\ubd10\") == \"anjabwa\"\n",
+      "col_offset": 4,
+      "end_col_offset": 47,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 48,
+      "line_range": [
+        48
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "48     assert romanize(\"\uc5c6\uc5c8\ub2e4\") == \"eopseotda\"\n49     assert romanize(\"\uc549\uc544\ubd10\") == \"anjabwa\"\n50     assert romanize(\"\ub2ed\uc758\") == \"dalgui\"\n",
+      "col_offset": 4,
+      "end_col_offset": 45,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 49,
+      "line_range": [
+        49
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "49     assert romanize(\"\uc549\uc544\ubd10\") == \"anjabwa\"\n50     assert romanize(\"\ub2ed\uc758\") == \"dalgui\"\n51     assert romanize(\"\ubc1f\uc544\") == \"balba\"\n",
+      "col_offset": 4,
+      "end_col_offset": 41,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 50,
+      "line_range": [
+        50
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "50     assert romanize(\"\ub2ed\uc758\") == \"dalgui\"\n51     assert romanize(\"\ubc1f\uc544\") == \"balba\"\n52     assert romanize(\"\ub2ee\uc558\ub124\") == \"dalmatne\"\n",
+      "col_offset": 4,
+      "end_col_offset": 40,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 51,
+      "line_range": [
+        51
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "51     assert romanize(\"\ubc1f\uc544\") == \"balba\"\n52     assert romanize(\"\ub2ee\uc558\ub124\") == \"dalmatne\"\n53     assert romanize(\"\uc0af\uc744\") == \"sakseul\"\n",
+      "col_offset": 4,
+      "end_col_offset": 46,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 52,
+      "line_range": [
+        52
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "52     assert romanize(\"\ub2ee\uc558\ub124\") == \"dalmatne\"\n53     assert romanize(\"\uc0af\uc744\") == \"sakseul\"\n54     assert romanize(\"\uc553\uc558\ub2e4\") == \"aratda\"\n",
+      "col_offset": 4,
+      "end_col_offset": 42,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 53,
+      "line_range": [
+        53
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "53     assert romanize(\"\uc0af\uc744\") == \"sakseul\"\n54     assert romanize(\"\uc553\uc558\ub2e4\") == \"aratda\"\n55     assert romanize(\"\uc74a\uc5b4 \ubcf4\uac70\ub77c\") == \"eulpeo bogeora\"\n",
+      "col_offset": 4,
+      "end_col_offset": 44,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 54,
+      "line_range": [
+        54
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "54     assert romanize(\"\uc553\uc558\ub2e4\") == \"aratda\"\n55     assert romanize(\"\uc74a\uc5b4 \ubcf4\uac70\ub77c\") == \"eulpeo bogeora\"\n56     assert romanize(\"\uacec\uc774\") == \"golssi\"\n",
+      "col_offset": 4,
+      "end_col_offset": 59,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 55,
+      "line_range": [
+        55
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "55     assert romanize(\"\uc74a\uc5b4 \ubcf4\uac70\ub77c\") == \"eulpeo bogeora\"\n56     assert romanize(\"\uacec\uc774\") == \"golssi\"\n57     assert romanize(\"\ud6d1\uc5b4\ubcf4\ub2e4\") == \"hulteoboda\"\n",
+      "col_offset": 4,
+      "end_col_offset": 41,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 56,
+      "line_range": [
+        56
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "56     assert romanize(\"\uacec\uc774\") == \"golssi\"\n57     assert romanize(\"\ud6d1\uc5b4\ubcf4\ub2e4\") == \"hulteoboda\"\n58 \n",
+      "col_offset": 4,
+      "end_col_offset": 51,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 57,
+      "line_range": [
+        57
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "60 def test_double_consonant_final_and_next_syllable_not_null_initial():\n61     assert romanize(\"\uc549\uace0\uc2f6\ub2e4\") == \"angosipda\"\n62     assert romanize(\"\ub6ab\ub9ac\ub2e4\") == \"ttulrida\"\n",
+      "col_offset": 4,
+      "end_col_offset": 50,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 61,
+      "line_range": [
+        61
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "61     assert romanize(\"\uc549\uace0\uc2f6\ub2e4\") == \"angosipda\"\n62     assert romanize(\"\ub6ab\ub9ac\ub2e4\") == \"ttulrida\"\n63     assert romanize(\"\uce61\ubfcc\ub9ac\") == \"chikppuri\"\n",
+      "col_offset": 4,
+      "end_col_offset": 46,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 62,
+      "line_range": [
+        62
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "62     assert romanize(\"\ub6ab\ub9ac\ub2e4\") == \"ttulrida\"\n63     assert romanize(\"\uce61\ubfcc\ub9ac\") == \"chikppuri\"\n64     \n",
+      "col_offset": 4,
+      "end_col_offset": 47,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 63,
+      "line_range": [
+        63
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "66 def test_double_consonant_final_without_next_syllable():\n67     assert romanize(\"\uad1c\ucc2e\") == \"gwaenchan\"\n68     assert romanize(\"\ub6ab\") == \"ttul\"\n",
+      "col_offset": 4,
+      "end_col_offset": 44,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 67,
+      "line_range": [
+        67
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "67     assert romanize(\"\uad1c\ucc2e\") == \"gwaenchan\"\n68     assert romanize(\"\ub6ab\") == \"ttul\"\n69     assert romanize(\"\uc54a\") == \"an\"\n",
+      "col_offset": 4,
+      "end_col_offset": 36,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 68,
+      "line_range": [
+        68
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "68     assert romanize(\"\ub6ab\") == \"ttul\"\n69     assert romanize(\"\uc54a\") == \"an\"\n70 \n",
+      "col_offset": 4,
+      "end_col_offset": 34,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 69,
+      "line_range": [
+        69
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "72 def test_non_syllables():\n73     assert romanize(\"\u3160\u3134\u3141\u3131\") == \"\u3160\u3134\u3141\u3131\"\n74     assert romanize(\"\u3160\ub3d9\") == \"\u3160dong\"\n",
+      "col_offset": 4,
+      "end_col_offset": 53,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 73,
+      "line_range": [
+        73
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "73     assert romanize(\"\u3160\u3134\u3141\u3131\") == \"\u3160\u3134\u3141\u3131\"\n74     assert romanize(\"\u3160\ub3d9\") == \"\u3160dong\"\n75 \n",
+      "col_offset": 4,
+      "end_col_offset": 42,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 74,
+      "line_range": [
+        74
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "77 def test_coda_h():\n78     assert romanize(\"\uc54a\uc2b5\ub2c8\ub2e4\") == \"ansseupnida\"\n79     assert romanize(\"\uc553\uace0\") == \"alko\"\n",
+      "col_offset": 4,
+      "end_col_offset": 52,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 78,
+      "line_range": [
+        78
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "78     assert romanize(\"\uc54a\uc2b5\ub2c8\ub2e4\") == \"ansseupnida\"\n79     assert romanize(\"\uc553\uace0\") == \"alko\"\n",
+      "col_offset": 4,
+      "end_col_offset": 39,
+      "filename": "./tests/test_romanizer.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 79,
+      "line_range": [
+        79
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    }
+  ]
+}

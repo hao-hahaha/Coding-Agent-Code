@@ -1,0 +1,182 @@
+[
+  {
+    "code": "25     def __init__(self, env: Optional[Environment] = None) -> None:\n26         self.env = env or Environment()\n27 \n",
+    "col_offset": 26,
+    "end_col_offset": 39,
+    "filename": "./src/meta_agent/template_validator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 94,
+      "link": "https://cwe.mitre.org/data/definitions/94.html"
+    },
+    "issue_severity": "HIGH",
+    "issue_text": "By default, jinja2 sets autoescape to False. Consider using autoescape=True or use the select_autoescape function to mitigate XSS vulnerabilities.",
+    "line_number": 26,
+    "line_range": [
+      26
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b701_jinja2_autoescape_false.html",
+    "test_id": "B701",
+    "test_name": "jinja2_autoescape_false"
+  },
+  {
+    "code": "7     result = validator.validate(\"Hello {{ name }}\", [case])\n8     assert result.success\n9     assert result.errors == []\n",
+    "col_offset": 4,
+    "end_col_offset": 25,
+    "filename": "./tests/test_template_validator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 8,
+    "line_range": [
+      8
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "8     assert result.success\n9     assert result.errors == []\n10 \n",
+    "col_offset": 4,
+    "end_col_offset": 30,
+    "filename": "./tests/test_template_validator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 9,
+    "line_range": [
+      9
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "14     result = validator.validate(\"{% for x in %}\")\n15     assert not result.success\n16     assert any(\"syntax error\" in e for e in result.errors)\n",
+    "col_offset": 4,
+    "end_col_offset": 29,
+    "filename": "./tests/test_template_validator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 15,
+    "line_range": [
+      15
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "15     assert not result.success\n16     assert any(\"syntax error\" in e for e in result.errors)\n17 \n",
+    "col_offset": 4,
+    "end_col_offset": 58,
+    "filename": "./tests/test_template_validator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 16,
+    "line_range": [
+      16
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "22     result = validator.validate(\"Hello {{ name }} from {{ city }}\", [case])\n23     assert not result.success\n24     assert any(\"missing variables\" in e for e in result.errors)\n",
+    "col_offset": 4,
+    "end_col_offset": 29,
+    "filename": "./tests/test_template_validator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 23,
+    "line_range": [
+      23
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "23     assert not result.success\n24     assert any(\"missing variables\" in e for e in result.errors)\n25 \n",
+    "col_offset": 4,
+    "end_col_offset": 63,
+    "filename": "./tests/test_template_validator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 24,
+    "line_range": [
+      24
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "30     result = validator.validate(\"Hello\", [case], max_render_seconds=0.0)\n31     assert not result.success\n32     assert any(\"too slow\" in e for e in result.errors)\n",
+    "col_offset": 4,
+    "end_col_offset": 29,
+    "filename": "./tests/test_template_validator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 31,
+    "line_range": [
+      31
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "31     assert not result.success\n32     assert any(\"too slow\" in e for e in result.errors)\n",
+    "col_offset": 4,
+    "end_col_offset": 54,
+    "filename": "./tests/test_template_validator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 32,
+    "line_range": [
+      32
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

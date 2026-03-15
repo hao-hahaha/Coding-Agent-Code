@@ -1,0 +1,143 @@
+[
+  {
+    "code": "3 import os\n4 import subprocess\n5 import sys\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tests/test_aiga_service_e2e.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 4,
+    "line_range": [
+      4
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "18 \n19     proc = subprocess.Popen([sys.executable, ENTRYPOINT], env=env)\n20     try:\n",
+    "col_offset": 11,
+    "end_col_offset": 66,
+    "filename": "./tests/test_aiga_service_e2e.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 19,
+    "line_range": [
+      19
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "28                     break\n29             except Exception:\n30                 pass\n31             time.sleep(0.1)\n",
+    "col_offset": 12,
+    "end_col_offset": 20,
+    "filename": "./tests/test_aiga_service_e2e.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 29,
+    "line_range": [
+      29,
+      30
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "31             time.sleep(0.1)\n32         assert resp is not None, \"service did not start\"\n33         data = resp.json()\n",
+    "col_offset": 8,
+    "end_col_offset": 56,
+    "filename": "./tests/test_aiga_service_e2e.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 32,
+    "line_range": [
+      32
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "37 \n38     assert \"status\" in data\n39     assert \"generations\" in data\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/test_aiga_service_e2e.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 38,
+    "line_range": [
+      38
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "38     assert \"status\" in data\n39     assert \"generations\" in data\n40     assert \"best_fitness\" in data\n",
+    "col_offset": 4,
+    "end_col_offset": 32,
+    "filename": "./tests/test_aiga_service_e2e.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 39,
+    "line_range": [
+      39
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "39     assert \"generations\" in data\n40     assert \"best_fitness\" in data\n",
+    "col_offset": 4,
+    "end_col_offset": 33,
+    "filename": "./tests/test_aiga_service_e2e.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 40,
+    "line_range": [
+      40
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

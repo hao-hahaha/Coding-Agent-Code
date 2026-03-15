@@ -1,0 +1,102 @@
+[
+  {
+    "code": "175                 if r.task and r.task.done():\n176                     delay = random.uniform(0.5, 1.5)\n177                     if r.restart_streak >= BACKOFF_EXP_AFTER:\n",
+    "col_offset": 28,
+    "end_col_offset": 52,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/orchestrator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 176,
+    "line_range": [
+      176
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "183                     log.warning(\"%s exceeded error threshold – restarting\", r.agent.name)\n184                     delay = random.uniform(0.5, 1.5)\n185                     if r.restart_streak >= BACKOFF_EXP_AFTER:\n",
+    "col_offset": 28,
+    "end_col_offset": 52,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/orchestrator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 184,
+    "line_range": [
+      184
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "191                     log.warning(\"%s unresponsive – restarting\", r.agent.name)\n192                     delay = random.uniform(0.5, 1.5)\n193                     if r.restart_streak >= BACKOFF_EXP_AFTER:\n",
+    "col_offset": 28,
+    "end_col_offset": 52,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/orchestrator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 192,
+    "line_range": [
+      192
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "81     restart_delays = [d for d in delays if d not in (0, 2)]\n82     assert restart_delays[:2] == [1.0, 2.0]\n83     assert events.count(\"restart\") >= 2\n",
+    "col_offset": 4,
+    "end_col_offset": 43,
+    "filename": "./tests/test_orchestrator_backoff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 82,
+    "line_range": [
+      82
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "82     assert restart_delays[:2] == [1.0, 2.0]\n83     assert events.count(\"restart\") >= 2\n84 \n",
+    "col_offset": 4,
+    "end_col_offset": 39,
+    "filename": "./tests/test_orchestrator_backoff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 83,
+    "line_range": [
+      83
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

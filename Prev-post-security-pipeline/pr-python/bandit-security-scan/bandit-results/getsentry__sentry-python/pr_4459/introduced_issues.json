@@ -1,0 +1,62 @@
+[
+  {
+    "code": "28 \n29     assert event[\"tags\"][key] == expected, f\"Tag {key} was not converted properly\"\n30 \n",
+    "col_offset": 4,
+    "end_col_offset": 82,
+    "filename": "./tests/tracing/test_span_tags.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 29,
+    "line_range": [
+      29
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "52 \n53     assert event[\"tags\"][\"bad_object\"] == \"BadObject()\"\n54 \n",
+    "col_offset": 4,
+    "end_col_offset": 55,
+    "filename": "./tests/tracing/test_span_tags.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 53,
+    "line_range": [
+      53
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "77 \n78     assert event[\"tags\"][\"bad_object\"] == \"<broken repr>\"\n",
+    "col_offset": 4,
+    "end_col_offset": 57,
+    "filename": "./tests/tracing/test_span_tags.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 78,
+    "line_range": [
+      78
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

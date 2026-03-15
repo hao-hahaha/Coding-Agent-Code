@@ -1,0 +1,42 @@
+[
+  {
+    "code": "25   print(f\"Downloading from {url} to {destination}...\")\n26   response = requests.get(url, stream=True)\n27   response.raise_for_status()\n",
+    "col_offset": 13,
+    "end_col_offset": 43,
+    "filename": "./tests/replay_parser_test.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 400,
+      "link": "https://cwe.mitre.org/data/definitions/400.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Call to requests without timeout",
+    "line_number": 26,
+    "line_range": [
+      26
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+    "test_id": "B113",
+    "test_name": "request_without_timeout"
+  },
+  {
+    "code": "100         os.makedirs(keep_dir)\n101       os.system(f\"cp -r {extract_dir}/* {keep_dir}/\")\n102 \n",
+    "col_offset": 6,
+    "end_col_offset": 53,
+    "filename": "./tests/replay_parser_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "HIGH",
+    "issue_text": "Starting a process with a shell, possible injection detected, security issue.",
+    "line_number": 101,
+    "line_range": [
+      101
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b605_start_process_with_a_shell.html",
+    "test_id": "B605",
+    "test_name": "start_process_with_a_shell"
+  }
+]

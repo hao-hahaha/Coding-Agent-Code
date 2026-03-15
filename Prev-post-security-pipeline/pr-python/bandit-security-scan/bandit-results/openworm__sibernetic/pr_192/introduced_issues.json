@@ -1,0 +1,62 @@
+[
+  {
+    "code": "8 \n9 assert len(energies) >= 51, \"Expected at least 51 energy records\"\n10 start, end = energies[0], energies[-1]\n",
+    "col_offset": 0,
+    "end_col_offset": 65,
+    "filename": "./tests/test_energy.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 9,
+    "line_range": [
+      9
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "10 start, end = energies[0], energies[-1]\n11 assert math.isfinite(start) and math.isfinite(end)\n12 relative_change = abs(end - start) / (abs(start) + 1e-12)\n",
+    "col_offset": 0,
+    "end_col_offset": 50,
+    "filename": "./tests/test_energy.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 11,
+    "line_range": [
+      11
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "13 # Energy should remain roughly stable for a short test run\n14 assert relative_change < 1.0, f\"Energy drift too high: {relative_change}\"\n15 print(\"Energy log test passed\")\n",
+    "col_offset": 0,
+    "end_col_offset": 73,
+    "filename": "./tests/test_energy.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 14,
+    "line_range": [
+      14
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

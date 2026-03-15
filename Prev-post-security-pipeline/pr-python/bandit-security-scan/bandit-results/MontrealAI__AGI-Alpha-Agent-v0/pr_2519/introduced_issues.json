@@ -1,0 +1,22 @@
+[
+  {
+    "code": "174         return None\n175     cfg = uvicorn.Config(app, host=\"0.0.0.0\", port=port, log_level=loglevel.lower())\n176     task = asyncio.create_task(uvicorn.Server(cfg).serve())\n",
+    "col_offset": 35,
+    "end_col_offset": 44,
+    "filename": "./alpha_factory_v1/backend/api_server.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 605,
+      "link": "https://cwe.mitre.org/data/definitions/605.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible binding to all interfaces.",
+    "line_number": 175,
+    "line_range": [
+      175
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b104_hardcoded_bind_all_interfaces.html",
+    "test_id": "B104",
+    "test_name": "hardcoded_bind_all_interfaces"
+  }
+]

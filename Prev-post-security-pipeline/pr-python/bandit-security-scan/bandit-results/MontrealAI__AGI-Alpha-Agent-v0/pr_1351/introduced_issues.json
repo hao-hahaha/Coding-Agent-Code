@@ -1,0 +1,22 @@
+[
+  {
+    "code": "27             page.wait_for_selector(\"#controls\")\n28             assert not any(\"Content Security Policy\" in v for v in violations)\n29             browser.close()\n",
+    "col_offset": 12,
+    "end_col_offset": 78,
+    "filename": "./tests/security/test_csp.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 28,
+    "line_range": [
+      28
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

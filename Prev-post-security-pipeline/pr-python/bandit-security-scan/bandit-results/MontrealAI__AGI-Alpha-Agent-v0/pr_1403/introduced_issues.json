@@ -1,0 +1,126 @@
+[
+  {
+    "code": "5 import shutil\n6 import subprocess\n7 from pathlib import Path\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tests/test_taxonomy.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 6,
+    "line_range": [
+      6
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "15     js_out = tmp_path / 'taxonomy.js'\n16     subprocess.run([\n17         'tsc', '--target', 'es2020', '--module', 'es2020', TAXONOMY_TS, '--outFile', js_out\n18     ], check=True)\n19 \n",
+    "col_offset": 4,
+    "end_col_offset": 18,
+    "filename": "./tests/test_taxonomy.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 16,
+    "line_range": [
+      16,
+      17,
+      18
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "15     js_out = tmp_path / 'taxonomy.js'\n16     subprocess.run([\n17         'tsc', '--target', 'es2020', '--module', 'es2020', TAXONOMY_TS, '--outFile', js_out\n18     ], check=True)\n19 \n",
+    "col_offset": 4,
+    "end_col_offset": 18,
+    "filename": "./tests/test_taxonomy.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 16,
+    "line_range": [
+      16,
+      17,
+      18
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "31     )\n32     result = subprocess.run(['node', script], capture_output=True, text=True, check=True)\n33     data = json.loads(result.stdout)\n",
+    "col_offset": 13,
+    "end_col_offset": 89,
+    "filename": "./tests/test_taxonomy.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 32,
+    "line_range": [
+      32
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "31     )\n32     result = subprocess.run(['node', script], capture_output=True, text=True, check=True)\n33     data = json.loads(result.stdout)\n",
+    "col_offset": 13,
+    "end_col_offset": 89,
+    "filename": "./tests/test_taxonomy.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 32,
+    "line_range": [
+      32
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "33     data = json.loads(result.stdout)\n34     assert set(data['nodes'].keys()) == {'A'}\n",
+    "col_offset": 4,
+    "end_col_offset": 45,
+    "filename": "./tests/test_taxonomy.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 34,
+    "line_range": [
+      34
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

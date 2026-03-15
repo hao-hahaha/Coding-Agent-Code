@@ -1,0 +1,102 @@
+[
+  {
+    "code": "45         r = client.post(\"/simulate\", json={\"horizon\": 1, \"pop_size\": 2, \"generations\": 1}, headers=headers)\n46         assert r.status_code == 200\n47         sim_id = r.json()[\"id\"]\n",
+    "col_offset": 8,
+    "end_col_offset": 35,
+    "filename": "./tests/test_api_server_uvicorn.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 46,
+    "line_range": [
+      46
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "47         sim_id = r.json()[\"id\"]\n48         assert isinstance(sim_id, str) and sim_id\n49         for _ in range(100):\n",
+    "col_offset": 8,
+    "end_col_offset": 49,
+    "filename": "./tests/test_api_server_uvicorn.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 48,
+    "line_range": [
+      48
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "56             raise AssertionError(\"Timed out waiting for results\")\n57         assert isinstance(data, dict)\n58         assert \"forecast\" in data\n",
+    "col_offset": 8,
+    "end_col_offset": 37,
+    "filename": "./tests/test_api_server_uvicorn.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 57,
+    "line_range": [
+      57
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "57         assert isinstance(data, dict)\n58         assert \"forecast\" in data\n59         r2 = client.get(\"/results/does-not-exist\", headers=headers)\n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./tests/test_api_server_uvicorn.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 58,
+    "line_range": [
+      58
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "59         r2 = client.get(\"/results/does-not-exist\", headers=headers)\n60         assert r2.status_code == 404\n61 \n",
+    "col_offset": 8,
+    "end_col_offset": 36,
+    "filename": "./tests/test_api_server_uvicorn.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 60,
+    "line_range": [
+      60
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

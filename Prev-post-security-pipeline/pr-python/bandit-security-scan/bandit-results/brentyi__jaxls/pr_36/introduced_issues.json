@@ -1,0 +1,319 @@
+[
+  {
+    "code": "93         for f in costs:\n94             assert len(f._get_batch_axes()) in (0, 1)\n95             num_costs += 1 if len(f._get_batch_axes()) == 0 else f._get_batch_axes()[0]\n",
+    "col_offset": 12,
+    "end_col_offset": 53,
+    "filename": "./src/jaxls/_core.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 94,
+    "line_range": [
+      94
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "98         for v in variables:\n99             assert isinstance(v.id, int) or len(v.id.shape) in (0, 1)\n100             num_variables += (\n",
+    "col_offset": 12,
+    "end_col_offset": 69,
+    "filename": "./src/jaxls/_core.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 99,
+    "line_range": [
+      99
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "166             else:\n167                 assert len(batch_axes) == 1\n168                 count_from_group[group_key] += batch_axes[0]\n",
+    "col_offset": 16,
+    "end_col_offset": 43,
+    "filename": "./src/jaxls/_core.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 167,
+    "line_range": [
+      167
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "215             )(stacked_cost_expanded)\n216             assert (\n217                 rows.shape\n218                 == cols.shape\n219                 == (\n220                     count_from_group[group_key],\n221                     stacked_cost_expanded.residual_flat_dim,\n222                     rows.shape[-1],\n223                 )\n224             )\n225             rows = rows + (\n",
+    "col_offset": 12,
+    "end_col_offset": 13,
+    "filename": "./src/jaxls/_core.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 216,
+    "line_range": [
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "330             )(stacked_cost.args)\n331             assert len(stacked_residual_slice.shape) == 2\n332             residual_slices.append(stacked_residual_slice.reshape((-1,)))\n",
+    "col_offset": 12,
+    "end_col_offset": 57,
+    "filename": "./src/jaxls/_core.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 331,
+    "line_range": [
+      331
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "380             (num_costs,) = cost._get_batch_axes()\n381             assert stacked_jac.shape == (\n382                 num_costs,\n383                 cost.residual_flat_dim,\n384                 stacked_jac.shape[-1],  # Tangent dimension.\n385             )\n386             # Compute block-row representation for sparse Jacobian.\n",
+    "col_offset": 12,
+    "end_col_offset": 13,
+    "filename": "./src/jaxls/_core.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 381,
+    "line_range": [
+      381,
+      382,
+      383,
+      384,
+      385
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "394                 (num_costs_, num_vars) = ids.shape\n395                 assert num_costs == num_costs_\n396 \n",
+    "col_offset": 16,
+    "end_col_offset": 46,
+    "filename": "./src/jaxls/_core.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 395,
+    "line_range": [
+      395
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "406                     block_widths.append(var_type.tangent_dim)\n407                     assert start_cols[-1].shape == (num_costs_,)\n408 \n",
+    "col_offset": 20,
+    "end_col_offset": 64,
+    "filename": "./src/jaxls/_core.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 407,
+    "line_range": [
+      407
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "411                 )\n412             assert stacked_jac.shape[-1] == stacked_jac_start_col\n413 \n",
+    "col_offset": 12,
+    "end_col_offset": 65,
+    "filename": "./src/jaxls/_core.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 412,
+    "line_range": [
+      412
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "423             residual_offset += cost.residual_flat_dim * num_costs\n424         assert residual_offset == self.residual_dim\n425 \n",
+    "col_offset": 8,
+    "end_col_offset": 51,
+    "filename": "./src/jaxls/_core.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 424,
+    "line_range": [
+      424
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "600         variables = self._get_variables()\n601         assert len(variables) != 0, \"No variables found in cost!\"\n602         return jnp.broadcast_shapes(\n",
+    "col_offset": 8,
+    "end_col_offset": 65,
+    "filename": "./src/jaxls/_core.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 601,
+    "line_range": [
+      601
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "636         variables = cost._get_variables()\n637         assert len(variables) > 0\n638 \n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./src/jaxls/_core.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 637,
+    "line_range": [
+      637
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "641             batch_axes = variables[0].id.shape\n642             assert len(batch_axes) in (0, 1)\n643             for var in variables[1:]:\n",
+    "col_offset": 12,
+    "end_col_offset": 44,
+    "filename": "./src/jaxls/_core.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 642,
+    "line_range": [
+      642
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "643             for var in variables[1:]:\n644                 assert (\n645                     () if isinstance(var.id, int) else var.id.shape\n646                 ) == batch_axes, \"Batch axes of variables do not match.\"\n647             if len(batch_axes) == 1:\n",
+    "col_offset": 16,
+    "end_col_offset": 72,
+    "filename": "./src/jaxls/_core.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 644,
+    "line_range": [
+      644,
+      645,
+      646
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "680             )\n681             assert tangent_indices.shape == (\n682                 var_indices.shape[0],\n683                 var_type.tangent_dim,\n684             )\n685             col_indices.append(cast(jax.Array, tangent_indices).flatten())\n",
+    "col_offset": 12,
+    "end_col_offset": 13,
+    "filename": "./src/jaxls/_core.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 681,
+    "line_range": [
+      681,
+      682,
+      683,
+      684
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

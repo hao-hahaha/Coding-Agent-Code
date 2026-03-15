@@ -1,0 +1,142 @@
+[
+  {
+    "code": "8 import shutil\n9 import subprocess\n10 import tempfile\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./src/self_evolution/harness.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 9,
+    "line_range": [
+      9
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "33     ]\n34     proc = subprocess.run(cmd, capture_output=True, text=True)\n35     return proc.returncode\n",
+    "col_offset": 11,
+    "end_col_offset": 62,
+    "filename": "./src/self_evolution/harness.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 34,
+    "line_range": [
+      34
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "51     repo_path = Path(repo).resolve()\n52     proposal = hashlib.sha1(diff.encode()).hexdigest()\n53     baseline = float((repo_path / \"metric.txt\").read_text().strip())\n",
+    "col_offset": 15,
+    "end_col_offset": 42,
+    "filename": "./src/self_evolution/harness.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 327,
+      "link": "https://cwe.mitre.org/data/definitions/327.html"
+    },
+    "issue_severity": "HIGH",
+    "issue_text": "Use of weak SHA1 hash for security. Consider usedforsecurity=False",
+    "line_number": 52,
+    "line_range": [
+      52
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b324_hashlib.html",
+    "test_id": "B324",
+    "test_name": "hashlib"
+  },
+  {
+    "code": "33         accepted = harness.vote_and_merge(repo, diff, reg)\n34     assert accepted\n35     assert (repo / \"metric.txt\").read_text().strip() == \"2\"\n",
+    "col_offset": 4,
+    "end_col_offset": 19,
+    "filename": "./tests/test_self_evolution.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 34,
+    "line_range": [
+      34
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "34     assert accepted\n35     assert (repo / \"metric.txt\").read_text().strip() == \"2\"\n36 \n",
+    "col_offset": 4,
+    "end_col_offset": 59,
+    "filename": "./tests/test_self_evolution.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 35,
+    "line_range": [
+      35
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "55         accepted = harness.vote_and_merge(repo, diff, reg)\n56     assert not accepted\n57     assert (repo / \"metric.txt\").read_text().strip() == \"1\"\n",
+    "col_offset": 4,
+    "end_col_offset": 23,
+    "filename": "./tests/test_self_evolution.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 56,
+    "line_range": [
+      56
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "56     assert not accepted\n57     assert (repo / \"metric.txt\").read_text().strip() == \"1\"\n",
+    "col_offset": 4,
+    "end_col_offset": 59,
+    "filename": "./tests/test_self_evolution.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 57,
+    "line_range": [
+      57
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

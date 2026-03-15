@@ -1,0 +1,816 @@
+[
+  {
+    "code": "42     # We should have 3 groups (file1.txt appears twice, so should be grouped)\n43     assert len(result) == 3\n44 \n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 43,
+    "line_range": [
+      43
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "45     # Check that files with same unique attributes are grouped together\n46     assert {f[0].path for f in result} == {\"file1.txt\", \"file2.txt\", \"file3.txt\"}\n47 \n",
+    "col_offset": 4,
+    "end_col_offset": 81,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 46,
+    "line_range": [
+      46
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "49     path_to_total = {f.path: total for f, total in result}\n50     assert path_to_total[\"file1.txt\"] == 40  # 10 + 30 (grouped)\n51     assert path_to_total[\"file2.txt\"] == 20\n",
+    "col_offset": 4,
+    "end_col_offset": 43,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 50,
+    "line_range": [
+      50
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "50     assert path_to_total[\"file1.txt\"] == 40  # 10 + 30 (grouped)\n51     assert path_to_total[\"file2.txt\"] == 20\n52     assert path_to_total[\"file3.txt\"] == 40\n",
+    "col_offset": 4,
+    "end_col_offset": 43,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 51,
+    "line_range": [
+      51
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "51     assert path_to_total[\"file2.txt\"] == 20\n52     assert path_to_total[\"file3.txt\"] == 40\n53 \n",
+    "col_offset": 4,
+    "end_col_offset": 43,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 52,
+    "line_range": [
+      52
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "85     # We should have 2 groups: (file1.txt, A), (file2.txt, B)\n86     assert len(result) == 2\n87 \n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 86,
+    "line_range": [
+      86
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "89     groups = {(f.path, cat): total for f, cat, total in result}\n90     assert groups[(\"file1.txt\", \"A\")] == 40  # 10 + 30\n91     assert groups[(\"file2.txt\", \"B\")] == 20\n",
+    "col_offset": 4,
+    "end_col_offset": 43,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 90,
+    "line_range": [
+      90
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "90     assert groups[(\"file1.txt\", \"A\")] == 40  # 10 + 30\n91     assert groups[(\"file2.txt\", \"B\")] == 20\n92 \n",
+    "col_offset": 4,
+    "end_col_offset": 43,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 91,
+    "line_range": [
+      91
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "163     # We should have 3 groups (file1.txt appears twice, so should be grouped)\n164     assert len(result) == 3\n165 \n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 164,
+    "line_range": [
+      164
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "166     # Check that files with same unique attributes are grouped together\n167     assert {f[0].path for f in result} == {\"file1.txt\", \"file2.txt\", \"file3.txt\"}\n168 \n",
+    "col_offset": 4,
+    "end_col_offset": 81,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 167,
+    "line_range": [
+      167
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "170     groups = {f.path: (total, count) for f, total, count in result}\n171     assert groups[\"file1.txt\"] == (40, 2)  # 10 + 30 (2 groups)\n172     assert groups[\"file2.txt\"] == (20, 1)\n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 171,
+    "line_range": [
+      171
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "171     assert groups[\"file1.txt\"] == (40, 2)  # 10 + 30 (2 groups)\n172     assert groups[\"file2.txt\"] == (20, 1)\n173     assert groups[\"file3.txt\"] == (40, 1)\n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 172,
+    "line_range": [
+      172
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "172     assert groups[\"file2.txt\"] == (20, 1)\n173     assert groups[\"file3.txt\"] == (40, 1)\n174 \n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 173,
+    "line_range": [
+      173
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "200     # We should have 2 groups: (file1.txt, A), (file2.txt, B)\n201     assert len(result) == 2\n202 \n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 201,
+    "line_range": [
+      201
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "204     groups = {(f.path, category): total for f, category, total in result}\n205     assert groups[(\"file1.txt\", \"A\")] == 40  # 10 + 30\n206     assert groups[(\"file2.txt\", \"B\")] == 20\n",
+    "col_offset": 4,
+    "end_col_offset": 43,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 205,
+    "line_range": [
+      205
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "205     assert groups[(\"file1.txt\", \"A\")] == 40  # 10 + 30\n206     assert groups[(\"file2.txt\", \"B\")] == 20\n207 \n",
+    "col_offset": 4,
+    "end_col_offset": 43,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 206,
+    "line_range": [
+      206
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "259 \n260     assert dict(result.to_list(\"nested.id\", \"total_amount\")) == {\n261         \"item1\": 40,\n262         \"item2\": 20,\n263     }\n264 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 260,
+    "line_range": [
+      260,
+      261,
+      262,
+      263
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "264 \n265     assert dict(result.to_list(\"nested.id\", \"count\")) == {\n266         \"item1\": 2,\n267         \"item2\": 1,\n268     }\n269 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 265,
+    "line_range": [
+      265,
+      266,
+      267,
+      268
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "306 \n307     assert len(result) == 3  # Should have 3 unique names: test1, test2, test3\n308 \n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 307,
+    "line_range": [
+      307
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "310     name_to_total = dict(result)\n311     assert name_to_total[\"test1\"] == 40  # 10 + 30 (grouped by name)\n312     assert name_to_total[\"test2\"] == 20\n",
+    "col_offset": 4,
+    "end_col_offset": 39,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 311,
+    "line_range": [
+      311
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "311     assert name_to_total[\"test1\"] == 40  # 10 + 30 (grouped by name)\n312     assert name_to_total[\"test2\"] == 20\n313     assert name_to_total[\"test3\"] == 40\n",
+    "col_offset": 4,
+    "end_col_offset": 39,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 312,
+    "line_range": [
+      312
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "312     assert name_to_total[\"test2\"] == 20\n313     assert name_to_total[\"test3\"] == 40\n314 \n",
+    "col_offset": 4,
+    "end_col_offset": 39,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 313,
+    "line_range": [
+      313
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "350 \n351     assert len(result) == 2  # Should have 2 unique leaders: Alice, Bob\n352 \n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 351,
+    "line_range": [
+      351
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "353     leader_to_total = dict(result)\n354     assert leader_to_total[\"Alice\"] == 550  # 100 + 150 + 300 (all Alice-led teams)\n355     assert leader_to_total[\"Bob\"] == 200\n",
+    "col_offset": 4,
+    "end_col_offset": 42,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 354,
+    "line_range": [
+      354
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "354     assert leader_to_total[\"Alice\"] == 550  # 100 + 150 + 300 (all Alice-led teams)\n355     assert leader_to_total[\"Bob\"] == 200\n356 \n",
+    "col_offset": 4,
+    "end_col_offset": 40,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 355,
+    "line_range": [
+      355
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "383 \n384     assert len(result) == 2  # Should have 2 unique names\n385 \n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 384,
+    "line_range": [
+      384
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "386     name_to_total = dict(result)\n387     assert name_to_total[\"test1\"] == 40  # 10 + 30\n388     assert name_to_total[\"test2\"] == 20\n",
+    "col_offset": 4,
+    "end_col_offset": 39,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 387,
+    "line_range": [
+      387
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "387     assert name_to_total[\"test1\"] == 40  # 10 + 30\n388     assert name_to_total[\"test2\"] == 20\n389 \n",
+    "col_offset": 4,
+    "end_col_offset": 39,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 388,
+    "line_range": [
+      388
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "427 \n428     assert len(ds.to_list(\"file_dir\")) == 4\n429     assert ds.filter(dc.C(\"file_dir\") == \"docs\").to_list(\"cnt\", \"sum\")[0] == (2, 300)\n",
+    "col_offset": 4,
+    "end_col_offset": 43,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 428,
+    "line_range": [
+      428
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "428     assert len(ds.to_list(\"file_dir\")) == 4\n429     assert ds.filter(dc.C(\"file_dir\") == \"docs\").to_list(\"cnt\", \"sum\")[0] == (2, 300)\n430     assert ds.filter(dc.C(\"file_dir\") == \"src\").to_list(\"cnt\", \"sum\")[0] == (2, 450)\n",
+    "col_offset": 4,
+    "end_col_offset": 85,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 429,
+    "line_range": [
+      429
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "429     assert ds.filter(dc.C(\"file_dir\") == \"docs\").to_list(\"cnt\", \"sum\")[0] == (2, 300)\n430     assert ds.filter(dc.C(\"file_dir\") == \"src\").to_list(\"cnt\", \"sum\")[0] == (2, 450)\n431     assert ds.filter(dc.C(\"file_dir\") == \"tests\").to_list(\"cnt\", \"sum\")[0] == (1, 250)\n",
+    "col_offset": 4,
+    "end_col_offset": 84,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 430,
+    "line_range": [
+      430
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "430     assert ds.filter(dc.C(\"file_dir\") == \"src\").to_list(\"cnt\", \"sum\")[0] == (2, 450)\n431     assert ds.filter(dc.C(\"file_dir\") == \"tests\").to_list(\"cnt\", \"sum\")[0] == (1, 250)\n432     assert ds.filter(dc.C(\"file_dir\") == \"\").to_list(\"cnt\", \"sum\")[0] == (1, 50)\n",
+    "col_offset": 4,
+    "end_col_offset": 86,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 431,
+    "line_range": [
+      431
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "431     assert ds.filter(dc.C(\"file_dir\") == \"tests\").to_list(\"cnt\", \"sum\")[0] == (1, 250)\n432     assert ds.filter(dc.C(\"file_dir\") == \"\").to_list(\"cnt\", \"sum\")[0] == (1, 50)\n433 \n",
+    "col_offset": 4,
+    "end_col_offset": 80,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 432,
+    "line_range": [
+      432
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "434     persist = ds.save(\"tmp_ds\")\n435     assert len(persist.to_list(\"file_dir\")) == 4\n436 \n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 435,
+    "line_range": [
+      435
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "465     # We should have 3 groups (file1.txt appears twice, so should be grouped)\n466     assert len(result) == 3\n467 \n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 466,
+    "line_range": [
+      466
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "469     file_paths = {f.path for f, _ in result}\n470     assert file_paths == {\"f1.txt\", \"f2.txt\", \"f3.txt\"}\n471 \n",
+    "col_offset": 4,
+    "end_col_offset": 55,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 470,
+    "line_range": [
+      470
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "473     totals = {f.path: total for f, total in result}\n474     assert totals == {\n475         \"f1.txt\": 40,  # 10 + 30 (grouped)\n476         \"f2.txt\": 20,\n477         \"f3.txt\": 40,\n478     }\n479 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 474,
+    "line_range": [
+      474,
+      475,
+      476,
+      477,
+      478
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "507     # We should have 3 groups (file1.txt appears twice, so should be grouped)\n508     assert len(result) == 3\n509 \n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 508,
+    "line_range": [
+      508
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "511     file_paths = [f.path for f, _, _ in result]\n512     assert sorted(file_paths) == sorted([\"f1.txt\", \"f1.txt\", \"f3.txt\"])\n513 \n",
+    "col_offset": 4,
+    "end_col_offset": 71,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 512,
+    "line_range": [
+      512
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "515     totals = {(f.path, f.amount): (total, cnt) for f, total, cnt in result}\n516     assert totals == {\n517         (\"f1.txt\", 10): (20, 2),  # 10 + 10 (grouped)\n518         (\"f1.txt\", 20): (20, 1),\n519         (\"f3.txt\", 40): (40, 1),\n520     }\n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/unit/lib/test_partition_by.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 516,
+    "line_range": [
+      516,
+      517,
+      518,
+      519,
+      520
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

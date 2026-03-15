@@ -1,0 +1,22 @@
+[
+  {
+    "code": "40         self.model_path = model_path\n41         self.tokenizer = AutoTokenizer.from_pretrained(model_path, use_fast=True)\n42         self.trainer_cfg = TrainerConfig()\n",
+    "col_offset": 25,
+    "end_col_offset": 81,
+    "filename": "./src/levanter/inference/llm_engine.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 494,
+      "link": "https://cwe.mitre.org/data/definitions/494.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Unsafe Hugging Face Hub download without revision pinning in from_pretrained()",
+    "line_number": 41,
+    "line_range": [
+      41
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b615_huggingface_unsafe_download.html",
+    "test_id": "B615",
+    "test_name": "huggingface_unsafe_download"
+  }
+]

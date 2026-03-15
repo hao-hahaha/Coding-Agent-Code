@@ -1,0 +1,220 @@
+[
+  {
+    "code": "2 import shutil\n3 import subprocess\n4 from pathlib import Path\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tests/test_no_network.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 3,
+    "line_range": [
+      3
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "15 def compose_stack() -> None:\n16     subprocess.run([\n17         \"docker\",\n18         \"compose\",\n19         \"-f\",\n20         str(COMPOSE_FILE),\n21         \"up\",\n22         \"-d\",\n23         \"agents\",\n24     ], check=True)\n25     try:\n",
+    "col_offset": 4,
+    "end_col_offset": 18,
+    "filename": "./tests/test_no_network.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 16,
+    "line_range": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "15 def compose_stack() -> None:\n16     subprocess.run([\n17         \"docker\",\n18         \"compose\",\n19         \"-f\",\n20         str(COMPOSE_FILE),\n21         \"up\",\n22         \"-d\",\n23         \"agents\",\n24     ], check=True)\n25     try:\n",
+    "col_offset": 4,
+    "end_col_offset": 18,
+    "filename": "./tests/test_no_network.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 16,
+    "line_range": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "27     finally:\n28         subprocess.run([\n29             \"docker\",\n30             \"compose\",\n31             \"-f\",\n32             str(COMPOSE_FILE),\n33             \"down\",\n34             \"-v\",\n35         ], check=False)\n36 \n",
+    "col_offset": 8,
+    "end_col_offset": 23,
+    "filename": "./tests/test_no_network.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 28,
+    "line_range": [
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "27     finally:\n28         subprocess.run([\n29             \"docker\",\n30             \"compose\",\n31             \"-f\",\n32             str(COMPOSE_FILE),\n33             \"down\",\n34             \"-v\",\n35         ], check=False)\n36 \n",
+    "col_offset": 8,
+    "end_col_offset": 23,
+    "filename": "./tests/test_no_network.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 28,
+    "line_range": [
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "38 def test_agents_no_outbound_network(compose_stack: None) -> None:\n39     result = subprocess.run(\n40         [\n41             \"docker\",\n42             \"compose\",\n43             \"-f\",\n44             str(COMPOSE_FILE),\n45             \"exec\",\n46             \"-T\",\n47             \"agents\",\n48             \"python\",\n49             \"-c\",\n50             \"import urllib.request,sys; urllib.request.urlopen('https://example.com')\",\n51         ],\n52         capture_output=True,\n53     )\n54     assert result.returncode != 0\n",
+    "col_offset": 13,
+    "end_col_offset": 5,
+    "filename": "./tests/test_no_network.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 39,
+    "line_range": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "38 def test_agents_no_outbound_network(compose_stack: None) -> None:\n39     result = subprocess.run(\n40         [\n41             \"docker\",\n42             \"compose\",\n43             \"-f\",\n44             str(COMPOSE_FILE),\n45             \"exec\",\n46             \"-T\",\n47             \"agents\",\n48             \"python\",\n49             \"-c\",\n50             \"import urllib.request,sys; urllib.request.urlopen('https://example.com')\",\n51         ],\n52         capture_output=True,\n53     )\n54     assert result.returncode != 0\n",
+    "col_offset": 13,
+    "end_col_offset": 5,
+    "filename": "./tests/test_no_network.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 39,
+    "line_range": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "53     )\n54     assert result.returncode != 0\n",
+    "col_offset": 4,
+    "end_col_offset": 33,
+    "filename": "./tests/test_no_network.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 54,
+    "line_range": [
+      54
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

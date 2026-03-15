@@ -1,0 +1,92 @@
+[
+  {
+    "code": "4 import importlib.util\n5 import subprocess\n6 import time\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tests/test_governance_bridge_runtime.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 5,
+    "line_range": [
+      5
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "16     \"\"\"Launch governance-bridge and verify agent registration.\"\"\"\n17     proc = subprocess.Popen(\n18         [\"governance-bridge\", \"--port\", \"0\"],\n19         stdout=subprocess.PIPE,\n20         stderr=subprocess.STDOUT,\n21         text=True,\n22     )\n23     try:\n",
+    "col_offset": 11,
+    "end_col_offset": 5,
+    "filename": "./tests/test_governance_bridge_runtime.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 17,
+    "line_range": [
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "16     \"\"\"Launch governance-bridge and verify agent registration.\"\"\"\n17     proc = subprocess.Popen(\n18         [\"governance-bridge\", \"--port\", \"0\"],\n19         stdout=subprocess.PIPE,\n20         stderr=subprocess.STDOUT,\n21         text=True,\n22     )\n23     try:\n",
+    "col_offset": 11,
+    "end_col_offset": 5,
+    "filename": "./tests/test_governance_bridge_runtime.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 17,
+    "line_range": [
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "30             proc.wait(timeout=5)\n31     assert \"Registered GovernanceSimAgent\" in out\n",
+    "col_offset": 4,
+    "end_col_offset": 49,
+    "filename": "./tests/test_governance_bridge_runtime.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 31,
+    "line_range": [
+      31
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "code": "106         system_prompt = create_decision_prompt(scenario, available_actions)\n107         user_message = f\"Select the best action from these options: {available_actions}. Provide your reasoning and make your choice.\"\n108 \n",
+    "col_offset": 25,
+    "end_col_offset": 68,
+    "filename": "./examples/openai/o3_responses_example.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 89,
+      "link": "https://cwe.mitre.org/data/definitions/89.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible SQL injection vector through string-based query construction.",
+    "line_number": 107,
+    "line_range": [
+      107
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b608_hardcoded_sql_expressions.html",
+    "test_id": "B608",
+    "test_name": "hardcoded_sql_expressions"
+  },
+  {
+    "code": "250         system_prompt = create_decision_prompt(scenario, available_actions)\n251         user_message = f\"Select the best action from these options: {available_actions}. Provide your reasoning and make your choice.\"\n252 \n",
+    "col_offset": 25,
+    "end_col_offset": 68,
+    "filename": "./examples/openai/o3_responses_example.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 89,
+      "link": "https://cwe.mitre.org/data/definitions/89.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible SQL injection vector through string-based query construction.",
+    "line_number": 251,
+    "line_range": [
+      251
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b608_hardcoded_sql_expressions.html",
+    "test_id": "B608",
+    "test_name": "hardcoded_sql_expressions"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "code": "41         pytest.skip(f\"Playwright browser not installed: {exc}\")\n42     assert first != second\n43     assert all(len(pt) == 2 for pt in first)\n",
+    "col_offset": 4,
+    "end_col_offset": 26,
+    "filename": "./tests/test_umap_fallback.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 42,
+    "line_range": [
+      42
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "42     assert first != second\n43     assert all(len(pt) == 2 for pt in first)\n44 \n",
+    "col_offset": 4,
+    "end_col_offset": 44,
+    "filename": "./tests/test_umap_fallback.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 43,
+    "line_range": [
+      43
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

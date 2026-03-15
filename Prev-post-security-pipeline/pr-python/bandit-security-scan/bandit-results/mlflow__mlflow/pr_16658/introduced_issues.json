@@ -1,0 +1,1050 @@
+[
+  {
+    "code": "5 import os\n6 import subprocess\n7 import sys\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./dev/check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 6,
+    "line_range": [
+      6
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "284         # Fetch the base branch to ensure we have it locally\n285         subprocess.check_call(\n286             [\"git\", \"fetch\", \"origin\", f\"{base_branch}:{base_branch}\"],\n287         )\n288 \n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./dev/check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 285,
+    "line_range": [
+      285,
+      286,
+      287
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "284         # Fetch the base branch to ensure we have it locally\n285         subprocess.check_call(\n286             [\"git\", \"fetch\", \"origin\", f\"{base_branch}:{base_branch}\"],\n287         )\n288 \n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./dev/check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 285,
+    "line_range": [
+      285,
+      286,
+      287
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "288 \n289     result = subprocess.check_output(\n290         [\"git\", \"diff\", \"--name-only\", f\"{base_branch}...HEAD\"], text=True\n291     )\n292     files = [s.strip() for s in result.splitlines()]\n",
+    "col_offset": 13,
+    "end_col_offset": 5,
+    "filename": "./dev/check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 289,
+    "line_range": [
+      289,
+      290,
+      291
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "288 \n289     result = subprocess.check_output(\n290         [\"git\", \"diff\", \"--name-only\", f\"{base_branch}...HEAD\"], text=True\n291     )\n292     files = [s.strip() for s in result.splitlines()]\n",
+    "col_offset": 13,
+    "end_col_offset": 5,
+    "filename": "./dev/check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 289,
+    "line_range": [
+      289,
+      290,
+      291
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "304     try:\n305         return subprocess.check_output([\"git\", \"show\", f\"{revision}:{file_path}\"], text=True)\n306     except subprocess.CalledProcessError as e:\n",
+    "col_offset": 15,
+    "end_col_offset": 93,
+    "filename": "./dev/check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 305,
+    "line_range": [
+      305
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "304     try:\n305         return subprocess.check_output([\"git\", \"show\", f\"{revision}:{file_path}\"], text=True)\n306     except subprocess.CalledProcessError as e:\n",
+    "col_offset": 15,
+    "end_col_offset": 93,
+    "filename": "./dev/check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 305,
+    "line_range": [
+      305
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "13 \n14     assert len(errors) == 0\n15 \n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 14,
+    "line_range": [
+      14
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "24 \n25     assert len(errors) == 1\n26     assert errors[0].message == \"Positional param 'c' was removed.\"\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 25,
+    "line_range": [
+      25
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "25     assert len(errors) == 1\n26     assert errors[0].message == \"Positional param 'c' was removed.\"\n27     assert errors[0].param_name == \"c\"\n",
+    "col_offset": 4,
+    "end_col_offset": 67,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 26,
+    "line_range": [
+      26
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "26     assert errors[0].message == \"Positional param 'c' was removed.\"\n27     assert errors[0].param_name == \"c\"\n28 \n",
+    "col_offset": 4,
+    "end_col_offset": 38,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 27,
+    "line_range": [
+      27
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "37 \n38     assert len(errors) == 1\n39     assert \"Positional param order/name changed: 'a' -> 'x'.\" in errors[0].message\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 38,
+    "line_range": [
+      38
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "38     assert len(errors) == 1\n39     assert \"Positional param order/name changed: 'a' -> 'x'.\" in errors[0].message\n40     assert errors[0].param_name == \"x\"\n",
+    "col_offset": 4,
+    "end_col_offset": 82,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 39,
+    "line_range": [
+      39
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "39     assert \"Positional param order/name changed: 'a' -> 'x'.\" in errors[0].message\n40     assert errors[0].param_name == \"x\"\n41 \n",
+    "col_offset": 4,
+    "end_col_offset": 38,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 40,
+    "line_range": [
+      40
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "50 \n51     assert len(errors) == 1\n52     assert \"Positional param order/name changed: 'a' -> 'x'.\" in errors[0].message\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 51,
+    "line_range": [
+      51
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "51     assert len(errors) == 1\n52     assert \"Positional param order/name changed: 'a' -> 'x'.\" in errors[0].message\n53 \n",
+    "col_offset": 4,
+    "end_col_offset": 82,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 52,
+    "line_range": [
+      52
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "62 \n63     assert len(errors) == 1\n64     assert errors[0].message == \"Optional positional param 'b' became required.\"\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 63,
+    "line_range": [
+      63
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "63     assert len(errors) == 1\n64     assert errors[0].message == \"Optional positional param 'b' became required.\"\n65     assert errors[0].param_name == \"b\"\n",
+    "col_offset": 4,
+    "end_col_offset": 80,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 64,
+    "line_range": [
+      64
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "64     assert errors[0].message == \"Optional positional param 'b' became required.\"\n65     assert errors[0].param_name == \"b\"\n66 \n",
+    "col_offset": 4,
+    "end_col_offset": 38,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 65,
+    "line_range": [
+      65
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "75 \n76     assert len(errors) == 2\n77     assert errors[0].message == \"Optional positional param 'b' became required.\"\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 76,
+    "line_range": [
+      76
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "76     assert len(errors) == 2\n77     assert errors[0].message == \"Optional positional param 'b' became required.\"\n78     assert errors[1].message == \"Optional positional param 'c' became required.\"\n",
+    "col_offset": 4,
+    "end_col_offset": 80,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 77,
+    "line_range": [
+      77
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "77     assert errors[0].message == \"Optional positional param 'b' became required.\"\n78     assert errors[1].message == \"Optional positional param 'c' became required.\"\n79 \n",
+    "col_offset": 4,
+    "end_col_offset": 80,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 78,
+    "line_range": [
+      78
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "88 \n89     assert len(errors) == 1\n90     assert errors[0].message == \"New required positional param 'b' added.\"\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 89,
+    "line_range": [
+      89
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "89     assert len(errors) == 1\n90     assert errors[0].message == \"New required positional param 'b' added.\"\n91     assert errors[0].param_name == \"b\"\n",
+    "col_offset": 4,
+    "end_col_offset": 74,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 90,
+    "line_range": [
+      90
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "90     assert errors[0].message == \"New required positional param 'b' added.\"\n91     assert errors[0].param_name == \"b\"\n92 \n",
+    "col_offset": 4,
+    "end_col_offset": 38,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 91,
+    "line_range": [
+      91
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "101 \n102     assert len(errors) == 0\n103 \n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 102,
+    "line_range": [
+      102
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "112 \n113     assert len(errors) == 1\n114     assert errors[0].message == \"Keyword-only param 'a' was removed.\"\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 113,
+    "line_range": [
+      113
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "113     assert len(errors) == 1\n114     assert errors[0].message == \"Keyword-only param 'a' was removed.\"\n115     assert errors[0].param_name == \"a\"\n",
+    "col_offset": 4,
+    "end_col_offset": 69,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 114,
+    "line_range": [
+      114
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "114     assert errors[0].message == \"Keyword-only param 'a' was removed.\"\n115     assert errors[0].param_name == \"a\"\n116 \n",
+    "col_offset": 4,
+    "end_col_offset": 38,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 115,
+    "line_range": [
+      115
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "125 \n126     assert len(errors) == 2\n127     error_messages = {e.message for e in errors}\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 126,
+    "line_range": [
+      126
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "127     error_messages = {e.message for e in errors}\n128     assert \"Keyword-only param 'a' was removed.\" in error_messages\n129     assert \"Keyword-only param 'c' was removed.\" in error_messages\n",
+    "col_offset": 4,
+    "end_col_offset": 66,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 128,
+    "line_range": [
+      128
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "128     assert \"Keyword-only param 'a' was removed.\" in error_messages\n129     assert \"Keyword-only param 'c' was removed.\" in error_messages\n130 \n",
+    "col_offset": 4,
+    "end_col_offset": 66,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 129,
+    "line_range": [
+      129
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "139 \n140     assert len(errors) == 1\n141     assert errors[0].message == \"Keyword-only param 'a' became required.\"\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 140,
+    "line_range": [
+      140
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "140     assert len(errors) == 1\n141     assert errors[0].message == \"Keyword-only param 'a' became required.\"\n142     assert errors[0].param_name == \"a\"\n",
+    "col_offset": 4,
+    "end_col_offset": 73,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 141,
+    "line_range": [
+      141
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "141     assert errors[0].message == \"Keyword-only param 'a' became required.\"\n142     assert errors[0].param_name == \"a\"\n143 \n",
+    "col_offset": 4,
+    "end_col_offset": 38,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 142,
+    "line_range": [
+      142
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "152 \n153     assert len(errors) == 1\n154     assert errors[0].message == \"New required keyword-only param 'b' added.\"\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 153,
+    "line_range": [
+      153
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "153     assert len(errors) == 1\n154     assert errors[0].message == \"New required keyword-only param 'b' added.\"\n155     assert errors[0].param_name == \"b\"\n",
+    "col_offset": 4,
+    "end_col_offset": 76,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 154,
+    "line_range": [
+      154
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "154     assert errors[0].message == \"New required keyword-only param 'b' added.\"\n155     assert errors[0].param_name == \"b\"\n156 \n",
+    "col_offset": 4,
+    "end_col_offset": 38,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 155,
+    "line_range": [
+      155
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "165 \n166     assert len(errors) == 0\n167 \n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 166,
+    "line_range": [
+      166
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "176 \n177     assert len(errors) == 3\n178     error_messages = [e.message for e in errors]\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 177,
+    "line_range": [
+      177
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "178     error_messages = [e.message for e in errors]\n179     assert any(\"Positional param order/name changed: 'a' -> 'x'.\" in msg for msg in error_messages)\n180     assert any(\"Keyword-only param 'd' was removed.\" in msg for msg in error_messages)\n",
+    "col_offset": 4,
+    "end_col_offset": 99,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 179,
+    "line_range": [
+      179
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "179     assert any(\"Positional param order/name changed: 'a' -> 'x'.\" in msg for msg in error_messages)\n180     assert any(\"Keyword-only param 'd' was removed.\" in msg for msg in error_messages)\n181     assert any(\"New required keyword-only param 'e' added.\" in msg for msg in error_messages)\n",
+    "col_offset": 4,
+    "end_col_offset": 86,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 180,
+    "line_range": [
+      180
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "180     assert any(\"Keyword-only param 'd' was removed.\" in msg for msg in error_messages)\n181     assert any(\"New required keyword-only param 'e' added.\" in msg for msg in error_messages)\n182 \n",
+    "col_offset": 4,
+    "end_col_offset": 93,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 181,
+    "line_range": [
+      181
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "191 \n192     assert len(errors) == 1\n193     assert errors[0].lineno == 1\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 192,
+    "line_range": [
+      192
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "192     assert len(errors) == 1\n193     assert errors[0].lineno == 1\n194     assert errors[0].col_offset > 0\n",
+    "col_offset": 4,
+    "end_col_offset": 32,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 193,
+    "line_range": [
+      193
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "193     assert errors[0].lineno == 1\n194     assert errors[0].col_offset > 0\n195 \n",
+    "col_offset": 4,
+    "end_col_offset": 35,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 194,
+    "line_range": [
+      194
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "204 \n205     assert len(errors) == 1\n206     assert errors[0].message == \"Optional positional param 'b' became required.\"\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 205,
+    "line_range": [
+      205
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "205     assert len(errors) == 1\n206     assert errors[0].message == \"Optional positional param 'b' became required.\"\n207 \n",
+    "col_offset": 4,
+    "end_col_offset": 80,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 206,
+    "line_range": [
+      206
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "216 \n217     assert len(errors) == 1\n218     assert \"Positional param order/name changed: 'a' -> 'b'.\" in errors[0].message\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 217,
+    "line_range": [
+      217
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "217     assert len(errors) == 1\n218     assert \"Positional param order/name changed: 'a' -> 'b'.\" in errors[0].message\n219 \n",
+    "col_offset": 4,
+    "end_col_offset": 82,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 218,
+    "line_range": [
+      218
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "228 \n229     assert len(errors) == 1\n230     assert \"Positional param order/name changed: 'a' -> 'x'.\" in errors[0].message\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 229,
+    "line_range": [
+      229
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "229     assert len(errors) == 1\n230     assert \"Positional param order/name changed: 'a' -> 'x'.\" in errors[0].message\n",
+    "col_offset": 4,
+    "end_col_offset": 82,
+    "filename": "./tests/dev/test_check_function_signatures.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 230,
+    "line_range": [
+      230
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

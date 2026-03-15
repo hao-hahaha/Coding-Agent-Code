@@ -1,0 +1,44 @@
+[
+  {
+    "code": "57                     rec = Fill(**json.loads(line))\n58                 except Exception:\n59                     continue  # skip corrupt lines\n60                 self._apply(rec, persist=False)\n",
+    "col_offset": 16,
+    "end_col_offset": 28,
+    "filename": "./alpha_factory_v1/backend/portfolio.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Continue detected.",
+    "line_number": 58,
+    "line_range": [
+      58,
+      59
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b112_try_except_continue.html",
+    "test_id": "B112",
+    "test_name": "try_except_continue"
+  },
+  {
+    "code": "98                     yield Fill(**json.loads(line))\n99                 except Exception:\n100                     continue\n101 \n",
+    "col_offset": 16,
+    "end_col_offset": 28,
+    "filename": "./alpha_factory_v1/backend/portfolio.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Continue detected.",
+    "line_number": 99,
+    "line_range": [
+      99,
+      100
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b112_try_except_continue.html",
+    "test_id": "B112",
+    "test_name": "try_except_continue"
+  }
+]

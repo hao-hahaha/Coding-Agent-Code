@@ -1,0 +1,146 @@
+[
+  {
+    "code": "42                         bus.alert(f\"{self.agent.name} failed: {exc}\")\n43                     except Exception:  # pragma: no cover - best effort\n44                         pass\n45                 self.error_count += 1\n",
+    "col_offset": 20,
+    "end_col_offset": 28,
+    "filename": "./alpha_factory_v1/backend/orchestrator_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 43,
+    "line_range": [
+      43,
+      44
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "53                         ledger.log(env)\n54                     except Exception:  # pragma: no cover - logging optional\n55                         pass\n56                 if hasattr(bus, \"publish\"):\n",
+    "col_offset": 20,
+    "end_col_offset": 28,
+    "filename": "./alpha_factory_v1/backend/orchestrator_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 54,
+    "line_range": [
+      54,
+      55
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "58                         bus.publish(\"orch\", env)\n59                     except Exception:  # pragma: no cover - publish optional\n60                         pass\n61                 self.last_beat = time.time()\n",
+    "col_offset": 20,
+    "end_col_offset": 28,
+    "filename": "./alpha_factory_v1/backend/orchestrator_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 59,
+    "line_range": [
+      59,
+      60
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "65                         bus.metrics.observe(time.perf_counter() - start)\n66                     except Exception:  # pragma: no cover - metrics optional\n67                         pass\n68             await asyncio.sleep(self.period)\n",
+    "col_offset": 20,
+    "end_col_offset": 28,
+    "filename": "./alpha_factory_v1/backend/orchestrator_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 66,
+    "line_range": [
+      66,
+      67
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "112             if needs_restart:\n113                 delay = random.uniform(0.5, 1.5)\n114                 if r.restart_streak >= backoff_exp_after:\n",
+    "col_offset": 24,
+    "end_col_offset": 48,
+    "filename": "./alpha_factory_v1/backend/orchestrator_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 113,
+    "line_range": [
+      113
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "6 def test_agent_runner_shared() -> None:\n7     assert demo_orchestrator.AgentRunner is orchestrator_utils.AgentRunner\n8     assert core_orchestrator.AgentRunner is orchestrator_utils.AgentRunner\n",
+    "col_offset": 4,
+    "end_col_offset": 74,
+    "filename": "./tests/test_orchestrator_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 7,
+    "line_range": [
+      7
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "7     assert demo_orchestrator.AgentRunner is orchestrator_utils.AgentRunner\n8     assert core_orchestrator.AgentRunner is orchestrator_utils.AgentRunner\n",
+    "col_offset": 4,
+    "end_col_offset": 74,
+    "filename": "./tests/test_orchestrator_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 8,
+    "line_range": [
+      8
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

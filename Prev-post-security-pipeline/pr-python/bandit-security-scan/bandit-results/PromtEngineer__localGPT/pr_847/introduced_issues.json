@@ -1,0 +1,22 @@
+[
+  {
+    "code": "22         try:\n23             self.tokenizer = AutoTokenizer.from_pretrained(repo_id, trust_remote_code=True)\n24         except Exception as e:\n",
+    "col_offset": 29,
+    "end_col_offset": 91,
+    "filename": "./rag_system/ingestion/chunking.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 494,
+      "link": "https://cwe.mitre.org/data/definitions/494.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Unsafe Hugging Face Hub download without revision pinning in from_pretrained()",
+    "line_number": 23,
+    "line_range": [
+      23
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b615_huggingface_unsafe_download.html",
+    "test_id": "B615",
+    "test_name": "huggingface_unsafe_download"
+  }
+]

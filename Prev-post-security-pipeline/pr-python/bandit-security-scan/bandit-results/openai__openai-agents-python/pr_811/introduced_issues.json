@@ -1,0 +1,66 @@
+[
+  {
+    "code": "21     output = capsys.readouterr().out\n22     assert \"hello\" in output\n23     assert \"good\" in output\n",
+    "col_offset": 4,
+    "end_col_offset": 28,
+    "filename": "./tests/test_repl.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 22,
+    "line_range": [
+      22
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "22     assert \"hello\" in output\n23     assert \"good\" in output\n24     assert model.last_turn_args[\"input\"] == [\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/test_repl.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 23,
+    "line_range": [
+      23
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "23     assert \"good\" in output\n24     assert model.last_turn_args[\"input\"] == [\n25         get_text_input_item(\"Hi\"),\n26         get_text_message(\"hello\").model_dump(exclude_unset=True),\n27         get_text_input_item(\"How are you?\"),\n28     ]\n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/test_repl.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 24,
+    "line_range": [
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

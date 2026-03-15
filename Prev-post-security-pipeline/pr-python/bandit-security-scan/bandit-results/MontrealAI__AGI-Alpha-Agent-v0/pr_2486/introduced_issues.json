@@ -1,0 +1,27 @@
+[
+  {
+    "code": "50             \"ANTHROPIC_API_KEY\": \"y\",\n51             \"LLAMA_MODEL_PATH\": \"/tmp/model.bin\",\n52         }\n53         with mock.patch.dict(os.environ, env, clear=True):\n54             self.assertEqual(self.af._auto_select_model(), \"foo\")\n55 \n56     def test_auto_select_model_fallbacks(self) -> None:\n57         combos = [\n",
+    "col_offset": 32,
+    "end_col_offset": 48,
+    "filename": "./tests/test_agent_factory.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 51,
+    "line_range": [
+      47,
+      48,
+      49,
+      50,
+      51,
+      52
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  }
+]

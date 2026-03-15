@@ -1,0 +1,22 @@
+[
+  {
+    "code": "45     try:\n46         request.urlopen(f\"{base}/api/tags\", timeout=3)\n47     except Exception as exc:  # pragma: no cover - network check\n",
+    "col_offset": 8,
+    "end_col_offset": 54,
+    "filename": "./alpha_factory_v1/demos/macro_sentinel/agent_macro_entrypoint.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 22,
+      "link": "https://cwe.mitre.org/data/definitions/22.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.",
+    "line_number": 46,
+    "line_range": [
+      46
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b310-urllib-urlopen",
+    "test_id": "B310",
+    "test_name": "blacklist"
+  }
+]

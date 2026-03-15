@@ -1,0 +1,22 @@
+[
+  {
+    "code": "102             # Create the db request query.\n103             msgId = random.randint(100000, 99999999)\n104             obj = {\n",
+    "col_offset": 20,
+    "end_col_offset": 52,
+    "filename": "./moonraker_octoeverywhere/moonrakercredentialmanager.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 103,
+    "line_range": [
+      103
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  }
+]

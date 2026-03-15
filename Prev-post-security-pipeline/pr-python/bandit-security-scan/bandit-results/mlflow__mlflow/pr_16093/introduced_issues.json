@@ -1,0 +1,82 @@
+[
+  {
+    "code": "24         trace = mlflow.get_trace(trace_id)\n25         assert \"mlflow.linkedPrompts\" in trace.info.tags\n26 \n",
+    "col_offset": 8,
+    "end_col_offset": 56,
+    "filename": "./tests/tracing/test_tracing_client.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 25,
+    "line_range": [
+      25
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "28         linked_prompts = json.loads(trace.info.tags[\"mlflow.linkedPrompts\"])\n29         assert len(linked_prompts) == 1\n30         assert linked_prompts[0][\"name\"] == \"test_prompt\"\n",
+    "col_offset": 8,
+    "end_col_offset": 39,
+    "filename": "./tests/tracing/test_tracing_client.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 29,
+    "line_range": [
+      29
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "29         assert len(linked_prompts) == 1\n30         assert linked_prompts[0][\"name\"] == \"test_prompt\"\n31         assert linked_prompts[0][\"version\"] == \"1\"\n",
+    "col_offset": 8,
+    "end_col_offset": 57,
+    "filename": "./tests/tracing/test_tracing_client.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 30,
+    "line_range": [
+      30
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "30         assert linked_prompts[0][\"name\"] == \"test_prompt\"\n31         assert linked_prompts[0][\"version\"] == \"1\"\n",
+    "col_offset": 8,
+    "end_col_offset": 50,
+    "filename": "./tests/tracing/test_tracing_client.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 31,
+    "line_range": [
+      31
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

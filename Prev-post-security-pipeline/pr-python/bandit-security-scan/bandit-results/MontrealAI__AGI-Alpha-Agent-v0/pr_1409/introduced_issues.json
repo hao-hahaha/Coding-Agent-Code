@@ -1,0 +1,308 @@
+[
+  {
+    "code": "7 def test_meme_reuse() -> None:\n8     rng = random.Random(0)\n9     op = SelfRewriteOperator(steps=3, rng=rng, templates=[\"meme\"], reuse_rate=1.0)\n",
+    "col_offset": 10,
+    "end_col_offset": 26,
+    "filename": "./tests/test_meme_reuse.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 8,
+    "line_range": [
+      8
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "10     result = op(\"improve quick test\")\n11     assert result == \"meme\"\n12     assert op.reuse_count >= 1\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/test_meme_reuse.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 11,
+    "line_range": [
+      11
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "11     assert result == \"meme\"\n12     assert op.reuse_count >= 1\n13 \n",
+    "col_offset": 4,
+    "end_col_offset": 30,
+    "filename": "./tests/test_meme_reuse.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 12,
+    "line_range": [
+      12
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "15 def test_meme_disabled() -> None:\n16     rng = random.Random(0)\n17     op = SelfRewriteOperator(steps=3, rng=rng, templates=[\"meme\"], reuse_rate=0.0)\n",
+    "col_offset": 10,
+    "end_col_offset": 26,
+    "filename": "./tests/test_meme_reuse.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 16,
+    "line_range": [
+      16
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "18     result = op(\"improve quick test\")\n19     assert result != \"meme\"\n20 \n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/test_meme_reuse.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 19,
+    "line_range": [
+      19
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "22 def test_performance_drop() -> None:\n23     rng1 = random.Random(1)\n24     op_good = SelfRewriteOperator(steps=1, rng=rng1, templates=[\"meme\"], reuse_rate=1.0)\n",
+    "col_offset": 11,
+    "end_col_offset": 27,
+    "filename": "./tests/test_meme_reuse.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 23,
+    "line_range": [
+      23
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "26 \n27     rng2 = random.Random(1)\n28     op_bad = SelfRewriteOperator(steps=1, rng=rng2, templates=[\"meme\"], reuse_rate=0.0)\n",
+    "col_offset": 11,
+    "end_col_offset": 27,
+    "filename": "./tests/test_meme_reuse.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 27,
+    "line_range": [
+      27
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "29     score_bad = len(op_bad(\"improve quick test\"))\n30     assert score_good > score_bad\n",
+    "col_offset": 4,
+    "end_col_offset": 33,
+    "filename": "./tests/test_meme_reuse.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 30,
+    "line_range": [
+      30
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "5 import shutil\n6 import subprocess\n7 from pathlib import Path\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tests/test_memeplex_ts.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 6,
+    "line_range": [
+      6
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "15     js_out = tmp_path / 'memeplex.js'\n16     subprocess.run(\n17         ['tsc', '--target', 'es2020', '--module', 'es2020', MEMEPLEX_TS, '--outFile', js_out],\n18         check=True,\n19     )\n20     script = tmp_path / 'run.mjs'\n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/test_memeplex_ts.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 16,
+    "line_range": [
+      16,
+      17,
+      18,
+      19
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "15     js_out = tmp_path / 'memeplex.js'\n16     subprocess.run(\n17         ['tsc', '--target', 'es2020', '--module', 'es2020', MEMEPLEX_TS, '--outFile', js_out],\n18         check=True,\n19     )\n20     script = tmp_path / 'run.mjs'\n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/test_memeplex_ts.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 16,
+    "line_range": [
+      16,
+      17,
+      18,
+      19
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "31     )\n32     res = subprocess.run(['node', script], capture_output=True, text=True, check=True)\n33     data = json.loads(res.stdout)\n",
+    "col_offset": 10,
+    "end_col_offset": 86,
+    "filename": "./tests/test_memeplex_ts.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 32,
+    "line_range": [
+      32
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "31     )\n32     res = subprocess.run(['node', script], capture_output=True, text=True, check=True)\n33     data = json.loads(res.stdout)\n",
+    "col_offset": 10,
+    "end_col_offset": 86,
+    "filename": "./tests/test_memeplex_ts.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 32,
+    "line_range": [
+      32
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "33     data = json.loads(res.stdout)\n34     assert len(data) == 1\n35     assert data[0]['count'] == 3\n",
+    "col_offset": 4,
+    "end_col_offset": 25,
+    "filename": "./tests/test_memeplex_ts.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 34,
+    "line_range": [
+      34
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "34     assert len(data) == 1\n35     assert data[0]['count'] == 3\n",
+    "col_offset": 4,
+    "end_col_offset": 32,
+    "filename": "./tests/test_memeplex_ts.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 35,
+    "line_range": [
+      35
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

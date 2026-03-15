@@ -1,0 +1,62 @@
+[
+  {
+    "code": "22         self.steps = steps\n23         self._rng = rng or random.Random()\n24         self._counter = 0\n",
+    "col_offset": 27,
+    "end_col_offset": 42,
+    "filename": "./src/agents/guards/embedding_orthogonaliser.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 23,
+    "line_range": [
+      23
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "14     vec = rng.normal(size=32).astype(\"float32\")\n15     ortho = EmbeddingOrthogonaliser(dim=32, steps=5000, rng=random.Random(42))\n16     proj = ortho.project(vec)\n",
+    "col_offset": 60,
+    "end_col_offset": 77,
+    "filename": "./tests/test_embedding_orthogonaliser.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 15,
+    "line_range": [
+      15
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "16     proj = ortho.project(vec)\n17     assert cosine(vec, proj) < 0.1\n",
+    "col_offset": 4,
+    "end_col_offset": 34,
+    "filename": "./tests/test_embedding_orthogonaliser.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 17,
+    "line_range": [
+      17
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

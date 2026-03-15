@@ -1,0 +1,22 @@
+[
+  {
+    "code": "7 def random_confidences(n: int) -> List[float]:\n8     return [round(random.uniform(0.5, 1.0), 2) for _ in range(n)]\n",
+    "col_offset": 18,
+    "end_col_offset": 42,
+    "filename": "./servers/server_clear_thought/core/utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 8,
+    "line_range": [
+      8
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  }
+]

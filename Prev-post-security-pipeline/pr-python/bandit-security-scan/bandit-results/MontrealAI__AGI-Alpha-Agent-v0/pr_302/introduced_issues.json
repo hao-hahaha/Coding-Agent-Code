@@ -1,0 +1,44 @@
+[
+  {
+    "code": "379                 return heur(obs)\n380             except Exception:\n381                 pass\n382     return {\"action\": {\"id\": 0}}\n",
+    "col_offset": 12,
+    "end_col_offset": 20,
+    "filename": "./alpha_factory_v1/demos/omni_factory_demo/omni_factory_demo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 380,
+    "line_range": [
+      380,
+      381
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "404                         mod.register()  # type: ignore[misc]\n405                     except Exception:\n406                         pass\n407                 mods.append(mod)\n",
+    "col_offset": 20,
+    "end_col_offset": 28,
+    "filename": "./alpha_factory_v1/demos/omni_factory_demo/omni_factory_demo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 405,
+    "line_range": [
+      405,
+      406
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  }
+]

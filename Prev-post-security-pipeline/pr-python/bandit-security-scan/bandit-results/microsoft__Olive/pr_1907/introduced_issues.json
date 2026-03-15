@@ -1,0 +1,502 @@
+[
+  {
+    "code": "52         for func in api_functions:\n53             assert callable(func), f\"{func.__name__} should be callable\"\n54 \n",
+    "col_offset": 12,
+    "end_col_offset": 72,
+    "filename": "./test/unit_test/cli/test_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 53,
+    "line_range": [
+      53
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "61             run_sig = inspect.signature(run)\n62             assert \"config\" in run_sig.parameters\n63             assert \"input_model\" in run_sig.parameters\n",
+    "col_offset": 12,
+    "end_col_offset": 49,
+    "filename": "./test/unit_test/cli/test_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 62,
+    "line_range": [
+      62
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "62             assert \"config\" in run_sig.parameters\n63             assert \"input_model\" in run_sig.parameters\n64             assert \"output_path\" in run_sig.parameters\n",
+    "col_offset": 12,
+    "end_col_offset": 54,
+    "filename": "./test/unit_test/cli/test_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 63,
+    "line_range": [
+      63
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "63             assert \"input_model\" in run_sig.parameters\n64             assert \"output_path\" in run_sig.parameters\n65 \n",
+    "col_offset": 12,
+    "end_col_offset": 54,
+    "filename": "./test/unit_test/cli/test_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 64,
+    "line_range": [
+      64
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "67             auto_opt_sig = inspect.signature(auto_opt)\n68             assert \"model_path\" in auto_opt_sig.parameters\n69             assert \"output_path\" in auto_opt_sig.parameters\n",
+    "col_offset": 12,
+    "end_col_offset": 58,
+    "filename": "./test/unit_test/cli/test_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 68,
+    "line_range": [
+      68
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "68             assert \"model_path\" in auto_opt_sig.parameters\n69             assert \"output_path\" in auto_opt_sig.parameters\n70             assert \"device\" in auto_opt_sig.parameters\n",
+    "col_offset": 12,
+    "end_col_offset": 59,
+    "filename": "./test/unit_test/cli/test_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 69,
+    "line_range": [
+      69
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "69             assert \"output_path\" in auto_opt_sig.parameters\n70             assert \"device\" in auto_opt_sig.parameters\n71             assert \"provider\" in auto_opt_sig.parameters\n",
+    "col_offset": 12,
+    "end_col_offset": 54,
+    "filename": "./test/unit_test/cli/test_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 70,
+    "line_range": [
+      70
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "70             assert \"device\" in auto_opt_sig.parameters\n71             assert \"provider\" in auto_opt_sig.parameters\n72 \n",
+    "col_offset": 12,
+    "end_col_offset": 56,
+    "filename": "./test/unit_test/cli/test_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 71,
+    "line_range": [
+      71
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "74             finetune_sig = inspect.signature(finetune)\n75             assert \"model_path\" in finetune_sig.parameters\n76             assert \"method\" in finetune_sig.parameters\n",
+    "col_offset": 12,
+    "end_col_offset": 58,
+    "filename": "./test/unit_test/cli/test_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 75,
+    "line_range": [
+      75
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "75             assert \"model_path\" in finetune_sig.parameters\n76             assert \"method\" in finetune_sig.parameters\n77             assert \"lora_r\" in finetune_sig.parameters\n",
+    "col_offset": 12,
+    "end_col_offset": 54,
+    "filename": "./test/unit_test/cli/test_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 76,
+    "line_range": [
+      76
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "76             assert \"method\" in finetune_sig.parameters\n77             assert \"lora_r\" in finetune_sig.parameters\n78 \n",
+    "col_offset": 12,
+    "end_col_offset": 54,
+    "filename": "./test/unit_test/cli/test_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 77,
+    "line_range": [
+      77
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "80             quantize_sig = inspect.signature(quantize)\n81             assert \"model_path\" in quantize_sig.parameters\n82             assert \"algorithm\" in quantize_sig.parameters\n",
+    "col_offset": 12,
+    "end_col_offset": 58,
+    "filename": "./test/unit_test/cli/test_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 81,
+    "line_range": [
+      81
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "81             assert \"model_path\" in quantize_sig.parameters\n82             assert \"algorithm\" in quantize_sig.parameters\n83             assert \"precision\" in quantize_sig.parameters\n",
+    "col_offset": 12,
+    "end_col_offset": 57,
+    "filename": "./test/unit_test/cli/test_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 82,
+    "line_range": [
+      82
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "82             assert \"algorithm\" in quantize_sig.parameters\n83             assert \"precision\" in quantize_sig.parameters\n84 \n",
+    "col_offset": 12,
+    "end_col_offset": 57,
+    "filename": "./test/unit_test/cli/test_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 83,
+    "line_range": [
+      83
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "103             mock_olive_run.assert_called_once()\n104             assert result is mock_output\n105 \n",
+    "col_offset": 12,
+    "end_col_offset": 40,
+    "filename": "./test/unit_test/cli/test_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 104,
+    "line_range": [
+      104
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "126             mock_command.run.assert_called_once()\n127             assert result is mock_output\n128 \n",
+    "col_offset": 12,
+    "end_col_offset": 40,
+    "filename": "./test/unit_test/cli/test_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 127,
+    "line_range": [
+      127
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "149             mock_command.run.assert_called_once()\n150             assert result is mock_output\n151 \n",
+    "col_offset": 12,
+    "end_col_offset": 40,
+    "filename": "./test/unit_test/cli/test_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 150,
+    "line_range": [
+      150
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "161             convert_sig = inspect.signature(convert_adapters)\n162             assert \"adapter_path\" in convert_sig.parameters\n163             assert \"output_path\" in convert_sig.parameters\n",
+    "col_offset": 12,
+    "end_col_offset": 59,
+    "filename": "./test/unit_test/cli/test_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 162,
+    "line_range": [
+      162
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "162             assert \"adapter_path\" in convert_sig.parameters\n163             assert \"output_path\" in convert_sig.parameters\n164 \n",
+    "col_offset": 12,
+    "end_col_offset": 58,
+    "filename": "./test/unit_test/cli/test_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 163,
+    "line_range": [
+      163
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "173             # Check that functions have docstrings\n174             assert auto_opt.__doc__ is not None, \"auto_opt should have a docstring\"\n175             assert finetune.__doc__ is not None, \"finetune should have a docstring\"\n",
+    "col_offset": 12,
+    "end_col_offset": 83,
+    "filename": "./test/unit_test/cli/test_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 174,
+    "line_range": [
+      174
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "174             assert auto_opt.__doc__ is not None, \"auto_opt should have a docstring\"\n175             assert finetune.__doc__ is not None, \"finetune should have a docstring\"\n176             assert run.__doc__ is not None, \"run should have a docstring\"\n",
+    "col_offset": 12,
+    "end_col_offset": 83,
+    "filename": "./test/unit_test/cli/test_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 175,
+    "line_range": [
+      175
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "175             assert finetune.__doc__ is not None, \"finetune should have a docstring\"\n176             assert run.__doc__ is not None, \"run should have a docstring\"\n177 \n",
+    "col_offset": 12,
+    "end_col_offset": 73,
+    "filename": "./test/unit_test/cli/test_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 176,
+    "line_range": [
+      176
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "178             # Check docstring content\n179             assert \"Args:\" in auto_opt.__doc__, \"auto_opt docstring should have Args section\"\n180             assert \"Returns:\" in auto_opt.__doc__, \"auto_opt docstring should have Returns section\"\n",
+    "col_offset": 12,
+    "end_col_offset": 93,
+    "filename": "./test/unit_test/cli/test_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 179,
+    "line_range": [
+      179
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "179             assert \"Args:\" in auto_opt.__doc__, \"auto_opt docstring should have Args section\"\n180             assert \"Returns:\" in auto_opt.__doc__, \"auto_opt docstring should have Returns section\"\n181             assert \"WorkflowOutput\" in auto_opt.__doc__, \"auto_opt should mention WorkflowOutput\"\n",
+    "col_offset": 12,
+    "end_col_offset": 99,
+    "filename": "./test/unit_test/cli/test_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 180,
+    "line_range": [
+      180
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "180             assert \"Returns:\" in auto_opt.__doc__, \"auto_opt docstring should have Returns section\"\n181             assert \"WorkflowOutput\" in auto_opt.__doc__, \"auto_opt should mention WorkflowOutput\"\n182 \n",
+    "col_offset": 12,
+    "end_col_offset": 97,
+    "filename": "./test/unit_test/cli/test_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 181,
+    "line_range": [
+      181
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

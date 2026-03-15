@@ -1,0 +1,122 @@
+[
+  {
+    "code": "21     traj = _simulate(2, \"logistic\", 2, 1)\n22     assert len(traj) == 2\n23     assert isinstance(traj[0], forecast.TrajectoryPoint)\n",
+    "col_offset": 4,
+    "end_col_offset": 25,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_web_app.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 22,
+    "line_range": [
+      22
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "22     assert len(traj) == 2\n23     assert isinstance(traj[0], forecast.TrajectoryPoint)\n24 \n",
+    "col_offset": 4,
+    "end_col_offset": 56,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_web_app.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 23,
+    "line_range": [
+      23
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "28     df_time = _timeline_df(traj)\n29     assert set(df_time.columns) == {\"year\", \"sector\", \"energy\", \"disrupted\"}\n30     assert len(df_time) == 4\n",
+    "col_offset": 4,
+    "end_col_offset": 76,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_web_app.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 29,
+    "line_range": [
+      29
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "29     assert set(df_time.columns) == {\"year\", \"sector\", \"energy\", \"disrupted\"}\n30     assert len(df_time) == 4\n31 \n",
+    "col_offset": 4,
+    "end_col_offset": 28,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_web_app.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 30,
+    "line_range": [
+      30
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "32     df_dis = _disruption_df(traj)\n33     assert set(df_dis.columns) == {\"sector\", \"year\"}\n34     assert len(df_dis) <= 2\n",
+    "col_offset": 4,
+    "end_col_offset": 52,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_web_app.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 33,
+    "line_range": [
+      33
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "33     assert set(df_dis.columns) == {\"sector\", \"year\"}\n34     assert len(df_dis) <= 2\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_web_app.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 34,
+    "line_range": [
+      34
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

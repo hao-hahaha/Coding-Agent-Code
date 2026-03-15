@@ -1,0 +1,102 @@
+[
+  {
+    "code": "7     t.add_usage(500, 500, model=\"o3\")\n8     assert t.token_count == 1000\n9     assert pytest.approx(t.cost, 0.0001) == 0.01\n",
+    "col_offset": 4,
+    "end_col_offset": 32,
+    "filename": "./tests/unit/test_telemetry_collector.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 8,
+    "line_range": [
+      8
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "8     assert t.token_count == 1000\n9     assert pytest.approx(t.cost, 0.0001) == 0.01\n10 \n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/unit/test_telemetry_collector.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 9,
+    "line_range": [
+      9
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "22     line = t.summary_line()\n23     assert \"Telemetry:\" in line\n24     assert \"cost=$\" in line\n",
+    "col_offset": 4,
+    "end_col_offset": 31,
+    "filename": "./tests/unit/test_telemetry_collector.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 23,
+    "line_range": [
+      23
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "23     assert \"Telemetry:\" in line\n24     assert \"cost=$\" in line\n25     assert \"tokens=0\" in line\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/unit/test_telemetry_collector.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 24,
+    "line_range": [
+      24
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "24     assert \"cost=$\" in line\n25     assert \"tokens=0\" in line\n",
+    "col_offset": 4,
+    "end_col_offset": 29,
+    "filename": "./tests/unit/test_telemetry_collector.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 25,
+    "line_range": [
+      25
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

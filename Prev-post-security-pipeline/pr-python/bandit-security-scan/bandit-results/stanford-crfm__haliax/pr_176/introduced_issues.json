@@ -1,0 +1,124 @@
+[
+  {
+    "code": "151             jax.debug.visualize_sharding([ax.size for ax in axes], sharding)\n152         except Exception:\n153             pass\n154 \n",
+    "col_offset": 8,
+    "end_col_offset": 16,
+    "filename": "./src/haliax/debug.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 152,
+    "line_range": [
+      152,
+      153
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "182                     jax.debug.visualize_sharding(arr.shape, sh)\n183                 except Exception:\n184                     pass\n185 \n",
+    "col_offset": 16,
+    "end_col_offset": 24,
+    "filename": "./src/haliax/debug.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 183,
+    "line_range": [
+      183,
+      184
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "31     out = capsys.readouterr().out\n32     assert \"dim1\" in out and \"dim2\" in out and \"dim3\" in out\n33 \n",
+    "col_offset": 4,
+    "end_col_offset": 60,
+    "filename": "./tests/test_visualize_sharding.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 32,
+    "line_range": [
+      32
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "47     out = capsys.readouterr().out\n48     assert \"dim1\" in out\n49 \n",
+    "col_offset": 4,
+    "end_col_offset": 24,
+    "filename": "./tests/test_visualize_sharding.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 48,
+    "line_range": [
+      48
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "54     out = capsys.readouterr().out\n55     assert out.strip() != \"\"\n56 \n",
+    "col_offset": 4,
+    "end_col_offset": 28,
+    "filename": "./tests/test_visualize_sharding.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 55,
+    "line_range": [
+      55
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "66     out = capsys.readouterr().out\n67     assert \"dim2\" in out\n",
+    "col_offset": 4,
+    "end_col_offset": 24,
+    "filename": "./tests/test_visualize_sharding.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 67,
+    "line_range": [
+      67
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

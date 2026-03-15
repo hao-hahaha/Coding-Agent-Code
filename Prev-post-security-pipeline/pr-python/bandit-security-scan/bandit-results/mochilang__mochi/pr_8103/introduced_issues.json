@@ -1,0 +1,136 @@
+[
+  {
+    "code": "68                 return _get(it, name)\n69             except Exception:\n70                 pass\n71     raise Exception(\"field not found: \" + name)\n",
+    "col_offset": 12,
+    "end_col_offset": 20,
+    "filename": "./tests/machine/x/python/q1.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 69,
+    "line_range": [
+      69,
+      70
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "201 def test_Q1_aggregates_revenue_and_quantity_by_returnflag___linestatus():\n202     assert result == [\n203         {\n204             \"returnflag\": \"N\",\n205             \"linestatus\": \"O\",\n206             \"sum_qty\": 53,\n207             \"sum_base_price\": 3000,\n208             \"sum_disc_price\": 950 + 1800,\n209             \"sum_charge\": 950 * 1.07 + 1800 * 1.05,\n210             \"avg_qty\": 26.5,\n211             \"avg_price\": 1500,\n212             \"avg_disc\": 0.07500000000000001,\n213             \"count_order\": 2,\n214         }\n215     ]\n216 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/machine/x/python/q1.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 202,
+    "line_range": [
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "177 def test_Q2_returns_only_supplier_with_min_cost_in_Europe_for_brass_part():\n178     assert result == [\n179         {\n180             \"s_acctbal\": 1000,\n181             \"s_name\": \"BestSupplier\",\n182             \"n_name\": \"FRANCE\",\n183             \"p_partkey\": 1000,\n184             \"p_mfgr\": \"M1\",\n185             \"s_address\": \"123 Rue\",\n186             \"s_phone\": \"123\",\n187             \"s_comment\": \"Fast and reliable\",\n188             \"ps_supplycost\": 10,\n189         }\n190     ]\n191 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/machine/x/python/q2.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 178,
+    "line_range": [
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "24                 return _get(it, name)\n25             except Exception:\n26                 pass\n27     raise Exception(\"field not found: \" + name)\n",
+    "col_offset": 12,
+    "end_col_offset": 20,
+    "filename": "./tests/machine/x/python/q3.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 25,
+    "line_range": [
+      25,
+      26
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "163 def test_Q3_returns_revenue_per_order_with_correct_priority():\n164     assert order_line_join == [\n165         {\n166             \"l_orderkey\": 100,\n167             \"revenue\": 1000 * 0.95 + 500,\n168             \"o_orderdate\": \"1995-03-14\",\n169             \"o_shippriority\": 1,\n170         }\n171     ]\n172 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/machine/x/python/q3.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 164,
+    "line_range": [
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

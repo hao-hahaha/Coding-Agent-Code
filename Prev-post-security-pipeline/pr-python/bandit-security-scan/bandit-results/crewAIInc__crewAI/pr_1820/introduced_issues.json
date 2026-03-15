@@ -1,0 +1,44 @@
+[
+  {
+    "code": "50     if should_match:\n51         assert \"coworker mentioned not found\" not in result.lower(), \\\n52             f\"Should find agent with role name: {role_name}\"\n53     else:\n",
+    "col_offset": 8,
+    "end_col_offset": 60,
+    "filename": "./tests/test_manager_llm_delegation.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 51,
+    "line_range": [
+      51,
+      52
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "53     else:\n54         assert \"coworker mentioned not found\" in result.lower(), \\\n55             f\"Should not find agent with role name: {role_name}\"\n",
+    "col_offset": 8,
+    "end_col_offset": 64,
+    "filename": "./tests/test_manager_llm_delegation.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 54,
+    "line_range": [
+      54,
+      55
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

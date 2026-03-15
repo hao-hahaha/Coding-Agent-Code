@@ -1,0 +1,142 @@
+[
+  {
+    "code": "32     expected = f\"{CFG.self_improve.user}\\n{template.format(logs=logs)}\"\n33     assert patch == \"patch-local\"\n34     assert calls[\"prompt\"] == expected\n",
+    "col_offset": 4,
+    "end_col_offset": 33,
+    "filename": "./tests/test_self_edit_prompting.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 33,
+    "line_range": [
+      33
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "33     assert patch == \"patch-local\"\n34     assert calls[\"prompt\"] == expected\n35     assert calls[\"cfg\"] is CFG\n",
+    "col_offset": 4,
+    "end_col_offset": 38,
+    "filename": "./tests/test_self_edit_prompting.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 34,
+    "line_range": [
+      34
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "34     assert calls[\"prompt\"] == expected\n35     assert calls[\"cfg\"] is CFG\n36 \n",
+    "col_offset": 4,
+    "end_col_offset": 30,
+    "filename": "./tests/test_self_edit_prompting.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 35,
+    "line_range": [
+      35
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "40     out = capsys.readouterr().out.strip()\n41     assert out == \"patch-local\"\n42 \n",
+    "col_offset": 4,
+    "end_col_offset": 31,
+    "filename": "./tests/test_self_edit_prompting.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 41,
+    "line_range": [
+      41
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "62 \n63     assert patch == \"patch-prov\"\n64     assert calls[\"prompt\"] == expected\n",
+    "col_offset": 4,
+    "end_col_offset": 32,
+    "filename": "./tests/test_self_edit_prompting.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 63,
+    "line_range": [
+      63
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "63     assert patch == \"patch-prov\"\n64     assert calls[\"prompt\"] == expected\n65     assert calls[\"system\"] == CFG.self_improve.system\n",
+    "col_offset": 4,
+    "end_col_offset": 38,
+    "filename": "./tests/test_self_edit_prompting.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 64,
+    "line_range": [
+      64
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "64     assert calls[\"prompt\"] == expected\n65     assert calls[\"system\"] == CFG.self_improve.system\n",
+    "col_offset": 4,
+    "end_col_offset": 53,
+    "filename": "./tests/test_self_edit_prompting.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 65,
+    "line_range": [
+      65
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

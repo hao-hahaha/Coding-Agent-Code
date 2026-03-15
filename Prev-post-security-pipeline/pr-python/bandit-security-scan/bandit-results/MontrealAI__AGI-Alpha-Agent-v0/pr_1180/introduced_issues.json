@@ -1,0 +1,62 @@
+[
+  {
+    "code": "14         self.bounds = bounds\n15         self.rng = rng or random.Random()\n16 \n",
+    "col_offset": 26,
+    "end_col_offset": 41,
+    "filename": "./src/simulation/mats_ops.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 15,
+    "line_range": [
+      15
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "25     def __init__(self, rng: random.Random | None = None) -> None:\n26         self.rng = rng or random.Random()\n27         self.synonyms = {\"improve\": \"enhance\", \"quick\": \"fast\", \"test\": \"trial\"}\n",
+    "col_offset": 26,
+    "end_col_offset": 41,
+    "filename": "./src/simulation/mats_ops.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 26,
+    "line_range": [
+      26
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "23     def test_gaussian_param_bounds_and_diversity(self) -> None:\n24         rng = random.Random(123)\n25         pop = [mats.Individual([rng.uniform(-0.05, 0.05) for _ in range(2)]) for _ in range(10)]\n",
+    "col_offset": 14,
+    "end_col_offset": 32,
+    "filename": "./tests/test_mats_ops.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 24,
+    "line_range": [
+      24
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  }
+]

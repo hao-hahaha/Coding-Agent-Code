@@ -1,0 +1,42 @@
+[
+  {
+    "code": "119     base = _run_main(monkeypatch, openai_key=\"dummy\", base_url=\"http://ollama\")\n120     assert base is None\n121 \n",
+    "col_offset": 4,
+    "end_col_offset": 23,
+    "filename": "./tests/test_agent_experience_entrypoint.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 120,
+    "line_range": [
+      120
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "124     base = _run_main(monkeypatch, openai_key=\"\", base_url=\"http://ollama\")\n125     assert base == \"http://ollama\"\n",
+    "col_offset": 4,
+    "end_col_offset": 34,
+    "filename": "./tests/test_agent_experience_entrypoint.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 125,
+    "line_range": [
+      125
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

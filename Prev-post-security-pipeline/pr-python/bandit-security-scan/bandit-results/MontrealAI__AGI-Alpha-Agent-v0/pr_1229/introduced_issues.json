@@ -1,0 +1,42 @@
+[
+  {
+    "code": "52     asyncio.run(agent.handle(env))\n53     assert not called\n",
+    "col_offset": 4,
+    "end_col_offset": 21,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_codegen_safety.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 53,
+    "line_range": [
+      53
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "14     orch.verify_ledger(original, \"A\")\n15     assert orch.registry.stakes[\"A\"] == 90\n",
+    "col_offset": 4,
+    "end_col_offset": 42,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_ledger_verify.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 15,
+    "line_range": [
+      15
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

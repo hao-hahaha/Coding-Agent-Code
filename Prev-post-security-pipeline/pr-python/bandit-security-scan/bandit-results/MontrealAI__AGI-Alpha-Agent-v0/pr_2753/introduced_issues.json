@@ -1,0 +1,102 @@
+[
+  {
+    "code": "12 \n13 import subprocess\n14 import sys\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./scripts/open_demo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 13,
+    "line_range": [
+      13
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "27     try:\n28         subprocess.run([str(script)], check=True)\n29     except Exception:\n",
+    "col_offset": 8,
+    "end_col_offset": 49,
+    "filename": "./scripts/open_demo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 28,
+    "line_range": [
+      28
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "34 def _demo_url(demo: str) -> str:\n35     remote = subprocess.check_output([\"git\", \"config\", \"--get\", \"remote.origin.url\"], text=True).strip()\n36     repo_path = remote.split(\"github.com\")[-1].lstrip(\":/\")\n",
+    "col_offset": 13,
+    "end_col_offset": 96,
+    "filename": "./scripts/open_demo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 35,
+    "line_range": [
+      35
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "34 def _demo_url(demo: str) -> str:\n35     remote = subprocess.check_output([\"git\", \"config\", \"--get\", \"remote.origin.url\"], text=True).strip()\n36     repo_path = remote.split(\"github.com\")[-1].lstrip(\":/\")\n",
+    "col_offset": 13,
+    "end_col_offset": 96,
+    "filename": "./scripts/open_demo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 35,
+    "line_range": [
+      35
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "44         req = Request(url, method=\"HEAD\")\n45         with urlopen(req, timeout=3) as resp:\n46             status = getattr(resp, \"status\", None)\n",
+    "col_offset": 13,
+    "end_col_offset": 36,
+    "filename": "./scripts/open_demo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 22,
+      "link": "https://cwe.mitre.org/data/definitions/22.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.",
+    "line_number": 45,
+    "line_range": [
+      45
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b310-urllib-urlopen",
+    "test_id": "B310",
+    "test_name": "blacklist"
+  }
+]

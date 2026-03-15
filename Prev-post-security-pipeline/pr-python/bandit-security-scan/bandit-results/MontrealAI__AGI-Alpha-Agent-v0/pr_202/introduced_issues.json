@@ -1,0 +1,42 @@
+[
+  {
+    "code": "4 import sys\n5 import subprocess\n6 \n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tests/test_agents_registry.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 5,
+    "line_range": [
+      5
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "59         env[\"AF_DISABLE_PING_AGENT\"] = \"true\"\n60         result = subprocess.run([sys.executable, \"-c\", code], capture_output=True, text=True, env=env)\n61         self.assertEqual(result.stdout.strip(), \"False\")\n",
+    "col_offset": 17,
+    "end_col_offset": 102,
+    "filename": "./tests/test_agents_registry.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 60,
+    "line_range": [
+      60
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  }
+]

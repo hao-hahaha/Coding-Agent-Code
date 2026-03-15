@@ -1,0 +1,46 @@
+[
+  {
+    "code": "48         import sys\n49         import subprocess\n50 \n",
+    "col_offset": 8,
+    "end_col_offset": 25,
+    "filename": "./tests/test_demos.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 49,
+    "line_range": [
+      49
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "50 \n51         result = subprocess.run(\n52             [sys.executable, \"-m\", \"alpha_factory_v1.demos.validate_demos\"],\n53             capture_output=True,\n54             text=True,\n55         )\n56         self.assertEqual(result.returncode, 0, result.stderr)\n",
+    "col_offset": 17,
+    "end_col_offset": 9,
+    "filename": "./tests/test_demos.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 51,
+    "line_range": [
+      51,
+      52,
+      53,
+      54,
+      55
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  }
+]

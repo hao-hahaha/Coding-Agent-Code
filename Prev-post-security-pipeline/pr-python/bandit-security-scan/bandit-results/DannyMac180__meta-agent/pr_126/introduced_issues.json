@@ -1,0 +1,182 @@
+[
+  {
+    "code": "25     templates = reg.list_templates()\n26     assert len(templates) == 1\n27     info = templates[0]\n",
+    "col_offset": 4,
+    "end_col_offset": 30,
+    "filename": "./tests/test_template_registry.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 26,
+    "line_range": [
+      26
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "27     info = templates[0]\n28     assert info[\"slug\"] == \"greet\"\n29     assert info[\"current_version\"] == \"0.1.0\"\n",
+    "col_offset": 4,
+    "end_col_offset": 34,
+    "filename": "./tests/test_template_registry.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 28,
+    "line_range": [
+      28
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "28     assert info[\"slug\"] == \"greet\"\n29     assert info[\"current_version\"] == \"0.1.0\"\n30     assert info[\"versions\"][0][\"version\"] == \"0.1.0\"\n",
+    "col_offset": 4,
+    "end_col_offset": 45,
+    "filename": "./tests/test_template_registry.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 29,
+    "line_range": [
+      29
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "29     assert info[\"current_version\"] == \"0.1.0\"\n30     assert info[\"versions\"][0][\"version\"] == \"0.1.0\"\n31 \n",
+    "col_offset": 4,
+    "end_col_offset": 52,
+    "filename": "./tests/test_template_registry.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 30,
+    "line_range": [
+      30
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "32     content = reg.load_template(\"greet\")\n33     assert content == \"hello {{name}}\"\n34 \n",
+    "col_offset": 4,
+    "end_col_offset": 38,
+    "filename": "./tests/test_template_registry.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 33,
+    "line_range": [
+      33
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "42     diff = reg.diff(\"greet\", \"0.1.0\", \"0.2.0\")\n43     assert \"-hello {{name}}\" in diff\n44     assert \"+hi {{name}}\" in diff\n",
+    "col_offset": 4,
+    "end_col_offset": 36,
+    "filename": "./tests/test_template_registry.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 43,
+    "line_range": [
+      43
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "43     assert \"-hello {{name}}\" in diff\n44     assert \"+hi {{name}}\" in diff\n45 \n",
+    "col_offset": 4,
+    "end_col_offset": 33,
+    "filename": "./tests/test_template_registry.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 44,
+    "line_range": [
+      44
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "46     reg.rollback(\"greet\", \"0.1.0\")\n47     assert reg.list_templates()[0][\"current_version\"] == \"0.1.0\"\n48     assert reg.load_template(\"greet\") == \"hello {{name}}\"\n",
+    "col_offset": 4,
+    "end_col_offset": 64,
+    "filename": "./tests/test_template_registry.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 47,
+    "line_range": [
+      47
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "47     assert reg.list_templates()[0][\"current_version\"] == \"0.1.0\"\n48     assert reg.load_template(\"greet\") == \"hello {{name}}\"\n",
+    "col_offset": 4,
+    "end_col_offset": 57,
+    "filename": "./tests/test_template_registry.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 48,
+    "line_range": [
+      48
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "code": "25     match = re.search(r\"<script[^>]*src=['\\\"]insight.bundle.js['\\\"][^>]*>\", html)\n26     assert match, \"insight.bundle.js script tag missing\"\n27     tag = match.group(0)\n",
+    "col_offset": 4,
+    "end_col_offset": 56,
+    "filename": "./tests/test_docs_bundle_hash.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 26,
+    "line_range": [
+      26
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "28     integrity = re.search(r\"integrity=['\\\"]([^'\\\"]+)['\\\"]\", tag)\n29     assert integrity, \"integrity attribute missing\"\n30     expected = _sha384(bundle)\n",
+    "col_offset": 4,
+    "end_col_offset": 51,
+    "filename": "./tests/test_docs_bundle_hash.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 29,
+    "line_range": [
+      29
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "30     expected = _sha384(bundle)\n31     assert integrity.group(1) == expected\n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./tests/test_docs_bundle_hash.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 31,
+    "line_range": [
+      31
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

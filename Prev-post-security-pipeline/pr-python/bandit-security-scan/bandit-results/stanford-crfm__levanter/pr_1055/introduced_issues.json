@@ -1,0 +1,22 @@
+[
+  {
+    "code": "19     (tmpdir / \"config.json\").write_text(json.dumps({\"model_type\": \"gpt2\", \"vocab_size\": 5027}))\n20     return AutoTokenizer.from_pretrained(str(tmpdir))\n",
+    "col_offset": 11,
+    "end_col_offset": 53,
+    "filename": "./tests/conftest.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 494,
+      "link": "https://cwe.mitre.org/data/definitions/494.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Unsafe Hugging Face Hub download without revision pinning in from_pretrained()",
+    "line_number": 20,
+    "line_range": [
+      20
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b615_huggingface_unsafe_download.html",
+    "test_id": "B615",
+    "test_name": "huggingface_unsafe_download"
+  }
+]

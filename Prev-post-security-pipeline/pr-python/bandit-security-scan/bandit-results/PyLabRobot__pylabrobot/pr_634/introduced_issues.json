@@ -1,0 +1,222 @@
+[
+  {
+    "code": "14   def racks(self) -> List[PlateCarrier]:\n15     assert self._racks is not None, \"Backend not set up?\"\n16     return self._racks\n",
+    "col_offset": 4,
+    "end_col_offset": 57,
+    "filename": "./pylabrobot/storage/backend.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 15,
+    "line_range": [
+      15
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "141         continue\n142     assert exc is not None\n143     await self.reset_error_register()\n",
+    "col_offset": 4,
+    "end_col_offset": 26,
+    "filename": "./pylabrobot/storage/cytomat/cytomat.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 142,
+    "line_range": [
+      142
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "243         break\n244     assert target_enum is not None, f\"Unknown target value: {target}\"\n245 \n",
+    "col_offset": 4,
+    "end_col_offset": 69,
+    "filename": "./pylabrobot/storage/cytomat/cytomat.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 244,
+    "line_range": [
+      244
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "250         break\n251     assert action_enum is not None, f\"Unknown HIGH_LEVEL_COMMANDment value: {action}\"\n252 \n",
+    "col_offset": 4,
+    "end_col_offset": 85,
+    "filename": "./pylabrobot/storage/cytomat/cytomat.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 251,
+    "line_range": [
+      251
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "369     shakers = shakers or [1, 2]\n370     assert all(shaker in [1, 2] for shaker in shakers), \"Shaker index must be 1 or 2\"\n371     return [await self.send_command(\"se\", f\"pb 2{idx-1}\", f\"{frequency:04}\") for idx in shakers]\n",
+    "col_offset": 4,
+    "end_col_offset": 85,
+    "filename": "./pylabrobot/storage/cytomat/cytomat.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 370,
+    "line_range": [
+      370
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "395     site = plate.parent\n396     assert isinstance(site, PlateHolder)\n397     await self.action_storage_to_transfer(site)\n",
+    "col_offset": 4,
+    "end_col_offset": 40,
+    "filename": "./pylabrobot/storage/cytomat/cytomat.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 396,
+    "line_range": [
+      396
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "113     site = plate.parent\n114     assert isinstance(site, PlateHolder), \"Plate not in storage\"\n115     m, n = self._site_to_m_n(site)\n",
+    "col_offset": 4,
+    "end_col_offset": 64,
+    "filename": "./pylabrobot/storage/cytomat/heraeus_cytomat_backend.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 114,
+    "line_range": [
+      114
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "146     rack = site.parent\n147     assert isinstance(rack, PlateCarrier), \"Site not in rack\"\n148     assert self._racks is not None, \"Racks not set\"\n",
+    "col_offset": 4,
+    "end_col_offset": 61,
+    "filename": "./pylabrobot/storage/cytomat/heraeus_cytomat_backend.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 147,
+    "line_range": [
+      147
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "147     assert isinstance(rack, PlateCarrier), \"Site not in rack\"\n148     assert self._racks is not None, \"Racks not set\"\n149     rack_idx = self._racks.index(rack) + 1  # plr is 0-indexed, cytomat is 1-indexed\n",
+    "col_offset": 4,
+    "end_col_offset": 51,
+    "filename": "./pylabrobot/storage/cytomat/heraeus_cytomat_backend.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 148,
+    "line_range": [
+      148
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "80     plate = site.resource\n81     assert plate is not None\n82     await self.backend.fetch_plate_to_loading_tray(plate)\n",
+    "col_offset": 4,
+    "end_col_offset": 28,
+    "filename": "./pylabrobot/storage/incubator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 81,
+    "line_range": [
+      81
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "112   def find_random_site(self, plate: Plate) -> PlateHolder:\n113     return random.choice(self._find_available_sites_sorted(plate))\n114 \n",
+    "col_offset": 11,
+    "end_col_offset": 66,
+    "filename": "./pylabrobot/storage/incubator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 113,
+    "line_range": [
+      113
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  }
+]

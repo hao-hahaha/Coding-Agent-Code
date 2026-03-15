@@ -1,0 +1,904 @@
+[
+  {
+    "code": "4 # --------------------------------------------------------------------------\n5 import subprocess\n6 import sys\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 5,
+    "line_range": [
+      5
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "15     # execute\n16     out = subprocess.run(command_args, check=True, capture_output=True)\n17 \n",
+    "col_offset": 10,
+    "end_col_offset": 71,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 16,
+    "line_range": [
+      16
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "19     help_text = out.stdout.decode(\"utf-8\")\n20     assert \"usage:\" in help_text\n21     assert \"run-pass\" in help_text\n",
+    "col_offset": 4,
+    "end_col_offset": 32,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 20,
+    "line_range": [
+      20
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "20     assert \"usage:\" in help_text\n21     assert \"run-pass\" in help_text\n22     assert \"--pass-name\" in help_text\n",
+    "col_offset": 4,
+    "end_col_offset": 34,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 21,
+    "line_range": [
+      21
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "21     assert \"run-pass\" in help_text\n22     assert \"--pass-name\" in help_text\n23     assert \"Name of the pass to run on the input model\" in help_text\n",
+    "col_offset": 4,
+    "end_col_offset": 37,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 22,
+    "line_range": [
+      22
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "22     assert \"--pass-name\" in help_text\n23     assert \"Name of the pass to run on the input model\" in help_text\n24 \n",
+    "col_offset": 4,
+    "end_col_offset": 68,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 23,
+    "line_range": [
+      23
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "37     # Test parsing with valid arguments\n38     args = parser.parse_args([\"run-pass\", \"--pass-name\", \"OnnxConversion\", \"-m\", \"test_model\", \"-o\", \"/tmp/output\"])\n39 \n",
+    "col_offset": 101,
+    "end_col_offset": 114,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 38,
+    "line_range": [
+      38
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "39 \n40     assert args.pass_name == \"OnnxConversion\"\n41     assert args.model_name_or_path == \"test_model\"\n",
+    "col_offset": 4,
+    "end_col_offset": 45,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 40,
+    "line_range": [
+      40
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "39 \n40     assert args.pass_name == \"OnnxConversion\"\n41     assert args.model_name_or_path == \"test_model\"\n",
+    "col_offset": 29,
+    "end_col_offset": 45,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'OnnxConversion'",
+    "line_number": 40,
+    "line_range": [
+      40
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b105_hardcoded_password_string.html",
+    "test_id": "B105",
+    "test_name": "hardcoded_password_string"
+  },
+  {
+    "code": "40     assert args.pass_name == \"OnnxConversion\"\n41     assert args.model_name_or_path == \"test_model\"\n42     assert not hasattr(args, \"list_passes\") or not args.list_passes\n",
+    "col_offset": 4,
+    "end_col_offset": 50,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 41,
+    "line_range": [
+      41
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "41     assert args.model_name_or_path == \"test_model\"\n42     assert not hasattr(args, \"list_passes\") or not args.list_passes\n43 \n",
+    "col_offset": 4,
+    "end_col_offset": 67,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 42,
+    "line_range": [
+      42
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "55     args = parser.parse_args([\"run-pass\", \"--list-passes\"])\n56     assert args.list_passes is True\n57 \n",
+    "col_offset": 4,
+    "end_col_offset": 35,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 56,
+    "line_range": [
+      56
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "77             \"-o\",\n78             \"/tmp/output\",\n79             \"--pass-config\",\n80             json_config,\n81         ]\n82     )\n83 \n84     assert args.pass_config == json_config\n85 \n86 \n87 def test_run_pass_command_missing_pass_name():\n88     \"\"\"Test that the run-pass command requires --pass-name argument when not listing passes.\"\"\"\n89     parser = ArgumentParser()\n",
+    "col_offset": 12,
+    "end_col_offset": 25,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 78,
+    "line_range": [
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "83 \n84     assert args.pass_config == json_config\n85 \n",
+    "col_offset": 4,
+    "end_col_offset": 42,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 84,
+    "line_range": [
+      84
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "96     # Test missing pass-name without list-passes should succeed in parsing but fail later\n97     args = parser.parse_args([\"run-pass\", \"-m\", \"test_model\", \"-o\", \"/tmp/output\"])\n98     assert args.pass_name is None\n",
+    "col_offset": 68,
+    "end_col_offset": 81,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 97,
+    "line_range": [
+      97
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "97     args = parser.parse_args([\"run-pass\", \"-m\", \"test_model\", \"-o\", \"/tmp/output\"])\n98     assert args.pass_name is None\n99     assert args.model_name_or_path == \"test_model\"\n",
+    "col_offset": 4,
+    "end_col_offset": 33,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 98,
+    "line_range": [
+      98
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "98     assert args.pass_name is None\n99     assert args.model_name_or_path == \"test_model\"\n100 \n",
+    "col_offset": 4,
+    "end_col_offset": 50,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 99,
+    "line_range": [
+      99
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "111     # Test missing model should succeed in parsing but fail later when required\n112     args = parser.parse_args([\"run-pass\", \"--pass-name\", \"OnnxConversion\", \"-o\", \"/tmp/output\"])\n113     assert args.pass_name == \"OnnxConversion\"\n",
+    "col_offset": 81,
+    "end_col_offset": 94,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 112,
+    "line_range": [
+      112
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "112     args = parser.parse_args([\"run-pass\", \"--pass-name\", \"OnnxConversion\", \"-o\", \"/tmp/output\"])\n113     assert args.pass_name == \"OnnxConversion\"\n114     assert getattr(args, \"model_name_or_path\", None) is None\n",
+    "col_offset": 4,
+    "end_col_offset": 45,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 113,
+    "line_range": [
+      113
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "112     args = parser.parse_args([\"run-pass\", \"--pass-name\", \"OnnxConversion\", \"-o\", \"/tmp/output\"])\n113     assert args.pass_name == \"OnnxConversion\"\n114     assert getattr(args, \"model_name_or_path\", None) is None\n",
+    "col_offset": 29,
+    "end_col_offset": 45,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'OnnxConversion'",
+    "line_number": 113,
+    "line_range": [
+      113
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b105_hardcoded_password_string.html",
+    "test_id": "B105",
+    "test_name": "hardcoded_password_string"
+  },
+  {
+    "code": "113     assert args.pass_name == \"OnnxConversion\"\n114     assert getattr(args, \"model_name_or_path\", None) is None\n115 \n",
+    "col_offset": 4,
+    "end_col_offset": 60,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 114,
+    "line_range": [
+      114
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "137     config = deepcopy(template)\n138     pass_name = \"OnnxConversion\"\n139 \n",
+    "col_offset": 16,
+    "end_col_offset": 32,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'OnnxConversion'",
+    "line_number": 138,
+    "line_range": [
+      138
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b105_hardcoded_password_string.html",
+    "test_id": "B105",
+    "test_name": "hardcoded_password_string"
+  },
+  {
+    "code": "144     # Update output directory\n145     config[\"output_dir\"] = \"/tmp/test_output\"\n146 \n",
+    "col_offset": 27,
+    "end_col_offset": 45,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 145,
+    "line_range": [
+      145
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "147     # Verify the structure\n148     assert \"passes\" in config\n149     assert \"onnxconversion\" in config[\"passes\"]\n",
+    "col_offset": 4,
+    "end_col_offset": 29,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 148,
+    "line_range": [
+      148
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "148     assert \"passes\" in config\n149     assert \"onnxconversion\" in config[\"passes\"]\n150     assert config[\"passes\"][\"onnxconversion\"][\"type\"] == \"OnnxConversion\"\n",
+    "col_offset": 4,
+    "end_col_offset": 47,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 149,
+    "line_range": [
+      149
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "149     assert \"onnxconversion\" in config[\"passes\"]\n150     assert config[\"passes\"][\"onnxconversion\"][\"type\"] == \"OnnxConversion\"\n151     assert config[\"output_dir\"] == \"/tmp/test_output\"\n",
+    "col_offset": 4,
+    "end_col_offset": 73,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 150,
+    "line_range": [
+      150
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "150     assert config[\"passes\"][\"onnxconversion\"][\"type\"] == \"OnnxConversion\"\n151     assert config[\"output_dir\"] == \"/tmp/test_output\"\n152     assert config[\"host\"] == \"local_system\"\n",
+    "col_offset": 4,
+    "end_col_offset": 53,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 151,
+    "line_range": [
+      151
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "150     assert config[\"passes\"][\"onnxconversion\"][\"type\"] == \"OnnxConversion\"\n151     assert config[\"output_dir\"] == \"/tmp/test_output\"\n152     assert config[\"host\"] == \"local_system\"\n",
+    "col_offset": 35,
+    "end_col_offset": 53,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 151,
+    "line_range": [
+      151
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "151     assert config[\"output_dir\"] == \"/tmp/test_output\"\n152     assert config[\"host\"] == \"local_system\"\n153     assert config[\"target\"] == \"local_system\"\n",
+    "col_offset": 4,
+    "end_col_offset": 43,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 152,
+    "line_range": [
+      152
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "152     assert config[\"host\"] == \"local_system\"\n153     assert config[\"target\"] == \"local_system\"\n154 \n",
+    "col_offset": 4,
+    "end_col_offset": 45,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 153,
+    "line_range": [
+      153
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "175     config = deepcopy(template)\n176     pass_name = \"OnnxConversion\"\n177     pass_config = {\"type\": pass_name}\n",
+    "col_offset": 16,
+    "end_col_offset": 32,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'OnnxConversion'",
+    "line_number": 176,
+    "line_range": [
+      176
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b105_hardcoded_password_string.html",
+    "test_id": "B105",
+    "test_name": "hardcoded_password_string"
+  },
+  {
+    "code": "185     # Verify the enhanced structure\n186     assert config[\"passes\"][\"onnxconversion\"][\"type\"] == \"OnnxConversion\"\n187     assert config[\"passes\"][\"onnxconversion\"][\"target_opset\"] == 13\n",
+    "col_offset": 4,
+    "end_col_offset": 73,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 186,
+    "line_range": [
+      186
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "186     assert config[\"passes\"][\"onnxconversion\"][\"type\"] == \"OnnxConversion\"\n187     assert config[\"passes\"][\"onnxconversion\"][\"target_opset\"] == 13\n188     assert config[\"passes\"][\"onnxconversion\"][\"convert_attribute\"] is True\n",
+    "col_offset": 4,
+    "end_col_offset": 67,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 187,
+    "line_range": [
+      187
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "187     assert config[\"passes\"][\"onnxconversion\"][\"target_opset\"] == 13\n188     assert config[\"passes\"][\"onnxconversion\"][\"convert_attribute\"] is True\n189 \n",
+    "col_offset": 4,
+    "end_col_offset": 74,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 188,
+    "line_range": [
+      188
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "208             \"-o\",\n209             \"/tmp/output\",\n210             \"--device\",\n211             \"gpu\",\n212             \"--provider\",\n213             \"CUDAExecutionProvider\",\n214         ]\n215     )\n216 \n217     assert args.device == \"gpu\"\n218     assert args.provider == \"CUDAExecutionProvider\"\n219 \n220     # Test default device (cpu)\n221     args_default = parser.parse_args(\n222         [\"run-pass\", \"--pass-name\", \"OnnxConversion\", \"-m\", \"test_model\", \"-o\", \"/tmp/output\"]\n",
+    "col_offset": 12,
+    "end_col_offset": 25,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 209,
+    "line_range": [
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "216 \n217     assert args.device == \"gpu\"\n218     assert args.provider == \"CUDAExecutionProvider\"\n",
+    "col_offset": 4,
+    "end_col_offset": 31,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 217,
+    "line_range": [
+      217
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "217     assert args.device == \"gpu\"\n218     assert args.provider == \"CUDAExecutionProvider\"\n219 \n",
+    "col_offset": 4,
+    "end_col_offset": 51,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 218,
+    "line_range": [
+      218
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "221     args_default = parser.parse_args(\n222         [\"run-pass\", \"--pass-name\", \"OnnxConversion\", \"-m\", \"test_model\", \"-o\", \"/tmp/output\"]\n223     )\n",
+    "col_offset": 80,
+    "end_col_offset": 93,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 222,
+    "line_range": [
+      222
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "224 \n225     assert args_default.device == \"cpu\"\n226     assert args_default.provider == \"CPUExecutionProvider\"\n",
+    "col_offset": 4,
+    "end_col_offset": 39,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 225,
+    "line_range": [
+      225
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "225     assert args_default.device == \"cpu\"\n226     assert args_default.provider == \"CPUExecutionProvider\"\n227 \n",
+    "col_offset": 4,
+    "end_col_offset": 58,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 226,
+    "line_range": [
+      226
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "273     accelerator = config[\"systems\"][\"local_system\"][\"accelerators\"][0]\n274     assert accelerator[\"device\"] == \"gpu\"\n275     assert accelerator[\"execution_providers\"] == [\"CUDAExecutionProvider\"]\n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 274,
+    "line_range": [
+      274
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "274     assert accelerator[\"device\"] == \"gpu\"\n275     assert accelerator[\"execution_providers\"] == [\"CUDAExecutionProvider\"]\n276 \n",
+    "col_offset": 4,
+    "end_col_offset": 74,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 275,
+    "line_range": [
+      275
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "359     # Verify that device was corrected to match the provider\n360     assert accelerator[\"device\"] == \"gpu\"  # CUDAExecutionProvider requires gpu\n361     assert accelerator[\"execution_providers\"] == [\"CUDAExecutionProvider\"]\n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 360,
+    "line_range": [
+      360
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "360     assert accelerator[\"device\"] == \"gpu\"  # CUDAExecutionProvider requires gpu\n361     assert accelerator[\"execution_providers\"] == [\"CUDAExecutionProvider\"]\n",
+    "col_offset": 4,
+    "end_col_offset": 74,
+    "filename": "./test/unit_test/cli/test_run_pass.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 361,
+    "line_range": [
+      361
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

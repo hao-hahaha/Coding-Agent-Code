@@ -1,0 +1,23 @@
+[
+  {
+    "code": "12         plugin_manager.register(JacCmd, name=\"streamlit\")\n13 except Exception:  # pragma: no cover - ignore failures during early import\n14     pass\n",
+    "col_offset": 0,
+    "end_col_offset": 8,
+    "filename": "./jac/support/plugins/streamlit/sitecustomize.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 13,
+    "line_range": [
+      13,
+      14
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  }
+]

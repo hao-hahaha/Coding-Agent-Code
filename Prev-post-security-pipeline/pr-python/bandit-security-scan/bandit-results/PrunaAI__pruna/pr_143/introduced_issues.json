@@ -1,0 +1,62 @@
+[
+  {
+    "code": "73         \"\"\"\n74         assert metric_name in results_dict, f\"Metric name {metric_name} not found in raw results\"\n75         result = results_dict[metric_name]\n",
+    "col_offset": 8,
+    "end_col_offset": 97,
+    "filename": "./src/pruna/evaluation/metrics/result.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 74,
+    "line_range": [
+      74
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "75         result = results_dict[metric_name]\n76         assert isinstance(result, (float, int)), f\"Result for metric {metric_name} is not a float or int\"\n77         return cls(metric_name, metric_params, result)\n",
+    "col_offset": 8,
+    "end_col_offset": 105,
+    "filename": "./src/pruna/evaluation/metrics/result.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 76,
+    "line_range": [
+      76
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "16     upload_repo_id = \"PrunaAI/test-save-tiny-random-llama4-smashed\"\n17     model = AutoModelForCausalLM.from_pretrained(download_repo_id)\n18     smash_config = SmashConfig(device=\"cpu\")\n",
+    "col_offset": 12,
+    "end_col_offset": 66,
+    "filename": "./tests/engine/test_save.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 494,
+      "link": "https://cwe.mitre.org/data/definitions/494.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Unsafe Hugging Face Hub download without revision pinning in from_pretrained()",
+    "line_number": 17,
+    "line_range": [
+      17
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b615_huggingface_unsafe_download.html",
+    "test_id": "B615",
+    "test_name": "huggingface_unsafe_download"
+  }
+]

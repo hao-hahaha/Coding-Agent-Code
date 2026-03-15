@@ -1,0 +1,82 @@
+[
+  {
+    "code": "189     for _ in range(num_routes):\n190         start_x = random.randint(0, width - 1)  # noqa: S311\n191         start_y = random.randint(0, height - 1)  # noqa: S311\n",
+    "col_offset": 18,
+    "end_col_offset": 46,
+    "filename": "./python/examples/precache_example.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 190,
+    "line_range": [
+      190
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "190         start_x = random.randint(0, width - 1)  # noqa: S311\n191         start_y = random.randint(0, height - 1)  # noqa: S311\n192         goal_x = random.randint(0, width - 1)  # noqa: S311\n",
+    "col_offset": 18,
+    "end_col_offset": 47,
+    "filename": "./python/examples/precache_example.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 191,
+    "line_range": [
+      191
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "191         start_y = random.randint(0, height - 1)  # noqa: S311\n192         goal_x = random.randint(0, width - 1)  # noqa: S311\n193         goal_y = random.randint(0, height - 1)  # noqa: S311\n",
+    "col_offset": 17,
+    "end_col_offset": 45,
+    "filename": "./python/examples/precache_example.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 192,
+    "line_range": [
+      192
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "192         goal_x = random.randint(0, width - 1)  # noqa: S311\n193         goal_y = random.randint(0, height - 1)  # noqa: S311\n194 \n",
+    "col_offset": 17,
+    "end_col_offset": 46,
+    "filename": "./python/examples/precache_example.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 193,
+    "line_range": [
+      193
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  }
+]

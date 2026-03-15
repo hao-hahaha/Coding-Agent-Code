@@ -1,0 +1,23 @@
+[
+  {
+    "code": "180             char = codecs.decode(esc, \"unicode_escape\")\n181         except Exception:  # noqa: S112\n182             continue\n183         mapping[char] = esc\n",
+    "col_offset": 8,
+    "end_col_offset": 20,
+    "filename": "./src/flynt/utils/utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Continue detected.",
+    "line_number": 181,
+    "line_range": [
+      181,
+      182
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b112_try_except_continue.html",
+    "test_id": "B112",
+    "test_name": "try_except_continue"
+  }
+]

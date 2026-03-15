@@ -1,0 +1,42 @@
+[
+  {
+    "code": "20     resp = client.get(\"/\")\n21     assert resp.status_code == 200\n22     assert \"<div id=\\\"root\\\"></div>\" in resp.text\n",
+    "col_offset": 4,
+    "end_col_offset": 34,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_api_server_static.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 21,
+    "line_range": [
+      21
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "21     assert resp.status_code == 200\n22     assert \"<div id=\\\"root\\\"></div>\" in resp.text\n",
+    "col_offset": 4,
+    "end_col_offset": 49,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_api_server_static.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 22,
+    "line_range": [
+      22
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

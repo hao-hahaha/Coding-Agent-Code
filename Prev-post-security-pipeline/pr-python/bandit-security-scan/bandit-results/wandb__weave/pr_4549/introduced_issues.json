@@ -1,0 +1,698 @@
+[
+  {
+    "code": "494     elif weave_server_flag == \"clickhouse\":\n495         assert ensure_clickhouse_db is not None\n496         host, port = request.getfixturevalue(\"ensure_clickhouse_db\")\n",
+    "col_offset": 8,
+    "end_col_offset": 47,
+    "filename": "./tests/conftest.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 495,
+    "line_range": [
+      495
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "3 import signal\n4 import subprocess\n5 import tempfile\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tests/conftest_lib/clickhouse_server.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 4,
+    "line_range": [
+      4
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "33         # First, ensure any existing container is stopped and removed\n34         subprocess.run(\n35             [\"docker\", \"stop\", container_name], capture_output=True, check=False\n36         )\n37         subprocess.run(\n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tests/conftest_lib/clickhouse_server.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 34,
+    "line_range": [
+      34,
+      35,
+      36
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "33         # First, ensure any existing container is stopped and removed\n34         subprocess.run(\n35             [\"docker\", \"stop\", container_name], capture_output=True, check=False\n36         )\n37         subprocess.run(\n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tests/conftest_lib/clickhouse_server.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 34,
+    "line_range": [
+      34,
+      35,
+      36
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "36         )\n37         subprocess.run(\n38             [\"docker\", \"rm\", container_name], capture_output=True, check=False\n39         )\n40 \n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tests/conftest_lib/clickhouse_server.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 37,
+    "line_range": [
+      37,
+      38,
+      39
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "36         )\n37         subprocess.run(\n38             [\"docker\", \"rm\", container_name], capture_output=True, check=False\n39         )\n40 \n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tests/conftest_lib/clickhouse_server.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 37,
+    "line_range": [
+      37,
+      38,
+      39
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "41         # Start the ClickHouse container\n42         process = subprocess.Popen(\n43             [\n44                 \"docker\",\n45                 \"run\",\n46                 \"-d\",\n47                 \"--rm\",\n48                 \"-e\",\n49                 \"CLICKHOUSE_DB=default\",\n50                 \"-e\",\n51                 \"CLICKHOUSE_USER=default\",\n52                 \"-e\",\n53                 \"CLICKHOUSE_PASSWORD=\",\n54                 \"-e\",\n55                 \"CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT=1\",\n56                 \"-p\",\n57                 f\"{port}:8123\",\n58                 \"--name\",\n59                 container_name,\n60                 \"--ulimit\",\n61                 \"nofile=262144:262144\",\n62                 \"clickhouse/clickhouse-server\",\n63             ],\n64             stdout=subprocess.PIPE,\n65             stderr=subprocess.PIPE,\n66         )\n67 \n",
+    "col_offset": 18,
+    "end_col_offset": 9,
+    "filename": "./tests/conftest_lib/clickhouse_server.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 42,
+    "line_range": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "41         # Start the ClickHouse container\n42         process = subprocess.Popen(\n43             [\n44                 \"docker\",\n45                 \"run\",\n46                 \"-d\",\n47                 \"--rm\",\n48                 \"-e\",\n49                 \"CLICKHOUSE_DB=default\",\n50                 \"-e\",\n51                 \"CLICKHOUSE_USER=default\",\n52                 \"-e\",\n53                 \"CLICKHOUSE_PASSWORD=\",\n54                 \"-e\",\n55                 \"CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT=1\",\n56                 \"-p\",\n57                 f\"{port}:8123\",\n58                 \"--name\",\n59                 container_name,\n60                 \"--ulimit\",\n61                 \"nofile=262144:262144\",\n62                 \"clickhouse/clickhouse-server\",\n63             ],\n64             stdout=subprocess.PIPE,\n65             stderr=subprocess.PIPE,\n66         )\n67 \n",
+    "col_offset": 18,
+    "end_col_offset": 9,
+    "filename": "./tests/conftest_lib/clickhouse_server.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 42,
+    "line_range": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "78             # Clean up the container if server didn't start properly\n79             subprocess.run(\n80                 [\"docker\", \"stop\", container_name], capture_output=True, check=False\n81             )\n82             pytest.fail(\n",
+    "col_offset": 12,
+    "end_col_offset": 13,
+    "filename": "./tests/conftest_lib/clickhouse_server.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 79,
+    "line_range": [
+      79,
+      80,
+      81
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "78             # Clean up the container if server didn't start properly\n79             subprocess.run(\n80                 [\"docker\", \"stop\", container_name], capture_output=True, check=False\n81             )\n82             pytest.fail(\n",
+    "col_offset": 12,
+    "end_col_offset": 13,
+    "filename": "./tests/conftest_lib/clickhouse_server.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 79,
+    "line_range": [
+      79,
+      80,
+      81
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "87         if started_container:\n88             subprocess.run(\n89                 [\"docker\", \"stop\", started_container], capture_output=True, check=False\n90             )\n91 \n",
+    "col_offset": 12,
+    "end_col_offset": 13,
+    "filename": "./tests/conftest_lib/clickhouse_server.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 88,
+    "line_range": [
+      88,
+      89,
+      90
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "87         if started_container:\n88             subprocess.run(\n89                 [\"docker\", \"stop\", started_container], capture_output=True, check=False\n90             )\n91 \n",
+    "col_offset": 12,
+    "end_col_offset": 13,
+    "filename": "./tests/conftest_lib/clickhouse_server.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 88,
+    "line_range": [
+      88,
+      89,
+      90
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "122         try:\n123             process = subprocess.Popen(\n124                 [\n125                     clickhouse_binary,\n126                     # \"--config-file\", config_path,\n127                 ],\n128                 stdout=subprocess.PIPE,\n129                 stderr=subprocess.PIPE,\n130                 cwd=temp_dir,\n131                 preexec_fn=os.setsid\n132                 if os.name != \"nt\"\n133                 else None,  # Create new process group on Unix\n134             )\n135             started_process = process\n",
+    "col_offset": 22,
+    "end_col_offset": 13,
+    "filename": "./tests/conftest_lib/clickhouse_server.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 123,
+    "line_range": [
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "181                 shutil.rmtree(temp_dir)\n182             except Exception:\n183                 pass  # Best effort cleanup\n184 \n",
+    "col_offset": 12,
+    "end_col_offset": 20,
+    "filename": "./tests/conftest_lib/clickhouse_server.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 182,
+    "line_range": [
+      182,
+      183
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "30         try:\n31             response = requests.get(urllib.parse.urljoin(base_url, endpoint))\n32             if response.status_code == 200:\n",
+    "col_offset": 23,
+    "end_col_offset": 77,
+    "filename": "./tests/conftest_lib/container_management.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 400,
+      "link": "https://cwe.mitre.org/data/definitions/400.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Call to requests without timeout",
+    "line_number": 31,
+    "line_range": [
+      31
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+    "test_id": "B113",
+    "test_name": "request_without_timeout"
+  },
+  {
+    "code": "30 \n31     assert captured.get(\"stream_options\") == {\"include_usage\": True}\n32 \n",
+    "col_offset": 4,
+    "end_col_offset": 68,
+    "filename": "./tests/integrations/openai/test_openai_sdk.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 31,
+    "line_range": [
+      31
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "44 \n45     assert \"stream_options\" not in captured\n46 \n",
+    "col_offset": 4,
+    "end_col_offset": 43,
+    "filename": "./tests/integrations/openai/test_openai_sdk.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 45,
+    "line_range": [
+      45
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "59 \n60     assert captured.get(\"stream_options\") == {\"include_usage\": True}\n61 \n",
+    "col_offset": 4,
+    "end_col_offset": 68,
+    "filename": "./tests/integrations/openai/test_openai_sdk.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 60,
+    "line_range": [
+      60
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "74 \n75     assert \"stream_options\" not in captured\n",
+    "col_offset": 4,
+    "end_col_offset": 43,
+    "filename": "./tests/integrations/openai/test_openai_sdk.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 75,
+    "line_range": [
+      75
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "18     calls = list(client.get_calls())\n19     assert len(calls) == 1\n20     assert \"new\" not in calls[0].attributes\n",
+    "col_offset": 4,
+    "end_col_offset": 26,
+    "filename": "./tests/trace/test_current_call.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 19,
+    "line_range": [
+      19
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "19     assert len(calls) == 1\n20     assert \"new\" not in calls[0].attributes\n21 \n",
+    "col_offset": 4,
+    "end_col_offset": 43,
+    "filename": "./tests/trace/test_current_call.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 20,
+    "line_range": [
+      20
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "32     calls = list(client.get_calls())\n33     assert len(calls) == 1\n34     summary = calls[0].summary\n",
+    "col_offset": 4,
+    "end_col_offset": 26,
+    "filename": "./tests/trace/test_current_call.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 33,
+    "line_range": [
+      33
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "34     summary = calls[0].summary\n35     assert summary[\"foo\"] == 1\n36     assert summary[\"bar\"] == 2\n",
+    "col_offset": 4,
+    "end_col_offset": 30,
+    "filename": "./tests/trace/test_current_call.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 35,
+    "line_range": [
+      35
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "35     assert summary[\"foo\"] == 1\n36     assert summary[\"bar\"] == 2\n37     assert summary[RESERVED_SUMMARY_STATUS_COUNTS_KEY][tsi.TraceStatus.SUCCESS] == 1\n",
+    "col_offset": 4,
+    "end_col_offset": 30,
+    "filename": "./tests/trace/test_current_call.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 36,
+    "line_range": [
+      36
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "36     assert summary[\"bar\"] == 2\n37     assert summary[RESERVED_SUMMARY_STATUS_COUNTS_KEY][tsi.TraceStatus.SUCCESS] == 1\n38 \n",
+    "col_offset": 4,
+    "end_col_offset": 84,
+    "filename": "./tests/trace/test_current_call.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 37,
+    "line_range": [
+      37
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "52     calls = list(client.get_calls())\n53     assert len(calls) == 1\n54     # Original attribute is preserved\n",
+    "col_offset": 4,
+    "end_col_offset": 26,
+    "filename": "./tests/trace/test_current_call.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 53,
+    "line_range": [
+      53
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "54     # Original attribute is preserved\n55     assert calls[0].attributes[\"env\"] == \"prod\"\n56     assert \"extra\" not in calls[0].attributes\n",
+    "col_offset": 4,
+    "end_col_offset": 47,
+    "filename": "./tests/trace/test_current_call.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 55,
+    "line_range": [
+      55
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "55     assert calls[0].attributes[\"env\"] == \"prod\"\n56     assert \"extra\" not in calls[0].attributes\n57 \n",
+    "col_offset": 4,
+    "end_col_offset": 45,
+    "filename": "./tests/trace/test_current_call.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 56,
+    "line_range": [
+      56
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "67     calls = list(client.get_calls())\n68     assert len(calls) == 1\n69     summary = calls[0].summary\n",
+    "col_offset": 4,
+    "end_col_offset": 26,
+    "filename": "./tests/trace/test_current_call.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 68,
+    "line_range": [
+      68
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "69     summary = calls[0].summary\n70     assert summary[\"nested\"][\"foo\"] == 1\n71     assert summary[RESERVED_SUMMARY_STATUS_COUNTS_KEY][tsi.TraceStatus.SUCCESS] == 1\n",
+    "col_offset": 4,
+    "end_col_offset": 40,
+    "filename": "./tests/trace/test_current_call.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 70,
+    "line_range": [
+      70
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "70     assert summary[\"nested\"][\"foo\"] == 1\n71     assert summary[RESERVED_SUMMARY_STATUS_COUNTS_KEY][tsi.TraceStatus.SUCCESS] == 1\n",
+    "col_offset": 4,
+    "end_col_offset": 84,
+    "filename": "./tests/trace/test_current_call.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 71,
+    "line_range": [
+      71
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

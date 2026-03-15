@@ -1,0 +1,22 @@
+[
+  {
+    "code": "19             page.wait_for_selector(\"#controls\")\n20             assert page.is_hidden(\"#install-btn\")\n21             page.evaluate(\"window.dispatchEvent(new Event('beforeinstallprompt'))\")\n",
+    "col_offset": 12,
+    "end_col_offset": 49,
+    "filename": "./tests/test_install_button.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 20,
+    "line_range": [
+      20
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

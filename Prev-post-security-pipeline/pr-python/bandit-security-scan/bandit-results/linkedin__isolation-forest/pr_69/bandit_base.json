@@ -1,0 +1,1067 @@
+{
+  "errors": [],
+  "generated_at": "2026-03-14T13:26:47Z",
+  "metrics": {
+    "./isolation-forest-onnx/setup.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 4,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./isolation-forest-onnx/src/isolationforestonnx/__init__.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 0,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./isolation-forest-onnx/src/isolationforestonnx/isolation_forest_converter.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 377,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./isolation-forest-onnx/test/integration/test_isolation_forest_onnx_integration.py": {
+      "CONFIDENCE.HIGH": 1,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 1,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 1,
+      "SEVERITY.MEDIUM": 1,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 65,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./isolation-forest-onnx/test/test_isolation_forest_converter.py": {
+      "CONFIDENCE.HIGH": 47,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 47,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 269,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 48,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 1,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 48,
+      "SEVERITY.MEDIUM": 1,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 715,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "20     base_path = (\n21         \"/tmp/isolationForestModelAndDataForONNX\"\n22         + \"_\"\n23         + SPARK_VERSION\n",
+      "col_offset": 8,
+      "end_col_offset": 49,
+      "filename": "./isolation-forest-onnx/test/integration/test_isolation_forest_onnx_integration.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 377,
+        "link": "https://cwe.mitre.org/data/definitions/377.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Probable insecure usage of temp file/directory.",
+      "line_number": 21,
+      "line_range": [
+        21,
+        22
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+      "test_id": "B108",
+      "test_name": "hardcoded_tmp_directory"
+    },
+    {
+      "code": "88 \n89     assert max_diff < 1e-5, f\"Max difference too large! {max_diff}\"\n",
+      "col_offset": 4,
+      "end_col_offset": 67,
+      "filename": "./isolation-forest-onnx/test/integration/test_isolation_forest_onnx_integration.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 89,
+      "line_range": [
+        89
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "127 \n128     assert auroc == pytest.approx(expected_auroc, allowed_difference)\n129 \n",
+      "col_offset": 4,
+      "end_col_offset": 69,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 128,
+      "line_range": [
+        128
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "169     \"\"\"\n170     assert converter._get_avg_path_len(0) == 0.0\n171     assert converter._get_avg_path_len(1) == 0.0\n",
+      "col_offset": 4,
+      "end_col_offset": 48,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 170,
+      "line_range": [
+        170
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "170     assert converter._get_avg_path_len(0) == 0.0\n171     assert converter._get_avg_path_len(1) == 0.0\n172     assert converter._get_avg_path_len(2) == pytest.approx(0.15443134, rel=1e-5)\n",
+      "col_offset": 4,
+      "end_col_offset": 48,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 171,
+      "line_range": [
+        171
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "171     assert converter._get_avg_path_len(1) == 0.0\n172     assert converter._get_avg_path_len(2) == pytest.approx(0.15443134, rel=1e-5)\n173     assert converter._get_avg_path_len(10) == pytest.approx(3.7488806, rel=1e-5)\n",
+      "col_offset": 4,
+      "end_col_offset": 80,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 172,
+      "line_range": [
+        172
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "172     assert converter._get_avg_path_len(2) == pytest.approx(0.15443134, rel=1e-5)\n173     assert converter._get_avg_path_len(10) == pytest.approx(3.7488806, rel=1e-5)\n174     assert converter._get_avg_path_len(2**63 - 1) == pytest.approx(86.49098, rel=1e-5)\n",
+      "col_offset": 4,
+      "end_col_offset": 80,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 173,
+      "line_range": [
+        173
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "173     assert converter._get_avg_path_len(10) == pytest.approx(3.7488806, rel=1e-5)\n174     assert converter._get_avg_path_len(2**63 - 1) == pytest.approx(86.49098, rel=1e-5)\n175 \n",
+      "col_offset": 4,
+      "end_col_offset": 86,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 174,
+      "line_range": [
+        174
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "198 \n199     assert converter._get_depth(parent_ids, 1) == 1\n200     assert converter._get_depth(parent_ids, 2) == 2\n",
+      "col_offset": 4,
+      "end_col_offset": 51,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 199,
+      "line_range": [
+        199
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "199     assert converter._get_depth(parent_ids, 1) == 1\n200     assert converter._get_depth(parent_ids, 2) == 2\n201     assert converter._get_depth(parent_ids, 3) == 2\n",
+      "col_offset": 4,
+      "end_col_offset": 51,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 200,
+      "line_range": [
+        200
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "200     assert converter._get_depth(parent_ids, 2) == 2\n201     assert converter._get_depth(parent_ids, 3) == 2\n202     assert converter._get_depth(parent_ids, 4) == 3\n",
+      "col_offset": 4,
+      "end_col_offset": 51,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 201,
+      "line_range": [
+        201
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "201     assert converter._get_depth(parent_ids, 3) == 2\n202     assert converter._get_depth(parent_ids, 4) == 3\n203     assert converter._get_depth(parent_ids, 5) == 3\n",
+      "col_offset": 4,
+      "end_col_offset": 51,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 202,
+      "line_range": [
+        202
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "202     assert converter._get_depth(parent_ids, 4) == 3\n203     assert converter._get_depth(parent_ids, 5) == 3\n204     assert converter._get_depth(parent_ids, 6) == 3\n",
+      "col_offset": 4,
+      "end_col_offset": 51,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 203,
+      "line_range": [
+        203
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "203     assert converter._get_depth(parent_ids, 5) == 3\n204     assert converter._get_depth(parent_ids, 6) == 3\n205     assert converter._get_depth(parent_ids, 7) == 4\n",
+      "col_offset": 4,
+      "end_col_offset": 51,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 204,
+      "line_range": [
+        204
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "204     assert converter._get_depth(parent_ids, 6) == 3\n205     assert converter._get_depth(parent_ids, 7) == 4\n206     assert converter._get_depth(parent_ids, 8) == 4\n",
+      "col_offset": 4,
+      "end_col_offset": 51,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 205,
+      "line_range": [
+        205
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "205     assert converter._get_depth(parent_ids, 7) == 4\n206     assert converter._get_depth(parent_ids, 8) == 4\n207     assert converter._get_depth(parent_ids, 9) == 4\n",
+      "col_offset": 4,
+      "end_col_offset": 51,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 206,
+      "line_range": [
+        206
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "206     assert converter._get_depth(parent_ids, 8) == 4\n207     assert converter._get_depth(parent_ids, 9) == 4\n208 \n",
+      "col_offset": 4,
+      "end_col_offset": 51,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 207,
+      "line_range": [
+        207
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "241     # Asserts for node attributes\n242     assert attrs[\"nodes_treeids\"] == [0]\n243     assert attrs[\"nodes_nodeids\"] == [0]\n",
+      "col_offset": 4,
+      "end_col_offset": 40,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 242,
+      "line_range": [
+        242
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "242     assert attrs[\"nodes_treeids\"] == [0]\n243     assert attrs[\"nodes_nodeids\"] == [0]\n244     assert attrs[\"nodes_featureids\"] == [1]\n",
+      "col_offset": 4,
+      "end_col_offset": 40,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 243,
+      "line_range": [
+        243
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "243     assert attrs[\"nodes_nodeids\"] == [0]\n244     assert attrs[\"nodes_featureids\"] == [1]\n245     assert attrs[\"nodes_modes\"] == [\"BRANCH_LT\"]\n",
+      "col_offset": 4,
+      "end_col_offset": 43,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 244,
+      "line_range": [
+        244
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "244     assert attrs[\"nodes_featureids\"] == [1]\n245     assert attrs[\"nodes_modes\"] == [\"BRANCH_LT\"]\n246     assert attrs[\"nodes_values\"] == [2.0]\n",
+      "col_offset": 4,
+      "end_col_offset": 48,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 245,
+      "line_range": [
+        245
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "245     assert attrs[\"nodes_modes\"] == [\"BRANCH_LT\"]\n246     assert attrs[\"nodes_values\"] == [2.0]\n247     assert attrs[\"nodes_truenodeids\"] == [1]\n",
+      "col_offset": 4,
+      "end_col_offset": 41,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 246,
+      "line_range": [
+        246
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "246     assert attrs[\"nodes_values\"] == [2.0]\n247     assert attrs[\"nodes_truenodeids\"] == [1]\n248     assert attrs[\"nodes_falsenodeids\"] == [2]\n",
+      "col_offset": 4,
+      "end_col_offset": 44,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 247,
+      "line_range": [
+        247
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "247     assert attrs[\"nodes_truenodeids\"] == [1]\n248     assert attrs[\"nodes_falsenodeids\"] == [2]\n249     assert attrs[\"nodes_missing_value_tracks_true\"] == [False]\n",
+      "col_offset": 4,
+      "end_col_offset": 45,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 248,
+      "line_range": [
+        248
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "248     assert attrs[\"nodes_falsenodeids\"] == [2]\n249     assert attrs[\"nodes_missing_value_tracks_true\"] == [False]\n250     assert attrs[\"nodes_hitrates\"] == [1.0]\n",
+      "col_offset": 4,
+      "end_col_offset": 62,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 249,
+      "line_range": [
+        249
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "249     assert attrs[\"nodes_missing_value_tracks_true\"] == [False]\n250     assert attrs[\"nodes_hitrates\"] == [1.0]\n251 \n",
+      "col_offset": 4,
+      "end_col_offset": 43,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 250,
+      "line_range": [
+        250
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "252     # Asserts for target attributes (for leaf nodes)\n253     assert attrs[\"target_treeids\"] == []\n254     assert attrs[\"target_nodeids\"] == []\n",
+      "col_offset": 4,
+      "end_col_offset": 40,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 253,
+      "line_range": [
+        253
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "253     assert attrs[\"target_treeids\"] == []\n254     assert attrs[\"target_nodeids\"] == []\n255     assert attrs[\"target_ids\"] == []\n",
+      "col_offset": 4,
+      "end_col_offset": 40,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 254,
+      "line_range": [
+        254
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "254     assert attrs[\"target_nodeids\"] == []\n255     assert attrs[\"target_ids\"] == []\n256     assert attrs[\"target_weights\"] == []\n",
+      "col_offset": 4,
+      "end_col_offset": 36,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 255,
+      "line_range": [
+        255
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "255     assert attrs[\"target_ids\"] == []\n256     assert attrs[\"target_weights\"] == []\n257 \n",
+      "col_offset": 4,
+      "end_col_offset": 40,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 256,
+      "line_range": [
+        256
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "258     # Check parent IDs\n259     assert parent_ids == {1: 0, 2: 0}\n260 \n",
+      "col_offset": 4,
+      "end_col_offset": 37,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 259,
+      "line_range": [
+        259
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "274     # Verify target attributes are updated\n275     assert attrs[\"target_treeids\"] == [0]\n276     assert attrs[\"target_nodeids\"] == [1]\n",
+      "col_offset": 4,
+      "end_col_offset": 41,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 275,
+      "line_range": [
+        275
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "275     assert attrs[\"target_treeids\"] == [0]\n276     assert attrs[\"target_nodeids\"] == [1]\n277     assert attrs[\"target_ids\"] == [0]\n",
+      "col_offset": 4,
+      "end_col_offset": 41,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 276,
+      "line_range": [
+        276
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "276     assert attrs[\"target_nodeids\"] == [1]\n277     assert attrs[\"target_ids\"] == [0]\n278     assert attrs[\"target_weights\"] == [pytest.approx(7.9780719, rel=1e-5)]\n",
+      "col_offset": 4,
+      "end_col_offset": 37,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 277,
+      "line_range": [
+        277
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "277     assert attrs[\"target_ids\"] == [0]\n278     assert attrs[\"target_weights\"] == [pytest.approx(7.9780719, rel=1e-5)]\n279 \n",
+      "col_offset": 4,
+      "end_col_offset": 74,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 278,
+      "line_range": [
+        278
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "338     # Expected values for the tree attributes after adding nodes\n339     assert attrs[\"nodes_treeids\"] == [0, 0, 0]\n340     assert attrs[\"nodes_nodeids\"] == [0, 1, 2]\n",
+      "col_offset": 4,
+      "end_col_offset": 46,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 339,
+      "line_range": [
+        339
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "339     assert attrs[\"nodes_treeids\"] == [0, 0, 0]\n340     assert attrs[\"nodes_nodeids\"] == [0, 1, 2]\n341     assert attrs[\"nodes_featureids\"] == [1, 2, 3]\n",
+      "col_offset": 4,
+      "end_col_offset": 46,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 340,
+      "line_range": [
+        340
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "340     assert attrs[\"nodes_nodeids\"] == [0, 1, 2]\n341     assert attrs[\"nodes_featureids\"] == [1, 2, 3]\n342     assert attrs[\"nodes_modes\"] == [\"BRANCH_LT\", \"LEAF\", \"LEAF\"]\n",
+      "col_offset": 4,
+      "end_col_offset": 49,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 341,
+      "line_range": [
+        341
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "341     assert attrs[\"nodes_featureids\"] == [1, 2, 3]\n342     assert attrs[\"nodes_modes\"] == [\"BRANCH_LT\", \"LEAF\", \"LEAF\"]\n343     assert attrs[\"nodes_values\"] == [2.0, 3.0, 4.0]\n",
+      "col_offset": 4,
+      "end_col_offset": 64,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 342,
+      "line_range": [
+        342
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "342     assert attrs[\"nodes_modes\"] == [\"BRANCH_LT\", \"LEAF\", \"LEAF\"]\n343     assert attrs[\"nodes_values\"] == [2.0, 3.0, 4.0]\n344     assert attrs[\"nodes_truenodeids\"] == [1, -1, -1]\n",
+      "col_offset": 4,
+      "end_col_offset": 51,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 343,
+      "line_range": [
+        343
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "343     assert attrs[\"nodes_values\"] == [2.0, 3.0, 4.0]\n344     assert attrs[\"nodes_truenodeids\"] == [1, -1, -1]\n345     assert attrs[\"nodes_falsenodeids\"] == [2, -1, -1]\n",
+      "col_offset": 4,
+      "end_col_offset": 52,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 344,
+      "line_range": [
+        344
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "344     assert attrs[\"nodes_truenodeids\"] == [1, -1, -1]\n345     assert attrs[\"nodes_falsenodeids\"] == [2, -1, -1]\n346     assert attrs[\"nodes_missing_value_tracks_true\"] == [False, False, False]\n",
+      "col_offset": 4,
+      "end_col_offset": 53,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 345,
+      "line_range": [
+        345
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "345     assert attrs[\"nodes_falsenodeids\"] == [2, -1, -1]\n346     assert attrs[\"nodes_missing_value_tracks_true\"] == [False, False, False]\n347     assert attrs[\"nodes_hitrates\"] == [1.0, 1.0, 1.0]\n",
+      "col_offset": 4,
+      "end_col_offset": 76,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 346,
+      "line_range": [
+        346
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "346     assert attrs[\"nodes_missing_value_tracks_true\"] == [False, False, False]\n347     assert attrs[\"nodes_hitrates\"] == [1.0, 1.0, 1.0]\n348 \n",
+      "col_offset": 4,
+      "end_col_offset": 53,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 347,
+      "line_range": [
+        347
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "349     # Assert the other expected default attributes\n350     assert attrs[\"aggregate_function\"] == \"AVERAGE\"\n351     assert attrs[\"n_targets\"] == 1\n",
+      "col_offset": 4,
+      "end_col_offset": 51,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 350,
+      "line_range": [
+        350
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "350     assert attrs[\"aggregate_function\"] == \"AVERAGE\"\n351     assert attrs[\"n_targets\"] == 1\n352     assert attrs[\"post_transform\"] == \"NONE\"\n",
+      "col_offset": 4,
+      "end_col_offset": 34,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 351,
+      "line_range": [
+        351
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "351     assert attrs[\"n_targets\"] == 1\n352     assert attrs[\"post_transform\"] == \"NONE\"\n353 \n",
+      "col_offset": 4,
+      "end_col_offset": 44,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 352,
+      "line_range": [
+        352
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "353 \n354     assert next_index == 3\n355 \n",
+      "col_offset": 4,
+      "end_col_offset": 26,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 354,
+      "line_range": [
+        354
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "373 \n374     assert converter.convert() == onx\n",
+      "col_offset": 4,
+      "end_col_offset": 37,
+      "filename": "./isolation-forest-onnx/test/test_isolation_forest_converter.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 374,
+      "line_range": [
+        374
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    }
+  ]
+}

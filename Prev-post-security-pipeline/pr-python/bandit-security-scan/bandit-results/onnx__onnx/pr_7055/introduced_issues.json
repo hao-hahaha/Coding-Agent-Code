@@ -1,0 +1,162 @@
+[
+  {
+    "code": "34     if not block_size:\n35         assert len(value.shape) == 1\n36         dims = [1] * len(shape)\n",
+    "col_offset": 8,
+    "end_col_offset": 36,
+    "filename": "./onnx/reference/ops/op_dequantize_linear.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 35,
+    "line_range": [
+      35
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "58         )\n59     assert np.broadcast_shapes(shape, value.shape) == shape\n60     return value\n",
+    "col_offset": 4,
+    "end_col_offset": 59,
+    "filename": "./onnx/reference/ops/op_dequantize_linear.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 59,
+    "line_range": [
+      59
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "909         # See https://github.com/jax-ml/ml_dtypes/issues/301\n910         assert roundtrip_array.shape == np_array.shape\n911         assert roundtrip_array.dtype == np_array.dtype\n",
+    "col_offset": 8,
+    "end_col_offset": 54,
+    "filename": "./onnx/test/helper_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 910,
+    "line_range": [
+      910
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "910         assert roundtrip_array.shape == np_array.shape\n911         assert roundtrip_array.dtype == np_array.dtype\n912         assert roundtrip_array.tobytes() == np_array.tobytes()\n",
+    "col_offset": 8,
+    "end_col_offset": 54,
+    "filename": "./onnx/test/helper_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 911,
+    "line_range": [
+      911
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "911         assert roundtrip_array.dtype == np_array.dtype\n912         assert roundtrip_array.tobytes() == np_array.tobytes()\n913     else:\n",
+    "col_offset": 8,
+    "end_col_offset": 62,
+    "filename": "./onnx/test/helper_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 912,
+    "line_range": [
+      912
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "951         # See https://github.com/jax-ml/ml_dtypes/issues/301\n952         assert roundtrip_array.shape == np_array.shape\n953         assert roundtrip_array.dtype == np_array.dtype\n",
+    "col_offset": 8,
+    "end_col_offset": 54,
+    "filename": "./onnx/test/helper_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 952,
+    "line_range": [
+      952
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "952         assert roundtrip_array.shape == np_array.shape\n953         assert roundtrip_array.dtype == np_array.dtype\n954         assert roundtrip_array.tobytes() == np_array.tobytes()\n",
+    "col_offset": 8,
+    "end_col_offset": 54,
+    "filename": "./onnx/test/helper_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 953,
+    "line_range": [
+      953
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "953         assert roundtrip_array.dtype == np_array.dtype\n954         assert roundtrip_array.tobytes() == np_array.tobytes()\n955     else:\n",
+    "col_offset": 8,
+    "end_col_offset": 62,
+    "filename": "./onnx/test/helper_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 954,
+    "line_range": [
+      954
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

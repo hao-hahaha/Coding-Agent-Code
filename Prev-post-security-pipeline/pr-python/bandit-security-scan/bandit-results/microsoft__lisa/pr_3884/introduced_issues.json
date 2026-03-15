@@ -1,0 +1,25 @@
+[
+  {
+    "code": "26                 \"cloud-hypervisor --version\",\n27                 shell=True,\n28             ).stdout\n29             output = filter_ansi_escape(output)\n30             match = re.search(VMM_VERSION_PATTERN, output.strip())\n31             if match:\n",
+    "col_offset": 21,
+    "end_col_offset": 13,
+    "filename": "./lisa/sut_orchestrator/platform_utils.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Function call with shell=True parameter identified, possible security issue.",
+    "line_number": 27,
+    "line_range": [
+      25,
+      26,
+      27,
+      28
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b604_any_other_function_with_shell_equals_true.html",
+    "test_id": "B604",
+    "test_name": "any_other_function_with_shell_equals_true"
+  }
+]

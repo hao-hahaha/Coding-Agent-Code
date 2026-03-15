@@ -1,0 +1,82 @@
+[
+  {
+    "code": "17     for name, pattern in DEFAULT_REGEX_PATTERNS.items():\n18         assert re.search(pattern, samples[name])\n19 \n",
+    "col_offset": 8,
+    "end_col_offset": 48,
+    "filename": "./tests/test_regex_patterns.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 18,
+    "line_range": [
+      18
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "23     rule_names = {rule.name for rule in config.rules}\n24     assert set(DEFAULT_REGEX_PATTERNS.keys()) == rule_names\n25     # ensure patterns are preserved\n",
+    "col_offset": 4,
+    "end_col_offset": 59,
+    "filename": "./tests/test_regex_patterns.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 24,
+    "line_range": [
+      24
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "26     for rule in config.rules:\n27         assert isinstance(rule, GuardrailRule)\n28         assert DEFAULT_REGEX_PATTERNS[rule.name] == rule.pattern\n",
+    "col_offset": 8,
+    "end_col_offset": 46,
+    "filename": "./tests/test_regex_patterns.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 27,
+    "line_range": [
+      27
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "27         assert isinstance(rule, GuardrailRule)\n28         assert DEFAULT_REGEX_PATTERNS[rule.name] == rule.pattern\n",
+    "col_offset": 8,
+    "end_col_offset": 64,
+    "filename": "./tests/test_regex_patterns.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 28,
+    "line_range": [
+      28
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

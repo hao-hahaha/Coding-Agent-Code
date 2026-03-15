@@ -1,0 +1,242 @@
+[
+  {
+    "code": "74         g = copy.deepcopy(self)\n75         if random.random() < 0.4:\n76             idx = random.randrange(len(g.layers))\n",
+    "col_offset": 11,
+    "end_col_offset": 26,
+    "filename": "./alpha_factory_v1/demos/aiga_meta_evolution/meta_evolver.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 75,
+    "line_range": [
+      75
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "75         if random.random() < 0.4:\n76             idx = random.randrange(len(g.layers))\n77             delta = random.randint(-8, 8)\n",
+    "col_offset": 18,
+    "end_col_offset": 49,
+    "filename": "./alpha_factory_v1/demos/aiga_meta_evolution/meta_evolver.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 76,
+    "line_range": [
+      76
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "76             idx = random.randrange(len(g.layers))\n77             delta = random.randint(-8, 8)\n78             new_size = max(4, min(128, g.layers[idx] + delta))\n",
+    "col_offset": 20,
+    "end_col_offset": 41,
+    "filename": "./alpha_factory_v1/demos/aiga_meta_evolution/meta_evolver.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 77,
+    "line_range": [
+      77
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "80             layers[idx] = new_size\n81             if random.random() < 0.2 and len(layers) < 4:\n82                 layers.insert(idx, random.choice([16, 32, 64]))\n",
+    "col_offset": 15,
+    "end_col_offset": 30,
+    "filename": "./alpha_factory_v1/demos/aiga_meta_evolution/meta_evolver.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 81,
+    "line_range": [
+      81
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "81             if random.random() < 0.2 and len(layers) < 4:\n82                 layers.insert(idx, random.choice([16, 32, 64]))\n83             g.layers = tuple(layers)\n",
+    "col_offset": 35,
+    "end_col_offset": 62,
+    "filename": "./alpha_factory_v1/demos/aiga_meta_evolution/meta_evolver.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 82,
+    "line_range": [
+      82
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "83             g.layers = tuple(layers)\n84         if random.random() < 0.2:\n85             g.activation = random.choice(list(_ACT))\n",
+    "col_offset": 11,
+    "end_col_offset": 26,
+    "filename": "./alpha_factory_v1/demos/aiga_meta_evolution/meta_evolver.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 84,
+    "line_range": [
+      84
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "84         if random.random() < 0.2:\n85             g.activation = random.choice(list(_ACT))\n86         if random.random() < 0.1:\n",
+    "col_offset": 27,
+    "end_col_offset": 52,
+    "filename": "./alpha_factory_v1/demos/aiga_meta_evolution/meta_evolver.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 85,
+    "line_range": [
+      85
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "85             g.activation = random.choice(list(_ACT))\n86         if random.random() < 0.1:\n87             g.hebbian = not g.hebbian\n",
+    "col_offset": 11,
+    "end_col_offset": 26,
+    "filename": "./alpha_factory_v1/demos/aiga_meta_evolution/meta_evolver.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 86,
+    "line_range": [
+      86
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "87             g.hebbian = not g.hebbian\n88         if random.random() < 0.15:\n89             g.novelty_weight = round(min(1.0, max(0.0, g.novelty_weight + random.uniform(-0.15, 0.15))), 2)\n",
+    "col_offset": 11,
+    "end_col_offset": 26,
+    "filename": "./alpha_factory_v1/demos/aiga_meta_evolution/meta_evolver.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 88,
+    "line_range": [
+      88
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "88         if random.random() < 0.15:\n89             g.novelty_weight = round(min(1.0, max(0.0, g.novelty_weight + random.uniform(-0.15, 0.15))), 2)\n90         return g\n",
+    "col_offset": 74,
+    "end_col_offset": 101,
+    "filename": "./alpha_factory_v1/demos/aiga_meta_evolution/meta_evolver.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 89,
+    "line_range": [
+      89
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "155         self.llm = llm\n156         self.rng = random.Random(int(\"A1GA\", 16))\n157         self.gen = 0\n",
+    "col_offset": 19,
+    "end_col_offset": 49,
+    "filename": "./alpha_factory_v1/demos/aiga_meta_evolution/meta_evolver.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 156,
+    "line_range": [
+      156
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "226     def _select(self, scores, k=3):\n227         idx = max(random.sample(range(self.pop_size), k), key=lambda i: scores[i])\n228         return self.population[idx]\n",
+    "col_offset": 18,
+    "end_col_offset": 56,
+    "filename": "./alpha_factory_v1/demos/aiga_meta_evolution/meta_evolver.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 227,
+    "line_range": [
+      227
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  }
+]

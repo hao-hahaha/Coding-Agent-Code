@@ -1,0 +1,44 @@
+[
+  {
+    "code": "115     expected_output = input1 + input2\n116     assert torch.allclose(\n117         output, expected_output\n118     ), \"Kernel output does not match expected result\"\n",
+    "col_offset": 4,
+    "end_col_offset": 53,
+    "filename": "./examples/3dims.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 116,
+    "line_range": [
+      116,
+      117,
+      118
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "208         try:\n209             response = requests.get(\"http://localhost:8000\")\n210             public_url = response.url\n",
+    "col_offset": 23,
+    "end_col_offset": 60,
+    "filename": "./triton_viz/visualizer/interface.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 400,
+      "link": "https://cwe.mitre.org/data/definitions/400.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Call to requests without timeout",
+    "line_number": 209,
+    "line_range": [
+      209
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+    "test_id": "B113",
+    "test_name": "request_without_timeout"
+  }
+]

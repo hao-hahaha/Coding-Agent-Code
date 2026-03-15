@@ -1,0 +1,134 @@
+[
+  {
+    "code": "8 import os\n9 import subprocess\n10 import sys\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./alpha_factory_v1/scripts/verify_wheel_sig.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 9,
+    "line_range": [
+      9
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "28     try:\n29         digest = subprocess.run(\n30             [\"openssl\", \"dgst\", \"-sha512\", \"-binary\", str(wheel_path)],\n31             check=True,\n32             capture_output=True,\n33         ).stdout\n34         res = subprocess.run(\n",
+    "col_offset": 17,
+    "end_col_offset": 9,
+    "filename": "./alpha_factory_v1/scripts/verify_wheel_sig.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 29,
+    "line_range": [
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "28     try:\n29         digest = subprocess.run(\n30             [\"openssl\", \"dgst\", \"-sha512\", \"-binary\", str(wheel_path)],\n31             check=True,\n32             capture_output=True,\n33         ).stdout\n34         res = subprocess.run(\n",
+    "col_offset": 17,
+    "end_col_offset": 9,
+    "filename": "./alpha_factory_v1/scripts/verify_wheel_sig.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 29,
+    "line_range": [
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "33         ).stdout\n34         res = subprocess.run(\n35             [\n36                 \"openssl\",\n37                 \"pkeyutl\",\n38                 \"-verify\",\n39                 \"-pubin\",\n40                 \"-inkey\",\n41                 pub_path,\n42                 \"-sigfile\",\n43                 str(sig_path),\n44             ],\n45             input=digest,\n46         )\n47         return res.returncode == 0\n",
+    "col_offset": 14,
+    "end_col_offset": 9,
+    "filename": "./alpha_factory_v1/scripts/verify_wheel_sig.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 34,
+    "line_range": [
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "33         ).stdout\n34         res = subprocess.run(\n35             [\n36                 \"openssl\",\n37                 \"pkeyutl\",\n38                 \"-verify\",\n39                 \"-pubin\",\n40                 \"-inkey\",\n41                 pub_path,\n42                 \"-sigfile\",\n43                 str(sig_path),\n44             ],\n45             input=digest,\n46         )\n47         return res.returncode == 0\n",
+    "col_offset": 14,
+    "end_col_offset": 9,
+    "filename": "./alpha_factory_v1/scripts/verify_wheel_sig.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 34,
+    "line_range": [
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  }
+]

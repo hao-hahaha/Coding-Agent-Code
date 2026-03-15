@@ -1,0 +1,122 @@
+[
+  {
+    "code": "10 import os\n11 import subprocess\n12 import sys\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./alpha_factory_v1/demos/aiga_meta_evolution/start_aiga_demo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 11,
+    "line_range": [
+      11
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "23 def run(cmd: list[str]) -> None:\n24     subprocess.run(cmd, check=True)\n25 \n",
+    "col_offset": 4,
+    "end_col_offset": 35,
+    "filename": "./alpha_factory_v1/demos/aiga_meta_evolution/start_aiga_demo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 24,
+    "line_range": [
+      24
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "27 def docker_compose_cmd() -> list[str]:\n28     if subprocess.run([\"docker\", \"compose\", \"version\"], capture_output=True).returncode == 0:\n29         return [\"docker\", \"compose\"]\n",
+    "col_offset": 7,
+    "end_col_offset": 76,
+    "filename": "./alpha_factory_v1/demos/aiga_meta_evolution/start_aiga_demo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 28,
+    "line_range": [
+      28
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "27 def docker_compose_cmd() -> list[str]:\n28     if subprocess.run([\"docker\", \"compose\", \"version\"], capture_output=True).returncode == 0:\n29         return [\"docker\", \"compose\"]\n",
+    "col_offset": 7,
+    "end_col_offset": 76,
+    "filename": "./alpha_factory_v1/demos/aiga_meta_evolution/start_aiga_demo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 28,
+    "line_range": [
+      28
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "29         return [\"docker\", \"compose\"]\n30     if subprocess.run([\"docker-compose\", \"--version\"], capture_output=True).returncode == 0:\n31         return [\"docker-compose\"]\n",
+    "col_offset": 7,
+    "end_col_offset": 75,
+    "filename": "./alpha_factory_v1/demos/aiga_meta_evolution/start_aiga_demo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 30,
+    "line_range": [
+      30
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "29         return [\"docker\", \"compose\"]\n30     if subprocess.run([\"docker-compose\", \"--version\"], capture_output=True).returncode == 0:\n31         return [\"docker-compose\"]\n",
+    "col_offset": 7,
+    "end_col_offset": 75,
+    "filename": "./alpha_factory_v1/demos/aiga_meta_evolution/start_aiga_demo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 30,
+    "line_range": [
+      30
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  }
+]

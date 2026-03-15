@@ -1,0 +1,122 @@
+[
+  {
+    "code": "19     df = ld.load_df(db)\n20     assert list(df.columns) == [\"id\", \"parent\", \"patch\", \"score\"]\n21     assert len(df) == 2\n",
+    "col_offset": 4,
+    "end_col_offset": 65,
+    "filename": "./tests/test_lineage_dashboard.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 20,
+    "line_range": [
+      20
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "20     assert list(df.columns) == [\"id\", \"parent\", \"patch\", \"score\"]\n21     assert len(df) == 2\n22     assert df.iloc[1][\"parent\"] == 1\n",
+    "col_offset": 4,
+    "end_col_offset": 23,
+    "filename": "./tests/test_lineage_dashboard.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 21,
+    "line_range": [
+      21
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "21     assert len(df) == 2\n22     assert df.iloc[1][\"parent\"] == 1\n23 \n",
+    "col_offset": 4,
+    "end_col_offset": 36,
+    "filename": "./tests/test_lineage_dashboard.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 22,
+    "line_range": [
+      22
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "31     fig = ld.build_tree(df)\n32     assert isinstance(fig, go.Figure)\n33     data = fig.data[0]\n",
+    "col_offset": 4,
+    "end_col_offset": 37,
+    "filename": "./tests/test_lineage_dashboard.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 32,
+    "line_range": [
+      32
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "33     data = fig.data[0]\n34     assert len(data.ids) == 2\n35     assert \"child.patch\" in data.hovertemplate\n",
+    "col_offset": 4,
+    "end_col_offset": 29,
+    "filename": "./tests/test_lineage_dashboard.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 34,
+    "line_range": [
+      34
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "34     assert len(data.ids) == 2\n35     assert \"child.patch\" in data.hovertemplate\n36 \n",
+    "col_offset": 4,
+    "end_col_offset": 46,
+    "filename": "./tests/test_lineage_dashboard.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 35,
+    "line_range": [
+      35
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

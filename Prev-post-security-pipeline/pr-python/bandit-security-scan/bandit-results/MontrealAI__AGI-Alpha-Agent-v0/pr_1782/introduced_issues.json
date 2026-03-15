@@ -1,0 +1,22 @@
+[
+  {
+    "code": "58     module.maybe_launch(host=\"1.2.3.4\", port=1234)\n59     assert called == {\"app\": module._ensure_router().app, \"host\": \"1.2.3.4\", \"port\": 1234}\n",
+    "col_offset": 4,
+    "end_col_offset": 90,
+    "filename": "./tests/test_adk_gateway_startup.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 59,
+    "line_range": [
+      59
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

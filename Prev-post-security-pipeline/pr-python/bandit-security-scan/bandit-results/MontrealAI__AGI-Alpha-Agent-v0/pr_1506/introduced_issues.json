@@ -1,0 +1,62 @@
+[
+  {
+    "code": "8     html = (browser_dir / \"dist\" / \"index.html\").read_text().splitlines()\n9     assert html[-2].strip() == \"</body>\"\n10     assert html[-1].strip() == \"</html>\"\n",
+    "col_offset": 4,
+    "end_col_offset": 40,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/insight_browser_v1/tests/test_closing_tags.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 9,
+    "line_range": [
+      9
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "9     assert html[-2].strip() == \"</body>\"\n10     assert html[-1].strip() == \"</html>\"\n11     joined = \"\\n\".join(html)\n",
+    "col_offset": 4,
+    "end_col_offset": 40,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/insight_browser_v1/tests/test_closing_tags.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 10,
+    "line_range": [
+      10
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "11     joined = \"\\n\".join(html)\n12     assert \"window.PINNER_TOKEN\" in joined\n",
+    "col_offset": 4,
+    "end_col_offset": 42,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/insight_browser_v1/tests/test_closing_tags.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 12,
+    "line_range": [
+      12
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

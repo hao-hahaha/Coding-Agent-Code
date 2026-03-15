@@ -1,0 +1,86 @@
+[
+  {
+    "code": "60 \n61     assert sent[\"url\"] == \"http://hook\"\n62     assert (\n",
+    "col_offset": 4,
+    "end_col_offset": 39,
+    "filename": "./tests/test_alert_webhook.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 61,
+    "line_range": [
+      61
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "61     assert sent[\"url\"] == \"http://hook\"\n62     assert (\n63         sent[\"payload\"].get(\"text\") == \"dummy restarted\"\n64         if \"text\" in sent[\"payload\"]\n65         else sent[\"payload\"].get(\"content\") == \"dummy restarted\"\n66     )\n67 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/test_alert_webhook.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 62,
+    "line_range": [
+      62,
+      63,
+      64,
+      65,
+      66
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "92 \n93     assert sent[\"url\"] == \"http://hook\"\n94     assert \"failed\" in (sent[\"payload\"].get(\"text\") or sent[\"payload\"].get(\"content\", \"\"))\n",
+    "col_offset": 4,
+    "end_col_offset": 39,
+    "filename": "./tests/test_alert_webhook.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 93,
+    "line_range": [
+      93
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "93     assert sent[\"url\"] == \"http://hook\"\n94     assert \"failed\" in (sent[\"payload\"].get(\"text\") or sent[\"payload\"].get(\"content\", \"\"))\n",
+    "col_offset": 4,
+    "end_col_offset": 90,
+    "filename": "./tests/test_alert_webhook.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 94,
+    "line_range": [
+      94
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

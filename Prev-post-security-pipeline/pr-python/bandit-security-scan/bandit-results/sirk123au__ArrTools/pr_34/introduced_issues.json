@@ -1,0 +1,62 @@
+[
+  {
+    "code": "83     url = f\"{baseurl}{urlbase}/api/v3/movie\"\n84     rsp = requests.get(url, headers=headers)\n85     rsp.raise_for_status()\n",
+    "col_offset": 10,
+    "end_col_offset": 44,
+    "filename": "./arr_gui.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 400,
+      "link": "https://cwe.mitre.org/data/definitions/400.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Call to requests without timeout",
+    "line_number": 84,
+    "line_range": [
+      84
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+    "test_id": "B113",
+    "test_name": "request_without_timeout"
+  },
+  {
+    "code": "147     url = f\"{baseurl}{urlbase}/api/v3/series\"\n148     rsp = requests.get(url, headers=headers)\n149     rsp.raise_for_status()\n",
+    "col_offset": 10,
+    "end_col_offset": 44,
+    "filename": "./arr_gui.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 400,
+      "link": "https://cwe.mitre.org/data/definitions/400.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Call to requests without timeout",
+    "line_number": 148,
+    "line_range": [
+      148
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+    "test_id": "B113",
+    "test_name": "request_without_timeout"
+  },
+  {
+    "code": "206     url = f\"{baseurl}/api/v1/artist\"\n207     rsp = requests.get(url, headers=headers)\n208     rsp.raise_for_status()\n",
+    "col_offset": 10,
+    "end_col_offset": 44,
+    "filename": "./arr_gui.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 400,
+      "link": "https://cwe.mitre.org/data/definitions/400.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Call to requests without timeout",
+    "line_number": 207,
+    "line_range": [
+      207
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+    "test_id": "B113",
+    "test_name": "request_without_timeout"
+  }
+]

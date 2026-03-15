@@ -1,0 +1,522 @@
+[
+  {
+    "code": "15     ann = typing.get_args(typing.get_type_hints(foo, include_extras=True)[\"x\"])\n16     assert ann[0] is NamedArray\n17     spec = ann[1]\n",
+    "col_offset": 4,
+    "end_col_offset": 31,
+    "filename": "./tests/test_dtype_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 16,
+    "line_range": [
+      16
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "17     spec = ann[1]\n18     assert spec.dtype == jnp.float32\n19     assert spec.before == (\"batch\", \"embed\")\n",
+    "col_offset": 4,
+    "end_col_offset": 36,
+    "filename": "./tests/test_dtype_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 18,
+    "line_range": [
+      18
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "18     assert spec.dtype == jnp.float32\n19     assert spec.before == (\"batch\", \"embed\")\n20 \n",
+    "col_offset": 4,
+    "end_col_offset": 44,
+    "filename": "./tests/test_dtype_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 19,
+    "line_range": [
+      19
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "26     spec = typing.get_args(typing.get_type_hints(bar, include_extras=True)[\"x\"])[1]\n27     assert spec.dtype == jnp.int32\n28     assert spec.before == (\"batch\",)\n",
+    "col_offset": 4,
+    "end_col_offset": 34,
+    "filename": "./tests/test_dtype_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 27,
+    "line_range": [
+      27
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "27     assert spec.dtype == jnp.int32\n28     assert spec.before == (\"batch\",)\n29 \n",
+    "col_offset": 4,
+    "end_col_offset": 36,
+    "filename": "./tests/test_dtype_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 28,
+    "line_range": [
+      28
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "35     spec = typing.get_args(typing.get_type_hints(baz, include_extras=True)[\"x\"])[1]\n36     assert str(spec.dtype) == \"float\"\n37 \n",
+    "col_offset": 4,
+    "end_col_offset": 37,
+    "filename": "./tests/test_dtype_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 36,
+    "line_range": [
+      36
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "39     arr = NamedArray(jnp.ones((B.size,), dtype=jnp.float32), (B,))\n40     assert arr.matches_axes(Float[\"b\"])  # type: ignore\n41     assert not arr.matches_axes(Int[\"b\"])  # type: ignore\n",
+    "col_offset": 4,
+    "end_col_offset": 39,
+    "filename": "./tests/test_dtype_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 40,
+    "line_range": [
+      40
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "40     assert arr.matches_axes(Float[\"b\"])  # type: ignore\n41     assert not arr.matches_axes(Int[\"b\"])  # type: ignore\n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./tests/test_dtype_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 41,
+    "line_range": [
+      41
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "13     axes2 = typing.get_args(Named[\"batch embed\"])[1]  # type: ignore\n14     assert axes1 == axes2\n15 \n",
+    "col_offset": 4,
+    "end_col_offset": 25,
+    "filename": "./tests/test_namedarray_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 14,
+    "line_range": [
+      14
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "16     axes3 = typing.get_args(NamedArray[\"batch embed ...\"])[1]\n17     assert axes3.before == (\"batch\", \"embed\") and axes3.subset and axes3.after == ()\n18 \n",
+    "col_offset": 4,
+    "end_col_offset": 84,
+    "filename": "./tests/test_namedarray_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 17,
+    "line_range": [
+      17
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "19     axes4 = typing.get_args(NamedArray[{\"batch\", \"embed\"}])[1]\n20     assert set(axes4.before) == {\"batch\", \"embed\"} and not axes4.ordered\n21 \n",
+    "col_offset": 4,
+    "end_col_offset": 72,
+    "filename": "./tests/test_namedarray_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 20,
+    "line_range": [
+      20
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "22     axes5 = typing.get_args(NamedArray[{\"batch\", \"embed\", ...}])[1]\n23     assert set(axes5.before) == {\"batch\", \"embed\"} and not axes5.ordered and axes5.subset\n24 \n",
+    "col_offset": 4,
+    "end_col_offset": 89,
+    "filename": "./tests/test_namedarray_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 23,
+    "line_range": [
+      23
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "25     axes6 = typing.get_args(NamedArray[\"... embed\"])[1]\n26     assert axes6.before == () and axes6.after == (\"embed\",) and axes6.subset\n27 \n",
+    "col_offset": 4,
+    "end_col_offset": 76,
+    "filename": "./tests/test_namedarray_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 26,
+    "line_range": [
+      26
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "28     axes7 = typing.get_args(NamedArray[\"batch ... embed\"])[1]\n29     assert axes7.before == (\"batch\",) and axes7.after == (\"embed\",) and axes7.subset\n30 \n",
+    "col_offset": 4,
+    "end_col_offset": 84,
+    "filename": "./tests/test_namedarray_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 29,
+    "line_range": [
+      29
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "36     axes = typing.get_args(typing.get_type_hints(foo, include_extras=True)[\"x\"])[1]\n37     assert axes.before == (\"batch\", \"embed\")\n38 \n",
+    "col_offset": 4,
+    "end_col_offset": 44,
+    "filename": "./tests/test_namedarray_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 37,
+    "line_range": [
+      37
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "43     arr = NamedArray(jnp.zeros((Batch.size, Embed.size)), (Batch, Embed))\n44     assert arr.matches_axes(NamedArray[\"batch\", \"embed\"])\n45     assert arr.matches_axes(Named[\"batch embed\"])  # type: ignore\n",
+    "col_offset": 4,
+    "end_col_offset": 57,
+    "filename": "./tests/test_namedarray_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 44,
+    "line_range": [
+      44
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "44     assert arr.matches_axes(NamedArray[\"batch\", \"embed\"])\n45     assert arr.matches_axes(Named[\"batch embed\"])  # type: ignore\n46     assert arr.matches_axes(NamedArray[\"batch embed ...\"])\n",
+    "col_offset": 4,
+    "end_col_offset": 49,
+    "filename": "./tests/test_namedarray_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 45,
+    "line_range": [
+      45
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "45     assert arr.matches_axes(Named[\"batch embed\"])  # type: ignore\n46     assert arr.matches_axes(NamedArray[\"batch embed ...\"])\n47     assert arr.matches_axes(NamedArray[{\"batch\", \"embed\"}])\n",
+    "col_offset": 4,
+    "end_col_offset": 58,
+    "filename": "./tests/test_namedarray_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 46,
+    "line_range": [
+      46
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "46     assert arr.matches_axes(NamedArray[\"batch embed ...\"])\n47     assert arr.matches_axes(NamedArray[{\"batch\", \"embed\"}])\n48     assert arr.matches_axes(NamedArray[{\"batch\", \"embed\", ...}])\n",
+    "col_offset": 4,
+    "end_col_offset": 59,
+    "filename": "./tests/test_namedarray_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 47,
+    "line_range": [
+      47
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "47     assert arr.matches_axes(NamedArray[{\"batch\", \"embed\"}])\n48     assert arr.matches_axes(NamedArray[{\"batch\", \"embed\", ...}])\n49     assert not arr.matches_axes(NamedArray[\"embed batch\"])\n",
+    "col_offset": 4,
+    "end_col_offset": 64,
+    "filename": "./tests/test_namedarray_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 48,
+    "line_range": [
+      48
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "48     assert arr.matches_axes(NamedArray[{\"batch\", \"embed\", ...}])\n49     assert not arr.matches_axes(NamedArray[\"embed batch\"])\n50     assert not arr.matches_axes(NamedArray[{\"batch\", \"foo\", ...}])\n",
+    "col_offset": 4,
+    "end_col_offset": 58,
+    "filename": "./tests/test_namedarray_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 49,
+    "line_range": [
+      49
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "49     assert not arr.matches_axes(NamedArray[\"embed batch\"])\n50     assert not arr.matches_axes(NamedArray[{\"batch\", \"foo\", ...}])\n51 \n",
+    "col_offset": 4,
+    "end_col_offset": 66,
+    "filename": "./tests/test_namedarray_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 50,
+    "line_range": [
+      50
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "55     arr = NamedArray(jnp.zeros((Batch.size,), dtype=jnp.float32), (Batch,))\n56     assert arr.matches_axes(f32[\"batch\"])  # type: ignore\n57     assert not arr.matches_axes(i32[\"batch\"])  # type: ignore\n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./tests/test_namedarray_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 56,
+    "line_range": [
+      56
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "56     assert arr.matches_axes(f32[\"batch\"])  # type: ignore\n57     assert not arr.matches_axes(i32[\"batch\"])  # type: ignore\n58 \n",
+    "col_offset": 4,
+    "end_col_offset": 45,
+    "filename": "./tests/test_namedarray_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 57,
+    "line_range": [
+      57
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "62     arr = NamedArray(jnp.zeros((B.size,), dtype=jnp.float32), (B,))\n63     assert arr.matches_axes(Float[\"batch\"])  # type: ignore\n64     assert not arr.matches_axes(Int[\"batch\"])  # type: ignore\n",
+    "col_offset": 4,
+    "end_col_offset": 43,
+    "filename": "./tests/test_namedarray_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 63,
+    "line_range": [
+      63
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "63     assert arr.matches_axes(Float[\"batch\"])  # type: ignore\n64     assert not arr.matches_axes(Int[\"batch\"])  # type: ignore\n",
+    "col_offset": 4,
+    "end_col_offset": 45,
+    "filename": "./tests/test_namedarray_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 64,
+    "line_range": [
+      64
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

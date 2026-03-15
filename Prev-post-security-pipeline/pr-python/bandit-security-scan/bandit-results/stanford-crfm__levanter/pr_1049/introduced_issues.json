@@ -1,0 +1,42 @@
+[
+  {
+    "code": "58     else:\n59         assert hasattr(config.model, \"hf_checkpoint_converter\"), \"model config lacks HF loader\"\n60         converter: HFCheckpointConverter = config.model.hf_checkpoint_converter()\n",
+    "col_offset": 8,
+    "end_col_offset": 95,
+    "filename": "./src/levanter/main/sample_lm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 59,
+    "line_range": [
+      59
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "76         model = _load_model(config, Vocab, key=key)\n77         assert isinstance(model, LlamaLMHeadModel), \"Only LlamaLMHeadModel supported\"\n78 \n",
+    "col_offset": 8,
+    "end_col_offset": 85,
+    "filename": "./src/levanter/main/sample_lm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 77,
+    "line_range": [
+      77
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

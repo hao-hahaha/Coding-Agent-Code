@@ -1,0 +1,22 @@
+[
+  {
+    "code": "231     def _apply_transpose(self, perm: Sequence[int], on: list[int]) -> list[int]:\n232         assert len(perm) == len(on), \"length mismatch\"\n233         res = [-1 for i in on]\n",
+    "col_offset": 8,
+    "end_col_offset": 54,
+    "filename": "./onnxscript/rewriter/basic_rules.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 232,
+    "line_range": [
+      232
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

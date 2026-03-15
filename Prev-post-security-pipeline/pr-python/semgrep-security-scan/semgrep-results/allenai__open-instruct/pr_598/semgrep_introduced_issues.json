@@ -1,0 +1,170 @@
+[
+  {
+    "check_id": "python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+    "path": "scripts/submit_eval_jobs.py",
+    "start": {
+      "line": 599,
+      "col": 33,
+      "offset": 27227
+    },
+    "end": {
+      "line": 599,
+      "col": 37,
+      "offset": 27231
+    },
+    "extra": {
+      "message": "Found 'subprocess' function 'Popen' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables, which makes it much easier for a malicious actor to execute commands. Use 'shell=False' instead.",
+      "fix": "False",
+      "metadata": {
+        "source-rule-url": "https://bandit.readthedocs.io/en/latest/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "cwe": [
+          "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+        ],
+        "references": [
+          "https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess",
+          "https://docs.python.org/3/library/subprocess.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "secure default"
+        ],
+        "likelihood": "HIGH",
+        "impact": "LOW",
+        "confidence": "MEDIUM",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Command Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+        "shortlink": "https://sg.run/J92w"
+      },
+      "severity": "ERROR",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+    "path": "scripts/submit_eval_jobs.py",
+    "start": {
+      "line": 644,
+      "col": 41,
+      "offset": 29191
+    },
+    "end": {
+      "line": 644,
+      "col": 45,
+      "offset": 29195
+    },
+    "extra": {
+      "message": "Found 'subprocess' function 'Popen' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables, which makes it much easier for a malicious actor to execute commands. Use 'shell=False' instead.",
+      "fix": "False",
+      "metadata": {
+        "source-rule-url": "https://bandit.readthedocs.io/en/latest/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "cwe": [
+          "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+        ],
+        "references": [
+          "https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess",
+          "https://docs.python.org/3/library/subprocess.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "secure default"
+        ],
+        "likelihood": "HIGH",
+        "impact": "LOW",
+        "confidence": "MEDIUM",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Command Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+        "shortlink": "https://sg.run/J92w"
+      },
+      "severity": "ERROR",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+    "path": "scripts/submit_eval_jobs.py",
+    "start": {
+      "line": 709,
+      "col": 33,
+      "offset": 32710
+    },
+    "end": {
+      "line": 709,
+      "col": 37,
+      "offset": 32714
+    },
+    "extra": {
+      "message": "Found 'subprocess' function 'Popen' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables, which makes it much easier for a malicious actor to execute commands. Use 'shell=False' instead.",
+      "fix": "False",
+      "metadata": {
+        "source-rule-url": "https://bandit.readthedocs.io/en/latest/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "cwe": [
+          "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+        ],
+        "references": [
+          "https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess",
+          "https://docs.python.org/3/library/subprocess.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "secure default"
+        ],
+        "likelihood": "HIGH",
+        "impact": "LOW",
+        "confidence": "MEDIUM",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Command Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+        "shortlink": "https://sg.run/J92w"
+      },
+      "severity": "ERROR",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  }
+]

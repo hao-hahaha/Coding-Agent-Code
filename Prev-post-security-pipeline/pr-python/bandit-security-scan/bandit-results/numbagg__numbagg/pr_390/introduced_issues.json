@@ -1,0 +1,850 @@
+[
+  {
+    "code": "26         # Check shape - should be (time, vars, vars)\n27         assert result.shape == (4, 2, 2)\n28 \n",
+    "col_offset": 8,
+    "end_col_offset": 40,
+    "filename": "./numbagg/test/test_move_exp_matrix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 27,
+    "line_range": [
+      27
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "36             # For covariance, just check diagonal is non-negative\n37             assert np.all(np.diag(final_result) >= 0)\n38 \n",
+    "col_offset": 12,
+    "end_col_offset": 53,
+    "filename": "./numbagg/test/test_move_exp_matrix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 37,
+    "line_range": [
+      37
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "57         # Check shape\n58         assert result.shape == (4, 3, 3)\n59 \n",
+    "col_offset": 8,
+    "end_col_offset": 40,
+    "filename": "./numbagg/test/test_move_exp_matrix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 58,
+    "line_range": [
+      58
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "60         # Should handle NaN gracefully - check that we get some finite values\n61         assert np.any(np.isfinite(result))\n62 \n",
+    "col_offset": 8,
+    "end_col_offset": 42,
+    "filename": "./numbagg/test/test_move_exp_matrix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 61,
+    "line_range": [
+      61
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "70         # Check shape\n71         assert result.shape == (4, 1, 1)\n72 \n",
+    "col_offset": 8,
+    "end_col_offset": 40,
+    "filename": "./numbagg/test/test_move_exp_matrix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 71,
+    "line_range": [
+      71
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "75             # First time step might be NaN, but later ones should be 1.0\n76             assert (\n77                 np.isnan(result[0, 0, 0]) or result[0, 0, 0] == 1.0\n78             )  # First might be NaN\n79             assert_allclose(\n",
+    "col_offset": 12,
+    "end_col_offset": 13,
+    "filename": "./numbagg/test/test_move_exp_matrix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 76,
+    "line_range": [
+      76,
+      77,
+      78
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "84             finite_mask = np.isfinite(result[:, 0, 0])\n85             assert np.all(result[finite_mask, 0, 0] >= 0)\n86 \n",
+    "col_offset": 12,
+    "end_col_offset": 57,
+    "filename": "./numbagg/test/test_move_exp_matrix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 85,
+    "line_range": [
+      85
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "99         nan_count_low = np.sum(np.isnan(result_low[0]))\n100         assert nan_count_high >= nan_count_low\n101 \n",
+    "col_offset": 8,
+    "end_col_offset": 46,
+    "filename": "./numbagg/test/test_move_exp_matrix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 100,
+    "line_range": [
+      100
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "111         # Both should have same shape\n112         assert result_high.shape == result_low.shape == (5, 2, 2)\n113 \n",
+    "col_offset": 8,
+    "end_col_offset": 65,
+    "filename": "./numbagg/test/test_move_exp_matrix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 112,
+    "line_range": [
+      112
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "114         # Results should be different\n115         assert not np.allclose(result_high[-1], result_low[-1], rtol=1e-3)\n116 \n",
+    "col_offset": 8,
+    "end_col_offset": 74,
+    "filename": "./numbagg/test/test_move_exp_matrix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 115,
+    "line_range": [
+      115
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "127         finite_mask = np.isfinite(result)\n128         assert np.all(result[finite_mask] >= -1.0)\n129         assert np.all(result[finite_mask] <= 1.0)\n",
+    "col_offset": 8,
+    "end_col_offset": 50,
+    "filename": "./numbagg/test/test_move_exp_matrix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 128,
+    "line_range": [
+      128
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "128         assert np.all(result[finite_mask] >= -1.0)\n129         assert np.all(result[finite_mask] <= 1.0)\n130 \n",
+    "col_offset": 8,
+    "end_col_offset": 49,
+    "filename": "./numbagg/test/test_move_exp_matrix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 129,
+    "line_range": [
+      129
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "148         # Results should be different due to different weighting\n149         assert not np.allclose(final_cov_high, final_cov_low, rtol=1e-3)\n150 \n",
+    "col_offset": 8,
+    "end_col_offset": 72,
+    "filename": "./numbagg/test/test_move_exp_matrix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 149,
+    "line_range": [
+      149
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "159         # Should work and produce expected shape\n160         assert result.shape == (4, 2, 2)\n161 \n",
+    "col_offset": 8,
+    "end_col_offset": 40,
+    "filename": "./numbagg/test/test_move_exp_matrix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 160,
+    "line_range": [
+      160
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "163         result_constant = func(data, alpha=0.5)\n164         assert not np.allclose(result, result_constant)\n165 \n",
+    "col_offset": 8,
+    "end_col_offset": 55,
+    "filename": "./numbagg/test/test_move_exp_matrix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 164,
+    "line_range": [
+      164
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "173         # All results should be NaN\n174         assert np.all(np.isnan(result_corr))\n175         assert np.all(np.isnan(result_cov))\n",
+    "col_offset": 8,
+    "end_col_offset": 44,
+    "filename": "./numbagg/test/test_move_exp_matrix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 174,
+    "line_range": [
+      174
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "174         assert np.all(np.isnan(result_corr))\n175         assert np.all(np.isnan(result_cov))\n176 \n",
+    "col_offset": 8,
+    "end_col_offset": 43,
+    "filename": "./numbagg/test/test_move_exp_matrix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 175,
+    "line_range": [
+      175
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "187         # Should have shape (4, 2, 2)\n188         assert result_corr.shape == (4, 2, 2)\n189         assert result_cov.shape == (4, 2, 2)\n",
+    "col_offset": 8,
+    "end_col_offset": 45,
+    "filename": "./numbagg/test/test_move_exp_matrix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 188,
+    "line_range": [
+      188
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "188         assert result_corr.shape == (4, 2, 2)\n189         assert result_cov.shape == (4, 2, 2)\n190 \n",
+    "col_offset": 8,
+    "end_col_offset": 44,
+    "filename": "./numbagg/test/test_move_exp_matrix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 189,
+    "line_range": [
+      189
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "191         # Most values should be NaN since we need at least 2 observations for correlation/covariance\n192         assert np.sum(np.isnan(result_corr)) > np.sum(np.isfinite(result_corr))\n193         assert np.sum(np.isnan(result_cov)) > np.sum(np.isfinite(result_cov))\n",
+    "col_offset": 8,
+    "end_col_offset": 79,
+    "filename": "./numbagg/test/test_move_exp_matrix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 192,
+    "line_range": [
+      192
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "192         assert np.sum(np.isnan(result_corr)) > np.sum(np.isfinite(result_corr))\n193         assert np.sum(np.isnan(result_cov)) > np.sum(np.isfinite(result_cov))\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./numbagg/test/test_move_exp_matrix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 193,
+    "line_range": [
+      193
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "25                 # All eigenvalues should be non-negative (allowing small numerical errors)\n26                 assert np.all(eigenvals >= -1e-10), (\n27                     f\"Negative eigenvalue found at time {t}: {eigenvals.min()}\"\n28                 )\n29 \n",
+    "col_offset": 16,
+    "end_col_offset": 17,
+    "filename": "./numbagg/test/test_move_exp_matrix_advanced.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 26,
+    "line_range": [
+      26,
+      27,
+      28
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "46                 # 3. All values should be in [-1, 1]\n47                 assert np.all(corr_matrix >= -1.0)\n48                 assert np.all(corr_matrix <= 1.0)\n",
+    "col_offset": 16,
+    "end_col_offset": 50,
+    "filename": "./numbagg/test/test_move_exp_matrix_advanced.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 47,
+    "line_range": [
+      47
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "47                 assert np.all(corr_matrix >= -1.0)\n48                 assert np.all(corr_matrix <= 1.0)\n49 \n",
+    "col_offset": 16,
+    "end_col_offset": 49,
+    "filename": "./numbagg/test/test_move_exp_matrix_advanced.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 48,
+    "line_range": [
+      48
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "51                 eigenvals = np.linalg.eigvals(corr_matrix)\n52                 assert np.all(eigenvals >= -1e-10), (\n53                     f\"Correlation matrix not PSD at time {t}\"\n54                 )\n55 \n",
+    "col_offset": 16,
+    "end_col_offset": 17,
+    "filename": "./numbagg/test/test_move_exp_matrix_advanced.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 52,
+    "line_range": [
+      52,
+      53,
+      54
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "69         # Both should produce valid results\n70         assert not np.all(np.isnan(result_low[-1]))\n71         assert not np.all(np.isnan(result_high[-1]))\n",
+    "col_offset": 8,
+    "end_col_offset": 51,
+    "filename": "./numbagg/test/test_move_exp_matrix_advanced.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 70,
+    "line_range": [
+      70
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "70         assert not np.all(np.isnan(result_low[-1]))\n71         assert not np.all(np.isnan(result_high[-1]))\n72 \n",
+    "col_offset": 8,
+    "end_col_offset": 52,
+    "filename": "./numbagg/test/test_move_exp_matrix_advanced.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 71,
+    "line_range": [
+      71
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "74         # Check the off-diagonal correlation values\n75         assert not np.allclose(result_low[-5:, 0, 1], result_high[-5:, 0, 1], rtol=1e-2)\n76 \n",
+    "col_offset": 8,
+    "end_col_offset": 88,
+    "filename": "./numbagg/test/test_move_exp_matrix_advanced.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 75,
+    "line_range": [
+      75
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "100         # Off-diagonal correlation should be NaN (0/0 case)\n101         assert np.isnan(final_corr[0, 1])\n102         assert np.isnan(final_corr[1, 0])\n",
+    "col_offset": 8,
+    "end_col_offset": 41,
+    "filename": "./numbagg/test/test_move_exp_matrix_advanced.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 101,
+    "line_range": [
+      101
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "101         assert np.isnan(final_corr[0, 1])\n102         assert np.isnan(final_corr[1, 0])\n103 \n",
+    "col_offset": 8,
+    "end_col_offset": 41,
+    "filename": "./numbagg/test/test_move_exp_matrix_advanced.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 102,
+    "line_range": [
+      102
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "119         # Should not produce NaN or inf values\n120         assert np.all(np.isfinite(corr_result[-1]))\n121         assert np.all(np.isfinite(cov_result[-1]))\n",
+    "col_offset": 8,
+    "end_col_offset": 51,
+    "filename": "./numbagg/test/test_move_exp_matrix_advanced.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 120,
+    "line_range": [
+      120
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "120         assert np.all(np.isfinite(corr_result[-1]))\n121         assert np.all(np.isfinite(cov_result[-1]))\n122 \n",
+    "col_offset": 8,
+    "end_col_offset": 50,
+    "filename": "./numbagg/test/test_move_exp_matrix_advanced.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 121,
+    "line_range": [
+      121
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "128         # But we'll be more lenient since exponential weighting might make it exactly 1.0\n129         assert final_corr[0, 1] <= 1.0\n130 \n",
+    "col_offset": 8,
+    "end_col_offset": 38,
+    "filename": "./numbagg/test/test_move_exp_matrix_advanced.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 129,
+    "line_range": [
+      129
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "142         # Early time steps should be NaN due to insufficient weight\n143         assert np.isnan(result[0, 0, 1])\n144         assert np.isnan(result[1, 0, 1])\n",
+    "col_offset": 8,
+    "end_col_offset": 40,
+    "filename": "./numbagg/test/test_move_exp_matrix_advanced.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 143,
+    "line_range": [
+      143
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "143         assert np.isnan(result[0, 0, 1])\n144         assert np.isnan(result[1, 0, 1])\n145 \n",
+    "col_offset": 8,
+    "end_col_offset": 40,
+    "filename": "./numbagg/test/test_move_exp_matrix_advanced.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 144,
+    "line_range": [
+      144
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "149             # If not NaN, should be finite\n150             assert np.isfinite(final_result[0, 1])\n151 \n",
+    "col_offset": 12,
+    "end_col_offset": 50,
+    "filename": "./numbagg/test/test_move_exp_matrix_advanced.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 150,
+    "line_range": [
+      150
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "174         # Should produce some valid results eventually\n175         assert not np.all(np.isnan(result))\n176 \n",
+    "col_offset": 8,
+    "end_col_offset": 43,
+    "filename": "./numbagg/test/test_move_exp_matrix_advanced.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 175,
+    "line_range": [
+      175
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "180             finite_values = result[finite_mask]\n181             assert np.all(finite_values >= -1.0)\n182             assert np.all(finite_values <= 1.0)\n",
+    "col_offset": 12,
+    "end_col_offset": 48,
+    "filename": "./numbagg/test/test_move_exp_matrix_advanced.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 181,
+    "line_range": [
+      181
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "181             assert np.all(finite_values >= -1.0)\n182             assert np.all(finite_values <= 1.0)\n183 \n",
+    "col_offset": 12,
+    "end_col_offset": 47,
+    "filename": "./numbagg/test/test_move_exp_matrix_advanced.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 182,
+    "line_range": [
+      182
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "217         # High alpha should adapt faster, so should be closer to true regime 2 correlation\n218         assert (\n219             error_high < error_low or abs(error_high - error_low) < 0.1\n220         )  # Allow some tolerance\n221 \n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./numbagg/test/test_move_exp_matrix_advanced.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 218,
+    "line_range": [
+      218,
+      219,
+      220
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "232         # Should complete without error and have correct shape\n233         assert result.shape == (n_obs, n_vars, n_vars)\n234 \n",
+    "col_offset": 8,
+    "end_col_offset": 54,
+    "filename": "./numbagg/test/test_move_exp_matrix_advanced.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 233,
+    "line_range": [
+      233
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "211         final_corr = corr_from_matrix[-1]\n212         assert abs(final_corr - 1.0) < 1e-10\n213 \n",
+    "col_offset": 8,
+    "end_col_offset": 44,
+    "filename": "./numbagg/test/test_move_exp_matrix_consistency.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 212,
+    "line_range": [
+      212
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

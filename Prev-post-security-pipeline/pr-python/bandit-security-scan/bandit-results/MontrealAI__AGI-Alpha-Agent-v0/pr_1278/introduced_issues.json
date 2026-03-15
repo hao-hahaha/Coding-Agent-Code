@@ -1,0 +1,102 @@
+[
+  {
+    "code": "20         self.ledger = ledger\n21         self._rng = rng or random.Random()\n22 \n",
+    "col_offset": 27,
+    "end_col_offset": 42,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/agents/mutators/llm_mutator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 21,
+    "line_range": [
+      21
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "22     monkeypatch.setenv(\"AGI_INSIGHT_OFFLINE\", \"1\")\n23     mut = llm_mutator.LLMMutator(ledger, rng=random.Random(1))\n24     diff = mut.generate_diff(str(tmp_path), \"demo.py:feat\")\n",
+    "col_offset": 45,
+    "end_col_offset": 61,
+    "filename": "./tests/test_mutator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 23,
+    "line_range": [
+      23
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "25     patcher_core.apply_patch(diff, repo_path=tmp_path)\n26     assert \"feat\" in target.read_text(encoding=\"utf-8\")\n27 \n",
+    "col_offset": 4,
+    "end_col_offset": 55,
+    "filename": "./tests/test_mutator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 26,
+    "line_range": [
+      26
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "35     with mock.patch.object(llm_mutator, \"_sync_chat\", return_value=patch):\n36         mut = llm_mutator.LLMMutator(ledger, rng=random.Random(2))\n37         diff = mut.generate_diff(str(tmp_path), \"demo.py:improve\")\n",
+    "col_offset": 49,
+    "end_col_offset": 65,
+    "filename": "./tests/test_mutator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 36,
+    "line_range": [
+      36
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "38     patcher_core.apply_patch(diff, repo_path=tmp_path)\n39     assert \"improve\" in target.read_text(encoding=\"utf-8\")\n",
+    "col_offset": 4,
+    "end_col_offset": 58,
+    "filename": "./tests/test_mutator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 39,
+    "line_range": [
+      39
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "code": "21         style_integrity = page.get_attribute(\"link[href='style.css']\", \"integrity\")\n22         assert app_integrity and app_integrity.startswith(\"sha384-\")\n23         assert style_integrity and style_integrity.startswith(\"sha384-\")\n",
+    "col_offset": 8,
+    "end_col_offset": 68,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/insight_browser_v1/tests/test_integrity.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 22,
+    "line_range": [
+      22
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "22         assert app_integrity and app_integrity.startswith(\"sha384-\")\n23         assert style_integrity and style_integrity.startswith(\"sha384-\")\n24         browser.close()\n",
+    "col_offset": 8,
+    "end_col_offset": 72,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/insight_browser_v1/tests/test_integrity.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 23,
+    "line_range": [
+      23
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

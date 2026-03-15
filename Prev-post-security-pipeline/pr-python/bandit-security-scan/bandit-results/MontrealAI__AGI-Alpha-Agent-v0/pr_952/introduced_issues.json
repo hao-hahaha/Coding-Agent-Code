@@ -1,0 +1,22 @@
+[
+  {
+    "code": "311 @main.command(name=\"api-server\")\n312 @click.option(\"--host\", default=\"0.0.0.0\", show_default=True, help=\"Bind host\")\n313 @click.option(\n",
+    "col_offset": 32,
+    "end_col_offset": 41,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/interface/cli.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 605,
+      "link": "https://cwe.mitre.org/data/definitions/605.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible binding to all interfaces.",
+    "line_number": 312,
+    "line_range": [
+      312
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b104_hardcoded_bind_all_interfaces.html",
+    "test_id": "B104",
+    "test_name": "hardcoded_bind_all_interfaces"
+  }
+]

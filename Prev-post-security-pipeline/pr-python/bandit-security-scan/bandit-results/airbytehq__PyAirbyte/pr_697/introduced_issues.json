@@ -1,0 +1,42 @@
+[
+  {
+    "code": "72             if components_py_checksum is None:\n73                 components_py_checksum = hashlib.md5(components_py.encode()).hexdigest()\n74 \n",
+    "col_offset": 41,
+    "end_col_offset": 76,
+    "filename": "./airbyte/_executors/declarative.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 327,
+      "link": "https://cwe.mitre.org/data/definitions/327.html"
+    },
+    "issue_severity": "HIGH",
+    "issue_text": "Use of weak MD5 hash for security. Consider usedforsecurity=False",
+    "line_number": 73,
+    "line_range": [
+      73
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b324_hashlib.html",
+    "test_id": "B324",
+    "test_name": "hashlib"
+  },
+  {
+    "code": "111     components_content = response.text\n112     components_py_checksum = hashlib.md5(components_content.encode()).hexdigest()\n113 \n",
+    "col_offset": 29,
+    "end_col_offset": 69,
+    "filename": "./airbyte/_executors/util.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 327,
+      "link": "https://cwe.mitre.org/data/definitions/327.html"
+    },
+    "issue_severity": "HIGH",
+    "issue_text": "Use of weak MD5 hash for security. Consider usedforsecurity=False",
+    "line_number": 112,
+    "line_range": [
+      112
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b324_hashlib.html",
+    "test_id": "B324",
+    "test_name": "hashlib"
+  }
+]

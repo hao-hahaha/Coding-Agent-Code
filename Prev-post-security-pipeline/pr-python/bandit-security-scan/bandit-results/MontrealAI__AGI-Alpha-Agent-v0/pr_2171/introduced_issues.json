@@ -1,0 +1,93 @@
+[
+  {
+    "code": "8 import shutil\n9 import subprocess\n10 import sys\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tests/test_patcher_core_cli.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 9,
+    "line_range": [
+      9
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "66 \n67     result = subprocess.run(\n68         [\n69             sys.executable,\n70             \"-m\",\n71             \"alpha_factory_v1.demos.self_healing_repo.patcher_core\",\n72             \"--repo\",\n73             str(repo),\n74         ],\n75         capture_output=True,\n76         text=True,\n77         env=env,\n78     )\n79 \n",
+    "col_offset": 13,
+    "end_col_offset": 5,
+    "filename": "./tests/test_patcher_core_cli.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 67,
+    "line_range": [
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "79 \n80     assert result.returncode == 0, result.stdout + result.stderr\n81     combined = result.stdout + result.stderr\n",
+    "col_offset": 4,
+    "end_col_offset": 64,
+    "filename": "./tests/test_patcher_core_cli.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 80,
+    "line_range": [
+      80
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "81     combined = result.stdout + result.stderr\n82     assert \"Patch fixed the tests\" in combined\n",
+    "col_offset": 4,
+    "end_col_offset": 46,
+    "filename": "./tests/test_patcher_core_cli.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 82,
+    "line_range": [
+      82
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "code": "63     simhash = int.from_bytes(h, \"big\")\n64     rng = random.Random(simhash & 0xFFFF)\n65     accuracy = 0.5 + rng.random() * 0.5\n",
+    "col_offset": 10,
+    "end_col_offset": 41,
+    "filename": "./src/eval/fitness.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 64,
+    "line_range": [
+      64
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "18     duration = (time.perf_counter() - start) * 1000\n19     assert duration < 50\n20     assert {ind.fitness for ind in front} == {_fit(*v) for v in front_vals}\n",
+    "col_offset": 4,
+    "end_col_offset": 24,
+    "filename": "./tests/test_multi_objective.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 19,
+    "line_range": [
+      19
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "19     assert duration < 50\n20     assert {ind.fitness for ind in front} == {_fit(*v) for v in front_vals}\n",
+    "col_offset": 4,
+    "end_col_offset": 75,
+    "filename": "./tests/test_multi_objective.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 20,
+    "line_range": [
+      20
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

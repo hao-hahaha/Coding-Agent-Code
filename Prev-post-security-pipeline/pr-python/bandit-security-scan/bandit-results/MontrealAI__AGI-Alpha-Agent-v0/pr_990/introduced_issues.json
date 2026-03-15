@@ -1,0 +1,274 @@
+[
+  {
+    "code": "2 import shutil\n3 import subprocess\n4 import time\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tests/test_postgres_ledger.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 3,
+    "line_range": [
+      3
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "21 def pg_container():\n22     cid = subprocess.check_output([\n23         \"docker\",\n24         \"run\",\n25         \"-d\",\n26         \"-e\",\n27         \"POSTGRES_USER=insight\",\n28         \"-e\",\n29         \"POSTGRES_PASSWORD=insight\",\n30         \"-e\",\n31         \"POSTGRES_DB=insight\",\n32         \"-p\",\n33         \"55432:5432\",\n34         \"postgres:16-alpine\",\n35     ]).decode().strip()\n36     try:\n",
+    "col_offset": 10,
+    "end_col_offset": 6,
+    "filename": "./tests/test_postgres_ledger.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 22,
+    "line_range": [
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "21 def pg_container():\n22     cid = subprocess.check_output([\n23         \"docker\",\n24         \"run\",\n25         \"-d\",\n26         \"-e\",\n27         \"POSTGRES_USER=insight\",\n28         \"-e\",\n29         \"POSTGRES_PASSWORD=insight\",\n30         \"-e\",\n31         \"POSTGRES_DB=insight\",\n32         \"-p\",\n33         \"55432:5432\",\n34         \"postgres:16-alpine\",\n35     ]).decode().strip()\n36     try:\n",
+    "col_offset": 10,
+    "end_col_offset": 6,
+    "filename": "./tests/test_postgres_ledger.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 22,
+    "line_range": [
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "37         for _ in range(30):\n38             res = subprocess.run(\n39                 [\"docker\", \"exec\", cid, \"pg_isready\", \"-U\", \"insight\"],\n40                 capture_output=True,\n41             )\n42             if res.returncode == 0:\n",
+    "col_offset": 18,
+    "end_col_offset": 13,
+    "filename": "./tests/test_postgres_ledger.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 38,
+    "line_range": [
+      38,
+      39,
+      40,
+      41
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "37         for _ in range(30):\n38             res = subprocess.run(\n39                 [\"docker\", \"exec\", cid, \"pg_isready\", \"-U\", \"insight\"],\n40                 capture_output=True,\n41             )\n42             if res.returncode == 0:\n",
+    "col_offset": 18,
+    "end_col_offset": 13,
+    "filename": "./tests/test_postgres_ledger.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 38,
+    "line_range": [
+      38,
+      39,
+      40,
+      41
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "45         else:\n46             subprocess.run([\"docker\", \"logs\", cid], check=False)\n47             raise RuntimeError(\"postgres not ready\")\n",
+    "col_offset": 12,
+    "end_col_offset": 64,
+    "filename": "./tests/test_postgres_ledger.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 46,
+    "line_range": [
+      46
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "45         else:\n46             subprocess.run([\"docker\", \"logs\", cid], check=False)\n47             raise RuntimeError(\"postgres not ready\")\n",
+    "col_offset": 12,
+    "end_col_offset": 64,
+    "filename": "./tests/test_postgres_ledger.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 46,
+    "line_range": [
+      46
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "49     finally:\n50         subprocess.run([\"docker\", \"rm\", \"-f\", cid], check=False)\n51 \n",
+    "col_offset": 8,
+    "end_col_offset": 64,
+    "filename": "./tests/test_postgres_ledger.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 50,
+    "line_range": [
+      50
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "49     finally:\n50         subprocess.run([\"docker\", \"rm\", \"-f\", cid], check=False)\n51 \n",
+    "col_offset": 8,
+    "end_col_offset": 64,
+    "filename": "./tests/test_postgres_ledger.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 50,
+    "line_range": [
+      50
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "62     )\n63     ledger = Ledger(\"/tmp/ignore.db\", db=\"postgres\", broadcast=False)\n64     env = messaging.Envelope(\"a\", \"b\", {\"v\": 1}, 0.0)\n",
+    "col_offset": 20,
+    "end_col_offset": 36,
+    "filename": "./tests/test_postgres_ledger.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 63,
+    "line_range": [
+      63
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "67 \n68     conn = psycopg2.connect(host=\"localhost\", port=55432, user=\"insight\", password=\"insight\", dbname=\"insight\")\n69     with conn, conn.cursor() as cur:\n",
+    "col_offset": 11,
+    "end_col_offset": 111,
+    "filename": "./tests/test_postgres_ledger.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'insight'",
+    "line_number": 68,
+    "line_range": [
+      68
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b106_hardcoded_password_funcarg.html",
+    "test_id": "B106",
+    "test_name": "hardcoded_password_funcarg"
+  },
+  {
+    "code": "72     conn.close()\n73     assert count == 1\n",
+    "col_offset": 4,
+    "end_col_offset": 21,
+    "filename": "./tests/test_postgres_ledger.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 73,
+    "line_range": [
+      73
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

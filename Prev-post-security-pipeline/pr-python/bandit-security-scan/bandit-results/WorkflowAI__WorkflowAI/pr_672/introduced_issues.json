@@ -1,0 +1,942 @@
+[
+  {
+    "code": "619 def test_sanitize_json_schema(schema: dict[str, Any], expected: dict[str, Any]):\n620     assert prepare_google_response_schema(schema) == expected\n621 \n",
+    "col_offset": 4,
+    "end_col_offset": 61,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 620,
+    "line_range": [
+      620
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "663 \n664     assert resolve_schema_refs(schema) == expected\n665 \n",
+    "col_offset": 4,
+    "end_col_offset": 50,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 664,
+    "line_range": [
+      664
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "714 \n715     assert capitalize_schema_types(schema) == expected\n716 \n",
+    "col_offset": 4,
+    "end_col_offset": 54,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 715,
+    "line_range": [
+      715
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "778 \n779     assert splat_nulls_recursive(schema) == expected\n780 \n",
+    "col_offset": 4,
+    "end_col_offset": 52,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 779,
+    "line_range": [
+      779
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "810 \n811     assert splat_nulls_recursive(schema) == expected\n812 \n",
+    "col_offset": 4,
+    "end_col_offset": 52,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 811,
+    "line_range": [
+      811
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "847     # Check that top-level type is capitalized\n848     assert result[\"type\"] == \"OBJECT\"\n849 \n",
+    "col_offset": 4,
+    "end_col_offset": 37,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 848,
+    "line_range": [
+      848
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "850     # Check that nested simple types are capitalized\n851     assert result[\"properties\"][\"success\"][\"type\"] == \"BOOLEAN\"\n852     assert result[\"properties\"][\"error_analysis\"][\"properties\"][\"explanation\"][\"type\"] == \"STRING\"\n",
+    "col_offset": 4,
+    "end_col_offset": 63,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 851,
+    "line_range": [
+      851
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "851     assert result[\"properties\"][\"success\"][\"type\"] == \"BOOLEAN\"\n852     assert result[\"properties\"][\"error_analysis\"][\"properties\"][\"explanation\"][\"type\"] == \"STRING\"\n853     assert result[\"properties\"][\"error_analysis\"][\"properties\"][\"origin\"][\"type\"] == \"STRING\"\n",
+    "col_offset": 4,
+    "end_col_offset": 98,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 852,
+    "line_range": [
+      852
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "852     assert result[\"properties\"][\"error_analysis\"][\"properties\"][\"explanation\"][\"type\"] == \"STRING\"\n853     assert result[\"properties\"][\"error_analysis\"][\"properties\"][\"origin\"][\"type\"] == \"STRING\"\n854 \n",
+    "col_offset": 4,
+    "end_col_offset": 93,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 853,
+    "line_range": [
+      853
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "855     # Check that nullable type is now properly converted to single type + nullable\n856     assert result[\"properties\"][\"error_analysis\"][\"type\"] == \"OBJECT\"\n857     assert result[\"properties\"][\"error_analysis\"][\"nullable\"] is True\n",
+    "col_offset": 4,
+    "end_col_offset": 69,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 856,
+    "line_range": [
+      856
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "856     assert result[\"properties\"][\"error_analysis\"][\"type\"] == \"OBJECT\"\n857     assert result[\"properties\"][\"error_analysis\"][\"nullable\"] is True\n858 \n",
+    "col_offset": 4,
+    "end_col_offset": 69,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 857,
+    "line_range": [
+      857
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "859     # Check that other fields are preserved\n860     assert result[\"properties\"][\"success\"][\"description\"] == \"Whether the operation was successful\"\n861     assert result[\"properties\"][\"error_analysis\"][\"properties\"][\"origin\"][\"enum\"] == [\"client\", \"server\"]\n",
+    "col_offset": 4,
+    "end_col_offset": 99,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 860,
+    "line_range": [
+      860
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "860     assert result[\"properties\"][\"success\"][\"description\"] == \"Whether the operation was successful\"\n861     assert result[\"properties\"][\"error_analysis\"][\"properties\"][\"origin\"][\"enum\"] == [\"client\", \"server\"]\n862 \n",
+    "col_offset": 4,
+    "end_col_offset": 105,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 861,
+    "line_range": [
+      861
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "894     # Simple nullable should become single type + nullable\n895     assert result[\"properties\"][\"simple_nullable\"][\"type\"] == \"string\"\n896     assert result[\"properties\"][\"simple_nullable\"][\"nullable\"] is True\n",
+    "col_offset": 4,
+    "end_col_offset": 70,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 895,
+    "line_range": [
+      895
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "895     assert result[\"properties\"][\"simple_nullable\"][\"type\"] == \"string\"\n896     assert result[\"properties\"][\"simple_nullable\"][\"nullable\"] is True\n897 \n",
+    "col_offset": 4,
+    "end_col_offset": 70,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 896,
+    "line_range": [
+      896
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "898     # Complex nullable should become single type + nullable\n899     assert result[\"properties\"][\"complex_nullable\"][\"type\"] == \"object\"\n900     assert result[\"properties\"][\"complex_nullable\"][\"nullable\"] is True\n",
+    "col_offset": 4,
+    "end_col_offset": 71,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 899,
+    "line_range": [
+      899
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "899     assert result[\"properties\"][\"complex_nullable\"][\"type\"] == \"object\"\n900     assert result[\"properties\"][\"complex_nullable\"][\"nullable\"] is True\n901 \n",
+    "col_offset": 4,
+    "end_col_offset": 71,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 900,
+    "line_range": [
+      900
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "902     # Nested nullable should also be converted\n903     assert result[\"properties\"][\"complex_nullable\"][\"properties\"][\"nested\"][\"type\"] == \"integer\"\n904     assert result[\"properties\"][\"complex_nullable\"][\"properties\"][\"nested\"][\"nullable\"] is True\n",
+    "col_offset": 4,
+    "end_col_offset": 96,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 903,
+    "line_range": [
+      903
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "903     assert result[\"properties\"][\"complex_nullable\"][\"properties\"][\"nested\"][\"type\"] == \"integer\"\n904     assert result[\"properties\"][\"complex_nullable\"][\"properties\"][\"nested\"][\"nullable\"] is True\n905 \n",
+    "col_offset": 4,
+    "end_col_offset": 95,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 904,
+    "line_range": [
+      904
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "906     # Multiple types should keep array but remove null and add nullable\n907     assert result[\"properties\"][\"multiple_types\"][\"type\"] == [\"string\", \"integer\"]\n908     assert result[\"properties\"][\"multiple_types\"][\"nullable\"] is True\n",
+    "col_offset": 4,
+    "end_col_offset": 82,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 907,
+    "line_range": [
+      907
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "907     assert result[\"properties\"][\"multiple_types\"][\"type\"] == [\"string\", \"integer\"]\n908     assert result[\"properties\"][\"multiple_types\"][\"nullable\"] is True\n909 \n",
+    "col_offset": 4,
+    "end_col_offset": 69,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 908,
+    "line_range": [
+      908
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "910     # Only null should remain unchanged\n911     assert result[\"properties\"][\"only_null\"][\"type\"] == [\"null\"]\n912     assert \"nullable\" not in result[\"properties\"][\"only_null\"]\n",
+    "col_offset": 4,
+    "end_col_offset": 64,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 911,
+    "line_range": [
+      911
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "911     assert result[\"properties\"][\"only_null\"][\"type\"] == [\"null\"]\n912     assert \"nullable\" not in result[\"properties\"][\"only_null\"]\n913 \n",
+    "col_offset": 4,
+    "end_col_offset": 62,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 912,
+    "line_range": [
+      912
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "914     # Descriptions should be preserved\n915     assert result[\"properties\"][\"simple_nullable\"][\"description\"] == \"A nullable string\"\n916 \n",
+    "col_offset": 4,
+    "end_col_offset": 88,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 915,
+    "line_range": [
+      915
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "927         result = restrict_string_formats(schema, None)\n928         assert result == schema\n929 \n",
+    "col_offset": 8,
+    "end_col_offset": 31,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 928,
+    "line_range": [
+      928
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "938         result = restrict_string_formats(schema, {\"email\", \"date-time\"})\n939         assert result == schema\n940 \n",
+    "col_offset": 8,
+    "end_col_offset": 31,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 939,
+    "line_range": [
+      939
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "958         }\n959         assert result == expected\n960 \n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 959,
+    "line_range": [
+      959
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "968         result = restrict_string_formats(schema, {\"enum\"})\n969         assert result == schema\n970 \n",
+    "col_offset": 8,
+    "end_col_offset": 31,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 969,
+    "line_range": [
+      969
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "987         }\n988         assert result == expected\n989 \n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 988,
+    "line_range": [
+      988
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1006         }\n1007         assert result == expected\n1008 \n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1007,
+    "line_range": [
+      1007
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1034         }\n1035         assert result == expected\n1036 \n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1035,
+    "line_range": [
+      1035
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1064         }\n1065         assert result == expected\n1066 \n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1065,
+    "line_range": [
+      1065
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1082         }\n1083         assert result == expected\n1084 \n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1083,
+    "line_range": [
+      1083
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1098         }\n1099         assert result == expected\n1100 \n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1099,
+    "line_range": [
+      1099
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1118         }\n1119         assert result == expected\n1120 \n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1119,
+    "line_range": [
+      1119
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1138         }\n1139         assert result == expected\n1140 \n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1139,
+    "line_range": [
+      1139
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1156         }\n1157         assert result == expected\n1158 \n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1157,
+    "line_range": [
+      1157
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1177         }\n1178         assert result == expected\n1179 \n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1178,
+    "line_range": [
+      1178
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1195         }\n1196         assert result == expected\n1197 \n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1196,
+    "line_range": [
+      1196
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1220         }\n1221         assert result == expected\n1222 \n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1221,
+    "line_range": [
+      1221
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1242     # The field should be nullable=True despite the original nullable=False\n1243     assert result[\"properties\"][\"field\"][\"nullable\"] is True\n1244     assert result[\"properties\"][\"field\"][\"type\"] == \"string\"\n",
+    "col_offset": 4,
+    "end_col_offset": 60,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1243,
+    "line_range": [
+      1243
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1243     assert result[\"properties\"][\"field\"][\"nullable\"] is True\n1244     assert result[\"properties\"][\"field\"][\"type\"] == \"string\"\n1245 \n",
+    "col_offset": 4,
+    "end_col_offset": 60,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1244,
+    "line_range": [
+      1244
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1246     # The root object should keep its original nullable=False\n1247     assert result[\"nullable\"] is False\n1248 \n",
+    "col_offset": 4,
+    "end_col_offset": 38,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1247,
+    "line_range": [
+      1247
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1274     # The complex field should be nullable=True\n1275     assert result[\"properties\"][\"complex_field\"][\"nullable\"] is True\n1276     assert result[\"properties\"][\"complex_field\"][\"type\"] == \"object\"\n",
+    "col_offset": 4,
+    "end_col_offset": 68,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1275,
+    "line_range": [
+      1275
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1275     assert result[\"properties\"][\"complex_field\"][\"nullable\"] is True\n1276     assert result[\"properties\"][\"complex_field\"][\"type\"] == \"object\"\n1277 \n",
+    "col_offset": 4,
+    "end_col_offset": 68,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1276,
+    "line_range": [
+      1276
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1278     # Other fields should be preserved\n1279     assert result[\"properties\"][\"complex_field\"][\"description\"] == \"A complex nullable field\"\n1280     assert result[\"properties\"][\"complex_field\"][\"title\"] == \"Complex Field\"\n",
+    "col_offset": 4,
+    "end_col_offset": 93,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1279,
+    "line_range": [
+      1279
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "1279     assert result[\"properties\"][\"complex_field\"][\"description\"] == \"A complex nullable field\"\n1280     assert result[\"properties\"][\"complex_field\"][\"title\"] == \"Complex Field\"\n",
+    "col_offset": 4,
+    "end_col_offset": 76,
+    "filename": "./api/core/providers/google/google_provider_utils_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 1280,
+    "line_range": [
+      1280
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

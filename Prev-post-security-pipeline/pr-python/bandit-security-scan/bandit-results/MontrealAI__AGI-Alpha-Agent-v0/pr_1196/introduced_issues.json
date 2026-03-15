@@ -1,0 +1,82 @@
+[
+  {
+    "code": "53         weights = [1.0 / (1.0 + math.exp(-lam * (a.score - alpha0))) for a in agents]\n54         chosen = random.choices(agents, weights=weights, k=min(k, len(agents)))\n55         return chosen\n",
+    "col_offset": 17,
+    "end_col_offset": 79,
+    "filename": "./src/archive.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 54,
+    "line_range": [
+      54
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "14     rows = arch.all()\n15     assert len(rows) == 2\n16     assert rows[0].meta[\"name\"] == \"a\"\n",
+    "col_offset": 4,
+    "end_col_offset": 25,
+    "filename": "./tests/test_archive.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 15,
+    "line_range": [
+      15
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "15     assert len(rows) == 2\n16     assert rows[0].meta[\"name\"] == \"a\"\n17 \n",
+    "col_offset": 4,
+    "end_col_offset": 38,
+    "filename": "./tests/test_archive.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 16,
+    "line_range": [
+      16
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "28         counts[chosen.meta[\"name\"]] += 1\n29     assert counts[\"high\"] > counts[\"low\"]\n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./tests/test_archive.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 29,
+    "line_range": [
+      29
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

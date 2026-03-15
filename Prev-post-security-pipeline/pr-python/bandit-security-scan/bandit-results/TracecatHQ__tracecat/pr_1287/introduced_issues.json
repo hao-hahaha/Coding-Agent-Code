@@ -1,0 +1,83 @@
+[
+  {
+    "code": "7 MODEL_CONFIGS = {\n8     \"gpt-o4-mini\": ModelConfig(\n9         name=\"gpt-o4-mini\",\n10         provider=\"openai\",\n11         org_secret_name=\"agent-openai-credentials\",\n12         secrets={\n13             \"required\": [\"openai\"],\n14         },\n15     ),\n16     \"claude-3-5-sonnet-20240620\": ModelConfig(\n",
+    "col_offset": 19,
+    "end_col_offset": 5,
+    "filename": "./tracecat/agent/config.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'agent-openai-credentials'",
+    "line_number": 8,
+    "line_range": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b106_hardcoded_password_funcarg.html",
+    "test_id": "B106",
+    "test_name": "hardcoded_password_funcarg"
+  },
+  {
+    "code": "15     ),\n16     \"claude-3-5-sonnet-20240620\": ModelConfig(\n17         name=\"claude-3-5-sonnet-20240620\",\n18         provider=\"anthropic\",\n19         org_secret_name=\"agent-anthropic-credentials\",\n20         secrets={\n21             \"required\": [\"anthropic\"],\n22         },\n23     ),\n24     \"us.anthropic.claude-3-7-sonnet-20250219-v1:0\": ModelConfig(\n",
+    "col_offset": 34,
+    "end_col_offset": 5,
+    "filename": "./tracecat/agent/config.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'agent-anthropic-credentials'",
+    "line_number": 16,
+    "line_range": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b106_hardcoded_password_funcarg.html",
+    "test_id": "B106",
+    "test_name": "hardcoded_password_funcarg"
+  },
+  {
+    "code": "23     ),\n24     \"us.anthropic.claude-3-7-sonnet-20250219-v1:0\": ModelConfig(\n25         name=\"us.anthropic.claude-3-7-sonnet-20250219-v1:0\",\n26         provider=\"bedrock\",\n27         org_secret_name=\"agent-bedrock-credentials\",\n28         secrets={\n29             \"required\": [\"bedrock\"],\n30         },\n31     ),\n32 }\n",
+    "col_offset": 52,
+    "end_col_offset": 5,
+    "filename": "./tracecat/agent/config.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'agent-bedrock-credentials'",
+    "line_number": 24,
+    "line_range": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b106_hardcoded_password_funcarg.html",
+    "test_id": "B106",
+    "test_name": "hardcoded_password_funcarg"
+  }
+]

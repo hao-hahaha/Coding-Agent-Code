@@ -1,0 +1,74 @@
+[
+  {
+    "code": "6 from pathlib import Path\n7 import subprocess\n8 \n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./pioreactor/actions/leader/backup_database.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 7,
+    "line_range": [
+      7
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "26     try:\n27         result = subprocess.run(\n28             [\"ssh\", \"-o\", \"ConnectTimeout=5\", address, \"df\", \"-PB1\", path],\n29             check=True,\n30             stdout=subprocess.PIPE,\n31             stderr=subprocess.PIPE,\n32             text=True,\n33         )\n34     except subprocess.CalledProcessError:\n",
+    "col_offset": 17,
+    "end_col_offset": 9,
+    "filename": "./pioreactor/actions/leader/backup_database.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 27,
+    "line_range": [
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "26     try:\n27         result = subprocess.run(\n28             [\"ssh\", \"-o\", \"ConnectTimeout=5\", address, \"df\", \"-PB1\", path],\n29             check=True,\n30             stdout=subprocess.PIPE,\n31             stderr=subprocess.PIPE,\n32             text=True,\n33         )\n34     except subprocess.CalledProcessError:\n",
+    "col_offset": 17,
+    "end_col_offset": 9,
+    "filename": "./pioreactor/actions/leader/backup_database.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 27,
+    "line_range": [
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  }
+]

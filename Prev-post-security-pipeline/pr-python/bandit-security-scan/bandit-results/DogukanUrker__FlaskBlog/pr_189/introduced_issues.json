@@ -1,0 +1,22 @@
+[
+  {
+    "code": "87         )\n88         return Markup(clean_html)\n",
+    "col_offset": 15,
+    "end_col_offset": 33,
+    "filename": "./app/utils/markdown_renderer.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 79,
+      "link": "https://cwe.mitre.org/data/definitions/79.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Potential XSS with ``markupsafe.Markup`` detected. Do not use ``Markup`` on untrusted data.",
+    "line_number": 88,
+    "line_range": [
+      88
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b704_markupsafe_markup_xss.html",
+    "test_id": "B704",
+    "test_name": "markupsafe_markup_xss"
+  }
+]

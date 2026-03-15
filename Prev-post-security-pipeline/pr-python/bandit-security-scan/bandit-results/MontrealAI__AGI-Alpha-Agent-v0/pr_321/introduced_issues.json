@@ -1,0 +1,86 @@
+[
+  {
+    "code": "73     if not picks:\n74         picks = [random.choice(SAMPLE_ALPHA) for _ in range(max(1, num))]\n75 \n",
+    "col_offset": 17,
+    "end_col_offset": 44,
+    "filename": "./alpha_factory_v1/demos/cross_industry_alpha_factory/cross_alpha_discovery_stub.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 74,
+    "line_range": [
+      74
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "1 import json\n2 import subprocess\n3 import sys\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tests/test_cross_alpha_discovery.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 2,
+    "line_range": [
+      2
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "11     def test_list_option(self) -> None:\n12         result = subprocess.run([sys.executable, STUB, '--list'], capture_output=True, text=True)\n13         self.assertEqual(result.returncode, 0)\n",
+    "col_offset": 17,
+    "end_col_offset": 97,
+    "filename": "./tests/test_cross_alpha_discovery.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 12,
+    "line_range": [
+      12
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "20             ledger = Path(tmp) / 'log.json'\n21             result = subprocess.run(\n22                 [sys.executable, STUB, '-n', '2', '--seed', '1', '--ledger', str(ledger)],\n23                 capture_output=True,\n24                 text=True,\n25             )\n26             self.assertEqual(result.returncode, 0, result.stderr)\n",
+    "col_offset": 21,
+    "end_col_offset": 13,
+    "filename": "./tests/test_cross_alpha_discovery.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 21,
+    "line_range": [
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  }
+]

@@ -1,0 +1,3190 @@
+{
+  "errors": [],
+  "generated_at": "2026-03-14T10:40:11Z",
+  "metrics": {
+    "./docs/__init__.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 0,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./docs/conf.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 45,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./python_hosts/__init__.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 16,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./python_hosts/exception.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 33,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./python_hosts/hosts.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 1,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 1,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 457,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./python_hosts/utils.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 58,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./setup.py": {
+      "CONFIDENCE.HIGH": 5,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 1,
+      "SEVERITY.LOW": 4,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 60,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./tests/test_hosts.py": {
+      "CONFIDENCE.HIGH": 116,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 2,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 116,
+      "SEVERITY.MEDIUM": 2,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 662,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./tests/test_hosts_entry.py": {
+      "CONFIDENCE.HIGH": 17,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 17,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 54,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./tests/test_utils.py": {
+      "CONFIDENCE.HIGH": 10,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 10,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 48,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 148,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 3,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 1,
+      "SEVERITY.LOW": 147,
+      "SEVERITY.MEDIUM": 3,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 1433,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "404                 import_entries.append(entry)\n405             elif entry.address in ('0.0.0.0', '127.0.0.1') \\\n406                     or allow_address_duplication or allow_name_duplication:\n",
+      "col_offset": 35,
+      "end_col_offset": 44,
+      "filename": "./python_hosts/hosts.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 605,
+        "link": "https://cwe.mitre.org/data/definitions/605.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible binding to all interfaces.",
+      "line_number": 405,
+      "line_range": [
+        405
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b104_hardcoded_bind_all_interfaces.html",
+      "test_id": "B104",
+      "test_name": "hardcoded_bind_all_interfaces"
+    },
+    {
+      "code": "10 if sys.argv[-1] == 'publish':\n11     os.system('python setup.py sdist upload -r pypi')\n12     sys.exit()\n",
+      "col_offset": 4,
+      "end_col_offset": 53,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Starting a process with a shell: Seems safe, but may be changed in the future, consider rewriting without shell",
+      "line_number": 11,
+      "line_range": [
+        11
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b605_start_process_with_a_shell.html",
+      "test_id": "B605",
+      "test_name": "start_process_with_a_shell"
+    },
+    {
+      "code": "10 if sys.argv[-1] == 'publish':\n11     os.system('python setup.py sdist upload -r pypi')\n12     sys.exit()\n",
+      "col_offset": 4,
+      "end_col_offset": 53,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Starting a process with a partial executable path",
+      "line_number": 11,
+      "line_range": [
+        11
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+      "test_id": "B607",
+      "test_name": "start_process_with_partial_path"
+    },
+    {
+      "code": "14 if sys.argv[-1] == 'tag':\n15     os.system(\"git tag -a {0} -m 'version {1}'\".format(version, version))\n16     os.system(\"git push --tags\")\n",
+      "col_offset": 4,
+      "end_col_offset": 73,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "Starting a process with a shell, possible injection detected, security issue.",
+      "line_number": 15,
+      "line_range": [
+        15
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b605_start_process_with_a_shell.html",
+      "test_id": "B605",
+      "test_name": "start_process_with_a_shell"
+    },
+    {
+      "code": "15     os.system(\"git tag -a {0} -m 'version {1}'\".format(version, version))\n16     os.system(\"git push --tags\")\n17     sys.exit()\n",
+      "col_offset": 4,
+      "end_col_offset": 32,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Starting a process with a shell: Seems safe, but may be changed in the future, consider rewriting without shell",
+      "line_number": 16,
+      "line_range": [
+        16
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b605_start_process_with_a_shell.html",
+      "test_id": "B605",
+      "test_name": "start_process_with_a_shell"
+    },
+    {
+      "code": "15     os.system(\"git tag -a {0} -m 'version {1}'\".format(version, version))\n16     os.system(\"git push --tags\")\n17     sys.exit()\n",
+      "col_offset": 4,
+      "end_col_offset": 32,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Starting a process with a partial executable path",
+      "line_number": 16,
+      "line_range": [
+        16
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+      "test_id": "B607",
+      "test_name": "start_process_with_partial_path"
+    },
+    {
+      "code": "26     hosts_matching_name = hosts_entries.find_all_matching(name=\"example2.com\")\n27     assert len(hosts_matching_name) == 2  # 2 entries contain example2.com\n28     hosts_matching_address = hosts_entries.find_all_matching(address=\"1.2.1.1\")\n",
+      "col_offset": 4,
+      "end_col_offset": 40,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 27,
+      "line_range": [
+        27
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "28     hosts_matching_address = hosts_entries.find_all_matching(address=\"1.2.1.1\")\n29     assert len(hosts_matching_address) == 1  # 1 entry matches 1.2.1.1\n30     hosts_matching_address = hosts_entries.find_all_matching(name=\"example2.com\",\n",
+      "col_offset": 4,
+      "end_col_offset": 43,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 29,
+      "line_range": [
+        29
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "32     # 1 entry matches 1.2.1.1 with name example2.com\n33     assert len(hosts_matching_address) == 1\n34     # comment\n",
+      "col_offset": 4,
+      "end_col_offset": 43,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 33,
+      "line_range": [
+        33
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "37     # 2 entries\n38     assert len(hosts_matching_comment) == 2\n39     hosts_matching_comment = hosts_entries.find_all_matching(\n",
+      "col_offset": 4,
+      "end_col_offset": 43,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 38,
+      "line_range": [
+        38
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "41     # 1 entry\n42     assert len(hosts_matching_comment) == 1\n43     hosts_matching_comment = hosts_entries.find_all_matching(\n",
+      "col_offset": 4,
+      "end_col_offset": 43,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 42,
+      "line_range": [
+        42
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "45     # 1 entry\n46     assert len(hosts_matching_comment) == 1\n47 \n",
+      "col_offset": 4,
+      "end_col_offset": 43,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 46,
+      "line_range": [
+        46
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "58     hosts_entries.add(entries=[new_entry], merge_names=True)\n59     assert hosts_entries.count() == 1\n60     print(hosts_entries)\n",
+      "col_offset": 4,
+      "end_col_offset": 37,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 59,
+      "line_range": [
+        59
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "60     print(hosts_entries)\n61     assert len(hosts_entries.entries[0].names) == 3\n62     assert 'example.com' in hosts_entries.entries[0].names\n",
+      "col_offset": 4,
+      "end_col_offset": 51,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 61,
+      "line_range": [
+        61
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "61     assert len(hosts_entries.entries[0].names) == 3\n62     assert 'example.com' in hosts_entries.entries[0].names\n63     assert 'example' in hosts_entries.entries[0].names\n",
+      "col_offset": 4,
+      "end_col_offset": 58,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 62,
+      "line_range": [
+        62
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "62     assert 'example.com' in hosts_entries.entries[0].names\n63     assert 'example' in hosts_entries.entries[0].names\n64     assert 'another.example' in hosts_entries.entries[0].names\n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 63,
+      "line_range": [
+        63
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "63     assert 'example' in hosts_entries.entries[0].names\n64     assert 'another.example' in hosts_entries.entries[0].names\n65 \n",
+      "col_offset": 4,
+      "end_col_offset": 62,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 64,
+      "line_range": [
+        64
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "75     hosts_entries = Hosts(path=hosts_path.strpath)\n76     assert hosts_entries.count() == 2  # 1 address and 1 comment\n77     new_entry_1 = HostsEntry(entry_type='comment', comment='# an example comment')\n",
+      "col_offset": 4,
+      "end_col_offset": 37,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 76,
+      "line_range": [
+        76
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "79     hosts_entries.add(entries=[new_entry_1, new_entry_2], force=True)\n80     assert hosts_entries.count() == 4  # 1 address and 3 comments\n81     assert not hosts_entries.exists(address='3.4.5.6')\n",
+      "col_offset": 4,
+      "end_col_offset": 37,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 80,
+      "line_range": [
+        80
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "80     assert hosts_entries.count() == 4  # 1 address and 3 comments\n81     assert not hosts_entries.exists(address='3.4.5.6')\n82     assert hosts_entries.exists(comment='# an example comment')\n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 81,
+      "line_range": [
+        81
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "81     assert not hosts_entries.exists(address='3.4.5.6')\n82     assert hosts_entries.exists(comment='# an example comment')\n83     assert hosts_entries.exists(comment='# another example comment')\n",
+      "col_offset": 4,
+      "end_col_offset": 63,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 82,
+      "line_range": [
+        82
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "82     assert hosts_entries.exists(comment='# an example comment')\n83     assert hosts_entries.exists(comment='# another example comment')\n84     assert hosts_entries.exists(comment='more comments')\n",
+      "col_offset": 4,
+      "end_col_offset": 68,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 83,
+      "line_range": [
+        83
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "83     assert hosts_entries.exists(comment='# another example comment')\n84     assert hosts_entries.exists(comment='more comments')\n85     assert hosts_entries.exists(names=['example.com'])\n",
+      "col_offset": 4,
+      "end_col_offset": 56,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 84,
+      "line_range": [
+        84
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "84     assert hosts_entries.exists(comment='more comments')\n85     assert hosts_entries.exists(names=['example.com'])\n86     # check the entries can be written and then read correctly\n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 85,
+      "line_range": [
+        85
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "88     hosts_entries_2 = Hosts(path=hosts_path.strpath)\n89     assert hosts_entries_2.count() == 4  # 1 address and 3 comments\n90 \n",
+      "col_offset": 4,
+      "end_col_offset": 39,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 89,
+      "line_range": [
+        89
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "102     # assert hosts_entries.exists(address='0.0.0.0')\n103     assert hosts_entries.exists(comment='this is one comment')\n104     new_entry = HostsEntry.str_to_hostentry('127.0.0.1 example.com example2.com')\n",
+      "col_offset": 4,
+      "end_col_offset": 62,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 103,
+      "line_range": [
+        103
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "105     hosts_entries.add(entries=[new_entry], force=True)\n106     assert hosts_entries.count() == 3  # 1 address, 1 comment and 1 blank\n107     assert not hosts_entries.exists(address='3.4.5.6')\n",
+      "col_offset": 4,
+      "end_col_offset": 37,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 106,
+      "line_range": [
+        106
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "106     assert hosts_entries.count() == 3  # 1 address, 1 comment and 1 blank\n107     assert not hosts_entries.exists(address='3.4.5.6')\n108     assert hosts_entries.exists(names=['example.com'])\n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 107,
+      "line_range": [
+        107
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "107     assert not hosts_entries.exists(address='3.4.5.6')\n108     assert hosts_entries.exists(names=['example.com'])\n109     assert not hosts_entries.exists(comment='this is one comment')\n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 108,
+      "line_range": [
+        108
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "108     assert hosts_entries.exists(names=['example.com'])\n109     assert not hosts_entries.exists(comment='this is one comment')\n110 \n",
+      "col_offset": 4,
+      "end_col_offset": 66,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 109,
+      "line_range": [
+        109
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "122     # assert hosts_entries.exists(address='0.0.0.0')\n123     assert hosts_entries.exists(comment='comments!')\n124     new_entry = HostsEntry.str_to_hostentry('8.9.10.11 example.com '\n",
+      "col_offset": 4,
+      "end_col_offset": 52,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 123,
+      "line_range": [
+        123
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "127     # 1 address, 1 comment and 1 blank\n128     assert hosts_entries.count() == 3\n129     assert not hosts_entries.exists(address='3.4.5.6')\n",
+      "col_offset": 4,
+      "end_col_offset": 37,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 128,
+      "line_range": [
+        128
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "128     assert hosts_entries.count() == 3\n129     assert not hosts_entries.exists(address='3.4.5.6')\n130     assert hosts_entries.exists(names=['example.com'])\n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 129,
+      "line_range": [
+        129
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "129     assert not hosts_entries.exists(address='3.4.5.6')\n130     assert hosts_entries.exists(names=['example.com'])\n131     assert not hosts_entries.exists(comment='comments!')\n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 130,
+      "line_range": [
+        130
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "130     assert hosts_entries.exists(names=['example.com'])\n131     assert not hosts_entries.exists(comment='comments!')\n132 \n",
+      "col_offset": 4,
+      "end_col_offset": 56,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 131,
+      "line_range": [
+        131
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "142     hosts.import_url(url=import_url)\n143     assert hosts.exists(names=['example3.com'])\n144 \n",
+      "col_offset": 4,
+      "end_col_offset": 47,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 143,
+      "line_range": [
+        143
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "154     hosts.import_url(url=import_url, force=True)\n155     assert not hosts.exists(names=['example3.com'])\n156 \n",
+      "col_offset": 4,
+      "end_col_offset": 51,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 155,
+      "line_range": [
+        155
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "167     hosts_entries = Hosts(path=hosts_file.strpath)\n168     assert hosts_entries.exists(address='1.2.3.4')\n169     assert hosts_entries.exists(names=['example.com'])\n",
+      "col_offset": 4,
+      "end_col_offset": 50,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 168,
+      "line_range": [
+        168
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "168     assert hosts_entries.exists(address='1.2.3.4')\n169     assert hosts_entries.exists(names=['example.com'])\n170     hosts_entries.remove_all_matching(name='example.com')\n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 169,
+      "line_range": [
+        169
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "170     hosts_entries.remove_all_matching(name='example.com')\n171     assert not hosts_entries.exists(names=['example.com'])\n172     hosts_entries.write()\n",
+      "col_offset": 4,
+      "end_col_offset": 58,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 171,
+      "line_range": [
+        171
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "172     hosts_entries.write()\n173     assert '# this is a comment\\n' in open(hosts_file.strpath).read()\n174     assert '3.4.5.6\\trandom.com' in open(hosts_file.strpath).read()\n",
+      "col_offset": 4,
+      "end_col_offset": 69,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 173,
+      "line_range": [
+        173
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "173     assert '# this is a comment\\n' in open(hosts_file.strpath).read()\n174     assert '3.4.5.6\\trandom.com' in open(hosts_file.strpath).read()\n175 \n",
+      "col_offset": 4,
+      "end_col_offset": 67,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 174,
+      "line_range": [
+        174
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "184     hosts_entries = Hosts(path=hosts_file.strpath)\n185     assert hosts_entries.exists(address='1.2.3.4')\n186     assert hosts_entries.exists(names=['example.com'])\n",
+      "col_offset": 4,
+      "end_col_offset": 50,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 185,
+      "line_range": [
+        185
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "185     assert hosts_entries.exists(address='1.2.3.4')\n186     assert hosts_entries.exists(names=['example.com'])\n187     hosts_entries.remove_all_matching(address='1.2.3.4')\n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 186,
+      "line_range": [
+        186
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "187     hosts_entries.remove_all_matching(address='1.2.3.4')\n188     assert not hosts_entries.exists(address='1.2.3.4')\n189 \n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 188,
+      "line_range": [
+        188
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "198     hosts_entries = Hosts(path=hosts_file.strpath)\n199     assert hosts_entries.exists(address='1.2.3.4')\n200     assert hosts_entries.exists(names=['example.com'])\n",
+      "col_offset": 4,
+      "end_col_offset": 50,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 199,
+      "line_range": [
+        199
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "199     assert hosts_entries.exists(address='1.2.3.4')\n200     assert hosts_entries.exists(names=['example.com'])\n201     hosts_entries.remove_all_matching(comment='this is a comment')\n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 200,
+      "line_range": [
+        200
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "201     hosts_entries.remove_all_matching(comment='this is a comment')\n202     assert not hosts_entries.exists(address='1.2.3.4')\n203 \n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 202,
+      "line_range": [
+        202
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "214     hosts = Hosts(path=hosts_file.strpath)\n215     assert (str(hosts)) == (\"PATH:{0}\\nTYPE=ipv4, ADDR=6.6.6.6, \"\n216                             \"NAMES=example.com, COMMENT=None\\n\"\n217                             ).format(hosts_file.strpath)\n218     hosts_file.write(\"7.7.7.7\\texample.com #6.6.6.6\\n\")\n",
+      "col_offset": 4,
+      "end_col_offset": 56,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 215,
+      "line_range": [
+        215,
+        216,
+        217
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "219     hosts = Hosts(path=hosts_file.strpath)\n220     assert (str(hosts)) == (\"PATH:{0}\\nTYPE=ipv4, ADDR=7.7.7.7, \"\n221                             \"NAMES=example.com, COMMENT=6.6.6.6\\n\").format(\n222         hosts_file.strpath)\n223 \n",
+      "col_offset": 4,
+      "end_col_offset": 27,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 220,
+      "line_range": [
+        220,
+        221,
+        222
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "234     alternate_hosts = Hosts(path=alternate_hosts_file.strpath)\n235     assert alternate_hosts.count() == 1\n236     assert hosts.exists(address='6.6.6.6', names=['example.com'])\n",
+      "col_offset": 4,
+      "end_col_offset": 39,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 235,
+      "line_range": [
+        235
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "235     assert alternate_hosts.count() == 1\n236     assert hosts.exists(address='6.6.6.6', names=['example.com'])\n237 \n",
+      "col_offset": 4,
+      "end_col_offset": 65,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 236,
+      "line_range": [
+        236
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "245     hosts = Hosts(path=hosts_file.strpath)\n246     assert (repr(hosts)) == \"Hosts(path={0!r}, \" \\\n247                             \"entries=[HostsEntry(entry_type='ipv4', \" \\\n248                             \"address='6.6.6.6', \" \\\n249                             \"names=['example.com'], \" \\\n250                             \"comment=None)])\".format(hosts_file.strpath)\n251     hosts_file.write(\"6.6.6.6\\texample.com # devilish ip...\\n\")\n",
+      "col_offset": 4,
+      "end_col_offset": 72,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 246,
+      "line_range": [
+        246,
+        247,
+        248,
+        249,
+        250
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "252     hosts = Hosts(path=hosts_file.strpath)\n253     assert (repr(hosts)) == \"Hosts(path={0!r}, \" \\\n254                             \"entries=[HostsEntry(entry_type='ipv4', \" \\\n255                             \"address='6.6.6.6', \" \\\n256                             \"names=['example.com'], \" \\\n257                             \"comment='devilish ip...')])\".format(hosts_file.strpath)\n258 \n",
+      "col_offset": 4,
+      "end_col_offset": 84,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 253,
+      "line_range": [
+        253,
+        254,
+        255,
+        256,
+        257
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "275     write_result = result.get('write_result')\n276     assert add_result.get('ipv4_count') == 4\n277     assert write_result.get('total_written') == 5\n",
+      "col_offset": 4,
+      "end_col_offset": 44,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 276,
+      "line_range": [
+        276
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "276     assert add_result.get('ipv4_count') == 4\n277     assert write_result.get('total_written') == 5\n278 \n",
+      "col_offset": 4,
+      "end_col_offset": 49,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 277,
+      "line_range": [
+        277
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "309     os.remove(hosts_path)\n310     assert hosts2.exists(address='1.2.3.4')\n311 \n",
+      "col_offset": 4,
+      "end_col_offset": 43,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 310,
+      "line_range": [
+        310
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "323     hosts_entries.add(entries=[new_entry], force=False)\n324     assert hosts_entries.exists(names=['example2.com'])\n325 \n",
+      "col_offset": 4,
+      "end_col_offset": 55,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 324,
+      "line_range": [
+        324
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "337     hosts_entries.add(entries=[new_entry], force=True)\n338     assert hosts_entries.exists(names=['example.com'])\n339 \n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 338,
+      "line_range": [
+        338
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "349     hosts_entries = Hosts(path=hosts_file.strpath)\n350     assert hosts_entries.exists(address='0.0.0.0')\n351     new_entry = HostsEntry.str_to_hostentry('0.0.0.0 example.com example2.com')\n",
+      "col_offset": 4,
+      "end_col_offset": 50,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 350,
+      "line_range": [
+        350
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "349     hosts_entries = Hosts(path=hosts_file.strpath)\n350     assert hosts_entries.exists(address='0.0.0.0')\n351     new_entry = HostsEntry.str_to_hostentry('0.0.0.0 example.com example2.com')\n",
+      "col_offset": 40,
+      "end_col_offset": 49,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 605,
+        "link": "https://cwe.mitre.org/data/definitions/605.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible binding to all interfaces.",
+      "line_number": 350,
+      "line_range": [
+        350
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b104_hardcoded_bind_all_interfaces.html",
+      "test_id": "B104",
+      "test_name": "hardcoded_bind_all_interfaces"
+    },
+    {
+      "code": "352     hosts_entries.add(entries=[new_entry], force=True)\n353     assert hosts_entries.exists(names=['example2.com'])\n354 \n",
+      "col_offset": 4,
+      "end_col_offset": 55,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 353,
+      "line_range": [
+        353
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "364     hosts_entries = Hosts(path=hosts_file.strpath)\n365     assert hosts_entries.exists(address='0.0.0.0')\n366     new_entry = HostsEntry.str_to_hostentry('0.0.0.0 example.com')\n",
+      "col_offset": 4,
+      "end_col_offset": 50,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 365,
+      "line_range": [
+        365
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "364     hosts_entries = Hosts(path=hosts_file.strpath)\n365     assert hosts_entries.exists(address='0.0.0.0')\n366     new_entry = HostsEntry.str_to_hostentry('0.0.0.0 example.com')\n",
+      "col_offset": 40,
+      "end_col_offset": 49,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 605,
+        "link": "https://cwe.mitre.org/data/definitions/605.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible binding to all interfaces.",
+      "line_number": 365,
+      "line_range": [
+        365
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b104_hardcoded_bind_all_interfaces.html",
+      "test_id": "B104",
+      "test_name": "hardcoded_bind_all_interfaces"
+    },
+    {
+      "code": "377     hosts_entries = Hosts(path=hosts_file.strpath)\n378     assert hosts_entries.exists(address='1.2.3.4')\n379     assert hosts_entries.exists(names=['example.com'])\n",
+      "col_offset": 4,
+      "end_col_offset": 50,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 378,
+      "line_range": [
+        378
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "378     assert hosts_entries.exists(address='1.2.3.4')\n379     assert hosts_entries.exists(names=['example.com'])\n380     hosts_entries.remove_all_matching(address='1.2.3.4', name='example.com')\n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 379,
+      "line_range": [
+        379
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "380     hosts_entries.remove_all_matching(address='1.2.3.4', name='example.com')\n381     assert not hosts_entries.exists(address='1.2.3.4')\n382     assert not hosts_entries.exists(names=['example.com'])\n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 381,
+      "line_range": [
+        381
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "381     assert not hosts_entries.exists(address='1.2.3.4')\n382     assert not hosts_entries.exists(names=['example.com'])\n383 \n",
+      "col_offset": 4,
+      "end_col_offset": 58,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 382,
+      "line_range": [
+        382
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "391     hosts_entries = Hosts(path=hosts_file.strpath)\n392     assert not hosts_entries.exists(address='::1')\n393     new_entry = HostsEntry(entry_type='ipv6', address='::1',\n",
+      "col_offset": 4,
+      "end_col_offset": 50,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 392,
+      "line_range": [
+        392
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "395     hosts_entries.add(entries=[new_entry], force=False)\n396     assert hosts_entries.exists(address='::1')\n397 \n",
+      "col_offset": 4,
+      "end_col_offset": 46,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 396,
+      "line_range": [
+        396
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "405     hosts_entries = Hosts(path=hosts_file.strpath)\n406     assert not hosts_entries.exists(address='::1')\n407     assert not hosts_entries.exists(comment='hello world!')\n",
+      "col_offset": 4,
+      "end_col_offset": 50,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 406,
+      "line_range": [
+        406
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "406     assert not hosts_entries.exists(address='::1')\n407     assert not hosts_entries.exists(comment='hello world!')\n408     assert not hosts_entries.exists(address='::1', comment='hello world!')\n",
+      "col_offset": 4,
+      "end_col_offset": 59,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 407,
+      "line_range": [
+        407
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "407     assert not hosts_entries.exists(comment='hello world!')\n408     assert not hosts_entries.exists(address='::1', comment='hello world!')\n409     new_entry = HostsEntry(entry_type='ipv6', address='::1',\n",
+      "col_offset": 4,
+      "end_col_offset": 74,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 408,
+      "line_range": [
+        408
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "412     hosts_entries.add(entries=[new_entry], force=False)\n413     assert hosts_entries.exists(address='::1')\n414     assert hosts_entries.exists(comment='hello world!')\n",
+      "col_offset": 4,
+      "end_col_offset": 46,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 413,
+      "line_range": [
+        413
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "413     assert hosts_entries.exists(address='::1')\n414     assert hosts_entries.exists(comment='hello world!')\n415     assert hosts_entries.exists(address='::1', comment='hello world!')\n",
+      "col_offset": 4,
+      "end_col_offset": 55,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 414,
+      "line_range": [
+        414
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "414     assert hosts_entries.exists(comment='hello world!')\n415     assert hosts_entries.exists(address='::1', comment='hello world!')\n416 \n",
+      "col_offset": 4,
+      "end_col_offset": 70,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 415,
+      "line_range": [
+        415
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "427     hosts_entries.add(entries=[new_entry], force=True)\n428     assert hosts_entries.exists(address='82.132.132.132')\n429     assert hosts_entries.exists(names=['example2.com', 'example'])\n",
+      "col_offset": 4,
+      "end_col_offset": 57,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 428,
+      "line_range": [
+        428
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "428     assert hosts_entries.exists(address='82.132.132.132')\n429     assert hosts_entries.exists(names=['example2.com', 'example'])\n430 \n",
+      "col_offset": 4,
+      "end_col_offset": 66,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 429,
+      "line_range": [
+        429
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "438     hosts = Hosts(path=hosts_file.strpath)\n439     assert not hosts.exists(address='123.123.123.123')\n440     new_entry = HostsEntry(entry_type='ipv4', address='123.123.123.123',\n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 439,
+      "line_range": [
+        439
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "442     hosts.add(entries=[new_entry])\n443     assert hosts.exists(address='123.123.123.123')\n444 \n",
+      "col_offset": 4,
+      "end_col_offset": 50,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 443,
+      "line_range": [
+        443
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "452     hosts = Hosts(path=hosts_file.strpath)\n453     assert not hosts.exists(address='123.123.123.123')\n454     assert not hosts.exists(comment='hello world!')\n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 453,
+      "line_range": [
+        453
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "453     assert not hosts.exists(address='123.123.123.123')\n454     assert not hosts.exists(comment='hello world!')\n455     assert not hosts.exists(address='123.123.123.123', comment='hello world!')\n",
+      "col_offset": 4,
+      "end_col_offset": 51,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 454,
+      "line_range": [
+        454
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "454     assert not hosts.exists(comment='hello world!')\n455     assert not hosts.exists(address='123.123.123.123', comment='hello world!')\n456     new_entry = HostsEntry(entry_type='ipv4', address='123.123.123.123',\n",
+      "col_offset": 4,
+      "end_col_offset": 78,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 455,
+      "line_range": [
+        455
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "459     hosts.add(entries=[new_entry])\n460     assert hosts.exists(address='123.123.123.123')\n461     assert hosts.exists(comment='hello world!')\n",
+      "col_offset": 4,
+      "end_col_offset": 50,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 460,
+      "line_range": [
+        460
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "460     assert hosts.exists(address='123.123.123.123')\n461     assert hosts.exists(comment='hello world!')\n462     assert hosts.exists(address='123.123.123.123', comment='hello world!')\n",
+      "col_offset": 4,
+      "end_col_offset": 47,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 461,
+      "line_range": [
+        461
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "461     assert hosts.exists(comment='hello world!')\n462     assert hosts.exists(address='123.123.123.123', comment='hello world!')\n463     assert not hosts.exists(address='123.123.123.123', comment='hello world')\n",
+      "col_offset": 4,
+      "end_col_offset": 74,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 462,
+      "line_range": [
+        462
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "462     assert hosts.exists(address='123.123.123.123', comment='hello world!')\n463     assert not hosts.exists(address='123.123.123.123', comment='hello world')\n464 \n",
+      "col_offset": 4,
+      "end_col_offset": 77,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 463,
+      "line_range": [
+        463
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "482     import_url_write_result = import_url_result.get('write_result')\n483     assert not import_url_result == 'failed'\n484     assert import_url_add_result.get('ipv4_count') == 24\n",
+      "col_offset": 4,
+      "end_col_offset": 44,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 483,
+      "line_range": [
+        483
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "483     assert not import_url_result == 'failed'\n484     assert import_url_add_result.get('ipv4_count') == 24\n485     assert import_url_write_result.get('ipv4_entries_written') == 25\n",
+      "col_offset": 4,
+      "end_col_offset": 56,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 484,
+      "line_range": [
+        484
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "484     assert import_url_add_result.get('ipv4_count') == 24\n485     assert import_url_write_result.get('ipv4_entries_written') == 25\n486     assert import_url_write_result.get('total_written') == 25\n",
+      "col_offset": 4,
+      "end_col_offset": 68,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 485,
+      "line_range": [
+        485
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "485     assert import_url_write_result.get('ipv4_entries_written') == 25\n486     assert import_url_write_result.get('total_written') == 25\n487 \n",
+      "col_offset": 4,
+      "end_col_offset": 61,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 486,
+      "line_range": [
+        486
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "506     import_file_result = hosts_entries.import_file(import_file.strpath)\n507     assert not import_file_result.get('result') == 'failed'\n508     import_file_write_result = import_file_result.get('write_result')\n",
+      "col_offset": 4,
+      "end_col_offset": 59,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 507,
+      "line_range": [
+        507
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "508     import_file_write_result = import_file_result.get('write_result')\n509     assert import_file_result.get('invalid_count') == 1\n510     assert import_file_write_result.get('ipv4_entries_written') == 2\n",
+      "col_offset": 4,
+      "end_col_offset": 55,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 509,
+      "line_range": [
+        509
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "509     assert import_file_result.get('invalid_count') == 1\n510     assert import_file_write_result.get('ipv4_entries_written') == 2\n511     assert import_file_write_result.get('total_written') == 2\n",
+      "col_offset": 4,
+      "end_col_offset": 68,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 510,
+      "line_range": [
+        510
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "510     assert import_file_write_result.get('ipv4_entries_written') == 2\n511     assert import_file_write_result.get('total_written') == 2\n512 \n",
+      "col_offset": 4,
+      "end_col_offset": 61,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 511,
+      "line_range": [
+        511
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "528     hosts_entries.add(entries=[new_entry], force=True)\n529     assert hosts_entries.exists(address='82.132.132.133')\n530     assert hosts_entries.exists(names=['example.com', 'example'])\n",
+      "col_offset": 4,
+      "end_col_offset": 57,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 529,
+      "line_range": [
+        529
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "529     assert hosts_entries.exists(address='82.132.132.133')\n530     assert hosts_entries.exists(names=['example.com', 'example'])\n531 \n",
+      "col_offset": 4,
+      "end_col_offset": 65,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 530,
+      "line_range": [
+        530
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "542     hosts_entries.add(entries=[new_entry], force=False)\n543     assert hosts_entries.exists(address='82.132.132.132')\n544 \n",
+      "col_offset": 4,
+      "end_col_offset": 57,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 543,
+      "line_range": [
+        543
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "559     write_result = feedback.get('write_result')\n560     assert add_result.get('duplicate_count') == 1\n561     assert write_result.get('ipv4_entries_written') == 2\n",
+      "col_offset": 4,
+      "end_col_offset": 49,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 560,
+      "line_range": [
+        560
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "560     assert add_result.get('duplicate_count') == 1\n561     assert write_result.get('ipv4_entries_written') == 2\n562 \n",
+      "col_offset": 4,
+      "end_col_offset": 56,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 561,
+      "line_range": [
+        561
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "574     hosts_entries.add(entries=[new_entry], force=False)\n575     assert not hosts_entries.exists(address='2001:db8:a0b:12f0::1')\n576     assert hosts_entries.exists(address='fe80::200:f8ff:fe21:67cf')\n",
+      "col_offset": 4,
+      "end_col_offset": 67,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 575,
+      "line_range": [
+        575
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "575     assert not hosts_entries.exists(address='2001:db8:a0b:12f0::1')\n576     assert hosts_entries.exists(address='fe80::200:f8ff:fe21:67cf')\n577     assert hosts_entries.exists(names=new_entry.names)\n",
+      "col_offset": 4,
+      "end_col_offset": 67,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 576,
+      "line_range": [
+        576
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "576     assert hosts_entries.exists(address='fe80::200:f8ff:fe21:67cf')\n577     assert hosts_entries.exists(names=new_entry.names)\n578 \n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 577,
+      "line_range": [
+        577
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "591     write_result = hosts.write()\n592     assert write_result.get('ipv6_entries_written') == 1\n593     assert write_result.get('ipv4_entries_written') == 2\n",
+      "col_offset": 4,
+      "end_col_offset": 56,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 592,
+      "line_range": [
+        592
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "592     assert write_result.get('ipv6_entries_written') == 1\n593     assert write_result.get('ipv4_entries_written') == 2\n594     assert write_result.get('comments_written') == 1\n",
+      "col_offset": 4,
+      "end_col_offset": 56,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 593,
+      "line_range": [
+        593
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "593     assert write_result.get('ipv4_entries_written') == 2\n594     assert write_result.get('comments_written') == 1\n595     assert write_result.get('blanks_written') == 1\n",
+      "col_offset": 4,
+      "end_col_offset": 52,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 594,
+      "line_range": [
+        594
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "594     assert write_result.get('comments_written') == 1\n595     assert write_result.get('blanks_written') == 1\n596 \n",
+      "col_offset": 4,
+      "end_col_offset": 50,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 595,
+      "line_range": [
+        595
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "607     hosts_entries.add(entries=[new_entry], force=True)\n608     assert hosts_entries.exists(address='82.132.132.132')\n609     assert hosts_entries.exists(names=['something.com', 'example'])\n",
+      "col_offset": 4,
+      "end_col_offset": 57,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 608,
+      "line_range": [
+        608
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "608     assert hosts_entries.exists(address='82.132.132.132')\n609     assert hosts_entries.exists(names=['something.com', 'example'])\n610 \n",
+      "col_offset": 4,
+      "end_col_offset": 67,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 609,
+      "line_range": [
+        609
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "623     write_result = hosts.write()\n624     assert write_result.get('comments_written') == 1\n625     assert write_result.get('blanks_written') == 1\n",
+      "col_offset": 4,
+      "end_col_offset": 52,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 624,
+      "line_range": [
+        624
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "624     assert write_result.get('comments_written') == 1\n625     assert write_result.get('blanks_written') == 1\n626 \n",
+      "col_offset": 4,
+      "end_col_offset": 50,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 625,
+      "line_range": [
+        625
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "685     hosts = Hosts(path=\"invalid\")\n686     assert hosts.count() == 0\n687 \n",
+      "col_offset": 4,
+      "end_col_offset": 29,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 686,
+      "line_range": [
+        686
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "696     hosts_entries = Hosts(path=hosts_file.strpath)\n697     assert hosts_entries.entries[0].entry_type == 'blank'\n698 \n",
+      "col_offset": 4,
+      "end_col_offset": 57,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 697,
+      "line_range": [
+        697
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "703     \"\"\"\n704     assert HostsEntry.get_entry_type('# This is a comment') == 'comment'\n705     assert HostsEntry.get_entry_type('\\n') == 'blank'\n",
+      "col_offset": 4,
+      "end_col_offset": 72,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 704,
+      "line_range": [
+        704
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "704     assert HostsEntry.get_entry_type('# This is a comment') == 'comment'\n705     assert HostsEntry.get_entry_type('\\n') == 'blank'\n706     assert HostsEntry.get_entry_type('1.2.3.4 example.com example') == 'ipv4'\n",
+      "col_offset": 4,
+      "end_col_offset": 53,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 705,
+      "line_range": [
+        705
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "705     assert HostsEntry.get_entry_type('\\n') == 'blank'\n706     assert HostsEntry.get_entry_type('1.2.3.4 example.com example') == 'ipv4'\n707     assert HostsEntry.get_entry_type(\n",
+      "col_offset": 4,
+      "end_col_offset": 77,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 706,
+      "line_range": [
+        706
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "706     assert HostsEntry.get_entry_type('1.2.3.4 example.com example') == 'ipv4'\n707     assert HostsEntry.get_entry_type(\n708         '2001:0db8:85a3:0042:1000:8a2e:0370:7334 example.com example') == 'ipv6'\n709     assert not HostsEntry.get_entry_type('example.com example 1.2.3.4')\n",
+      "col_offset": 4,
+      "end_col_offset": 80,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 707,
+      "line_range": [
+        707,
+        708
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "708         '2001:0db8:85a3:0042:1000:8a2e:0370:7334 example.com example') == 'ipv6'\n709     assert not HostsEntry.get_entry_type('example.com example 1.2.3.4')\n710 \n",
+      "col_offset": 4,
+      "end_col_offset": 71,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 709,
+      "line_range": [
+        709
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "716     \"\"\"\n717     assert Hosts.determine_hosts_path(\n718         platform='windows') == r'c:\\windows\\system32\\drivers\\etc\\hosts'\n719 \n",
+      "col_offset": 4,
+      "end_col_offset": 71,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 717,
+      "line_range": [
+        717,
+        718
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "725     \"\"\"\n726     assert Hosts.determine_hosts_path(platform='darwin') == '/etc/hosts'\n727 \n",
+      "col_offset": 4,
+      "end_col_offset": 72,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 726,
+      "line_range": [
+        726
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "733     \"\"\"\n734     assert Hosts.determine_hosts_path(platform='linux') == '/etc/hosts'\n735 \n",
+      "col_offset": 4,
+      "end_col_offset": 71,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 734,
+      "line_range": [
+        734
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "741     test_hosts = Hosts()\n742     assert isinstance(test_hosts, Hosts)\n743 \n",
+      "col_offset": 4,
+      "end_col_offset": 40,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 742,
+      "line_range": [
+        742
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "752     result = hosts_entries.import_file('/invalid_file')\n753     assert result.get('result') == 'failed'\n754 \n",
+      "col_offset": 4,
+      "end_col_offset": 43,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 753,
+      "line_range": [
+        753
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "765     hosts.write()\n766     assert not hosts_file.read()\n767 \n",
+      "col_offset": 4,
+      "end_col_offset": 32,
+      "filename": "./tests/test_hosts.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 766,
+      "line_range": [
+        766
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "14                              comment='this is a comment')\n15     assert hosts_entry.entry_type == 'ipv4'\n16     assert hosts_entry.address == '1.2.3.4'\n",
+      "col_offset": 4,
+      "end_col_offset": 43,
+      "filename": "./tests/test_hosts_entry.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 15,
+      "line_range": [
+        15
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "15     assert hosts_entry.entry_type == 'ipv4'\n16     assert hosts_entry.address == '1.2.3.4'\n17     assert hosts_entry.names == ['example.com', 'example']\n",
+      "col_offset": 4,
+      "end_col_offset": 43,
+      "filename": "./tests/test_hosts_entry.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 16,
+      "line_range": [
+        16
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "16     assert hosts_entry.address == '1.2.3.4'\n17     assert hosts_entry.names == ['example.com', 'example']\n18     assert hosts_entry.comment == 'this is a comment'\n",
+      "col_offset": 4,
+      "end_col_offset": 58,
+      "filename": "./tests/test_hosts_entry.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 17,
+      "line_range": [
+        17
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "17     assert hosts_entry.names == ['example.com', 'example']\n18     assert hosts_entry.comment == 'this is a comment'\n19 \n",
+      "col_offset": 4,
+      "end_col_offset": 53,
+      "filename": "./tests/test_hosts_entry.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 18,
+      "line_range": [
+        18
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "23         '10.10.10.10 example.com example.org example # another comment')\n24     assert str_entry.entry_type == 'ipv4'\n25     assert str_entry.address == '10.10.10.10'\n",
+      "col_offset": 4,
+      "end_col_offset": 41,
+      "filename": "./tests/test_hosts_entry.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 24,
+      "line_range": [
+        24
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "24     assert str_entry.entry_type == 'ipv4'\n25     assert str_entry.address == '10.10.10.10'\n26     assert str_entry.names == ['example.com', 'example.org', 'example']\n",
+      "col_offset": 4,
+      "end_col_offset": 45,
+      "filename": "./tests/test_hosts_entry.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 25,
+      "line_range": [
+        25
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "25     assert str_entry.address == '10.10.10.10'\n26     assert str_entry.names == ['example.com', 'example.org', 'example']\n27     assert str_entry.comment == 'another comment'\n",
+      "col_offset": 4,
+      "end_col_offset": 71,
+      "filename": "./tests/test_hosts_entry.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 26,
+      "line_range": [
+        26
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "26     assert str_entry.names == ['example.com', 'example.org', 'example']\n27     assert str_entry.comment == 'another comment'\n28 \n",
+      "col_offset": 4,
+      "end_col_offset": 49,
+      "filename": "./tests/test_hosts_entry.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 27,
+      "line_range": [
+        27
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "33         '# more comments here')\n34     assert str_entry.entry_type == 'ipv6'\n35     assert str_entry.address == '2001:0db8:85a3:0042:1000:8a2e:0370:7334'\n",
+      "col_offset": 4,
+      "end_col_offset": 41,
+      "filename": "./tests/test_hosts_entry.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 34,
+      "line_range": [
+        34
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "34     assert str_entry.entry_type == 'ipv6'\n35     assert str_entry.address == '2001:0db8:85a3:0042:1000:8a2e:0370:7334'\n36     assert str_entry.names == ['example.com', 'example']\n",
+      "col_offset": 4,
+      "end_col_offset": 73,
+      "filename": "./tests/test_hosts_entry.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 35,
+      "line_range": [
+        35
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "35     assert str_entry.address == '2001:0db8:85a3:0042:1000:8a2e:0370:7334'\n36     assert str_entry.names == ['example.com', 'example']\n37     assert str_entry.comment == 'more comments here'\n",
+      "col_offset": 4,
+      "end_col_offset": 56,
+      "filename": "./tests/test_hosts_entry.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 36,
+      "line_range": [
+        36
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "36     assert str_entry.names == ['example.com', 'example']\n37     assert str_entry.comment == 'more comments here'\n38 \n",
+      "col_offset": 4,
+      "end_col_offset": 52,
+      "filename": "./tests/test_hosts_entry.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 37,
+      "line_range": [
+        37
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "41     result = HostsEntry.str_to_hostentry('invalid example.com example')\n42     assert not result\n43 \n",
+      "col_offset": 4,
+      "end_col_offset": 21,
+      "filename": "./tests/test_hosts_entry.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 42,
+      "line_range": [
+        42
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "48             'example.com', 'example.org'])\n49     assert repr(an_entry) == r\"HostsEntry(entry_type='ipv4', \" \\\n50                              \"address='1.2.3.4', \" \\\n51                              \"names=['example.com', 'example.org'], \" \\\n52                              \"comment='test comment')\"\n53 \n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./tests/test_hosts_entry.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 49,
+      "line_range": [
+        49,
+        50,
+        51,
+        52
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "58                           names=['example.com', 'example.org'])\n59     assert (str(an_entry)) == (\"TYPE=ipv4, ADDR=1.2.3.4, \"\n60                                \"NAMES=example.com example.org, \"\n61                                \"COMMENT=more comments coming\")\n62 \n",
+      "col_offset": 4,
+      "end_col_offset": 62,
+      "filename": "./tests/test_hosts_entry.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 59,
+      "line_range": [
+        59,
+        60,
+        61
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "66                           comment='This is a comment', names=None)\n67     assert (str(an_entry)) == \"TYPE = comment, COMMENT = This is a comment\"\n68 \n",
+      "col_offset": 4,
+      "end_col_offset": 75,
+      "filename": "./tests/test_hosts_entry.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 67,
+      "line_range": [
+        67
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "72                           comment=None, names=None)\n73     assert (str(an_entry)) == \"TYPE = blank\"\n",
+      "col_offset": 4,
+      "end_col_offset": 44,
+      "filename": "./tests/test_hosts_entry.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 73,
+      "line_range": [
+        73
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "10     \"\"\" Test function returns True if valid IPv4 address is specified \"\"\"\n11     assert is_ipv4('8.8.8.8')\n12 \n",
+      "col_offset": 4,
+      "end_col_offset": 29,
+      "filename": "./tests/test_utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 11,
+      "line_range": [
+        11
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "17     \"\"\"\n18     assert not is_ipv4('256.8.8.8')\n19 \n",
+      "col_offset": 4,
+      "end_col_offset": 35,
+      "filename": "./tests/test_utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 18,
+      "line_range": [
+        18
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "24     \"\"\"\n25     assert is_ipv6('2001:db8::ff00:42:8329')\n26 \n",
+      "col_offset": 4,
+      "end_col_offset": 44,
+      "filename": "./tests/test_utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 25,
+      "line_range": [
+        25
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "31     \"\"\"\n32     assert not is_ipv6('2001::0234:C1ab::A0:aabc:003F')\n33 \n",
+      "col_offset": 4,
+      "end_col_offset": 55,
+      "filename": "./tests/test_utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 32,
+      "line_range": [
+        32
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "38     \"\"\"\n39     assert valid_hostnames(['example.com', 'example'])\n40 \n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./tests/test_utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 39,
+      "line_range": [
+        39
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "46     long_hostname = 'x' * 256\n47     assert not valid_hostnames(['example.com', long_hostname])\n48 \n",
+      "col_offset": 4,
+      "end_col_offset": 62,
+      "filename": "./tests/test_utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 47,
+      "line_range": [
+        47
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "53     \"\"\"\n54     assert not valid_hostnames(['example.com', '-example'])\n55 \n",
+      "col_offset": 4,
+      "end_col_offset": 59,
+      "filename": "./tests/test_utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 54,
+      "line_range": [
+        54
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "59     items = ['a', 'b', 'a', 'c', 'b']\n60     assert dedupe_list(items) == ['a', 'b', 'c']\n61 \n",
+      "col_offset": 4,
+      "end_col_offset": 48,
+      "filename": "./tests/test_utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 60,
+      "line_range": [
+        60
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "66     readable.write('data')\n67     assert is_readable(readable.strpath)\n68     assert not is_readable(readable.strpath + '_missing')\n",
+      "col_offset": 4,
+      "end_col_offset": 40,
+      "filename": "./tests/test_utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 67,
+      "line_range": [
+        67
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "67     assert is_readable(readable.strpath)\n68     assert not is_readable(readable.strpath + '_missing')\n",
+      "col_offset": 4,
+      "end_col_offset": 57,
+      "filename": "./tests/test_utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 68,
+      "line_range": [
+        68
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    }
+  ]
+}

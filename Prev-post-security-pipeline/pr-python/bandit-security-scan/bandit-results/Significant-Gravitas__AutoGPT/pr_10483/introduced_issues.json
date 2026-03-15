@@ -1,0 +1,1002 @@
+[
+  {
+    "code": "36 \n37             assert isinstance(response, llm.LLMResponse)\n38             assert response.prompt_tokens == 10\n",
+    "col_offset": 12,
+    "end_col_offset": 56,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 37,
+    "line_range": [
+      37
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "37             assert isinstance(response, llm.LLMResponse)\n38             assert response.prompt_tokens == 10\n39             assert response.completion_tokens == 20\n",
+    "col_offset": 12,
+    "end_col_offset": 47,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 38,
+    "line_range": [
+      38
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "38             assert response.prompt_tokens == 10\n39             assert response.completion_tokens == 20\n40             assert response.response == \"Test response\"\n",
+    "col_offset": 12,
+    "end_col_offset": 51,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 39,
+    "line_range": [
+      39
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "39             assert response.completion_tokens == 20\n40             assert response.response == \"Test response\"\n41 \n",
+    "col_offset": 12,
+    "end_col_offset": 55,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 40,
+    "line_range": [
+      40
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "77         # Check stats\n78         assert block.execution_stats.input_token_count == 15\n79         assert block.execution_stats.output_token_count == 25\n",
+    "col_offset": 8,
+    "end_col_offset": 60,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 78,
+    "line_range": [
+      78
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "78         assert block.execution_stats.input_token_count == 15\n79         assert block.execution_stats.output_token_count == 25\n80         assert block.execution_stats.llm_call_count == 1\n",
+    "col_offset": 8,
+    "end_col_offset": 61,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 79,
+    "line_range": [
+      79
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "79         assert block.execution_stats.output_token_count == 25\n80         assert block.execution_stats.llm_call_count == 1\n81         assert block.execution_stats.llm_retry_count == 0\n",
+    "col_offset": 8,
+    "end_col_offset": 56,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 80,
+    "line_range": [
+      80
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "80         assert block.execution_stats.llm_call_count == 1\n81         assert block.execution_stats.llm_retry_count == 0\n82 \n",
+    "col_offset": 8,
+    "end_col_offset": 57,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 81,
+    "line_range": [
+      81
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "83         # Check output\n84         assert \"response\" in outputs\n85         assert outputs[\"response\"] == {\"key1\": \"value1\", \"key2\": \"value2\"}\n",
+    "col_offset": 8,
+    "end_col_offset": 36,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 84,
+    "line_range": [
+      84
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "84         assert \"response\" in outputs\n85         assert outputs[\"response\"] == {\"key1\": \"value1\", \"key2\": \"value2\"}\n86 \n",
+    "col_offset": 8,
+    "end_col_offset": 74,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 85,
+    "line_range": [
+      85
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "119         # Check stats\n120         assert block.execution_stats.input_token_count == 30\n121         assert block.execution_stats.output_token_count == 40\n",
+    "col_offset": 8,
+    "end_col_offset": 60,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 120,
+    "line_range": [
+      120
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "120         assert block.execution_stats.input_token_count == 30\n121         assert block.execution_stats.output_token_count == 40\n122         assert block.execution_stats.llm_call_count == 1\n",
+    "col_offset": 8,
+    "end_col_offset": 61,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 121,
+    "line_range": [
+      121
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "121         assert block.execution_stats.output_token_count == 40\n122         assert block.execution_stats.llm_call_count == 1\n123 \n",
+    "col_offset": 8,
+    "end_col_offset": 56,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 122,
+    "line_range": [
+      122
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "124         # Check output - AITextGeneratorBlock returns the response directly, not in a dict\n125         assert outputs[\"response\"] == \"Generated text\"\n126 \n",
+    "col_offset": 8,
+    "end_col_offset": 54,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 125,
+    "line_range": [
+      125
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "183         # but llm_call_count is only set on success, so it shows 1 for the final successful attempt\n184         assert block.execution_stats.input_token_count == 30  # 10 + 20\n185         assert block.execution_stats.output_token_count == 40  # 15 + 25\n",
+    "col_offset": 8,
+    "end_col_offset": 60,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 184,
+    "line_range": [
+      184
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "184         assert block.execution_stats.input_token_count == 30  # 10 + 20\n185         assert block.execution_stats.output_token_count == 40  # 15 + 25\n186         assert block.execution_stats.llm_call_count == 2  # retry_count + 1 = 1 + 1 = 2\n",
+    "col_offset": 8,
+    "end_col_offset": 61,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 185,
+    "line_range": [
+      185
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "185         assert block.execution_stats.output_token_count == 40  # 15 + 25\n186         assert block.execution_stats.llm_call_count == 2  # retry_count + 1 = 1 + 1 = 2\n187         assert block.execution_stats.llm_retry_count == 1\n",
+    "col_offset": 8,
+    "end_col_offset": 56,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 186,
+    "line_range": [
+      186
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "186         assert block.execution_stats.llm_call_count == 2  # retry_count + 1 = 1 + 1 = 2\n187         assert block.execution_stats.llm_retry_count == 1\n188 \n",
+    "col_offset": 8,
+    "end_col_offset": 57,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 187,
+    "line_range": [
+      187
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "239         # Block finished - now grab and assert stats\n240         assert block.execution_stats is not None\n241         assert call_count > 1  # Should have made multiple calls\n",
+    "col_offset": 8,
+    "end_col_offset": 48,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 240,
+    "line_range": [
+      240
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "240         assert block.execution_stats is not None\n241         assert call_count > 1  # Should have made multiple calls\n242         assert block.execution_stats.llm_call_count > 0\n",
+    "col_offset": 8,
+    "end_col_offset": 29,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 241,
+    "line_range": [
+      241
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "241         assert call_count > 1  # Should have made multiple calls\n242         assert block.execution_stats.llm_call_count > 0\n243         assert block.execution_stats.input_token_count > 0\n",
+    "col_offset": 8,
+    "end_col_offset": 55,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 242,
+    "line_range": [
+      242
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "242         assert block.execution_stats.llm_call_count > 0\n243         assert block.execution_stats.input_token_count > 0\n244         assert block.execution_stats.output_token_count > 0\n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 243,
+    "line_range": [
+      243
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "243         assert block.execution_stats.input_token_count > 0\n244         assert block.execution_stats.output_token_count > 0\n245 \n",
+    "col_offset": 8,
+    "end_col_offset": 59,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 244,
+    "line_range": [
+      244
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "246         # Check output\n247         assert \"summary\" in outputs\n248         assert outputs[\"summary\"] == \"Final combined summary\"\n",
+    "col_offset": 8,
+    "end_col_offset": 35,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 247,
+    "line_range": [
+      247
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "247         assert \"summary\" in outputs\n248         assert outputs[\"summary\"] == \"Final combined summary\"\n249 \n",
+    "col_offset": 8,
+    "end_col_offset": 61,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 248,
+    "line_range": [
+      248
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "311             # Should have made 2 calls: 1 for chunk summary + 1 for final summary\n312             assert block.execution_stats.llm_call_count >= 1\n313             assert block.execution_stats.input_token_count > 0\n",
+    "col_offset": 12,
+    "end_col_offset": 60,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 312,
+    "line_range": [
+      312
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "312             assert block.execution_stats.llm_call_count >= 1\n313             assert block.execution_stats.input_token_count > 0\n314             assert block.execution_stats.output_token_count > 0\n",
+    "col_offset": 12,
+    "end_col_offset": 62,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 313,
+    "line_range": [
+      313
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "313             assert block.execution_stats.input_token_count > 0\n314             assert block.execution_stats.output_token_count > 0\n315 \n",
+    "col_offset": 12,
+    "end_col_offset": 63,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 314,
+    "line_range": [
+      314
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "351         # Check stats\n352         assert block.execution_stats.input_token_count == 100\n353         assert block.execution_stats.output_token_count == 50\n",
+    "col_offset": 8,
+    "end_col_offset": 61,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 352,
+    "line_range": [
+      352
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "352         assert block.execution_stats.input_token_count == 100\n353         assert block.execution_stats.output_token_count == 50\n354         assert block.execution_stats.llm_call_count == 1\n",
+    "col_offset": 8,
+    "end_col_offset": 61,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 353,
+    "line_range": [
+      353
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "353         assert block.execution_stats.output_token_count == 50\n354         assert block.execution_stats.llm_call_count == 1\n355 \n",
+    "col_offset": 8,
+    "end_col_offset": 56,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 354,
+    "line_range": [
+      354
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "356         # Check output\n357         assert outputs[\"response\"] == {\"response\": \"AI response to conversation\"}\n358 \n",
+    "col_offset": 8,
+    "end_col_offset": 81,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 357,
+    "line_range": [
+      357
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "408         # Check stats - should have 2 calls\n409         assert call_count == 2\n410         assert block.execution_stats.input_token_count == 80  # 40 * 2\n",
+    "col_offset": 8,
+    "end_col_offset": 30,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 409,
+    "line_range": [
+      409
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "409         assert call_count == 2\n410         assert block.execution_stats.input_token_count == 80  # 40 * 2\n411         assert block.execution_stats.output_token_count == 40  # 20 * 2\n",
+    "col_offset": 8,
+    "end_col_offset": 60,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 410,
+    "line_range": [
+      410
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "410         assert block.execution_stats.input_token_count == 80  # 40 * 2\n411         assert block.execution_stats.output_token_count == 40  # 20 * 2\n412         assert block.execution_stats.llm_call_count == 2\n",
+    "col_offset": 8,
+    "end_col_offset": 61,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 411,
+    "line_range": [
+      411
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "411         assert block.execution_stats.output_token_count == 40  # 20 * 2\n412         assert block.execution_stats.llm_call_count == 2\n413 \n",
+    "col_offset": 8,
+    "end_col_offset": 56,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 412,
+    "line_range": [
+      412
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "414         # Check output\n415         assert outputs[\"generated_list\"] == [\"item1\", \"item2\", \"item3\"]\n416 \n",
+    "col_offset": 8,
+    "end_col_offset": 71,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 415,
+    "line_range": [
+      415
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "437         # Check that stats were merged\n438         assert block1.execution_stats.input_token_count == 100\n439         assert block1.execution_stats.output_token_count == 50\n",
+    "col_offset": 8,
+    "end_col_offset": 62,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 438,
+    "line_range": [
+      438
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "438         assert block1.execution_stats.input_token_count == 100\n439         assert block1.execution_stats.output_token_count == 50\n440         assert block1.execution_stats.llm_call_count == 2\n",
+    "col_offset": 8,
+    "end_col_offset": 62,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 439,
+    "line_range": [
+      439
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "439         assert block1.execution_stats.output_token_count == 50\n440         assert block1.execution_stats.llm_call_count == 2\n441         assert block1.execution_stats.llm_retry_count == 1\n",
+    "col_offset": 8,
+    "end_col_offset": 57,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 440,
+    "line_range": [
+      440
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "440         assert block1.execution_stats.llm_call_count == 2\n441         assert block1.execution_stats.llm_retry_count == 1\n442         assert block1.prompt == [{\"role\": \"user\", \"content\": \"Test\"}]\n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 441,
+    "line_range": [
+      441
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "441         assert block1.execution_stats.llm_retry_count == 1\n442         assert block1.prompt == [{\"role\": \"user\", \"content\": \"Test\"}]\n443 \n",
+    "col_offset": 8,
+    "end_col_offset": 69,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 442,
+    "line_range": [
+      442
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "451         # Initially stats should be initialized with zeros\n452         assert hasattr(block, \"execution_stats\")\n453         assert block.execution_stats.llm_call_count == 0\n",
+    "col_offset": 8,
+    "end_col_offset": 48,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 452,
+    "line_range": [
+      452
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "452         assert hasattr(block, \"execution_stats\")\n453         assert block.execution_stats.llm_call_count == 0\n454 \n",
+    "col_offset": 8,
+    "end_col_offset": 56,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 453,
+    "line_range": [
+      453
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "484         # Block finished - now grab and assert stats\n485         assert block.execution_stats is not None\n486         assert block.execution_stats.input_token_count == 10\n",
+    "col_offset": 8,
+    "end_col_offset": 48,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 485,
+    "line_range": [
+      485
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "485         assert block.execution_stats is not None\n486         assert block.execution_stats.input_token_count == 10\n487         assert block.execution_stats.output_token_count == 20\n",
+    "col_offset": 8,
+    "end_col_offset": 60,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 486,
+    "line_range": [
+      486
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "486         assert block.execution_stats.input_token_count == 10\n487         assert block.execution_stats.output_token_count == 20\n488         assert block.execution_stats.llm_call_count == 1  # Should have exactly 1 call\n",
+    "col_offset": 8,
+    "end_col_offset": 61,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 487,
+    "line_range": [
+      487
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "487         assert block.execution_stats.output_token_count == 20\n488         assert block.execution_stats.llm_call_count == 1  # Should have exactly 1 call\n489 \n",
+    "col_offset": 8,
+    "end_col_offset": 56,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 488,
+    "line_range": [
+      488
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "490         # Check output\n491         assert \"response\" in outputs\n492         assert outputs[\"response\"] == {\"result\": \"test\"}\n",
+    "col_offset": 8,
+    "end_col_offset": 36,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 491,
+    "line_range": [
+      491
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "491         assert \"response\" in outputs\n492         assert outputs[\"response\"] == {\"result\": \"test\"}\n",
+    "col_offset": 8,
+    "end_col_offset": 56,
+    "filename": "./autogpt_platform/backend/backend/blocks/test/test_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 492,
+    "line_range": [
+      492
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "code": "38     lines = out.read_text().splitlines()\n39     assert lines[0] == \"id,model,score\"\n40     assert lines[1] == \"2,m,1.900\"\n",
+    "col_offset": 4,
+    "end_col_offset": 39,
+    "filename": "./tests/test_transfer_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 39,
+    "line_range": [
+      39
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "39     assert lines[0] == \"id,model,score\"\n40     assert lines[1] == \"2,m,1.900\"\n41 \n",
+    "col_offset": 4,
+    "end_col_offset": 34,
+    "filename": "./tests/test_transfer_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 40,
+    "line_range": [
+      40
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "52     res = CliRunner().invoke(cli.main, [\"transfer-test\", \"--models\", \"x,y\", \"--top-n\", \"2\"])\n53     assert res.exit_code == 0\n54     assert called == {\"models\": [\"x\", \"y\"], \"top_n\": 2}\n",
+    "col_offset": 4,
+    "end_col_offset": 29,
+    "filename": "./tests/test_transfer_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 53,
+    "line_range": [
+      53
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "53     assert res.exit_code == 0\n54     assert called == {\"models\": [\"x\", \"y\"], \"top_n\": 2}\n",
+    "col_offset": 4,
+    "end_col_offset": 55,
+    "filename": "./tests/test_transfer_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 54,
+    "line_range": [
+      54
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

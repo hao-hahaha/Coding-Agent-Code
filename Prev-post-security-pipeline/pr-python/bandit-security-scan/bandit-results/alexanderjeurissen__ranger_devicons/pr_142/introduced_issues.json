@@ -1,0 +1,42 @@
+[
+  {
+    "code": "62 def test_unmapped_directory_returns_default(monkeypatch):\n63     monkeypatch.setenv('XDG_DOWNLOAD_DIR', '/tmp/downloads')\n64     devicons = reload_devicons('es')\n",
+    "col_offset": 43,
+    "end_col_offset": 59,
+    "filename": "./tests/test_devicons.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 63,
+    "line_range": [
+      63
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "69 def test_uncommon_extension_returns_default(monkeypatch):\n70     monkeypatch.setenv('XDG_DOWNLOAD_DIR', '/tmp/downloads')\n71     devicons = reload_devicons('es')\n",
+    "col_offset": 43,
+    "end_col_offset": 59,
+    "filename": "./tests/test_devicons.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 70,
+    "line_range": [
+      70
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  }
+]

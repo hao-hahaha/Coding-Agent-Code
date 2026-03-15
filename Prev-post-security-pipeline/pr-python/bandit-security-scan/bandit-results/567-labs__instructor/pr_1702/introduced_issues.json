@@ -1,0 +1,45 @@
+[
+  {
+    "code": "7     from_provider(\"ollama/llama3.2\")\n8     assert any(\n9         \"Initializing ollama provider\" in record.getMessage()\n10         for record in caplog.records\n11     )\n12     assert any(\"Client initialized\" in record.getMessage() for record in caplog.records)\n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/test_logging.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 8,
+    "line_range": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "11     )\n12     assert any(\"Client initialized\" in record.getMessage() for record in caplog.records)\n",
+    "col_offset": 4,
+    "end_col_offset": 88,
+    "filename": "./tests/test_logging.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 12,
+    "line_range": [
+      12
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

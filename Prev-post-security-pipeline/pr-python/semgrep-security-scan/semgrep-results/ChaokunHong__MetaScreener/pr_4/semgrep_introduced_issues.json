@@ -1,0 +1,672 @@
+[
+  {
+    "check_id": "python.flask.security.open-redirect.open-redirect",
+    "path": "app.py",
+    "start": {
+      "line": 233,
+      "col": 12,
+      "offset": 10921
+    },
+    "end": {
+      "line": 233,
+      "col": 58,
+      "offset": 10967
+    },
+    "extra": {
+      "message": "Data from request is passed to redirect(). This is an open redirect and could be exploited. Consider using 'url_for()' to generate links to known locations. If you must use a URL to unknown pages, consider using 'urlparse()' or similar and checking if the 'netloc' property is the same as your site's host name. See the references for more information.",
+      "metadata": {
+        "cwe": [
+          "CWE-601: URL Redirection to Untrusted Site ('Open Redirect')"
+        ],
+        "owasp": [
+          "A01:2021 - Broken Access Control",
+          "A01:2025 - Broken Access Control"
+        ],
+        "references": [
+          "https://flask-login.readthedocs.io/en/latest/#login-example",
+          "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html#dangerous-url-redirect-example-1",
+          "https://docs.python.org/3/library/urllib.parse.html#url-parsing"
+        ],
+        "category": "security",
+        "technology": [
+          "flask"
+        ],
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Open Redirect"
+        ],
+        "source": "https://semgrep.dev/r/python.flask.security.open-redirect.open-redirect",
+        "shortlink": "https://sg.run/kXe2"
+      },
+      "severity": "ERROR",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.flask.security.open-redirect.open-redirect",
+    "path": "app.py",
+    "start": {
+      "line": 1138,
+      "col": 16,
+      "offset": 60678
+    },
+    "end": {
+      "line": 1138,
+      "col": 80,
+      "offset": 60742
+    },
+    "extra": {
+      "message": "Data from request is passed to redirect(). This is an open redirect and could be exploited. Consider using 'url_for()' to generate links to known locations. If you must use a URL to unknown pages, consider using 'urlparse()' or similar and checking if the 'netloc' property is the same as your site's host name. See the references for more information.",
+      "metadata": {
+        "cwe": [
+          "CWE-601: URL Redirection to Untrusted Site ('Open Redirect')"
+        ],
+        "owasp": [
+          "A01:2021 - Broken Access Control",
+          "A01:2025 - Broken Access Control"
+        ],
+        "references": [
+          "https://flask-login.readthedocs.io/en/latest/#login-example",
+          "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html#dangerous-url-redirect-example-1",
+          "https://docs.python.org/3/library/urllib.parse.html#url-parsing"
+        ],
+        "category": "security",
+        "technology": [
+          "flask"
+        ],
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Open Redirect"
+        ],
+        "source": "https://semgrep.dev/r/python.flask.security.open-redirect.open-redirect",
+        "shortlink": "https://sg.run/kXe2"
+      },
+      "severity": "ERROR",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.flask.security.open-redirect.open-redirect",
+    "path": "app.py",
+    "start": {
+      "line": 1147,
+      "col": 16,
+      "offset": 61110
+    },
+    "end": {
+      "line": 1147,
+      "col": 80,
+      "offset": 61174
+    },
+    "extra": {
+      "message": "Data from request is passed to redirect(). This is an open redirect and could be exploited. Consider using 'url_for()' to generate links to known locations. If you must use a URL to unknown pages, consider using 'urlparse()' or similar and checking if the 'netloc' property is the same as your site's host name. See the references for more information.",
+      "metadata": {
+        "cwe": [
+          "CWE-601: URL Redirection to Untrusted Site ('Open Redirect')"
+        ],
+        "owasp": [
+          "A01:2021 - Broken Access Control",
+          "A01:2025 - Broken Access Control"
+        ],
+        "references": [
+          "https://flask-login.readthedocs.io/en/latest/#login-example",
+          "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html#dangerous-url-redirect-example-1",
+          "https://docs.python.org/3/library/urllib.parse.html#url-parsing"
+        ],
+        "category": "security",
+        "technology": [
+          "flask"
+        ],
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Open Redirect"
+        ],
+        "source": "https://semgrep.dev/r/python.flask.security.open-redirect.open-redirect",
+        "shortlink": "https://sg.run/kXe2"
+      },
+      "severity": "ERROR",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.flask.security.open-redirect.open-redirect",
+    "path": "app.py",
+    "start": {
+      "line": 1156,
+      "col": 16,
+      "offset": 61541
+    },
+    "end": {
+      "line": 1156,
+      "col": 80,
+      "offset": 61605
+    },
+    "extra": {
+      "message": "Data from request is passed to redirect(). This is an open redirect and could be exploited. Consider using 'url_for()' to generate links to known locations. If you must use a URL to unknown pages, consider using 'urlparse()' or similar and checking if the 'netloc' property is the same as your site's host name. See the references for more information.",
+      "metadata": {
+        "cwe": [
+          "CWE-601: URL Redirection to Untrusted Site ('Open Redirect')"
+        ],
+        "owasp": [
+          "A01:2021 - Broken Access Control",
+          "A01:2025 - Broken Access Control"
+        ],
+        "references": [
+          "https://flask-login.readthedocs.io/en/latest/#login-example",
+          "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html#dangerous-url-redirect-example-1",
+          "https://docs.python.org/3/library/urllib.parse.html#url-parsing"
+        ],
+        "category": "security",
+        "technology": [
+          "flask"
+        ],
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Open Redirect"
+        ],
+        "source": "https://semgrep.dev/r/python.flask.security.open-redirect.open-redirect",
+        "shortlink": "https://sg.run/kXe2"
+      },
+      "severity": "ERROR",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.flask.security.open-redirect.open-redirect",
+    "path": "app.py",
+    "start": {
+      "line": 1195,
+      "col": 20,
+      "offset": 63333
+    },
+    "end": {
+      "line": 1195,
+      "col": 84,
+      "offset": 63397
+    },
+    "extra": {
+      "message": "Data from request is passed to redirect(). This is an open redirect and could be exploited. Consider using 'url_for()' to generate links to known locations. If you must use a URL to unknown pages, consider using 'urlparse()' or similar and checking if the 'netloc' property is the same as your site's host name. See the references for more information.",
+      "metadata": {
+        "cwe": [
+          "CWE-601: URL Redirection to Untrusted Site ('Open Redirect')"
+        ],
+        "owasp": [
+          "A01:2021 - Broken Access Control",
+          "A01:2025 - Broken Access Control"
+        ],
+        "references": [
+          "https://flask-login.readthedocs.io/en/latest/#login-example",
+          "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html#dangerous-url-redirect-example-1",
+          "https://docs.python.org/3/library/urllib.parse.html#url-parsing"
+        ],
+        "category": "security",
+        "technology": [
+          "flask"
+        ],
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Open Redirect"
+        ],
+        "source": "https://semgrep.dev/r/python.flask.security.open-redirect.open-redirect",
+        "shortlink": "https://sg.run/kXe2"
+      },
+      "severity": "ERROR",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.flask.security.open-redirect.open-redirect",
+    "path": "app.py",
+    "start": {
+      "line": 1211,
+      "col": 16,
+      "offset": 63950
+    },
+    "end": {
+      "line": 1211,
+      "col": 80,
+      "offset": 64014
+    },
+    "extra": {
+      "message": "Data from request is passed to redirect(). This is an open redirect and could be exploited. Consider using 'url_for()' to generate links to known locations. If you must use a URL to unknown pages, consider using 'urlparse()' or similar and checking if the 'netloc' property is the same as your site's host name. See the references for more information.",
+      "metadata": {
+        "cwe": [
+          "CWE-601: URL Redirection to Untrusted Site ('Open Redirect')"
+        ],
+        "owasp": [
+          "A01:2021 - Broken Access Control",
+          "A01:2025 - Broken Access Control"
+        ],
+        "references": [
+          "https://flask-login.readthedocs.io/en/latest/#login-example",
+          "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html#dangerous-url-redirect-example-1",
+          "https://docs.python.org/3/library/urllib.parse.html#url-parsing"
+        ],
+        "category": "security",
+        "technology": [
+          "flask"
+        ],
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Open Redirect"
+        ],
+        "source": "https://semgrep.dev/r/python.flask.security.open-redirect.open-redirect",
+        "shortlink": "https://sg.run/kXe2"
+      },
+      "severity": "ERROR",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.flask.security.open-redirect.open-redirect",
+    "path": "app.py",
+    "start": {
+      "line": 1803,
+      "col": 16,
+      "offset": 100014
+    },
+    "end": {
+      "line": 1803,
+      "col": 81,
+      "offset": 100079
+    },
+    "extra": {
+      "message": "Data from request is passed to redirect(). This is an open redirect and could be exploited. Consider using 'url_for()' to generate links to known locations. If you must use a URL to unknown pages, consider using 'urlparse()' or similar and checking if the 'netloc' property is the same as your site's host name. See the references for more information.",
+      "metadata": {
+        "cwe": [
+          "CWE-601: URL Redirection to Untrusted Site ('Open Redirect')"
+        ],
+        "owasp": [
+          "A01:2021 - Broken Access Control",
+          "A01:2025 - Broken Access Control"
+        ],
+        "references": [
+          "https://flask-login.readthedocs.io/en/latest/#login-example",
+          "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html#dangerous-url-redirect-example-1",
+          "https://docs.python.org/3/library/urllib.parse.html#url-parsing"
+        ],
+        "category": "security",
+        "technology": [
+          "flask"
+        ],
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Open Redirect"
+        ],
+        "source": "https://semgrep.dev/r/python.flask.security.open-redirect.open-redirect",
+        "shortlink": "https://sg.run/kXe2"
+      },
+      "severity": "ERROR",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.flask.security.open-redirect.open-redirect",
+    "path": "app.py",
+    "start": {
+      "line": 1818,
+      "col": 17,
+      "offset": 100678
+    },
+    "end": {
+      "line": 1818,
+      "col": 82,
+      "offset": 100743
+    },
+    "extra": {
+      "message": "Data from request is passed to redirect(). This is an open redirect and could be exploited. Consider using 'url_for()' to generate links to known locations. If you must use a URL to unknown pages, consider using 'urlparse()' or similar and checking if the 'netloc' property is the same as your site's host name. See the references for more information.",
+      "metadata": {
+        "cwe": [
+          "CWE-601: URL Redirection to Untrusted Site ('Open Redirect')"
+        ],
+        "owasp": [
+          "A01:2021 - Broken Access Control",
+          "A01:2025 - Broken Access Control"
+        ],
+        "references": [
+          "https://flask-login.readthedocs.io/en/latest/#login-example",
+          "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html#dangerous-url-redirect-example-1",
+          "https://docs.python.org/3/library/urllib.parse.html#url-parsing"
+        ],
+        "category": "security",
+        "technology": [
+          "flask"
+        ],
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Open Redirect"
+        ],
+        "source": "https://semgrep.dev/r/python.flask.security.open-redirect.open-redirect",
+        "shortlink": "https://sg.run/kXe2"
+      },
+      "severity": "ERROR",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.flask.security.open-redirect.open-redirect",
+    "path": "app.py",
+    "start": {
+      "line": 1852,
+      "col": 20,
+      "offset": 102416
+    },
+    "end": {
+      "line": 1852,
+      "col": 85,
+      "offset": 102481
+    },
+    "extra": {
+      "message": "Data from request is passed to redirect(). This is an open redirect and could be exploited. Consider using 'url_for()' to generate links to known locations. If you must use a URL to unknown pages, consider using 'urlparse()' or similar and checking if the 'netloc' property is the same as your site's host name. See the references for more information.",
+      "metadata": {
+        "cwe": [
+          "CWE-601: URL Redirection to Untrusted Site ('Open Redirect')"
+        ],
+        "owasp": [
+          "A01:2021 - Broken Access Control",
+          "A01:2025 - Broken Access Control"
+        ],
+        "references": [
+          "https://flask-login.readthedocs.io/en/latest/#login-example",
+          "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html#dangerous-url-redirect-example-1",
+          "https://docs.python.org/3/library/urllib.parse.html#url-parsing"
+        ],
+        "category": "security",
+        "technology": [
+          "flask"
+        ],
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Open Redirect"
+        ],
+        "source": "https://semgrep.dev/r/python.flask.security.open-redirect.open-redirect",
+        "shortlink": "https://sg.run/kXe2"
+      },
+      "severity": "ERROR",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.flask.security.open-redirect.open-redirect",
+    "path": "app.py",
+    "start": {
+      "line": 1864,
+      "col": 16,
+      "offset": 102903
+    },
+    "end": {
+      "line": 1864,
+      "col": 81,
+      "offset": 102968
+    },
+    "extra": {
+      "message": "Data from request is passed to redirect(). This is an open redirect and could be exploited. Consider using 'url_for()' to generate links to known locations. If you must use a URL to unknown pages, consider using 'urlparse()' or similar and checking if the 'netloc' property is the same as your site's host name. See the references for more information.",
+      "metadata": {
+        "cwe": [
+          "CWE-601: URL Redirection to Untrusted Site ('Open Redirect')"
+        ],
+        "owasp": [
+          "A01:2021 - Broken Access Control",
+          "A01:2025 - Broken Access Control"
+        ],
+        "references": [
+          "https://flask-login.readthedocs.io/en/latest/#login-example",
+          "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html#dangerous-url-redirect-example-1",
+          "https://docs.python.org/3/library/urllib.parse.html#url-parsing"
+        ],
+        "category": "security",
+        "technology": [
+          "flask"
+        ],
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Open Redirect"
+        ],
+        "source": "https://semgrep.dev/r/python.flask.security.open-redirect.open-redirect",
+        "shortlink": "https://sg.run/kXe2"
+      },
+      "severity": "ERROR",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.flask.security.audit.app-run-param-config.avoid_app_run_with_bad_host",
+    "path": "app.py",
+    "start": {
+      "line": 1963,
+      "col": 5,
+      "offset": 109067
+    },
+    "end": {
+      "line": 1963,
+      "col": 51,
+      "offset": 109113
+    },
+    "extra": {
+      "message": "Running flask app with host 0.0.0.0 could expose the server publicly.",
+      "metadata": {
+        "cwe": [
+          "CWE-668: Exposure of Resource to Wrong Sphere"
+        ],
+        "owasp": [
+          "A01:2021 - Broken Access Control",
+          "A01:2025 - Broken Access Control"
+        ],
+        "category": "security",
+        "technology": [
+          "flask"
+        ],
+        "references": [
+          "https://owasp.org/Top10/A01_2021-Broken_Access_Control"
+        ],
+        "subcategory": [
+          "vuln"
+        ],
+        "likelihood": "HIGH",
+        "impact": "MEDIUM",
+        "confidence": "HIGH",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Other"
+        ],
+        "source": "https://semgrep.dev/r/python.flask.security.audit.app-run-param-config.avoid_app_run_with_bad_host",
+        "shortlink": "https://sg.run/eLby"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+    "path": "app.py",
+    "start": {
+      "line": 1963,
+      "col": 5,
+      "offset": 109067
+    },
+    "end": {
+      "line": 1963,
+      "col": 51,
+      "offset": 109113
+    },
+    "extra": {
+      "message": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "metadata": {
+        "cwe": [
+          "CWE-489: Active Debug Code"
+        ],
+        "owasp": "A06:2017 - Security Misconfiguration",
+        "references": [
+          "https://labs.detectify.com/2015/10/02/how-patreon-got-hacked-publicly-exposed-werkzeug-debugger/"
+        ],
+        "category": "security",
+        "technology": [
+          "flask"
+        ],
+        "subcategory": [
+          "vuln"
+        ],
+        "likelihood": "HIGH",
+        "impact": "MEDIUM",
+        "confidence": "HIGH",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Active Debug Code"
+        ],
+        "source": "https://semgrep.dev/r/python.flask.security.audit.debug-enabled.debug-enabled",
+        "shortlink": "https://sg.run/dKrd"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+    "path": "templates/base.html",
+    "start": {
+      "line": 82,
+      "col": 74,
+      "offset": 4924
+    },
+    "end": {
+      "line": 82,
+      "col": 103,
+      "offset": 4953
+    },
+    "extra": {
+      "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+      "metadata": {
+        "cwe": [
+          "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+        ],
+        "owasp": [
+          "A07:2017 - Cross-Site Scripting (XSS)",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss"
+        ],
+        "category": "security",
+        "technology": [
+          "html-templates"
+        ],
+        "confidence": "LOW",
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Cross-Site-Scripting (XSS)"
+        ],
+        "source": "https://semgrep.dev/r/generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+        "shortlink": "https://sg.run/weNX"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  }
+]

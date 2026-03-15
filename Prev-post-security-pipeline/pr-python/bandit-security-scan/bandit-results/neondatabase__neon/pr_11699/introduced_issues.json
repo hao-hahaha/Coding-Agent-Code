@@ -1,0 +1,406 @@
+[
+  {
+    "code": "56         pytest.exit(\"\")\n57     assert cmd.stdout\n58 \n",
+    "col_offset": 4,
+    "end_col_offset": 21,
+    "filename": "./test_runner/fixtures/pg_config.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 57,
+    "line_range": [
+      57
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "26         catalog_db = cursor.fetchone()\n27         assert catalog_db is not None\n28         assert len(catalog_db) == 1\n",
+    "col_offset": 8,
+    "end_col_offset": 37,
+    "filename": "./test_runner/regress/test_compute_monitor.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 27,
+    "line_range": [
+      27
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "27         assert catalog_db is not None\n28         assert len(catalog_db) == 1\n29 \n",
+    "col_offset": 8,
+    "end_col_offset": 35,
+    "filename": "./test_runner/regress/test_compute_monitor.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 28,
+    "line_range": [
+      28
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "43         compute_pg_current_downtime_ms = metrics.query_all(\"compute_pg_current_downtime_ms\")\n44         assert len(compute_pg_current_downtime_ms) == 1\n45         assert compute_pg_current_downtime_ms[0].value > 0\n",
+    "col_offset": 8,
+    "end_col_offset": 55,
+    "filename": "./test_runner/regress/test_compute_monitor.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 44,
+    "line_range": [
+      44
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "44         assert len(compute_pg_current_downtime_ms) == 1\n45         assert compute_pg_current_downtime_ms[0].value > 0\n46         compute_pg_downtime_ms_total = metrics.query_all(\"compute_pg_downtime_ms_total\")\n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./test_runner/regress/test_compute_monitor.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 45,
+    "line_range": [
+      45
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "46         compute_pg_downtime_ms_total = metrics.query_all(\"compute_pg_downtime_ms_total\")\n47         assert len(compute_pg_downtime_ms_total) == 1\n48         assert compute_pg_downtime_ms_total[0].value > 0\n",
+    "col_offset": 8,
+    "end_col_offset": 53,
+    "filename": "./test_runner/regress/test_compute_monitor.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 47,
+    "line_range": [
+      47
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "47         assert len(compute_pg_downtime_ms_total) == 1\n48         assert compute_pg_downtime_ms_total[0].value > 0\n49 \n",
+    "col_offset": 8,
+    "end_col_offset": 56,
+    "filename": "./test_runner/regress/test_compute_monitor.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 48,
+    "line_range": [
+      48
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "60         compute_pg_current_downtime_ms = metrics.query_all(\"compute_pg_current_downtime_ms\")\n61         assert len(compute_pg_current_downtime_ms) == 1\n62         assert compute_pg_current_downtime_ms[0].value == 0\n",
+    "col_offset": 8,
+    "end_col_offset": 55,
+    "filename": "./test_runner/regress/test_compute_monitor.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 61,
+    "line_range": [
+      61
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "61         assert len(compute_pg_current_downtime_ms) == 1\n62         assert compute_pg_current_downtime_ms[0].value == 0\n63         compute_pg_downtime_ms_total = metrics.query_all(\"compute_pg_downtime_ms_total\")\n",
+    "col_offset": 8,
+    "end_col_offset": 59,
+    "filename": "./test_runner/regress/test_compute_monitor.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 62,
+    "line_range": [
+      62
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "63         compute_pg_downtime_ms_total = metrics.query_all(\"compute_pg_downtime_ms_total\")\n64         assert len(compute_pg_downtime_ms_total) == 1\n65         assert compute_pg_downtime_ms_total[0].value > 0\n",
+    "col_offset": 8,
+    "end_col_offset": 53,
+    "filename": "./test_runner/regress/test_compute_monitor.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 64,
+    "line_range": [
+      64
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "64         assert len(compute_pg_downtime_ms_total) == 1\n65         assert compute_pg_downtime_ms_total[0].value > 0\n66 \n",
+    "col_offset": 8,
+    "end_col_offset": 56,
+    "filename": "./test_runner/regress/test_compute_monitor.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 65,
+    "line_range": [
+      65
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "18         time.sleep(1)\n19     assert n_pinned == 0\n20 \n",
+    "col_offset": 4,
+    "end_col_offset": 24,
+    "filename": "./test_runner/regress/test_lfc_prewarm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 19,
+    "line_range": [
+      19
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "40     cur.execute(\"create table t(pk integer primary key, payload text default repeat('?', 128))\")\n41     cur.execute(f\"insert into t (pk) values (generate_series(1,{n_records}))\")\n42     cur.execute(\"select get_local_cache_state()\")\n",
+    "col_offset": 18,
+    "end_col_offset": 63,
+    "filename": "./test_runner/regress/test_lfc_prewarm.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 89,
+      "link": "https://cwe.mitre.org/data/definitions/89.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible SQL injection vector through string-based query construction.",
+    "line_number": 41,
+    "line_range": [
+      41
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b608_hardcoded_sql_expressions.html",
+    "test_id": "B608",
+    "test_name": "hardcoded_sql_expressions"
+  },
+  {
+    "code": "61 \n62     assert lfc_used_pages > 10000\n63     assert (\n",
+    "col_offset": 4,
+    "end_col_offset": 33,
+    "filename": "./test_runner/regress/test_lfc_prewarm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 62,
+    "line_range": [
+      62
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "62     assert lfc_used_pages > 10000\n63     assert (\n64         prewarm_info[0] > 0\n65         and prewarm_info[1] > 0\n66         and prewarm_info[0] == prewarm_info[1] + prewarm_info[2]\n67     )\n68 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./test_runner/regress/test_lfc_prewarm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 63,
+    "line_range": [
+      63,
+      64,
+      65,
+      66,
+      67
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "69     cur.execute(\"select sum(pk) from t\")\n70     assert cur.fetchall()[0][0] == n_records * (n_records + 1) / 2\n71 \n",
+    "col_offset": 4,
+    "end_col_offset": 66,
+    "filename": "./test_runner/regress/test_lfc_prewarm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 70,
+    "line_range": [
+      70
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "95     )\n96     cur.execute(f\"insert into accounts(id) values (generate_series(1,{n_records}))\")\n97     cur.execute(\"select get_local_cache_state()\")\n",
+    "col_offset": 18,
+    "end_col_offset": 69,
+    "filename": "./test_runner/regress/test_lfc_prewarm.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 89,
+      "link": "https://cwe.mitre.org/data/definitions/89.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible SQL injection vector through string-based query construction.",
+    "line_number": 96,
+    "line_range": [
+      96
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b608_hardcoded_sql_expressions.html",
+    "test_id": "B608",
+    "test_name": "hardcoded_sql_expressions"
+  },
+  {
+    "code": "106         while running:\n107             src = random.randint(1, n_records)\n108             dst = random.randint(1, n_records)\n",
+    "col_offset": 18,
+    "end_col_offset": 46,
+    "filename": "./test_runner/regress/test_lfc_prewarm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 107,
+    "line_range": [
+      107
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "107             src = random.randint(1, n_records)\n108             dst = random.randint(1, n_records)\n109             cur.execute(\"update accounts set balance=balance-100 where id=%s\", (src,))\n",
+    "col_offset": 18,
+    "end_col_offset": 46,
+    "filename": "./test_runner/regress/test_lfc_prewarm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 108,
+    "line_range": [
+      108
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "144     total_balance = cur.fetchall()[0][0]\n145     assert total_balance == 0\n146 \n",
+    "col_offset": 4,
+    "end_col_offset": 29,
+    "filename": "./test_runner/regress/test_lfc_prewarm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 145,
+    "line_range": [
+      145
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

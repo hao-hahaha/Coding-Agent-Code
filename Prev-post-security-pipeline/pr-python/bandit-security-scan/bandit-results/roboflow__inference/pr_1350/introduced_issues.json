@@ -1,0 +1,382 @@
+[
+  {
+    "code": "130         if isinstance(data, str):\n131             hash_key = hashlib.md5((version + data).encode(\"utf-8\")).hexdigest()\n132             cached_value = text_cache.get(hash_key)\n",
+    "col_offset": 23,
+    "end_col_offset": 68,
+    "filename": "./inference/core/workflows/core_steps/models/foundation/perception_encoder/v1.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 327,
+      "link": "https://cwe.mitre.org/data/definitions/327.html"
+    },
+    "issue_severity": "HIGH",
+    "issue_text": "Use of weak MD5 hash for security. Consider usedforsecurity=False",
+    "line_number": 131,
+    "line_range": [
+      131
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b324_hashlib.html",
+    "test_id": "B324",
+    "test_name": "hashlib"
+  },
+  {
+    "code": "71 \n72     assert isinstance(result, list)\n73     assert len(result) == 1\n",
+    "col_offset": 4,
+    "end_col_offset": 35,
+    "filename": "./tests/workflows/integration_tests/execution/test_workflow_with_perception_encoder.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 72,
+    "line_range": [
+      72
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "72     assert isinstance(result, list)\n73     assert len(result) == 1\n74     assert set(result[0].keys()) == {\"similarity\", \"image_embeddings\"}\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/workflows/integration_tests/execution/test_workflow_with_perception_encoder.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 73,
+    "line_range": [
+      73
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "73     assert len(result) == 1\n74     assert set(result[0].keys()) == {\"similarity\", \"image_embeddings\"}\n75     assert isinstance(result[0][\"similarity\"], float)\n",
+    "col_offset": 4,
+    "end_col_offset": 70,
+    "filename": "./tests/workflows/integration_tests/execution/test_workflow_with_perception_encoder.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 74,
+    "line_range": [
+      74
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "74     assert set(result[0].keys()) == {\"similarity\", \"image_embeddings\"}\n75     assert isinstance(result[0][\"similarity\"], float)\n76     assert -1.0 <= result[0][\"similarity\"] <= 1.0\n",
+    "col_offset": 4,
+    "end_col_offset": 53,
+    "filename": "./tests/workflows/integration_tests/execution/test_workflow_with_perception_encoder.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 75,
+    "line_range": [
+      75
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "75     assert isinstance(result[0][\"similarity\"], float)\n76     assert -1.0 <= result[0][\"similarity\"] <= 1.0\n77     assert len(result[0][\"image_embeddings\"]) >= 1024\n",
+    "col_offset": 4,
+    "end_col_offset": 49,
+    "filename": "./tests/workflows/integration_tests/execution/test_workflow_with_perception_encoder.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 76,
+    "line_range": [
+      76
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "76     assert -1.0 <= result[0][\"similarity\"] <= 1.0\n77     assert len(result[0][\"image_embeddings\"]) >= 1024\n78 \n",
+    "col_offset": 4,
+    "end_col_offset": 53,
+    "filename": "./tests/workflows/integration_tests/execution/test_workflow_with_perception_encoder.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 77,
+    "line_range": [
+      77
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "118 \n119     assert isinstance(result, list)\n120     assert len(result) == 1\n",
+    "col_offset": 4,
+    "end_col_offset": 35,
+    "filename": "./tests/workflows/integration_tests/execution/test_workflow_with_perception_encoder.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 119,
+    "line_range": [
+      119
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "119     assert isinstance(result, list)\n120     assert len(result) == 1\n121     assert set(result[0].keys()) == {\"text_embeddings\"}\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/workflows/integration_tests/execution/test_workflow_with_perception_encoder.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 120,
+    "line_range": [
+      120
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "120     assert len(result) == 1\n121     assert set(result[0].keys()) == {\"text_embeddings\"}\n122     assert len(result[0][\"text_embeddings\"]) >= 1024\n",
+    "col_offset": 4,
+    "end_col_offset": 55,
+    "filename": "./tests/workflows/integration_tests/execution/test_workflow_with_perception_encoder.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 121,
+    "line_range": [
+      121
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "121     assert set(result[0].keys()) == {\"text_embeddings\"}\n122     assert len(result[0][\"text_embeddings\"]) >= 1024\n",
+    "col_offset": 4,
+    "end_col_offset": 52,
+    "filename": "./tests/workflows/integration_tests/execution/test_workflow_with_perception_encoder.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 122,
+    "line_range": [
+      122
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "44     result = BlockManifest.model_validate(data)\n45     assert result.type == \"roboflow_core/perception_encoder@v1\"\n46     assert result.name == \"pe_step\"\n",
+    "col_offset": 4,
+    "end_col_offset": 63,
+    "filename": "./tests/workflows/unit_tests/core_steps/models/foundation/test_perception_encoder.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 45,
+    "line_range": [
+      45
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "45     assert result.type == \"roboflow_core/perception_encoder@v1\"\n46     assert result.name == \"pe_step\"\n47     assert result.data == \"$inputs.image\"\n",
+    "col_offset": 4,
+    "end_col_offset": 35,
+    "filename": "./tests/workflows/unit_tests/core_steps/models/foundation/test_perception_encoder.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 46,
+    "line_range": [
+      46
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "46     assert result.name == \"pe_step\"\n47     assert result.data == \"$inputs.image\"\n48     assert result.version == \"PE-Core-B16-224\"\n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./tests/workflows/unit_tests/core_steps/models/foundation/test_perception_encoder.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 47,
+    "line_range": [
+      47
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "47     assert result.data == \"$inputs.image\"\n48     assert result.version == \"PE-Core-B16-224\"\n49 \n",
+    "col_offset": 4,
+    "end_col_offset": 46,
+    "filename": "./tests/workflows/unit_tests/core_steps/models/foundation/test_perception_encoder.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 48,
+    "line_range": [
+      48
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "69 \n70     assert result[\"embedding\"] == [0.1, 0.2, 0.3]\n71     mock_model_manager.infer_from_request_sync.assert_called_once()\n",
+    "col_offset": 4,
+    "end_col_offset": 49,
+    "filename": "./tests/workflows/unit_tests/core_steps/models/foundation/test_perception_encoder.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 70,
+    "line_range": [
+      70
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "82 \n83     assert result[\"embedding\"] == [0.1, 0.2, 0.3]\n84     mock_model_manager.infer_from_request_sync.assert_called_once()\n",
+    "col_offset": 4,
+    "end_col_offset": 49,
+    "filename": "./tests/workflows/unit_tests/core_steps/models/foundation/test_perception_encoder.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 83,
+    "line_range": [
+      83
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "104 \n105     assert result[\"embedding\"] == [0.1, 0.2, 0.3]\n106     mock_client.get_perception_encoder_text_embeddings.assert_called_once()\n",
+    "col_offset": 4,
+    "end_col_offset": 49,
+    "filename": "./tests/workflows/unit_tests/core_steps/models/foundation/test_perception_encoder.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 105,
+    "line_range": [
+      105
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "126 \n127     assert result[\"embedding\"] == [0.1, 0.2, 0.3]\n128     mock_client.get_perception_encoder_image_embeddings.assert_called_once()\n",
+    "col_offset": 4,
+    "end_col_offset": 49,
+    "filename": "./tests/workflows/unit_tests/core_steps/models/foundation/test_perception_encoder.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 127,
+    "line_range": [
+      127
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

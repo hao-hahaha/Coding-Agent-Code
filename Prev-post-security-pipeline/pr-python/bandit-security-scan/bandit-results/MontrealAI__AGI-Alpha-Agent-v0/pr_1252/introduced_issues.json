@@ -1,0 +1,63 @@
+[
+  {
+    "code": "7 import sqlite3\n8 import subprocess\n9 import time\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./src/archive/hash_archive.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 8,
+    "line_range": [
+      8
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "34             try:\n35                 proc = subprocess.run([cmd, \"add\", \"-Q\", str(tarball)], capture_output=True, text=True, check=True)\n36                 return proc.stdout.strip()\n",
+    "col_offset": 23,
+    "end_col_offset": 115,
+    "filename": "./src/archive/hash_archive.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 35,
+    "line_range": [
+      35
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "36                 return proc.stdout.strip()\n37             except Exception:\n38                 pass\n39         return hashlib.sha256(tarball.read_bytes()).hexdigest()\n",
+    "col_offset": 12,
+    "end_col_offset": 20,
+    "filename": "./src/archive/hash_archive.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 37,
+    "line_range": [
+      37,
+      38
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  }
+]

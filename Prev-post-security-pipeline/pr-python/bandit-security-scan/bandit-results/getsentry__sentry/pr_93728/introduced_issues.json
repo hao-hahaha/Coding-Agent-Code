@@ -1,0 +1,215 @@
+[
+  {
+    "code": "29 \n30         assert list(\n31             DashboardFavoriteUser.objects.filter(\n32                 organization=self.organization, user_id=self.user.id\n33             )\n34             .order_by(\"position\")\n35             .values_list(\"dashboard_id\", flat=True)\n36         ) == [\n37             self.dashboard_1.id,\n38             self.dashboard_2.id,\n39             self.dashboard_3.id,\n40         ]\n41 \n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tests/sentry/api/endpoints/test_organization_dashboards_starred.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 30,
+    "line_range": [
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "50             )\n51         assert response.status_code == 204\n52 \n",
+    "col_offset": 8,
+    "end_col_offset": 42,
+    "filename": "./tests/sentry/api/endpoints/test_organization_dashboards_starred.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 51,
+    "line_range": [
+      51
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "52 \n53         assert list(\n54             DashboardFavoriteUser.objects.filter(\n55                 organization=self.organization, user_id=self.user.id\n56             )\n57             .order_by(\"position\")\n58             .values_list(\"dashboard_id\", flat=True)\n59         ) == [\n60             self.dashboard_3.id,\n61             self.dashboard_1.id,\n62             self.dashboard_2.id,\n63         ]\n64 \n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tests/sentry/api/endpoints/test_organization_dashboards_starred.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 53,
+    "line_range": [
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "77             )\n78         assert response.status_code == 400\n79         assert response.data == {\n",
+    "col_offset": 8,
+    "end_col_offset": 42,
+    "filename": "./tests/sentry/api/endpoints/test_organization_dashboards_starred.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 78,
+    "line_range": [
+      78
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "78         assert response.status_code == 400\n79         assert response.data == {\n80             \"dashboard_ids\": [\"Single dashboard cannot take up multiple positions\"]\n81         }\n82 \n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tests/sentry/api/endpoints/test_organization_dashboards_starred.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 79,
+    "line_range": [
+      79,
+      80,
+      81
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "93             )\n94         assert response.status_code == 400\n95         assert response.data == {\n",
+    "col_offset": 8,
+    "end_col_offset": 42,
+    "filename": "./tests/sentry/api/endpoints/test_organization_dashboards_starred.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 94,
+    "line_range": [
+      94
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "94         assert response.status_code == 400\n95         assert response.data == {\n96             \"detail\": ErrorDetail(\n97                 string=\"Mismatch between existing and provided starred dashboards.\",\n98                 code=\"parse_error\",\n99             )\n100         }\n101 \n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tests/sentry/api/endpoints/test_organization_dashboards_starred.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 95,
+    "line_range": [
+      95,
+      96,
+      97,
+      98,
+      99,
+      100
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "114             )\n115         assert response.status_code == 204\n116 \n",
+    "col_offset": 8,
+    "end_col_offset": 42,
+    "filename": "./tests/sentry/api/endpoints/test_organization_dashboards_starred.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 115,
+    "line_range": [
+      115
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "116 \n117         assert list(\n118             DashboardFavoriteUser.objects.filter(\n119                 organization=self.organization, user_id=self.user.id\n120             )\n121             .order_by(\"position\")\n122             .values_list(\"dashboard_id\", flat=True)\n123         ) == [self.dashboard_3.id, self.dashboard_1.id, self.dashboard_2.id]\n",
+    "col_offset": 8,
+    "end_col_offset": 76,
+    "filename": "./tests/sentry/api/endpoints/test_organization_dashboards_starred.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 117,
+    "line_range": [
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

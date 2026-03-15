@@ -1,0 +1,22 @@
+[
+  {
+    "code": "9         text = f.read_text()\n10         assert '.innerHTML' not in text\n11 \n",
+    "col_offset": 8,
+    "end_col_offset": 39,
+    "filename": "./tests/test_ui_xss_safety.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 10,
+    "line_range": [
+      10
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

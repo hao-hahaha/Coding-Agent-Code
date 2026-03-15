@@ -1,0 +1,585 @@
+{
+  "errors": [],
+  "generated_at": "2026-03-15T03:50:19Z",
+  "metrics": {
+    "./conftest.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 73,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./tests/__init__.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 0,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./tests/test_e2e.py": {
+      "CONFIDENCE.HIGH": 4,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 4,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 136,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./tests/test_edge_cases.py": {
+      "CONFIDENCE.HIGH": 13,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 13,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 35,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./timefhuman/__init__.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 2,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./timefhuman/main.py": {
+      "CONFIDENCE.HIGH": 4,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 4,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 312,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./timefhuman/renderers.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 220,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./timefhuman/utils.py": {
+      "CONFIDENCE.HIGH": 2,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 2,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 71,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 23,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 23,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 849,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "75     actual = timefhuman(test_input, config=tfhConfig(now=now))\n76     assert actual == expected, f\"Expected: {expected}\\nGot: {actual}\"\n77 \n",
+      "col_offset": 4,
+      "end_col_offset": 69,
+      "filename": "./tests/test_e2e.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 76,
+      "line_range": [
+        76
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "164     config = tfhConfig(infer_datetimes=False, now=now)\n165     assert timefhuman(test_input, config=config) == expected\n166 \n",
+      "col_offset": 4,
+      "end_col_offset": 60,
+      "filename": "./tests/test_e2e.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 165,
+      "line_range": [
+        165
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "178     config.now = now\n179     assert timefhuman(test_input, config=config) == expected\n180 \n",
+      "col_offset": 4,
+      "end_col_offset": 60,
+      "filename": "./tests/test_e2e.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 179,
+      "line_range": [
+        179
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "196 def test_matched_text(now, test_input, expected):  # gh#9\n197     assert timefhuman(test_input, tfhConfig(now=now, return_matched_text=True)) == expected\n",
+      "col_offset": 4,
+      "end_col_offset": 91,
+      "filename": "./tests/test_e2e.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 197,
+      "line_range": [
+        197
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "14     timefhuman('5p', config=config)\n15     assert config.now == now\n16     \n",
+      "col_offset": 4,
+      "end_col_offset": 28,
+      "filename": "./tests/test_edge_cases.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 15,
+      "line_range": [
+        15
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "19     timefhuman('5p', config=config)\n20     assert config.now is None\n21     \n",
+      "col_offset": 4,
+      "end_col_offset": 29,
+      "filename": "./tests/test_edge_cases.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 20,
+      "line_range": [
+        20
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "23     config = tfhConfig()\n24     assert timefhuman('5p', now=True) != timefhuman('5p', now=True)\n25 \n",
+      "col_offset": 4,
+      "end_col_offset": 67,
+      "filename": "./tests/test_edge_cases.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 24,
+      "line_range": [
+        24
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "35     # 1. When a timezone is specified in the original text, honor this first.\n36     assert timefhuman('Wed EST', tfhConfig(now=now_PST)) == [datetime.datetime(2018, 8, 8, 0, 0, tzinfo=pytz.timezone('US/Michigan'))]\n37     assert timefhuman('Wed 5p EST', tfhConfig(now=now_PST)) == [datetime.datetime(2018, 8, 8, 17, 0, tzinfo=pytz.timezone('US/Michigan'))]\n",
+      "col_offset": 4,
+      "end_col_offset": 134,
+      "filename": "./tests/test_edge_cases.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 36,
+      "line_range": [
+        36
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "36     assert timefhuman('Wed EST', tfhConfig(now=now_PST)) == [datetime.datetime(2018, 8, 8, 0, 0, tzinfo=pytz.timezone('US/Michigan'))]\n37     assert timefhuman('Wed 5p EST', tfhConfig(now=now_PST)) == [datetime.datetime(2018, 8, 8, 17, 0, tzinfo=pytz.timezone('US/Michigan'))]\n38     assert timefhuman('5p EST', tfhConfig(now=now_PST)) == [datetime.datetime(2018, 8, 4, 17, 0, tzinfo=pytz.timezone('US/Michigan'))]\n",
+      "col_offset": 4,
+      "end_col_offset": 138,
+      "filename": "./tests/test_edge_cases.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 37,
+      "line_range": [
+        37
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "37     assert timefhuman('Wed 5p EST', tfhConfig(now=now_PST)) == [datetime.datetime(2018, 8, 8, 17, 0, tzinfo=pytz.timezone('US/Michigan'))]\n38     assert timefhuman('5p EST', tfhConfig(now=now_PST)) == [datetime.datetime(2018, 8, 4, 17, 0, tzinfo=pytz.timezone('US/Michigan'))]\n39     assert timefhuman('5p EST', tfhConfig(now=now_PST, direction=Direction.previous)) == [datetime.datetime(2018, 8, 3, 17, 0, tzinfo=pytz.timezone('US/Michigan'))]\n",
+      "col_offset": 4,
+      "end_col_offset": 134,
+      "filename": "./tests/test_edge_cases.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 38,
+      "line_range": [
+        38
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "38     assert timefhuman('5p EST', tfhConfig(now=now_PST)) == [datetime.datetime(2018, 8, 4, 17, 0, tzinfo=pytz.timezone('US/Michigan'))]\n39     assert timefhuman('5p EST', tfhConfig(now=now_PST, direction=Direction.previous)) == [datetime.datetime(2018, 8, 3, 17, 0, tzinfo=pytz.timezone('US/Michigan'))]\n40     assert timefhuman('5p EST', tfhConfig(now=now_PST, direction=Direction.this)) == [datetime.datetime(2018, 8, 4, 17, 0, tzinfo=pytz.timezone('US/Michigan'))]\n",
+      "col_offset": 4,
+      "end_col_offset": 164,
+      "filename": "./tests/test_edge_cases.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 39,
+      "line_range": [
+        39
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "39     assert timefhuman('5p EST', tfhConfig(now=now_PST, direction=Direction.previous)) == [datetime.datetime(2018, 8, 3, 17, 0, tzinfo=pytz.timezone('US/Michigan'))]\n40     assert timefhuman('5p EST', tfhConfig(now=now_PST, direction=Direction.this)) == [datetime.datetime(2018, 8, 4, 17, 0, tzinfo=pytz.timezone('US/Michigan'))]\n41     assert timefhuman('9a EST', tfhConfig(now=now_PST, direction=Direction.next)) == [datetime.datetime(2018, 8, 5, 9, 0, tzinfo=pytz.timezone('US/Michigan'))]\n",
+      "col_offset": 4,
+      "end_col_offset": 160,
+      "filename": "./tests/test_edge_cases.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 40,
+      "line_range": [
+        40
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "40     assert timefhuman('5p EST', tfhConfig(now=now_PST, direction=Direction.this)) == [datetime.datetime(2018, 8, 4, 17, 0, tzinfo=pytz.timezone('US/Michigan'))]\n41     assert timefhuman('9a EST', tfhConfig(now=now_PST, direction=Direction.next)) == [datetime.datetime(2018, 8, 5, 9, 0, tzinfo=pytz.timezone('US/Michigan'))]\n42     assert timefhuman('9a EST', tfhConfig(now=now_PST, infer_datetimes=False)) == [datetime.time(9, 0, tzinfo=pytz.timezone('US/Michigan'))]\n",
+      "col_offset": 4,
+      "end_col_offset": 159,
+      "filename": "./tests/test_edge_cases.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 41,
+      "line_range": [
+        41
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "41     assert timefhuman('9a EST', tfhConfig(now=now_PST, direction=Direction.next)) == [datetime.datetime(2018, 8, 5, 9, 0, tzinfo=pytz.timezone('US/Michigan'))]\n42     assert timefhuman('9a EST', tfhConfig(now=now_PST, infer_datetimes=False)) == [datetime.time(9, 0, tzinfo=pytz.timezone('US/Michigan'))]\n43     # 2. Otherwise, if a timezone is specified in `now`, use this.\n",
+      "col_offset": 4,
+      "end_col_offset": 140,
+      "filename": "./tests/test_edge_cases.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 42,
+      "line_range": [
+        42
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "43     # 2. Otherwise, if a timezone is specified in `now`, use this.\n44     assert timefhuman('Wed', tfhConfig(now=now_PST)) == [datetime.datetime(2018, 8, 8, 0, 0, tzinfo=pytz.timezone('US/Pacific'))]\n45     # 3. If no timezone is specified, do not attach one\n",
+      "col_offset": 4,
+      "end_col_offset": 129,
+      "filename": "./tests/test_edge_cases.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 44,
+      "line_range": [
+        44
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "45     # 3. If no timezone is specified, do not attach one\n46     assert timefhuman('Wed', tfhConfig(now=now)) == [datetime.datetime(2018, 8, 8, 0, 0)]\n47     \n",
+      "col_offset": 4,
+      "end_col_offset": 89,
+      "filename": "./tests/test_edge_cases.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 46,
+      "line_range": [
+        46
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "50     tree = timefhuman('how does 5p sound?', raw=True)\n51     assert len(tree.children) > 1, \"Should have parsed into many UNK tokens\"\n",
+      "col_offset": 4,
+      "end_col_offset": 76,
+      "filename": "./tests/test_edge_cases.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 51,
+      "line_range": [
+        51
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "33     if not string.strip():\n34         assert not raw, \"Empty string not allowed when raw=True\"\n35         return []\n",
+      "col_offset": 8,
+      "end_col_offset": 64,
+      "filename": "./timefhuman/main.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 34,
+      "line_range": [
+        34
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "117         if self.config.return_matched_text:\n118             assert isinstance(expr, tfhMatchable), f\"Expected tfhDatelike or tfhAmbiguous, got {type(expr)}\"\n119             expr.matched_text_pos = (tree.meta.start_pos, tree.meta.end_pos)\n",
+      "col_offset": 12,
+      "end_col_offset": 108,
+      "filename": "./timefhuman/main.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 118,
+      "line_range": [
+        118
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "136         \"\"\"Handles expressions like '7/17 3 PM - 7/18 4 PM'.\"\"\"\n137         assert len(children) == 2\n138         return tfhRange(infer(children))\n",
+      "col_offset": 8,
+      "end_col_offset": 33,
+      "filename": "./timefhuman/main.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 137,
+      "line_range": [
+        137
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "247         elif 'position' in data:\n248             assert 'month' in data and 'weekday' in data\n249             weekday = weekdays[data['weekday'].to_object(self.config).weekday()]\n",
+      "col_offset": 12,
+      "end_col_offset": 56,
+      "filename": "./timefhuman/main.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 248,
+      "line_range": [
+        248
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "63 def node_to_dict(node: Tree) -> dict:\n64     assert isinstance(node, (Tree, dict, Token)), f\"Expected a Tree or dict, got {type(node)} ({node})\"\n65     if isinstance(node, dict):\n",
+      "col_offset": 4,
+      "end_col_offset": 103,
+      "filename": "./timefhuman/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 64,
+      "line_range": [
+        64
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "67     elif isinstance(node, Tree):\n68         assert len(node.children) == 1, f\"Expected 1 child for {node.data.value}, got {len(node.children)}\"\n69         return {node.data.value: node.children[0].value}\n",
+      "col_offset": 8,
+      "end_col_offset": 107,
+      "filename": "./timefhuman/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 68,
+      "line_range": [
+        68
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    }
+  ]
+}

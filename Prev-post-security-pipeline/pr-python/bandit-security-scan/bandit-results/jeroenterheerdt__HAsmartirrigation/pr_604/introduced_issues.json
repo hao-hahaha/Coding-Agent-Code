@@ -1,0 +1,284 @@
+[
+  {
+    "code": "17     print(\"Installing python-dateutil...\")\n18     os.system(\"pip install python-dateutil\")\n19     from dateutil import parser as dateutil_parser\n",
+    "col_offset": 4,
+    "end_col_offset": 44,
+    "filename": "./test_datetime_fix_proof.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a shell: Seems safe, but may be changed in the future, consider rewriting without shell",
+    "line_number": 18,
+    "line_range": [
+      18
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b605_start_process_with_a_shell.html",
+    "test_id": "B605",
+    "test_name": "start_process_with_a_shell"
+  },
+  {
+    "code": "17     print(\"Installing python-dateutil...\")\n18     os.system(\"pip install python-dateutil\")\n19     from dateutil import parser as dateutil_parser\n",
+    "col_offset": 4,
+    "end_col_offset": 44,
+    "filename": "./test_datetime_fix_proof.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 18,
+    "line_range": [
+      18
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "29     result = _safe_parse_datetime(dt)\n30     assert isinstance(result, datetime.datetime)\n31     print(f\"✓ Datetime object: {dt} -> {result}\")\n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./test_weather_records_proof.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 30,
+    "line_range": [
+      30
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "35     result = _safe_parse_datetime(dt_tz)\n36     assert isinstance(result, datetime.datetime)\n37     assert result.tzinfo is None  # Should be converted to naive UTC\n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./test_weather_records_proof.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 36,
+    "line_range": [
+      36
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "36     assert isinstance(result, datetime.datetime)\n37     assert result.tzinfo is None  # Should be converted to naive UTC\n38     print(f\"✓ Timezone-aware datetime: {dt_tz} -> {result}\")\n",
+    "col_offset": 4,
+    "end_col_offset": 32,
+    "filename": "./test_weather_records_proof.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 37,
+    "line_range": [
+      37
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "42     result = _safe_parse_datetime(iso_string)\n43     assert isinstance(result, datetime.datetime)\n44     print(f\"✓ ISO string: {iso_string} -> {result}\")\n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./test_weather_records_proof.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 43,
+    "line_range": [
+      43
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "48     result = _safe_parse_datetime(iso_string_naive)\n49     assert isinstance(result, datetime.datetime)\n50     print(f\"✓ ISO string (naive): {iso_string_naive} -> {result}\")\n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./test_weather_records_proof.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 49,
+    "line_range": [
+      49
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "54     result = _safe_parse_datetime(invalid_string)\n55     assert result == datetime.datetime.min\n56     print(f\"✓ Invalid string: {invalid_string} -> {result}\")\n",
+    "col_offset": 4,
+    "end_col_offset": 42,
+    "filename": "./test_weather_records_proof.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 55,
+    "line_range": [
+      55
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "59     result = _safe_parse_datetime(None)\n60     assert result == datetime.datetime.min\n61     print(f\"✓ None value -> {result}\")\n",
+    "col_offset": 4,
+    "end_col_offset": 42,
+    "filename": "./test_weather_records_proof.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 60,
+    "line_range": [
+      60
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "140     # Verify that send_result was called\n141     assert mock_connection.send_result.called\n142     call_args = mock_connection.send_result.call_args\n",
+    "col_offset": 4,
+    "end_col_offset": 45,
+    "filename": "./test_weather_records_proof.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 141,
+    "line_range": [
+      141
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "147     \n148     assert message_id == 123\n149     assert isinstance(weather_records, list)\n",
+    "col_offset": 4,
+    "end_col_offset": 28,
+    "filename": "./test_weather_records_proof.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 148,
+    "line_range": [
+      148
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "148     assert message_id == 123\n149     assert isinstance(weather_records, list)\n150     \n",
+    "col_offset": 4,
+    "end_col_offset": 44,
+    "filename": "./test_weather_records_proof.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 149,
+    "line_range": [
+      149
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "213                     parsed_timestamps.append(parsed_ts)\n214             except:\n215                 pass\n216         \n",
+    "col_offset": 12,
+    "end_col_offset": 20,
+    "filename": "./test_weather_records_proof.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 214,
+    "line_range": [
+      214,
+      215
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "218         for i in range(len(parsed_timestamps) - 1):\n219             assert parsed_timestamps[i] >= parsed_timestamps[i + 1], \\\n220                 f\"Timestamps not in descending order: {parsed_timestamps[i]} < {parsed_timestamps[i + 1]}\"\n221         \n",
+    "col_offset": 12,
+    "end_col_offset": 106,
+    "filename": "./test_weather_records_proof.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 219,
+    "line_range": [
+      219,
+      220
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

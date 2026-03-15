@@ -1,0 +1,22 @@
+[
+  {
+    "code": "91             if codeobj:\n92                 exec(codeobj, module.__dict__)\n93             JacMachineInterface.load_module(module.__name__, module)\n",
+    "col_offset": 16,
+    "end_col_offset": 46,
+    "filename": "./jac/jaclang/runtimelib/meta_importer.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Use of exec detected.",
+    "line_number": 92,
+    "line_range": [
+      92
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b102_exec_used.html",
+    "test_id": "B102",
+    "test_name": "exec_used"
+  }
+]

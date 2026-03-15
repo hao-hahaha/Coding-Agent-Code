@@ -1,0 +1,125 @@
+[
+  {
+    "code": "3 import os\n4 import pickle\n5 import tempfile\n",
+    "col_offset": 0,
+    "end_col_offset": 13,
+    "filename": "./tests/dataset_creation_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 502,
+      "link": "https://cwe.mitre.org/data/definitions/502.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with pickle module.",
+    "line_number": 4,
+    "line_range": [
+      4
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b403-import-pickle",
+    "test_id": "B403",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "78     parsed_pkl_path = os.path.join(root_dir, \"parsed.pkl\")\n79     assert os.path.exists(parsed_pkl_path), f\"parsed.pkl not found at {parsed_pkl_path}\"\n80 \n",
+    "col_offset": 4,
+    "end_col_offset": 88,
+    "filename": "./tests/dataset_creation_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 79,
+    "line_range": [
+      79
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "81     with open(parsed_pkl_path, \"rb\") as f:\n82       parsed_data = pickle.load(f)\n83 \n",
+    "col_offset": 20,
+    "end_col_offset": 34,
+    "filename": "./tests/dataset_creation_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 502,
+      "link": "https://cwe.mitre.org/data/definitions/502.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",
+    "line_number": 82,
+    "line_range": [
+      82
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b301-pickle",
+    "test_id": "B301",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "88 \n89     assert len(invalid_entries) == 0, f\"Found {len(invalid_entries)} invalid entries\"\n90     assert len(non_training_entries) == 0, f\"Found {len(non_training_entries)} non-training entries\"\n",
+    "col_offset": 4,
+    "end_col_offset": 85,
+    "filename": "./tests/dataset_creation_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 89,
+    "line_range": [
+      89
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "89     assert len(invalid_entries) == 0, f\"Found {len(invalid_entries)} invalid entries\"\n90     assert len(non_training_entries) == 0, f\"Found {len(non_training_entries)} non-training entries\"\n91 \n",
+    "col_offset": 4,
+    "end_col_offset": 100,
+    "filename": "./tests/dataset_creation_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 90,
+    "line_range": [
+      90
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "111 \n112   assert len(single_thread_data) == len(parallel_data), (\n113     f\"Single-threaded ({len(single_thread_data)} entries) and \"\n114     f\"parallel ({len(parallel_data)} entries) results differ\"\n115   )\n116 \n",
+    "col_offset": 2,
+    "end_col_offset": 3,
+    "filename": "./tests/dataset_creation_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 112,
+    "line_range": [
+      112,
+      113,
+      114,
+      115
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

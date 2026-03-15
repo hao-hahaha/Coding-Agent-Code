@@ -1,0 +1,62 @@
+[
+  {
+    "code": "4 import shutil\n5 import subprocess\n6 from pathlib import Path\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/insight_browser_v1/tests/test_entropy_js.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 5,
+    "line_range": [
+      5
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "13 def test_entropy_js() -> None:\n14     subprocess.check_call([\"npm\", \"test\"], cwd=BROWSER_DIR)\n",
+    "col_offset": 4,
+    "end_col_offset": 59,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/insight_browser_v1/tests/test_entropy_js.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 14,
+    "line_range": [
+      14
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "13 def test_entropy_js() -> None:\n14     subprocess.check_call([\"npm\", \"test\"], cwd=BROWSER_DIR)\n",
+    "col_offset": 4,
+    "end_col_offset": 59,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/insight_browser_v1/tests/test_entropy_js.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 14,
+    "line_range": [
+      14
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  }
+]

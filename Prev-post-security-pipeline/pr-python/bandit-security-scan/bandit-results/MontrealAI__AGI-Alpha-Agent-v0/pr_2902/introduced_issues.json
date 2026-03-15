@@ -1,0 +1,103 @@
+[
+  {
+    "code": "66                             target.unlink()\n67                         except Exception:\n68                             pass\n69     if last_exc:\n",
+    "col_offset": 24,
+    "end_col_offset": 32,
+    "filename": "./scripts/download_openai_gpt2.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 67,
+    "line_range": [
+      67,
+      68
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "12     prefix = \"https://openaipublic.blob.core.windows.net/gpt-2/models/124M/\"\n13     assert urls[0].startswith(prefix)\n14     assert urls[-1].endswith(\"vocab.bpe\")\n",
+    "col_offset": 4,
+    "end_col_offset": 37,
+    "filename": "./tests/test_download_openai_gpt2.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 13,
+    "line_range": [
+      13
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "13     assert urls[0].startswith(prefix)\n14     assert urls[-1].endswith(\"vocab.bpe\")\n15 \n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./tests/test_download_openai_gpt2.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 14,
+    "line_range": [
+      14
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "26     dg.download_openai_gpt2(\"117M\", dest=tmp_path)\n27     assert len(calls) == len(dg._FILE_LIST)\n28     assert calls[0][0] == dg.model_urls(\"117M\")[0]\n",
+    "col_offset": 4,
+    "end_col_offset": 43,
+    "filename": "./tests/test_download_openai_gpt2.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 27,
+    "line_range": [
+      27
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "27     assert len(calls) == len(dg._FILE_LIST)\n28     assert calls[0][0] == dg.model_urls(\"117M\")[0]\n",
+    "col_offset": 4,
+    "end_col_offset": 50,
+    "filename": "./tests/test_download_openai_gpt2.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 28,
+    "line_range": [
+      28
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

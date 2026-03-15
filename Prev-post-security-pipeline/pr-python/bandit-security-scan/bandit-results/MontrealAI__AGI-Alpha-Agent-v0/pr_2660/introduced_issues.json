@@ -1,0 +1,102 @@
+[
+  {
+    "code": "6 import shutil\n7 import subprocess\n8 from pathlib import Path\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/insight_browser_v1/tests/test_tree_visualization.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 7,
+    "line_range": [
+      7
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "21     shutil.copytree(browser_dir, target)\n22     subprocess.check_call([\"npm\", \"run\", \"build\"], cwd=target)\n23 \n",
+    "col_offset": 4,
+    "end_col_offset": 62,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/insight_browser_v1/tests/test_tree_visualization.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 22,
+    "line_range": [
+      22
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "21     shutil.copytree(browser_dir, target)\n22     subprocess.check_call([\"npm\", \"run\", \"build\"], cwd=target)\n23 \n",
+    "col_offset": 4,
+    "end_col_offset": 62,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/insight_browser_v1/tests/test_tree_visualization.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 22,
+    "line_range": [
+      22
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "44         count_later = page.eval_on_selector_all(\"#tree-container .node\", \"els => els.length\")\n45         assert count_later > count_initial\n46 \n",
+    "col_offset": 8,
+    "end_col_offset": 42,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/insight_browser_v1/tests/test_tree_visualization.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 45,
+    "line_range": [
+      45
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "53         )\n54         assert highlighted == best_path\n55         browser.close()\n",
+    "col_offset": 8,
+    "end_col_offset": 39,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/insight_browser_v1/tests/test_tree_visualization.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 54,
+    "line_range": [
+      54
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

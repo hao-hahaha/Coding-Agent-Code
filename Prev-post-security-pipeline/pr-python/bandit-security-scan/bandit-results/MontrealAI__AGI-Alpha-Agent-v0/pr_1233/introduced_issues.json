@@ -1,0 +1,302 @@
+[
+  {
+    "code": "27     insert_after(temp_path, \"b\", \"x\")\n28     assert \"x\" in temp_path.read_text()\n29     assert undo_last_edit() is True\n",
+    "col_offset": 4,
+    "end_col_offset": 39,
+    "filename": "./tests/test_tools_undo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 28,
+    "line_range": [
+      28
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "28     assert \"x\" in temp_path.read_text()\n29     assert undo_last_edit() is True\n30     assert temp_path.read_text() == \"a\\nb\\nc\\n\"\n",
+    "col_offset": 4,
+    "end_col_offset": 35,
+    "filename": "./tests/test_tools_undo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 29,
+    "line_range": [
+      29
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "29     assert undo_last_edit() is True\n30     assert temp_path.read_text() == \"a\\nb\\nc\\n\"\n31     assert undo_last_edit() is False\n",
+    "col_offset": 4,
+    "end_col_offset": 47,
+    "filename": "./tests/test_tools_undo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 30,
+    "line_range": [
+      30
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "30     assert temp_path.read_text() == \"a\\nb\\nc\\n\"\n31     assert undo_last_edit() is False\n32     assert temp_path.read_text() == \"a\\nb\\nc\\n\"\n",
+    "col_offset": 4,
+    "end_col_offset": 36,
+    "filename": "./tests/test_tools_undo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 31,
+    "line_range": [
+      31
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "31     assert undo_last_edit() is False\n32     assert temp_path.read_text() == \"a\\nb\\nc\\n\"\n33 \n",
+    "col_offset": 4,
+    "end_col_offset": 47,
+    "filename": "./tests/test_tools_undo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 32,
+    "line_range": [
+      32
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "39     edit(temp_path, 1, 2, \"B\")\n40     assert undo_last_edit() is True\n41     assert temp_path.read_text() == first\n",
+    "col_offset": 4,
+    "end_col_offset": 35,
+    "filename": "./tests/test_tools_undo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 40,
+    "line_range": [
+      40
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "40     assert undo_last_edit() is True\n41     assert temp_path.read_text() == first\n42     assert undo_last_edit() is True\n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./tests/test_tools_undo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 41,
+    "line_range": [
+      41
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "41     assert temp_path.read_text() == first\n42     assert undo_last_edit() is True\n43     assert temp_path.read_text() == \"alpha\\nbeta\\n\"\n",
+    "col_offset": 4,
+    "end_col_offset": 35,
+    "filename": "./tests/test_tools_undo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 42,
+    "line_range": [
+      42
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "42     assert undo_last_edit() is True\n43     assert temp_path.read_text() == \"alpha\\nbeta\\n\"\n44     replace(temp_path, \"A\", \"alpha\")\n",
+    "col_offset": 4,
+    "end_col_offset": 51,
+    "filename": "./tests/test_tools_undo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 43,
+    "line_range": [
+      43
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "45     insert_after(temp_path, \"alpha\", \"gamma\")\n46     assert \"gamma\" in temp_path.read_text()\n47     assert undo_last_edit() is True\n",
+    "col_offset": 4,
+    "end_col_offset": 43,
+    "filename": "./tests/test_tools_undo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 46,
+    "line_range": [
+      46
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "46     assert \"gamma\" in temp_path.read_text()\n47     assert undo_last_edit() is True\n48     assert \"gamma\" not in temp_path.read_text()\n",
+    "col_offset": 4,
+    "end_col_offset": 35,
+    "filename": "./tests/test_tools_undo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 47,
+    "line_range": [
+      47
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "47     assert undo_last_edit() is True\n48     assert \"gamma\" not in temp_path.read_text()\n49     assert undo_last_edit() is False\n",
+    "col_offset": 4,
+    "end_col_offset": 47,
+    "filename": "./tests/test_tools_undo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 48,
+    "line_range": [
+      48
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "48     assert \"gamma\" not in temp_path.read_text()\n49     assert undo_last_edit() is False\n50     assert temp_path.read_text() == \"alpha\\nbeta\\n\"\n",
+    "col_offset": 4,
+    "end_col_offset": 36,
+    "filename": "./tests/test_tools_undo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 49,
+    "line_range": [
+      49
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "49     assert undo_last_edit() is False\n50     assert temp_path.read_text() == \"alpha\\nbeta\\n\"\n51     assert view_lines(temp_path, 1, 2) == \"alpha\\nbeta\"\n",
+    "col_offset": 4,
+    "end_col_offset": 51,
+    "filename": "./tests/test_tools_undo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 50,
+    "line_range": [
+      50
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "50     assert temp_path.read_text() == \"alpha\\nbeta\\n\"\n51     assert view_lines(temp_path, 1, 2) == \"alpha\\nbeta\"\n",
+    "col_offset": 4,
+    "end_col_offset": 55,
+    "filename": "./tests/test_tools_undo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 51,
+    "line_range": [
+      51
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

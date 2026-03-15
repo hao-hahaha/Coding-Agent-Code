@@ -1,0 +1,564 @@
+[
+  {
+    "check_id": "c.lang.security.insecure-use-string-copy-fn.insecure-use-string-copy-fn",
+    "path": "pgxn/neon/file_cache.c",
+    "start": {
+      "line": 774,
+      "col": 3,
+      "offset": 21868
+    },
+    "end": {
+      "line": 774,
+      "col": 42,
+      "offset": 21907
+    },
+    "extra": {
+      "message": "Finding triggers whenever there is a strcpy or strncpy used. This is an issue because strcpy does not affirm the size of the destination array and strncpy will not automatically NULL-terminate strings. This can lead to buffer overflows, which can cause program crashes and potentially let an attacker inject code in the program. Fix this by using strcpy_s instead (although note that strcpy_s is an optional part of the C11 standard, and so may not be available).",
+      "metadata": {
+        "cwe": [
+          "CWE-676: Use of Potentially Dangerous Function"
+        ],
+        "references": [
+          "https://cwe.mitre.org/data/definitions/676",
+          "https://nvd.nist.gov/vuln/detail/CVE-2019-11365"
+        ],
+        "category": "security",
+        "technology": [
+          "c"
+        ],
+        "confidence": "LOW",
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Dangerous Method or Function"
+        ],
+        "source": "https://semgrep.dev/r/c.lang.security.insecure-use-string-copy-fn.insecure-use-string-copy-fn",
+        "shortlink": "https://sg.run/7oNk"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "c.lang.security.insecure-use-string-copy-fn.insecure-use-string-copy-fn",
+    "path": "pgxn/neon/file_cache.c",
+    "start": {
+      "line": 775,
+      "col": 3,
+      "offset": 21911
+    },
+    "end": {
+      "line": 775,
+      "col": 55,
+      "offset": 21963
+    },
+    "extra": {
+      "message": "Finding triggers whenever there is a strcpy or strncpy used. This is an issue because strcpy does not affirm the size of the destination array and strncpy will not automatically NULL-terminate strings. This can lead to buffer overflows, which can cause program crashes and potentially let an attacker inject code in the program. Fix this by using strcpy_s instead (although note that strcpy_s is an optional part of the C11 standard, and so may not be available).",
+      "metadata": {
+        "cwe": [
+          "CWE-676: Use of Potentially Dangerous Function"
+        ],
+        "references": [
+          "https://cwe.mitre.org/data/definitions/676",
+          "https://nvd.nist.gov/vuln/detail/CVE-2019-11365"
+        ],
+        "category": "security",
+        "technology": [
+          "c"
+        ],
+        "confidence": "LOW",
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Dangerous Method or Function"
+        ],
+        "source": "https://semgrep.dev/r/c.lang.security.insecure-use-string-copy-fn.insecure-use-string-copy-fn",
+        "shortlink": "https://sg.run/7oNk"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "c.lang.security.insecure-use-string-copy-fn.insecure-use-string-copy-fn",
+    "path": "pgxn/neon/file_cache.c",
+    "start": {
+      "line": 777,
+      "col": 3,
+      "offset": 22038
+    },
+    "end": {
+      "line": 777,
+      "col": 48,
+      "offset": 22083
+    },
+    "extra": {
+      "message": "Finding triggers whenever there is a strcpy or strncpy used. This is an issue because strcpy does not affirm the size of the destination array and strncpy will not automatically NULL-terminate strings. This can lead to buffer overflows, which can cause program crashes and potentially let an attacker inject code in the program. Fix this by using strcpy_s instead (although note that strcpy_s is an optional part of the C11 standard, and so may not be available).",
+      "metadata": {
+        "cwe": [
+          "CWE-676: Use of Potentially Dangerous Function"
+        ],
+        "references": [
+          "https://cwe.mitre.org/data/definitions/676",
+          "https://nvd.nist.gov/vuln/detail/CVE-2019-11365"
+        ],
+        "category": "security",
+        "technology": [
+          "c"
+        ],
+        "confidence": "LOW",
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Dangerous Method or Function"
+        ],
+        "source": "https://semgrep.dev/r/c.lang.security.insecure-use-string-copy-fn.insecure-use-string-copy-fn",
+        "shortlink": "https://sg.run/7oNk"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "c.lang.security.insecure-use-string-copy-fn.insecure-use-string-copy-fn",
+    "path": "pgxn/neon/libpagestore.c",
+    "start": {
+      "line": 492,
+      "col": 6,
+      "offset": 13882
+    },
+    "end": {
+      "line": 492,
+      "col": 81,
+      "offset": 13957
+    },
+    "extra": {
+      "message": "Finding triggers whenever there is a strcpy or strncpy used. This is an issue because strcpy does not affirm the size of the destination array and strncpy will not automatically NULL-terminate strings. This can lead to buffer overflows, which can cause program crashes and potentially let an attacker inject code in the program. Fix this by using strcpy_s instead (although note that strcpy_s is an optional part of the C11 standard, and so may not be available).",
+      "metadata": {
+        "cwe": [
+          "CWE-676: Use of Potentially Dangerous Function"
+        ],
+        "references": [
+          "https://cwe.mitre.org/data/definitions/676",
+          "https://nvd.nist.gov/vuln/detail/CVE-2019-11365"
+        ],
+        "category": "security",
+        "technology": [
+          "c"
+        ],
+        "confidence": "LOW",
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Dangerous Method or Function"
+        ],
+        "source": "https://semgrep.dev/r/c.lang.security.insecure-use-string-copy-fn.insecure-use-string-copy-fn",
+        "shortlink": "https://sg.run/7oNk"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "c.lang.security.insecure-use-string-copy-fn.insecure-use-string-copy-fn",
+    "path": "pgxn/neon/libpagestore.c",
+    "start": {
+      "line": 496,
+      "col": 6,
+      "offset": 14025
+    },
+    "end": {
+      "line": 496,
+      "col": 81,
+      "offset": 14100
+    },
+    "extra": {
+      "message": "Finding triggers whenever there is a strcpy or strncpy used. This is an issue because strcpy does not affirm the size of the destination array and strncpy will not automatically NULL-terminate strings. This can lead to buffer overflows, which can cause program crashes and potentially let an attacker inject code in the program. Fix this by using strcpy_s instead (although note that strcpy_s is an optional part of the C11 standard, and so may not be available).",
+      "metadata": {
+        "cwe": [
+          "CWE-676: Use of Potentially Dangerous Function"
+        ],
+        "references": [
+          "https://cwe.mitre.org/data/definitions/676",
+          "https://nvd.nist.gov/vuln/detail/CVE-2019-11365"
+        ],
+        "category": "security",
+        "technology": [
+          "c"
+        ],
+        "confidence": "LOW",
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Dangerous Method or Function"
+        ],
+        "source": "https://semgrep.dev/r/c.lang.security.insecure-use-string-copy-fn.insecure-use-string-copy-fn",
+        "shortlink": "https://sg.run/7oNk"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "c.lang.security.insecure-use-string-copy-fn.insecure-use-string-copy-fn",
+    "path": "pgxn/neon/libpagestore.c",
+    "start": {
+      "line": 500,
+      "col": 6,
+      "offset": 14167
+    },
+    "end": {
+      "line": 500,
+      "col": 80,
+      "offset": 14241
+    },
+    "extra": {
+      "message": "Finding triggers whenever there is a strcpy or strncpy used. This is an issue because strcpy does not affirm the size of the destination array and strncpy will not automatically NULL-terminate strings. This can lead to buffer overflows, which can cause program crashes and potentially let an attacker inject code in the program. Fix this by using strcpy_s instead (although note that strcpy_s is an optional part of the C11 standard, and so may not be available).",
+      "metadata": {
+        "cwe": [
+          "CWE-676: Use of Potentially Dangerous Function"
+        ],
+        "references": [
+          "https://cwe.mitre.org/data/definitions/676",
+          "https://nvd.nist.gov/vuln/detail/CVE-2019-11365"
+        ],
+        "category": "security",
+        "technology": [
+          "c"
+        ],
+        "confidence": "LOW",
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Dangerous Method or Function"
+        ],
+        "source": "https://semgrep.dev/r/c.lang.security.insecure-use-string-copy-fn.insecure-use-string-copy-fn",
+        "shortlink": "https://sg.run/7oNk"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+    "path": "test_runner/fixtures/neon_fixtures.py",
+    "start": {
+      "line": 3280,
+      "col": 76,
+      "offset": 123729
+    },
+    "end": {
+      "line": 3280,
+      "col": 80,
+      "offset": 123733
+    },
+    "extra": {
+      "message": "Found 'subprocess' function 'run' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables, which makes it much easier for a malicious actor to execute commands. Use 'shell=False' instead.",
+      "fix": "False",
+      "metadata": {
+        "source-rule-url": "https://bandit.readthedocs.io/en/latest/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "cwe": [
+          "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+        ],
+        "references": [
+          "https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess",
+          "https://docs.python.org/3/library/subprocess.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "secure default"
+        ],
+        "likelihood": "HIGH",
+        "impact": "LOW",
+        "confidence": "MEDIUM",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Command Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+        "shortlink": "https://sg.run/J92w"
+      },
+      "severity": "ERROR",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+    "path": "test_runner/fixtures/neon_fixtures.py",
+    "start": {
+      "line": 5281,
+      "col": 86,
+      "offset": 194271
+    },
+    "end": {
+      "line": 5281,
+      "col": 90,
+      "offset": 194275
+    },
+    "extra": {
+      "message": "Found 'subprocess' function 'run' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables, which makes it much easier for a malicious actor to execute commands. Use 'shell=False' instead.",
+      "fix": "False",
+      "metadata": {
+        "source-rule-url": "https://bandit.readthedocs.io/en/latest/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "cwe": [
+          "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+        ],
+        "references": [
+          "https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess",
+          "https://docs.python.org/3/library/subprocess.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "secure default"
+        ],
+        "likelihood": "HIGH",
+        "impact": "LOW",
+        "confidence": "MEDIUM",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Command Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+        "shortlink": "https://sg.run/J92w"
+      },
+      "severity": "ERROR",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+    "path": "test_runner/fixtures/neon_fixtures.py",
+    "start": {
+      "line": 5331,
+      "col": 62,
+      "offset": 196268
+    },
+    "end": {
+      "line": 5331,
+      "col": 66,
+      "offset": 196272
+    },
+    "extra": {
+      "message": "Found 'subprocess' function 'run' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables, which makes it much easier for a malicious actor to execute commands. Use 'shell=False' instead.",
+      "fix": "False",
+      "metadata": {
+        "source-rule-url": "https://bandit.readthedocs.io/en/latest/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "cwe": [
+          "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+        ],
+        "references": [
+          "https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess",
+          "https://docs.python.org/3/library/subprocess.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "secure default"
+        ],
+        "likelihood": "HIGH",
+        "impact": "LOW",
+        "confidence": "MEDIUM",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Command Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+        "shortlink": "https://sg.run/J92w"
+      },
+      "severity": "ERROR",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+    "path": "test_runner/fixtures/neon_fixtures.py",
+    "start": {
+      "line": 5332,
+      "col": 62,
+      "offset": 196335
+    },
+    "end": {
+      "line": 5332,
+      "col": 66,
+      "offset": 196339
+    },
+    "extra": {
+      "message": "Found 'subprocess' function 'run' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables, which makes it much easier for a malicious actor to execute commands. Use 'shell=False' instead.",
+      "fix": "False",
+      "metadata": {
+        "source-rule-url": "https://bandit.readthedocs.io/en/latest/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "cwe": [
+          "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+        ],
+        "references": [
+          "https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess",
+          "https://docs.python.org/3/library/subprocess.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "secure default"
+        ],
+        "likelihood": "HIGH",
+        "impact": "LOW",
+        "confidence": "MEDIUM",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Command Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+        "shortlink": "https://sg.run/J92w"
+      },
+      "severity": "ERROR",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+    "path": "test_runner/fixtures/neon_fixtures.py",
+    "start": {
+      "line": 5335,
+      "col": 58,
+      "offset": 196443
+    },
+    "end": {
+      "line": 5335,
+      "col": 62,
+      "offset": 196447
+    },
+    "extra": {
+      "message": "Found 'subprocess' function 'run' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables, which makes it much easier for a malicious actor to execute commands. Use 'shell=False' instead.",
+      "fix": "False",
+      "metadata": {
+        "source-rule-url": "https://bandit.readthedocs.io/en/latest/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "cwe": [
+          "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+        ],
+        "references": [
+          "https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess",
+          "https://docs.python.org/3/library/subprocess.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "secure default"
+        ],
+        "likelihood": "HIGH",
+        "impact": "LOW",
+        "confidence": "MEDIUM",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Command Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+        "shortlink": "https://sg.run/J92w"
+      },
+      "severity": "ERROR",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  }
+]

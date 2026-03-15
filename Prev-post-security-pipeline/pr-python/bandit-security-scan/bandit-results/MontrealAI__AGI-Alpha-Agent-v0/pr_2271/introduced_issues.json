@@ -1,0 +1,42 @@
+[
+  {
+    "code": "45     rc = check_env.main([\"--auto-install\", \"--wheelhouse\", str(wheelhouse)])\n46     assert rc == 0\n47     mod = importlib.import_module(\"openai_agents\")\n",
+    "col_offset": 4,
+    "end_col_offset": 18,
+    "filename": "./tests/test_aiga_offline_setup.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 46,
+    "line_range": [
+      46
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "47     mod = importlib.import_module(\"openai_agents\")\n48     assert getattr(mod, \"__version__\", \"\") == \"0.0.15\"\n",
+    "col_offset": 4,
+    "end_col_offset": 54,
+    "filename": "./tests/test_aiga_offline_setup.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 48,
+    "line_range": [
+      48
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

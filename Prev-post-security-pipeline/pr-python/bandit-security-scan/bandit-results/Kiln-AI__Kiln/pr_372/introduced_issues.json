@@ -1,0 +1,106 @@
+[
+  {
+    "code": "19     loaded = deserialize_config(path)\n20     assert [m.model_dump(mode=\"json\") for m in loaded] == [\n21         m.model_dump(mode=\"json\") for m in built_in_models\n22     ]\n23 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./libs/core/kiln_ai/adapters/test_remote_config.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 20,
+    "line_range": [
+      20,
+      21,
+      22
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "38         models = load_from_url(\"http://example.com/models.json\")\n39     assert [m.model_dump(mode=\"json\") for m in models] == sample\n40 \n",
+    "col_offset": 4,
+    "end_col_offset": 64,
+    "filename": "./libs/core/kiln_ai/adapters/test_remote_config.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 39,
+    "line_range": [
+      39
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "45     loaded = deserialize_config(path)\n46     assert [m.model_dump(mode=\"json\") for m in loaded] == [\n47         m.model_dump(mode=\"json\") for m in built_in_models\n48     ]\n49 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./libs/core/kiln_ai/adapters/test_remote_config.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 46,
+    "line_range": [
+      46,
+      47,
+      48
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "62     await asyncio.sleep(0.01)\n63     assert built_in_models == sample_models\n64     built_in_models[:] = original\n",
+    "col_offset": 4,
+    "end_col_offset": 43,
+    "filename": "./libs/core/kiln_ai/adapters/test_remote_config.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 63,
+    "line_range": [
+      63
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "77     await asyncio.sleep(0.01)\n78     assert built_in_models == original\n",
+    "col_offset": 4,
+    "end_col_offset": 38,
+    "filename": "./libs/core/kiln_ai/adapters/test_remote_config.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 78,
+    "line_range": [
+      78
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

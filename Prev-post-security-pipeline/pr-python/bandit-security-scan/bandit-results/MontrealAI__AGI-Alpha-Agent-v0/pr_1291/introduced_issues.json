@@ -1,0 +1,42 @@
+[
+  {
+    "code": "44     ledger.log(env)\n45     assert ledger.compute_merkle_root() == _expected_root([env])\n46 \n",
+    "col_offset": 4,
+    "end_col_offset": 64,
+    "filename": "./tests/test_ledger_backends.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 45,
+    "line_range": [
+      45
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "68     ledger.log(env)\n69     assert ledger.compute_merkle_root() == _expected_root([env])\n70     ledger.close()\n",
+    "col_offset": 4,
+    "end_col_offset": 64,
+    "filename": "./tests/test_ledger_backends.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 69,
+    "line_range": [
+      69
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

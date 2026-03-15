@@ -1,0 +1,604 @@
+[
+  {
+    "code": "272             \"test_profile\": {\n273                 \"targets\": {\"test\": {\"type\": \"sqlite\", \"path\": \"/tmp/test.db\"}}\n274             },\n",
+    "col_offset": 63,
+    "end_col_offset": 77,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_settings.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 273,
+    "line_range": [
+      273
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "20     tracker.start_task(node_id, mock_task)\n21     assert not tracker.is_node_complete(node_id)\n22 \n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_tracker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 21,
+    "line_range": [
+      21
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "27     # Verify node is complete\n28     assert tracker.is_node_complete(node_id)\n29     status = tracker.get_node_status(node_id)\n",
+    "col_offset": 4,
+    "end_col_offset": 44,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_tracker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 28,
+    "line_range": [
+      28
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "29     status = tracker.get_node_status(node_id)\n30     assert status[\"event_data\"] == event_data\n31     assert status[\"event_message\"] == \"Node completed successfully\"\n",
+    "col_offset": 4,
+    "end_col_offset": 45,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_tracker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 30,
+    "line_range": [
+      30
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "30     assert status[\"event_data\"] == event_data\n31     assert status[\"event_message\"] == \"Node completed successfully\"\n32 \n",
+    "col_offset": 4,
+    "end_col_offset": 67,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_tracker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 31,
+    "line_range": [
+      31
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "45     # Verify states are independent\n46     assert tracker.is_node_complete(\"node1\") is True\n47     assert tracker.is_node_complete(\"node2\") is False\n",
+    "col_offset": 4,
+    "end_col_offset": 52,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_tracker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 46,
+    "line_range": [
+      46
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "46     assert tracker.is_node_complete(\"node1\") is True\n47     assert tracker.is_node_complete(\"node2\") is False\n48 \n",
+    "col_offset": 4,
+    "end_col_offset": 53,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_tracker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 47,
+    "line_range": [
+      47
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "50     tracker.set_node_status(\"node2\", {\"status\": \"running\"}, \"Node 2 running\")\n51     assert tracker.is_node_complete(\"node2\") is True\n52 \n",
+    "col_offset": 4,
+    "end_col_offset": 52,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_tracker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 51,
+    "line_range": [
+      51
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "70     result = tracker.wait_for_node_completion(node_id, timeout=1.0)\n71     assert result is True\n72     assert tracker.is_node_complete(node_id) is True\n",
+    "col_offset": 4,
+    "end_col_offset": 25,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_tracker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 71,
+    "line_range": [
+      71
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "71     assert result is True\n72     assert tracker.is_node_complete(node_id) is True\n73 \n",
+    "col_offset": 4,
+    "end_col_offset": 52,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_tracker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 72,
+    "line_range": [
+      72
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "82     result = tracker.wait_for_node_completion(node_id, timeout=0.1)\n83     assert result is False\n84     assert not tracker.is_node_complete(node_id)\n",
+    "col_offset": 4,
+    "end_col_offset": 26,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_tracker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 83,
+    "line_range": [
+      83
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "83     assert result is False\n84     assert not tracker.is_node_complete(node_id)\n85 \n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_tracker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 84,
+    "line_range": [
+      84
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "95     retrieved_result = tracker.get_task_result(node_id)\n96     assert retrieved_result == mock_result\n97 \n",
+    "col_offset": 4,
+    "end_col_offset": 42,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_tracker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 96,
+    "line_range": [
+      96
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "99     tracker.set_task_result(node_id, None)\n100     assert tracker.get_task_result(node_id) is None\n101 \n",
+    "col_offset": 4,
+    "end_col_offset": 51,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_tracker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 100,
+    "line_range": [
+      100
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "111     retrieved_deps = tracker.get_node_dependencies(node_id)\n112     assert retrieved_deps == dependencies\n113 \n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_tracker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 112,
+    "line_range": [
+      112
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "114     # Test default empty list for unknown node\n115     assert tracker.get_node_dependencies(\"unknown_node\") == []\n116 \n",
+    "col_offset": 4,
+    "end_col_offset": 62,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_tracker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 115,
+    "line_range": [
+      115
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "126     retrieved_logger = tracker.get_task_logger(node_id)\n127     assert retrieved_logger == mock_logger\n128 \n",
+    "col_offset": 4,
+    "end_col_offset": 42,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_tracker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 127,
+    "line_range": [
+      127
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "129     # Test None for unknown node\n130     assert tracker.get_task_logger(\"unknown_node\") is None\n131 \n",
+    "col_offset": 4,
+    "end_col_offset": 58,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_tracker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 130,
+    "line_range": [
+      130
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "164     result = tracker.get_task_result(node_id)\n165     assert result == mock_state\n166 \n",
+    "col_offset": 4,
+    "end_col_offset": 31,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_tracker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 165,
+    "line_range": [
+      165
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "206     result = tracker.get_task_result(node_id)\n207     assert result == mock_state\n208 \n",
+    "col_offset": 4,
+    "end_col_offset": 31,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_tracker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 207,
+    "line_range": [
+      207
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "245     # and would cause the thread to fail silently\n246     assert result is None\n247 \n",
+    "col_offset": 4,
+    "end_col_offset": 25,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_tracker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 246,
+    "line_range": [
+      246
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "278     result = tracker.get_task_result(node_id)\n279     assert result is None\n280 \n",
+    "col_offset": 4,
+    "end_col_offset": 25,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_tracker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 279,
+    "line_range": [
+      279
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "306     # Verify all nodes are in expected states\n307     assert tracker.is_node_complete(\"model_1\") is True\n308     assert tracker.is_node_complete(\"model_2\") is True\n",
+    "col_offset": 4,
+    "end_col_offset": 54,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_tracker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 307,
+    "line_range": [
+      307
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "307     assert tracker.is_node_complete(\"model_1\") is True\n308     assert tracker.is_node_complete(\"model_2\") is True\n309     assert tracker.is_node_complete(\"model_3\") is False\n",
+    "col_offset": 4,
+    "end_col_offset": 54,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_tracker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 308,
+    "line_range": [
+      308
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "308     assert tracker.is_node_complete(\"model_2\") is True\n309     assert tracker.is_node_complete(\"model_3\") is False\n310 \n",
+    "col_offset": 4,
+    "end_col_offset": 55,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_tracker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 309,
+    "line_range": [
+      309
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "312     deps = tracker.get_node_dependencies(\"model_3\")\n313     assert deps == [\"model_1\", \"model_2\"]\n314 \n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_tracker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 313,
+    "line_range": [
+      313
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "315     # Verify loggers are available\n316     assert tracker.get_task_logger(\"model_1\") is not None\n317     assert tracker.get_task_logger(\"model_2\") is not None\n",
+    "col_offset": 4,
+    "end_col_offset": 57,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_tracker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 316,
+    "line_range": [
+      316
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "316     assert tracker.get_task_logger(\"model_1\") is not None\n317     assert tracker.get_task_logger(\"model_2\") is not None\n318     assert tracker.get_task_logger(\"model_3\") is not None\n",
+    "col_offset": 4,
+    "end_col_offset": 57,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_tracker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 317,
+    "line_range": [
+      317
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "317     assert tracker.get_task_logger(\"model_2\") is not None\n318     assert tracker.get_task_logger(\"model_3\") is not None\n",
+    "col_offset": 4,
+    "end_col_offset": 57,
+    "filename": "./src/integrations/prefect-dbt/tests/core/test_tracker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 318,
+    "line_range": [
+      318
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "599                         block_document_data[key] = json_data[key]\n600         except Exception:\n601             # If JSON serialization fails, we'll handle it later\n602             pass\n603 \n",
+    "col_offset": 8,
+    "end_col_offset": 16,
+    "filename": "./src/prefect/blocks/core.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 600,
+    "line_range": [
+      600,
+      601,
+      602
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  }
+]

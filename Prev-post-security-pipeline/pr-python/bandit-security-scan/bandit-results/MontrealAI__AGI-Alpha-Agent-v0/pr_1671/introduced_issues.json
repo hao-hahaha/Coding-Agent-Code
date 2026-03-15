@@ -1,0 +1,122 @@
+[
+  {
+    "code": "5 import threading\n6 import subprocess\n7 from functools import partial\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tests/test_pwa_update_reload.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 6,
+    "line_range": [
+      6
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "30     )\n31     subprocess.check_call([\"npm\", \"run\", \"build\"], cwd=repo)\n32 \n",
+    "col_offset": 4,
+    "end_col_offset": 60,
+    "filename": "./tests/test_pwa_update_reload.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 31,
+    "line_range": [
+      31
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "30     )\n31     subprocess.check_call([\"npm\", \"run\", \"build\"], cwd=repo)\n32 \n",
+    "col_offset": 4,
+    "end_col_offset": 60,
+    "filename": "./tests/test_pwa_update_reload.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 31,
+    "line_range": [
+      31
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "47             # rebuild to create a new service worker\n48             subprocess.check_call([\"npm\", \"run\", \"build\"], cwd=repo)\n49             page.evaluate(\"navigator.serviceWorker.getRegistration().then(r => r.update())\")\n",
+    "col_offset": 12,
+    "end_col_offset": 68,
+    "filename": "./tests/test_pwa_update_reload.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 48,
+    "line_range": [
+      48
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "47             # rebuild to create a new service worker\n48             subprocess.check_call([\"npm\", \"run\", \"build\"], cwd=repo)\n49             page.evaluate(\"navigator.serviceWorker.getRegistration().then(r => r.update())\")\n",
+    "col_offset": 12,
+    "end_col_offset": 68,
+    "filename": "./tests/test_pwa_update_reload.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 48,
+    "line_range": [
+      48
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "53             page.wait_for_function(\"performance.getEntriesByType('navigation').length > 1\")\n54             assert page.evaluate(\"performance.getEntriesByType('navigation').length\") >= 2\n55             browser.close()\n",
+    "col_offset": 12,
+    "end_col_offset": 90,
+    "filename": "./tests/test_pwa_update_reload.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 54,
+    "line_range": [
+      54
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

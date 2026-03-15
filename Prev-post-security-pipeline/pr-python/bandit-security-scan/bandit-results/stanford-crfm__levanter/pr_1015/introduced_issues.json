@@ -1,0 +1,462 @@
+[
+  {
+    "code": "55 \n56     assert jnp.all(cache.kv_lens.array == jnp.array([1, 1], dtype=jnp.int32))\n57     assert jnp.all(cache.page_indices.array == jnp.array([[0, -1], [1, -1]], dtype=jnp.int32))\n",
+    "col_offset": 4,
+    "end_col_offset": 77,
+    "filename": "./tests/test_page_cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 56,
+    "line_range": [
+      56
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "56     assert jnp.all(cache.kv_lens.array == jnp.array([1, 1], dtype=jnp.int32))\n57     assert jnp.all(cache.page_indices.array == jnp.array([[0, -1], [1, -1]], dtype=jnp.int32))\n58     assert cache.kv_pages.array[0, 0, 0, 0] == 1\n",
+    "col_offset": 4,
+    "end_col_offset": 94,
+    "filename": "./tests/test_page_cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 57,
+    "line_range": [
+      57
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "57     assert jnp.all(cache.page_indices.array == jnp.array([[0, -1], [1, -1]], dtype=jnp.int32))\n58     assert cache.kv_pages.array[0, 0, 0, 0] == 1\n59     assert cache.kv_pages.array[0, 0, 1, 0] == 101\n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/test_page_cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 58,
+    "line_range": [
+      58
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "58     assert cache.kv_pages.array[0, 0, 0, 0] == 1\n59     assert cache.kv_pages.array[0, 0, 1, 0] == 101\n60     assert cache.kv_pages.array[1, 0, 0, 0] == 2\n",
+    "col_offset": 4,
+    "end_col_offset": 50,
+    "filename": "./tests/test_page_cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 59,
+    "line_range": [
+      59
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "59     assert cache.kv_pages.array[0, 0, 1, 0] == 101\n60     assert cache.kv_pages.array[1, 0, 0, 0] == 2\n61     assert cache.kv_pages.array[1, 0, 1, 0] == 102\n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/test_page_cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 60,
+    "line_range": [
+      60
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "60     assert cache.kv_pages.array[1, 0, 0, 0] == 2\n61     assert cache.kv_pages.array[1, 0, 1, 0] == 102\n62 \n",
+    "col_offset": 4,
+    "end_col_offset": 50,
+    "filename": "./tests/test_page_cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 61,
+    "line_range": [
+      61
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "83 \n84     assert jnp.all(cache.kv_lens.array == jnp.array([3, 1], dtype=jnp.int32))\n85     assert cache.page_indices.array[0, 0] == 0\n",
+    "col_offset": 4,
+    "end_col_offset": 77,
+    "filename": "./tests/test_page_cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 84,
+    "line_range": [
+      84
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "84     assert jnp.all(cache.kv_lens.array == jnp.array([3, 1], dtype=jnp.int32))\n85     assert cache.page_indices.array[0, 0] == 0\n86     assert cache.page_indices.array[0, 1] == 1\n",
+    "col_offset": 4,
+    "end_col_offset": 46,
+    "filename": "./tests/test_page_cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 85,
+    "line_range": [
+      85
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "85     assert cache.page_indices.array[0, 0] == 0\n86     assert cache.page_indices.array[0, 1] == 1\n87     assert cache.page_indices.array[1, 0] == 2\n",
+    "col_offset": 4,
+    "end_col_offset": 46,
+    "filename": "./tests/test_page_cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 86,
+    "line_range": [
+      86
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "86     assert cache.page_indices.array[0, 1] == 1\n87     assert cache.page_indices.array[1, 0] == 2\n88 \n",
+    "col_offset": 4,
+    "end_col_offset": 46,
+    "filename": "./tests/test_page_cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 87,
+    "line_range": [
+      87
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "88 \n89     assert cache.kv_pages.array[0, 0, 0, 0] == 1\n90     assert cache.kv_pages.array[0, 1, 0, 0] == 2\n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/test_page_cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 89,
+    "line_range": [
+      89
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "89     assert cache.kv_pages.array[0, 0, 0, 0] == 1\n90     assert cache.kv_pages.array[0, 1, 0, 0] == 2\n91     assert cache.kv_pages.array[1, 0, 0, 0] == 3\n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/test_page_cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 90,
+    "line_range": [
+      90
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "90     assert cache.kv_pages.array[0, 1, 0, 0] == 2\n91     assert cache.kv_pages.array[1, 0, 0, 0] == 3\n92     assert cache.kv_pages.array[2, 0, 0, 0] == 4\n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/test_page_cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 91,
+    "line_range": [
+      91
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "91     assert cache.kv_pages.array[1, 0, 0, 0] == 3\n92     assert cache.kv_pages.array[2, 0, 0, 0] == 4\n93 \n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/test_page_cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 92,
+    "line_range": [
+      92
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "93 \n94     assert cache.kv_pages.array[0, 0, 1, 0] == 101\n95     assert cache.kv_pages.array[0, 1, 1, 0] == 102\n",
+    "col_offset": 4,
+    "end_col_offset": 50,
+    "filename": "./tests/test_page_cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 94,
+    "line_range": [
+      94
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "94     assert cache.kv_pages.array[0, 0, 1, 0] == 101\n95     assert cache.kv_pages.array[0, 1, 1, 0] == 102\n96     assert cache.kv_pages.array[1, 0, 1, 0] == 103\n",
+    "col_offset": 4,
+    "end_col_offset": 50,
+    "filename": "./tests/test_page_cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 95,
+    "line_range": [
+      95
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "95     assert cache.kv_pages.array[0, 1, 1, 0] == 102\n96     assert cache.kv_pages.array[1, 0, 1, 0] == 103\n97     assert cache.kv_pages.array[2, 0, 1, 0] == 104\n",
+    "col_offset": 4,
+    "end_col_offset": 50,
+    "filename": "./tests/test_page_cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 96,
+    "line_range": [
+      96
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "96     assert cache.kv_pages.array[1, 0, 1, 0] == 103\n97     assert cache.kv_pages.array[2, 0, 1, 0] == 104\n98 \n",
+    "col_offset": 4,
+    "end_col_offset": 50,
+    "filename": "./tests/test_page_cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 97,
+    "line_range": [
+      97
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "123 \n124     assert cache.kv_lens.array[0] == 3\n125     assert jnp.all(cache.page_indices.array[0] == jnp.array([0, 1], dtype=jnp.int32))\n",
+    "col_offset": 4,
+    "end_col_offset": 38,
+    "filename": "./tests/test_page_cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 124,
+    "line_range": [
+      124
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "124     assert cache.kv_lens.array[0] == 3\n125     assert jnp.all(cache.page_indices.array[0] == jnp.array([0, 1], dtype=jnp.int32))\n126     assert cache.kv_pages.array[0, 0, 0, 0] == 1\n",
+    "col_offset": 4,
+    "end_col_offset": 85,
+    "filename": "./tests/test_page_cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 125,
+    "line_range": [
+      125
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "125     assert jnp.all(cache.page_indices.array[0] == jnp.array([0, 1], dtype=jnp.int32))\n126     assert cache.kv_pages.array[0, 0, 0, 0] == 1\n127     assert cache.kv_pages.array[0, 1, 0, 0] == 2\n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/test_page_cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 126,
+    "line_range": [
+      126
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "126     assert cache.kv_pages.array[0, 0, 0, 0] == 1\n127     assert cache.kv_pages.array[0, 1, 0, 0] == 2\n128     assert cache.kv_pages.array[1, 0, 0, 0] == 3\n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/test_page_cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 127,
+    "line_range": [
+      127
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "127     assert cache.kv_pages.array[0, 1, 0, 0] == 2\n128     assert cache.kv_pages.array[1, 0, 0, 0] == 3\n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/test_page_cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 128,
+    "line_range": [
+      128
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

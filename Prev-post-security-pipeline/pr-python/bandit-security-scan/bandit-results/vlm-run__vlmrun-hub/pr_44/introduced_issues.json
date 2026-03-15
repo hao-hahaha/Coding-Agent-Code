@@ -1,0 +1,324 @@
+[
+  {
+    "code": "31     catalog_path = Path(__file__).parent.parent / \"vlmrun\" / \"hub\" / \"catalog.yaml\"\n32     assert catalog_path.exists(), \"catalog.yaml file not found\"\n33 \n",
+    "col_offset": 4,
+    "end_col_offset": 63,
+    "filename": "./tests/test_catalog.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 32,
+    "line_range": [
+      32
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "37     # Basic validation\n38     assert catalog.apiVersion == \"v1\", \"API version must be v1\"\n39     assert len(catalog.schemas) > 0, \"Catalog must contain at least one schema\"\n",
+    "col_offset": 4,
+    "end_col_offset": 63,
+    "filename": "./tests/test_catalog.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 38,
+    "line_range": [
+      38
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "38     assert catalog.apiVersion == \"v1\", \"API version must be v1\"\n39     assert len(catalog.schemas) > 0, \"Catalog must contain at least one schema\"\n40 \n",
+    "col_offset": 4,
+    "end_col_offset": 79,
+    "filename": "./tests/test_catalog.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 39,
+    "line_range": [
+      39
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "43         # Domain format validation\n44         assert \".\" in entry.domain, \"Domain must be in format: category.name\"\n45         category, name = entry.domain.split(\".\", 1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/test_catalog.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 44,
+    "line_range": [
+      44
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "45         category, name = entry.domain.split(\".\", 1)\n46         assert category and name, \"Both category and name must be non-empty\"\n47 \n",
+    "col_offset": 8,
+    "end_col_offset": 76,
+    "filename": "./tests/test_catalog.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 46,
+    "line_range": [
+      46
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "48         # Schema path validation\n49         assert entry.schema.startswith(\"vlmrun.hub.schemas.\"), \"Schema must be in vlmrun.hub.schemas package\"\n50 \n",
+    "col_offset": 8,
+    "end_col_offset": 109,
+    "filename": "./tests/test_catalog.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 49,
+    "line_range": [
+      49
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "52         version_parts = entry.version.split(\".\")\n53         assert len(version_parts) == 3, \"Version must follow semver format (X.Y.Z)\"\n54         assert all(part.isdigit() for part in version_parts), \"Version parts must be numeric\"\n",
+    "col_offset": 8,
+    "end_col_offset": 83,
+    "filename": "./tests/test_catalog.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 53,
+    "line_range": [
+      53
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "53         assert len(version_parts) == 3, \"Version must follow semver format (X.Y.Z)\"\n54         assert all(part.isdigit() for part in version_parts), \"Version parts must be numeric\"\n55 \n",
+    "col_offset": 8,
+    "end_col_offset": 93,
+    "filename": "./tests/test_catalog.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 54,
+    "line_range": [
+      54
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "56         # Sample data URL validation\n57         assert entry.sample_data.startswith(\n58             \"https://storage.googleapis.com/vlm-data-public-prod/\"\n59         ), \"Sample data must be in Google Cloud Storage\"\n60 \n",
+    "col_offset": 8,
+    "end_col_offset": 56,
+    "filename": "./tests/test_catalog.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 57,
+    "line_range": [
+      57,
+      58,
+      59
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "61         # Metadata validation\n62         assert \"tags\" in entry.metadata, \"Metadata must include tags\"\n63         assert isinstance(entry.metadata[\"tags\"], list), \"Tags must be a list\"\n",
+    "col_offset": 8,
+    "end_col_offset": 69,
+    "filename": "./tests/test_catalog.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 62,
+    "line_range": [
+      62
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "62         assert \"tags\" in entry.metadata, \"Metadata must include tags\"\n63         assert isinstance(entry.metadata[\"tags\"], list), \"Tags must be a list\"\n64         assert len(entry.metadata[\"tags\"]) > 0, \"Must have at least one tag\"\n",
+    "col_offset": 8,
+    "end_col_offset": 78,
+    "filename": "./tests/test_catalog.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 63,
+    "line_range": [
+      63
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "63         assert isinstance(entry.metadata[\"tags\"], list), \"Tags must be a list\"\n64         assert len(entry.metadata[\"tags\"]) > 0, \"Must have at least one tag\"\n65         assert all(isinstance(tag, str) for tag in entry.metadata[\"tags\"]), \"All tags must be strings\"\n",
+    "col_offset": 8,
+    "end_col_offset": 76,
+    "filename": "./tests/test_catalog.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 64,
+    "line_range": [
+      64
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "64         assert len(entry.metadata[\"tags\"]) > 0, \"Must have at least one tag\"\n65         assert all(isinstance(tag, str) for tag in entry.metadata[\"tags\"]), \"All tags must be strings\"\n66 \n",
+    "col_offset": 8,
+    "end_col_offset": 102,
+    "filename": "./tests/test_catalog.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 65,
+    "line_range": [
+      65
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "67         # Content validation\n68         assert len(entry.prompt) >= 10, \"Prompt must be descriptive (min 10 chars)\"\n69         assert len(entry.description) >= 20, \"Description must be detailed (min 20 chars)\"\n",
+    "col_offset": 8,
+    "end_col_offset": 83,
+    "filename": "./tests/test_catalog.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 68,
+    "line_range": [
+      68
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "68         assert len(entry.prompt) >= 10, \"Prompt must be descriptive (min 10 chars)\"\n69         assert len(entry.description) >= 20, \"Description must be detailed (min 20 chars)\"\n70 \n",
+    "col_offset": 8,
+    "end_col_offset": 90,
+    "filename": "./tests/test_catalog.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 69,
+    "line_range": [
+      69
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "75             schema_class = getattr(module, class_name)\n76             assert issubclass(schema_class, BaseModel), f\"Schema {entry.schema} must be a Pydantic model\"\n77         except (ImportError, AttributeError) as e:\n",
+    "col_offset": 12,
+    "end_col_offset": 105,
+    "filename": "./tests/test_catalog.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 76,
+    "line_range": [
+      76
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "code": "31     tokens = list(template.get(\"tokens\", []))\n32     token = random.choice(tokens) if tokens else \"\"\n33     user = str(template.get(\"user\", \"\")).format(\n",
+    "col_offset": 12,
+    "end_col_offset": 33,
+    "filename": "./src/agents/prompt_sampler.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 32,
+    "line_range": [
+      32
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "16     seen = {construct_prompt(parent, exemplars, TEMPLATE) for _ in range(10)}\n17     assert len(seen) >= 3\n18 \n",
+    "col_offset": 4,
+    "end_col_offset": 25,
+    "filename": "./tests/test_prompt_sampler.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 17,
+    "line_range": [
+      17
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "25         prompt = construct_prompt(parent, exemplars, TEMPLATE)\n26         assert prompt.startswith(prefix)\n27         assert prompt[len(prefix):] in TEMPLATE[\"tokens\"]\n",
+    "col_offset": 8,
+    "end_col_offset": 40,
+    "filename": "./tests/test_prompt_sampler.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 26,
+    "line_range": [
+      26
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "26         assert prompt.startswith(prefix)\n27         assert prompt[len(prefix):] in TEMPLATE[\"tokens\"]\n",
+    "col_offset": 8,
+    "end_col_offset": 57,
+    "filename": "./tests/test_prompt_sampler.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 27,
+    "line_range": [
+      27
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

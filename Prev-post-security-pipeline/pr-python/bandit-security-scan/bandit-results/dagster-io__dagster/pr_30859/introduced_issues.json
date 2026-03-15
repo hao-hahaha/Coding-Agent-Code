@@ -1,0 +1,747 @@
+[
+  {
+    "code": "413         meta[\"chunk_index\"] = i\n414         doc_id = f\"{hashlib.md5(doc.metadata['source'].encode()).hexdigest()}_{i}\"\n415         vectors.append((doc_id, embedding, meta))\n",
+    "col_offset": 20,
+    "end_col_offset": 64,
+    "filename": "./examples/docs_projects/project_ask_ai_dagster/src/project_ask_ai_dagster/defs/ingestion.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 327,
+      "link": "https://cwe.mitre.org/data/definitions/327.html"
+    },
+    "issue_severity": "HIGH",
+    "issue_text": "Use of weak MD5 hash for security. Consider usedforsecurity=False",
+    "line_number": 414,
+    "line_range": [
+      414
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b324_hashlib.html",
+    "test_id": "B324",
+    "test_name": "hashlib"
+  },
+  {
+    "code": "15         \"\"\"Extract URLs from sitemap XML.\"\"\"\n16         response = requests.get(self.sitemap_url, headers=self.headers)\n17         soup = BeautifulSoup(response.content, \"xml\")\n",
+    "col_offset": 19,
+    "end_col_offset": 71,
+    "filename": "./examples/docs_projects/project_ask_ai_dagster/src/project_ask_ai_dagster/defs/scraper.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 400,
+      "link": "https://cwe.mitre.org/data/definitions/400.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Call to requests without timeout",
+    "line_number": 16,
+    "line_range": [
+      16
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+    "test_id": "B113",
+    "test_name": "request_without_timeout"
+  },
+  {
+    "code": "29         try:\n30             response = requests.get(url, headers=self.headers)\n31             response.raise_for_status()\n",
+    "col_offset": 23,
+    "end_col_offset": 62,
+    "filename": "./examples/docs_projects/project_ask_ai_dagster/src/project_ask_ai_dagster/defs/scraper.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 400,
+      "link": "https://cwe.mitre.org/data/definitions/400.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Call to requests without timeout",
+    "line_number": 30,
+    "line_range": [
+      30
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+    "test_id": "B113",
+    "test_name": "request_without_timeout"
+  },
+  {
+    "code": "9 import os\n10 import subprocess\n11 \n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./examples/docs_projects/project_dagster_modal_pipes/src/modal_project/verify_cloud_mount.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 10,
+    "line_range": [
+      10
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "49 def f():\n50     subprocess.run([\"ls\", \"/mount/dagster-modal-demo/data\"], check=True)\n",
+    "col_offset": 4,
+    "end_col_offset": 72,
+    "filename": "./examples/docs_projects/project_dagster_modal_pipes/src/modal_project/verify_cloud_mount.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 50,
+    "line_range": [
+      50
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "49 def f():\n50     subprocess.run([\"ls\", \"/mount/dagster-modal-demo/data\"], check=True)\n",
+    "col_offset": 4,
+    "end_col_offset": 72,
+    "filename": "./examples/docs_projects/project_dagster_modal_pipes/src/modal_project/verify_cloud_mount.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 50,
+    "line_range": [
+      50
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "23         if transcript_url := transcript.get(\"url\"):\n24             with urllib.request.urlopen(transcript_url) as response:\n25                 return response.read().decode(\"utf-8\")\n",
+    "col_offset": 17,
+    "end_col_offset": 55,
+    "filename": "./examples/docs_projects/project_dagster_modal_pipes/src/project_dagster_modal_pipes/utils/__init__.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 22,
+      "link": "https://cwe.mitre.org/data/definitions/22.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.",
+    "line_number": 24,
+    "line_range": [
+      24
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b310-urllib-urlopen",
+    "test_id": "B310",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "40     )\n41     with urllib.request.urlopen(request) as response:\n42         return response.read()\n",
+    "col_offset": 9,
+    "end_col_offset": 40,
+    "filename": "./examples/docs_projects/project_dagster_modal_pipes/src/project_dagster_modal_pipes/utils/__init__.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 22,
+      "link": "https://cwe.mitre.org/data/definitions/22.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.",
+    "line_number": 41,
+    "line_range": [
+      41
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b310-urllib-urlopen",
+    "test_id": "B310",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "111     \"\"\"\n112     assert 0 <= detail <= 1\n113 \n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./examples/docs_projects/project_dagster_modal_pipes/src/project_dagster_modal_pipes/utils/summarize.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 112,
+    "line_range": [
+      112
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "79     url = \"https://datarepo.eng.ucsd.edu/mcauley_group/gdrive/goodreads/byGenre/goodreads_books_comics_graphic.json.gz\"\n80     query = f\"\"\"\n81         create table if not exists graphic_novels as (\n82             select *\n83             from read_json(\n84                 '{url}',\n85                 ignore_errors = true\n86             )\n87         );\n88     \"\"\"\n89     with duckdb_resource.get_connection() as conn:\n",
+    "col_offset": 16,
+    "end_col_offset": 17,
+    "filename": "./examples/docs_projects/project_llm_fine_tune/src/project_llm_fine_tune/defs/assets.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 89,
+      "link": "https://cwe.mitre.org/data/definitions/89.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible SQL injection vector through string-based query construction.",
+    "line_number": 80,
+    "line_range": [
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b608_hardcoded_sql_expressions.html",
+    "test_id": "B608",
+    "test_name": "hardcoded_sql_expressions"
+  },
+  {
+    "code": "103     url = \"https://datarepo.eng.ucsd.edu/mcauley_group/gdrive/goodreads/goodreads_book_authors.json.gz\"\n104     query = f\"\"\"\n105         create table if not exists authors as (\n106             select *\n107             from read_json(\n108                 '{url}',\n109                 ignore_errors = true\n110             )\n111         );\n112     \"\"\"\n113     with duckdb_resource.get_connection() as conn:\n",
+    "col_offset": 16,
+    "end_col_offset": 17,
+    "filename": "./examples/docs_projects/project_llm_fine_tune/src/project_llm_fine_tune/defs/assets.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 89,
+      "link": "https://cwe.mitre.org/data/definitions/89.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible SQL injection vector through string-based query construction.",
+    "line_number": 104,
+    "line_range": [
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b608_hardcoded_sql_expressions.html",
+    "test_id": "B608",
+    "test_name": "hardcoded_sql_expressions"
+  },
+  {
+    "code": "127     sql_categories = \", \".join([f\"'{s}'\" for s in CATEGORIES])\n128     query = f\"\"\"\n129         create table if not exists book_category as (\n130             select\n131             book_id,\n132             category\n133             from (\n134                 select\n135                 book_id,\n136                 category,\n137                 category_count,\n138                 row_number() over (partition by book_id order by category_count desc) as category_rank\n139                 from (\n140                     select\n141                     book_id,\n142                     shelf.name as category,\n143                     cast(shelf.count as integer) as category_count\n144                     from (\n145                         select\n146                             book_id,\n147                             unnest(popular_shelves) as shelf\n148                         from graphic_novels\n149                     )\n150                     where category in ({sql_categories})\n151                     and category_count > 3\n152                 )\n153             )\n154             where category_rank = 1\n155         );\n156     \"\"\"\n157     with duckdb_resource.get_connection() as conn:\n",
+    "col_offset": 16,
+    "end_col_offset": 39,
+    "filename": "./examples/docs_projects/project_llm_fine_tune/src/project_llm_fine_tune/defs/assets.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 89,
+      "link": "https://cwe.mitre.org/data/definitions/89.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible SQL injection vector through string-based query construction.",
+    "line_number": 128,
+    "line_range": [
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b608_hardcoded_sql_expressions.html",
+    "test_id": "B608",
+    "test_name": "hardcoded_sql_expressions"
+  },
+  {
+    "code": "462     content = completion.choices[0].message.content\n463     assert content is not None\n464     return json.loads(content)[\"category\"]\n",
+    "col_offset": 4,
+    "end_col_offset": 30,
+    "filename": "./examples/docs_projects/project_llm_fine_tune/src/project_llm_fine_tune/defs/assets.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 463,
+    "line_range": [
+      463
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "27 \n28         resp = requests.get(url, params=params)\n29         return resp.json()[\"fuel_stations\"]\n",
+    "col_offset": 15,
+    "end_col_offset": 47,
+    "filename": "./examples/docs_projects/project_prompt_eng/src/project_prompt_eng/defs/resources.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 400,
+      "link": "https://cwe.mitre.org/data/definitions/400.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Call to requests without timeout",
+    "line_number": 28,
+    "line_range": [
+      28
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+    "test_id": "B113",
+    "test_name": "request_without_timeout"
+  },
+  {
+    "code": "40         url_params = config.dict()\n41         return requests.get(\"https://my-api.com/listings\", params=url_params).json()\n42 \n",
+    "col_offset": 15,
+    "end_col_offset": 77,
+    "filename": "./examples/docs_snippets/docs_snippets/guides/operate/configuration/advanced_config_types/pythonic_config.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 400,
+      "link": "https://cwe.mitre.org/data/definitions/400.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Call to requests without timeout",
+    "line_number": 41,
+    "line_range": [
+      41
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+    "test_id": "B113",
+    "test_name": "request_without_timeout"
+  },
+  {
+    "code": "357         def username_alphanumeric(cls, v):\n358             assert v.isalnum(), \"must be alphanumeric\"\n359             return v\n",
+    "col_offset": 12,
+    "end_col_offset": 54,
+    "filename": "./examples/docs_snippets/docs_snippets/guides/operate/configuration/advanced_config_types/pythonic_config.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 358,
+    "line_range": [
+      358
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "9     return dg.Definitions(\n10         resources={\"some_resource\": SomeResource(access_token=\"foo\")},\n11     )\n",
+    "col_offset": 36,
+    "end_col_offset": 68,
+    "filename": "./examples/docs_snippets/docs_snippets/guides/operate/configuration/env_vars_and_secrets/resources.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'foo'",
+    "line_number": 10,
+    "line_range": [
+      10
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b106_hardcoded_password_funcarg.html",
+    "test_id": "B106",
+    "test_name": "hardcoded_password_funcarg"
+  },
+  {
+    "code": "24 def import_url_to_duckdb(url: str, duckdb_path: str, table_name: str):\n25     create_query = f\"\"\"\n26         create or replace table {table_name} as (\n27             select * from read_csv_auto('{url}')\n28         )\n29     \"\"\"\n30 \n",
+    "col_offset": 23,
+    "end_col_offset": 32,
+    "filename": "./examples/docs_snippets/docs_snippets/guides/tutorials/etl_tutorial/src/etl_tutorial/defs/assets.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 89,
+      "link": "https://cwe.mitre.org/data/definitions/89.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible SQL injection vector through string-based query construction.",
+    "line_number": 25,
+    "line_range": [
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b608_hardcoded_sql_expressions.html",
+    "test_id": "B608",
+    "test_name": "hardcoded_sql_expressions"
+  },
+  {
+    "code": "47         url=\"https://raw.githubusercontent.com/dbt-labs/jaffle-shop-classic/refs/heads/main/seeds/raw_customers.csv\",\n48         duckdb_path=\"/tmp/jaffle_platform.duckdb\",\n49         table_name=\"jaffle_platform.main.raw_customers\",\n",
+    "col_offset": 20,
+    "end_col_offset": 49,
+    "filename": "./examples/docs_snippets/docs_snippets/guides/tutorials/etl_tutorial/src/etl_tutorial/defs/assets.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 48,
+    "line_range": [
+      48
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "56         url=\"https://raw.githubusercontent.com/dbt-labs/jaffle-shop-classic/refs/heads/main/seeds/raw_orders.csv\",\n57         duckdb_path=\"/tmp/jaffle_platform.duckdb\",\n58         table_name=\"jaffle_platform.main.raw_orders\",\n",
+    "col_offset": 20,
+    "end_col_offset": 49,
+    "filename": "./examples/docs_snippets/docs_snippets/guides/tutorials/etl_tutorial/src/etl_tutorial/defs/assets.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 57,
+    "line_range": [
+      57
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "65         url=\"https://raw.githubusercontent.com/dbt-labs/jaffle-shop-classic/refs/heads/main/seeds/raw_payments.csv\",\n66         duckdb_path=\"/tmp/jaffle_platform.duckdb\",\n67         table_name=\"jaffle_platform.main.raw_payments\",\n",
+    "col_offset": 20,
+    "end_col_offset": 49,
+    "filename": "./examples/docs_snippets/docs_snippets/guides/tutorials/etl_tutorial/src/etl_tutorial/defs/assets.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 66,
+    "line_range": [
+      66
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "80         row_count = conn.execute(\n81             f\"\"\"\n82             create or replace table {table_name} as (\n83                 select * from read_csv_auto('{url}')\n84             )\n85             \"\"\"\n86         ).fetchone()\n",
+    "col_offset": 16,
+    "end_col_offset": 36,
+    "filename": "./examples/docs_snippets/docs_snippets/guides/tutorials/etl_tutorial/src/etl_tutorial/defs/assets.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 89,
+      "link": "https://cwe.mitre.org/data/definitions/89.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible SQL injection vector through string-based query construction.",
+    "line_number": 81,
+    "line_range": [
+      81,
+      82,
+      83,
+      84,
+      85
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b608_hardcoded_sql_expressions.html",
+    "test_id": "B608",
+    "test_name": "hardcoded_sql_expressions"
+  },
+  {
+    "code": "86         ).fetchone()\n87         assert row_count is not None\n88         row_count = row_count[0]\n",
+    "col_offset": 8,
+    "end_col_offset": 36,
+    "filename": "./examples/docs_snippets/docs_snippets/guides/tutorials/etl_tutorial/src/etl_tutorial/defs/assets.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 87,
+    "line_range": [
+      87
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "204         query_result = conn.execute(\n205             f\"\"\"\n206             select count(*)\n207             from {table_name}\n208             where id is null\n209             \"\"\"\n210         ).fetchone()\n",
+    "col_offset": 16,
+    "end_col_offset": 17,
+    "filename": "./examples/docs_snippets/docs_snippets/guides/tutorials/etl_tutorial/src/etl_tutorial/defs/assets.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 89,
+      "link": "https://cwe.mitre.org/data/definitions/89.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible SQL injection vector through string-based query construction.",
+    "line_number": 205,
+    "line_range": [
+      205,
+      206,
+      207,
+      208,
+      209
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b608_hardcoded_sql_expressions.html",
+    "test_id": "B608",
+    "test_name": "hardcoded_sql_expressions"
+  },
+  {
+    "code": "242         conn.execute(\n243             f\"\"\"\n244             create table if not exists {table_name} (\n245                 partition_date varchar,\n246                 status varchar,\n247                 order_num double\n248             );\n249 \n250             delete from {table_name} where partition_date = '{month_to_fetch}';\n251 \n252             insert into {table_name}\n253             select\n254                 '{month_to_fetch}' as partition_date,\n255                 status,\n256                 count(*) as order_num\n257             from jaffle_platform.main.stg_orders\n258             where strftime(order_date, '%Y-%m') = '{month_to_fetch}'\n259             group by '{month_to_fetch}', status;\n260             \"\"\"\n261         )\n",
+    "col_offset": 16,
+    "end_col_offset": 39,
+    "filename": "./examples/docs_snippets/docs_snippets/guides/tutorials/etl_tutorial/src/etl_tutorial/defs/assets.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 89,
+      "link": "https://cwe.mitre.org/data/definitions/89.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible SQL injection vector through string-based query construction.",
+    "line_number": 243,
+    "line_range": [
+      243,
+      244,
+      245,
+      246,
+      247,
+      248,
+      249,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255,
+      256,
+      257,
+      258,
+      259,
+      260
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b608_hardcoded_sql_expressions.html",
+    "test_id": "B608",
+    "test_name": "hardcoded_sql_expressions"
+  },
+  {
+    "code": "263         preview_query = (\n264             f\"select * from {table_name} where partition_date = '{month_to_fetch}';\"\n265         )\n",
+    "col_offset": 14,
+    "end_col_offset": 28,
+    "filename": "./examples/docs_snippets/docs_snippets/guides/tutorials/etl_tutorial/src/etl_tutorial/defs/assets.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 89,
+      "link": "https://cwe.mitre.org/data/definitions/89.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible SQL injection vector through string-based query construction.",
+    "line_number": 264,
+    "line_range": [
+      264
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b608_hardcoded_sql_expressions.html",
+    "test_id": "B608",
+    "test_name": "hardcoded_sql_expressions"
+  },
+  {
+    "code": "267         row_count = conn.execute(\n268             f\"\"\"\n269             select count(*)\n270             from {table_name}\n271             where partition_date = '{month_to_fetch}'\n272             \"\"\"\n273         ).fetchone()\n",
+    "col_offset": 16,
+    "end_col_offset": 17,
+    "filename": "./examples/docs_snippets/docs_snippets/guides/tutorials/etl_tutorial/src/etl_tutorial/defs/assets.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 89,
+      "link": "https://cwe.mitre.org/data/definitions/89.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible SQL injection vector through string-based query construction.",
+    "line_number": 268,
+    "line_range": [
+      268,
+      269,
+      270,
+      271,
+      272
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b608_hardcoded_sql_expressions.html",
+    "test_id": "B608",
+    "test_name": "hardcoded_sql_expressions"
+  },
+  {
+    "code": "304         conn.execute(\n305             f\"\"\"\n306             create table if not exists {table_name} (\n307                 partition_date varchar,\n308                 status varchar,\n309                 order_num double\n310             );\n311 \n312             delete from {table_name} where partition_date = '{month_to_fetch}';\n313 \n314             insert into {table_name}\n315             select\n316                 '{month_to_fetch}' as partition_date,\n317                 status,\n318                 count(*) as order_num\n319             from jaffle_platform.main.stg_orders\n320             where strftime(order_date, '%Y-%m') = '{month_to_fetch}'\n321             group by '{month_to_fetch}', status;\n322             \"\"\"\n323         )\n",
+    "col_offset": 16,
+    "end_col_offset": 39,
+    "filename": "./examples/docs_snippets/docs_snippets/guides/tutorials/etl_tutorial/src/etl_tutorial/defs/assets.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 89,
+      "link": "https://cwe.mitre.org/data/definitions/89.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible SQL injection vector through string-based query construction.",
+    "line_number": 305,
+    "line_range": [
+      305,
+      306,
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313,
+      314,
+      315,
+      316,
+      317,
+      318,
+      319,
+      320,
+      321,
+      322
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b608_hardcoded_sql_expressions.html",
+    "test_id": "B608",
+    "test_name": "hardcoded_sql_expressions"
+  },
+  {
+    "code": "325         preview_query = (\n326             f\"select * from {table_name} where partition_date = '{month_to_fetch}';\"\n327         )\n",
+    "col_offset": 14,
+    "end_col_offset": 28,
+    "filename": "./examples/docs_snippets/docs_snippets/guides/tutorials/etl_tutorial/src/etl_tutorial/defs/assets.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 89,
+      "link": "https://cwe.mitre.org/data/definitions/89.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible SQL injection vector through string-based query construction.",
+    "line_number": 326,
+    "line_range": [
+      326
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b608_hardcoded_sql_expressions.html",
+    "test_id": "B608",
+    "test_name": "hardcoded_sql_expressions"
+  },
+  {
+    "code": "329         row_count = conn.execute(\n330             f\"\"\"\n331             select count(*)\n332             from {table_name}\n333             where partition_date = '{month_to_fetch}'\n334             \"\"\"\n335         ).fetchone()\n",
+    "col_offset": 16,
+    "end_col_offset": 17,
+    "filename": "./examples/docs_snippets/docs_snippets/guides/tutorials/etl_tutorial/src/etl_tutorial/defs/assets.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 89,
+      "link": "https://cwe.mitre.org/data/definitions/89.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible SQL injection vector through string-based query construction.",
+    "line_number": 330,
+    "line_range": [
+      330,
+      331,
+      332,
+      333,
+      334
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b608_hardcoded_sql_expressions.html",
+    "test_id": "B608",
+    "test_name": "hardcoded_sql_expressions"
+  },
+  {
+    "code": "363         preview_df = conn.execute(\n364             f\"\"\"\n365             select\n366                 order_id,\n367                 customer_id\n368             from {table_name}\n369             where date >= '{config.start_date}'\n370             and date < '{config.end_date}'\n371             \"\"\"\n372         ).fetchdf()\n",
+    "col_offset": 16,
+    "end_col_offset": 17,
+    "filename": "./examples/docs_snippets/docs_snippets/guides/tutorials/etl_tutorial/src/etl_tutorial/defs/assets.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 89,
+      "link": "https://cwe.mitre.org/data/definitions/89.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible SQL injection vector through string-based query construction.",
+    "line_number": 364,
+    "line_range": [
+      364,
+      365,
+      366,
+      367,
+      368,
+      369,
+      370,
+      371
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b608_hardcoded_sql_expressions.html",
+    "test_id": "B608",
+    "test_name": "hardcoded_sql_expressions"
+  },
+  {
+    "code": "4 \n5 database_resource = DuckDBResource(database=\"/tmp/jaffle_platform.duckdb\")\n6 \n",
+    "col_offset": 44,
+    "end_col_offset": 73,
+    "filename": "./examples/docs_snippets/docs_snippets/guides/tutorials/etl_tutorial/src/etl_tutorial/defs/resources.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 5,
+    "line_range": [
+      5
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  }
+]

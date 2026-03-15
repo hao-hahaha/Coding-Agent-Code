@@ -1,0 +1,162 @@
+[
+  {
+    "code": "41 \n42     assert actual.axes == expected.axes\n43     assert jnp.allclose(actual.array, expected.array, rtol=1e-5, atol=1e-5)\n",
+    "col_offset": 4,
+    "end_col_offset": 39,
+    "filename": "./tests/test_moe_linear.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 42,
+    "line_range": [
+      42
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "42     assert actual.axes == expected.axes\n43     assert jnp.allclose(actual.array, expected.array, rtol=1e-5, atol=1e-5)\n44 \n",
+    "col_offset": 4,
+    "end_col_offset": 75,
+    "filename": "./tests/test_moe_linear.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 43,
+    "line_range": [
+      43
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "48     moe = MoELinear.init(E, In, Out, key=jrandom.PRNGKey(0), out_first=True)\n49     assert moe.out_first\n50     assert moe.weight.axes[:3] == (E, Out, In)\n",
+    "col_offset": 4,
+    "end_col_offset": 24,
+    "filename": "./tests/test_moe_linear.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 49,
+    "line_range": [
+      49
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "49     assert moe.out_first\n50     assert moe.weight.axes[:3] == (E, Out, In)\n51 \n",
+    "col_offset": 4,
+    "end_col_offset": 46,
+    "filename": "./tests/test_moe_linear.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 50,
+    "line_range": [
+      50
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "52     moe2 = MoELinear.init(E, In, Out, key=jrandom.PRNGKey(1), out_first=False)\n53     assert not moe2.out_first\n54     assert moe2.weight.axes[:3] == (E, In, Out)\n",
+    "col_offset": 4,
+    "end_col_offset": 29,
+    "filename": "./tests/test_moe_linear.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 53,
+    "line_range": [
+      53
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "53     assert not moe2.out_first\n54     assert moe2.weight.axes[:3] == (E, In, Out)\n55 \n",
+    "col_offset": 4,
+    "end_col_offset": 47,
+    "filename": "./tests/test_moe_linear.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 54,
+    "line_range": [
+      54
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "68 \n69     assert actual.axes == expected.axes\n70     assert jnp.allclose(actual.array, expected.array, rtol=1e-5, atol=1e-5)\n",
+    "col_offset": 4,
+    "end_col_offset": 39,
+    "filename": "./tests/test_moe_linear.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 69,
+    "line_range": [
+      69
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "69     assert actual.axes == expected.axes\n70     assert jnp.allclose(actual.array, expected.array, rtol=1e-5, atol=1e-5)\n",
+    "col_offset": 4,
+    "end_col_offset": 75,
+    "filename": "./tests/test_moe_linear.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 70,
+    "line_range": [
+      70
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

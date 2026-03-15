@@ -1,0 +1,85 @@
+[
+  {
+    "code": "15     corpus = run_hlda.load_documents(str(tmp_path))\n16     assert corpus == [\n17         [\"first\", \"document\", \"hello\", \"world\"],\n18         [\"second\", \"document\", \"world\", \"big\", \"bright\"],\n19     ]\n20 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/test_run_hlda_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 16,
+    "line_range": [
+      16,
+      17,
+      18,
+      19
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "30     expected_index = {w: i for i, w in enumerate(expected_vocab)}\n31     assert vocab == expected_vocab\n32     assert index == expected_index\n",
+    "col_offset": 4,
+    "end_col_offset": 34,
+    "filename": "./tests/test_run_hlda_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 31,
+    "line_range": [
+      31
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "31     assert vocab == expected_vocab\n32     assert index == expected_index\n33 \n",
+    "col_offset": 4,
+    "end_col_offset": 34,
+    "filename": "./tests/test_run_hlda_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 32,
+    "line_range": [
+      32
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "46     ]\n47     assert int_corpus == expected\n48 \n",
+    "col_offset": 4,
+    "end_col_offset": 33,
+    "filename": "./tests/test_run_hlda_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 47,
+    "line_range": [
+      47
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

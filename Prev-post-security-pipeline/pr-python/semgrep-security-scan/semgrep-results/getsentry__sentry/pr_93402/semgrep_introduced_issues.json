@@ -1,0 +1,177 @@
+[
+  {
+    "check_id": "python.django.security.audit.raw-query.avoid-raw-sql",
+    "path": "src/sentry/api/serializers/models/project.py",
+    "start": {
+      "line": 848,
+      "col": 9,
+      "offset": 32854
+    },
+    "end": {
+      "line": 869,
+      "col": 10,
+      "offset": 33579
+    },
+    "extra": {
+      "message": "Detected the use of 'RawSQL' or 'raw' indicating the execution of a non-parameterized SQL query. This could lead to a SQL injection and therefore protected information could be leaked. Instead, use Django ORM and parameterized queries before raw SQL. An example of using the Django ORM is: `People.objects.get(name='Bob')`",
+      "metadata": {
+        "source-rule-url": "https://bandit.readthedocs.io/en/latest/plugins/b611_django_rawsql_used.html",
+        "cwe": [
+          "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        ],
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://docs.djangoproject.com/en/3.0/ref/models/expressions/#raw-sql-expressions",
+          "https://semgrep.dev/blog/2020/preventing-sql-injection-a-django-authors-perspective/"
+        ],
+        "category": "security",
+        "technology": [
+          "django"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "SQL Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.django.security.audit.raw-query.avoid-raw-sql",
+        "shortlink": "https://sg.run/weDA"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.insecure-hash-algorithms.insecure-hash-algorithm-sha1",
+    "path": "src/sentry/performance_issues/detectors/sql_injection_detector.py",
+    "start": {
+      "line": 205,
+      "col": 28,
+      "offset": 6780
+    },
+    "end": {
+      "line": 205,
+      "col": 51,
+      "offset": 6803
+    },
+    "extra": {
+      "message": "Detected SHA1 hash algorithm which is considered insecure. SHA1 is not collision resistant and is therefore not suitable as a cryptographic signature. Use SHA256 or SHA3 instead.",
+      "fix": "hashlib.sha256(signature)",
+      "metadata": {
+        "source-rule-url": "https://github.com/PyCQA/bandit/blob/d5f8fa0d89d7b11442fc6ec80ca42953974354c8/bandit/blacklists/calls.py#L59",
+        "cwe": [
+          "CWE-327: Use of a Broken or Risky Cryptographic Algorithm"
+        ],
+        "owasp": [
+          "A03:2017 - Sensitive Data Exposure",
+          "A02:2021 - Cryptographic Failures",
+          "A04:2025 - Cryptographic Failures"
+        ],
+        "bandit-code": "B303",
+        "asvs": {
+          "control_id": "6.2.2 Insecure Custom Algorithm",
+          "control_url": "https://github.com/OWASP/ASVS/blob/master/4.0/en/0x14-V6-Cryptography.md#v62-algorithms",
+          "section": "V6 Stored Cryptography Verification Requirements",
+          "version": "4"
+        },
+        "references": [
+          "https://www.schneier.com/blog/archives/2012/10/when_will_we_se.html",
+          "https://www.trendmicro.com/vinfo/us/security/news/vulnerabilities-and-exploits/sha-1-collision-signals-the-end-of-the-algorithm-s-viability",
+          "http://2012.sharcs.org/slides/stevens.pdf",
+          "https://pycryptodome.readthedocs.io/en/latest/src/hash/sha3_256.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "subcategory": [
+          "vuln"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "MEDIUM",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Cryptographic Issues"
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.insecure-hash-algorithms.insecure-hash-algorithm-sha1",
+        "shortlink": "https://sg.run/ydYx"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.audit.eval-detected.eval-detected",
+    "path": "src/sentry/runner/commands/run.py",
+    "start": {
+      "line": 442,
+      "col": 41,
+      "offset": 13301
+    },
+    "end": {
+      "line": 442,
+      "col": 53,
+      "offset": 13313
+    },
+    "extra": {
+      "message": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources.",
+      "metadata": {
+        "source-rule-url": "https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b307-eval",
+        "cwe": [
+          "CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+        ],
+        "owasp": [
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "asvs": {
+          "control_id": "5.2.4 Dyanmic Code Execution Features",
+          "control_url": "https://github.com/OWASP/ASVS/blob/master/4.0/en/0x13-V5-Validation-Sanitization-Encoding.md#v52-sanitization-and-sandboxing-requirements",
+          "section": "V5: Validation, Sanitization and Encoding Verification Requirements",
+          "version": "4"
+        },
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "references": [
+          "https://owasp.org/Top10/A03_2021-Injection"
+        ],
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Code Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.audit.eval-detected.eval-detected",
+        "shortlink": "https://sg.run/ZvrD"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  }
+]

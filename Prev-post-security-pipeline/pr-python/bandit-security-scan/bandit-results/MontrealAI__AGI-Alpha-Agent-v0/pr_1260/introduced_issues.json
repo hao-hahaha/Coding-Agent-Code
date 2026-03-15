@@ -1,0 +1,42 @@
+[
+  {
+    "code": "33     root = merkle_root(db_path=db)\n34     assert root == _manual_root([h1, h2])\n35 \n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./tests/test_archive_cron.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 34,
+    "line_range": [
+      34
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "45     cid = publish_root(out_file=out)\n46     assert json.loads(out.read_text())[\"cid\"] == cid\n",
+    "col_offset": 4,
+    "end_col_offset": 52,
+    "filename": "./tests/test_archive_cron.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 46,
+    "line_range": [
+      46
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

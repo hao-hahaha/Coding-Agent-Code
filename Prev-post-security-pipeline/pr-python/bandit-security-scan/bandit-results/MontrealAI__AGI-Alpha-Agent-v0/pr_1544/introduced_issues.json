@@ -1,0 +1,142 @@
+[
+  {
+    "code": "6 import shutil\n7 import subprocess\n8 from pathlib import Path\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/insight_browser_v1/tests/test_env_escaping.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 7,
+    "line_range": [
+      7
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "23     shutil.copytree(browser_dir, target)\n24     token = \"foo</script>bar\"\n25     (target / \".env\").write_text(f\"PINNER_TOKEN={token}\\n\")\n",
+    "col_offset": 12,
+    "end_col_offset": 29,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/insight_browser_v1/tests/test_env_escaping.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'foo</script>bar'",
+    "line_number": 24,
+    "line_range": [
+      24
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b105_hardcoded_password_string.html",
+    "test_id": "B105",
+    "test_name": "hardcoded_password_string"
+  },
+  {
+    "code": "25     (target / \".env\").write_text(f\"PINNER_TOKEN={token}\\n\")\n26     subprocess.check_call([\"npm\", \"run\", \"build\"], cwd=target)\n27 \n",
+    "col_offset": 4,
+    "end_col_offset": 62,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/insight_browser_v1/tests/test_env_escaping.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 26,
+    "line_range": [
+      26
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "25     (target / \".env\").write_text(f\"PINNER_TOKEN={token}\\n\")\n26     subprocess.check_call([\"npm\", \"run\", \"build\"], cwd=target)\n27 \n",
+    "col_offset": 4,
+    "end_col_offset": 62,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/insight_browser_v1/tests/test_env_escaping.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 26,
+    "line_range": [
+      26
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "28     html_text = (target / \"dist\" / \"index.html\").read_text()\n29     assert token not in html_text\n30     assert \"window.PINNER_TOKEN=atob(\" in html_text\n",
+    "col_offset": 4,
+    "end_col_offset": 33,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/insight_browser_v1/tests/test_env_escaping.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 29,
+    "line_range": [
+      29
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "29     assert token not in html_text\n30     assert \"window.PINNER_TOKEN=atob(\" in html_text\n31 \n",
+    "col_offset": 4,
+    "end_col_offset": 51,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/insight_browser_v1/tests/test_env_escaping.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 30,
+    "line_range": [
+      30
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "37         page.wait_for_selector(\"#controls\")\n38         assert page.evaluate(\"window.PINNER_TOKEN\") == token\n39         browser.close()\n",
+    "col_offset": 8,
+    "end_col_offset": 60,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/insight_browser_v1/tests/test_env_escaping.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 38,
+    "line_range": [
+      38
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

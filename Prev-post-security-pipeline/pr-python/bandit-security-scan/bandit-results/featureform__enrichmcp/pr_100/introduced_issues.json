@@ -1,0 +1,42 @@
+[
+  {
+    "code": "93     updated = json.loads(update_result.content[0].text)\n94     assert updated[\"title\"] == \"Updated\"\n95 \n",
+    "col_offset": 4,
+    "end_col_offset": 40,
+    "filename": "./tests/test_basic_memory_mcp_use.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 94,
+    "line_range": [
+      94
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "97     fetched = json.loads(get_result.content[0].text)\n98     assert fetched[\"content\"] == \"New text\"\n99 \n",
+    "col_offset": 4,
+    "end_col_offset": 43,
+    "filename": "./tests/test_basic_memory_mcp_use.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 98,
+    "line_range": [
+      98
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

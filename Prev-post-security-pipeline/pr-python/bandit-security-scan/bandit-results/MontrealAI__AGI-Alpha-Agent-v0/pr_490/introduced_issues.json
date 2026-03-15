@@ -1,0 +1,56 @@
+[
+  {
+    "code": "1 import subprocess\n2 import sys\n3 import unittest\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tests/test_alpha_agi_insight_bridge.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 1,
+    "line_range": [
+      1
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "15     def test_bridge_fallback(self) -> None:\n16         result = subprocess.run(\n17             [\n18                 sys.executable,\n19                 \"-m\",\n20                 \"alpha_factory_v1.demos.alpha_agi_insight_v0.openai_agents_bridge\",\n21                 \"--episodes\",\n22                 \"1\",\n23                 \"--target\",\n24                 \"2\",\n25                 \"--model\",\n26                 DEFAULT_MODEL_NAME,\n27             ],\n28             capture_output=True,\n29             text=True,\n30         )\n31         self.assertEqual(result.returncode, 0, result.stderr)\n",
+    "col_offset": 17,
+    "end_col_offset": 9,
+    "filename": "./tests/test_alpha_agi_insight_bridge.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 16,
+    "line_range": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  }
+]

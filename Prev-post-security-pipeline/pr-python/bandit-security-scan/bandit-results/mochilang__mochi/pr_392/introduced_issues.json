@@ -1,0 +1,42 @@
+[
+  {
+    "code": "2 import os\n3 import subprocess\n4 import tempfile\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tools/libmochi/python/libmochi.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 3,
+    "line_range": [
+      3
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "16     try:\n17         proc = subprocess.run([mochi_bin, \"run\", fname], capture_output=True, text=True)\n18         if proc.returncode != 0:\n",
+    "col_offset": 15,
+    "end_col_offset": 88,
+    "filename": "./tools/libmochi/python/libmochi.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 17,
+    "line_range": [
+      17
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  }
+]

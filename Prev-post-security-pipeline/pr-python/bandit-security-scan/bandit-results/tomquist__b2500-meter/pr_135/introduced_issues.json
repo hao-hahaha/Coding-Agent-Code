@@ -1,0 +1,22 @@
+[
+  {
+    "code": "24                             viols.append(f\"{path}:{node.lineno}\")\n25     assert not viols, \"PEP585 generics found: \" + \", \".join(viols)\n",
+    "col_offset": 4,
+    "end_col_offset": 66,
+    "filename": "./tests/test_no_pep585.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 25,
+    "line_range": [
+      25
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

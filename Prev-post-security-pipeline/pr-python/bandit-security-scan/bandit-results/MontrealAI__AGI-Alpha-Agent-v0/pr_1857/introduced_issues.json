@@ -1,0 +1,182 @@
+[
+  {
+    "code": "4 from pathlib import Path\n5 import subprocess\n6 import contextlib\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tests/test_world_model_safety.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 5,
+    "line_range": [
+      5
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "59     safety.handle({\"loss\": np.nan})\n60     assert {\"cmd\": \"stop\"} in msgs\n61 \n",
+    "col_offset": 4,
+    "end_col_offset": 34,
+    "filename": "./tests/test_world_model_safety.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 60,
+    "line_range": [
+      60
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "73     safety.handle({\"loss\": 5000.0})\n74     assert {\"cmd\": \"stop\"} in msgs\n75 \n",
+    "col_offset": 4,
+    "end_col_offset": 34,
+    "filename": "./tests/test_world_model_safety.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 74,
+    "line_range": [
+      74
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "83     mod = _reload_module(monkeypatch)\n84     assert \"llm_planner\" in mod.A2ABus._subs\n85 \n",
+    "col_offset": 4,
+    "end_col_offset": 44,
+    "filename": "./tests/test_world_model_safety.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 84,
+    "line_range": [
+      84
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "95     )\n96     assert script.exists(), script\n97     bin_dir = tmp_path / \"bin\"\n",
+    "col_offset": 4,
+    "end_col_offset": 34,
+    "filename": "./tests/test_world_model_safety.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 96,
+    "line_range": [
+      96
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "106     env.update({\"PATH\": f\"{bin_dir}:{os.environ.get('PATH', '')}\", \"CAPTURE\": str(capture)})\n107     subprocess.run([\"bash\", str(script)], env=env, check=True, timeout=5)\n108     return capture.read_text()\n",
+    "col_offset": 4,
+    "end_col_offset": 73,
+    "filename": "./tests/test_world_model_safety.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 107,
+    "line_range": [
+      107
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "106     env.update({\"PATH\": f\"{bin_dir}:{os.environ.get('PATH', '')}\", \"CAPTURE\": str(capture)})\n107     subprocess.run([\"bash\", str(script)], env=env, check=True, timeout=5)\n108     return capture.read_text()\n",
+    "col_offset": 4,
+    "end_col_offset": 73,
+    "filename": "./tests/test_world_model_safety.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 107,
+    "line_range": [
+      107
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "112     out = _run_deploy_script(tmp_path, {})\n113     assert \"NO_LLM=1\" in out\n114 \n",
+    "col_offset": 4,
+    "end_col_offset": 28,
+    "filename": "./tests/test_world_model_safety.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 113,
+    "line_range": [
+      113
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "117     out = _run_deploy_script(tmp_path, {\"OPENAI_API_KEY\": \"x\"})\n118     assert \"NO_LLM\" not in out\n",
+    "col_offset": 4,
+    "end_col_offset": 30,
+    "filename": "./tests/test_world_model_safety.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 118,
+    "line_range": [
+      118
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "code": "17     resp = client.get(\"/health\")\n18     assert resp.status_code == 200\n19     data = resp.json()\n",
+    "col_offset": 4,
+    "end_col_offset": 34,
+    "filename": "./tests/test_aiga_service.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 18,
+    "line_range": [
+      18
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "19     data = resp.json()\n20     assert set(data) >= {\"status\", \"generations\", \"best_fitness\"}\n",
+    "col_offset": 4,
+    "end_col_offset": 65,
+    "filename": "./tests/test_aiga_service.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 20,
+    "line_range": [
+      20
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

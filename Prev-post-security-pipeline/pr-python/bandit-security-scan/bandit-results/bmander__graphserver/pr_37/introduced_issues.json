@@ -1,0 +1,22 @@
+[
+  {
+    "code": "426     app = create_app(args.graphdb_filename, args.config_filename)\n427     app.run(host=\"0.0.0.0\", port=args.port)\n428 \n",
+    "col_offset": 17,
+    "end_col_offset": 26,
+    "filename": "./pygs/graphserver/ext/routeserver/routeserver.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 605,
+      "link": "https://cwe.mitre.org/data/definitions/605.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible binding to all interfaces.",
+    "line_number": 427,
+    "line_range": [
+      427
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b104_hardcoded_bind_all_interfaces.html",
+    "test_id": "B104",
+    "test_name": "hardcoded_bind_all_interfaces"
+  }
+]

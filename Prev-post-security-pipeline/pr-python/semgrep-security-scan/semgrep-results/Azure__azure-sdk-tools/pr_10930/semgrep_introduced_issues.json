@@ -1,0 +1,274 @@
+[
+  {
+    "check_id": "generic.html-templates.security.var-in-href.var-in-href",
+    "path": "src/dotnet/APIView/ClientSPA/src/app/_components/shared/nav-bar/nav-bar.component.html",
+    "start": {
+      "line": 24,
+      "col": 54,
+      "offset": 1740
+    },
+    "end": {
+      "line": 24,
+      "col": 84,
+      "offset": 1770
+    },
+    "extra": {
+      "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely generate a URL. If using Mustache, use a URL encoding library, or prepend a slash '/' to the variable for relative links (`href=\"/{{link}}\"`). You may also consider setting the Content Security Policy (CSP) header.",
+      "metadata": {
+        "cwe": [
+          "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+        ],
+        "owasp": [
+          "A07:2017 - Cross-Site Scripting (XSS)",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss#:~:text=javascript:%20URI",
+          "https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url",
+          "https://github.com/pugjs/pug/issues/2952",
+          "https://content-security-policy.com/"
+        ],
+        "category": "security",
+        "technology": [
+          "html-templates"
+        ],
+        "confidence": "LOW",
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Cross-Site-Scripting (XSS)"
+        ],
+        "source": "https://semgrep.dev/r/generic.html-templates.security.var-in-href.var-in-href",
+        "shortlink": "https://sg.run/x1kP"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "javascript.lang.security.detect-child-process.detect-child-process",
+    "path": "tools/js-sdk-release-tools/src/common/changelog/automaticGenerateChangeLogAndBumpVersion.ts",
+    "start": {
+      "line": 140,
+      "col": 53,
+      "offset": 8525
+    },
+    "end": {
+      "line": 140,
+      "col": 164,
+      "offset": 8636
+    },
+    "extra": {
+      "message": "Detected calls to child_process from a function argument `packageFolderPath`. This could lead to a command injection if the input is user controllable. Try to avoid calls to child_process, and if it is needed ensure user input is correctly sanitized or sandboxed. ",
+      "metadata": {
+        "cwe": [
+          "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+        ],
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html#do-not-use-dangerous-functions"
+        ],
+        "source-rule-url": "https://github.com/nodesecurity/eslint-plugin-security/blob/master/rules/detect-child-process.js",
+        "category": "security",
+        "technology": [
+          "javascript"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Command Injection"
+        ],
+        "source": "https://semgrep.dev/r/javascript.lang.security.detect-child-process.detect-child-process",
+        "shortlink": "https://sg.run/l2lo"
+      },
+      "severity": "ERROR",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "javascript.lang.security.detect-child-process.detect-child-process",
+    "path": "tools/js-sdk-release-tools/src/hlc/generateMgmt.ts",
+    "start": {
+      "line": 124,
+      "col": 26,
+      "offset": 6081
+    },
+    "end": {
+      "line": 124,
+      "col": 89,
+      "offset": 6144
+    },
+    "extra": {
+      "message": "Detected calls to child_process from a function argument `options`. This could lead to a command injection if the input is user controllable. Try to avoid calls to child_process, and if it is needed ensure user input is correctly sanitized or sandboxed. ",
+      "metadata": {
+        "cwe": [
+          "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+        ],
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html#do-not-use-dangerous-functions"
+        ],
+        "source-rule-url": "https://github.com/nodesecurity/eslint-plugin-security/blob/master/rules/detect-child-process.js",
+        "category": "security",
+        "technology": [
+          "javascript"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Command Injection"
+        ],
+        "source": "https://semgrep.dev/r/javascript.lang.security.detect-child-process.detect-child-process",
+        "shortlink": "https://sg.run/l2lo"
+      },
+      "severity": "ERROR",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "javascript.lang.security.detect-child-process.detect-child-process",
+    "path": "tools/js-sdk-release-tools/src/hlc/generateMgmt.ts",
+    "start": {
+      "line": 130,
+      "col": 26,
+      "offset": 6581
+    },
+    "end": {
+      "line": 130,
+      "col": 106,
+      "offset": 6661
+    },
+    "extra": {
+      "message": "Detected calls to child_process from a function argument `options`. This could lead to a command injection if the input is user controllable. Try to avoid calls to child_process, and if it is needed ensure user input is correctly sanitized or sandboxed. ",
+      "metadata": {
+        "cwe": [
+          "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+        ],
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html#do-not-use-dangerous-functions"
+        ],
+        "source-rule-url": "https://github.com/nodesecurity/eslint-plugin-security/blob/master/rules/detect-child-process.js",
+        "category": "security",
+        "technology": [
+          "javascript"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Command Injection"
+        ],
+        "source": "https://semgrep.dev/r/javascript.lang.security.detect-child-process.detect-child-process",
+        "shortlink": "https://sg.run/l2lo"
+      },
+      "severity": "ERROR",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "javascript.lang.security.detect-child-process.detect-child-process",
+    "path": "tools/js-sdk-release-tools/src/hlc/generateMgmt.ts",
+    "start": {
+      "line": 136,
+      "col": 26,
+      "offset": 7071
+    },
+    "end": {
+      "line": 136,
+      "col": 60,
+      "offset": 7105
+    },
+    "extra": {
+      "message": "Detected calls to child_process from a function argument `options`. This could lead to a command injection if the input is user controllable. Try to avoid calls to child_process, and if it is needed ensure user input is correctly sanitized or sandboxed. ",
+      "metadata": {
+        "cwe": [
+          "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+        ],
+        "owasp": [
+          "A01:2017 - Injection",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html#do-not-use-dangerous-functions"
+        ],
+        "source-rule-url": "https://github.com/nodesecurity/eslint-plugin-security/blob/master/rules/detect-child-process.js",
+        "category": "security",
+        "technology": [
+          "javascript"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Command Injection"
+        ],
+        "source": "https://semgrep.dev/r/javascript.lang.security.detect-child-process.detect-child-process",
+        "shortlink": "https://sg.run/l2lo"
+      },
+      "severity": "ERROR",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  }
+]

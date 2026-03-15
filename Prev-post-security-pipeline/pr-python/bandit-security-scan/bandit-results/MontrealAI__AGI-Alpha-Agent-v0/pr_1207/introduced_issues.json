@@ -1,0 +1,22 @@
+[
+  {
+    "code": "9     def test_self_rewrite_happy_path(self) -> None:\n10         rng = random.Random(42)\n11         op = SelfRewriteOperator(steps=2, rng=rng)\n",
+    "col_offset": 14,
+    "end_col_offset": 31,
+    "filename": "./tests/test_self_rewrite.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 10,
+    "line_range": [
+      10
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "code": "19     offsets, packed = pack_pytree(tree, dtype=jnp.float32)\n20     assert packed.size == 0\n21     rebuilt = unpack_pytree(offsets, packed)\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/test_pack_tree.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 20,
+    "line_range": [
+      20
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "21     rebuilt = unpack_pytree(offsets, packed)\n22     assert rebuilt == tree\n",
+    "col_offset": 4,
+    "end_col_offset": 26,
+    "filename": "./tests/test_pack_tree.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 22,
+    "line_range": [
+      22
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

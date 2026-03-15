@@ -1,0 +1,82 @@
+[
+  {
+    "code": "38     result = list(resp)\n39     assert len(result) >= 1  # Model should generate at least one tool call\n40     assert all(isinstance(r, (Weather, GoogleSearch)) for r in result)\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/llm/test_anthropic/test_parallel.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 39,
+    "line_range": [
+      39
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "39     assert len(result) >= 1  # Model should generate at least one tool call\n40     assert all(isinstance(r, (Weather, GoogleSearch)) for r in result)\n41     # Note: Due to model limitations, Claude 3 Haiku may not always generate parallel tool calls\n",
+    "col_offset": 4,
+    "end_col_offset": 70,
+    "filename": "./tests/llm/test_anthropic/test_parallel.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 40,
+    "line_range": [
+      40
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "67     result = list(resp)\n68     assert len(result) >= 1  # Model should generate at least one tool call\n69     assert all(isinstance(r, (Weather, GoogleSearch)) for r in result)\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/llm/test_anthropic/test_parallel.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 68,
+    "line_range": [
+      68
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "68     assert len(result) >= 1  # Model should generate at least one tool call\n69     assert all(isinstance(r, (Weather, GoogleSearch)) for r in result)\n70     # Note: Due to model limitations, Claude 3 Haiku may not always generate parallel tool calls\n",
+    "col_offset": 4,
+    "end_col_offset": 70,
+    "filename": "./tests/llm/test_anthropic/test_parallel.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 69,
+    "line_range": [
+      69
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

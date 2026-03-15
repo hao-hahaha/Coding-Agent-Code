@@ -1,0 +1,122 @@
+[
+  {
+    "code": "2 import os\n3 import subprocess\n4 import shutil\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tests/test_alpha_agi_insight_v1_terraform.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 3,
+    "line_range": [
+      3
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "29         shutil.copy(TERRAFORM_DIR / tf_file, tmp_path / tf_file)\n30         subprocess.run(\n31             [\"terraform\", \"init\", \"-backend=false\", \"-input=false\"],\n32             cwd=tmp_path,\n33             check=True,\n34             env=env,\n35         )\n36         subprocess.run(\n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tests/test_alpha_agi_insight_v1_terraform.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 30,
+    "line_range": [
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "29         shutil.copy(TERRAFORM_DIR / tf_file, tmp_path / tf_file)\n30         subprocess.run(\n31             [\"terraform\", \"init\", \"-backend=false\", \"-input=false\"],\n32             cwd=tmp_path,\n33             check=True,\n34             env=env,\n35         )\n36         subprocess.run(\n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tests/test_alpha_agi_insight_v1_terraform.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 30,
+    "line_range": [
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "35         )\n36         subprocess.run(\n37             [\"terraform\", \"validate\", \"-no-color\"],\n38             cwd=tmp_path,\n39             check=True,\n40             env=env,\n41         )\n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tests/test_alpha_agi_insight_v1_terraform.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 36,
+    "line_range": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "35         )\n36         subprocess.run(\n37             [\"terraform\", \"validate\", \"-no-color\"],\n38             cwd=tmp_path,\n39             check=True,\n40             env=env,\n41         )\n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tests/test_alpha_agi_insight_v1_terraform.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 36,
+    "line_range": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  }
+]

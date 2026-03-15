@@ -1,0 +1,53 @@
+[
+  {
+    "code": "6 import os\n7 import subprocess\n8 from unittest import mock\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tests/test_alpha_agi_business_3_v1.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 7,
+    "line_range": [
+      7
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "80     env[\"OPENAI_API_KEY\"] = \"dummy\"\n81     result = subprocess.run(\n82         [\n83             sys.executable,\n84             \"-m\",\n85             \"alpha_factory_v1.demos.alpha_agi_business_3_v1\",\n86             \"--cycles\",\n87             \"1\",\n88         ],\n89         capture_output=True,\n90         text=True,\n91         env=env,\n92     )\n93     assert result.returncode == 0, result.stderr\n",
+    "col_offset": 13,
+    "end_col_offset": 5,
+    "filename": "./tests/test_alpha_agi_business_3_v1.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 81,
+    "line_range": [
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  }
+]

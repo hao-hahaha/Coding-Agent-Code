@@ -1,0 +1,22 @@
+[
+  {
+    "code": "8     with pytest.raises(RuntimeError, match=\"docker is required\"):\n9         sandbox.run_in_docker([\"echo\", \"hi\"], repo_dir=\"/tmp\")\n",
+    "col_offset": 55,
+    "end_col_offset": 61,
+    "filename": "./tests/test_sandbox_docker.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 9,
+    "line_range": [
+      9
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  }
+]

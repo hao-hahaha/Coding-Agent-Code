@@ -1,0 +1,383 @@
+[
+  {
+    "code": "35 \n36         assert (len(self.block_shape) == 2 and all(\n37             [v == self.DEEPGEMM_BLOCK_SHAPE for v in self.block_shape]))\n38 \n",
+    "col_offset": 8,
+    "end_col_offset": 72,
+    "filename": "./vllm/model_executor/layers/fused_moe/batched_deep_gemm_moe.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 36,
+    "line_range": [
+      36,
+      37
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "47     ) -> tuple[int, int, torch.dtype]:\n48         assert a.dim() == 2\n49         num_dp = self.world_size // self.dp_size\n",
+    "col_offset": 8,
+    "end_col_offset": 27,
+    "filename": "./vllm/model_executor/layers/fused_moe/batched_deep_gemm_moe.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 48,
+    "line_range": [
+      48
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "75         import deep_gemm as dg\n76         assert hidden_states.ndim == 3\n77 \n",
+    "col_offset": 8,
+    "end_col_offset": 38,
+    "filename": "./vllm/model_executor/layers/fused_moe/batched_deep_gemm_moe.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 76,
+    "line_range": [
+      76
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "83 \n84         assert w2.size(1) == K\n85 \n",
+    "col_offset": 8,
+    "end_col_offset": 30,
+    "filename": "./vllm/model_executor/layers/fused_moe/batched_deep_gemm_moe.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 84,
+    "line_range": [
+      84
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "26         super().__init__()\n27         assert not use_int8_w8a8, \"NYI\"\n28         assert not use_int8_w8a16, \"NYI\"\n",
+    "col_offset": 8,
+    "end_col_offset": 39,
+    "filename": "./vllm/model_executor/layers/fused_moe/batched_triton_or_deep_gemm_moe.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 27,
+    "line_range": [
+      27
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "27         assert not use_int8_w8a8, \"NYI\"\n28         assert not use_int8_w8a16, \"NYI\"\n29         assert not use_int4_w4a16, \"NYI\"\n",
+    "col_offset": 8,
+    "end_col_offset": 40,
+    "filename": "./vllm/model_executor/layers/fused_moe/batched_triton_or_deep_gemm_moe.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 28,
+    "line_range": [
+      28
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "28         assert not use_int8_w8a16, \"NYI\"\n29         assert not use_int4_w4a16, \"NYI\"\n30 \n",
+    "col_offset": 8,
+    "end_col_offset": 40,
+    "filename": "./vllm/model_executor/layers/fused_moe/batched_triton_or_deep_gemm_moe.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 29,
+    "line_range": [
+      29
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "82         else:\n83             assert self.batched_triton_experts is not None\n84             return self.batched_triton_experts.workspace_shapes(\n",
+    "col_offset": 12,
+    "end_col_offset": 58,
+    "filename": "./vllm/model_executor/layers/fused_moe/batched_triton_or_deep_gemm_moe.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 83,
+    "line_range": [
+      83
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "111                    self.batched_triton_experts)\n112         assert experts is not None\n113         return experts.apply(hidden_states, w1, w2, topk_ids, activation,\n",
+    "col_offset": 8,
+    "end_col_offset": 34,
+    "filename": "./vllm/model_executor/layers/fused_moe/batched_triton_or_deep_gemm_moe.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 112,
+    "line_range": [
+      112
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "90                 decode_list_idx += 1\n91         assert decode_list_idx + prompt_list_idx == input_batch.num_reqs\n92 \n",
+    "col_offset": 8,
+    "end_col_offset": 72,
+    "filename": "./vllm/v1/attention/backends/cpu_attn.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 91,
+    "line_range": [
+      91
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "111             [:reorder_req_num])\n112         assert reorder_decode_list.size == reorder_prompt_list.size\n113 \n",
+    "col_offset": 8,
+    "end_col_offset": 67,
+    "filename": "./vllm/v1/attention/backends/cpu_attn.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 112,
+    "line_range": [
+      112
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "75     ) -> torch.Tensor:\n76         assert kv_c_and_k_pe_cache.numel() > 0\n77         assert attn_metadata.decode is not None\n",
+    "col_offset": 8,
+    "end_col_offset": 46,
+    "filename": "./vllm/v1/attention/backends/mla/cutlass_mla.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 76,
+    "line_range": [
+      76
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "76         assert kv_c_and_k_pe_cache.numel() > 0\n77         assert attn_metadata.decode is not None\n78 \n",
+    "col_offset": 8,
+    "end_col_offset": 47,
+    "filename": "./vllm/v1/attention/backends/mla/cutlass_mla.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 77,
+    "line_range": [
+      77
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "19 \n20         assert device == torch.device(\"cpu\")\n21         assert self.speculative_config is None, \"spec decode is not supported.\"\n",
+    "col_offset": 8,
+    "end_col_offset": 44,
+    "filename": "./vllm/v1/worker/cpu_model_runner.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 20,
+    "line_range": [
+      20
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "20         assert device == torch.device(\"cpu\")\n21         assert self.speculative_config is None, \"spec decode is not supported.\"\n22 \n",
+    "col_offset": 8,
+    "end_col_offset": 79,
+    "filename": "./vllm/v1/worker/cpu_model_runner.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 21,
+    "line_range": [
+      21
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "34             if cpu_tensor is not None and device_tensor is not None:\n35                 assert isinstance(cpu_tensor, torch.Tensor)\n36                 assert isinstance(device_tensor, torch.Tensor)\n",
+    "col_offset": 16,
+    "end_col_offset": 59,
+    "filename": "./vllm/v1/worker/cpu_model_runner.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 35,
+    "line_range": [
+      35
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "35                 assert isinstance(cpu_tensor, torch.Tensor)\n36                 assert isinstance(device_tensor, torch.Tensor)\n37                 setattr(obj, device_attr_name, cpu_tensor)\n",
+    "col_offset": 16,
+    "end_col_offset": 62,
+    "filename": "./vllm/v1/worker/cpu_model_runner.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 36,
+    "line_range": [
+      36
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "94         if not get_pp_group().is_last_rank:\n95             assert isinstance(output, IntermediateTensors)\n96             get_pp_group().send_tensor_dict(output.tensors,\n",
+    "col_offset": 12,
+    "end_col_offset": 58,
+    "filename": "./vllm/v1/worker/cpu_worker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 95,
+    "line_range": [
+      95
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "99 \n100         assert isinstance(output, ModelRunnerOutput)\n101         return output if self.is_driver_worker else None\n",
+    "col_offset": 8,
+    "end_col_offset": 52,
+    "filename": "./vllm/v1/worker/cpu_worker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 100,
+    "line_range": [
+      100
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

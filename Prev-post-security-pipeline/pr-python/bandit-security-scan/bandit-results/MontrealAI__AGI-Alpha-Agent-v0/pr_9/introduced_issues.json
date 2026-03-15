@@ -1,0 +1,484 @@
+[
+  {
+    "code": "249     def propose(self) -> MiniWorld:\n250         size = random.randint(5, 8)\n251         obstacles = {\n",
+    "col_offset": 15,
+    "end_col_offset": 35,
+    "filename": "./alpha_factory_v1/demos/alpha_asi_world_model/alpha_asi_world_model_demo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 250,
+    "line_range": [
+      250
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "251         obstacles = {\n252             (random.randint(1, size - 2), random.randint(1, size - 2))\n253             for _ in range(random.randint(0, size))\n",
+    "col_offset": 13,
+    "end_col_offset": 40,
+    "filename": "./alpha_factory_v1/demos/alpha_asi_world_model/alpha_asi_world_model_demo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 252,
+    "line_range": [
+      252
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "251         obstacles = {\n252             (random.randint(1, size - 2), random.randint(1, size - 2))\n253             for _ in range(random.randint(0, size))\n",
+    "col_offset": 42,
+    "end_col_offset": 69,
+    "filename": "./alpha_factory_v1/demos/alpha_asi_world_model/alpha_asi_world_model_demo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 252,
+    "line_range": [
+      252
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "252             (random.randint(1, size - 2), random.randint(1, size - 2))\n253             for _ in range(random.randint(0, size))\n254         }\n",
+    "col_offset": 27,
+    "end_col_offset": 50,
+    "filename": "./alpha_factory_v1/demos/alpha_asi_world_model/alpha_asi_world_model_demo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 253,
+    "line_range": [
+      253
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "275             )\n276         if random.random() < eps:\n277             return random.randrange(4)\n",
+    "col_offset": 11,
+    "end_col_offset": 26,
+    "filename": "./alpha_factory_v1/demos/alpha_asi_world_model/alpha_asi_world_model_demo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 276,
+    "line_range": [
+      276
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "276         if random.random() < eps:\n277             return random.randrange(4)\n278         return int(torch.argmax(policy).item())\n",
+    "col_offset": 19,
+    "end_col_offset": 38,
+    "filename": "./alpha_factory_v1/demos/alpha_asi_world_model/alpha_asi_world_model_demo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 277,
+    "line_range": [
+      277
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "288             return 0.0\n289         batch = random.sample(self.buffer, CFG.train_batch)\n290         obs, rew = zip(*batch)\n",
+    "col_offset": 16,
+    "end_col_offset": 59,
+    "filename": "./alpha_factory_v1/demos/alpha_asi_world_model/alpha_asi_world_model_demo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 289,
+    "line_range": [
+      289
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "420             await asyncio.sleep(0.1)\n421     except Exception:  # pragma: no cover\n422         pass\n423 \n",
+    "col_offset": 4,
+    "end_col_offset": 12,
+    "filename": "./alpha_factory_v1/demos/alpha_asi_world_model/alpha_asi_world_model_demo.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 421,
+    "line_range": [
+      421,
+      422
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "100                 val = type(getattr(cfg, k))(val)\n101             except Exception:\n102                 pass\n103             setattr(cfg, k, val)\n",
+    "col_offset": 12,
+    "end_col_offset": 20,
+    "filename": "./alpha_factory_v1/demos/alpha_asi_world_model/alpha_asi_world_model_demo_v4.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 101,
+    "line_range": [
+      101,
+      102
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "269     def propose(self)->MiniWorld:\n270         size=random.randint(5,9)\n271         obstacles={(random.randint(1,size-2),random.randint(1,size-2)) for _ in range(random.randint(0,size))}\n",
+    "col_offset": 13,
+    "end_col_offset": 32,
+    "filename": "./alpha_factory_v1/demos/alpha_asi_world_model/alpha_asi_world_model_demo_v4.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 270,
+    "line_range": [
+      270
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "270         size=random.randint(5,9)\n271         obstacles={(random.randint(1,size-2),random.randint(1,size-2)) for _ in range(random.randint(0,size))}\n272         env=MiniWorld(size,list(obstacles),(size-1,size-1))\n",
+    "col_offset": 20,
+    "end_col_offset": 44,
+    "filename": "./alpha_factory_v1/demos/alpha_asi_world_model/alpha_asi_world_model_demo_v4.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 271,
+    "line_range": [
+      271
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "270         size=random.randint(5,9)\n271         obstacles={(random.randint(1,size-2),random.randint(1,size-2)) for _ in range(random.randint(0,size))}\n272         env=MiniWorld(size,list(obstacles),(size-1,size-1))\n",
+    "col_offset": 45,
+    "end_col_offset": 69,
+    "filename": "./alpha_factory_v1/demos/alpha_asi_world_model/alpha_asi_world_model_demo_v4.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 271,
+    "line_range": [
+      271
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "270         size=random.randint(5,9)\n271         obstacles={(random.randint(1,size-2),random.randint(1,size-2)) for _ in range(random.randint(0,size))}\n272         env=MiniWorld(size,list(obstacles),(size-1,size-1))\n",
+    "col_offset": 86,
+    "end_col_offset": 108,
+    "filename": "./alpha_factory_v1/demos/alpha_asi_world_model/alpha_asi_world_model_demo_v4.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 271,
+    "line_range": [
+      271
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "287         # epsilon‑greedy w/ MCTS fallback\n288         if random.random()<0.1:\n289             return random.randint(0,3)\n",
+    "col_offset": 11,
+    "end_col_offset": 26,
+    "filename": "./alpha_factory_v1/demos/alpha_asi_world_model/alpha_asi_world_model_demo_v4.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 288,
+    "line_range": [
+      288
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "288         if random.random()<0.1:\n289             return random.randint(0,3)\n290         return mcts_policy(self.net, obs, CFG.mcts_simulations)\n",
+    "col_offset": 19,
+    "end_col_offset": 38,
+    "filename": "./alpha_factory_v1/demos/alpha_asi_world_model/alpha_asi_world_model_demo_v4.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 289,
+    "line_range": [
+      289
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "298         if len(self.buffer)<CFG.train_batch: return 0.0\n299         obs,rew=zip(*random.sample(self.buffer, CFG.train_batch))\n300         obs_t=torch.tensor(obs, device=CFG.device, dtype=torch.float32)\n",
+    "col_offset": 21,
+    "end_col_offset": 64,
+    "filename": "./alpha_factory_v1/demos/alpha_asi_world_model/alpha_asi_world_model_demo_v4.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 299,
+    "line_range": [
+      299
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "320         if msg.get(\"cmd\")==\"new_env\":\n321             idx=random.randrange(len(self.envs))\n322             self.envs[idx]=self.gen.propose()\n",
+    "col_offset": 16,
+    "end_col_offset": 48,
+    "filename": "./alpha_factory_v1/demos/alpha_asi_world_model/alpha_asi_world_model_demo_v4.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 321,
+    "line_range": [
+      321
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "411             await asyncio.sleep(0.1)\n412     except Exception: pass\n413 \n",
+    "col_offset": 4,
+    "end_col_offset": 26,
+    "filename": "./alpha_factory_v1/demos/alpha_asi_world_model/alpha_asi_world_model_demo_v4.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 412,
+    "line_range": [
+      412
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "265         with self:\n266             exec(code, {}, loc)\n267         if func_name not in loc:\n",
+    "col_offset": 12,
+    "end_col_offset": 31,
+    "filename": "./alpha_factory_v1/demos/meta_agentic_agi/agents/agent_base.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Use of exec detected.",
+    "line_number": 266,
+    "line_range": [
+      266
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b102_exec_used.html",
+    "test_id": "B102",
+    "test_name": "exec_used"
+  },
+  {
+    "code": "294 \n295     th = threading.Thread(target=app.run, kwargs=dict(port=port, host=\"0.0.0.0\", debug=False))\n296     th.daemon = True\n",
+    "col_offset": 70,
+    "end_col_offset": 79,
+    "filename": "./alpha_factory_v1/demos/meta_agentic_agi/agents/agent_base.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 605,
+      "link": "https://cwe.mitre.org/data/definitions/605.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible binding to all interfaces.",
+    "line_number": 295,
+    "line_range": [
+      295
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b104_hardcoded_bind_all_interfaces.html",
+    "test_id": "B104",
+    "test_name": "hardcoded_bind_all_interfaces"
+  },
+  {
+    "code": "265         with self:\n266             exec(code, {}, loc)\n267         if func_name not in loc:\n",
+    "col_offset": 12,
+    "end_col_offset": 31,
+    "filename": "./alpha_factory_v1/demos/meta_agentic_agi_v2/agents/agent_base.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Use of exec detected.",
+    "line_number": 266,
+    "line_range": [
+      266
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b102_exec_used.html",
+    "test_id": "B102",
+    "test_name": "exec_used"
+  },
+  {
+    "code": "294 \n295     th = threading.Thread(target=app.run, kwargs=dict(port=port, host=\"0.0.0.0\", debug=False))\n296     th.daemon = True\n",
+    "col_offset": 70,
+    "end_col_offset": 79,
+    "filename": "./alpha_factory_v1/demos/meta_agentic_agi_v2/agents/agent_base.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 605,
+      "link": "https://cwe.mitre.org/data/definitions/605.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible binding to all interfaces.",
+    "line_number": 295,
+    "line_range": [
+      295
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b104_hardcoded_bind_all_interfaces.html",
+    "test_id": "B104",
+    "test_name": "hardcoded_bind_all_interfaces"
+  },
+  {
+    "code": "265         with self:\n266             exec(code, {}, loc)\n267         if func_name not in loc:\n",
+    "col_offset": 12,
+    "end_col_offset": 31,
+    "filename": "./alpha_factory_v1/demos/meta_agentic_agi_v3/agents/agent_base.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Use of exec detected.",
+    "line_number": 266,
+    "line_range": [
+      266
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b102_exec_used.html",
+    "test_id": "B102",
+    "test_name": "exec_used"
+  },
+  {
+    "code": "294 \n295     th = threading.Thread(target=app.run, kwargs=dict(port=port, host=\"0.0.0.0\", debug=False))\n296     th.daemon = True\n",
+    "col_offset": 70,
+    "end_col_offset": 79,
+    "filename": "./alpha_factory_v1/demos/meta_agentic_agi_v3/agents/agent_base.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 605,
+      "link": "https://cwe.mitre.org/data/definitions/605.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible binding to all interfaces.",
+    "line_number": 295,
+    "line_range": [
+      295
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b104_hardcoded_bind_all_interfaces.html",
+    "test_id": "B104",
+    "test_name": "hardcoded_bind_all_interfaces"
+  }
+]

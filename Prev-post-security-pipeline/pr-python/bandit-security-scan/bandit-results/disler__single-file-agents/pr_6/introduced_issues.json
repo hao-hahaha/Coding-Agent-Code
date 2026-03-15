@@ -1,0 +1,72 @@
+[
+  {
+    "code": "19 import argparse\n20 import subprocess\n21 import time\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./sfa_codebase_context_agent_v3.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 20,
+    "line_range": [
+      20
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "61         # Get all files tracked by git\n62         result = subprocess.run(\n63             \"git ls-files\",\n64             shell=True,\n65             text=True,\n66             capture_output=True,\n67         )\n68         \n",
+    "col_offset": 17,
+    "end_col_offset": 9,
+    "filename": "./sfa_codebase_context_agent_v3.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 62,
+    "line_range": [
+      62,
+      63,
+      64,
+      65,
+      66,
+      67
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "63             \"git ls-files\",\n64             shell=True,\n65             text=True,\n66             capture_output=True,\n67         )\n68         \n69         files = result.stdout.strip().split(\"\\n\")\n70         \n",
+    "col_offset": 17,
+    "end_col_offset": 9,
+    "filename": "./sfa_codebase_context_agent_v3.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call with shell=True seems safe, but may be changed in the future, consider rewriting without shell",
+    "line_number": 64,
+    "line_range": [
+      62,
+      63,
+      64,
+      65,
+      66,
+      67
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+    "test_id": "B602",
+    "test_name": "subprocess_popen_with_shell_equals_true"
+  }
+]

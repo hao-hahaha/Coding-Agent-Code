@@ -1,0 +1,56 @@
+[
+  {
+    "check_id": "javascript.lang.security.audit.unknown-value-with-script-tag.unknown-value-with-script-tag",
+    "path": "alpha_factory_v1/demos/alpha_agi_insight_v1/insight_browser_v1/build.js",
+    "start": {
+      "line": 25,
+      "col": 14,
+      "offset": 882
+    },
+    "end": {
+      "line": 25,
+      "col": 19,
+      "offset": 887
+    },
+    "extra": {
+      "message": "Cannot determine what 'match' is and it is used with a '<script>' tag. This could be susceptible to cross-site scripting (XSS). Ensure 'match' is not externally controlled, or sanitize this data.",
+      "metadata": {
+        "owasp": [
+          "A07:2017 - Cross-Site Scripting (XSS)",
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "cwe": [
+          "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+        ],
+        "references": [
+          "https://www.developsec.com/2017/11/09/xss-in-a-script-tag/",
+          "https://github.com/juice-shop/juice-shop/blob/1ceb8751e986dacd3214a618c37e7411be6bc11a/routes/videoHandler.ts#L68"
+        ],
+        "category": "security",
+        "technology": [
+          "javascript"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "LOW",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Cross-Site-Scripting (XSS)"
+        ],
+        "source": "https://semgrep.dev/r/javascript.lang.security.audit.unknown-value-with-script-tag.unknown-value-with-script-tag",
+        "shortlink": "https://sg.run/1Zy1"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  }
+]

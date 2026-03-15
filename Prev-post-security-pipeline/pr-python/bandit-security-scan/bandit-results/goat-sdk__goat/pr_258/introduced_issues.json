@@ -1,0 +1,82 @@
+[
+  {
+    "code": "25 private_key = os.getenv(\"WALLET_PRIVATE_KEY\")\n26 assert private_key is not None, \"You must set WALLET_PRIVATE_KEY environment variable\"\n27 assert private_key.startswith(\"0x\"), \"Private key must start with 0x hex prefix\"\n",
+    "col_offset": 0,
+    "end_col_offset": 86,
+    "filename": "./python/examples/langchain/uniswap/example.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 26,
+    "line_range": [
+      26
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "26 assert private_key is not None, \"You must set WALLET_PRIVATE_KEY environment variable\"\n27 assert private_key.startswith(\"0x\"), \"Private key must start with 0x hex prefix\"\n28 \n",
+    "col_offset": 0,
+    "end_col_offset": 80,
+    "filename": "./python/examples/langchain/uniswap/example.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 27,
+    "line_range": [
+      27
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "74     uniswap_base_url = os.getenv(\"UNISWAP_BASE_URL\", \"https://trade-api.gateway.uniswap.org/v1\")\n75     assert uniswap_api_key is not None, \"You must set UNISWAP_API_KEY environment variable\"\n76     assert uniswap_base_url is not None, \"You must set UNISWAP_BASE_URL environment variable\"\n",
+    "col_offset": 4,
+    "end_col_offset": 91,
+    "filename": "./python/examples/langchain/uniswap/example.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 75,
+    "line_range": [
+      75
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "75     assert uniswap_api_key is not None, \"You must set UNISWAP_API_KEY environment variable\"\n76     assert uniswap_base_url is not None, \"You must set UNISWAP_BASE_URL environment variable\"\n77 \n",
+    "col_offset": 4,
+    "end_col_offset": 93,
+    "filename": "./python/examples/langchain/uniswap/example.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 76,
+    "line_range": [
+      76
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

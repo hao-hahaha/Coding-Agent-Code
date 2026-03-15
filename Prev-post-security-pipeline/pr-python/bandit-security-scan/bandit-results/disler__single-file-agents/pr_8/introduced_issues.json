@@ -1,0 +1,97 @@
+[
+  {
+    "code": "61     \n62     register_response = UserAPI.register(\n63         username=\"johndoe\",\n64         password=\"Password123!\",\n65         email=\"john@example.com\"\n66     )\n67     display_response(register_response)\n",
+    "col_offset": 24,
+    "end_col_offset": 5,
+    "filename": "./codebase-architectures/atomic-composable-architecture/main.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'Password123!'",
+    "line_number": 62,
+    "line_range": [
+      62,
+      63,
+      64,
+      65,
+      66
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b106_hardcoded_password_funcarg.html",
+    "test_id": "B106",
+    "test_name": "hardcoded_password_funcarg"
+  },
+  {
+    "code": "68     \n69     register_response2 = UserAPI.register(\n70         username=\"janedoe\",\n71         password=\"Secure456@\",\n72         email=\"jane@example.com\"\n73     )\n74     display_response(register_response2)\n",
+    "col_offset": 25,
+    "end_col_offset": 5,
+    "filename": "./codebase-architectures/atomic-composable-architecture/main.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'Secure456@'",
+    "line_number": 69,
+    "line_range": [
+      69,
+      70,
+      71,
+      72,
+      73
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b106_hardcoded_password_funcarg.html",
+    "test_id": "B106",
+    "test_name": "hardcoded_password_funcarg"
+  },
+  {
+    "code": "76     # Try to register with invalid data\n77     invalid_register = UserAPI.register(\n78         username=\"user\",\n79         password=\"weak\",\n80         email=\"invalid-email\"\n81     )\n82     display_response(invalid_register)\n",
+    "col_offset": 23,
+    "end_col_offset": 5,
+    "filename": "./codebase-architectures/atomic-composable-architecture/main.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'weak'",
+    "line_number": 77,
+    "line_range": [
+      77,
+      78,
+      79,
+      80,
+      81
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b106_hardcoded_password_funcarg.html",
+    "test_id": "B106",
+    "test_name": "hardcoded_password_funcarg"
+  },
+  {
+    "code": "86     \n87     login_response = UserAPI.login(\n88         username=\"johndoe\",\n89         password=\"Password123!\"\n90     )\n91     display_response(login_response)\n",
+    "col_offset": 21,
+    "end_col_offset": 5,
+    "filename": "./codebase-architectures/atomic-composable-architecture/main.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'Password123!'",
+    "line_number": 87,
+    "line_range": [
+      87,
+      88,
+      89,
+      90
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b106_hardcoded_password_funcarg.html",
+    "test_id": "B106",
+    "test_name": "hardcoded_password_funcarg"
+  }
+]

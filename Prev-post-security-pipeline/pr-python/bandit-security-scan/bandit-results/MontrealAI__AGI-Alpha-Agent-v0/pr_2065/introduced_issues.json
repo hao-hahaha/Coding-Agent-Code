@@ -1,0 +1,27 @@
+[
+  {
+    "code": "121     env[\"OPENAI_API_KEY\"] = \"dummy\"\n122     result = subprocess.run(\n123         [\"alpha-agi-business-3-v1\", \"--cycles\", \"1\"],\n124         capture_output=True,\n125         text=True,\n126         env=env,\n127     )\n128     assert result.returncode == 0, result.stderr\n",
+    "col_offset": 13,
+    "end_col_offset": 5,
+    "filename": "./tests/test_alpha_agi_business_3_v1.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 122,
+    "line_range": [
+      122,
+      123,
+      124,
+      125,
+      126,
+      127
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "code": "12     monkeypatch.setenv(\"HF_GPT2_BASE_URL\", custom)\n13     assert dg._base_url() == custom\n14 \n",
+    "col_offset": 4,
+    "end_col_offset": 35,
+    "filename": "./tests/test_download_hf_gpt2.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 13,
+    "line_range": [
+      13
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "27     dg.download_hf_gpt2(dest=tmp_path)\n28     assert len(calls) == len(dg._FILES)\n29     assert calls[0][0].startswith(dg._base_url())\n",
+    "col_offset": 4,
+    "end_col_offset": 39,
+    "filename": "./tests/test_download_hf_gpt2.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 28,
+    "line_range": [
+      28
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "28     assert len(calls) == len(dg._FILES)\n29     assert calls[0][0].startswith(dg._base_url())\n30 \n",
+    "col_offset": 4,
+    "end_col_offset": 49,
+    "filename": "./tests/test_download_hf_gpt2.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 29,
+    "line_range": [
+      29
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "40 \n41     assert (tmp_path / \"dummy.txt\").read_text() == \"ok\"\n42 \n",
+    "col_offset": 4,
+    "end_col_offset": 55,
+    "filename": "./tests/test_download_hf_gpt2.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 41,
+    "line_range": [
+      41
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

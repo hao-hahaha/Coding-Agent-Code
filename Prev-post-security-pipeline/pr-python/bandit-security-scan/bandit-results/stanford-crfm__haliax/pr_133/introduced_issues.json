@@ -1,0 +1,402 @@
+[
+  {
+    "code": "39     out = x[\"vocab\", idx]\n40     assert out.axes == (B, S)\n41     assert jnp.array_equal(out.array, _ref_gather(x, V, idx))\n",
+    "col_offset": 4,
+    "end_col_offset": 29,
+    "filename": "./tests/test_scatter_gather.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 40,
+    "line_range": [
+      40
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "40     assert out.axes == (B, S)\n41     assert jnp.array_equal(out.array, _ref_gather(x, V, idx))\n42 \n",
+    "col_offset": 4,
+    "end_col_offset": 61,
+    "filename": "./tests/test_scatter_gather.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 41,
+    "line_range": [
+      41
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "51     out = logits[\"vocab\", idx]\n52     assert set(out.axes) == {B, S, T}\n53     ref = jnp.transpose(_ref_gather(logits, V, idx), (0, 2, 1))\n",
+    "col_offset": 4,
+    "end_col_offset": 37,
+    "filename": "./tests/test_scatter_gather.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 52,
+    "line_range": [
+      52
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "53     ref = jnp.transpose(_ref_gather(logits, V, idx), (0, 2, 1))\n54     assert jnp.array_equal(out.array, ref)\n55 \n",
+    "col_offset": 4,
+    "end_col_offset": 42,
+    "filename": "./tests/test_scatter_gather.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 54,
+    "line_range": [
+      54
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "65     out = a[\"x\", ix, \"y\", iy]\n66     assert out.axes == (B,)\n67     ref = a.array[jnp.arange(3), ix.array, iy.array]\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/test_scatter_gather.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 66,
+    "line_range": [
+      66
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "67     ref = a.array[jnp.arange(3), ix.array, iy.array]\n68     assert jnp.array_equal(out.array, ref)\n69 \n",
+    "col_offset": 4,
+    "end_col_offset": 42,
+    "filename": "./tests/test_scatter_gather.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 68,
+    "line_range": [
+      68
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "79     out = a[\"x\", ix, \"y\", iy]\n80     assert out.axes == (B, Z)\n81     ref = a.array[jnp.arange(2), ix.array, :, iy.array]\n",
+    "col_offset": 4,
+    "end_col_offset": 29,
+    "filename": "./tests/test_scatter_gather.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 80,
+    "line_range": [
+      80
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "81     ref = a.array[jnp.arange(2), ix.array, :, iy.array]\n82     assert jnp.array_equal(out.array, ref)\n83 \n",
+    "col_offset": 4,
+    "end_col_offset": 42,
+    "filename": "./tests/test_scatter_gather.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 82,
+    "line_range": [
+      82
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "92     out = x[\"channel\", 1, \"vocab\", idx]\n93     assert out.axes == (B,)\n94     ref = x.array[:, 1, :][jnp.arange(3), idx.array]\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/test_scatter_gather.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 93,
+    "line_range": [
+      93
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "94     ref = x.array[:, 1, :][jnp.arange(3), idx.array]\n95     assert jnp.array_equal(out.array, ref)\n96 \n",
+    "col_offset": 4,
+    "end_col_offset": 42,
+    "filename": "./tests/test_scatter_gather.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 95,
+    "line_range": [
+      95
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "104     out = x_shard[\"vocab\", idx]\n105     assert out.axes == (B, S)\n106     ref = x.array[:, :, :4][jnp.arange(B.size)[:, None], jnp.arange(S.size)[None, :], idx.array]\n",
+    "col_offset": 4,
+    "end_col_offset": 29,
+    "filename": "./tests/test_scatter_gather.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 105,
+    "line_range": [
+      105
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "106     ref = x.array[:, :, :4][jnp.arange(B.size)[:, None], jnp.arange(S.size)[None, :], idx.array]\n107     assert jnp.array_equal(out.array, ref)\n108 \n",
+    "col_offset": 4,
+    "end_col_offset": 42,
+    "filename": "./tests/test_scatter_gather.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 107,
+    "line_range": [
+      107
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "113     out = x[\"seq\", 1]\n114     assert out.axes == (B, V)\n115     assert jnp.array_equal(out.array, x.array[:, 1, :])\n",
+    "col_offset": 4,
+    "end_col_offset": 29,
+    "filename": "./tests/test_scatter_gather.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 114,
+    "line_range": [
+      114
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "114     assert out.axes == (B, V)\n115     assert jnp.array_equal(out.array, x.array[:, 1, :])\n116 \n",
+    "col_offset": 4,
+    "end_col_offset": 55,
+    "filename": "./tests/test_scatter_gather.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 115,
+    "line_range": [
+      115
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "125     out = x[\"vocab\", idx]\n126     assert out.axes == (B,)\n127     assert jnp.array_equal(out.array, x.array[jnp.arange(3), idx])\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/test_scatter_gather.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 126,
+    "line_range": [
+      126
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "126     assert out.axes == (B,)\n127     assert jnp.array_equal(out.array, x.array[jnp.arange(3), idx])\n128 \n",
+    "col_offset": 4,
+    "end_col_offset": 66,
+    "filename": "./tests/test_scatter_gather.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 127,
+    "line_range": [
+      127
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "137     out = a[\"vocab\", idx1]\n138     assert out.axes == (B, S)\n139     assert jnp.array_equal(out.array, _ref_gather(a, V, idx1))\n",
+    "col_offset": 4,
+    "end_col_offset": 29,
+    "filename": "./tests/test_scatter_gather.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 138,
+    "line_range": [
+      138
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "138     assert out.axes == (B, S)\n139     assert jnp.array_equal(out.array, _ref_gather(a, V, idx1))\n140 \n",
+    "col_offset": 4,
+    "end_col_offset": 62,
+    "filename": "./tests/test_scatter_gather.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 139,
+    "line_range": [
+      139
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "151     ref = jnp.zeros((2, 3, 5)).at[jnp.arange(2)[:, None], jnp.arange(3)[None, :], idx.array].add(1.0)\n152     assert jnp.array_equal(y.array, ref)\n153 \n",
+    "col_offset": 4,
+    "end_col_offset": 40,
+    "filename": "./tests/test_scatter_gather.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 152,
+    "line_range": [
+      152
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "164     ref = jnp.zeros((2, 6)).at[jnp.arange(2), idx.array].set(9)\n165     assert jnp.array_equal(y.array, ref)\n",
+    "col_offset": 4,
+    "end_col_offset": 40,
+    "filename": "./tests/test_scatter_gather.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 165,
+    "line_range": [
+      165
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

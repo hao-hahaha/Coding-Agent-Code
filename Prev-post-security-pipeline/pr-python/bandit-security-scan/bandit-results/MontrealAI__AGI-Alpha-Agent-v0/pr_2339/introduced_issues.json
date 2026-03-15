@@ -1,0 +1,102 @@
+[
+  {
+    "code": "30     r = client.get(\"/\")\n31     assert r.status_code == 200\n32     assert r.text.strip() == DISCLAIMER\n",
+    "col_offset": 4,
+    "end_col_offset": 31,
+    "filename": "./tests/test_insight_api_server.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 31,
+    "line_range": [
+      31
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "31     assert r.status_code == 200\n32     assert r.text.strip() == DISCLAIMER\n33 \n",
+    "col_offset": 4,
+    "end_col_offset": 39,
+    "filename": "./tests/test_insight_api_server.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 32,
+    "line_range": [
+      32
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "38     r = client.get(\"/\", headers={\"Accept\": \"text/html\"})\n39     assert r.status_code == 200\n40     assert DISCLAIMER in r.text\n",
+    "col_offset": 4,
+    "end_col_offset": 31,
+    "filename": "./tests/test_insight_api_server.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 39,
+    "line_range": [
+      39
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "39     assert r.status_code == 200\n40     assert DISCLAIMER in r.text\n41     assert r.headers.get(\"content-type\", \"\").startswith(\"text/html\")\n",
+    "col_offset": 4,
+    "end_col_offset": 31,
+    "filename": "./tests/test_insight_api_server.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 40,
+    "line_range": [
+      40
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "40     assert DISCLAIMER in r.text\n41     assert r.headers.get(\"content-type\", \"\").startswith(\"text/html\")\n42 \n",
+    "col_offset": 4,
+    "end_col_offset": 68,
+    "filename": "./tests/test_insight_api_server.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 41,
+    "line_range": [
+      41
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

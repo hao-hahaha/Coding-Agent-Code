@@ -1,0 +1,982 @@
+[
+  {
+    "code": "18         session = Client()._safe_get_session()\n19         assert session is not None\n20         assert session.config.exporter == mock_exporter\n",
+    "col_offset": 8,
+    "end_col_offset": 34,
+    "filename": "./tests/manual_test_custom_exporter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 19,
+    "line_range": [
+      19
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "19         assert session is not None\n20         assert session.config.exporter == mock_exporter\n21 \n",
+    "col_offset": 8,
+    "end_col_offset": 55,
+    "filename": "./tests/manual_test_custom_exporter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 20,
+    "line_range": [
+      20
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "33         session = Client()._safe_get_session()\n34         assert session is not None\n35         assert session.config.exporter_endpoint == custom_endpoint\n",
+    "col_offset": 8,
+    "end_col_offset": 34,
+    "filename": "./tests/manual_test_custom_exporter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 34,
+    "line_range": [
+      34
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "34         assert session is not None\n35         assert session.config.exporter_endpoint == custom_endpoint\n36 \n",
+    "col_offset": 8,
+    "end_col_offset": 66,
+    "filename": "./tests/manual_test_custom_exporter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 35,
+    "line_range": [
+      35
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "45 \n46     assert kwargs[\"api_key\"] == \"test-key\"\n47     assert kwargs[\"endpoint\"] == agentops_config.endpoint\n",
+    "col_offset": 4,
+    "end_col_offset": 42,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 46,
+    "line_range": [
+      46
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "46     assert kwargs[\"api_key\"] == \"test-key\"\n47     assert kwargs[\"endpoint\"] == agentops_config.endpoint\n48     assert kwargs[\"max_wait_time\"] == 1000\n",
+    "col_offset": 4,
+    "end_col_offset": 57,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 47,
+    "line_range": [
+      47
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "47     assert kwargs[\"endpoint\"] == agentops_config.endpoint\n48     assert kwargs[\"max_wait_time\"] == 1000\n49     assert kwargs[\"max_queue_size\"] == 200\n",
+    "col_offset": 4,
+    "end_col_offset": 42,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 48,
+    "line_range": [
+      48
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "48     assert kwargs[\"max_wait_time\"] == 1000\n49     assert kwargs[\"max_queue_size\"] == 200\n50     assert kwargs[\"default_tags\"] == [\"tag1\", \"tag2\"]\n",
+    "col_offset": 4,
+    "end_col_offset": 42,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 49,
+    "line_range": [
+      49
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "49     assert kwargs[\"max_queue_size\"] == 200\n50     assert kwargs[\"default_tags\"] == [\"tag1\", \"tag2\"]\n51     assert kwargs[\"instrument_llm_calls\"] is False\n",
+    "col_offset": 4,
+    "end_col_offset": 53,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 50,
+    "line_range": [
+      50
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "50     assert kwargs[\"default_tags\"] == [\"tag1\", \"tag2\"]\n51     assert kwargs[\"instrument_llm_calls\"] is False\n52     assert kwargs[\"auto_start_session\"] is False\n",
+    "col_offset": 4,
+    "end_col_offset": 50,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 51,
+    "line_range": [
+      51
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "51     assert kwargs[\"instrument_llm_calls\"] is False\n52     assert kwargs[\"auto_start_session\"] is False\n53     assert kwargs[\"auto_init\"] is False\n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 52,
+    "line_range": [
+      52
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "52     assert kwargs[\"auto_start_session\"] is False\n53     assert kwargs[\"auto_init\"] is False\n54     assert kwargs[\"skip_auto_end_session\"] is True\n",
+    "col_offset": 4,
+    "end_col_offset": 39,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 53,
+    "line_range": [
+      53
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "53     assert kwargs[\"auto_init\"] is False\n54     assert kwargs[\"skip_auto_end_session\"] is True\n55     assert kwargs[\"env_data_opt_out\"] is True\n",
+    "col_offset": 4,
+    "end_col_offset": 50,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 54,
+    "line_range": [
+      54
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "54     assert kwargs[\"skip_auto_end_session\"] is True\n55     assert kwargs[\"env_data_opt_out\"] is True\n56     assert kwargs[\"log_level\"] == \"DEBUG\"\n",
+    "col_offset": 4,
+    "end_col_offset": 45,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 55,
+    "line_range": [
+      55
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "55     assert kwargs[\"env_data_opt_out\"] is True\n56     assert kwargs[\"log_level\"] == \"DEBUG\"\n57     assert kwargs[\"fail_safe\"] is True\n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 56,
+    "line_range": [
+      56
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "56     assert kwargs[\"log_level\"] == \"DEBUG\"\n57     assert kwargs[\"fail_safe\"] is True\n58     assert kwargs[\"prefetch_jwt_token\"] is False\n",
+    "col_offset": 4,
+    "end_col_offset": 38,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 57,
+    "line_range": [
+      57
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "57     assert kwargs[\"fail_safe\"] is True\n58     assert kwargs[\"prefetch_jwt_token\"] is False\n59     assert kwargs[\"exporter_endpoint\"] == \"https://custom-exporter.com\"\n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 58,
+    "line_range": [
+      58
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "58     assert kwargs[\"prefetch_jwt_token\"] is False\n59     assert kwargs[\"exporter_endpoint\"] == \"https://custom-exporter.com\"\n60 \n",
+    "col_offset": 4,
+    "end_col_offset": 71,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 59,
+    "line_range": [
+      59
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "90     # Check that the config was updated correctly\n91     assert client.config.api_key == \"test-key\"\n92     assert client.config.endpoint == agentops_config.endpoint\n",
+    "col_offset": 4,
+    "end_col_offset": 46,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 91,
+    "line_range": [
+      91
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "91     assert client.config.api_key == \"test-key\"\n92     assert client.config.endpoint == agentops_config.endpoint\n93     assert client.config.max_wait_time == 1000\n",
+    "col_offset": 4,
+    "end_col_offset": 61,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 92,
+    "line_range": [
+      92
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "92     assert client.config.endpoint == agentops_config.endpoint\n93     assert client.config.max_wait_time == 1000\n94     assert client.config.max_queue_size == 200\n",
+    "col_offset": 4,
+    "end_col_offset": 46,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 93,
+    "line_range": [
+      93
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "93     assert client.config.max_wait_time == 1000\n94     assert client.config.max_queue_size == 200\n95     assert \"tag1\" in client.config.default_tags\n",
+    "col_offset": 4,
+    "end_col_offset": 46,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 94,
+    "line_range": [
+      94
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "94     assert client.config.max_queue_size == 200\n95     assert \"tag1\" in client.config.default_tags\n96     assert \"tag2\" in client.config.default_tags\n",
+    "col_offset": 4,
+    "end_col_offset": 47,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 95,
+    "line_range": [
+      95
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "95     assert \"tag1\" in client.config.default_tags\n96     assert \"tag2\" in client.config.default_tags\n97     assert client.config.instrument_llm_calls is False\n",
+    "col_offset": 4,
+    "end_col_offset": 47,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 96,
+    "line_range": [
+      96
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "96     assert \"tag2\" in client.config.default_tags\n97     assert client.config.instrument_llm_calls is False\n98     assert client.config.auto_start_session is False\n",
+    "col_offset": 4,
+    "end_col_offset": 54,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 97,
+    "line_range": [
+      97
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "97     assert client.config.instrument_llm_calls is False\n98     assert client.config.auto_start_session is False\n99     assert client.config.auto_init is False\n",
+    "col_offset": 4,
+    "end_col_offset": 52,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 98,
+    "line_range": [
+      98
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "98     assert client.config.auto_start_session is False\n99     assert client.config.auto_init is False\n100     assert client.config.skip_auto_end_session is True\n",
+    "col_offset": 4,
+    "end_col_offset": 43,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 99,
+    "line_range": [
+      99
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "99     assert client.config.auto_init is False\n100     assert client.config.skip_auto_end_session is True\n101     assert client.config.env_data_opt_out is True\n",
+    "col_offset": 4,
+    "end_col_offset": 54,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 100,
+    "line_range": [
+      100
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "100     assert client.config.skip_auto_end_session is True\n101     assert client.config.env_data_opt_out is True\n102     assert client.config.log_level == \"DEBUG\"\n",
+    "col_offset": 4,
+    "end_col_offset": 49,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 101,
+    "line_range": [
+      101
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "101     assert client.config.env_data_opt_out is True\n102     assert client.config.log_level == \"DEBUG\"\n103     assert client.config.fail_safe is True\n",
+    "col_offset": 4,
+    "end_col_offset": 45,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 102,
+    "line_range": [
+      102
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "102     assert client.config.log_level == \"DEBUG\"\n103     assert client.config.fail_safe is True\n104     assert client.config.prefetch_jwt_token is False\n",
+    "col_offset": 4,
+    "end_col_offset": 42,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 103,
+    "line_range": [
+      103
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "103     assert client.config.fail_safe is True\n104     assert client.config.prefetch_jwt_token is False\n105     assert client.config.exporter_endpoint == \"https://custom-exporter.com\"\n",
+    "col_offset": 4,
+    "end_col_offset": 52,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 104,
+    "line_range": [
+      104
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "104     assert client.config.prefetch_jwt_token is False\n105     assert client.config.exporter_endpoint == \"https://custom-exporter.com\"\n106 \n",
+    "col_offset": 4,
+    "end_col_offset": 75,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 105,
+    "line_range": [
+      105
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "119     args, kwargs = mock_config.call_args\n120     assert kwargs[\"api_key\"] == \"minimal-key\"\n121 \n",
+    "col_offset": 4,
+    "end_col_offset": 45,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 120,
+    "line_range": [
+      120
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "122     # Check that the config was updated correctly\n123     assert client.config.api_key == \"minimal-key\"\n124 \n",
+    "col_offset": 4,
+    "end_col_offset": 49,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 123,
+    "line_range": [
+      123
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "142     client = agentops.get_client()\n143     assert client.config.api_key == \"env-api-key\"\n144     assert client.config.endpoint == \"https://env-endpoint.com\"\n",
+    "col_offset": 4,
+    "end_col_offset": 49,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 143,
+    "line_range": [
+      143
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "143     assert client.config.api_key == \"env-api-key\"\n144     assert client.config.endpoint == \"https://env-endpoint.com\"\n145     assert client.config.max_wait_time == 2000\n",
+    "col_offset": 4,
+    "end_col_offset": 63,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 144,
+    "line_range": [
+      144
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "144     assert client.config.endpoint == \"https://env-endpoint.com\"\n145     assert client.config.max_wait_time == 2000\n146     assert client.config.max_queue_size == 300\n",
+    "col_offset": 4,
+    "end_col_offset": 46,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 145,
+    "line_range": [
+      145
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "145     assert client.config.max_wait_time == 2000\n146     assert client.config.max_queue_size == 300\n147     assert client.config.instrument_llm_calls is False\n",
+    "col_offset": 4,
+    "end_col_offset": 46,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 146,
+    "line_range": [
+      146
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "146     assert client.config.max_queue_size == 300\n147     assert client.config.instrument_llm_calls is False\n148 \n",
+    "col_offset": 4,
+    "end_col_offset": 54,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 147,
+    "line_range": [
+      147
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "160     # Verify the kwargs that were passed to configure\n161     assert kwargs[\"api_key\"] == \"explicit-api-key\"\n162     assert kwargs[\"endpoint\"] == \"https://explicit-endpoint.com\"\n",
+    "col_offset": 4,
+    "end_col_offset": 50,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 161,
+    "line_range": [
+      161
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "161     assert kwargs[\"api_key\"] == \"explicit-api-key\"\n162     assert kwargs[\"endpoint\"] == \"https://explicit-endpoint.com\"\n163     assert kwargs[\"max_queue_size\"] == 999\n",
+    "col_offset": 4,
+    "end_col_offset": 64,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 162,
+    "line_range": [
+      162
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "162     assert kwargs[\"endpoint\"] == \"https://explicit-endpoint.com\"\n163     assert kwargs[\"max_queue_size\"] == 999\n164     assert \"max_wait_time\" not in kwargs or kwargs['max_wait_time'] is None # Was not explicitly set or is None\n",
+    "col_offset": 4,
+    "end_col_offset": 42,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 163,
+    "line_range": [
+      163
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "163     assert kwargs[\"max_queue_size\"] == 999\n164     assert \"max_wait_time\" not in kwargs or kwargs['max_wait_time'] is None # Was not explicitly set or is None\n165 \n",
+    "col_offset": 4,
+    "end_col_offset": 75,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 164,
+    "line_range": [
+      164
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "167     client = agentops.get_client()\n168     assert client.config.api_key == \"explicit-api-key\"  # Overridden by kwarg\n169     assert client.config.endpoint == \"https://explicit-endpoint.com\"  # Overridden by kwarg\n",
+    "col_offset": 4,
+    "end_col_offset": 54,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 168,
+    "line_range": [
+      168
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "168     assert client.config.api_key == \"explicit-api-key\"  # Overridden by kwarg\n169     assert client.config.endpoint == \"https://explicit-endpoint.com\"  # Overridden by kwarg\n170     assert client.config.max_queue_size == 999  # Overridden by kwarg\n",
+    "col_offset": 4,
+    "end_col_offset": 68,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 169,
+    "line_range": [
+      169
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "169     assert client.config.endpoint == \"https://explicit-endpoint.com\"  # Overridden by kwarg\n170     assert client.config.max_queue_size == 999  # Overridden by kwarg\n171     assert client.config.max_wait_time == 2000  # From agentops_config/env\n",
+    "col_offset": 4,
+    "end_col_offset": 46,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 170,
+    "line_range": [
+      170
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "170     assert client.config.max_queue_size == 999  # Overridden by kwarg\n171     assert client.config.max_wait_time == 2000  # From agentops_config/env\n172 \n",
+    "col_offset": 4,
+    "end_col_offset": 46,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 171,
+    "line_range": [
+      171
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "186     client = agentops.get_client()\n187     assert client.config.instrument_llm_calls is True\n",
+    "col_offset": 4,
+    "end_col_offset": 53,
+    "filename": "./tests/unit/test_agentops_init.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 187,
+    "line_range": [
+      187
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

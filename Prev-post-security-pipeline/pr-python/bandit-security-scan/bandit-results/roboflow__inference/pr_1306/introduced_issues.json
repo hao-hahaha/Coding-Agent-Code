@@ -1,0 +1,82 @@
+[
+  {
+    "code": "69 \n70     assert len(result) == 1\n71     assert set(result[0].keys()) == {\"json_parser\", \"model_predictions\"}\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/workflows/integration_tests/execution/test_workflow_json_parser_config.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 70,
+    "line_range": [
+      70
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "70     assert len(result) == 1\n71     assert set(result[0].keys()) == {\"json_parser\", \"model_predictions\"}\n72     assert result[0][\"json_parser\"] == \"yolov8n-640\"\n",
+    "col_offset": 4,
+    "end_col_offset": 72,
+    "filename": "./tests/workflows/integration_tests/execution/test_workflow_json_parser_config.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 71,
+    "line_range": [
+      71
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "71     assert set(result[0].keys()) == {\"json_parser\", \"model_predictions\"}\n72     assert result[0][\"json_parser\"] == \"yolov8n-640\"\n73     assert isinstance(result[0][\"model_predictions\"], sv.Detections)\n",
+    "col_offset": 4,
+    "end_col_offset": 52,
+    "filename": "./tests/workflows/integration_tests/execution/test_workflow_json_parser_config.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 72,
+    "line_range": [
+      72
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "72     assert result[0][\"json_parser\"] == \"yolov8n-640\"\n73     assert isinstance(result[0][\"model_predictions\"], sv.Detections)\n",
+    "col_offset": 4,
+    "end_col_offset": 68,
+    "filename": "./tests/workflows/integration_tests/execution/test_workflow_json_parser_config.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 73,
+    "line_range": [
+      73
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

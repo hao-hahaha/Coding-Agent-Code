@@ -1,0 +1,209 @@
+[
+  {
+    "code": "86         import shutil\n87         import subprocess\n88         import tempfile\n",
+    "col_offset": 8,
+    "end_col_offset": 25,
+    "filename": "./src/simulation/mats_ops.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 87,
+    "line_range": [
+      87
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "92                 Path(\n93                     subprocess.check_output([\"git\", \"rev-parse\", \"--show-toplevel\"], text=True).strip()\n94                 )\n",
+    "col_offset": 20,
+    "end_col_offset": 95,
+    "filename": "./src/simulation/mats_ops.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 93,
+    "line_range": [
+      93
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "92                 Path(\n93                     subprocess.check_output([\"git\", \"rev-parse\", \"--show-toplevel\"], text=True).strip()\n94                 )\n",
+    "col_offset": 20,
+    "end_col_offset": 95,
+    "filename": "./src/simulation/mats_ops.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 93,
+    "line_range": [
+      93
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "100             try:\n101                 subprocess.run(\n102                     [\"git\", \"clone\", \"--local\", str(root), tmp],\n103                     check=True,\n104                     stdout=subprocess.DEVNULL,\n105                     stderr=subprocess.DEVNULL,\n106                 )\n107                 apply = subprocess.run(\n",
+    "col_offset": 16,
+    "end_col_offset": 17,
+    "filename": "./src/simulation/mats_ops.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 101,
+    "line_range": [
+      101,
+      102,
+      103,
+      104,
+      105,
+      106
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "100             try:\n101                 subprocess.run(\n102                     [\"git\", \"clone\", \"--local\", str(root), tmp],\n103                     check=True,\n104                     stdout=subprocess.DEVNULL,\n105                     stderr=subprocess.DEVNULL,\n106                 )\n107                 apply = subprocess.run(\n",
+    "col_offset": 16,
+    "end_col_offset": 17,
+    "filename": "./src/simulation/mats_ops.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 101,
+    "line_range": [
+      101,
+      102,
+      103,
+      104,
+      105,
+      106
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "106                 )\n107                 apply = subprocess.run(\n108                     [\"git\", \"apply\", \"-\"],\n109                     input=patch.encode(),\n110                     cwd=tmp,\n111                     stdout=subprocess.DEVNULL,\n112                     stderr=subprocess.DEVNULL,\n113                 )\n114                 if apply.returncode != 0:\n",
+    "col_offset": 24,
+    "end_col_offset": 17,
+    "filename": "./src/simulation/mats_ops.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 107,
+    "line_range": [
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "106                 )\n107                 apply = subprocess.run(\n108                     [\"git\", \"apply\", \"-\"],\n109                     input=patch.encode(),\n110                     cwd=tmp,\n111                     stdout=subprocess.DEVNULL,\n112                     stderr=subprocess.DEVNULL,\n113                 )\n114                 if apply.returncode != 0:\n",
+    "col_offset": 24,
+    "end_col_offset": 17,
+    "filename": "./src/simulation/mats_ops.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 107,
+    "line_range": [
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "124                         continue\n125                     proc = subprocess.run(\n126                         cmd,\n127                         cwd=tmp,\n128                         stdout=subprocess.DEVNULL,\n129                         stderr=subprocess.DEVNULL,\n130                     )\n131                     if proc.returncode != 0:\n",
+    "col_offset": 27,
+    "end_col_offset": 21,
+    "filename": "./src/simulation/mats_ops.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 125,
+    "line_range": [
+      125,
+      126,
+      127,
+      128,
+      129,
+      130
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "16     diff = _read(\"malformed_patch.diff\")\n17     assert not is_patch_valid(diff)\n",
+    "col_offset": 4,
+    "end_col_offset": 35,
+    "filename": "./tests/test_patch_validation.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 17,
+    "line_range": [
+      17
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

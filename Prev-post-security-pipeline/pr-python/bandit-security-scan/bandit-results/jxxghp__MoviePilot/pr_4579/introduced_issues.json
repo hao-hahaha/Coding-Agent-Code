@@ -1,0 +1,122 @@
+[
+  {
+    "code": "218                 import random\n219                 all_objects = random.sample(all_objects, self._max_objects_to_analyze)\n220                 logger.info(f\"对象数量过多，采样分析 {self._max_objects_to_analyze} 个对象\")\n",
+    "col_offset": 30,
+    "end_col_offset": 86,
+    "filename": "./app/helper/memory.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 219,
+    "line_range": [
+      219
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "301                     import random\n302                     all_objects = random.sample(all_objects, self._max_objects_to_analyze)\n303                 \n",
+    "col_offset": 34,
+    "end_col_offset": 90,
+    "filename": "./app/helper/memory.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 302,
+    "line_range": [
+      302
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "398                     import random\n399                     all_objects = random.sample(all_objects, self._max_objects_to_analyze)\n400 \n",
+    "col_offset": 34,
+    "end_col_offset": 90,
+    "filename": "./app/helper/memory.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 399,
+    "line_range": [
+      399
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "647             import random\n648             all_objects = random.sample(all_objects, self._max_objects_to_analyze)\n649             f.write(f\"对象数量过多，采样分析 {self._max_objects_to_analyze} 个对象\\n\\n\")\n",
+    "col_offset": 26,
+    "end_col_offset": 82,
+    "filename": "./app/helper/memory.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 648,
+    "line_range": [
+      648
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "737                 import random\n738                 all_objects = random.sample(all_objects, self._max_objects_to_analyze)\n739             \n",
+    "col_offset": 30,
+    "end_col_offset": 86,
+    "filename": "./app/helper/memory.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 738,
+    "line_range": [
+      738
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "842                 import random\n843                 all_objects = random.sample(all_objects, 10000)\n844             \n",
+    "col_offset": 30,
+    "end_col_offset": 63,
+    "filename": "./app/helper/memory.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 843,
+    "line_range": [
+      843
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  }
+]

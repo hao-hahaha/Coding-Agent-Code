@@ -1,0 +1,562 @@
+[
+  {
+    "code": "42     # Check that we have the expected structure\n43     assert len(interdeps.dependencies) == 1  # measurement depends on del_param_1\n44     assert len(interdeps.inferences) == 1  # del_param_1 inferred from dummy_dac_ch1\n",
+    "col_offset": 4,
+    "end_col_offset": 43,
+    "filename": "./tests/dataset/measurement/test_inferred_parameters_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 43,
+    "line_range": [
+      43
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "43     assert len(interdeps.dependencies) == 1  # measurement depends on del_param_1\n44     assert len(interdeps.inferences) == 1  # del_param_1 inferred from dummy_dac_ch1\n45     assert len(interdeps.standalones) == 0  # there are no standalone parameters\n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./tests/dataset/measurement/test_inferred_parameters_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 44,
+    "line_range": [
+      44
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "44     assert len(interdeps.inferences) == 1  # del_param_1 inferred from dummy_dac_ch1\n45     assert len(interdeps.standalones) == 0  # there are no standalone parameters\n46 \n",
+    "col_offset": 4,
+    "end_col_offset": 42,
+    "filename": "./tests/dataset/measurement/test_inferred_parameters_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 45,
+    "line_range": [
+      45
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "69     expected_names = {\"measurement\", \"del_param_1\", \"dummy_dac_ch1\"}\n70     assert collected_names == expected_names, (\n71         f\"Expected {expected_names}, got {collected_names}\"\n72     )\n73 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/measurement/test_inferred_parameters_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 70,
+    "line_range": [
+      70,
+      71,
+      72
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "115     # All top level parameters should be in the dataset\n116     assert \"standalone\" in param_data, (\n117         \"standalone parameter should be in parameter data\"\n118     )\n119     assert \"del_param_1\" in param_data, \"del_param_1 should be in parameter data\"\n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/measurement/test_inferred_parameters_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 116,
+    "line_range": [
+      116,
+      117,
+      118
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "118     )\n119     assert \"del_param_1\" in param_data, \"del_param_1 should be in parameter data\"\n120 \n",
+    "col_offset": 4,
+    "end_col_offset": 81,
+    "filename": "./tests/dataset/measurement/test_inferred_parameters_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 119,
+    "line_range": [
+      119
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "122 \n123     assert len(param_data[\"standalone\"][\"standalone\"]) == 1\n124     assert len(param_data[\"del_param_1\"]) == 2, (\n",
+    "col_offset": 4,
+    "end_col_offset": 59,
+    "filename": "./tests/dataset/measurement/test_inferred_parameters_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 123,
+    "line_range": [
+      123
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "123     assert len(param_data[\"standalone\"][\"standalone\"]) == 1\n124     assert len(param_data[\"del_param_1\"]) == 2, (\n125         \"del_param_1 tree should have two entries: del_param_1 and dummy_dac_ch1\"\n126     )\n127     assert len(param_data[\"del_param_1\"][\"del_param_1\"]) == 1\n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/measurement/test_inferred_parameters_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 124,
+    "line_range": [
+      124,
+      125,
+      126
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "126     )\n127     assert len(param_data[\"del_param_1\"][\"del_param_1\"]) == 1\n128     assert len(param_data[\"del_param_1\"][\"dummy_dac_ch1\"]) == 1\n",
+    "col_offset": 4,
+    "end_col_offset": 61,
+    "filename": "./tests/dataset/measurement/test_inferred_parameters_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 127,
+    "line_range": [
+      127
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "127     assert len(param_data[\"del_param_1\"][\"del_param_1\"]) == 1\n128     assert len(param_data[\"del_param_1\"][\"dummy_dac_ch1\"]) == 1\n129 \n",
+    "col_offset": 4,
+    "end_col_offset": 63,
+    "filename": "./tests/dataset/measurement/test_inferred_parameters_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 128,
+    "line_range": [
+      128
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "174     # All top level parameters should be in the dataset\n175     assert \"meas_parameter\" in param_data, \"meas_parameter should be in parameter data\"\n176     assert len(param_data) == 1\n",
+    "col_offset": 4,
+    "end_col_offset": 87,
+    "filename": "./tests/dataset/measurement/test_inferred_parameters_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 175,
+    "line_range": [
+      175
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "175     assert \"meas_parameter\" in param_data, \"meas_parameter should be in parameter data\"\n176     assert len(param_data) == 1\n177 \n",
+    "col_offset": 4,
+    "end_col_offset": 31,
+    "filename": "./tests/dataset/measurement/test_inferred_parameters_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 176,
+    "line_range": [
+      176
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "178     meas_param_data = param_data[\"meas_parameter\"]\n179     assert len(meas_param_data) == 3, (\n180         \"meas_parameter tree should have three entries: meas_parameter, del_param_1, and dummy_dac_ch1\"\n181     )\n182     assert len(meas_param_data[\"meas_parameter\"]) == num_points, (\n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/measurement/test_inferred_parameters_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 179,
+    "line_range": [
+      179,
+      180,
+      181
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "181     )\n182     assert len(meas_param_data[\"meas_parameter\"]) == num_points, (\n183         \"meas_parameter should have 10 entries for the 10 setpoints\"\n184     )\n185     assert len(meas_param_data[\"del_param_1\"]) == num_points, (\n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/measurement/test_inferred_parameters_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 182,
+    "line_range": [
+      182,
+      183,
+      184
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "184     )\n185     assert len(meas_param_data[\"del_param_1\"]) == num_points, (\n186         \"del_param_1 should have 10 entries for the 10 setpoints\"\n187     )\n188     assert len(meas_param_data[\"dummy_dac_ch1\"]) == num_points, (\n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/measurement/test_inferred_parameters_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 185,
+    "line_range": [
+      185,
+      186,
+      187
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "187     )\n188     assert len(meas_param_data[\"dummy_dac_ch1\"]) == num_points, (\n189         \"dummy_dac_ch1 should have 10 entries for the 10 setpoints\"\n190     )\n191 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/measurement/test_inferred_parameters_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 188,
+    "line_range": [
+      188,
+      189,
+      190
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "195     # and del_param_1 and dummy_dac_ch1 as coordinates\n196     assert \"meas_parameter\" in xarr.data_vars\n197     assert \"del_param_1\" in xarr.coords\n",
+    "col_offset": 4,
+    "end_col_offset": 45,
+    "filename": "./tests/dataset/measurement/test_inferred_parameters_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 196,
+    "line_range": [
+      196
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "196     assert \"meas_parameter\" in xarr.data_vars\n197     assert \"del_param_1\" in xarr.coords\n198 \n",
+    "col_offset": 4,
+    "end_col_offset": 39,
+    "filename": "./tests/dataset/measurement/test_inferred_parameters_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 197,
+    "line_range": [
+      197
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "199     # inferred parameters are not currently exported\n200     assert \"dummy_dac_ch1\" not in xarr.coords\n201 \n",
+    "col_offset": 4,
+    "end_col_offset": 45,
+    "filename": "./tests/dataset/measurement/test_inferred_parameters_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 200,
+    "line_range": [
+      200
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "202     # Check dimensions\n203     assert xarr.meas_parameter.dims == (\"del_param_1\",)\n204     assert len(xarr.meas_parameter.values) == num_points\n",
+    "col_offset": 4,
+    "end_col_offset": 55,
+    "filename": "./tests/dataset/measurement/test_inferred_parameters_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 203,
+    "line_range": [
+      203
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "203     assert xarr.meas_parameter.dims == (\"del_param_1\",)\n204     assert len(xarr.meas_parameter.values) == num_points\n205 \n",
+    "col_offset": 4,
+    "end_col_offset": 56,
+    "filename": "./tests/dataset/measurement/test_inferred_parameters_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 204,
+    "line_range": [
+      204
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "209     # Check that all parameters are present in the DataFrame\n210     assert \"meas_parameter\" in df.columns\n211     assert df.index.name == \"del_param_1\"\n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./tests/dataset/measurement/test_inferred_parameters_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 210,
+    "line_range": [
+      210
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "210     assert \"meas_parameter\" in df.columns\n211     assert df.index.name == \"del_param_1\"\n212     assert \"dummy_dac_ch1\" not in df.columns\n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./tests/dataset/measurement/test_inferred_parameters_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 211,
+    "line_range": [
+      211
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "211     assert df.index.name == \"del_param_1\"\n212     assert \"dummy_dac_ch1\" not in df.columns\n213 \n",
+    "col_offset": 4,
+    "end_col_offset": 44,
+    "filename": "./tests/dataset/measurement/test_inferred_parameters_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 212,
+    "line_range": [
+      212
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "214     # Check that we have the right number of rows\n215     assert len(df) == num_points\n216 \n",
+    "col_offset": 4,
+    "end_col_offset": 32,
+    "filename": "./tests/dataset/measurement/test_inferred_parameters_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 215,
+    "line_range": [
+      215
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "269 \n270     assert collected_names == expected_names, (\n271         f\"y1 tree should only contain x and y1, but got {collected_names}. \"\n272         f\"This suggests y2 was incorrectly included due to cross-contamination.\"\n273     )\n274 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/measurement/test_inferred_parameters_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 270,
+    "line_range": [
+      270,
+      271,
+      272,
+      273
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "288 \n289     assert collected_names == expected_names, (\n290         f\"y2 tree should only contain x and y2, but got {collected_names}. \"\n291         f\"This suggests y1 was incorrectly included due to cross-contamination.\"\n292     )\n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/measurement/test_inferred_parameters_fix.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 289,
+    "line_range": [
+      289,
+      290,
+      291,
+      292
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

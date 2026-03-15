@@ -1,0 +1,285 @@
+[
+  {
+    "check_id": "python.lang.security.audit.exec-detected.exec-detected",
+    "path": "mlflow/genai/scorers/scorer_utils.py",
+    "start": {
+      "line": 131,
+      "col": 9,
+      "offset": 4565
+    },
+    "end": {
+      "line": 131,
+      "col": 58,
+      "offset": 4614
+    },
+    "extra": {
+      "message": "Detected the use of exec(). exec() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources.",
+      "metadata": {
+        "source-rule-url": "https://bandit.readthedocs.io/en/latest/plugins/b102_exec_used.html",
+        "cwe": [
+          "CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+        ],
+        "owasp": [
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "asvs": {
+          "control_id": "5.2.4 Dyanmic Code Execution Features",
+          "control_url": "https://github.com/OWASP/ASVS/blob/master/4.0/en/0x13-V5-Validation-Sanitization-Encoding.md#v52-sanitization-and-sandboxing-requirements",
+          "section": "V5: Validation, Sanitization and Encoding Verification Requirements",
+          "version": "4"
+        },
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "references": [
+          "https://owasp.org/Top10/A03_2021-Injection"
+        ],
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "HIGH",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Code Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.audit.exec-detected.exec-detected",
+        "shortlink": "https://sg.run/ndRX"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.insecure-hash-algorithms.insecure-hash-algorithm-sha1",
+    "path": "mlflow/pyfunc/__init__.py",
+    "start": {
+      "line": 2716,
+      "col": 25,
+      "offset": 112395
+    },
+    "end": {
+      "line": 2716,
+      "col": 80,
+      "offset": 112450
+    },
+    "extra": {
+      "message": "Detected SHA1 hash algorithm which is considered insecure. SHA1 is not collision resistant and is therefore not suitable as a cryptographic signature. Use SHA256 or SHA3 instead.",
+      "fix": "hashlib.sha256(model_uri.encode(), usedforsecurity=False)",
+      "metadata": {
+        "source-rule-url": "https://github.com/PyCQA/bandit/blob/d5f8fa0d89d7b11442fc6ec80ca42953974354c8/bandit/blacklists/calls.py#L59",
+        "cwe": [
+          "CWE-327: Use of a Broken or Risky Cryptographic Algorithm"
+        ],
+        "owasp": [
+          "A03:2017 - Sensitive Data Exposure",
+          "A02:2021 - Cryptographic Failures",
+          "A04:2025 - Cryptographic Failures"
+        ],
+        "bandit-code": "B303",
+        "asvs": {
+          "control_id": "6.2.2 Insecure Custom Algorithm",
+          "control_url": "https://github.com/OWASP/ASVS/blob/master/4.0/en/0x14-V6-Cryptography.md#v62-algorithms",
+          "section": "V6 Stored Cryptography Verification Requirements",
+          "version": "4"
+        },
+        "references": [
+          "https://www.schneier.com/blog/archives/2012/10/when_will_we_se.html",
+          "https://www.trendmicro.com/vinfo/us/security/news/vulnerabilities-and-exploits/sha-1-collision-signals-the-end-of-the-algorithm-s-viability",
+          "http://2012.sharcs.org/slides/stevens.pdf",
+          "https://pycryptodome.readthedocs.io/en/latest/src/hash/sha3_256.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "subcategory": [
+          "vuln"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "MEDIUM",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Cryptographic Issues"
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.insecure-hash-algorithms.insecure-hash-algorithm-sha1",
+        "shortlink": "https://sg.run/ydYx"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.flask.security.audit.render-template-string.render-template-string",
+    "path": "mlflow/server/auth/__init__.py",
+    "start": {
+      "line": 873,
+      "col": 12,
+      "offset": 29912
+    },
+    "end": {
+      "line": 887,
+      "col": 6,
+      "offset": 30239
+    },
+    "extra": {
+      "message": "Found a template created with string formatting. This is susceptible to server-side template injection and cross-site scripting attacks.",
+      "metadata": {
+        "cwe": [
+          "CWE-96: Improper Neutralization of Directives in Statically Saved Code ('Static Code Injection')"
+        ],
+        "owasp": [
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://nvisium.com/blog/2016/03/09/exploring-ssti-in-flask-jinja2.html"
+        ],
+        "category": "security",
+        "technology": [
+          "flask"
+        ],
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Code Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.flask.security.audit.render-template-string.render-template-string",
+        "shortlink": "https://sg.run/8yjE"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.flask.security.audit.render-template-string.render-template-string",
+    "path": "mlflow/server/auth/__init__.py",
+    "start": {
+      "line": 891,
+      "col": 12,
+      "offset": 30267
+    },
+    "end": {
+      "line": 963,
+      "col": 6,
+      "offset": 31844
+    },
+    "extra": {
+      "message": "Found a template created with string formatting. This is susceptible to server-side template injection and cross-site scripting attacks.",
+      "metadata": {
+        "cwe": [
+          "CWE-96: Improper Neutralization of Directives in Statically Saved Code ('Static Code Injection')"
+        ],
+        "owasp": [
+          "A03:2021 - Injection",
+          "A05:2025 - Injection"
+        ],
+        "references": [
+          "https://nvisium.com/blog/2016/03/09/exploring-ssti-in-flask-jinja2.html"
+        ],
+        "category": "security",
+        "technology": [
+          "flask"
+        ],
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Code Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.flask.security.audit.render-template-string.render-template-string",
+        "shortlink": "https://sg.run/8yjE"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.insecure-hash-algorithms.insecure-hash-algorithm-sha1",
+    "path": "mlflow/utils/environment.py",
+    "start": {
+      "line": 894,
+      "col": 24,
+      "offset": 33434
+    },
+    "end": {
+      "line": 894,
+      "col": 78,
+      "offset": 33488
+    },
+    "extra": {
+      "message": "Detected SHA1 hash algorithm which is considered insecure. SHA1 is not collision resistant and is therefore not suitable as a cryptographic signature. Use SHA256 or SHA3 instead.",
+      "fix": "hashlib.sha256(s.encode(\"utf-8\"), usedforsecurity=False)",
+      "metadata": {
+        "source-rule-url": "https://github.com/PyCQA/bandit/blob/d5f8fa0d89d7b11442fc6ec80ca42953974354c8/bandit/blacklists/calls.py#L59",
+        "cwe": [
+          "CWE-327: Use of a Broken or Risky Cryptographic Algorithm"
+        ],
+        "owasp": [
+          "A03:2017 - Sensitive Data Exposure",
+          "A02:2021 - Cryptographic Failures",
+          "A04:2025 - Cryptographic Failures"
+        ],
+        "bandit-code": "B303",
+        "asvs": {
+          "control_id": "6.2.2 Insecure Custom Algorithm",
+          "control_url": "https://github.com/OWASP/ASVS/blob/master/4.0/en/0x14-V6-Cryptography.md#v62-algorithms",
+          "section": "V6 Stored Cryptography Verification Requirements",
+          "version": "4"
+        },
+        "references": [
+          "https://www.schneier.com/blog/archives/2012/10/when_will_we_se.html",
+          "https://www.trendmicro.com/vinfo/us/security/news/vulnerabilities-and-exploits/sha-1-collision-signals-the-end-of-the-algorithm-s-viability",
+          "http://2012.sharcs.org/slides/stevens.pdf",
+          "https://pycryptodome.readthedocs.io/en/latest/src/hash/sha3_256.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "subcategory": [
+          "vuln"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "MEDIUM",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Cryptographic Issues"
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.insecure-hash-algorithms.insecure-hash-algorithm-sha1",
+        "shortlink": "https://sg.run/ydYx"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  }
+]

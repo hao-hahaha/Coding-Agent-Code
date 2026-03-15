@@ -1,0 +1,1359 @@
+[
+  {
+    "code": "5 \n6 import subprocess\n7 from pathlib import Path\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tasks/adaptive-rejection-sampler/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 6,
+    "line_range": [
+      6
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "17     ars_file = app_dir / \"ars.R\"\n18     assert ars_file.exists(), (\n19         \"No ars.R file found. Task requires implementation in a file named 'ars.R'\"\n20     )\n21     \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tasks/adaptive-rejection-sampler/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 18,
+    "line_range": [
+      18,
+      19,
+      20
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "23     content = ars_file.read_text()\n24     assert (\"ars <-\" in content or \"ars=function\" in content.replace(\" \", \"\")), (\n25         \"No 'ars' function found in ars.R. Task requires a main function named 'ars' \"\n26         \"that implements the adaptive rejection sampler.\"\n27     )\n28 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tasks/adaptive-rejection-sampler/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 24,
+    "line_range": [
+      24,
+      25,
+      26,
+      27
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "70     try:\n71         result = subprocess.run(\n72             [\"Rscript\", str(test_file)],\n73             capture_output=True,\n74             text=True,\n75             cwd=str(app_dir),\n76             timeout=30\n77         )\n78         output = result.stdout + result.stderr\n",
+    "col_offset": 17,
+    "end_col_offset": 9,
+    "filename": "./tasks/adaptive-rejection-sampler/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 71,
+    "line_range": [
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "70     try:\n71         result = subprocess.run(\n72             [\"Rscript\", str(test_file)],\n73             capture_output=True,\n74             text=True,\n75             cwd=str(app_dir),\n76             timeout=30\n77         )\n78         output = result.stdout + result.stderr\n",
+    "col_offset": 17,
+    "end_col_offset": 9,
+    "filename": "./tasks/adaptive-rejection-sampler/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 71,
+    "line_range": [
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "78         output = result.stdout + result.stderr\n79         assert \"PASS\" in output, (\n80             f\"Failed to generate valid normal samples. Output: {output}\"\n81         )\n82     finally:\n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tasks/adaptive-rejection-sampler/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 79,
+    "line_range": [
+      79,
+      80,
+      81
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "100                 break\n101         except Exception:\n102             continue\n103     \n",
+    "col_offset": 8,
+    "end_col_offset": 20,
+    "filename": "./tasks/adaptive-rejection-sampler/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Continue detected.",
+    "line_number": 101,
+    "line_range": [
+      101,
+      102
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b112_try_except_continue.html",
+    "test_id": "B112",
+    "test_name": "try_except_continue"
+  },
+  {
+    "code": "103     \n104     assert test_found, (\n105         \"No 'test' function found. Task requires a function named 'test' \"\n106         \"that carries out formal testing of the implementation.\"\n107     )\n108 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tasks/adaptive-rejection-sampler/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 104,
+    "line_range": [
+      104,
+      105,
+      106,
+      107
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "127     try:\n128         result = subprocess.run(\n129             [\"Rscript\", str(test_file)],\n130             capture_output=True,\n131             text=True,\n132             cwd=str(app_dir),\n133             timeout=60\n134         )\n135         output = result.stdout + result.stderr\n",
+    "col_offset": 17,
+    "end_col_offset": 9,
+    "filename": "./tasks/adaptive-rejection-sampler/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 128,
+    "line_range": [
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "127     try:\n128         result = subprocess.run(\n129             [\"Rscript\", str(test_file)],\n130             capture_output=True,\n131             text=True,\n132             cwd=str(app_dir),\n133             timeout=60\n134         )\n135         output = result.stdout + result.stderr\n",
+    "col_offset": 17,
+    "end_col_offset": 9,
+    "filename": "./tasks/adaptive-rejection-sampler/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 128,
+    "line_range": [
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "137         # Check for required output format: \"TEST_NAME: PASS\" or \"TEST_NAME: FAIL\"\n138         assert (\": PASS\" in output or \": FAIL\" in output), (\n139             \"Test function must output results in format \"\n140             \"'TEST_NAME: PASS' or 'TEST_NAME: FAIL'\"\n141         )\n142         \n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tasks/adaptive-rejection-sampler/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 138,
+    "line_range": [
+      138,
+      139,
+      140,
+      141
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "143         # Check for mean/std statistics in output\n144         assert (\"mean\" in output.lower()), (\n145             \"Test output should include mean statistics\"\n146         )\n147     finally:\n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tasks/adaptive-rejection-sampler/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 144,
+    "line_range": [
+      144,
+      145,
+      146
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "159     \n160     assert normal_file.exists() or exp_file.exists(), (\n161         \"No sample files found. Task requires generating 'normal_samples.txt' \"\n162         \"and 'exponential_samples.txt' containing test samples\"\n163     )\n164     \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tasks/adaptive-rejection-sampler/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 160,
+    "line_range": [
+      160,
+      161,
+      162,
+      163
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "167         samples = np.loadtxt(normal_file)\n168         assert len(samples) >= 100, (\n169             \"Normal samples file should contain at least 100 samples\"\n170         )\n171         mean = np.mean(samples)\n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tasks/adaptive-rejection-sampler/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 168,
+    "line_range": [
+      168,
+      169,
+      170
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "172         std = np.std(samples)\n173         assert abs(mean) < 0.5 and 0.5 < std < 1.5, (\n174             f\"Normal samples don't match expected distribution \"\n175             f\"(mean={mean:.3f}, std={std:.3f})\"\n176         )\n177     \n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tasks/adaptive-rejection-sampler/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 173,
+    "line_range": [
+      173,
+      174,
+      175,
+      176
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "179         samples = np.loadtxt(exp_file)\n180         assert len(samples) >= 100, (\n181             \"Exponential samples file should contain at least 100 samples\"\n182         )\n183         assert all(samples >= 0), \"Exponential samples must be non-negative\"\n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tasks/adaptive-rejection-sampler/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 180,
+    "line_range": [
+      180,
+      181,
+      182
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "182         )\n183         assert all(samples >= 0), \"Exponential samples must be non-negative\"\n184 \n",
+    "col_offset": 8,
+    "end_col_offset": 76,
+    "filename": "./tasks/adaptive-rejection-sampler/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 183,
+    "line_range": [
+      183
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "196     \n197     assert function_count >= 3, (\n198         \"Implementation should be modular with at least 3 functions \"\n199         \"(e.g., ars, test, and auxiliary functions)\"\n200     )\n201 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tasks/adaptive-rejection-sampler/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 197,
+    "line_range": [
+      197,
+      198,
+      199,
+      200
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "214     \n215     assert error_count >= 2, (\n216         \"Implementation should include proper error handling \"\n217         \"(e.g., stop(), stopifnot(), tryCatch)\"\n218     )\n219 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tasks/adaptive-rejection-sampler/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 215,
+    "line_range": [
+      215,
+      216,
+      217,
+      218
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "248     try:\n249         result = subprocess.run(\n250             [\"Rscript\", str(test_file)],\n251             capture_output=True,\n252             text=True,\n253             cwd=str(app_dir),\n254             timeout=15\n255         )\n256         output = result.stdout + result.stderr\n",
+    "col_offset": 17,
+    "end_col_offset": 9,
+    "filename": "./tasks/adaptive-rejection-sampler/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 249,
+    "line_range": [
+      249,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "248     try:\n249         result = subprocess.run(\n250             [\"Rscript\", str(test_file)],\n251             capture_output=True,\n252             text=True,\n253             cwd=str(app_dir),\n254             timeout=15\n255         )\n256         output = result.stdout + result.stderr\n",
+    "col_offset": 17,
+    "end_col_offset": 9,
+    "filename": "./tasks/adaptive-rejection-sampler/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 249,
+    "line_range": [
+      249,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "256         output = result.stdout + result.stderr\n257         assert output.count(\"PASS\") >= 1, (\n258             \"Implementation must validate inputs (negative samples, invalid domains)\"\n259         )\n260     finally:\n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tasks/adaptive-rejection-sampler/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 257,
+    "line_range": [
+      257,
+      258,
+      259
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "289     try:\n290         result = subprocess.run(\n291             [\"Rscript\", str(test_file)],\n292             capture_output=True,\n293             text=True,\n294             cwd=str(app_dir),\n295             timeout=15\n296         )\n297         output = result.stdout + result.stderr\n",
+    "col_offset": 17,
+    "end_col_offset": 9,
+    "filename": "./tasks/adaptive-rejection-sampler/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 290,
+    "line_range": [
+      290,
+      291,
+      292,
+      293,
+      294,
+      295,
+      296
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "289     try:\n290         result = subprocess.run(\n291             [\"Rscript\", str(test_file)],\n292             capture_output=True,\n293             text=True,\n294             cwd=str(app_dir),\n295             timeout=15\n296         )\n297         output = result.stdout + result.stderr\n",
+    "col_offset": 17,
+    "end_col_offset": 9,
+    "filename": "./tasks/adaptive-rejection-sampler/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 290,
+    "line_range": [
+      290,
+      291,
+      292,
+      293,
+      294,
+      295,
+      296
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "298         # Implementation should either reject or at least handle non-log-concave\n299         assert (\"PASS\" in output or \"concave\" in output.lower()), (\n300             \"Implementation should check for log-concavity\"\n301         )\n302     finally:\n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tasks/adaptive-rejection-sampler/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 299,
+    "line_range": [
+      299,
+      300,
+      301
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "15 \n16     assert solution_path.exists(), f\"File {solution_path} does not exist\"\n17 \n",
+    "col_offset": 4,
+    "end_col_offset": 73,
+    "filename": "./tasks/classifier-debug/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 16,
+    "line_range": [
+      16
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "24 \n25     assert solution_path.read_text().strip() == \"A\", (\n26         f\"Expected 'A' but got '{solution_path.read_text().strip()}'\"\n27     )\n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tasks/classifier-debug/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 25,
+    "line_range": [
+      25,
+      26,
+      27
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "6 \n7 import subprocess\n8 import time\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tasks/hdfs-deployment/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 7,
+    "line_range": [
+      7
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "25     hadoop_bin = get_hadoop_bin('hadoop')\n26     result = subprocess.run([hadoop_bin, 'version'], capture_output=True, text=True)\n27     assert result.returncode == 0, f\"Hadoop command failed: {result.stderr}\"\n",
+    "col_offset": 13,
+    "end_col_offset": 84,
+    "filename": "./tasks/hdfs-deployment/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 26,
+    "line_range": [
+      26
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "26     result = subprocess.run([hadoop_bin, 'version'], capture_output=True, text=True)\n27     assert result.returncode == 0, f\"Hadoop command failed: {result.stderr}\"\n28     assert \"3.3.6\" in result.stdout, f\"Expected Hadoop 3.3.6, got: {result.stdout}\"\n",
+    "col_offset": 4,
+    "end_col_offset": 76,
+    "filename": "./tasks/hdfs-deployment/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 27,
+    "line_range": [
+      27
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "27     assert result.returncode == 0, f\"Hadoop command failed: {result.stderr}\"\n28     assert \"3.3.6\" in result.stdout, f\"Expected Hadoop 3.3.6, got: {result.stdout}\"\n29 \n",
+    "col_offset": 4,
+    "end_col_offset": 83,
+    "filename": "./tasks/hdfs-deployment/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 28,
+    "line_range": [
+      28
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "32     \"\"\"Test that OpenJDK 11 is installed\"\"\"\n33     result = subprocess.run(['java', '-version'], capture_output=True, text=True)\n34     assert result.returncode == 0, \"Java command not found\"\n",
+    "col_offset": 13,
+    "end_col_offset": 81,
+    "filename": "./tasks/hdfs-deployment/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 33,
+    "line_range": [
+      33
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "32     \"\"\"Test that OpenJDK 11 is installed\"\"\"\n33     result = subprocess.run(['java', '-version'], capture_output=True, text=True)\n34     assert result.returncode == 0, \"Java command not found\"\n",
+    "col_offset": 13,
+    "end_col_offset": 81,
+    "filename": "./tasks/hdfs-deployment/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 33,
+    "line_range": [
+      33
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "33     result = subprocess.run(['java', '-version'], capture_output=True, text=True)\n34     assert result.returncode == 0, \"Java command not found\"\n35     assert \"openjdk version \\\"11\" in result.stderr, \\\n",
+    "col_offset": 4,
+    "end_col_offset": 59,
+    "filename": "./tasks/hdfs-deployment/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 34,
+    "line_range": [
+      34
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "34     assert result.returncode == 0, \"Java command not found\"\n35     assert \"openjdk version \\\"11\" in result.stderr, \\\n36         f\"Expected OpenJDK 11, got: {result.stderr}\"\n37 \n",
+    "col_offset": 4,
+    "end_col_offset": 52,
+    "filename": "./tasks/hdfs-deployment/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 35,
+    "line_range": [
+      35,
+      36
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "41     core_site_path = Path(HADOOP_HOME) / \"etc/hadoop/core-site.xml\"\n42     assert core_site_path.exists(), f\"core-site.xml does not exist at {core_site_path}\"\n43     with open(core_site_path, 'r') as f:\n",
+    "col_offset": 4,
+    "end_col_offset": 87,
+    "filename": "./tasks/hdfs-deployment/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 42,
+    "line_range": [
+      42
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "44         content = f.read()\n45         assert \"hdfs://localhost:9000\" in content, \\\n46             \"core-site.xml does not configure HDFS to listen on port 9000\"\n47     hdfs_site_path = Path(HADOOP_HOME) / \"etc/hadoop/hdfs-site.xml\"\n",
+    "col_offset": 8,
+    "end_col_offset": 74,
+    "filename": "./tasks/hdfs-deployment/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 45,
+    "line_range": [
+      45,
+      46
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "47     hdfs_site_path = Path(HADOOP_HOME) / \"etc/hadoop/hdfs-site.xml\"\n48     assert hdfs_site_path.exists(), f\"hdfs-site.xml does not exist at {hdfs_site_path}\"\n49 \n",
+    "col_offset": 4,
+    "end_col_offset": 87,
+    "filename": "./tasks/hdfs-deployment/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 48,
+    "line_range": [
+      48
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "52     \"\"\"Test that HDFS daemons are running\"\"\"\n53     result = subprocess.run(['jps'], capture_output=True, text=True)\n54     assert result.returncode == 0, \"jps command failed\"\n",
+    "col_offset": 13,
+    "end_col_offset": 68,
+    "filename": "./tasks/hdfs-deployment/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 53,
+    "line_range": [
+      53
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "52     \"\"\"Test that HDFS daemons are running\"\"\"\n53     result = subprocess.run(['jps'], capture_output=True, text=True)\n54     assert result.returncode == 0, \"jps command failed\"\n",
+    "col_offset": 13,
+    "end_col_offset": 68,
+    "filename": "./tasks/hdfs-deployment/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 53,
+    "line_range": [
+      53
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "53     result = subprocess.run(['jps'], capture_output=True, text=True)\n54     assert result.returncode == 0, \"jps command failed\"\n55     jps_output = result.stdout\n",
+    "col_offset": 4,
+    "end_col_offset": 55,
+    "filename": "./tasks/hdfs-deployment/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 54,
+    "line_range": [
+      54
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "55     jps_output = result.stdout\n56     assert \"NameNode\" in jps_output, \"NameNode daemon is not running\"\n57     assert \"DataNode\" in jps_output, \"DataNode daemon is not running\"\n",
+    "col_offset": 4,
+    "end_col_offset": 69,
+    "filename": "./tasks/hdfs-deployment/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 56,
+    "line_range": [
+      56
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "56     assert \"NameNode\" in jps_output, \"NameNode daemon is not running\"\n57     assert \"DataNode\" in jps_output, \"DataNode daemon is not running\"\n58     assert \"SecondaryNameNode\" in jps_output, \"SecondaryNameNode daemon is not running\"\n",
+    "col_offset": 4,
+    "end_col_offset": 69,
+    "filename": "./tasks/hdfs-deployment/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 57,
+    "line_range": [
+      57
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "57     assert \"DataNode\" in jps_output, \"DataNode daemon is not running\"\n58     assert \"SecondaryNameNode\" in jps_output, \"SecondaryNameNode daemon is not running\"\n59 \n",
+    "col_offset": 4,
+    "end_col_offset": 87,
+    "filename": "./tasks/hdfs-deployment/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 58,
+    "line_range": [
+      58
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "63     time.sleep(2)\n64     result = subprocess.run(['netstat', '-tlnp'], capture_output=True, text=True)\n65     assert result.returncode == 0, \"netstat command failed\"\n",
+    "col_offset": 13,
+    "end_col_offset": 81,
+    "filename": "./tasks/hdfs-deployment/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 64,
+    "line_range": [
+      64
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "63     time.sleep(2)\n64     result = subprocess.run(['netstat', '-tlnp'], capture_output=True, text=True)\n65     assert result.returncode == 0, \"netstat command failed\"\n",
+    "col_offset": 13,
+    "end_col_offset": 81,
+    "filename": "./tasks/hdfs-deployment/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 64,
+    "line_range": [
+      64
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "64     result = subprocess.run(['netstat', '-tlnp'], capture_output=True, text=True)\n65     assert result.returncode == 0, \"netstat command failed\"\n66     netstat_output = result.stdout\n",
+    "col_offset": 4,
+    "end_col_offset": 59,
+    "filename": "./tasks/hdfs-deployment/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 65,
+    "line_range": [
+      65
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "66     netstat_output = result.stdout\n67     assert \":9000\" in netstat_output, \"HDFS is not listening on port 9000\"\n68 \n",
+    "col_offset": 4,
+    "end_col_offset": 74,
+    "filename": "./tasks/hdfs-deployment/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 67,
+    "line_range": [
+      67
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "73     hdfs_bin = get_hadoop_bin('hdfs')\n74     result = subprocess.run([hdfs_bin, 'dfsadmin', '-report'], \n75                             capture_output=True, text=True)\n76     assert result.returncode == 0, f\"HDFS cluster is not accessible: {result.stderr}\"\n",
+    "col_offset": 13,
+    "end_col_offset": 59,
+    "filename": "./tasks/hdfs-deployment/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 74,
+    "line_range": [
+      74,
+      75
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "75                             capture_output=True, text=True)\n76     assert result.returncode == 0, f\"HDFS cluster is not accessible: {result.stderr}\"\n77     report_output = result.stdout\n",
+    "col_offset": 4,
+    "end_col_offset": 85,
+    "filename": "./tasks/hdfs-deployment/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 76,
+    "line_range": [
+      76
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "77     report_output = result.stdout\n78     assert \"Live datanodes\" in report_output, \\\n79         \"Functional HDFS cluster report should show live datanodes\"\n80     assert \"Configured Capacity\" in report_output, \\\n",
+    "col_offset": 4,
+    "end_col_offset": 67,
+    "filename": "./tasks/hdfs-deployment/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 78,
+    "line_range": [
+      78,
+      79
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "79         \"Functional HDFS cluster report should show live datanodes\"\n80     assert \"Configured Capacity\" in report_output, \\\n81         \"Functional HDFS cluster report should show configured capacity\"\n82 \n",
+    "col_offset": 4,
+    "end_col_offset": 72,
+    "filename": "./tasks/hdfs-deployment/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 80,
+    "line_range": [
+      80,
+      81
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "98             # Just ensure it's a valid IP and not 0.0.0.0\n99             assert str(ip_obj) != \"0.0.0.0\", (\n100                 f\"homeserver.local resolves to invalid IP: {ip}\"\n",
+    "col_offset": 34,
+    "end_col_offset": 43,
+    "filename": "./tasks/home-server-https/tests/test_outputs.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 605,
+      "link": "https://cwe.mitre.org/data/definitions/605.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible binding to all interfaces.",
+    "line_number": 99,
+    "line_range": [
+      99
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b104_hardcoded_bind_all_interfaces.html",
+    "test_id": "B104",
+    "test_name": "hardcoded_bind_all_interfaces"
+  },
+  {
+    "code": "5 \n6 import subprocess\n7 \n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tasks/qemu-alpine-ssh/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 6,
+    "line_range": [
+      6
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "9 def test_sshpass():\n10     result = subprocess.run(\n11         [\n12             \"sshpass\",\n13             \"-p\",\n14             \"password123\",\n15             \"ssh\",\n16             \"-o\",\n17             \"StrictHostKeyChecking=no\",\n18             \"-p\",\n19             \"2222\",\n20             \"root@localhost\",\n21             \"uname -r\",\n22         ],\n23         capture_output=True,\n24         text=True,\n25         check=True,\n26     )\n27 \n",
+    "col_offset": 13,
+    "end_col_offset": 5,
+    "filename": "./tasks/qemu-alpine-ssh/tests/test_outputs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 10,
+    "line_range": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "1 import subprocess\n2 from typing import Annotated\n3 \n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./terminal_bench/cli/tb/cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 1,
+    "line_range": [
+      1
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "33             f\"docker images --format '{{{{.Size}}}}' {image_name}\",\n34             shell=True,\n35             capture_output=True,\n36             text=True,\n37             check=True,\n38         )\n39         size_str = result.stdout.strip()\n40         if not size_str:\n41             return 0\n",
+    "col_offset": 17,
+    "end_col_offset": 9,
+    "filename": "./terminal_bench/cli/tb/cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "HIGH",
+    "issue_text": "subprocess call with shell=True identified, security issue.",
+    "line_number": 34,
+    "line_range": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+    "test_id": "B602",
+    "test_name": "subprocess_popen_with_shell_equals_true"
+  },
+  {
+    "code": "94                 f\"grep -E '{grep_pattern}'\",\n95                 shell=True,\n96                 capture_output=True,\n97                 text=True,\n98                 check=False,\n99             )\n100 \n101             if result.stdout.strip():\n102                 images = result.stdout.strip().split(\"\\n\")\n103                 image_task = progress.add_task(\n",
+    "col_offset": 21,
+    "end_col_offset": 13,
+    "filename": "./terminal_bench/cli/tb/cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "HIGH",
+    "issue_text": "subprocess call with shell=True identified, security issue.",
+    "line_number": 95,
+    "line_range": [
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+    "test_id": "B602",
+    "test_name": "subprocess_popen_with_shell_equals_true"
+  },
+  {
+    "code": "114                                 f\"docker rmi -f {image.strip()}\",\n115                                 shell=True,\n116                                 check=True,\n117                                 capture_output=True,\n118                             )\n119                             progress.update(image_task, advance=1)\n120                         except subprocess.CalledProcessError:\n121                             progress.update(image_task, advance=1)\n",
+    "col_offset": 28,
+    "end_col_offset": 29,
+    "filename": "./terminal_bench/cli/tb/cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "HIGH",
+    "issue_text": "subprocess call with shell=True identified, security issue.",
+    "line_number": 115,
+    "line_range": [
+      113,
+      114,
+      115,
+      116,
+      117,
+      118
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+    "test_id": "B602",
+    "test_name": "subprocess_popen_with_shell_equals_true"
+  },
+  {
+    "code": "134                 f\"grep -E '{grep_pattern}'\",\n135                 shell=True,\n136                 capture_output=True,\n137                 text=True,\n138                 check=False,\n139             )\n140 \n141             if result.stdout.strip():\n142                 networks = result.stdout.strip().split(\"\\n\")\n143                 network_task = progress.add_task(\n",
+    "col_offset": 21,
+    "end_col_offset": 13,
+    "filename": "./terminal_bench/cli/tb/cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "HIGH",
+    "issue_text": "subprocess call with shell=True identified, security issue.",
+    "line_number": 135,
+    "line_range": [
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+    "test_id": "B602",
+    "test_name": "subprocess_popen_with_shell_equals_true"
+  },
+  {
+    "code": "151                                 f\"docker network rm {network.strip()}\",\n152                                 shell=True,\n153                                 check=True,\n154                                 capture_output=True,\n155                             )\n156                             progress.update(network_task, advance=1)\n157                         except subprocess.CalledProcessError:\n158                             progress.update(network_task, advance=1)\n",
+    "col_offset": 28,
+    "end_col_offset": 29,
+    "filename": "./terminal_bench/cli/tb/cache.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "HIGH",
+    "issue_text": "subprocess call with shell=True identified, security issue.",
+    "line_number": 152,
+    "line_range": [
+      150,
+      151,
+      152,
+      153,
+      154,
+      155
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+    "test_id": "B602",
+    "test_name": "subprocess_popen_with_shell_equals_true"
+  }
+]

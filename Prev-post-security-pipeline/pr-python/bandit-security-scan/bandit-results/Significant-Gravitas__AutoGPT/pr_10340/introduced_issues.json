@@ -1,0 +1,726 @@
+[
+  {
+    "code": "44         return f\"https://storage.googleapis.com/{bucket_name}/{image_path}\"\n45     except Exception:\n46         # File doesn't exist, continue to check videos\n47         pass\n48 \n",
+    "col_offset": 4,
+    "end_col_offset": 12,
+    "filename": "./autogpt_platform/backend/backend/server/v2/store/media.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 45,
+    "line_range": [
+      45,
+      46,
+      47
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "54         return f\"https://storage.googleapis.com/{bucket_name}/{video_path}\"\n55     except Exception:\n56         # File doesn't exist\n57         pass\n58 \n",
+    "col_offset": 4,
+    "end_col_offset": 12,
+    "filename": "./autogpt_platform/backend/backend/server/v2/store/media.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 55,
+    "line_range": [
+      55,
+      56,
+      57
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "29         provider, path = handler.parse_cloud_path(\"gcs://bucket/path/to/file.txt\")\n30         assert provider == \"gcs\"\n31         assert path == \"bucket/path/to/file.txt\"\n",
+    "col_offset": 8,
+    "end_col_offset": 32,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 30,
+    "line_range": [
+      30
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "30         assert provider == \"gcs\"\n31         assert path == \"bucket/path/to/file.txt\"\n32 \n",
+    "col_offset": 8,
+    "end_col_offset": 48,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 31,
+    "line_range": [
+      31
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "39         \"\"\"Test cloud path detection.\"\"\"\n40         assert handler.is_cloud_path(\"gcs://bucket/file.txt\")\n41         assert handler.is_cloud_path(\"s3://bucket/file.txt\")\n",
+    "col_offset": 8,
+    "end_col_offset": 61,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 40,
+    "line_range": [
+      40
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "40         assert handler.is_cloud_path(\"gcs://bucket/file.txt\")\n41         assert handler.is_cloud_path(\"s3://bucket/file.txt\")\n42         assert handler.is_cloud_path(\"azure://container/file.txt\")\n",
+    "col_offset": 8,
+    "end_col_offset": 60,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 41,
+    "line_range": [
+      41
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "41         assert handler.is_cloud_path(\"s3://bucket/file.txt\")\n42         assert handler.is_cloud_path(\"azure://container/file.txt\")\n43         assert not handler.is_cloud_path(\"http://example.com/file.txt\")\n",
+    "col_offset": 8,
+    "end_col_offset": 66,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 42,
+    "line_range": [
+      42
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "42         assert handler.is_cloud_path(\"azure://container/file.txt\")\n43         assert not handler.is_cloud_path(\"http://example.com/file.txt\")\n44         assert not handler.is_cloud_path(\"/local/path/file.txt\")\n",
+    "col_offset": 8,
+    "end_col_offset": 71,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 43,
+    "line_range": [
+      43
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "43         assert not handler.is_cloud_path(\"http://example.com/file.txt\")\n44         assert not handler.is_cloud_path(\"/local/path/file.txt\")\n45         assert not handler.is_cloud_path(\"data:text/plain;base64,SGVsbG8=\")\n",
+    "col_offset": 8,
+    "end_col_offset": 64,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 44,
+    "line_range": [
+      44
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "44         assert not handler.is_cloud_path(\"/local/path/file.txt\")\n45         assert not handler.is_cloud_path(\"data:text/plain;base64,SGVsbG8=\")\n46 \n",
+    "col_offset": 8,
+    "end_col_offset": 75,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 45,
+    "line_range": [
+      45
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "63         # Verify the result format\n64         assert result.startswith(\"gcs://test-bucket/uploads/\")\n65         assert result.endswith(\"/test.txt\")\n",
+    "col_offset": 8,
+    "end_col_offset": 62,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 64,
+    "line_range": [
+      64
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "64         assert result.startswith(\"gcs://test-bucket/uploads/\")\n65         assert result.endswith(\"/test.txt\")\n66 \n",
+    "col_offset": 8,
+    "end_col_offset": 43,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 65,
+    "line_range": [
+      65
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "69         call_args = mock_async_client.upload.call_args\n70         assert call_args[0][0] == \"test-bucket\"  # bucket name\n71         assert call_args[0][1].startswith(\"uploads/system/\")  # blob name\n",
+    "col_offset": 8,
+    "end_col_offset": 47,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 70,
+    "line_range": [
+      70
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "70         assert call_args[0][0] == \"test-bucket\"  # bucket name\n71         assert call_args[0][1].startswith(\"uploads/system/\")  # blob name\n72         assert call_args[0][2] == content  # file content\n",
+    "col_offset": 8,
+    "end_col_offset": 60,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 71,
+    "line_range": [
+      71
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "71         assert call_args[0][1].startswith(\"uploads/system/\")  # blob name\n72         assert call_args[0][2] == content  # file content\n73         assert \"metadata\" in call_args[1]  # metadata argument\n",
+    "col_offset": 8,
+    "end_col_offset": 41,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 72,
+    "line_range": [
+      72
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "72         assert call_args[0][2] == content  # file content\n73         assert \"metadata\" in call_args[1]  # metadata argument\n74 \n",
+    "col_offset": 8,
+    "end_col_offset": 41,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 73,
+    "line_range": [
+      73
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "89 \n90         assert result == b\"test content\"\n91         mock_async_client.download.assert_called_once_with(\n",
+    "col_offset": 8,
+    "end_col_offset": 40,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 90,
+    "line_range": [
+      90
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "128 \n129         assert result == \"https://signed-url.example.com\"\n130         mock_blob.generate_signed_url.assert_called_once()\n",
+    "col_offset": 8,
+    "end_col_offset": 57,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 129,
+    "line_range": [
+      129
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "179 \n180         assert result == 1  # Only one file should be deleted\n181         # Verify delete was called once (for expired file)\n",
+    "col_offset": 8,
+    "end_col_offset": 26,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 180,
+    "line_range": [
+      180
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "181         # Verify delete was called once (for expired file)\n182         assert mock_async_client.delete.call_count == 1\n183 \n",
+    "col_offset": 8,
+    "end_col_offset": 55,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 182,
+    "line_range": [
+      182
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "200         result = await handler.check_file_expired(\"gcs://test-bucket/expired-file.txt\")\n201         assert result is True\n202 \n",
+    "col_offset": 8,
+    "end_col_offset": 29,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 201,
+    "line_range": [
+      201
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "209         result = await handler.check_file_expired(\"gcs://test-bucket/valid-file.txt\")\n210         assert result is False\n211 \n",
+    "col_offset": 8,
+    "end_col_offset": 30,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 210,
+    "line_range": [
+      210
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "223 \n224         assert result == 3\n225         mock_get_handler.assert_called_once()\n",
+    "col_offset": 8,
+    "end_col_offset": 26,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 224,
+    "line_range": [
+      224
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "241 \n242         assert result == 0  # Should return 0 on error\n243         mock_get_handler.assert_called_once()\n",
+    "col_offset": 8,
+    "end_col_offset": 26,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 242,
+    "line_range": [
+      242
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "303         )\n304         assert result == b\"test content\"\n305         mock_client.download.assert_called_once_with(\n",
+    "col_offset": 8,
+    "end_col_offset": 40,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 304,
+    "line_range": [
+      304
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "333         # Verify the result format includes user path\n334         assert result.startswith(\"gcs://test-bucket/uploads/users/user123/\")\n335         assert result.endswith(\"/test.txt\")\n",
+    "col_offset": 8,
+    "end_col_offset": 76,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 334,
+    "line_range": [
+      334
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "334         assert result.startswith(\"gcs://test-bucket/uploads/users/user123/\")\n335         assert result.endswith(\"/test.txt\")\n336         mock_client.upload.assert_called()\n",
+    "col_offset": 8,
+    "end_col_offset": 43,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 335,
+    "line_range": [
+      335
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "343         # Verify the result format includes system path\n344         assert result.startswith(\"gcs://test-bucket/uploads/system/\")\n345         assert result.endswith(\"/test.txt\")\n",
+    "col_offset": 8,
+    "end_col_offset": 69,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 344,
+    "line_range": [
+      344
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "344         assert result.startswith(\"gcs://test-bucket/uploads/system/\")\n345         assert result.endswith(\"/test.txt\")\n346         assert mock_client.upload.call_count == 2\n",
+    "col_offset": 8,
+    "end_col_offset": 43,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 345,
+    "line_range": [
+      345
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "345         assert result.endswith(\"/test.txt\")\n346         assert mock_client.upload.call_count == 2\n347 \n",
+    "col_offset": 8,
+    "end_col_offset": 49,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 346,
+    "line_range": [
+      346
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "367         # Verify the result format includes execution path\n368         assert result.startswith(\"gcs://test-bucket/uploads/executions/exec123/\")\n369         assert result.endswith(\"/test.txt\")\n",
+    "col_offset": 8,
+    "end_col_offset": 81,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 368,
+    "line_range": [
+      368
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "368         assert result.startswith(\"gcs://test-bucket/uploads/executions/exec123/\")\n369         assert result.endswith(\"/test.txt\")\n370 \n",
+    "col_offset": 8,
+    "end_col_offset": 43,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 369,
+    "line_range": [
+      369
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "432         )\n433         assert result == b\"test content\"\n434 \n",
+    "col_offset": 8,
+    "end_col_offset": 40,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 433,
+    "line_range": [
+      433
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "463         )\n464         assert result == \"https://signed-url.example.com\"\n465 \n",
+    "col_offset": 8,
+    "end_col_offset": 57,
+    "filename": "./autogpt_platform/backend/backend/util/cloud_storage_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 464,
+    "line_range": [
+      464
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "92             # Result should be the relative path\n93             assert str(result) == \"source.txt\"\n94 \n",
+    "col_offset": 12,
+    "end_col_offset": 46,
+    "filename": "./autogpt_platform/backend/backend/util/file_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 93,
+    "line_range": [
+      93
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "153             # Verify result is a data URI\n154             assert str(result).startswith(\"data:image/png;base64,\")\n155 \n",
+    "col_offset": 12,
+    "end_col_offset": 67,
+    "filename": "./autogpt_platform/backend/backend/util/file_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 154,
+    "line_range": [
+      154
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

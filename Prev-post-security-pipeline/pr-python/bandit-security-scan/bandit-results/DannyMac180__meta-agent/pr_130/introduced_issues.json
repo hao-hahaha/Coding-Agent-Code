@@ -1,0 +1,102 @@
+[
+  {
+    "code": "42         self.registry = registry or TemplateRegistry()\n43         self.env = Environment(loader=_RegistryLoader(self.registry))\n44 \n",
+    "col_offset": 19,
+    "end_col_offset": 69,
+    "filename": "./src/meta_agent/template_mixer.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 94,
+      "link": "https://cwe.mitre.org/data/definitions/94.html"
+    },
+    "issue_severity": "HIGH",
+    "issue_text": "By default, jinja2 sets autoescape to False. Consider using autoescape=True or use the select_autoescape function to mitigate XSS vulnerabilities.",
+    "line_number": 43,
+    "line_range": [
+      43
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b701_jinja2_autoescape_false.html",
+    "test_id": "B701",
+    "test_name": "jinja2_autoescape_false"
+  },
+  {
+    "code": "31     result = mixer.render(\"child\", context={\"name\": \"Bob\"})\n32     assert result.strip() == \"Hello Bob\"\n33 \n",
+    "col_offset": 4,
+    "end_col_offset": 40,
+    "filename": "./tests/test_template_mixer.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 32,
+    "line_range": [
+      32
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "43     graph = mixer.dependency_graph(\"c\")\n44     assert graph[\"c\"] == [\"b\"]\n45     assert graph[\"b\"] == [\"a\"]\n",
+    "col_offset": 4,
+    "end_col_offset": 30,
+    "filename": "./tests/test_template_mixer.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 44,
+    "line_range": [
+      44
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "44     assert graph[\"c\"] == [\"b\"]\n45     assert graph[\"b\"] == [\"a\"]\n46     assert graph[\"a\"] == []\n",
+    "col_offset": 4,
+    "end_col_offset": 30,
+    "filename": "./tests/test_template_mixer.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 45,
+    "line_range": [
+      45
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "45     assert graph[\"b\"] == [\"a\"]\n46     assert graph[\"a\"] == []\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/test_template_mixer.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 46,
+    "line_range": [
+      46
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

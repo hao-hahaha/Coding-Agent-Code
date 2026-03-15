@@ -1,0 +1,68 @@
+[
+  {
+    "code": "9 import shutil\n10 import subprocess\n11 import sys\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./src/tools/ablation_runner.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 10,
+    "line_range": [
+      10
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "49         env[f\"ENABLE_{name.upper()}\"] = \"1\" if enabled else \"0\"\n50     proc = subprocess.run(\n51         [sys.executable, str(repo / \"benchmarks\" / \"run_benchmarks.py\")],\n52         capture_output=True,\n53         text=True,\n54         env=env,\n55         check=True,\n56     )\n57     results = json.loads(proc.stdout)\n",
+    "col_offset": 11,
+    "end_col_offset": 5,
+    "filename": "./src/tools/ablation_runner.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 50,
+    "line_range": [
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "14                 continue\n15             assert base - val >= 0.03\n",
+    "col_offset": 12,
+    "end_col_offset": 37,
+    "filename": "./tests/test_ablation.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 15,
+    "line_range": [
+      15
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

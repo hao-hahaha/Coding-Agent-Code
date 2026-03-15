@@ -1,0 +1,82 @@
+[
+  {
+    "code": "12     result = alloc.allocate([\"a\", \"b\"], [\"c\"], dry_run=True)\n13     assert result == {\"a\": 8, \"b\": 8}\n14     msgs = [r.getMessage() for r in caplog.records]\n",
+    "col_offset": 4,
+    "end_col_offset": 37,
+    "filename": "./tests/test_spot_gpu.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 13,
+    "line_range": [
+      13
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "14     msgs = [r.getMessage() for r in caplog.records]\n15     assert any(\"Total hourly cost\" in m for m in msgs)\n16     end_msg = [m for m in msgs if \"Total hourly cost\" in m][0]\n",
+    "col_offset": 4,
+    "end_col_offset": 54,
+    "filename": "./tests/test_spot_gpu.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 15,
+    "line_range": [
+      15
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "16     end_msg = [m for m in msgs if \"Total hourly cost\" in m][0]\n17     assert \"8.00\" in end_msg and \"8.33\" in end_msg\n18     assert any(\"Skip c\" in m for m in msgs)\n",
+    "col_offset": 4,
+    "end_col_offset": 50,
+    "filename": "./tests/test_spot_gpu.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 17,
+    "line_range": [
+      17
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "17     assert \"8.00\" in end_msg and \"8.33\" in end_msg\n18     assert any(\"Skip c\" in m for m in msgs)\n",
+    "col_offset": 4,
+    "end_col_offset": 43,
+    "filename": "./tests/test_spot_gpu.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 18,
+    "line_range": [
+      18
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

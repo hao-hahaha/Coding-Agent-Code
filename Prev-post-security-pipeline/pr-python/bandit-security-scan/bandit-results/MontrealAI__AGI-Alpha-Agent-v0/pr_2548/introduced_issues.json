@@ -1,0 +1,82 @@
+[
+  {
+    "code": "31 agent_runner = module_from_spec(spec)\n32 assert spec.loader is not None\n33 agent_runner.__package__ = \"alpha_factory_v1.backend\"\n",
+    "col_offset": 0,
+    "end_col_offset": 30,
+    "filename": "./tests/test_eventbus.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 32,
+    "line_range": [
+      32
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "42     events = bus.read_and_clear(\"x\")\n43     assert events == {\"x\": [{\"v\": 1}, {\"v\": 2}]}\n44     assert bus.read_and_clear(\"x\") == {}\n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/test_eventbus.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 43,
+    "line_range": [
+      43
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "43     assert events == {\"x\": [{\"v\": 1}, {\"v\": 2}]}\n44     assert bus.read_and_clear(\"x\") == {}\n45 \n",
+    "col_offset": 4,
+    "end_col_offset": 40,
+    "filename": "./tests/test_eventbus.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 44,
+    "line_range": [
+      44
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "52     events = bus.read_and_clear(\"x\")\n53     assert events == {\"x\": [{\"v\": 2}, {\"v\": 3}]}\n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/test_eventbus.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 53,
+    "line_range": [
+      53
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

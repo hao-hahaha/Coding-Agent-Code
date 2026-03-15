@@ -1,0 +1,102 @@
+[
+  {
+    "code": "37 \n38     assert (clone / \"metric.txt\").read_text().strip() == \"2\"\n39     data = json.loads(log_file.read_text())\n",
+    "col_offset": 4,
+    "end_col_offset": 60,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_self_improver.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 38,
+    "line_range": [
+      38
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "39     data = json.loads(log_file.read_text())\n40     assert isinstance(data[0][\"delta\"], (int, float))\n41     assert delta == data[0][\"delta\"]\n",
+    "col_offset": 4,
+    "end_col_offset": 53,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_self_improver.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 40,
+    "line_range": [
+      40
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "40     assert isinstance(data[0][\"delta\"], (int, float))\n41     assert delta == data[0][\"delta\"]\n42 \n",
+    "col_offset": 4,
+    "end_col_offset": 36,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_self_improver.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 41,
+    "line_range": [
+      41
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "57 \n58     assert delta == 1\n59     assert not clone.exists()\n",
+    "col_offset": 4,
+    "end_col_offset": 21,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_self_improver.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 58,
+    "line_range": [
+      58
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "58     assert delta == 1\n59     assert not clone.exists()\n60 \n",
+    "col_offset": 4,
+    "end_col_offset": 29,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_self_improver.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 59,
+    "line_range": [
+      59
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

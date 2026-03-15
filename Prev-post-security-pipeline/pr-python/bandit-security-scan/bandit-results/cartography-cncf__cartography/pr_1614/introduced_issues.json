@@ -1,0 +1,169 @@
+[
+  {
+    "code": "5 TEST_CLIENT_ID = \"02b2b7cc-fb03-4324-bf6b-eb207b39c479\"\n6 TEST_CLIENT_SECRET = \"abcdefghijklmnopqrstuvwxyz\"\n7 \n",
+    "col_offset": 21,
+    "end_col_offset": 49,
+    "filename": "./tests/data/entra/groups.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'abcdefghijklmnopqrstuvwxyz'",
+    "line_number": 6,
+    "line_range": [
+      6
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b105_hardcoded_password_string.html",
+    "test_id": "B105",
+    "test_name": "hardcoded_password_string"
+  },
+  {
+    "code": "62     }\n63     assert (\n64         check_nodes(neo4j_session, \"EntraGroup\", [\"id\", \"display_name\"])\n65         == expected_nodes\n66     )\n67 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/integration/cartography/intel/entra/test_groups.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 63,
+    "line_range": [
+      63,
+      64,
+      65,
+      66
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "71     }\n72     assert (\n73         check_rels(\n74             neo4j_session,\n75             \"EntraGroup\",\n76             \"id\",\n77             \"EntraTenant\",\n78             \"id\",\n79             \"RESOURCE\",\n80             rel_direction_right=False,\n81         )\n82         == expected_rels\n83     )\n84 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/integration/cartography/intel/entra/test_groups.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 72,
+    "line_range": [
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "94     }\n95     assert (\n96         check_rels(\n97             neo4j_session,\n98             \"EntraUser\",\n99             \"id\",\n100             \"EntraGroup\",\n101             \"id\",\n102             \"MEMBER_OF\",\n103         )\n104         == expected_membership\n105     )\n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/integration/cartography/intel/entra/test_groups.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 95,
+    "line_range": [
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "10     )\n11     assert len(result) == 2\n12     group1 = next(\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/unit/cartography/intel/entra/test_groups.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 11,
+    "line_range": [
+      11
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "14     )\n15     assert group1[\"display_name\"] == \"Security Team\"\n16     assert group1[\"member_ids\"] == [\n",
+    "col_offset": 4,
+    "end_col_offset": 52,
+    "filename": "./tests/unit/cartography/intel/entra/test_groups.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 15,
+    "line_range": [
+      15
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "15     assert group1[\"display_name\"] == \"Security Team\"\n16     assert group1[\"member_ids\"] == [\n17         \"ae4ac864-4433-4ba6-96a6-20f8cffdadcb\",\n18         \"11dca63b-cb03-4e53-bb75-fa8060285550\",\n19     ]\n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/unit/cartography/intel/entra/test_groups.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 16,
+    "line_range": [
+      16,
+      17,
+      18,
+      19
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

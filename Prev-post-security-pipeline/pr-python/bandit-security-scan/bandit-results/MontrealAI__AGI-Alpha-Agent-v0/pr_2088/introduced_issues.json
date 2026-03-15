@@ -1,0 +1,28 @@
+[
+  {
+    "code": "50     try:\n51         result = subprocess.run(\n52             [f\"./{RUN_SCRIPT.name}\"],\n53             cwd=RUN_SCRIPT.parent,\n54             env=script_env,\n55             capture_output=True,\n56             text=True,\n57         )\n58     finally:\n",
+    "col_offset": 17,
+    "end_col_offset": 9,
+    "filename": "./tests/test_macro_launcher.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 51,
+    "line_range": [
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  }
+]

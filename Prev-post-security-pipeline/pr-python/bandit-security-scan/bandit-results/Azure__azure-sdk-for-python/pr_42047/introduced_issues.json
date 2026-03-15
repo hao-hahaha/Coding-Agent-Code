@@ -1,0 +1,82 @@
+[
+  {
+    "code": "40     from urllib.parse import quote\n41 import xml.etree.ElementTree as ET\n42 \n",
+    "col_offset": 0,
+    "end_col_offset": 34,
+    "filename": "./sdk/digitaltwins/azure-digitaltwins-core/azure/digitaltwins/core/_generated/_utils/serialization.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 20,
+      "link": "https://cwe.mitre.org/data/definitions/20.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Using xml.etree.ElementTree to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.",
+    "line_number": 41,
+    "line_range": [
+      41
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b405-import-xml-etree",
+    "test_id": "B405",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "201             # Create a local random instance to avoid polluting global state\n202             local_random = random.Random(randomization_seed)\n203             local_random.shuffle(templates)\n",
+    "col_offset": 27,
+    "end_col_offset": 60,
+    "filename": "./sdk/evaluation/azure-ai-evaluation/azure/ai/evaluation/simulator/_indirect_attack_simulator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 202,
+    "line_range": [
+      202
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "169             # Create a local random instance to avoid polluting global state\n170             local_random = random.Random(randomization_seed)\n171             tasks = tasks.copy()  # Don't modify the original list\n",
+    "col_offset": 27,
+    "end_col_offset": 60,
+    "filename": "./sdk/evaluation/azure-ai-evaluation/azure/ai/evaluation/simulator/_simulator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 170,
+    "line_range": [
+      170
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "40     from urllib.parse import quote\n41 import xml.etree.ElementTree as ET\n42 \n",
+    "col_offset": 0,
+    "end_col_offset": 34,
+    "filename": "./sdk/resources/azure-mgmt-resource/azure/mgmt/resource/databoundaries/_utils/serialization.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 20,
+      "link": "https://cwe.mitre.org/data/definitions/20.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Using xml.etree.ElementTree to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.",
+    "line_number": 41,
+    "line_range": [
+      41
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b405-import-xml-etree",
+    "test_id": "B405",
+    "test_name": "blacklist"
+  }
+]

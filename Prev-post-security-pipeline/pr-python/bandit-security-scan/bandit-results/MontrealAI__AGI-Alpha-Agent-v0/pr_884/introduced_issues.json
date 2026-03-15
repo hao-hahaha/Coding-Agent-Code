@@ -1,0 +1,42 @@
+[
+  {
+    "code": "31             r = await client.get(\"/runs\", headers=headers)\n32             assert r.status_code == 200\n33             assert r.headers.get(\"access-control-allow-origin\") == \"http://example.com\"\n",
+    "col_offset": 12,
+    "end_col_offset": 39,
+    "filename": "./tests/test_api_server_cors.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 32,
+    "line_range": [
+      32
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "32             assert r.status_code == 200\n33             assert r.headers.get(\"access-control-allow-origin\") == \"http://example.com\"\n34 \n",
+    "col_offset": 12,
+    "end_col_offset": 87,
+    "filename": "./tests/test_api_server_cors.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 33,
+    "line_range": [
+      33
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

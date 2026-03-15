@@ -1,0 +1,988 @@
+{
+  "errors": [],
+  "generated_at": "2026-03-15T02:23:07Z",
+  "metrics": {
+    "./create_db.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 35,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./gist_poc.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 1,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 1,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 14,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./sfa_duckdb_anthropic_v2.py": {
+      "CONFIDENCE.HIGH": 6,
+      "CONFIDENCE.LOW": 1,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 5,
+      "SEVERITY.LOW": 1,
+      "SEVERITY.MEDIUM": 1,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 462,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./sfa_duckdb_gemini_v1.py": {
+      "CONFIDENCE.HIGH": 2,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 1,
+      "SEVERITY.LOW": 1,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 148,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./sfa_duckdb_gemini_v2.py": {
+      "CONFIDENCE.HIGH": 6,
+      "CONFIDENCE.LOW": 1,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 5,
+      "SEVERITY.LOW": 1,
+      "SEVERITY.MEDIUM": 1,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 363,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./sfa_duckdb_openai_v2.py": {
+      "CONFIDENCE.HIGH": 7,
+      "CONFIDENCE.LOW": 1,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 5,
+      "SEVERITY.LOW": 2,
+      "SEVERITY.MEDIUM": 1,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 420,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./sfa_jq_gemini_v1.py": {
+      "CONFIDENCE.HIGH": 2,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 1,
+      "SEVERITY.LOW": 1,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 139,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./sfa_meta_prompt_openai_v1.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 353,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./sfa_poc.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 1,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 1,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 5,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./sfa_polars_csv_agent_openai_v2.py": {
+      "CONFIDENCE.HIGH": 6,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 6,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 504,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./sfa_sqlite_openai_v2.py": {
+      "CONFIDENCE.HIGH": 2,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 1,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 2,
+      "SEVERITY.MEDIUM": 1,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 420,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 31,
+      "CONFIDENCE.LOW": 5,
+      "CONFIDENCE.MEDIUM": 1,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 17,
+      "SEVERITY.LOW": 14,
+      "SEVERITY.MEDIUM": 6,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 2863,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "17         # 2. Use requests to fetch the file's content\n18         response = requests.get(raw_url)\n19         response.raise_for_status()  # Raise an exception for bad status codes\n",
+      "col_offset": 19,
+      "end_col_offset": 40,
+      "filename": "./gist_poc.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 400,
+        "link": "https://cwe.mitre.org/data/definitions/400.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Call to requests without timeout",
+      "line_number": 18,
+      "line_range": [
+        18
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+      "test_id": "B113",
+      "test_name": "request_without_timeout"
+    },
+    {
+      "code": "25 import argparse\n26 import subprocess\n27 from typing import List\n",
+      "col_offset": 0,
+      "end_col_offset": 17,
+      "filename": "./sfa_duckdb_anthropic_v2.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Consider possible security implications associated with the subprocess module.",
+      "line_number": 26,
+      "line_range": [
+        26
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+      "test_id": "B404",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "171             f'duckdb {DB_PATH} -c \".tables\"',\n172             shell=True,\n173             text=True,\n174             capture_output=True,\n175         )\n176         console.log(f\"[blue]List Tables Tool[/blue] - Reasoning: {reasoning}\")\n177         return result.stdout.strip().split(\"\\n\")\n178     except Exception as e:\n",
+      "col_offset": 17,
+      "end_col_offset": 9,
+      "filename": "./sfa_duckdb_anthropic_v2.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "subprocess call with shell=True identified, security issue.",
+      "line_number": 172,
+      "line_range": [
+        170,
+        171,
+        172,
+        173,
+        174,
+        175
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+      "test_id": "B602",
+      "test_name": "subprocess_popen_with_shell_equals_true"
+    },
+    {
+      "code": "197             f'duckdb {DB_PATH} -c \"DESCRIBE {table_name};\"',\n198             shell=True,\n199             text=True,\n200             capture_output=True,\n201         )\n202         console.log(\n203             f\"[blue]Describe Table Tool[/blue] - Table: {table_name} - Reasoning: {reasoning}\"\n204         )\n",
+      "col_offset": 17,
+      "end_col_offset": 9,
+      "filename": "./sfa_duckdb_anthropic_v2.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "subprocess call with shell=True identified, security issue.",
+      "line_number": 198,
+      "line_range": [
+        196,
+        197,
+        198,
+        199,
+        200,
+        201
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+      "test_id": "B602",
+      "test_name": "subprocess_popen_with_shell_equals_true"
+    },
+    {
+      "code": "226             f'duckdb {DB_PATH} -c \"SELECT * FROM {table_name} LIMIT {row_sample_size};\"',\n227             shell=True,\n228             text=True,\n229             capture_output=True,\n230         )\n231         console.log(\n232             f\"[blue]Sample Table Tool[/blue] - Table: {table_name} - Rows: {row_sample_size} - Reasoning: {reasoning}\"\n233         )\n",
+      "col_offset": 17,
+      "end_col_offset": 9,
+      "filename": "./sfa_duckdb_anthropic_v2.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "subprocess call with shell=True identified, security issue.",
+      "line_number": 227,
+      "line_range": [
+        225,
+        226,
+        227,
+        228,
+        229,
+        230
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+      "test_id": "B602",
+      "test_name": "subprocess_popen_with_shell_equals_true"
+    },
+    {
+      "code": "225         result = subprocess.run(\n226             f'duckdb {DB_PATH} -c \"SELECT * FROM {table_name} LIMIT {row_sample_size};\"',\n227             shell=True,\n",
+      "col_offset": 14,
+      "end_col_offset": 21,
+      "filename": "./sfa_duckdb_anthropic_v2.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 226,
+      "line_range": [
+        226
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "255             f'duckdb {DB_PATH} -c \"{sql_query}\"',\n256             shell=True,\n257             text=True,\n258             capture_output=True,\n259         )\n260         console.log(f\"[blue]Test Query Tool[/blue] - Reasoning: {reasoning}\")\n261         console.log(f\"[dim]Query: {sql_query}[/dim]\")\n262         return result.stdout\n",
+      "col_offset": 17,
+      "end_col_offset": 9,
+      "filename": "./sfa_duckdb_anthropic_v2.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "subprocess call with shell=True identified, security issue.",
+      "line_number": 256,
+      "line_range": [
+        254,
+        255,
+        256,
+        257,
+        258,
+        259
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+      "test_id": "B602",
+      "test_name": "subprocess_popen_with_shell_equals_true"
+    },
+    {
+      "code": "282             f'duckdb {DB_PATH} -c \"{sql_query}\"',\n283             shell=True,\n284             text=True,\n285             capture_output=True,\n286         )\n287         console.log(\n288             Panel(\n289                 f\"[green]Final Query Tool[/green]\\nReasoning: {reasoning}\\nQuery: {sql_query}\"\n",
+      "col_offset": 17,
+      "end_col_offset": 9,
+      "filename": "./sfa_duckdb_anthropic_v2.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "subprocess call with shell=True identified, security issue.",
+      "line_number": 283,
+      "line_range": [
+        281,
+        282,
+        283,
+        284,
+        285,
+        286
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+      "test_id": "B602",
+      "test_name": "subprocess_popen_with_shell_equals_true"
+    },
+    {
+      "code": "23 import argparse\n24 import subprocess\n25 from google import genai\n",
+      "col_offset": 0,
+      "end_col_offset": 17,
+      "filename": "./sfa_duckdb_gemini_v1.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Consider possible security implications associated with the subprocess module.",
+      "line_number": 24,
+      "line_range": [
+        24
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+      "test_id": "B404",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "164             result = subprocess.run(\n165                 duckdb_command, shell=True, text=True, capture_output=True\n166             )\n167             if result.returncode != 0:\n168                 print(\n",
+      "col_offset": 21,
+      "end_col_offset": 13,
+      "filename": "./sfa_duckdb_gemini_v1.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "subprocess call with shell=True identified, security issue.",
+      "line_number": 165,
+      "line_range": [
+        164,
+        165,
+        166
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+      "test_id": "B602",
+      "test_name": "subprocess_popen_with_shell_equals_true"
+    },
+    {
+      "code": "25 import argparse\n26 import subprocess\n27 from typing import List\n",
+      "col_offset": 0,
+      "end_col_offset": 17,
+      "filename": "./sfa_duckdb_gemini_v2.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Consider possible security implications associated with the subprocess module.",
+      "line_number": 26,
+      "line_range": [
+        26
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+      "test_id": "B404",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "51             # f\"duckdb {DB_PATH} -c \\\"SELECT name FROM sqlite_master WHERE type='table';\\\"\",\n52             shell=True,\n53             text=True,\n54             capture_output=True,\n55         )\n56         console.log(f\"[blue]List Tables Tool[/blue] - Reasoning: {reasoning}\")\n57         return result.stdout.strip().split(\"\\n\")\n58     except Exception as e:\n59         console.log(f\"[red]Error listing tables: {str(e)}[/red]\")\n",
+      "col_offset": 17,
+      "end_col_offset": 9,
+      "filename": "./sfa_duckdb_gemini_v2.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "subprocess call with shell=True identified, security issue.",
+      "line_number": 52,
+      "line_range": [
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+      "test_id": "B602",
+      "test_name": "subprocess_popen_with_shell_equals_true"
+    },
+    {
+      "code": "77             f'duckdb {DB_PATH} -c \"DESCRIBE {table_name};\"',\n78             shell=True,\n79             text=True,\n80             capture_output=True,\n81         )\n82         console.log(\n83             f\"[blue]Describe Table Tool[/blue] - Table: {table_name} - Reasoning: {reasoning}\"\n84         )\n",
+      "col_offset": 17,
+      "end_col_offset": 9,
+      "filename": "./sfa_duckdb_gemini_v2.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "subprocess call with shell=True identified, security issue.",
+      "line_number": 78,
+      "line_range": [
+        76,
+        77,
+        78,
+        79,
+        80,
+        81
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+      "test_id": "B602",
+      "test_name": "subprocess_popen_with_shell_equals_true"
+    },
+    {
+      "code": "106             f'duckdb {DB_PATH} -c \"SELECT * FROM {table_name} LIMIT {row_sample_size};\"',\n107             shell=True,\n108             text=True,\n109             capture_output=True,\n110         )\n111         console.log(\n112             f\"[blue]Sample Table Tool[/blue] - Table: {table_name} - Rows: {row_sample_size} - Reasoning: {reasoning}\"\n113         )\n",
+      "col_offset": 17,
+      "end_col_offset": 9,
+      "filename": "./sfa_duckdb_gemini_v2.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "subprocess call with shell=True identified, security issue.",
+      "line_number": 107,
+      "line_range": [
+        105,
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+      "test_id": "B602",
+      "test_name": "subprocess_popen_with_shell_equals_true"
+    },
+    {
+      "code": "105         result = subprocess.run(\n106             f'duckdb {DB_PATH} -c \"SELECT * FROM {table_name} LIMIT {row_sample_size};\"',\n107             shell=True,\n",
+      "col_offset": 14,
+      "end_col_offset": 21,
+      "filename": "./sfa_duckdb_gemini_v2.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 106,
+      "line_range": [
+        106
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "135             f'duckdb {DB_PATH} -c \"{sql_query}\"',\n136             shell=True,\n137             text=True,\n138             capture_output=True,\n139         )\n140         console.log(f\"[blue]Test Query Tool[/blue] - Reasoning: {reasoning}\")\n141         console.log(f\"[dim]Query: {sql_query}[/dim]\")\n142         return result.stdout\n",
+      "col_offset": 17,
+      "end_col_offset": 9,
+      "filename": "./sfa_duckdb_gemini_v2.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "subprocess call with shell=True identified, security issue.",
+      "line_number": 136,
+      "line_range": [
+        134,
+        135,
+        136,
+        137,
+        138,
+        139
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+      "test_id": "B602",
+      "test_name": "subprocess_popen_with_shell_equals_true"
+    },
+    {
+      "code": "162             f'duckdb {DB_PATH} -c \"{sql_query}\"',\n163             shell=True,\n164             text=True,\n165             capture_output=True,\n166         )\n167         console.log(\n168             Panel(\n169                 f\"[green]Final Query Tool[/green]\\nReasoning: {reasoning}\\nQuery: {sql_query}\"\n",
+      "col_offset": 17,
+      "end_col_offset": 9,
+      "filename": "./sfa_duckdb_gemini_v2.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "subprocess call with shell=True identified, security issue.",
+      "line_number": 163,
+      "line_range": [
+        161,
+        162,
+        163,
+        164,
+        165,
+        166
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+      "test_id": "B602",
+      "test_name": "subprocess_popen_with_shell_equals_true"
+    },
+    {
+      "code": "13 import argparse\n14 import subprocess\n15 from typing import List\n",
+      "col_offset": 0,
+      "end_col_offset": 17,
+      "filename": "./sfa_duckdb_openai_v2.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Consider possible security implications associated with the subprocess module.",
+      "line_number": 14,
+      "line_range": [
+        14
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+      "test_id": "B404",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "203             f'duckdb {DB_PATH} -c \".tables\"',\n204             shell=True,\n205             text=True,\n206             capture_output=True,\n207         )\n208         console.log(f\"[blue]List Tables Tool[/blue] - Reasoning: {reasoning}\")\n209         return result.stdout.strip().split(\"\\n\")\n210     except Exception as e:\n",
+      "col_offset": 17,
+      "end_col_offset": 9,
+      "filename": "./sfa_duckdb_openai_v2.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "subprocess call with shell=True identified, security issue.",
+      "line_number": 204,
+      "line_range": [
+        202,
+        203,
+        204,
+        205,
+        206,
+        207
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+      "test_id": "B602",
+      "test_name": "subprocess_popen_with_shell_equals_true"
+    },
+    {
+      "code": "229             f'duckdb {DB_PATH} -c \"DESCRIBE {table_name};\"',\n230             shell=True,\n231             text=True,\n232             capture_output=True,\n233         )\n234         console.log(\n235             f\"[blue]Describe Table Tool[/blue] - Table: {table_name} - Reasoning: {reasoning}\"\n236         )\n",
+      "col_offset": 17,
+      "end_col_offset": 9,
+      "filename": "./sfa_duckdb_openai_v2.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "subprocess call with shell=True identified, security issue.",
+      "line_number": 230,
+      "line_range": [
+        228,
+        229,
+        230,
+        231,
+        232,
+        233
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+      "test_id": "B602",
+      "test_name": "subprocess_popen_with_shell_equals_true"
+    },
+    {
+      "code": "258             f'duckdb {DB_PATH} -c \"SELECT * FROM {table_name} LIMIT {row_sample_size};\"',\n259             shell=True,\n260             text=True,\n261             capture_output=True,\n262         )\n263         console.log(\n264             f\"[blue]Sample Table Tool[/blue] - Table: {table_name} - Rows: {row_sample_size} - Reasoning: {reasoning}\"\n265         )\n",
+      "col_offset": 17,
+      "end_col_offset": 9,
+      "filename": "./sfa_duckdb_openai_v2.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "subprocess call with shell=True identified, security issue.",
+      "line_number": 259,
+      "line_range": [
+        257,
+        258,
+        259,
+        260,
+        261,
+        262
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+      "test_id": "B602",
+      "test_name": "subprocess_popen_with_shell_equals_true"
+    },
+    {
+      "code": "257         result = subprocess.run(\n258             f'duckdb {DB_PATH} -c \"SELECT * FROM {table_name} LIMIT {row_sample_size};\"',\n259             shell=True,\n",
+      "col_offset": 14,
+      "end_col_offset": 21,
+      "filename": "./sfa_duckdb_openai_v2.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 258,
+      "line_range": [
+        258
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "287             f'duckdb {DB_PATH} -c \"{sql_query}\"',\n288             shell=True,\n289             text=True,\n290             capture_output=True,\n291         )\n292         console.log(f\"[blue]Test Query Tool[/blue] - Reasoning: {reasoning}\")\n293         console.log(f\"[dim]Query: {sql_query}[/dim]\")\n294         return result.stdout\n",
+      "col_offset": 17,
+      "end_col_offset": 9,
+      "filename": "./sfa_duckdb_openai_v2.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "subprocess call with shell=True identified, security issue.",
+      "line_number": 288,
+      "line_range": [
+        286,
+        287,
+        288,
+        289,
+        290,
+        291
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+      "test_id": "B602",
+      "test_name": "subprocess_popen_with_shell_equals_true"
+    },
+    {
+      "code": "314             f'duckdb {DB_PATH} -c \"{sql_query}\"',\n315             shell=True,\n316             text=True,\n317             capture_output=True,\n318         )\n319         console.log(\n320             Panel(\n321                 f\"[green]Final Query Tool[/green]\\nReasoning: {reasoning}\\nQuery: {sql_query}\"\n",
+      "col_offset": 17,
+      "end_col_offset": 9,
+      "filename": "./sfa_duckdb_openai_v2.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "subprocess call with shell=True identified, security issue.",
+      "line_number": 315,
+      "line_range": [
+        313,
+        314,
+        315,
+        316,
+        317,
+        318
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+      "test_id": "B602",
+      "test_name": "subprocess_popen_with_shell_equals_true"
+    },
+    {
+      "code": "395             if response.choices:\n396                 assert len(response.choices) == 1\n397                 message = response.choices[0].message\n",
+      "col_offset": 16,
+      "end_col_offset": 49,
+      "filename": "./sfa_duckdb_openai_v2.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 396,
+      "line_range": [
+        396
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "21 import argparse\n22 import subprocess\n23 from google import genai\n",
+      "col_offset": 0,
+      "end_col_offset": 17,
+      "filename": "./sfa_jq_gemini_v1.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Consider possible security implications associated with the subprocess module.",
+      "line_number": 22,
+      "line_range": [
+        22
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+      "test_id": "B404",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "158             result = subprocess.run(\n159                 jq_command, shell=True, text=True, capture_output=True\n160             )\n161             if result.returncode != 0:\n162                 print(\"\\n\u274c Error executing command:\", result.stderr)\n",
+      "col_offset": 21,
+      "end_col_offset": 13,
+      "filename": "./sfa_jq_gemini_v1.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "subprocess call with shell=True identified, security issue.",
+      "line_number": 159,
+      "line_range": [
+        158,
+        159,
+        160
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+      "test_id": "B602",
+      "test_name": "subprocess_popen_with_shell_equals_true"
+    },
+    {
+      "code": "12 \n13 resp = requests.get(\"https://peps.python.org/api/peps.json\")\n14 data = resp.json()\n",
+      "col_offset": 7,
+      "end_col_offset": 60,
+      "filename": "./sfa_poc.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 400,
+        "link": "https://cwe.mitre.org/data/definitions/400.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Call to requests without timeout",
+      "line_number": 13,
+      "line_range": [
+        13
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+      "test_id": "B113",
+      "test_name": "request_without_timeout"
+    },
+    {
+      "code": "14 import tempfile\n15 import subprocess\n16 from typing import List, Optional\n",
+      "col_offset": 0,
+      "end_col_offset": 17,
+      "filename": "./sfa_polars_csv_agent_openai_v2.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Consider possible security implications associated with the subprocess module.",
+      "line_number": 15,
+      "line_range": [
+        15
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+      "test_id": "B404",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "318 \n319         result = subprocess.run(['uv', 'run', '--with', 'polars', temp_file], \n320                               capture_output=True, text=True)\n321         os.unlink(temp_file)\n",
+      "col_offset": 17,
+      "end_col_offset": 61,
+      "filename": "./sfa_polars_csv_agent_openai_v2.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Starting a process with a partial executable path",
+      "line_number": 319,
+      "line_range": [
+        319,
+        320
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+      "test_id": "B607",
+      "test_name": "start_process_with_partial_path"
+    },
+    {
+      "code": "318 \n319         result = subprocess.run(['uv', 'run', '--with', 'polars', temp_file], \n320                               capture_output=True, text=True)\n321         os.unlink(temp_file)\n",
+      "col_offset": 17,
+      "end_col_offset": 61,
+      "filename": "./sfa_polars_csv_agent_openai_v2.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 319,
+      "line_range": [
+        319,
+        320
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "418 \n419         result = subprocess.run(['uv', 'run', '--with', 'polars', temp_file],\n420                               capture_output=True, text=True)\n421         os.unlink(temp_file)\n",
+      "col_offset": 17,
+      "end_col_offset": 61,
+      "filename": "./sfa_polars_csv_agent_openai_v2.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Starting a process with a partial executable path",
+      "line_number": 419,
+      "line_range": [
+        419,
+        420
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+      "test_id": "B607",
+      "test_name": "start_process_with_partial_path"
+    },
+    {
+      "code": "418 \n419         result = subprocess.run(['uv', 'run', '--with', 'polars', temp_file],\n420                               capture_output=True, text=True)\n421         os.unlink(temp_file)\n",
+      "col_offset": 17,
+      "end_col_offset": 61,
+      "filename": "./sfa_polars_csv_agent_openai_v2.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 419,
+      "line_range": [
+        419,
+        420
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "498             if response.choices:\n499                 assert len(response.choices) == 1\n500                 message = response.choices[0].message\n",
+      "col_offset": 16,
+      "end_col_offset": 49,
+      "filename": "./sfa_polars_csv_agent_openai_v2.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 499,
+      "line_range": [
+        499
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "14 import sqlite3\n15 import subprocess\n16 from typing import List\n",
+      "col_offset": 0,
+      "end_col_offset": 17,
+      "filename": "./sfa_sqlite_openai_v2.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Consider possible security implications associated with the subprocess module.",
+      "line_number": 15,
+      "line_range": [
+        15
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+      "test_id": "B404",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "256         cursor = conn.cursor()\n257         cursor.execute(f\"SELECT * FROM {table_name} LIMIT {row_sample_size};\")\n258         rows = cursor.fetchall()\n",
+      "col_offset": 25,
+      "end_col_offset": 39,
+      "filename": "./sfa_sqlite_openai_v2.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 257,
+      "line_range": [
+        257
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "395             if response.choices:\n396                 assert len(response.choices) == 1\n397                 message = response.choices[0].message\n",
+      "col_offset": 16,
+      "end_col_offset": 49,
+      "filename": "./sfa_sqlite_openai_v2.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 396,
+      "line_range": [
+        396
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    }
+  ]
+}

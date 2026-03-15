@@ -1,0 +1,91 @@
+[
+  {
+    "code": "8 import importlib.util\n9 import subprocess\n10 import sys\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tests/test_aiga_agents_bridge.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 9,
+    "line_range": [
+      9
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "24     \"\"\"Start ``openai_agents_bridge.main`` and confirm registration.\"\"\"\n25     proc = subprocess.Popen(\n26         [\n27             sys.executable,\n28             \"-m\",\n29             \"alpha_factory_v1.demos.aiga_meta_evolution.openai_agents_bridge\",\n30         ],\n31         stdout=subprocess.PIPE,\n32         stderr=subprocess.STDOUT,\n33         text=True,\n34     )\n35     try:\n",
+    "col_offset": 11,
+    "end_col_offset": 5,
+    "filename": "./tests/test_aiga_agents_bridge.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 25,
+    "line_range": [
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "42             proc.wait(timeout=5)\n43     assert \"EvolverAgent\" in out\n44 \n",
+    "col_offset": 4,
+    "end_col_offset": 32,
+    "filename": "./tests/test_aiga_agents_bridge.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 43,
+    "line_range": [
+      43
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "55     result = asyncio.run(mod.best_alpha())\n56     assert \"architecture\" in result\n",
+    "col_offset": 4,
+    "end_col_offset": 35,
+    "filename": "./tests/test_aiga_agents_bridge.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 56,
+    "line_range": [
+      56
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

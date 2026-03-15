@@ -1,0 +1,102 @@
+[
+  {
+    "code": "19     cfg._load_dotenv(str(env))\n20     assert os.environ[\"FOO\"] == \"bar\"\n21 \n",
+    "col_offset": 4,
+    "end_col_offset": 37,
+    "filename": "./tests/test_config_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 20,
+    "line_range": [
+      20
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "25     monkeypatch.delenv(\"AGI_INSIGHT_SECRET_BACKEND\", raising=False)\n26     assert cfg.get_secret(\"MY_SECRET\") == \"value\"\n27     monkeypatch.delenv(\"MY_SECRET\", raising=False)\n",
+    "col_offset": 4,
+    "end_col_offset": 49,
+    "filename": "./tests/test_config_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 26,
+    "line_range": [
+      26
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "27     monkeypatch.delenv(\"MY_SECRET\", raising=False)\n28     assert cfg.get_secret(\"MY_SECRET\", \"default\") == \"default\"\n29 \n",
+    "col_offset": 4,
+    "end_col_offset": 62,
+    "filename": "./tests/test_config_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 28,
+    "line_range": [
+      28
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "36     settings = cfg.Settings()\n37     assert settings.openai_api_key == \"backend\"\n38     assert not settings.offline\n",
+    "col_offset": 4,
+    "end_col_offset": 47,
+    "filename": "./tests/test_config_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 37,
+    "line_range": [
+      37
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "37     assert settings.openai_api_key == \"backend\"\n38     assert not settings.offline\n",
+    "col_offset": 4,
+    "end_col_offset": 31,
+    "filename": "./tests/test_config_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 38,
+    "line_range": [
+      38
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

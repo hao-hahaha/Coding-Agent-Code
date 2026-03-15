@@ -1,0 +1,23 @@
+[
+  {
+    "code": "226                     logger.info(\"Removed container: %s\", container_name)\n227                 except Exception:\n228                     pass  # Container already removed or failed to remove\n229 \n",
+    "col_offset": 16,
+    "end_col_offset": 24,
+    "filename": "./src/meta_agent/sandbox/sandbox_manager.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 227,
+    "line_range": [
+      227,
+      228
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  }
+]

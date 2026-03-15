@@ -1,0 +1,290 @@
+[
+  {
+    "code": "5 import json\n6 import subprocess\n7 from pathlib import Path\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./src/meta_agent/template_governance.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 6,
+    "line_range": [
+      6
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "55         \"\"\"Run Ruff linting on ``content`` and return issues.\"\"\"\n56         proc = subprocess.run(\n57             [\"ruff\", \"--quiet\", \"--stdin-filename\", \"template.py\", \"-\"],\n58             input=content.encode(\"utf-8\"),\n59             capture_output=True,\n60         )\n61         output = proc.stdout.decode()\n",
+    "col_offset": 15,
+    "end_col_offset": 9,
+    "filename": "./src/meta_agent/template_governance.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 56,
+    "line_range": [
+      56,
+      57,
+      58,
+      59,
+      60
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "55         \"\"\"Run Ruff linting on ``content`` and return issues.\"\"\"\n56         proc = subprocess.run(\n57             [\"ruff\", \"--quiet\", \"--stdin-filename\", \"template.py\", \"-\"],\n58             input=content.encode(\"utf-8\"),\n59             capture_output=True,\n60         )\n61         output = proc.stdout.decode()\n",
+    "col_offset": 15,
+    "end_col_offset": 9,
+    "filename": "./src/meta_agent/template_governance.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 56,
+    "line_range": [
+      56,
+      57,
+      58,
+      59,
+      60
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "5     specs = load_golden_spec_fuzz_set()\n6     assert len(specs) >= 20\n7     assert all(isinstance(s, str) and s for s in specs)\n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/test_golden_spec_fuzz_set.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 6,
+    "line_range": [
+      6
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "6     assert len(specs) >= 20\n7     assert all(isinstance(s, str) and s for s in specs)\n",
+    "col_offset": 4,
+    "end_col_offset": 55,
+    "filename": "./tests/test_golden_spec_fuzz_set.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 7,
+    "line_range": [
+      7
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "12     cache = tmp_path / \"cache.json\"\n13     gov = TemplateGovernance(secret=\"key\", cache_path=cache)\n14     sig = gov.sign(\"print('hi')\\n\")\n",
+    "col_offset": 10,
+    "end_col_offset": 60,
+    "filename": "./tests/test_template_governance.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'key'",
+    "line_number": 13,
+    "line_range": [
+      13
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b106_hardcoded_password_funcarg.html",
+    "test_id": "B106",
+    "test_name": "hardcoded_password_funcarg"
+  },
+  {
+    "code": "14     sig = gov.sign(\"print('hi')\\n\")\n15     assert sig\n16     assert gov.verify(\"print('hi')\\n\", sig)\n",
+    "col_offset": 4,
+    "end_col_offset": 14,
+    "filename": "./tests/test_template_governance.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 15,
+    "line_range": [
+      15
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "15     assert sig\n16     assert gov.verify(\"print('hi')\\n\", sig)\n17     data = json.loads(cache.read_text())\n",
+    "col_offset": 4,
+    "end_col_offset": 43,
+    "filename": "./tests/test_template_governance.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 16,
+    "line_range": [
+      16
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "18     checksum = hashlib.sha256(\"print('hi')\\n\".encode()).hexdigest()\n19     assert data[checksum] == sig\n20 \n",
+    "col_offset": 4,
+    "end_col_offset": 32,
+    "filename": "./tests/test_template_governance.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 19,
+    "line_range": [
+      19
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "26     monkeypatch.setattr(\"subprocess.run\", fake_run)\n27     gov = TemplateGovernance(secret=\"k\")\n28     issues = gov.lint(\"import os\\n\")\n",
+    "col_offset": 10,
+    "end_col_offset": 40,
+    "filename": "./tests/test_template_governance.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'k'",
+    "line_number": 27,
+    "line_range": [
+      27
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b106_hardcoded_password_funcarg.html",
+    "test_id": "B106",
+    "test_name": "hardcoded_password_funcarg"
+  },
+  {
+    "code": "28     issues = gov.lint(\"import os\\n\")\n29     assert issues and \"unused import\" in issues[0]\n30 \n",
+    "col_offset": 4,
+    "end_col_offset": 50,
+    "filename": "./tests/test_template_governance.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 29,
+    "line_range": [
+      29
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "42     )\n43     gov = TemplateGovernance(secret=\"s\")\n44     exit_code, out, err = gov.run_unsigned(tmp_path, [\"cmd\"])\n",
+    "col_offset": 10,
+    "end_col_offset": 40,
+    "filename": "./tests/test_template_governance.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 's'",
+    "line_number": 43,
+    "line_range": [
+      43
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b106_hardcoded_password_funcarg.html",
+    "test_id": "B106",
+    "test_name": "hardcoded_password_funcarg"
+  },
+  {
+    "code": "44     exit_code, out, err = gov.run_unsigned(tmp_path, [\"cmd\"])\n45     assert exit_code == 0 and out == \"out\" and err == \"err\"\n46     assert called[\"args\"] == (tmp_path, [\"cmd\"])\n",
+    "col_offset": 4,
+    "end_col_offset": 59,
+    "filename": "./tests/test_template_governance.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 45,
+    "line_range": [
+      45
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "45     assert exit_code == 0 and out == \"out\" and err == \"err\"\n46     assert called[\"args\"] == (tmp_path, [\"cmd\"])\n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/test_template_governance.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 46,
+    "line_range": [
+      46
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

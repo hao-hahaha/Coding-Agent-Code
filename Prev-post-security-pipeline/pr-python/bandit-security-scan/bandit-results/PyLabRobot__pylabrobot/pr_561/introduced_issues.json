@@ -1,0 +1,23 @@
+[
+  {
+    "code": "342         return [v.name for v in value]\n343     except Exception:\n344       pass\n345     return value\n",
+    "col_offset": 4,
+    "end_col_offset": 10,
+    "filename": "./pylabrobot/liquid_handling/liquid_handler.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 343,
+    "line_range": [
+      343,
+      344
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  }
+]

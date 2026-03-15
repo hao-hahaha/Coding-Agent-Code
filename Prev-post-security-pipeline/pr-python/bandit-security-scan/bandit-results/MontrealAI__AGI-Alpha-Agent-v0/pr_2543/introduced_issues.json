@@ -1,0 +1,23 @@
+[
+  {
+    "code": "22             rec = json.loads(line)\n23         except Exception:  # noqa: BLE001 - skip invalid lines\n24             continue\n25         yield ArchiveEntry(\n",
+    "col_offset": 8,
+    "end_col_offset": 20,
+    "filename": "./alpha_factory_v1/core/tools/dgm_import.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Continue detected.",
+    "line_number": 23,
+    "line_range": [
+      23,
+      24
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b112_try_except_continue.html",
+    "test_id": "B112",
+    "test_name": "try_except_continue"
+  }
+]

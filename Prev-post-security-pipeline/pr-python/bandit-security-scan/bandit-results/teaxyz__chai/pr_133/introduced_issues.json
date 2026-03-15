@@ -1,0 +1,1834 @@
+[
+  {
+    "code": "91 \n92     assert result == {\n93         \"binutils\": {\n94             \"binutils-for-host\",\n95             \"binutils-for-build\",\n96             \"binutils-ia64-linux-gnu-dbg\",\n97             \"binutils-m68k-linux-gnu\",\n98             \"binutils-mips64el-linux-gnuabin32-dbg\",\n99             \"binutils-mipsisa64r6-linux-gnuabin32\",\n100             \"binutils-mipsisa64r6el-linux-gnuabi64-dbg\",\n101         }\n102     }\n103 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./package_managers/debian/scripts/test_investigate_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 92,
+    "line_range": [
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "110 \n111     assert \"linux-headers-6.1.0-32-amd64\" in result[\"linux\"]\n112     assert \"linux-headers-6.1.0-32-cloud-amd64\" in result[\"linux\"]\n",
+    "col_offset": 4,
+    "end_col_offset": 60,
+    "filename": "./package_managers/debian/scripts/test_investigate_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 111,
+    "line_range": [
+      111
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "111     assert \"linux-headers-6.1.0-32-amd64\" in result[\"linux\"]\n112     assert \"linux-headers-6.1.0-32-cloud-amd64\" in result[\"linux\"]\n",
+    "col_offset": 4,
+    "end_col_offset": 66,
+    "filename": "./package_managers/debian/scripts/test_investigate_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 112,
+    "line_range": [
+      112
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "66         # Assertions\n67         assert len(new_links) == 1  # New URL should be created\n68         new_link = new_links[0]\n",
+    "col_offset": 8,
+    "end_col_offset": 34,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 67,
+    "line_range": [
+      67
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "68         new_link = new_links[0]\n69         assert new_link.package_id == existing_pkg_id\n70 \n",
+    "col_offset": 8,
+    "end_col_offset": 53,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 69,
+    "line_range": [
+      69
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "71         # The URL should be created in new_urls dict and the link should reference it\n72         assert len(new_urls) == 1  # One new URL should be created\n73         new_url_key = next(iter(new_urls.keys()))\n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 72,
+    "line_range": [
+      72
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "74         new_url = new_urls[new_url_key]\n75         assert new_link.url_id == new_url.id  # Link should reference the new URL\n76         assert new_url_key.url == \"https://new-homepage.com\"\n",
+    "col_offset": 8,
+    "end_col_offset": 44,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 75,
+    "line_range": [
+      75
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "75         assert new_link.url_id == new_url.id  # Link should reference the new URL\n76         assert new_url_key.url == \"https://new-homepage.com\"\n77         assert new_url_key.url_type_id == mock_config.url_types.homepage\n",
+    "col_offset": 8,
+    "end_col_offset": 60,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 76,
+    "line_range": [
+      76
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "76         assert new_url_key.url == \"https://new-homepage.com\"\n77         assert new_url_key.url_type_id == mock_config.url_types.homepage\n78 \n",
+    "col_offset": 8,
+    "end_col_offset": 72,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 77,
+    "line_range": [
+      77
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "152         # Assertions\n153         assert len(new_deps) == 1  # dep3 should be added\n154         assert new_deps[0].dependency_id == dep3_id\n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 153,
+    "line_range": [
+      153
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "153         assert len(new_deps) == 1  # dep3 should be added\n154         assert new_deps[0].dependency_id == dep3_id\n155         assert new_deps[0].dependency_type_id == mock_config.dependency_types.runtime\n",
+    "col_offset": 8,
+    "end_col_offset": 51,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 154,
+    "line_range": [
+      154
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "154         assert new_deps[0].dependency_id == dep3_id\n155         assert new_deps[0].dependency_type_id == mock_config.dependency_types.runtime\n156 \n",
+    "col_offset": 8,
+    "end_col_offset": 85,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 155,
+    "line_range": [
+      155
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "156 \n157         assert len(removed_deps) == 1  # dep2 should be removed\n158         assert removed_deps[0].dependency_id == dep2_id\n",
+    "col_offset": 8,
+    "end_col_offset": 37,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 157,
+    "line_range": [
+      157
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "157         assert len(removed_deps) == 1  # dep2 should be removed\n158         assert removed_deps[0].dependency_id == dep2_id\n159         assert removed_deps[0].dependency_type_id == mock_config.dependency_types.build\n",
+    "col_offset": 8,
+    "end_col_offset": 55,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 158,
+    "line_range": [
+      158
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "158         assert removed_deps[0].dependency_id == dep2_id\n159         assert removed_deps[0].dependency_type_id == mock_config.dependency_types.build\n160 \n",
+    "col_offset": 8,
+    "end_col_offset": 87,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 159,
+    "line_range": [
+      159
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "180         # Assertions\n181         assert pkg_obj is not None  # New package should be created\n182         assert pkg_obj.derived_id == \"debian/new-pkg\"\n",
+    "col_offset": 8,
+    "end_col_offset": 34,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 181,
+    "line_range": [
+      181
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "181         assert pkg_obj is not None  # New package should be created\n182         assert pkg_obj.derived_id == \"debian/new-pkg\"\n183         assert pkg_obj.name == \"new-pkg\"\n",
+    "col_offset": 8,
+    "end_col_offset": 53,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 182,
+    "line_range": [
+      182
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "182         assert pkg_obj.derived_id == \"debian/new-pkg\"\n183         assert pkg_obj.name == \"new-pkg\"\n184         assert pkg_obj.import_id == \"debian/new-pkg\"\n",
+    "col_offset": 8,
+    "end_col_offset": 40,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 183,
+    "line_range": [
+      183
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "183         assert pkg_obj.name == \"new-pkg\"\n184         assert pkg_obj.import_id == \"debian/new-pkg\"\n185         assert pkg_obj.package_manager_id == mock_config.pm_config.pm_id\n",
+    "col_offset": 8,
+    "end_col_offset": 52,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 184,
+    "line_range": [
+      184
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "184         assert pkg_obj.import_id == \"debian/new-pkg\"\n185         assert pkg_obj.package_manager_id == mock_config.pm_config.pm_id\n186         assert pkg_obj.readme == \"A new package\"\n",
+    "col_offset": 8,
+    "end_col_offset": 72,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 185,
+    "line_range": [
+      185
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "185         assert pkg_obj.package_manager_id == mock_config.pm_config.pm_id\n186         assert pkg_obj.readme == \"A new package\"\n187         assert update_payload == {}  # No updates for new package\n",
+    "col_offset": 8,
+    "end_col_offset": 48,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 186,
+    "line_range": [
+      186
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "186         assert pkg_obj.readme == \"A new package\"\n187         assert update_payload == {}  # No updates for new package\n188 \n",
+    "col_offset": 8,
+    "end_col_offset": 35,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 187,
+    "line_range": [
+      187
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "194         # Should create URL for homepage\n195         assert len(new_urls) >= 1  # At least homepage\n196         assert len(new_links) >= 1  # At least homepage link\n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 195,
+    "line_range": [
+      195
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "195         assert len(new_urls) >= 1  # At least homepage\n196         assert len(new_links) >= 1  # At least homepage link\n197         assert len(updated_links) == 0  # No existing links to update\n",
+    "col_offset": 8,
+    "end_col_offset": 34,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 196,
+    "line_range": [
+      196
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "196         assert len(new_links) >= 1  # At least homepage link\n197         assert len(updated_links) == 0  # No existing links to update\n198 \n",
+    "col_offset": 8,
+    "end_col_offset": 38,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 197,
+    "line_range": [
+      197
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "202             if url_key.url_type_id == mock_config.url_types.homepage:\n203                 assert url_key.url == \"https://github.com/example/new-pkg\"\n204                 homepage_url_found = True\n",
+    "col_offset": 16,
+    "end_col_offset": 74,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 203,
+    "line_range": [
+      203
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "205                 break\n206         assert homepage_url_found\n207 \n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 206,
+    "line_range": [
+      206
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "238         # Assertions\n239         assert pkg_id == existing_pkg_id\n240         assert pkg_obj is None  # No new package\n",
+    "col_offset": 8,
+    "end_col_offset": 40,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 239,
+    "line_range": [
+      239
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "239         assert pkg_id == existing_pkg_id\n240         assert pkg_obj is None  # No new package\n241         assert update_payload is None  # No changes\n",
+    "col_offset": 8,
+    "end_col_offset": 30,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 240,
+    "line_range": [
+      240
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "240         assert pkg_obj is None  # No new package\n241         assert update_payload is None  # No changes\n242 \n",
+    "col_offset": 8,
+    "end_col_offset": 37,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 241,
+    "line_range": [
+      241
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "273         # Assertions\n274         assert pkg_id == existing_pkg_id\n275         assert pkg_obj is None  # No new package\n",
+    "col_offset": 8,
+    "end_col_offset": 40,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 274,
+    "line_range": [
+      274
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "274         assert pkg_id == existing_pkg_id\n275         assert pkg_obj is None  # No new package\n276         assert update_payload is not None  # Should have changes\n",
+    "col_offset": 8,
+    "end_col_offset": 30,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 275,
+    "line_range": [
+      275
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "275         assert pkg_obj is None  # No new package\n276         assert update_payload is not None  # Should have changes\n277         assert update_payload[\"id\"] == existing_pkg_id\n",
+    "col_offset": 8,
+    "end_col_offset": 41,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 276,
+    "line_range": [
+      276
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "276         assert update_payload is not None  # Should have changes\n277         assert update_payload[\"id\"] == existing_pkg_id\n278         assert update_payload[\"readme\"] == \"New description\"\n",
+    "col_offset": 8,
+    "end_col_offset": 54,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 277,
+    "line_range": [
+      277
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "277         assert update_payload[\"id\"] == existing_pkg_id\n278         assert update_payload[\"readme\"] == \"New description\"\n279 \n",
+    "col_offset": 8,
+    "end_col_offset": 60,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 278,
+    "line_range": [
+      278
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "306         # Should handle gracefully - no deps added for missing packages\n307         assert len(new_deps) == 0\n308         assert len(removed_deps) == 0\n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 307,
+    "line_range": [
+      307
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "307         assert len(new_deps) == 0\n308         assert len(removed_deps) == 0\n309 \n",
+    "col_offset": 8,
+    "end_col_offset": 37,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 308,
+    "line_range": [
+      308
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "352         # Should have no changes - runtime priority means no change needed\n353         assert len(new_deps) == 0\n354         assert len(removed_deps) == 0\n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 353,
+    "line_range": [
+      353
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "353         assert len(new_deps) == 0\n354         assert len(removed_deps) == 0\n355 \n",
+    "col_offset": 8,
+    "end_col_offset": 37,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 354,
+    "line_range": [
+      354
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "397         # Should remove runtime and add build\n398         assert len(removed_deps) == 1\n399         assert removed_deps[0].dependency_id == p2_id\n",
+    "col_offset": 8,
+    "end_col_offset": 37,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 398,
+    "line_range": [
+      398
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "398         assert len(removed_deps) == 1\n399         assert removed_deps[0].dependency_id == p2_id\n400         assert (\n",
+    "col_offset": 8,
+    "end_col_offset": 53,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 399,
+    "line_range": [
+      399
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "399         assert removed_deps[0].dependency_id == p2_id\n400         assert (\n401             removed_deps[0].dependency_type_id == mock_config.dependency_types.runtime\n402         )\n403 \n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 400,
+    "line_range": [
+      400,
+      401,
+      402
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "403 \n404         assert len(new_deps) == 1\n405         assert new_deps[0].dependency_id == p2_id\n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 404,
+    "line_range": [
+      404
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "404         assert len(new_deps) == 1\n405         assert new_deps[0].dependency_id == p2_id\n406         assert new_deps[0].dependency_type_id == mock_config.dependency_types.build\n",
+    "col_offset": 8,
+    "end_col_offset": 49,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 405,
+    "line_range": [
+      405
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "405         assert new_deps[0].dependency_id == p2_id\n406         assert new_deps[0].dependency_type_id == mock_config.dependency_types.build\n407 \n",
+    "col_offset": 8,
+    "end_col_offset": 83,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 406,
+    "line_range": [
+      406
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "449         # Should remove build and add runtime\n450         assert len(removed_deps) == 1\n451         assert removed_deps[0].dependency_id == p2_id\n",
+    "col_offset": 8,
+    "end_col_offset": 37,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 450,
+    "line_range": [
+      450
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "450         assert len(removed_deps) == 1\n451         assert removed_deps[0].dependency_id == p2_id\n452         assert removed_deps[0].dependency_type_id == mock_config.dependency_types.build\n",
+    "col_offset": 8,
+    "end_col_offset": 53,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 451,
+    "line_range": [
+      451
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "451         assert removed_deps[0].dependency_id == p2_id\n452         assert removed_deps[0].dependency_type_id == mock_config.dependency_types.build\n453 \n",
+    "col_offset": 8,
+    "end_col_offset": 87,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 452,
+    "line_range": [
+      452
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "453 \n454         assert len(new_deps) == 1\n455         assert new_deps[0].dependency_id == p2_id\n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 454,
+    "line_range": [
+      454
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "454         assert len(new_deps) == 1\n455         assert new_deps[0].dependency_id == p2_id\n456         assert new_deps[0].dependency_type_id == mock_config.dependency_types.runtime\n",
+    "col_offset": 8,
+    "end_col_offset": 49,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 455,
+    "line_range": [
+      455
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "455         assert new_deps[0].dependency_id == p2_id\n456         assert new_deps[0].dependency_type_id == mock_config.dependency_types.runtime\n457 \n",
+    "col_offset": 8,
+    "end_col_offset": 85,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 456,
+    "line_range": [
+      456
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "492         # Should only create one new dependency - runtime (higher priority)\n493         assert len(removed_deps) == 0\n494         assert len(new_deps) == 1\n",
+    "col_offset": 8,
+    "end_col_offset": 37,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 493,
+    "line_range": [
+      493
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "493         assert len(removed_deps) == 0\n494         assert len(new_deps) == 1\n495         assert new_deps[0].dependency_id == p2_id\n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 494,
+    "line_range": [
+      494
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "494         assert len(new_deps) == 1\n495         assert new_deps[0].dependency_id == p2_id\n496         assert new_deps[0].dependency_type_id == mock_config.dependency_types.runtime\n",
+    "col_offset": 8,
+    "end_col_offset": 49,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 495,
+    "line_range": [
+      495
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "495         assert new_deps[0].dependency_id == p2_id\n496         assert new_deps[0].dependency_type_id == mock_config.dependency_types.runtime\n497 \n",
+    "col_offset": 8,
+    "end_col_offset": 85,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 496,
+    "line_range": [
+      496
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "526         # Should create runtime dependencies for both recommends and suggests\n527         assert len(removed_deps) == 0\n528         assert len(new_deps) == 2\n",
+    "col_offset": 8,
+    "end_col_offset": 37,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 527,
+    "line_range": [
+      527
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "527         assert len(removed_deps) == 0\n528         assert len(new_deps) == 2\n529 \n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 528,
+    "line_range": [
+      528
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "531         for dep in new_deps:\n532             assert dep.dependency_type_id == mock_config.dependency_types.runtime\n533             assert dep.dependency_id in [p2_id, p3_id]\n",
+    "col_offset": 12,
+    "end_col_offset": 81,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 532,
+    "line_range": [
+      532
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "532             assert dep.dependency_type_id == mock_config.dependency_types.runtime\n533             assert dep.dependency_id in [p2_id, p3_id]\n534 \n",
+    "col_offset": 12,
+    "end_col_offset": 54,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 533,
+    "line_range": [
+      533
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "559 \n560         assert len(result.new_packages) == 1\n561         assert len(result.new_package_urls) == 1\n",
+    "col_offset": 8,
+    "end_col_offset": 44,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 560,
+    "line_range": [
+      560
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "560         assert len(result.new_packages) == 1\n561         assert len(result.new_package_urls) == 1\n562         assert len(result.new_deps) == 0  # bc we don't load dependencies of new pkgs\n",
+    "col_offset": 8,
+    "end_col_offset": 48,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 561,
+    "line_range": [
+      561
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "561         assert len(result.new_package_urls) == 1\n562         assert len(result.new_deps) == 0  # bc we don't load dependencies of new pkgs\n",
+    "col_offset": 8,
+    "end_col_offset": 40,
+    "filename": "./tests/package_managers/debian/test_debian_diff.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 562,
+    "line_range": [
+      562
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "33         # Verify mapping\n34         assert len(mapping) == 4  # 3 packages from first source + 1 from second\n35         assert \"test-pkg1\" in mapping\n",
+    "col_offset": 8,
+    "end_col_offset": 32,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 34,
+    "line_range": [
+      34
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "34         assert len(mapping) == 4  # 3 packages from first source + 1 from second\n35         assert \"test-pkg1\" in mapping\n36         assert \"test-pkg2\" in mapping\n",
+    "col_offset": 8,
+    "end_col_offset": 37,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 35,
+    "line_range": [
+      35
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "35         assert \"test-pkg1\" in mapping\n36         assert \"test-pkg2\" in mapping\n37         assert \"test-pkg3\" in mapping\n",
+    "col_offset": 8,
+    "end_col_offset": 37,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 36,
+    "line_range": [
+      36
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "36         assert \"test-pkg2\" in mapping\n37         assert \"test-pkg3\" in mapping\n38         assert \"another-pkg\" in mapping\n",
+    "col_offset": 8,
+    "end_col_offset": 37,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 37,
+    "line_range": [
+      37
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "37         assert \"test-pkg3\" in mapping\n38         assert \"another-pkg\" in mapping\n39 \n",
+    "col_offset": 8,
+    "end_col_offset": 39,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 38,
+    "line_range": [
+      38
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "40         # Verify source data is correctly associated\n41         assert mapping[\"test-pkg1\"].package == \"test-source\"\n42         # URLs are normalized by the parser - expect normalized format\n",
+    "col_offset": 8,
+    "end_col_offset": 60,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 41,
+    "line_range": [
+      41
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "42         # URLs are normalized by the parser - expect normalized format\n43         assert mapping[\"test-pkg1\"].vcs_git == \"github.com/test/test-source\"\n44         assert mapping[\"test-pkg2\"].package == \"test-source\"\n",
+    "col_offset": 8,
+    "end_col_offset": 76,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 43,
+    "line_range": [
+      43
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "43         assert mapping[\"test-pkg1\"].vcs_git == \"github.com/test/test-source\"\n44         assert mapping[\"test-pkg2\"].package == \"test-source\"\n45         assert mapping[\"another-pkg\"].package == \"another-source\"\n",
+    "col_offset": 8,
+    "end_col_offset": 60,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 44,
+    "line_range": [
+      44
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "44         assert mapping[\"test-pkg2\"].package == \"test-source\"\n45         assert mapping[\"another-pkg\"].package == \"another-source\"\n46         assert mapping[\"another-pkg\"].vcs_browser == \"github.com/test/another-source\"\n",
+    "col_offset": 8,
+    "end_col_offset": 65,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 45,
+    "line_range": [
+      45
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "45         assert mapping[\"another-pkg\"].package == \"another-source\"\n46         assert mapping[\"another-pkg\"].vcs_browser == \"github.com/test/another-source\"\n47 \n",
+    "col_offset": 8,
+    "end_col_offset": 85,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 46,
+    "line_range": [
+      46
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "65         # Verify mapping - should use source package name as binary name\n66         assert len(mapping) == 1\n67         assert \"single-source\" in mapping\n",
+    "col_offset": 8,
+    "end_col_offset": 32,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 66,
+    "line_range": [
+      66
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "66         assert len(mapping) == 1\n67         assert \"single-source\" in mapping\n68         assert mapping[\"single-source\"].package == \"single-source\"\n",
+    "col_offset": 8,
+    "end_col_offset": 41,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 67,
+    "line_range": [
+      67
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "67         assert \"single-source\" in mapping\n68         assert mapping[\"single-source\"].package == \"single-source\"\n69         # URLs are normalized by the parser - expect normalized format\n",
+    "col_offset": 8,
+    "end_col_offset": 66,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 68,
+    "line_range": [
+      68
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "69         # URLs are normalized by the parser - expect normalized format\n70         assert mapping[\"single-source\"].vcs_git == \"github.com/test/single-source\"\n71 \n",
+    "col_offset": 8,
+    "end_col_offset": 82,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 70,
+    "line_range": [
+      70
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "94         # Verify enrichment\n95         assert enriched.package == \"binary-pkg\"\n96         assert enriched.description == \"A binary package\"\n",
+    "col_offset": 8,
+    "end_col_offset": 47,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 95,
+    "line_range": [
+      95
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "95         assert enriched.package == \"binary-pkg\"\n96         assert enriched.description == \"A binary package\"\n97         assert enriched.vcs_git == \"github.com/test/source-pkg\"\n",
+    "col_offset": 8,
+    "end_col_offset": 57,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 96,
+    "line_range": [
+      96
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "96         assert enriched.description == \"A binary package\"\n97         assert enriched.vcs_git == \"github.com/test/source-pkg\"\n98         assert enriched.homepage == \"example.com/source-pkg\"\n",
+    "col_offset": 8,
+    "end_col_offset": 63,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 97,
+    "line_range": [
+      97
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "97         assert enriched.vcs_git == \"github.com/test/source-pkg\"\n98         assert enriched.homepage == \"example.com/source-pkg\"\n99         assert len(enriched.build_depends) == 2\n",
+    "col_offset": 8,
+    "end_col_offset": 60,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 98,
+    "line_range": [
+      98
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "98         assert enriched.homepage == \"example.com/source-pkg\"\n99         assert len(enriched.build_depends) == 2\n100 \n",
+    "col_offset": 8,
+    "end_col_offset": 47,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 99,
+    "line_range": [
+      99
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "101         build_depend_names = [item.package for item in enriched.build_depends]\n102         assert build_depend_names == [\"build-dep1\", \"build-dep2\"]\n103 \n",
+    "col_offset": 8,
+    "end_col_offset": 65,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 102,
+    "line_range": [
+      102
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "124         # Verify enrichment\n125         assert enriched.package == \"self-source-pkg\"\n126         assert enriched.vcs_browser == \"github.com/test/self-source-pkg\"\n",
+    "col_offset": 8,
+    "end_col_offset": 52,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 125,
+    "line_range": [
+      125
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "125         assert enriched.package == \"self-source-pkg\"\n126         assert enriched.vcs_browser == \"github.com/test/self-source-pkg\"\n127         assert enriched.directory == \"pool/main/s/self-source-pkg\"\n",
+    "col_offset": 8,
+    "end_col_offset": 72,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 126,
+    "line_range": [
+      126
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "126         assert enriched.vcs_browser == \"github.com/test/self-source-pkg\"\n127         assert enriched.directory == \"pool/main/s/self-source-pkg\"\n128 \n",
+    "col_offset": 8,
+    "end_col_offset": 66,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 127,
+    "line_range": [
+      127
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "150         # Package should remain unchanged\n151         assert enriched.package == \"orphan-pkg\"\n152         assert enriched.description == \"An orphaned package\"\n",
+    "col_offset": 8,
+    "end_col_offset": 47,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 151,
+    "line_range": [
+      151
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "151         assert enriched.package == \"orphan-pkg\"\n152         assert enriched.description == \"An orphaned package\"\n153         assert not enriched.vcs_git\n",
+    "col_offset": 8,
+    "end_col_offset": 60,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 152,
+    "line_range": [
+      152
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "152         assert enriched.description == \"An orphaned package\"\n153         assert not enriched.vcs_git\n154         assert not enriched.vcs_browser\n",
+    "col_offset": 8,
+    "end_col_offset": 35,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 153,
+    "line_range": [
+      153
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "153         assert not enriched.vcs_git\n154         assert not enriched.vcs_browser\n155 \n",
+    "col_offset": 8,
+    "end_col_offset": 39,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 154,
+    "line_range": [
+      154
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "175         # Verify package homepage is preserved, but source info is added\n176         assert enriched.homepage == \"pkg-homepage.com\"  # Package value preserved\n177         assert enriched.vcs_git == \"github.com/test/pkg\"  # Source value added\n",
+    "col_offset": 8,
+    "end_col_offset": 54,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 176,
+    "line_range": [
+      176
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "176         assert enriched.homepage == \"pkg-homepage.com\"  # Package value preserved\n177         assert enriched.vcs_git == \"github.com/test/pkg\"  # Source value added\n",
+    "col_offset": 8,
+    "end_col_offset": 56,
+    "filename": "./tests/package_managers/debian/test_debian_sources.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 177,
+    "line_range": [
+      177
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

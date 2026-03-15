@@ -1,0 +1,67 @@
+[
+  {
+    "code": "6 import shutil\n7 import subprocess\n8 from typing import Sequence\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./src/utils/secure_run.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 7,
+    "line_range": [
+      7
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "55     try:\n56         return subprocess.run(\n57             full_cmd,\n58             text=True,\n59             capture_output=True,\n60             timeout=timeout,\n61         )\n62     except subprocess.TimeoutExpired as exc:  # pragma: no cover - runtime failure\n",
+    "col_offset": 15,
+    "end_col_offset": 9,
+    "filename": "./src/utils/secure_run.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 56,
+    "line_range": [
+      56,
+      57,
+      58,
+      59,
+      60,
+      61
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "1 # SPDX-License-Identifier: Apache-2.0\n2 import subprocess\n3 import shutil\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tests/test_secure_run.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 2,
+    "line_range": [
+      2
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  }
+]

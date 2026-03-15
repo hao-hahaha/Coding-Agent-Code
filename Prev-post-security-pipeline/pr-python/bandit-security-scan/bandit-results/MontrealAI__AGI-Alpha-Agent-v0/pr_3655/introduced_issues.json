@@ -1,0 +1,23 @@
+[
+  {
+    "code": "73         monkeypatch.setattr(requests.sessions.Session, \"request\", _blocked)\n74     except Exception:\n75         pass\n76     yield\n",
+    "col_offset": 4,
+    "end_col_offset": 12,
+    "filename": "./tests/conftest.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 74,
+    "line_range": [
+      74,
+      75
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  }
+]

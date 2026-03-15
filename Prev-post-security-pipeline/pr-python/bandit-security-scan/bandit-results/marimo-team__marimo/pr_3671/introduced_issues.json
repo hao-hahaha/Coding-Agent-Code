@@ -1,0 +1,42 @@
+[
+  {
+    "code": "24         result = reader.read_toml(TestConfig, fallback=fallback)\n25         assert result == fallback\n26 \n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./tests/_utils/config/test_config_reader.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 25,
+    "line_range": [
+      25
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "37         result = reader.read_toml(TestConfig, fallback=fallback)\n38         assert result == TestConfig(value=\"test\")\n39 \n",
+    "col_offset": 8,
+    "end_col_offset": 49,
+    "filename": "./tests/_utils/config/test_config_reader.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 38,
+    "line_range": [
+      38
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

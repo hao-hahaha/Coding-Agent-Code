@@ -1,0 +1,162 @@
+[
+  {
+    "code": "15     ann = typing.get_args(typing.get_type_hints(foo, include_extras=True)[\"x\"])\n16     assert ann[0] is NamedArray\n17     spec = ann[1]\n",
+    "col_offset": 4,
+    "end_col_offset": 31,
+    "filename": "./tests/test_dtype_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 16,
+    "line_range": [
+      16
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "17     spec = ann[1]\n18     assert spec.dtype == jnp.float32\n19     assert spec.before == (\"batch\", \"embed\")\n",
+    "col_offset": 4,
+    "end_col_offset": 36,
+    "filename": "./tests/test_dtype_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 18,
+    "line_range": [
+      18
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "18     assert spec.dtype == jnp.float32\n19     assert spec.before == (\"batch\", \"embed\")\n20 \n",
+    "col_offset": 4,
+    "end_col_offset": 44,
+    "filename": "./tests/test_dtype_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 19,
+    "line_range": [
+      19
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "26     spec = typing.get_args(typing.get_type_hints(bar, include_extras=True)[\"x\"])[1]\n27     assert spec.dtype == jnp.int32\n28     assert spec.before == (\"batch\",)\n",
+    "col_offset": 4,
+    "end_col_offset": 34,
+    "filename": "./tests/test_dtype_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 27,
+    "line_range": [
+      27
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "27     assert spec.dtype == jnp.int32\n28     assert spec.before == (\"batch\",)\n29 \n",
+    "col_offset": 4,
+    "end_col_offset": 36,
+    "filename": "./tests/test_dtype_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 28,
+    "line_range": [
+      28
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "35     spec = typing.get_args(typing.get_type_hints(baz, include_extras=True)[\"x\"])[1]\n36     assert str(spec.dtype) == \"float\"\n37 \n",
+    "col_offset": 4,
+    "end_col_offset": 37,
+    "filename": "./tests/test_dtype_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 36,
+    "line_range": [
+      36
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "39     arr = NamedArray(jnp.ones((B.size,), dtype=jnp.float32), (B,))\n40     assert arr.matches_axes(Float[\"b\"])  # type: ignore\n41     assert not arr.matches_axes(Int[\"b\"])  # type: ignore\n",
+    "col_offset": 4,
+    "end_col_offset": 39,
+    "filename": "./tests/test_dtype_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 40,
+    "line_range": [
+      40
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "40     assert arr.matches_axes(Float[\"b\"])  # type: ignore\n41     assert not arr.matches_axes(Int[\"b\"])  # type: ignore\n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./tests/test_dtype_typing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 41,
+    "line_range": [
+      41
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

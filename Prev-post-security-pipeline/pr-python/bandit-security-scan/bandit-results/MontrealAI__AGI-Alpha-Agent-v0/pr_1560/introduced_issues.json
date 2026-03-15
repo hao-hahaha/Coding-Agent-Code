@@ -1,0 +1,62 @@
+[
+  {
+    "code": "18     out = capsys.readouterr().out\n19     assert \"Download failed for dummy.txt\" in out\n20     assert \"ERROR: Unable to retrieve dummy.txt\" in out\n",
+    "col_offset": 4,
+    "end_col_offset": 49,
+    "filename": "./tests/test_fetch_assets.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 19,
+    "line_range": [
+      19
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "19     assert \"Download failed for dummy.txt\" in out\n20     assert \"ERROR: Unable to retrieve dummy.txt\" in out\n21     assert exc.value.code == 1\n",
+    "col_offset": 4,
+    "end_col_offset": 55,
+    "filename": "./tests/test_fetch_assets.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 20,
+    "line_range": [
+      20
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "20     assert \"ERROR: Unable to retrieve dummy.txt\" in out\n21     assert exc.value.code == 1\n",
+    "col_offset": 4,
+    "end_col_offset": 30,
+    "filename": "./tests/test_fetch_assets.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 21,
+    "line_range": [
+      21
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

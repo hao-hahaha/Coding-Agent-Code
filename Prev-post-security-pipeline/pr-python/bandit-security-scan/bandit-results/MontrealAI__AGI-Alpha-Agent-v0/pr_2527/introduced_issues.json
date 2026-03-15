@@ -1,0 +1,82 @@
+[
+  {
+    "code": "92     app = build_rest(dev_orchestrator.manager.runners, 1024 * 1024, _mem_stub())\n93     assert app is not None\n94     client = TestClient(app)\n",
+    "col_offset": 4,
+    "end_col_offset": 26,
+    "filename": "./tests/test_backend_orchestrator_dev.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 93,
+    "line_range": [
+      93
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "97     resp = client.get(\"/agents\", headers=headers)\n98     assert resp.status_code == 200\n99     assert set(resp.json()) == {\"dummy\", \"fail\"}\n",
+    "col_offset": 4,
+    "end_col_offset": 34,
+    "filename": "./tests/test_backend_orchestrator_dev.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 98,
+    "line_range": [
+      98
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "98     assert resp.status_code == 200\n99     assert set(resp.json()) == {\"dummy\", \"fail\"}\n100 \n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/test_backend_orchestrator_dev.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 99,
+    "line_range": [
+      99
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "108 \n109     assert AGENT_REGISTRY[\"fail\"].cls is StubAgent\n",
+    "col_offset": 4,
+    "end_col_offset": 50,
+    "filename": "./tests/test_backend_orchestrator_dev.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 109,
+    "line_range": [
+      109
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

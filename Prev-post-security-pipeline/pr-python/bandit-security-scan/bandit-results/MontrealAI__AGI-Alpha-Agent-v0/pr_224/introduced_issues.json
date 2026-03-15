@@ -1,0 +1,67 @@
+[
+  {
+    "code": "355         print(df.tail())\n356     except Exception:  # pragma: no cover - pandas optional\n357         pass\n358 \n",
+    "col_offset": 4,
+    "end_col_offset": 12,
+    "filename": "./alpha_factory_v1/demos/aiga_meta_evolution/meta_evolver.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 356,
+    "line_range": [
+      356,
+      357
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "1 import subprocess\n2 import sys\n3 import unittest\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tests/test_aiga_meta_cli.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 1,
+    "line_range": [
+      1
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "6     def test_cli_runs(self) -> None:\n7         result = subprocess.run(\n8             [sys.executable, '-m', 'alpha_factory_v1.demos.aiga_meta_evolution.meta_evolver', '--gens', '1'],\n9             capture_output=True,\n10             text=True,\n11         )\n12         self.assertEqual(result.returncode, 0)\n",
+    "col_offset": 17,
+    "end_col_offset": 9,
+    "filename": "./tests/test_aiga_meta_cli.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 7,
+    "line_range": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  }
+]

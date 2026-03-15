@@ -1,0 +1,1602 @@
+[
+  {
+    "code": "43         config = json.load(f)\n44     assert isinstance(config, dict)\n45     return config\n",
+    "col_offset": 4,
+    "end_col_offset": 35,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/_wsgi.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 44,
+    "line_range": [
+      44
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "53     parser.add_argument(\n54         '--host', dest='host', type=str, default='0.0.0.0', help='Server host'\n55     )\n",
+    "col_offset": 49,
+    "end_col_offset": 58,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/_wsgi.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 605,
+      "link": "https://cwe.mitre.org/data/definitions/605.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible binding to all interfaces.",
+    "line_number": 54,
+    "line_range": [
+      54
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b104_hardcoded_bind_all_interfaces.html",
+    "test_id": "B104",
+    "test_name": "hardcoded_bind_all_interfaces"
+  },
+  {
+    "code": "129 \n130         import xml.etree.ElementTree as ET\n131 \n",
+    "col_offset": 8,
+    "end_col_offset": 42,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/model.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 20,
+      "link": "https://cwe.mitre.org/data/definitions/20.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Using xml.etree.ElementTree to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.",
+    "line_number": 130,
+    "line_range": [
+      130
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b405-import-xml-etree",
+    "test_id": "B405",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "131 \n132         root = ET.fromstring(self.label_config)\n133         ts_elem = root.find(f\".//TimeSeries[@name='{to_name}']\")\n",
+    "col_offset": 15,
+    "end_col_offset": 47,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/model.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 20,
+      "link": "https://cwe.mitre.org/data/definitions/20.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Using xml.etree.ElementTree.fromstring to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.fromstring with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+    "line_number": 132,
+    "line_range": [
+      132
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b313-b320-xml-bad-elementtree",
+    "test_id": "B314",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "155         \n156         assert params[\"labels\"] == [\"Run\", \"Walk\"]\n157         assert params[\"all_labels\"] == [\"__background__\", \"Run\", \"Walk\"]\n",
+    "col_offset": 8,
+    "end_col_offset": 50,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 156,
+    "line_range": [
+      156
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "156         assert params[\"labels\"] == [\"Run\", \"Walk\"]\n157         assert params[\"all_labels\"] == [\"__background__\", \"Run\", \"Walk\"]\n158         assert params[\"channels\"] == [\"sensorone\", \"sensortwo\"]\n",
+    "col_offset": 8,
+    "end_col_offset": 72,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 157,
+    "line_range": [
+      157
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "157         assert params[\"all_labels\"] == [\"__background__\", \"Run\", \"Walk\"]\n158         assert params[\"channels\"] == [\"sensorone\", \"sensortwo\"]\n159         assert params[\"time_col\"] == \"time\"\n",
+    "col_offset": 8,
+    "end_col_offset": 63,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 158,
+    "line_range": [
+      158
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "158         assert params[\"channels\"] == [\"sensorone\", \"sensortwo\"]\n159         assert params[\"time_col\"] == \"time\"\n160         assert params[\"from_name\"] == \"label\"\n",
+    "col_offset": 8,
+    "end_col_offset": 43,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 159,
+    "line_range": [
+      159
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "159         assert params[\"time_col\"] == \"time\"\n160         assert params[\"from_name\"] == \"label\"\n161         assert params[\"to_name\"] == \"ts\"\n",
+    "col_offset": 8,
+    "end_col_offset": 45,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 160,
+    "line_range": [
+      160
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "160         assert params[\"from_name\"] == \"label\"\n161         assert params[\"to_name\"] == \"ts\"\n162         logger.info(\"✓ Setup and configuration test passed\")\n",
+    "col_offset": 8,
+    "end_col_offset": 40,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 161,
+    "line_range": [
+      161
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "180         # Check model type by class name (avoid import namespace issues)\n181         assert model.__class__.__name__ == \"TimeSeriesLSTM\"\n182         assert model.input_size == 2\n",
+    "col_offset": 8,
+    "end_col_offset": 59,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 181,
+    "line_range": [
+      181
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "181         assert model.__class__.__name__ == \"TimeSeriesLSTM\"\n182         assert model.input_size == 2\n183         assert model.output_size == 3\n",
+    "col_offset": 8,
+    "end_col_offset": 36,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 182,
+    "line_range": [
+      182
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "182         assert model.input_size == 2\n183         assert model.output_size == 3\n184         assert model.sequence_size == 10  # From test environment\n",
+    "col_offset": 8,
+    "end_col_offset": 37,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 183,
+    "line_range": [
+      183
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "183         assert model.output_size == 3\n184         assert model.sequence_size == 10  # From test environment\n185         logger.info(\"✓ Model building test passed\")\n",
+    "col_offset": 8,
+    "end_col_offset": 40,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 184,
+    "line_range": [
+      184
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "207             \n208         assert not df.empty\n209         assert df.shape == (100, 3)  # 100 rows, 3 columns\n",
+    "col_offset": 8,
+    "end_col_offset": 27,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 208,
+    "line_range": [
+      208
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "208         assert not df.empty\n209         assert df.shape == (100, 3)  # 100 rows, 3 columns\n210         assert list(df.columns) == [\"time\", \"sensorone\", \"sensortwo\"]\n",
+    "col_offset": 8,
+    "end_col_offset": 35,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 209,
+    "line_range": [
+      209
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "209         assert df.shape == (100, 3)  # 100 rows, 3 columns\n210         assert list(df.columns) == [\"time\", \"sensorone\", \"sensortwo\"]\n211         assert df[\"time\"].dtype in [int, float]\n",
+    "col_offset": 8,
+    "end_col_offset": 69,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 210,
+    "line_range": [
+      210
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "210         assert list(df.columns) == [\"time\", \"sensorone\", \"sensortwo\"]\n211         assert df[\"time\"].dtype in [int, float]\n212         assert time_col == \"time\"  # Should use the existing time column\n",
+    "col_offset": 8,
+    "end_col_offset": 47,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 211,
+    "line_range": [
+      211
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "211         assert df[\"time\"].dtype in [int, float]\n212         assert time_col == \"time\"  # Should use the existing time column\n213         logger.info(\"✓ CSV reading test passed\")\n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 212,
+    "line_range": [
+      212
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "239         logger.info(f\"Collected samples: X.shape={X.shape}, y.shape={y.shape}\")\n240         assert len(X) == 100  # All 100 rows should be included\n241         assert len(y) == 100\n",
+    "col_offset": 8,
+    "end_col_offset": 28,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 240,
+    "line_range": [
+      240
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "240         assert len(X) == 100  # All 100 rows should be included\n241         assert len(y) == 100\n242         assert X.shape == (100, 2)  # 2 sensor channels\n",
+    "col_offset": 8,
+    "end_col_offset": 28,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 241,
+    "line_range": [
+      241
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "241         assert len(y) == 100\n242         assert X.shape == (100, 2)  # 2 sensor channels\n243         \n",
+    "col_offset": 8,
+    "end_col_offset": 34,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 242,
+    "line_range": [
+      242
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "249         # Should have background (0), Run (1), and Walk (2)\n250         assert 0 in label_dist  # Background\n251         assert 1 in label_dist  # Run (rows 0-40)\n",
+    "col_offset": 8,
+    "end_col_offset": 30,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 250,
+    "line_range": [
+      250
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "250         assert 0 in label_dist  # Background\n251         assert 1 in label_dist  # Run (rows 0-40)\n252         assert 2 in label_dist  # Walk (rows 60-85)\n",
+    "col_offset": 8,
+    "end_col_offset": 30,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 251,
+    "line_range": [
+      251
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "251         assert 1 in label_dist  # Run (rows 0-40)\n252         assert 2 in label_dist  # Walk (rows 60-85)\n253         \n",
+    "col_offset": 8,
+    "end_col_offset": 30,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 252,
+    "line_range": [
+      252
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "254         # Check that we have the expected distribution (Run: 41, Walk: 26, Background: 33)\n255         assert label_dist[1] == 41  # Run (rows 0-40 inclusive)\n256         assert label_dist[2] == 26  # Walk (rows 60-85 inclusive)\n",
+    "col_offset": 8,
+    "end_col_offset": 34,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 255,
+    "line_range": [
+      255
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "255         assert label_dist[1] == 41  # Run (rows 0-40 inclusive)\n256         assert label_dist[2] == 26  # Walk (rows 60-85 inclusive)\n257         assert label_dist[0] == 33  # Background (remaining rows)\n",
+    "col_offset": 8,
+    "end_col_offset": 34,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 256,
+    "line_range": [
+      256
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "256         assert label_dist[2] == 26  # Walk (rows 60-85 inclusive)\n257         assert label_dist[0] == 33  # Background (remaining rows)\n258         \n",
+    "col_offset": 8,
+    "end_col_offset": 34,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 257,
+    "line_range": [
+      257
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "284         model.save(model_path)\n285         assert os.path.exists(model_path)\n286         logger.info(\"✓ Model saved successfully\")\n",
+    "col_offset": 8,
+    "end_col_offset": 41,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 285,
+    "line_range": [
+      285
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "293         logger.info(f\"Loaded model properties: input_size={loaded_model.input_size}, output_size={loaded_model.output_size}\")\n294         assert loaded_model.input_size == model.input_size\n295         assert loaded_model.output_size == model.output_size\n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 294,
+    "line_range": [
+      294
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "294         assert loaded_model.input_size == model.input_size\n295         assert loaded_model.output_size == model.output_size\n296         assert loaded_model.sequence_size == model.sequence_size\n",
+    "col_offset": 8,
+    "end_col_offset": 60,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 295,
+    "line_range": [
+      295
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "295         assert loaded_model.output_size == model.output_size\n296         assert loaded_model.sequence_size == model.sequence_size\n297         assert loaded_model.get_label_map() == label_map\n",
+    "col_offset": 8,
+    "end_col_offset": 64,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 296,
+    "line_range": [
+      296
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "296         assert loaded_model.sequence_size == model.sequence_size\n297         assert loaded_model.get_label_map() == label_map\n298         \n",
+    "col_offset": 8,
+    "end_col_offset": 56,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 297,
+    "line_range": [
+      297
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "306         # Should have same shape\n307         assert original_pred.shape == loaded_pred.shape\n308         logger.info(f\"Prediction shapes match: {original_pred.shape}\")\n",
+    "col_offset": 8,
+    "end_col_offset": 55,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 307,
+    "line_range": [
+      307
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "340             # Should return training metrics  \n341             assert isinstance(result, dict)\n342             # Check for new imbalanced-data metrics\n",
+    "col_offset": 12,
+    "end_col_offset": 43,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 341,
+    "line_range": [
+      341
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "342             # Check for new imbalanced-data metrics\n343             assert \"balanced_accuracy\" in result\n344             assert \"f1_score\" in result\n",
+    "col_offset": 12,
+    "end_col_offset": 48,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 343,
+    "line_range": [
+      343
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "343             assert \"balanced_accuracy\" in result\n344             assert \"f1_score\" in result\n345             assert \"loss\" in result\n",
+    "col_offset": 12,
+    "end_col_offset": 39,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 344,
+    "line_range": [
+      344
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "344             assert \"f1_score\" in result\n345             assert \"loss\" in result\n346             assert \"min_class_f1\" in result\n",
+    "col_offset": 12,
+    "end_col_offset": 35,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 345,
+    "line_range": [
+      345
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "345             assert \"loss\" in result\n346             assert \"min_class_f1\" in result\n347             logger.info(\"✓ Training metrics validated\")\n",
+    "col_offset": 12,
+    "end_col_offset": 43,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 346,
+    "line_range": [
+      346
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "352             \n353             assert len(predictions.predictions) == 1\n354             pred = predictions.predictions[0]\n",
+    "col_offset": 12,
+    "end_col_offset": 52,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 353,
+    "line_range": [
+      353
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "357             if pred:  # If prediction is not empty\n358                 assert hasattr(pred, 'result')\n359                 assert hasattr(pred, 'score')\n",
+    "col_offset": 16,
+    "end_col_offset": 46,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 358,
+    "line_range": [
+      358
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "358                 assert hasattr(pred, 'result')\n359                 assert hasattr(pred, 'score')\n360                 assert hasattr(pred, 'model_version')\n",
+    "col_offset": 16,
+    "end_col_offset": 45,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 359,
+    "line_range": [
+      359
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "359                 assert hasattr(pred, 'score')\n360                 assert hasattr(pred, 'model_version')\n361                 \n",
+    "col_offset": 16,
+    "end_col_offset": 53,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 360,
+    "line_range": [
+      360
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "364                     logger.info(f\"Segment {i}: {segment}\")\n365                     assert segment[\"type\"] == \"timeserieslabels\"\n366                     assert segment[\"value\"][\"timeserieslabels\"][0] in [\"Run\", \"Walk\"]\n",
+    "col_offset": 20,
+    "end_col_offset": 64,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 365,
+    "line_range": [
+      365
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "365                     assert segment[\"type\"] == \"timeserieslabels\"\n366                     assert segment[\"value\"][\"timeserieslabels\"][0] in [\"Run\", \"Walk\"]\n367                     assert \"score\" in segment\n",
+    "col_offset": 20,
+    "end_col_offset": 85,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 366,
+    "line_range": [
+      366
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "366                     assert segment[\"value\"][\"timeserieslabels\"][0] in [\"Run\", \"Walk\"]\n367                     assert \"score\" in segment\n368                 logger.info(\"✓ All segments validated\")\n",
+    "col_offset": 20,
+    "end_col_offset": 45,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 367,
+    "line_range": [
+      367
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "410                 for segment in result[\"result\"]:\n411                     assert segment[\"value\"][\"timeserieslabels\"][0] != \"__background__\"\n412                     logger.info(f\"Confirmed non-background segment: {segment['value']['timeserieslabels'][0]}\")\n",
+    "col_offset": 20,
+    "end_col_offset": 86,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 411,
+    "line_range": [
+      411
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "454             # Should not crash and return valid result (even if empty)\n455             assert isinstance(result, dict)\n456         logger.info(\"✓ Short sequence handling test passed\")\n",
+    "col_offset": 12,
+    "end_col_offset": 43,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 455,
+    "line_range": [
+      455
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "489         # Should create overlapping windows\n490         assert chunks.shape[1] == 10  # Window size\n491         assert chunks.shape[2] == 2   # Input features\n",
+    "col_offset": 8,
+    "end_col_offset": 36,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 490,
+    "line_range": [
+      490
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "490         assert chunks.shape[1] == 10  # Window size\n491         assert chunks.shape[2] == 2   # Input features\n492         assert chunks.shape[0] > 1    # Multiple windows\n",
+    "col_offset": 8,
+    "end_col_offset": 35,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 491,
+    "line_range": [
+      491
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "491         assert chunks.shape[2] == 2   # Input features\n492         assert chunks.shape[0] > 1    # Multiple windows\n493         \n",
+    "col_offset": 8,
+    "end_col_offset": 34,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 492,
+    "line_range": [
+      492
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "497         logger.info(f\"Predictions shape: {predictions.shape}\")\n498         assert predictions.shape[0] == 25  # Same length as input\n499         assert predictions.shape[1] == 3   # Number of classes\n",
+    "col_offset": 8,
+    "end_col_offset": 41,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 498,
+    "line_range": [
+      498
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "498         assert predictions.shape[0] == 25  # Same length as input\n499         assert predictions.shape[1] == 3   # Number of classes\n500         logger.info(\"✓ Windowing functionality test passed\")\n",
+    "col_offset": 8,
+    "end_col_offset": 40,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 499,
+    "line_range": [
+      499
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "522             logger.info(f\"Setup response: {resp.status_code}\")\n523             assert resp.status_code == 200\n524 \n",
+    "col_offset": 12,
+    "end_col_offset": 42,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 523,
+    "line_range": [
+      523
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "538                 logger.info(f\"Training response: {resp.status_code}\")\n539                 assert resp.status_code == 201\n540                 \n",
+    "col_offset": 16,
+    "end_col_offset": 46,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 539,
+    "line_range": [
+      539
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "549                 logger.info(f\"Prediction response: {resp.status_code}\")\n550                 assert resp.status_code == 200\n551                 \n",
+    "col_offset": 16,
+    "end_col_offset": 46,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 550,
+    "line_range": [
+      550
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "553                 logger.info(f\"API prediction results: {len(results)} tasks processed\")\n554                 assert len(results) == 1\n555         logger.info(\"✓ API integration test passed\")\n",
+    "col_offset": 16,
+    "end_col_offset": 40,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 554,
+    "line_range": [
+      554
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "576         X, y = segmenter_instance._collect_samples([], params, label2idx)\n577         assert len(X) == 0\n578         assert len(y) == 0\n",
+    "col_offset": 8,
+    "end_col_offset": 26,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 577,
+    "line_range": [
+      577
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "577         assert len(X) == 0\n578         assert len(y) == 0\n579         logger.info(\"✓ Empty task list handled correctly\")\n",
+    "col_offset": 8,
+    "end_col_offset": 26,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 578,
+    "line_range": [
+      578
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "594                 logger.info(f\"Empty data prediction result: {result}\")\n595                 assert isinstance(result, dict)\n596             except Exception as e:\n",
+    "col_offset": 16,
+    "end_col_offset": 47,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 595,
+    "line_range": [
+      595
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "634             logger.info(f\"Created model with sequence_size={model.sequence_size}, hidden_size={model.hidden_size}\")\n635             assert model.sequence_size == config[\"SEQUENCE_SIZE\"]\n636             assert model.hidden_size == config[\"HIDDEN_SIZE\"]\n",
+    "col_offset": 12,
+    "end_col_offset": 65,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 635,
+    "line_range": [
+      635
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "635             assert model.sequence_size == config[\"SEQUENCE_SIZE\"]\n636             assert model.hidden_size == config[\"HIDDEN_SIZE\"]\n637         logger.info(\"✓ Model parameters configuration test passed\")\n",
+    "col_offset": 12,
+    "end_col_offset": 61,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 636,
+    "line_range": [
+      636
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "695                     if start == end:\n696                         assert instant == True, f\"Expected instant=True for start={start}, end={end}\"\n697                     else:\n",
+    "col_offset": 24,
+    "end_col_offset": 101,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 696,
+    "line_range": [
+      696
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "697                     else:\n698                         assert instant == False, f\"Expected instant=False for start={start}, end={end}\"\n699             else:\n",
+    "col_offset": 24,
+    "end_col_offset": 103,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 698,
+    "line_range": [
+      698
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "738         # Should be different model instances\n739         assert model_project_1 is not model_project_2\n740         assert model_project_1 is not model_default\n",
+    "col_offset": 8,
+    "end_col_offset": 53,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 739,
+    "line_range": [
+      739
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "739         assert model_project_1 is not model_project_2\n740         assert model_project_1 is not model_default\n741         assert model_project_2 is not model_default\n",
+    "col_offset": 8,
+    "end_col_offset": 51,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 740,
+    "line_range": [
+      740
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "740         assert model_project_1 is not model_default\n741         assert model_project_2 is not model_default\n742         logger.info(\"✓ Different projects get different model instances\")\n",
+    "col_offset": 8,
+    "end_col_offset": 51,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 741,
+    "line_range": [
+      741
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "754         \n755         assert os.path.exists(model_file_1), f\"Model file for project 1 not found: {model_file_1}\"\n756         assert os.path.exists(model_file_2), f\"Model file for project 2 not found: {model_file_2}\"\n",
+    "col_offset": 8,
+    "end_col_offset": 98,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 755,
+    "line_range": [
+      755
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "755         assert os.path.exists(model_file_1), f\"Model file for project 1 not found: {model_file_1}\"\n756         assert os.path.exists(model_file_2), f\"Model file for project 2 not found: {model_file_2}\"\n757         assert os.path.exists(model_file_default), f\"Default model file not found: {model_file_default}\"\n",
+    "col_offset": 8,
+    "end_col_offset": 98,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 756,
+    "line_range": [
+      756
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "756         assert os.path.exists(model_file_2), f\"Model file for project 2 not found: {model_file_2}\"\n757         assert os.path.exists(model_file_default), f\"Default model file not found: {model_file_default}\"\n758         logger.info(\"✓ Project-specific model files created correctly\")\n",
+    "col_offset": 8,
+    "end_col_offset": 104,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 757,
+    "line_range": [
+      757
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "777         # Should be different instances (loaded from different files)\n778         assert loaded_model_1 is not loaded_model_2\n779         assert loaded_model_1 is not loaded_model_default\n",
+    "col_offset": 8,
+    "end_col_offset": 51,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 778,
+    "line_range": [
+      778
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "778         assert loaded_model_1 is not loaded_model_2\n779         assert loaded_model_1 is not loaded_model_default\n780         assert loaded_model_2 is not loaded_model_default\n",
+    "col_offset": 8,
+    "end_col_offset": 57,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 779,
+    "line_range": [
+      779
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "779         assert loaded_model_1 is not loaded_model_default\n780         assert loaded_model_2 is not loaded_model_default\n781         logger.info(\"✓ Models loaded correctly from project-specific files\")\n",
+    "col_offset": 8,
+    "end_col_offset": 57,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 780,
+    "line_range": [
+      780
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "788         project_id = segmenter1._get_project_id_from_context([], context_dict)\n789         assert project_id == 42\n790         \n",
+    "col_offset": 8,
+    "end_col_offset": 31,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 789,
+    "line_range": [
+      789
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "793         project_id = segmenter1._get_project_id_from_context([], context_int)\n794         assert project_id == 99\n795         \n",
+    "col_offset": 8,
+    "end_col_offset": 31,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 794,
+    "line_range": [
+      794
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "798         project_id = segmenter1._get_project_id_from_context([], context_str)\n799         assert project_id == 123\n800         \n",
+    "col_offset": 8,
+    "end_col_offset": 32,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 799,
+    "line_range": [
+      799
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "803         project_id = segmenter1._get_project_id_from_context(tasks_with_project, {})\n804         assert project_id == 456\n805         \n",
+    "col_offset": 8,
+    "end_col_offset": 32,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 804,
+    "line_range": [
+      804
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "807         project_id = segmenter1._get_project_id_from_context([], {})\n808         assert project_id is None\n809         \n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 808,
+    "line_range": [
+      808
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "817         model_1b = segmenter1._get_model(n_channels, n_labels, project_id=100)\n818         assert model_1a is model_1b, \"Same project should return cached model\"\n819         \n",
+    "col_offset": 8,
+    "end_col_offset": 78,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 818,
+    "line_range": [
+      818
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "821         model_2 = segmenter1._get_model(n_channels, n_labels, project_id=200)\n822         assert model_1a is not model_2, \"Different projects should return different models\"\n823         \n",
+    "col_offset": 8,
+    "end_col_offset": 91,
+    "filename": "./label_studio_ml/examples/timeseries_segmenter/tests/test_segmenter.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 822,
+    "line_range": [
+      822
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

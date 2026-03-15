@@ -1,0 +1,22 @@
+[
+  {
+    "code": "90 \n91     resp = requests.get(url, headers={\"Authorization\": f\"Bearer {access_token}\"})\n92     resp.raise_for_status()\n",
+    "col_offset": 11,
+    "end_col_offset": 81,
+    "filename": "./airbyte-integrations/connectors/source-box-data-extract/source_box_data_extract/box_api.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 400,
+      "link": "https://cwe.mitre.org/data/definitions/400.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Call to requests without timeout",
+    "line_number": 91,
+    "line_range": [
+      91
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+    "test_id": "B113",
+    "test_name": "request_without_timeout"
+  }
+]

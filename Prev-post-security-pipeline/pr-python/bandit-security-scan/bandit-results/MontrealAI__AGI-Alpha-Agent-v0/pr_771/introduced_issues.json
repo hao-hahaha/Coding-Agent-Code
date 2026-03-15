@@ -1,0 +1,22 @@
+[
+  {
+    "code": "48     def test_rpc_auth(self) -> None:\n49         self.settings.bus_token = \"s3cr3t\"\n50         bus = messaging.A2ABus(self.settings)\n",
+    "col_offset": 34,
+    "end_col_offset": 42,
+    "filename": "./tests/test_insight_orchestrator_features.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 's3cr3t'",
+    "line_number": 49,
+    "line_range": [
+      49
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b105_hardcoded_password_string.html",
+    "test_id": "B105",
+    "test_name": "hardcoded_password_string"
+  }
+]

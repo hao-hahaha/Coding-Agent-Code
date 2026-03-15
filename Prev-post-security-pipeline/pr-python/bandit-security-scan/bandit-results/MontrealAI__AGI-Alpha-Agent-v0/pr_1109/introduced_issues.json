@@ -1,0 +1,82 @@
+[
+  {
+    "code": "32         )\n33         assert resp.status_code == 200\n34         sim_id = resp.json()[\"id\"]\n",
+    "col_offset": 8,
+    "end_col_offset": 38,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_api_ws_progress.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 33,
+    "line_range": [
+      33
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "36         data = ws.receive_json()\n37         assert data[\"id\"] == sim_id\n38         assert data[\"year\"] == 1\n",
+    "col_offset": 8,
+    "end_col_offset": 35,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_api_ws_progress.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 37,
+    "line_range": [
+      37
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "37         assert data[\"id\"] == sim_id\n38         assert data[\"year\"] == 1\n39         assert isinstance(data[\"capability\"], float)\n",
+    "col_offset": 8,
+    "end_col_offset": 32,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_api_ws_progress.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 38,
+    "line_range": [
+      38
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "38         assert data[\"year\"] == 1\n39         assert isinstance(data[\"capability\"], float)\n40     # WebSocket context manager closes connection without exception\n",
+    "col_offset": 8,
+    "end_col_offset": 52,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_api_ws_progress.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 39,
+    "line_range": [
+      39
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "code": "59     memory_events = [env for topic, env in bus.published if topic == \"memory\"]\n60     assert memory_events\n61     assert memory_events[-1].payload[\"status\"] == \"blocked\"\n",
+    "col_offset": 4,
+    "end_col_offset": 24,
+    "filename": "./tests/test_safety_agent.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 60,
+    "line_range": [
+      60
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "60     assert memory_events\n61     assert memory_events[-1].payload[\"status\"] == \"blocked\"\n62     assert mem.records == []\n",
+    "col_offset": 4,
+    "end_col_offset": 59,
+    "filename": "./tests/test_safety_agent.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 61,
+    "line_range": [
+      61
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "61     assert memory_events[-1].payload[\"status\"] == \"blocked\"\n62     assert mem.records == []\n",
+    "col_offset": 4,
+    "end_col_offset": 28,
+    "filename": "./tests/test_safety_agent.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 62,
+    "line_range": [
+      62
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

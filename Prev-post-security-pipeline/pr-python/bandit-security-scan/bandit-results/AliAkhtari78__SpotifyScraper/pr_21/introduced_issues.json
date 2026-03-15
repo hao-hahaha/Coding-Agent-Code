@@ -1,0 +1,62 @@
+[
+  {
+    "code": "11 SPOTIFY_API_URL = \"https://api.spotify.com/v1\"\n12 TOKEN_URL = \"https://accounts.spotify.com/api/token\"\n13 \n",
+    "col_offset": 12,
+    "end_col_offset": 52,
+    "filename": "./src/spotify_scraper/core/constants.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'https://accounts.spotify.com/api/token'",
+    "line_number": 12,
+    "line_range": [
+      12
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b105_hardcoded_password_string.html",
+    "test_id": "B105",
+    "test_name": "hardcoded_password_string"
+  },
+  {
+    "code": "41     try:\n42         response = requests.get(track_url, headers=headers)\n43         print(f\"Response status: {response.status_code}\")\n",
+    "col_offset": 19,
+    "end_col_offset": 59,
+    "filename": "./test_embed_url.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 400,
+      "link": "https://cwe.mitre.org/data/definitions/400.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Call to requests without timeout",
+    "line_number": 42,
+    "line_range": [
+      42
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+    "test_id": "B113",
+    "test_name": "request_without_timeout"
+  },
+  {
+    "code": "50     try:\n51         response = requests.get(embed_url, headers=headers)\n52         print(f\"Response status: {response.status_code}\")\n",
+    "col_offset": 19,
+    "end_col_offset": 59,
+    "filename": "./test_embed_url.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 400,
+      "link": "https://cwe.mitre.org/data/definitions/400.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Call to requests without timeout",
+    "line_number": 51,
+    "line_range": [
+      51
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+    "test_id": "B113",
+    "test_name": "request_without_timeout"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "code": "66         _load_model()\n67     assert _CALL is not None\n68     try:\n",
+    "col_offset": 4,
+    "end_col_offset": 28,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/utils/local_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 67,
+    "line_range": [
+      67
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

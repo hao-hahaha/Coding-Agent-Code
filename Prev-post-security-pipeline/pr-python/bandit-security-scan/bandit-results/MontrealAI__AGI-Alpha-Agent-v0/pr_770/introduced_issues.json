@@ -1,0 +1,22 @@
+[
+  {
+    "code": "38     parser = argparse.ArgumentParser(description=\"Run the α‑AGI Insight API\")\n39     parser.add_argument(\"--host\", default=\"0.0.0.0\", help=\"Bind host\")\n40     parser.add_argument(\"--port\", type=int, default=8000, help=\"Bind port\")\n",
+    "col_offset": 42,
+    "end_col_offset": 51,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/interface/api_server.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 605,
+      "link": "https://cwe.mitre.org/data/definitions/605.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible binding to all interfaces.",
+    "line_number": 39,
+    "line_range": [
+      39
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b104_hardcoded_bind_all_interfaces.html",
+    "test_id": "B104",
+    "test_name": "hardcoded_bind_all_interfaces"
+  }
+]

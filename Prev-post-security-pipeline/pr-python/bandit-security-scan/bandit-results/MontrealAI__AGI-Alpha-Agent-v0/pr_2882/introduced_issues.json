@@ -1,0 +1,23 @@
+[
+  {
+    "code": "100                     return\n101                 except Exception:\n102                     continue\n103             if i < attempts:\n",
+    "col_offset": 16,
+    "end_col_offset": 28,
+    "filename": "./scripts/fetch_assets.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Continue detected.",
+    "line_number": 101,
+    "line_range": [
+      101,
+      102
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b112_try_except_continue.html",
+    "test_id": "B112",
+    "test_name": "try_except_continue"
+  }
+]

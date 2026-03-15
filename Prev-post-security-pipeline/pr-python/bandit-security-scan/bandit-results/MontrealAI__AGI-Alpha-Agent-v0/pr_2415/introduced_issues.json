@@ -1,0 +1,164 @@
+[
+  {
+    "code": "6 import base64\n7 import subprocess\n8 import sys\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tests/test_verify_wheel_sig.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 7,
+    "line_range": [
+      7
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "42         self.key_path = self.pkg_dir / \"signing.key\"\n43         subprocess.run(\n44             [\"openssl\", \"genpkey\", \"-algorithm\", \"ed25519\", \"-out\", str(self.key_path)],\n45             check=True,\n46         )\n47         pub_bytes = subprocess.check_output(\n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tests/test_verify_wheel_sig.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 43,
+    "line_range": [
+      43,
+      44,
+      45,
+      46
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "42         self.key_path = self.pkg_dir / \"signing.key\"\n43         subprocess.run(\n44             [\"openssl\", \"genpkey\", \"-algorithm\", \"ed25519\", \"-out\", str(self.key_path)],\n45             check=True,\n46         )\n47         pub_bytes = subprocess.check_output(\n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tests/test_verify_wheel_sig.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 43,
+    "line_range": [
+      43,
+      44,
+      45,
+      46
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "46         )\n47         pub_bytes = subprocess.check_output(\n48             [\"openssl\", \"pkey\", \"-in\", str(self.key_path), \"-pubout\", \"-outform\", \"DER\"]\n49         )\n50         self.pub_b64 = base64.b64encode(pub_bytes).decode()\n",
+    "col_offset": 20,
+    "end_col_offset": 9,
+    "filename": "./tests/test_verify_wheel_sig.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 47,
+    "line_range": [
+      47,
+      48,
+      49
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "46         )\n47         pub_bytes = subprocess.check_output(\n48             [\"openssl\", \"pkey\", \"-in\", str(self.key_path), \"-pubout\", \"-outform\", \"DER\"]\n49         )\n50         self.pub_b64 = base64.b64encode(pub_bytes).decode()\n",
+    "col_offset": 20,
+    "end_col_offset": 9,
+    "filename": "./tests/test_verify_wheel_sig.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 47,
+    "line_range": [
+      47,
+      48,
+      49
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "51 \n52         sig_b64 = subprocess.check_output(\n53             [\n54                 \"sh\",\n55                 \"-c\",\n56                 f\"openssl dgst -sha512 -binary {self.wheel_path} | openssl pkeyutl -sign -inkey {self.key_path} | base64 -w0\",\n57             ]\n58         ).decode()\n59         self.sig_path = self.wheel_path.with_suffix(self.wheel_path.suffix + \".sig\")\n",
+    "col_offset": 18,
+    "end_col_offset": 9,
+    "filename": "./tests/test_verify_wheel_sig.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 52,
+    "line_range": [
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "51 \n52         sig_b64 = subprocess.check_output(\n53             [\n54                 \"sh\",\n55                 \"-c\",\n56                 f\"openssl dgst -sha512 -binary {self.wheel_path} | openssl pkeyutl -sign -inkey {self.key_path} | base64 -w0\",\n57             ]\n58         ).decode()\n59         self.sig_path = self.wheel_path.with_suffix(self.wheel_path.suffix + \".sig\")\n",
+    "col_offset": 18,
+    "end_col_offset": 9,
+    "filename": "./tests/test_verify_wheel_sig.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 52,
+    "line_range": [
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  }
+]

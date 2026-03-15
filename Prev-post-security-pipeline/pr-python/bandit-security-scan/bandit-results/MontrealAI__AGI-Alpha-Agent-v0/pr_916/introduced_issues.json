@@ -1,0 +1,42 @@
+[
+  {
+    "code": "18     messages = [r.message for r in caplog.records]\n19     assert any(\"Starting A2ABus\" in m and \"1234\" in m and \"kafka:9092\" in m for m in messages)\n20     assert any(\"Stopping A2ABus\" in m for m in messages)\n",
+    "col_offset": 4,
+    "end_col_offset": 94,
+    "filename": "./tests/test_bus_logging.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 19,
+    "line_range": [
+      19
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "19     assert any(\"Starting A2ABus\" in m and \"1234\" in m and \"kafka:9092\" in m for m in messages)\n20     assert any(\"Stopping A2ABus\" in m for m in messages)\n",
+    "col_offset": 4,
+    "end_col_offset": 56,
+    "filename": "./tests/test_bus_logging.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 20,
+    "line_range": [
+      20
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

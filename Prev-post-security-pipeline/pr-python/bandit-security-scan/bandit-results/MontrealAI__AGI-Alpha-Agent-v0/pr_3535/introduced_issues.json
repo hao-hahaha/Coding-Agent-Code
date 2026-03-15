@@ -1,0 +1,42 @@
+[
+  {
+    "code": "89         mod = importlib.import_module(\"alpha_factory_v1.demos.aiga_meta_evolution.agent_aiga_entrypoint\")\n90         assert mod.OpenAIAgent is Agent\n91         assert isinstance(mod.service.evolver, DummyEvolver)\n",
+    "col_offset": 8,
+    "end_col_offset": 39,
+    "filename": "./tests/test_agent_aiga_entrypoint.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 90,
+    "line_range": [
+      90
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "90         assert mod.OpenAIAgent is Agent\n91         assert isinstance(mod.service.evolver, DummyEvolver)\n92 \n",
+    "col_offset": 8,
+    "end_col_offset": 60,
+    "filename": "./tests/test_agent_aiga_entrypoint.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 91,
+    "line_range": [
+      91
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

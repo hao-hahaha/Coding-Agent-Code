@@ -1,0 +1,42 @@
+[
+  {
+    "code": "33     out = client.request_patch([{\"role\": \"user\", \"content\": \"fix\"}])\n34     assert out == diff\n35 \n",
+    "col_offset": 4,
+    "end_col_offset": 22,
+    "filename": "./tests/test_llm_client_offline.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 34,
+    "line_range": [
+      34
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "42     out = client.request_patch([{\"role\": \"user\", \"content\": \"fix\"}])\n43     assert out == diff\n",
+    "col_offset": 4,
+    "end_col_offset": 22,
+    "filename": "./tests/test_llm_client_offline.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 43,
+    "line_range": [
+      43
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

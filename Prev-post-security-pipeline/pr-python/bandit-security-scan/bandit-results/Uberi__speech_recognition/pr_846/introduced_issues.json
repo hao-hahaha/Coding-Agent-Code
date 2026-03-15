@@ -1,0 +1,22 @@
+[
+  {
+    "code": "15     print(f\"Downloading model {model_filename} ...\")\n16     with urlopen(url) as response:\n17         total_size = int(response.headers.get(\"Content-Length\", 0))\n",
+    "col_offset": 9,
+    "end_col_offset": 21,
+    "filename": "./speech_recognition/cli.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 22,
+      "link": "https://cwe.mitre.org/data/definitions/22.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.",
+    "line_number": 16,
+    "line_range": [
+      16
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b310-urllib-urlopen",
+    "test_id": "B310",
+    "test_name": "blacklist"
+  }
+]

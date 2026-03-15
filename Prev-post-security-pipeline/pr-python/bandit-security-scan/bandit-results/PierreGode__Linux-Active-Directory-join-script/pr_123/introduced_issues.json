@@ -1,0 +1,82 @@
+[
+  {
+    "code": "2 import argparse\n3 import subprocess\n4 import sys\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./adconnection_app.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 3,
+    "line_range": [
+      3
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "9     try:\n10         result = subprocess.run(cmd, shell=True, check=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)\n11         return result.stdout.strip()\n",
+    "col_offset": 17,
+    "end_col_offset": 121,
+    "filename": "./adconnection_app.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "HIGH",
+    "issue_text": "subprocess call with shell=True identified, security issue.",
+    "line_number": 10,
+    "line_range": [
+      10
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+    "test_id": "B602",
+    "test_name": "subprocess_popen_with_shell_equals_true"
+  },
+  {
+    "code": "2 \"\"\"Simple Tkinter GUI to join a Linux host to Active Directory.\"\"\"\n3 import subprocess\n4 import tkinter as tk\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./adconnection_gui.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 3,
+    "line_range": [
+      3
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "9     \"\"\"Run a shell command and return output and exit code.\"\"\"\n10     result = subprocess.run(cmd, shell=True, capture_output=True, text=True)\n11     return result.stdout.strip(), result.returncode\n",
+    "col_offset": 13,
+    "end_col_offset": 76,
+    "filename": "./adconnection_gui.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "HIGH",
+    "issue_text": "subprocess call with shell=True identified, security issue.",
+    "line_number": 10,
+    "line_range": [
+      10
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+    "test_id": "B602",
+    "test_name": "subprocess_popen_with_shell_equals_true"
+  }
+]

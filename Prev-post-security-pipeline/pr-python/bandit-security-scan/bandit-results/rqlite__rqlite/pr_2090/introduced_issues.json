@@ -1,0 +1,24 @@
+[
+  {
+    "code": "185       self.fail(\"Expected an exception when trying to join single-node cluster to another cluster\")\n186     except Exception:\n187       # Expected behavior - the node should fail to start\n188       pass\n189       \n",
+    "col_offset": 4,
+    "end_col_offset": 10,
+    "filename": "./system_test/e2e/joining.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 186,
+    "line_range": [
+      186,
+      187,
+      188
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  }
+]

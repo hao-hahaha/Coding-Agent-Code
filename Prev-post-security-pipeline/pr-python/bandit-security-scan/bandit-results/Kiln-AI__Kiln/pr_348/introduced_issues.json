@@ -1,0 +1,122 @@
+[
+  {
+    "code": "1 import os\n2 import subprocess\n3 import sys\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./app/desktop/studio_server/settings_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 2,
+    "line_range": [
+      2
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "14     if sys.platform.startswith(\"darwin\"):\n15         subprocess.run([\"open\", log_dir], check=True)\n16     elif sys.platform.startswith(\"win\"):\n",
+    "col_offset": 8,
+    "end_col_offset": 53,
+    "filename": "./app/desktop/studio_server/settings_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 15,
+    "line_range": [
+      15
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "14     if sys.platform.startswith(\"darwin\"):\n15         subprocess.run([\"open\", log_dir], check=True)\n16     elif sys.platform.startswith(\"win\"):\n",
+    "col_offset": 8,
+    "end_col_offset": 53,
+    "filename": "./app/desktop/studio_server/settings_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 15,
+    "line_range": [
+      15
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "16     elif sys.platform.startswith(\"win\"):\n17         os.startfile(log_dir)  # type: ignore[attr-defined]\n18     else:\n",
+    "col_offset": 8,
+    "end_col_offset": 29,
+    "filename": "./app/desktop/studio_server/settings_api.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process without a shell.",
+    "line_number": 17,
+    "line_range": [
+      17
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b606_start_process_with_no_shell.html",
+    "test_id": "B606",
+    "test_name": "start_process_with_no_shell"
+  },
+  {
+    "code": "18     else:\n19         subprocess.run([\"xdg-open\", log_dir], check=True)\n20 \n",
+    "col_offset": 8,
+    "end_col_offset": 57,
+    "filename": "./app/desktop/studio_server/settings_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 19,
+    "line_range": [
+      19
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "18     else:\n19         subprocess.run([\"xdg-open\", log_dir], check=True)\n20 \n",
+    "col_offset": 8,
+    "end_col_offset": 57,
+    "filename": "./app/desktop/studio_server/settings_api.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 19,
+    "line_range": [
+      19
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  }
+]

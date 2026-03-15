@@ -1,0 +1,23 @@
+[
+  {
+    "code": "19         return {k: v for k, v in dotenv_values(path).items() if v is not None}\n20     except Exception:  # noqa: BLE001 - any import/parsing error falls back\n21         pass\n22 \n",
+    "col_offset": 4,
+    "end_col_offset": 12,
+    "filename": "./alpha_factory_v1/utils/env.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 20,
+    "line_range": [
+      20,
+      21
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  }
+]

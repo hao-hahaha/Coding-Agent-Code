@@ -1,0 +1,62 @@
+[
+  {
+    "code": "44     asyncio.run(limiter.dispatch(_make_request(\"1.1.1.1\"), _call_next))\n45     assert \"1.1.1.1\" in limiter.counters\n46     time.sleep(0.2)\n",
+    "col_offset": 4,
+    "end_col_offset": 40,
+    "filename": "./tests/test_rate_limiter_eviction.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 45,
+    "line_range": [
+      45
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "47     asyncio.run(limiter.dispatch(_make_request(\"2.2.2.2\"), _call_next))\n48     assert \"1.1.1.1\" not in limiter.counters\n49     assert list(limiter.counters.keys()) == [\"2.2.2.2\"]\n",
+    "col_offset": 4,
+    "end_col_offset": 44,
+    "filename": "./tests/test_rate_limiter_eviction.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 48,
+    "line_range": [
+      48
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "48     assert \"1.1.1.1\" not in limiter.counters\n49     assert list(limiter.counters.keys()) == [\"2.2.2.2\"]\n",
+    "col_offset": 4,
+    "end_col_offset": 55,
+    "filename": "./tests/test_rate_limiter_eviction.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 49,
+    "line_range": [
+      49
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

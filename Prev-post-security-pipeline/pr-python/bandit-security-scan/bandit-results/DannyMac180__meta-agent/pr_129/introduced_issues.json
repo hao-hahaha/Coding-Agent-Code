@@ -1,0 +1,102 @@
+[
+  {
+    "code": "15     try:\n16         Environment().parse(content)\n17     except TemplateSyntaxError as e:  # pragma: no cover - jinja2 handled\n",
+    "col_offset": 8,
+    "end_col_offset": 21,
+    "filename": "./src/meta_agent/template_creator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 94,
+      "link": "https://cwe.mitre.org/data/definitions/94.html"
+    },
+    "issue_severity": "HIGH",
+    "issue_text": "By default, jinja2 sets autoescape to False. Consider using autoescape=True or use the select_autoescape function to mitigate XSS vulnerabilities.",
+    "line_number": 16,
+    "line_range": [
+      16
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b701_jinja2_autoescape_false.html",
+    "test_id": "B701",
+    "test_name": "jinja2_autoescape_false"
+  },
+  {
+    "code": "22     ok, err = validate_template(\"hello {{ name }}\")\n23     assert ok and err == \"\"\n24 \n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/test_template_creator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 23,
+    "line_range": [
+      23
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "27     ok, err = validate_template(\"{% for x in %}\")\n28     assert not ok and err\n29 \n",
+    "col_offset": 4,
+    "end_col_offset": 25,
+    "filename": "./tests/test_template_creator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 28,
+    "line_range": [
+      28
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "34     path = creator.create(_meta(), \"hi {{name}}\", version=\"0.1.0\")\n35     assert path\n36     assert reg.load_template(\"demo\") == \"hi {{name}}\"\n",
+    "col_offset": 4,
+    "end_col_offset": 15,
+    "filename": "./tests/test_template_creator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 35,
+    "line_range": [
+      35
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "35     assert path\n36     assert reg.load_template(\"demo\") == \"hi {{name}}\"\n",
+    "col_offset": 4,
+    "end_col_offset": 53,
+    "filename": "./tests/test_template_creator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 36,
+    "line_range": [
+      36
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

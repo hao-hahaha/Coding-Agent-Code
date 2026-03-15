@@ -1,0 +1,62 @@
+[
+  {
+    "code": "20     match = re.search(r\"<script[^>]*src=['\\\"]insight.bundle.js['\\\"][^>]*>\", text)\n21     assert match, \"script tag for insight.bundle.js missing\"\n22     sri = re.search(r\"integrity=['\\\"]([^'\\\"]+)['\\\"]\", match.group(0))\n",
+    "col_offset": 4,
+    "end_col_offset": 60,
+    "filename": "./tests/test_insight_sri.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 21,
+    "line_range": [
+      21
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "22     sri = re.search(r\"integrity=['\\\"]([^'\\\"]+)['\\\"]\", match.group(0))\n23     assert sri, \"integrity attribute missing\"\n24     assert sri.group(1) == expected\n",
+    "col_offset": 4,
+    "end_col_offset": 45,
+    "filename": "./tests/test_insight_sri.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 23,
+    "line_range": [
+      23
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "23     assert sri, \"integrity attribute missing\"\n24     assert sri.group(1) == expected\n",
+    "col_offset": 4,
+    "end_col_offset": 35,
+    "filename": "./tests/test_insight_sri.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 24,
+    "line_range": [
+      24
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

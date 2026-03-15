@@ -1,0 +1,144 @@
+[
+  {
+    "code": "95         if self.bus_cert and self.bus_key:\n96             if not self.bus_token or self.bus_token == \"change_this_token\":\n97                 raise ValueError(\n",
+    "col_offset": 55,
+    "end_col_offset": 74,
+    "filename": "./alpha_factory_v1/common/utils/config.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'change_this_token'",
+    "line_number": 96,
+    "line_range": [
+      96
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b105_hardcoded_password_string.html",
+    "test_id": "B105",
+    "test_name": "hardcoded_password_string"
+  },
+  {
+    "code": "79         _load_model(cfg)\n80     assert _CALL is not None\n81     try:\n",
+    "col_offset": 4,
+    "end_col_offset": 28,
+    "filename": "./alpha_factory_v1/common/utils/local_llm.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 80,
+    "line_range": [
+      80
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "191         with span(\"ledger.log\"):\n192             assert self.conn is not None\n193             if dataclasses.is_dataclass(env) and not isinstance(env, type):\n",
+    "col_offset": 12,
+    "end_col_offset": 40,
+    "filename": "./alpha_factory_v1/common/utils/logging.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 192,
+    "line_range": [
+      192
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "215     def compute_merkle_root(self) -> str:\n216         assert self.conn is not None\n217         if self.db_type == \"postgres\":\n",
+    "col_offset": 8,
+    "end_col_offset": 36,
+    "filename": "./alpha_factory_v1/common/utils/logging.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 216,
+    "line_range": [
+      216
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "230                 bytes.fromhex(h)\n231             except Exception:\n232                 continue\n233             hashes.append(h)\n",
+    "col_offset": 12,
+    "end_col_offset": 24,
+    "filename": "./alpha_factory_v1/common/utils/logging.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Continue detected.",
+    "line_number": 231,
+    "line_range": [
+      231,
+      232
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b112_try_except_continue.html",
+    "test_id": "B112",
+    "test_name": "try_except_continue"
+  },
+  {
+    "code": "239 \n240         assert self.conn is not None\n241         if self.db_type == \"postgres\":\n",
+    "col_offset": 8,
+    "end_col_offset": 36,
+    "filename": "./alpha_factory_v1/common/utils/logging.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 240,
+    "line_range": [
+      240
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "293                 await client.close()\n294             except Exception:  # pragma: no cover - ignore close errors\n295                 pass\n296 \n",
+    "col_offset": 12,
+    "end_col_offset": 20,
+    "filename": "./alpha_factory_v1/common/utils/logging.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 294,
+    "line_range": [
+      294,
+      295
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  }
+]

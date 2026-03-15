@@ -1,0 +1,123 @@
+[
+  {
+    "code": "116                 )\n117     except:\n118         pass\n119 \n",
+    "col_offset": 4,
+    "end_col_offset": 12,
+    "filename": "./scripts/utils/lcb_runner.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 117,
+    "line_range": [
+      117,
+      118
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "186     try:\n187         assert hasattr(compiled_sol, fn_name)\n188         return getattr(compiled_sol, fn_name)\n",
+    "col_offset": 8,
+    "end_col_offset": 45,
+    "filename": "./scripts/utils/lcb_runner.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 187,
+    "line_range": [
+      187
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "196         tmp_sol = ModuleType(\"tmp_sol\", \"\")\n197         exec(code, tmp_sol.__dict__)\n198         if \"class Solution\" in code:\n",
+    "col_offset": 8,
+    "end_col_offset": 36,
+    "filename": "./scripts/utils/lcb_runner.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Use of exec detected.",
+    "line_number": 197,
+    "line_range": [
+      197
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b102_exec_used.html",
+    "test_id": "B102",
+    "test_name": "exec_used"
+  },
+  {
+    "code": "207 \n208         assert compiled_sol is not None\n209     finally:\n",
+    "col_offset": 8,
+    "end_col_offset": 39,
+    "filename": "./scripts/utils/lcb_runner.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 208,
+    "line_range": [
+      208
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "499 \n500     import subprocess\n501 \n",
+    "col_offset": 4,
+    "end_col_offset": 21,
+    "filename": "./scripts/utils/lcb_runner.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 500,
+    "line_range": [
+      500
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "547     if test is None:\n548         assert False, \"should not happen: test code is none\"\n549         return in_outs, {\"error\": \"no test code provided\"}\n",
+    "col_offset": 8,
+    "end_col_offset": 60,
+    "filename": "./scripts/utils/lcb_runner.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 548,
+    "line_range": [
+      548
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

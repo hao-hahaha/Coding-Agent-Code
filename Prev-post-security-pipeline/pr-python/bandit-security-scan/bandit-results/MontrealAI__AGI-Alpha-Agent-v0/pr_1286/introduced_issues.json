@@ -1,0 +1,143 @@
+[
+  {
+    "code": "142                 resource.setrlimit(resource.RLIMIT_AS, (limit, limit))\n143             except Exception:  # pragma: no cover - unsupported platform\n144                 pass\n145         self.island_backends: Dict[str, str] = dict(self.settings.island_backends)\n",
+    "col_offset": 12,
+    "end_col_offset": 20,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/orchestrator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 143,
+    "line_range": [
+      143,
+      144
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "42     asyncio.run(run())\n43     assert len(times) == 2\n44     assert abs(times[0] - times[1]) < 0.05\n",
+    "col_offset": 4,
+    "end_col_offset": 26,
+    "filename": "./tests/test_experiments.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 43,
+    "line_range": [
+      43
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "43     assert len(times) == 2\n44     assert abs(times[0] - times[1]) < 0.05\n45     assert \"exp1\" in orch.experiment_pops\n",
+    "col_offset": 4,
+    "end_col_offset": 42,
+    "filename": "./tests/test_experiments.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 44,
+    "line_range": [
+      44
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "44     assert abs(times[0] - times[1]) < 0.05\n45     assert \"exp1\" in orch.experiment_pops\n46     assert \"exp2\" in orch.experiment_pops\n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./tests/test_experiments.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 45,
+    "line_range": [
+      45
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "45     assert \"exp1\" in orch.experiment_pops\n46     assert \"exp2\" in orch.experiment_pops\n47     assert orch.experiment_pops[\"exp1\"] is not orch.experiment_pops[\"exp2\"]\n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./tests/test_experiments.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 46,
+    "line_range": [
+      46
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "46     assert \"exp2\" in orch.experiment_pops\n47     assert orch.experiment_pops[\"exp1\"] is not orch.experiment_pops[\"exp2\"]\n48 \n",
+    "col_offset": 4,
+    "end_col_offset": 75,
+    "filename": "./tests/test_experiments.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 47,
+    "line_range": [
+      47
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "49     specs = [json.loads(row[0])[\"experiment_id\"] for row in orch.archive.conn.execute(\"SELECT spec FROM entries\")]\n50     assert {\"exp1\", \"exp2\"} <= set(specs)\n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./tests/test_experiments.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 50,
+    "line_range": [
+      50
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

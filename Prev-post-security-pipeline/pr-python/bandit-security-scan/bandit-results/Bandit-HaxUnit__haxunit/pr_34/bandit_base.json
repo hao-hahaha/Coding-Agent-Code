@@ -1,0 +1,465 @@
+{
+  "errors": [],
+  "generated_at": "2026-03-14T14:26:22Z",
+  "metrics": {
+    "./main.py": {
+      "CONFIDENCE.HIGH": 9,
+      "CONFIDENCE.LOW": 11,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 6,
+      "SEVERITY.LOW": 3,
+      "SEVERITY.MEDIUM": 11,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 1073,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./report_gen.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 58,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 9,
+      "CONFIDENCE.LOW": 11,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 6,
+      "SEVERITY.LOW": 3,
+      "SEVERITY.MEDIUM": 11,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 1131,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "20 from os.path import exists\n21 from subprocess import PIPE, Popen\n22 from traceback import print_exc\n",
+      "col_offset": 0,
+      "end_col_offset": 34,
+      "filename": "./main.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Consider possible security implications associated with the subprocess module.",
+      "line_number": 21,
+      "line_range": [
+        21
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+      "test_id": "B404",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "256         try:\n257             response = get(\"https://www.affirmations.dev/\") # haxunit endpoint down - threw html in my face\n258             affirmation = json.loads(response.text)[\"affirmation\"] \n",
+      "col_offset": 23,
+      "end_col_offset": 59,
+      "filename": "./main.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 400,
+        "link": "https://cwe.mitre.org/data/definitions/400.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Call to requests without timeout",
+      "line_number": 257,
+      "line_range": [
+        257
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+      "test_id": "B113",
+      "test_name": "request_without_timeout"
+    },
+    {
+      "code": "259             self.print(\"MOTD\", affirmation)\n260         except Exception:\n261             pass\n262 \n",
+      "col_offset": 8,
+      "end_col_offset": 16,
+      "filename": "./main.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Try, Except, Pass detected.",
+      "line_number": 260,
+      "line_range": [
+        260,
+        261
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+      "test_id": "B110",
+      "test_name": "try_except_pass"
+    },
+    {
+      "code": "278         \n279         process = Popen(cmd, shell=True, stdout=PIPE)\n280         output = process.stdout.read().decode(\"utf-8\").strip()\n",
+      "col_offset": 18,
+      "end_col_offset": 53,
+      "filename": "./main.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "subprocess call with shell=True identified, security issue.",
+      "line_number": 279,
+      "line_range": [
+        279
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+      "test_id": "B602",
+      "test_name": "subprocess_popen_with_shell_equals_true"
+    },
+    {
+      "code": "457         try:\n458             ip_address = get(\"http://ifconfig.me/ip\").text\n459             ip_check = get(f\"https://blackbox.ipinfo.app/lookup/{ip_address}\").text\n",
+      "col_offset": 25,
+      "end_col_offset": 53,
+      "filename": "./main.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 400,
+        "link": "https://cwe.mitre.org/data/definitions/400.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Call to requests without timeout",
+      "line_number": 458,
+      "line_range": [
+        458
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+      "test_id": "B113",
+      "test_name": "request_without_timeout"
+    },
+    {
+      "code": "458             ip_address = get(\"http://ifconfig.me/ip\").text\n459             ip_check = get(f\"https://blackbox.ipinfo.app/lookup/{ip_address}\").text\n460             \n",
+      "col_offset": 23,
+      "end_col_offset": 78,
+      "filename": "./main.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 400,
+        "link": "https://cwe.mitre.org/data/definitions/400.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Call to requests without timeout",
+      "line_number": 459,
+      "line_range": [
+        459
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+      "test_id": "B113",
+      "test_name": "request_without_timeout"
+    },
+    {
+      "code": "629             try:\n630                 get(\"https://host.docker.internal:3443/api/v1/target_groups\", verify=False)\n631                 return True\n",
+      "col_offset": 16,
+      "end_col_offset": 91,
+      "filename": "./main.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 295,
+        "link": "https://cwe.mitre.org/data/definitions/295.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "Call to requests with verify=False disabling SSL certificate checks, security issue.",
+      "line_number": 630,
+      "line_range": [
+        630
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b501_request_with_no_cert_validation.html",
+      "test_id": "B501",
+      "test_name": "request_with_no_cert_validation"
+    },
+    {
+      "code": "629             try:\n630                 get(\"https://host.docker.internal:3443/api/v1/target_groups\", verify=False)\n631                 return True\n",
+      "col_offset": 16,
+      "end_col_offset": 91,
+      "filename": "./main.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 400,
+        "link": "https://cwe.mitre.org/data/definitions/400.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Call to requests without timeout",
+      "line_number": 630,
+      "line_range": [
+        630
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+      "test_id": "B113",
+      "test_name": "request_without_timeout"
+    },
+    {
+      "code": "649 \n650             all_groups = get(\"https://host.docker.internal:3443/api/v1/target_groups\", headers=headers, verify=False).json()[\"groups\"]\n651 \n",
+      "col_offset": 25,
+      "end_col_offset": 117,
+      "filename": "./main.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 295,
+        "link": "https://cwe.mitre.org/data/definitions/295.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "Call to requests with verify=False disabling SSL certificate checks, security issue.",
+      "line_number": 650,
+      "line_range": [
+        650
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b501_request_with_no_cert_validation.html",
+      "test_id": "B501",
+      "test_name": "request_with_no_cert_validation"
+    },
+    {
+      "code": "649 \n650             all_groups = get(\"https://host.docker.internal:3443/api/v1/target_groups\", headers=headers, verify=False).json()[\"groups\"]\n651 \n",
+      "col_offset": 25,
+      "end_col_offset": 117,
+      "filename": "./main.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 400,
+        "link": "https://cwe.mitre.org/data/definitions/400.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Call to requests without timeout",
+      "line_number": 650,
+      "line_range": [
+        650
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+      "test_id": "B113",
+      "test_name": "request_without_timeout"
+    },
+    {
+      "code": "666                     data=dumps({\"name\": self.site, \"description\": \"\"}),\n667                     verify=False\n668                 ).json()[\"group_id\"]\n669 \n670             if len(self.all_subdomains_up) < self.acunetix_threshold and self.ask(\n671                     \"[HaxUnit] Do you want to scan all subdomains using acunetix? \"):\n672                 data = {\n673                     \"targets\": [{\n674                         \"address\": subdomain,\n",
+      "col_offset": 27,
+      "end_col_offset": 17,
+      "filename": "./main.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 295,
+        "link": "https://cwe.mitre.org/data/definitions/295.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "Call to requests with verify=False disabling SSL certificate checks, security issue.",
+      "line_number": 667,
+      "line_range": [
+        662,
+        663,
+        664,
+        665,
+        666,
+        667,
+        668
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b501_request_with_no_cert_validation.html",
+      "test_id": "B501",
+      "test_name": "request_with_no_cert_validation"
+    },
+    {
+      "code": "661 \n662                 group_id = post(\n663                     'https://host.docker.internal:3443/api/v1/target_groups',\n664                     headers=headers,\n665                     cookies=cookies,\n666                     data=dumps({\"name\": self.site, \"description\": \"\"}),\n667                     verify=False\n668                 ).json()[\"group_id\"]\n669 \n",
+      "col_offset": 27,
+      "end_col_offset": 17,
+      "filename": "./main.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 400,
+        "link": "https://cwe.mitre.org/data/definitions/400.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Call to requests without timeout",
+      "line_number": 662,
+      "line_range": [
+        662,
+        663,
+        664,
+        665,
+        666,
+        667,
+        668
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+      "test_id": "B113",
+      "test_name": "request_without_timeout"
+    },
+    {
+      "code": "692                 response = post('https://host.docker.internal:3443/api/v1/targets/add', headers=headers, cookies=cookies,\n693                                 data=dumps(data), verify=False).json()\n694 \n695                 for target in response[\"targets\"]:\n",
+      "col_offset": 27,
+      "end_col_offset": 63,
+      "filename": "./main.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 295,
+        "link": "https://cwe.mitre.org/data/definitions/295.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "Call to requests with verify=False disabling SSL certificate checks, security issue.",
+      "line_number": 693,
+      "line_range": [
+        692,
+        693
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b501_request_with_no_cert_validation.html",
+      "test_id": "B501",
+      "test_name": "request_with_no_cert_validation"
+    },
+    {
+      "code": "691 \n692                 response = post('https://host.docker.internal:3443/api/v1/targets/add', headers=headers, cookies=cookies,\n693                                 data=dumps(data), verify=False).json()\n694 \n",
+      "col_offset": 27,
+      "end_col_offset": 63,
+      "filename": "./main.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 400,
+        "link": "https://cwe.mitre.org/data/definitions/400.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Call to requests without timeout",
+      "line_number": 692,
+      "line_range": [
+        692,
+        693
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+      "test_id": "B113",
+      "test_name": "request_without_timeout"
+    },
+    {
+      "code": "708                     post('https://host.docker.internal:3443/api/v1/scans', headers=headers, cookies=cookies, data=dumps(data),\n709                          verify=False)\n710 \n711                 self.print(\"Acunetix\", f\"Scan(s) started!\")\n",
+      "col_offset": 20,
+      "end_col_offset": 38,
+      "filename": "./main.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 295,
+        "link": "https://cwe.mitre.org/data/definitions/295.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "Call to requests with verify=False disabling SSL certificate checks, security issue.",
+      "line_number": 709,
+      "line_range": [
+        708,
+        709
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b501_request_with_no_cert_validation.html",
+      "test_id": "B501",
+      "test_name": "request_with_no_cert_validation"
+    },
+    {
+      "code": "707 \n708                     post('https://host.docker.internal:3443/api/v1/scans', headers=headers, cookies=cookies, data=dumps(data),\n709                          verify=False)\n710 \n",
+      "col_offset": 20,
+      "end_col_offset": 38,
+      "filename": "./main.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 400,
+        "link": "https://cwe.mitre.org/data/definitions/400.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Call to requests without timeout",
+      "line_number": 708,
+      "line_range": [
+        708,
+        709
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+      "test_id": "B113",
+      "test_name": "request_without_timeout"
+    },
+    {
+      "code": "828                 with open(file_path, 'rb') as file:\n829                     post(url, data=data, files={'file': file})\n830             else:\n",
+      "col_offset": 20,
+      "end_col_offset": 62,
+      "filename": "./main.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 400,
+        "link": "https://cwe.mitre.org/data/definitions/400.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Call to requests without timeout",
+      "line_number": 829,
+      "line_range": [
+        829
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+      "test_id": "B113",
+      "test_name": "request_without_timeout"
+    },
+    {
+      "code": "830             else:\n831                 post(url, data=data)\n832         except Exception:\n",
+      "col_offset": 16,
+      "end_col_offset": 36,
+      "filename": "./main.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 400,
+        "link": "https://cwe.mitre.org/data/definitions/400.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Call to requests without timeout",
+      "line_number": 831,
+      "line_range": [
+        831
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+      "test_id": "B113",
+      "test_name": "request_without_timeout"
+    },
+    {
+      "code": "831                 post(url, data=data)\n832         except Exception:\n833             pass\n834 \n",
+      "col_offset": 8,
+      "end_col_offset": 16,
+      "filename": "./main.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Try, Except, Pass detected.",
+      "line_number": 832,
+      "line_range": [
+        832,
+        833
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+      "test_id": "B110",
+      "test_name": "try_except_pass"
+    },
+    {
+      "code": "862         if self.htb:\n863             response = get(f'http://{self.site}', allow_redirects=False)\n864 \n",
+      "col_offset": 23,
+      "end_col_offset": 72,
+      "filename": "./main.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 400,
+        "link": "https://cwe.mitre.org/data/definitions/400.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Call to requests without timeout",
+      "line_number": 863,
+      "line_range": [
+        863
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+      "test_id": "B113",
+      "test_name": "request_without_timeout"
+    }
+  ]
+}

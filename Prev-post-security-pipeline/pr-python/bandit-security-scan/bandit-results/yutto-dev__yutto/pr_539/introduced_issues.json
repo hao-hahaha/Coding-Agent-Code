@@ -1,0 +1,42 @@
+[
+  {
+    "code": "99             continue\n100         assert isinstance(value, int), f\"变量 {var} 的值必须为 int 型，但是传入了 {value}\"\n101         time_formatter = create_time_formatter(var, value)\n",
+    "col_offset": 8,
+    "end_col_offset": 104,
+    "filename": "./src/yutto/path_templates.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 100,
+    "line_range": [
+      100
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "86     def bv2av(bvid: str) -> int:\n87         assert bvid[:3] == AvId.PREFIX\n88 \n",
+    "col_offset": 8,
+    "end_col_offset": 38,
+    "filename": "./src/yutto/types.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 87,
+    "line_range": [
+      87
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

@@ -1,0 +1,127 @@
+[
+  {
+    "code": "347 \n348     resp = requests.post(api_endpoint, json=payload)\n349     if resp.status_code == 202:\n",
+    "col_offset": 11,
+    "end_col_offset": 52,
+    "filename": "./packages/python-packages/apiview-copilot/cli.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 400,
+      "link": "https://cwe.mitre.org/data/definitions/400.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Call to requests without timeout",
+    "line_number": 348,
+    "line_range": [
+      348
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+    "test_id": "B113",
+    "test_name": "request_without_timeout"
+  },
+  {
+    "code": "361     url = f\"{api_endpoint.rstrip('/')}/{job_id}\"\n362     resp = requests.get(url)\n363     if resp.status_code == 200:\n",
+    "col_offset": 11,
+    "end_col_offset": 28,
+    "filename": "./packages/python-packages/apiview-copilot/cli.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 400,
+      "link": "https://cwe.mitre.org/data/definitions/400.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Call to requests without timeout",
+    "line_number": 362,
+    "line_range": [
+      362
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+    "test_id": "B113",
+    "test_name": "request_without_timeout"
+  },
+  {
+    "code": "404     api_endpoint = f\"https://{APP_NAME}.azurewebsites.net/api-review/summarize\"\n405     response = requests.post(api_endpoint, json=payload)\n406     if response.status_code == 200:\n",
+    "col_offset": 15,
+    "end_col_offset": 56,
+    "filename": "./packages/python-packages/apiview-copilot/cli.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 400,
+      "link": "https://cwe.mitre.org/data/definitions/400.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Call to requests without timeout",
+    "line_number": 405,
+    "line_range": [
+      405
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+    "test_id": "B113",
+    "test_name": "request_without_timeout"
+  },
+  {
+    "code": "521         try:\n522             response = requests.post(\n523                 api_endpoint,\n524                 json={\"comments\": comments, \"language\": language, \"packageName\": package_name, \"code\": code},\n525             )\n526             response_data = response.json()\n",
+    "col_offset": 23,
+    "end_col_offset": 13,
+    "filename": "./packages/python-packages/apiview-copilot/cli.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 400,
+      "link": "https://cwe.mitre.org/data/definitions/400.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Call to requests without timeout",
+    "line_number": 522,
+    "line_range": [
+      522,
+      523,
+      524,
+      525
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+    "test_id": "B113",
+    "test_name": "request_without_timeout"
+  },
+  {
+    "code": "115         query = (\n116             f\"SELECT c.id, c.finished FROM c WHERE IS_DEFINED(c.finished) AND c.finished < {now - retention_seconds}\"\n117         )\n",
+    "col_offset": 14,
+    "end_col_offset": 91,
+    "filename": "./packages/python-packages/apiview-copilot/src/_database_manager.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 89,
+      "link": "https://cwe.mitre.org/data/definitions/89.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible SQL injection vector through string-based query construction.",
+    "line_number": 116,
+    "line_range": [
+      116
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b608_hardcoded_sql_expressions.html",
+    "test_id": "B608",
+    "test_name": "hardcoded_sql_expressions"
+  },
+  {
+    "code": "103                 converted_comments.append(ExistingComment(**c))\n104             except Exception as e:\n105                 # Optionally log or skip invalid dicts\n106                 continue\n107     if not converted_comments:\n",
+    "col_offset": 12,
+    "end_col_offset": 24,
+    "filename": "./packages/python-packages/apiview-copilot/src/agent/_agent.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Continue detected.",
+    "line_number": 104,
+    "line_range": [
+      104,
+      105,
+      106
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b112_try_except_continue.html",
+    "test_id": "B112",
+    "test_name": "try_except_continue"
+  }
+]

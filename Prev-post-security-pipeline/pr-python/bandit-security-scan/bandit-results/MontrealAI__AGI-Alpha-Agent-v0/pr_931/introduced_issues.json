@@ -1,0 +1,48 @@
+[
+  {
+    "code": "12 import os\n13 import subprocess\n14 import sys\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/agents/codegen_agent.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 13,
+    "line_range": [
+      13
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "88         try:\n89             proc = subprocess.run(\n90                 [sys.executable, helper_path, code_path],\n91                 text=True,\n92                 capture_output=True,\n93                 timeout=3,\n94                 preexec_fn=_apply_limits if os.name == \"posix\" else None,\n95             )\n96             try:\n",
+    "col_offset": 19,
+    "end_col_offset": 13,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/agents/codegen_agent.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 89,
+    "line_range": [
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  }
+]

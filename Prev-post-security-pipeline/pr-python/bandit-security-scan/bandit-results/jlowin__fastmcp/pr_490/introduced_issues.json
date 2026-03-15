@@ -1,0 +1,333 @@
+[
+  {
+    "code": "86             path, obj = fastmcp.cli.run.parse_file_path(\"file.py\")\n87             assert path == Path(\"file.py\")\n88             assert obj is None\n",
+    "col_offset": 12,
+    "end_col_offset": 42,
+    "filename": "./tests/cli/test_run.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 87,
+    "line_range": [
+      87
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "87             assert path == Path(\"file.py\")\n88             assert obj is None\n89 \n",
+    "col_offset": 12,
+    "end_col_offset": 30,
+    "filename": "./tests/cli/test_run.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 88,
+    "line_range": [
+      88
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "103             path, obj = fastmcp.cli.run.parse_file_path(\"file.py:server\")\n104             assert path == Path(\"file.py\")\n105             assert obj == \"server\"\n",
+    "col_offset": 12,
+    "end_col_offset": 42,
+    "filename": "./tests/cli/test_run.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 104,
+    "line_range": [
+      104
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "104             assert path == Path(\"file.py\")\n105             assert obj == \"server\"\n106 \n",
+    "col_offset": 12,
+    "end_col_offset": 34,
+    "filename": "./tests/cli/test_run.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 105,
+    "line_range": [
+      105
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "120             path, obj = fastmcp.cli.run.parse_file_path(\"C:/path/file.py:server\")\n121             assert path == Path(\"C:/path/file.py\")\n122             assert obj == \"server\"\n",
+    "col_offset": 12,
+    "end_col_offset": 50,
+    "filename": "./tests/cli/test_run.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 121,
+    "line_range": [
+      121
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "121             assert path == Path(\"C:/path/file.py\")\n122             assert obj == \"server\"\n123 \n",
+    "col_offset": 12,
+    "end_col_offset": 34,
+    "filename": "./tests/cli/test_run.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 122,
+    "line_range": [
+      122
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "158             result = runner.invoke(cli.app, [\"run\", str(temp_python_file)])\n159             assert result.exit_code == 0\n160             mock_server.run.assert_called_once_with()\n",
+    "col_offset": 12,
+    "end_col_offset": 40,
+    "filename": "./tests/cli/test_run.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 159,
+    "line_range": [
+      159
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "178             )\n179             assert result.exit_code == 0\n180             mock_server.run.assert_called_once_with(transport=\"sse\")\n",
+    "col_offset": 12,
+    "end_col_offset": 40,
+    "filename": "./tests/cli/test_run.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 179,
+    "line_range": [
+      179
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "193             result = runner.invoke(\n194                 cli.app, [\"run\", str(temp_python_file), \"--host\", \"0.0.0.0\"]\n195             )\n",
+    "col_offset": 66,
+    "end_col_offset": 75,
+    "filename": "./tests/cli/test_run.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 605,
+      "link": "https://cwe.mitre.org/data/definitions/605.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible binding to all interfaces.",
+    "line_number": 194,
+    "line_range": [
+      194
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b104_hardcoded_bind_all_interfaces.html",
+    "test_id": "B104",
+    "test_name": "hardcoded_bind_all_interfaces"
+  },
+  {
+    "code": "195             )\n196             assert result.exit_code == 0\n197             mock_server.run.assert_called_once_with(host=\"0.0.0.0\")\n",
+    "col_offset": 12,
+    "end_col_offset": 40,
+    "filename": "./tests/cli/test_run.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 196,
+    "line_range": [
+      196
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "196             assert result.exit_code == 0\n197             mock_server.run.assert_called_once_with(host=\"0.0.0.0\")\n198 \n",
+    "col_offset": 57,
+    "end_col_offset": 66,
+    "filename": "./tests/cli/test_run.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 605,
+      "link": "https://cwe.mitre.org/data/definitions/605.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible binding to all interfaces.",
+    "line_number": 197,
+    "line_range": [
+      197
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b104_hardcoded_bind_all_interfaces.html",
+    "test_id": "B104",
+    "test_name": "hardcoded_bind_all_interfaces"
+  },
+  {
+    "code": "212             )\n213             assert result.exit_code == 0\n214             mock_server.run.assert_called_once_with(port=8080)\n",
+    "col_offset": 12,
+    "end_col_offset": 40,
+    "filename": "./tests/cli/test_run.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 213,
+    "line_range": [
+      213
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "229             )\n230             assert result.exit_code == 0\n231             mock_server.run.assert_called_once_with(log_level=\"DEBUG\")\n",
+    "col_offset": 12,
+    "end_col_offset": 40,
+    "filename": "./tests/cli/test_run.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 230,
+    "line_range": [
+      230
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "251                     \"--host\",\n252                     \"0.0.0.0\",\n253                     \"--port\",\n254                     \"8080\",\n255                     \"--log-level\",\n256                     \"DEBUG\",\n257                 ],\n258             )\n259             assert result.exit_code == 0\n260             mock_server.run.assert_called_once_with(\n261                 transport=\"sse\", host=\"0.0.0.0\", port=8080, log_level=\"DEBUG\"\n262             )\n",
+    "col_offset": 20,
+    "end_col_offset": 29,
+    "filename": "./tests/cli/test_run.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 605,
+      "link": "https://cwe.mitre.org/data/definitions/605.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible binding to all interfaces.",
+    "line_number": 252,
+    "line_range": [
+      246,
+      247,
+      248,
+      249,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255,
+      256,
+      257
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b104_hardcoded_bind_all_interfaces.html",
+    "test_id": "B104",
+    "test_name": "hardcoded_bind_all_interfaces"
+  },
+  {
+    "code": "258             )\n259             assert result.exit_code == 0\n260             mock_server.run.assert_called_once_with(\n",
+    "col_offset": 12,
+    "end_col_offset": 40,
+    "filename": "./tests/cli/test_run.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 259,
+    "line_range": [
+      259
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "260             mock_server.run.assert_called_once_with(\n261                 transport=\"sse\", host=\"0.0.0.0\", port=8080, log_level=\"DEBUG\"\n262             )\n",
+    "col_offset": 38,
+    "end_col_offset": 47,
+    "filename": "./tests/cli/test_run.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 605,
+      "link": "https://cwe.mitre.org/data/definitions/605.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible binding to all interfaces.",
+    "line_number": 261,
+    "line_range": [
+      261
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b104_hardcoded_bind_all_interfaces.html",
+    "test_id": "B104",
+    "test_name": "hardcoded_bind_all_interfaces"
+  }
+]

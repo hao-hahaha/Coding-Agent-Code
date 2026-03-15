@@ -1,0 +1,62 @@
+[
+  {
+    "code": "268             parsed_spec = parser.get_specification()\n269             assert parsed_spec is not None  # For mypy / static checkers\n270 \n",
+    "col_offset": 12,
+    "end_col_offset": 42,
+    "filename": "./src/meta_agent/agents/tool_designer_agent.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 269,
+    "line_range": [
+      269
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "13     test_code = generate_basic_tests(spec)\n14     assert \"import importlib\" in test_code\n15     assert \"greet\" in test_code\n",
+    "col_offset": 4,
+    "end_col_offset": 42,
+    "filename": "./tests/generators/test_test_generator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 14,
+    "line_range": [
+      14
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "14     assert \"import importlib\" in test_code\n15     assert \"greet\" in test_code\n16     # ensure code is syntactically valid\n",
+    "col_offset": 4,
+    "end_col_offset": 31,
+    "filename": "./tests/generators/test_test_generator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 15,
+    "line_range": [
+      15
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

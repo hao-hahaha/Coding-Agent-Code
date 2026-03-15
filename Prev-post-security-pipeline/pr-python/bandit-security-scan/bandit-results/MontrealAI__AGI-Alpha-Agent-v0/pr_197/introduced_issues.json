@@ -1,0 +1,462 @@
+[
+  {
+    "code": "11 import importlib.util\n12 import subprocess\n13 import sys\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./alpha_factory_v1/scripts/run_tests.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 12,
+    "line_range": [
+      12
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "26         cmd = [sys.executable, \"-m\", \"unittest\", \"discover\", str(target)]\n27     return subprocess.call(cmd)\n28 \n",
+    "col_offset": 11,
+    "end_col_offset": 31,
+    "filename": "./alpha_factory_v1/scripts/run_tests.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 27,
+    "line_range": [
+      27
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "11     db = base / \"memory.db\"\n12     assert db.exists()\n13     return db.read_bytes()  # smoke check\n",
+    "col_offset": 4,
+    "end_col_offset": 22,
+    "filename": "./alpha_factory_v1/tests/test_finance_agent.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 12,
+    "line_range": [
+      12
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "21     for idea in ideas:\n22         assert idea[\"notional\"] < fa.Governance(agent.memory).trade_limit\n23 \n",
+    "col_offset": 8,
+    "end_col_offset": 73,
+    "filename": "./alpha_factory_v1/tests/test_finance_agent.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 22,
+    "line_range": [
+      22
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "27     for prompt in REDTEAM:\n28         assert gov.moderate(prompt) is False\n29 \n",
+    "col_offset": 8,
+    "end_col_offset": 44,
+    "filename": "./alpha_factory_v1/tests/test_finance_agent.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 28,
+    "line_range": [
+      28
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "13             self.assertEqual(\n14                 quickstart._venv_python(Path('/tmp/venv')),\n15                 Path('/tmp/venv/bin/python')\n",
+    "col_offset": 45,
+    "end_col_offset": 56,
+    "filename": "./alpha_factory_v1/tests/test_quickstart.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 14,
+    "line_range": [
+      14
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "14                 quickstart._venv_python(Path('/tmp/venv')),\n15                 Path('/tmp/venv/bin/python')\n16             )\n",
+    "col_offset": 21,
+    "end_col_offset": 43,
+    "filename": "./alpha_factory_v1/tests/test_quickstart.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 15,
+    "line_range": [
+      15
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "28             self.assertEqual(\n29                 quickstart._venv_pip(Path('/tmp/venv')),\n30                 Path('/tmp/venv/bin/pip')\n",
+    "col_offset": 42,
+    "end_col_offset": 53,
+    "filename": "./alpha_factory_v1/tests/test_quickstart.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 29,
+    "line_range": [
+      29
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "29                 quickstart._venv_pip(Path('/tmp/venv')),\n30                 Path('/tmp/venv/bin/pip')\n31             )\n",
+    "col_offset": 21,
+    "end_col_offset": 40,
+    "filename": "./alpha_factory_v1/tests/test_quickstart.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 30,
+    "line_range": [
+      30
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "42         with mock.patch('subprocess.check_call') as cc:\n43             venv = Path('/tmp/qsvenv')\n44             if venv.exists():\n",
+    "col_offset": 24,
+    "end_col_offset": 37,
+    "filename": "./alpha_factory_v1/tests/test_quickstart.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 43,
+    "line_range": [
+      43
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "59         with mock.patch('subprocess.check_call') as cc:\n60             venv = Path('/tmp/exists')\n61             venv.mkdir(exist_ok=True)\n",
+    "col_offset": 24,
+    "end_col_offset": 37,
+    "filename": "./alpha_factory_v1/tests/test_quickstart.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 60,
+    "line_range": [
+      60
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "1 import subprocess\n2 import os\n3 import json\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./alpha_factory_v1/tests/test_smoke.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 1,
+    "line_range": [
+      1
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "28     try:\n29         subprocess.run([\"docker\", \"info\"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)\n30         return True\n",
+    "col_offset": 8,
+    "end_col_offset": 108,
+    "filename": "./alpha_factory_v1/tests/test_smoke.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 29,
+    "line_range": [
+      29
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "28     try:\n29         subprocess.run([\"docker\", \"info\"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)\n30         return True\n",
+    "col_offset": 8,
+    "end_col_offset": 108,
+    "filename": "./alpha_factory_v1/tests/test_smoke.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 29,
+    "line_range": [
+      29
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "47     img = \"af:test\"\n48     subprocess.run([\"docker\", \"build\", \"-t\", img, tmp], check=True)\n49     cid = subprocess.check_output([\"docker\", \"run\", \"-d\", \"-p\", \"33000:3000\", img]).decode().strip()\n",
+    "col_offset": 4,
+    "end_col_offset": 67,
+    "filename": "./alpha_factory_v1/tests/test_smoke.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 48,
+    "line_range": [
+      48
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "47     img = \"af:test\"\n48     subprocess.run([\"docker\", \"build\", \"-t\", img, tmp], check=True)\n49     cid = subprocess.check_output([\"docker\", \"run\", \"-d\", \"-p\", \"33000:3000\", img]).decode().strip()\n",
+    "col_offset": 4,
+    "end_col_offset": 67,
+    "filename": "./alpha_factory_v1/tests/test_smoke.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 48,
+    "line_range": [
+      48
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "48     subprocess.run([\"docker\", \"build\", \"-t\", img, tmp], check=True)\n49     cid = subprocess.check_output([\"docker\", \"run\", \"-d\", \"-p\", \"33000:3000\", img]).decode().strip()\n50     try:\n",
+    "col_offset": 10,
+    "end_col_offset": 83,
+    "filename": "./alpha_factory_v1/tests/test_smoke.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 49,
+    "line_range": [
+      49
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "48     subprocess.run([\"docker\", \"build\", \"-t\", img, tmp], check=True)\n49     cid = subprocess.check_output([\"docker\", \"run\", \"-d\", \"-p\", \"33000:3000\", img]).decode().strip()\n50     try:\n",
+    "col_offset": 10,
+    "end_col_offset": 83,
+    "filename": "./alpha_factory_v1/tests/test_smoke.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 49,
+    "line_range": [
+      49
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "51         wait_port(\"localhost\", 33000)\n52         r = requests.get(\"http://localhost:33000/api/logs\")\n53         assert r.status_code == 200\n",
+    "col_offset": 12,
+    "end_col_offset": 59,
+    "filename": "./alpha_factory_v1/tests/test_smoke.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 400,
+      "link": "https://cwe.mitre.org/data/definitions/400.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Call to requests without timeout",
+    "line_number": 52,
+    "line_range": [
+      52
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b113_request_without_timeout.html",
+    "test_id": "B113",
+    "test_name": "request_without_timeout"
+  },
+  {
+    "code": "52         r = requests.get(\"http://localhost:33000/api/logs\")\n53         assert r.status_code == 200\n54     finally:\n",
+    "col_offset": 8,
+    "end_col_offset": 35,
+    "filename": "./alpha_factory_v1/tests/test_smoke.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 53,
+    "line_range": [
+      53
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "54     finally:\n55         subprocess.run([\"docker\", \"rm\", \"-f\", cid])\n56 \n",
+    "col_offset": 8,
+    "end_col_offset": 51,
+    "filename": "./alpha_factory_v1/tests/test_smoke.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 55,
+    "line_range": [
+      55
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "54     finally:\n55         subprocess.run([\"docker\", \"rm\", \"-f\", cid])\n56 \n",
+    "col_offset": 8,
+    "end_col_offset": 51,
+    "filename": "./alpha_factory_v1/tests/test_smoke.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 55,
+    "line_range": [
+      55
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "4     mod = importlib.import_module('alpha_factory_v1')\n5     assert hasattr(mod, '__version__')\n6 \n",
+    "col_offset": 4,
+    "end_col_offset": 38,
+    "filename": "./tests/test_imports.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 5,
+    "line_range": [
+      5
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

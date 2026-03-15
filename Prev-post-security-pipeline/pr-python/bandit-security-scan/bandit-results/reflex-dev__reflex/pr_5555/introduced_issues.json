@@ -1,0 +1,53 @@
+[
+  {
+    "code": "340                 command.append(\"--frontend-only\")\n341         self.reflex_process = subprocess.Popen(\n342             command,\n343             stdout=self._reflex_process_log_fn,\n344             stderr=self._reflex_process_log_fn,\n345             cwd=self.app_path,\n346             env={\n347                 **os.environ,\n348                 \"REFLEX_ERROR_LOG_FILE\": str(self.reflex_process_error_log_path),\n349                 \"PYTEST_CURRENT_TEST\": \"\",\n350                 \"APP_HARNESS_FLAG\": \"true\",\n351             },\n352         )\n353         self._wait_for_servers(backend=backend, frontend=frontend)\n",
+    "col_offset": 30,
+    "end_col_offset": 9,
+    "filename": "./reflex/testing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 341,
+    "line_range": [
+      341,
+      342,
+      343,
+      344,
+      345,
+      346,
+      347,
+      348,
+      349,
+      350,
+      351,
+      352
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "652         \"\"\"\n653         assert self.state_manager is not None, \"State manager is not initialized.\"\n654         if isinstance(self.state_manager, StateManagerDisk):\n",
+    "col_offset": 8,
+    "end_col_offset": 82,
+    "filename": "./reflex/testing.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 653,
+    "line_range": [
+      653
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

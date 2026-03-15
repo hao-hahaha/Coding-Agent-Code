@@ -1,0 +1,266 @@
+[
+  {
+    "code": "21         cfg = load(path)\n22         assert \"contracts\" in cfg and cfg[\"contracts\"], f\"{path} missing contracts\"\n23         assert \"github_repo\" in cfg\n",
+    "col_offset": 8,
+    "end_col_offset": 83,
+    "filename": "./tests/test_configs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 22,
+    "line_range": [
+      22
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "22         assert \"contracts\" in cfg and cfg[\"contracts\"], f\"{path} missing contracts\"\n23         assert \"github_repo\" in cfg\n24         assert REQUIRED_GITHUB_KEYS <= set(\n",
+    "col_offset": 8,
+    "end_col_offset": 35,
+    "filename": "./tests/test_configs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 23,
+    "line_range": [
+      23
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "23         assert \"github_repo\" in cfg\n24         assert REQUIRED_GITHUB_KEYS <= set(\n25             cfg[\"github_repo\"]\n26         ), f\"{path} github_repo keys\"\n27         assert \"dependencies\" in cfg\n",
+    "col_offset": 8,
+    "end_col_offset": 37,
+    "filename": "./tests/test_configs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 24,
+    "line_range": [
+      24,
+      25,
+      26
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "26         ), f\"{path} github_repo keys\"\n27         assert \"dependencies\" in cfg\n28         assert \"explorer_hostname\" in cfg or \"explorer_hostname_env_var\" in cfg\n",
+    "col_offset": 8,
+    "end_col_offset": 36,
+    "filename": "./tests/test_configs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 27,
+    "line_range": [
+      27
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "27         assert \"dependencies\" in cfg\n28         assert \"explorer_hostname\" in cfg or \"explorer_hostname_env_var\" in cfg\n29 \n",
+    "col_offset": 8,
+    "end_col_offset": 79,
+    "filename": "./tests/test_configs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 28,
+    "line_range": [
+      28
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "36         for addr in cfg.get(\"contracts\", {}):\n37             assert (\n38                 addr.startswith(\"0x\") and len(addr) == 42\n39             ), f\"Bad addr {addr} in {path}\"\n",
+    "col_offset": 12,
+    "end_col_offset": 43,
+    "filename": "./tests/test_configs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 37,
+    "line_range": [
+      37,
+      38,
+      39
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "6     cfg = {\"explorer_hostname\": \"api.etherscan.io\"}\n7     assert get_explorer_hostname(cfg) == \"api.etherscan.io\"\n",
+    "col_offset": 4,
+    "end_col_offset": 59,
+    "filename": "./tests/test_explorer_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 7,
+    "line_range": [
+      7
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "9     url = get_github_api_url('user/repo', 'src', 'file.sol', 'abc123')\n10     assert url == 'https://api.github.com/repos/user/repo/contents/src/file.sol?ref=abc123'\n11 \n",
+    "col_offset": 4,
+    "end_col_offset": 91,
+    "filename": "./tests/test_github_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 10,
+    "line_range": [
+      10
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "14     result = path_to_file_without_dependency('@oz/contracts/token.sol', '@oz/contracts')\n15     assert result == 'token.sol'\n16 \n",
+    "col_offset": 4,
+    "end_col_offset": 32,
+    "filename": "./tests/test_github_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 15,
+    "line_range": [
+      15
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "24     repo, dep_name = resolve_dep('@oz/contracts/token.sol', cfg)\n25     assert dep_name == '@oz/contracts'\n26     assert repo['commit'] == 'c'\n",
+    "col_offset": 4,
+    "end_col_offset": 38,
+    "filename": "./tests/test_github_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 25,
+    "line_range": [
+      25
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "25     assert dep_name == '@oz/contracts'\n26     assert repo['commit'] == 'c'\n",
+    "col_offset": 4,
+    "end_col_offset": 32,
+    "filename": "./tests/test_github_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 26,
+    "line_range": [
+      26
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "7     source_files = [(\"Contract\", {\"content\": \"contract Contract { ... }\"})]\n8     assert not is_standard_json_contract(source_files)\n9 \n",
+    "col_offset": 4,
+    "end_col_offset": 54,
+    "filename": "./tests/test_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 8,
+    "line_range": [
+      8
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "15     }\n16     assert is_standard_json_contract(source_files)\n",
+    "col_offset": 4,
+    "end_col_offset": 50,
+    "filename": "./tests/test_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 16,
+    "line_range": [
+      16
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

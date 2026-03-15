@@ -1,0 +1,342 @@
+[
+  {
+    "code": "83         print(f\"Coordinator._elevation: {coordinator._elevation}\")\n84         assert hasattr(coordinator, '_latitude'), \"Missing _latitude attribute\"\n85         assert hasattr(coordinator, '_elevation'), \"Missing _elevation attribute\"\n",
+    "col_offset": 8,
+    "end_col_offset": 79,
+    "filename": "./test_comprehensive.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 84,
+    "line_range": [
+      84
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "84         assert hasattr(coordinator, '_latitude'), \"Missing _latitude attribute\"\n85         assert hasattr(coordinator, '_elevation'), \"Missing _elevation attribute\"\n86         assert coordinator._latitude == 37.7749\n",
+    "col_offset": 8,
+    "end_col_offset": 81,
+    "filename": "./test_comprehensive.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 85,
+    "line_range": [
+      85
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "85         assert hasattr(coordinator, '_elevation'), \"Missing _elevation attribute\"\n86         assert coordinator._latitude == 37.7749\n87         assert coordinator._elevation == 16\n",
+    "col_offset": 8,
+    "end_col_offset": 47,
+    "filename": "./test_comprehensive.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 86,
+    "line_range": [
+      86
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "86         assert coordinator._latitude == 37.7749\n87         assert coordinator._elevation == 16\n88         print(\"✓ Latitude and elevation properly initialized\")\n",
+    "col_offset": 8,
+    "end_col_offset": 43,
+    "filename": "./test_comprehensive.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 87,
+    "line_range": [
+      87
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "92         monthly_data = coordinator._generate_monthly_climate_data()\n93         assert len(monthly_data) == 12\n94         print(\"✓ Monthly climate data generation successful\")\n",
+    "col_offset": 8,
+    "end_col_offset": 38,
+    "filename": "./test_comprehensive.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 93,
+    "line_range": [
+      93
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "100         print(f\"July avg temp: {summer_month['avg_temp']:.1f}°C\")\n101         assert summer_month['avg_temp'] > winter_month['avg_temp']\n102         print(\"✓ Seasonal variation correct\")\n",
+    "col_offset": 8,
+    "end_col_offset": 66,
+    "filename": "./test_comprehensive.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 101,
+    "line_range": [
+      101
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "113         \n114         assert len(calendar_data) > 0, \"No calendar data generated\"\n115         assert 1 in calendar_data, \"Zone 1 missing from calendar\"\n",
+    "col_offset": 8,
+    "end_col_offset": 67,
+    "filename": "./test_comprehensive.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 114,
+    "line_range": [
+      114
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "114         assert len(calendar_data) > 0, \"No calendar data generated\"\n115         assert 1 in calendar_data, \"Zone 1 missing from calendar\"\n116         \n",
+    "col_offset": 8,
+    "end_col_offset": 65,
+    "filename": "./test_comprehensive.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 115,
+    "line_range": [
+      115
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "117         zone_calendar = calendar_data[1]\n118         assert zone_calendar['zone_name'] == \"Garden Zone\"\n119         assert len(zone_calendar['monthly_estimates']) == 12\n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./test_comprehensive.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 118,
+    "line_range": [
+      118
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "118         assert zone_calendar['zone_name'] == \"Garden Zone\"\n119         assert len(zone_calendar['monthly_estimates']) == 12\n120         print(\"✓ Full calendar generation successful\")\n",
+    "col_offset": 8,
+    "end_col_offset": 60,
+    "filename": "./test_comprehensive.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 119,
+    "line_range": [
+      119
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "132         success_events = [call for call in event_calls if 'watering_calendar_generated' in str(call)]\n133         assert len(success_events) > 0, \"Success event not fired\"\n134         print(\"✓ Service call completed and success event fired\")\n",
+    "col_offset": 8,
+    "end_col_offset": 65,
+    "filename": "./test_comprehensive.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 133,
+    "line_range": [
+      133
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "175         # Should use defaults\n176         assert coordinator._latitude == 45.0, f\"Expected 45.0, got {coordinator._latitude}\"\n177         assert coordinator._elevation == 0, f\"Expected 0, got {coordinator._elevation}\"\n",
+    "col_offset": 8,
+    "end_col_offset": 91,
+    "filename": "./test_comprehensive.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 176,
+    "line_range": [
+      176
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "176         assert coordinator._latitude == 45.0, f\"Expected 45.0, got {coordinator._latitude}\"\n177         assert coordinator._elevation == 0, f\"Expected 0, got {coordinator._elevation}\"\n178         print(\"✓ Default values applied correctly\")\n",
+    "col_offset": 8,
+    "end_col_offset": 87,
+    "filename": "./test_comprehensive.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 177,
+    "line_range": [
+      177
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "181         monthly_data = coordinator._generate_monthly_climate_data()\n182         assert len(monthly_data) == 12\n183         print(\"✓ Calendar generation works with defaults\")\n",
+    "col_offset": 8,
+    "end_col_offset": 38,
+    "filename": "./test_comprehensive.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 182,
+    "line_range": [
+      182
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "227         # Should use entry data\n228         assert coordinator._latitude == 51.5074, f\"Expected 51.5074, got {coordinator._latitude}\"\n229         assert coordinator._elevation == 35, f\"Expected 35, got {coordinator._elevation}\"\n",
+    "col_offset": 8,
+    "end_col_offset": 97,
+    "filename": "./test_comprehensive.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 228,
+    "line_range": [
+      228
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "228         assert coordinator._latitude == 51.5074, f\"Expected 51.5074, got {coordinator._latitude}\"\n229         assert coordinator._elevation == 35, f\"Expected 35, got {coordinator._elevation}\"\n230         print(\"✓ Entry data values used correctly\")\n",
+    "col_offset": 8,
+    "end_col_offset": 89,
+    "filename": "./test_comprehensive.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 229,
+    "line_range": [
+      229
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "233         monthly_data = coordinator._generate_monthly_climate_data()\n234         assert len(monthly_data) == 12\n235         print(\"✓ Calendar works with entry data coordinates\")\n",
+    "col_offset": 8,
+    "end_col_offset": 38,
+    "filename": "./test_comprehensive.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 234,
+    "line_range": [
+      234
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

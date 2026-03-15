@@ -1,0 +1,62 @@
+[
+  {
+    "code": "20         metrics = replay.score_trajectory(name, traj, csv_path=csv_path)\n21         assert metrics[\"f1\"] > 0.6\n22     with open(csv_path, newline=\"\") as fh:\n",
+    "col_offset": 8,
+    "end_col_offset": 34,
+    "filename": "./tests/test_replay_metrics.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 21,
+    "line_range": [
+      21
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "23         rows = list(csv.reader(fh))\n24     assert rows[0] == [\"scenario\", \"f1\", \"auroc\", \"lead_time\"]\n25     assert len(rows) == len(EXPECTED) + 1\n",
+    "col_offset": 4,
+    "end_col_offset": 62,
+    "filename": "./tests/test_replay_metrics.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 24,
+    "line_range": [
+      24
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "24     assert rows[0] == [\"scenario\", \"f1\", \"auroc\", \"lead_time\"]\n25     assert len(rows) == len(EXPECTED) + 1\n",
+    "col_offset": 4,
+    "end_col_offset": 41,
+    "filename": "./tests/test_replay_metrics.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 25,
+    "line_range": [
+      25
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

@@ -1,0 +1,282 @@
+[
+  {
+    "code": "7     # Create a temporary test file\n8     test_file = \"/tmp/test_file.txt\"\n9     test_content = \"Hello, World!\"\n",
+    "col_offset": 16,
+    "end_col_offset": 36,
+    "filename": "./tests/file_read_tool_test.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 8,
+    "line_range": [
+      8
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "14     tool = FileReadTool(file_path=test_file)\n15     assert tool.file_path == test_file\n16     assert \"test_file.txt\" in tool.description\n",
+    "col_offset": 4,
+    "end_col_offset": 38,
+    "filename": "./tests/file_read_tool_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 15,
+    "line_range": [
+      15
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "15     assert tool.file_path == test_file\n16     assert \"test_file.txt\" in tool.description\n17 \n",
+    "col_offset": 4,
+    "end_col_offset": 46,
+    "filename": "./tests/file_read_tool_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 16,
+    "line_range": [
+      16
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "23     # Create a temporary test file\n24     test_file = \"/tmp/test_file.txt\"\n25     test_content = \"Hello, World!\"\n",
+    "col_offset": 16,
+    "end_col_offset": 36,
+    "filename": "./tests/file_read_tool_test.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 24,
+    "line_range": [
+      24
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "31     result = tool._run(file_path=test_file)\n32     assert result == test_content\n33 \n",
+    "col_offset": 4,
+    "end_col_offset": 33,
+    "filename": "./tests/file_read_tool_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 32,
+    "line_range": [
+      32
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "41     result = tool._run()\n42     assert \"Error: No file path provided\" in result\n43 \n",
+    "col_offset": 4,
+    "end_col_offset": 51,
+    "filename": "./tests/file_read_tool_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 42,
+    "line_range": [
+      42
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "45     result = tool._run(file_path=\"/nonexistent/file.txt\")\n46     assert \"Error: File not found at path:\" in result\n47 \n",
+    "col_offset": 4,
+    "end_col_offset": 53,
+    "filename": "./tests/file_read_tool_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 46,
+    "line_range": [
+      46
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "48     # Test permission error (create a file without read permissions)\n49     test_file = \"/tmp/no_permission.txt\"\n50     with open(test_file, \"w\") as f:\n",
+    "col_offset": 16,
+    "end_col_offset": 40,
+    "filename": "./tests/file_read_tool_test.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 49,
+    "line_range": [
+      49
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "54     result = tool._run(file_path=test_file)\n55     assert \"Error: Permission denied\" in result\n56 \n",
+    "col_offset": 4,
+    "end_col_offset": 47,
+    "filename": "./tests/file_read_tool_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 55,
+    "line_range": [
+      55
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "57     # Clean up\n58     os.chmod(test_file, 0o666)  # Restore permissions to delete\n59     os.remove(test_file)\n",
+    "col_offset": 4,
+    "end_col_offset": 30,
+    "filename": "./tests/file_read_tool_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 732,
+      "link": "https://cwe.mitre.org/data/definitions/732.html"
+    },
+    "issue_severity": "HIGH",
+    "issue_text": "Chmod setting a permissive mask 0o666 on file (test_file).",
+    "line_number": 58,
+    "line_range": [
+      58
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b103_set_bad_file_permissions.html",
+    "test_id": "B103",
+    "test_name": "set_bad_file_permissions"
+  },
+  {
+    "code": "63     # Create two test files\n64     test_file1 = \"/tmp/test1.txt\"\n65     test_file2 = \"/tmp/test2.txt\"\n",
+    "col_offset": 17,
+    "end_col_offset": 33,
+    "filename": "./tests/file_read_tool_test.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 64,
+    "line_range": [
+      64
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "64     test_file1 = \"/tmp/test1.txt\"\n65     test_file2 = \"/tmp/test2.txt\"\n66     content1 = \"File 1 content\"\n",
+    "col_offset": 17,
+    "end_col_offset": 33,
+    "filename": "./tests/file_read_tool_test.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 65,
+    "line_range": [
+      65
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "75     result = tool._run()\n76     assert result == content1\n77 \n",
+    "col_offset": 4,
+    "end_col_offset": 29,
+    "filename": "./tests/file_read_tool_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 76,
+    "line_range": [
+      76
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "79     result = tool._run(file_path=test_file2)\n80     assert result == content2\n81 \n",
+    "col_offset": 4,
+    "end_col_offset": 29,
+    "filename": "./tests/file_read_tool_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 80,
+    "line_range": [
+      80
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

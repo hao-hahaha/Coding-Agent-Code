@@ -1,0 +1,102 @@
+[
+  {
+    "code": "7 import argparse\n8 import subprocess\n9 import time\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./scripts/capture_demo_preview.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 8,
+    "line_range": [
+      8
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "65         # Start ffmpeg first so it captures the entire run\n66         ffmpeg_proc = subprocess.Popen(ffmpeg_cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)\n67         demo_proc = subprocess.Popen(args.demo, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)\n",
+    "col_offset": 22,
+    "end_col_offset": 104,
+    "filename": "./scripts/capture_demo_preview.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 66,
+    "line_range": [
+      66
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "66         ffmpeg_proc = subprocess.Popen(ffmpeg_cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)\n67         demo_proc = subprocess.Popen(args.demo, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)\n68         try:\n",
+    "col_offset": 20,
+    "end_col_offset": 113,
+    "filename": "./scripts/capture_demo_preview.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "HIGH",
+    "issue_text": "subprocess call with shell=True identified, security issue.",
+    "line_number": 67,
+    "line_range": [
+      67
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+    "test_id": "B602",
+    "test_name": "subprocess_popen_with_shell_equals_true"
+  },
+  {
+    "code": "76     if output.suffix == \".gif\":\n77         subprocess.run([\"ffmpeg\", \"-y\", \"-i\", str(temp_mp4), str(output)], check=True)\n78         temp_mp4.unlink(missing_ok=True)\n",
+    "col_offset": 8,
+    "end_col_offset": 86,
+    "filename": "./scripts/capture_demo_preview.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 77,
+    "line_range": [
+      77
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "76     if output.suffix == \".gif\":\n77         subprocess.run([\"ffmpeg\", \"-y\", \"-i\", str(temp_mp4), str(output)], check=True)\n78         temp_mp4.unlink(missing_ok=True)\n",
+    "col_offset": 8,
+    "end_col_offset": 86,
+    "filename": "./scripts/capture_demo_preview.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 77,
+    "line_range": [
+      77
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  }
+]

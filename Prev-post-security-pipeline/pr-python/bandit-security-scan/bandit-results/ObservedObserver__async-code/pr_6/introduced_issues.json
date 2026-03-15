@@ -1,0 +1,82 @@
+[
+  {
+    "code": "33 codex_worker_thread = None\n34 codex_lock_file = '/tmp/codex_global_lock'\n35 \n",
+    "col_offset": 18,
+    "end_col_offset": 42,
+    "filename": "./server/utils.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 34,
+    "line_range": [
+      34
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "242             # Random delay between 0.5-2 seconds for Codex containers to prevent resource conflicts\n243             stagger_delay = random.uniform(0.5, 2.0)\n244             logger.info(f\"🕐 Adding {stagger_delay:.1f}s staggered start delay for Codex task {task_id}\")\n",
+    "col_offset": 28,
+    "end_col_offset": 52,
+    "filename": "./server/utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 243,
+    "line_range": [
+      243
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "247             # Add file-based locking for Codex to prevent parallel execution conflicts\n248             lock_file_path = '/tmp/codex_execution_lock'\n249             try:\n",
+    "col_offset": 29,
+    "end_col_offset": 56,
+    "filename": "./server/utils.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 248,
+    "line_range": [
+      248
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "257                 # Add additional delay if lock fails\n258                 additional_delay = random.uniform(1.0, 3.0)\n259                 logger.info(f\"🕐 Adding additional {additional_delay:.1f}s delay due to lock conflict\")\n",
+    "col_offset": 35,
+    "end_col_offset": 59,
+    "filename": "./server/utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 258,
+    "line_range": [
+      258
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  }
+]

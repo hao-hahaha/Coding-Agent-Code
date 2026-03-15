@@ -1,0 +1,390 @@
+[
+  {
+    "code": "23                 return _get(it, name)\n24             except Exception:\n25                 pass\n26     raise Exception(\"field not found: \" + name)\n",
+    "col_offset": 12,
+    "end_col_offset": 20,
+    "filename": "./tests/dataset/job/compiler/py/q1.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 24,
+    "line_range": [
+      24,
+      25
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "118 def test_Q1_returns_min_note__title_and_year_for_top_ranked_co_production():\n119     assert result == {\n120         \"production_note\": \"ACME (co-production)\",\n121         \"movie_title\": \"Good Movie\",\n122         \"movie_year\": 1995,\n123     }\n124 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/job/compiler/py/q1.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 119,
+    "line_range": [
+      119,
+      120,
+      121,
+      122,
+      123
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "23                 return _get(it, name)\n24             except Exception:\n25                 pass\n26     raise Exception(\"field not found: \" + name)\n",
+    "col_offset": 12,
+    "end_col_offset": 20,
+    "filename": "./tests/dataset/job/compiler/py/q10.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 24,
+    "line_range": [
+      24,
+      25
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "118 def test_Q10_finds_uncredited_voice_actor_in_Russian_movie():\n119     assert result == [\n120         {\"uncredited_voiced_character\": \"Ivan\", \"russian_movie\": \"Vodka Dreams\"}\n121     ]\n122 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/job/compiler/py/q10.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 119,
+    "line_range": [
+      119,
+      120,
+      121
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "99 def test_Q2_finds_earliest_title_for_German_companies_with_character_keyword():\n100     assert result == \"Der Film\"\n101 \n",
+    "col_offset": 4,
+    "end_col_offset": 31,
+    "filename": "./tests/dataset/job/compiler/py/q2.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 100,
+    "line_range": [
+      100
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "23                 return _get(it, name)\n24             except Exception:\n25                 pass\n26     raise Exception(\"field not found: \" + name)\n",
+    "col_offset": 12,
+    "end_col_offset": 20,
+    "filename": "./tests/dataset/job/compiler/py/q3.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 24,
+    "line_range": [
+      24,
+      25
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "118 def test_Q3_returns_lexicographically_smallest_sequel_title():\n119     assert result == [{\"movie_title\": \"Alpha\"}]\n120 \n",
+    "col_offset": 4,
+    "end_col_offset": 47,
+    "filename": "./tests/dataset/job/compiler/py/q3.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 119,
+    "line_range": [
+      119
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "23                 return _get(it, name)\n24             except Exception:\n25                 pass\n26     raise Exception(\"field not found: \" + name)\n",
+    "col_offset": 12,
+    "end_col_offset": 20,
+    "filename": "./tests/dataset/job/compiler/py/q4.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 24,
+    "line_range": [
+      24,
+      25
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "118 def test_Q4_returns_minimum_rating_and_title_for_sequels():\n119     assert result == [{\"rating\": \"6.2\", \"movie_title\": \"Alpha Movie\"}]\n120 \n",
+    "col_offset": 4,
+    "end_col_offset": 70,
+    "filename": "./tests/dataset/job/compiler/py/q4.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 119,
+    "line_range": [
+      119
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "99 def test_Q5_finds_the_lexicographically_first_qualifying_title():\n100     assert result == [{\"typical_european_movie\": \"A Film\"}]\n101 \n",
+    "col_offset": 4,
+    "end_col_offset": 59,
+    "filename": "./tests/dataset/job/compiler/py/q5.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 100,
+    "line_range": [
+      100
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "23                 return _get(it, name)\n24             except Exception:\n25                 pass\n26     raise Exception(\"field not found: \" + name)\n",
+    "col_offset": 12,
+    "end_col_offset": 20,
+    "filename": "./tests/dataset/job/compiler/py/q6.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 24,
+    "line_range": [
+      24,
+      25
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "107 def test_Q6_finds_marvel_movie_with_Robert_Downey():\n108     assert result == [\n109         {\n110             \"movie_keyword\": \"marvel-cinematic-universe\",\n111             \"actor_name\": \"Downey Robert Jr.\",\n112             \"marvel_movie\": \"Iron Man 3\",\n113         }\n114     ]\n115 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/job/compiler/py/q6.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 108,
+    "line_range": [
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "23                 return _get(it, name)\n24             except Exception:\n25                 pass\n26     raise Exception(\"field not found: \" + name)\n",
+    "col_offset": 12,
+    "end_col_offset": 20,
+    "filename": "./tests/dataset/job/compiler/py/q7.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 24,
+    "line_range": [
+      24,
+      25
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "118 def test_Q7_finds_movie_features_biography_for_person():\n119     assert result == [{\"of_person\": \"Alan Brown\", \"biography_movie\": \"Feature Film\"}]\n120 \n",
+    "col_offset": 4,
+    "end_col_offset": 85,
+    "filename": "./tests/dataset/job/compiler/py/q7.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 119,
+    "line_range": [
+      119
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "23                 return _get(it, name)\n24             except Exception:\n25                 pass\n26     raise Exception(\"field not found: \" + name)\n",
+    "col_offset": 12,
+    "end_col_offset": 20,
+    "filename": "./tests/dataset/job/compiler/py/q8.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 24,
+    "line_range": [
+      24,
+      25
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "118 def test_Q8_returns_the_pseudonym_and_movie_title_for_Japanese_dubbing():\n119     assert result == [\n120         {\"actress_pseudonym\": \"Y. S.\", \"japanese_movie_dubbed\": \"Dubbed Film\"}\n121     ]\n122 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/job/compiler/py/q8.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 119,
+    "line_range": [
+      119,
+      120,
+      121
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "23                 return _get(it, name)\n24             except Exception:\n25                 pass\n26     raise Exception(\"field not found: \" + name)\n",
+    "col_offset": 12,
+    "end_col_offset": 20,
+    "filename": "./tests/dataset/job/compiler/py/q9.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 24,
+    "line_range": [
+      24,
+      25
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "118 def test_Q9_selects_minimal_alternative_name__character_and_movie():\n119     assert result == [\n120         {\n121             \"alternative_name\": \"A. N. G.\",\n122             \"character_name\": \"Angel\",\n123             \"movie\": \"Famous Film\",\n124         }\n125     ]\n126 \n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/dataset/job/compiler/py/q9.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 119,
+    "line_range": [
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

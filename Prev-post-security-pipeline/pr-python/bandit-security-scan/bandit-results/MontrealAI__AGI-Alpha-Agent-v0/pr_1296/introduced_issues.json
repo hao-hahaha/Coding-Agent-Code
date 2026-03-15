@@ -1,0 +1,42 @@
+[
+  {
+    "code": "38     resp = client.post(\"/mutate\", files={\"tar\": (\"bad.tar\", payload, \"application/x-tar\")})\n39     assert resp.status_code == 400\n40 \n",
+    "col_offset": 4,
+    "end_col_offset": 34,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_evolution_worker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 39,
+    "line_range": [
+      39
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "49     resp = client.post(\"/mutate\", files={\"tar\": (\"bad.tar\", payload, \"application/x-tar\")})\n50     assert resp.status_code == 400\n",
+    "col_offset": 4,
+    "end_col_offset": 34,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_evolution_worker.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 50,
+    "line_range": [
+      50
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

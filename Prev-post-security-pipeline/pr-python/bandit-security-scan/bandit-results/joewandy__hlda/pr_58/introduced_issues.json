@@ -1,0 +1,25 @@
+[
+  {
+    "code": "99 \n100     vectorizer = CountVectorizer(\n101         stop_words=list(STOPWORDS),\n102         token_pattern=r\"[a-zA-Z]{3,}\",\n103     )\n104     dtm = vectorizer.fit_transform(documents)\n",
+    "col_offset": 17,
+    "end_col_offset": 5,
+    "filename": "./scripts/run_hlda.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: '[a-zA-Z]{3,}'",
+    "line_number": 100,
+    "line_range": [
+      100,
+      101,
+      102,
+      103
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b106_hardcoded_password_funcarg.html",
+    "test_id": "B106",
+    "test_name": "hardcoded_password_funcarg"
+  }
+]

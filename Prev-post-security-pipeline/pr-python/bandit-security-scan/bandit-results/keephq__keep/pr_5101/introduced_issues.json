@@ -1,0 +1,343 @@
+[
+  {
+    "code": "107     workflow_manager.insert_events(SINGLE_TENANT_UUID, [high_alert])\n108     assert len(workflow_manager.scheduler.workflows_to_run) == workflows_to_run_before + 1\n109     assert workflow_manager.scheduler.workflows_to_run[-1][\"workflow_id\"] == workflow.id\n",
+    "col_offset": 4,
+    "end_col_offset": 90,
+    "filename": "./tests/test_workflow_severity_comparisons.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 108,
+    "line_range": [
+      108
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "108     assert len(workflow_manager.scheduler.workflows_to_run) == workflows_to_run_before + 1\n109     assert workflow_manager.scheduler.workflows_to_run[-1][\"workflow_id\"] == workflow.id\n110 \n",
+    "col_offset": 4,
+    "end_col_offset": 88,
+    "filename": "./tests/test_workflow_severity_comparisons.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 109,
+    "line_range": [
+      109
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "113     workflow_manager.insert_events(SINGLE_TENANT_UUID, [critical_alert])\n114     assert len(workflow_manager.scheduler.workflows_to_run) == workflows_to_run_before + 1\n115     assert workflow_manager.scheduler.workflows_to_run[-1][\"workflow_id\"] == workflow.id\n",
+    "col_offset": 4,
+    "end_col_offset": 90,
+    "filename": "./tests/test_workflow_severity_comparisons.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 114,
+    "line_range": [
+      114
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "114     assert len(workflow_manager.scheduler.workflows_to_run) == workflows_to_run_before + 1\n115     assert workflow_manager.scheduler.workflows_to_run[-1][\"workflow_id\"] == workflow.id\n116 \n",
+    "col_offset": 4,
+    "end_col_offset": 88,
+    "filename": "./tests/test_workflow_severity_comparisons.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 115,
+    "line_range": [
+      115
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "119     workflow_manager.insert_events(SINGLE_TENANT_UUID, [warning_alert])\n120     assert len(workflow_manager.scheduler.workflows_to_run) == workflows_to_run_before + 1\n121     assert workflow_manager.scheduler.workflows_to_run[-1][\"workflow_id\"] == workflow.id\n",
+    "col_offset": 4,
+    "end_col_offset": 90,
+    "filename": "./tests/test_workflow_severity_comparisons.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 120,
+    "line_range": [
+      120
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "120     assert len(workflow_manager.scheduler.workflows_to_run) == workflows_to_run_before + 1\n121     assert workflow_manager.scheduler.workflows_to_run[-1][\"workflow_id\"] == workflow.id\n122 \n",
+    "col_offset": 4,
+    "end_col_offset": 88,
+    "filename": "./tests/test_workflow_severity_comparisons.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 121,
+    "line_range": [
+      121
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "125     workflow_manager.insert_events(SINGLE_TENANT_UUID, [info_alert])\n126     assert len(workflow_manager.scheduler.workflows_to_run) == workflows_to_run_before\n127 \n",
+    "col_offset": 4,
+    "end_col_offset": 86,
+    "filename": "./tests/test_workflow_severity_comparisons.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 126,
+    "line_range": [
+      126
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "130     workflow_manager.insert_events(SINGLE_TENANT_UUID, [low_alert])\n131     assert len(workflow_manager.scheduler.workflows_to_run) == workflows_to_run_before\n132 \n",
+    "col_offset": 4,
+    "end_col_offset": 86,
+    "filename": "./tests/test_workflow_severity_comparisons.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 131,
+    "line_range": [
+      131
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "152         workflow_manager.insert_events(SINGLE_TENANT_UUID, [alert])\n153         assert len(workflow_manager.scheduler.workflows_to_run) == workflows_to_run_before + 1\n154 \n",
+    "col_offset": 8,
+    "end_col_offset": 94,
+    "filename": "./tests/test_workflow_severity_comparisons.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 153,
+    "line_range": [
+      153
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "158         workflow_manager.insert_events(SINGLE_TENANT_UUID, [alert])\n159         assert len(workflow_manager.scheduler.workflows_to_run) == workflows_to_run_before\n160 \n",
+    "col_offset": 8,
+    "end_col_offset": 90,
+    "filename": "./tests/test_workflow_severity_comparisons.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 159,
+    "line_range": [
+      159
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "180         workflow_manager.insert_events(SINGLE_TENANT_UUID, [alert])\n181         assert len(workflow_manager.scheduler.workflows_to_run) == workflows_to_run_before + 1\n182 \n",
+    "col_offset": 8,
+    "end_col_offset": 94,
+    "filename": "./tests/test_workflow_severity_comparisons.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 181,
+    "line_range": [
+      181
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "186         workflow_manager.insert_events(SINGLE_TENANT_UUID, [alert])\n187         assert len(workflow_manager.scheduler.workflows_to_run) == workflows_to_run_before\n188 \n",
+    "col_offset": 8,
+    "end_col_offset": 90,
+    "filename": "./tests/test_workflow_severity_comparisons.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 187,
+    "line_range": [
+      187
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "224         workflow_manager.insert_events(SINGLE_TENANT_UUID, [alert])\n225         assert len(workflow_manager.scheduler.workflows_to_run) == workflows_to_run_before + 1\n226 \n",
+    "col_offset": 8,
+    "end_col_offset": 94,
+    "filename": "./tests/test_workflow_severity_comparisons.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 225,
+    "line_range": [
+      225
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "230         workflow_manager.insert_events(SINGLE_TENANT_UUID, [alert])\n231         assert len(workflow_manager.scheduler.workflows_to_run) == workflows_to_run_before\n232 \n",
+    "col_offset": 8,
+    "end_col_offset": 90,
+    "filename": "./tests/test_workflow_severity_comparisons.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 231,
+    "line_range": [
+      231
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "244     workflow_manager.insert_events(SINGLE_TENANT_UUID, [high_alert])\n245     assert len(workflow_manager.scheduler.workflows_to_run) == workflows_to_run_before + 1\n246     \n",
+    "col_offset": 4,
+    "end_col_offset": 90,
+    "filename": "./tests/test_workflow_severity_comparisons.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 245,
+    "line_range": [
+      245
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "276     # This assertion would fail before the fix, but should pass after\n277     assert len(workflow_manager.scheduler.workflows_to_run) == workflows_to_run_before + 1, \\\n278         \"HIGH severity alert should match 'severity > info' expression after preprocessing fix\"\n279     assert workflow_manager.scheduler.workflows_to_run[-1][\"workflow_id\"] == workflow.id\n",
+    "col_offset": 4,
+    "end_col_offset": 95,
+    "filename": "./tests/test_workflow_severity_comparisons.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 277,
+    "line_range": [
+      277,
+      278
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "278         \"HIGH severity alert should match 'severity > info' expression after preprocessing fix\"\n279     assert workflow_manager.scheduler.workflows_to_run[-1][\"workflow_id\"] == workflow.id\n",
+    "col_offset": 4,
+    "end_col_offset": 88,
+    "filename": "./tests/test_workflow_severity_comparisons.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 279,
+    "line_range": [
+      279
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

@@ -1,0 +1,432 @@
+[
+  {
+    "code": "7 import shutil\n8 import subprocess\n9 \n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./src/meta_agent/git_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 8,
+    "line_range": [
+      8
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "26             raise RuntimeError(\"git executable not found\")\n27         return subprocess.run(\n28             [\"git\", *args],\n29             cwd=self.repo_dir,\n30             text=True,\n31             check=True,\n32             capture_output=True,\n33             env=env,\n34         )\n35 \n",
+    "col_offset": 15,
+    "end_col_offset": 9,
+    "filename": "./src/meta_agent/git_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 27,
+    "line_range": [
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "26             raise RuntimeError(\"git executable not found\")\n27         return subprocess.run(\n28             [\"git\", *args],\n29             cwd=self.repo_dir,\n30             text=True,\n31             check=True,\n32             capture_output=True,\n33             env=env,\n34         )\n35 \n",
+    "col_offset": 15,
+    "end_col_offset": 9,
+    "filename": "./src/meta_agent/git_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 27,
+    "line_range": [
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "3 from pathlib import Path\n4 import subprocess\n5 \n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tests/test_bundle_generator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 4,
+    "line_range": [
+      4
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "63     remote = tmp_path / \"remote.git\"\n64     subprocess.run([\"git\", \"init\", \"--bare\", str(remote)], check=True)\n65 \n",
+    "col_offset": 4,
+    "end_col_offset": 70,
+    "filename": "./tests/test_bundle_generator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 64,
+    "line_range": [
+      64
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "63     remote = tmp_path / \"remote.git\"\n64     subprocess.run([\"git\", \"init\", \"--bare\", str(remote)], check=True)\n65 \n",
+    "col_offset": 4,
+    "end_col_offset": 70,
+    "filename": "./tests/test_bundle_generator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 64,
+    "line_range": [
+      64
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "70     assert (repo / \".git\").exists()\n71     commit = subprocess.check_output(\n72         [\"git\", \"-C\", str(repo), \"rev-parse\", \"HEAD\"], text=True\n73     ).strip()\n74     with open(repo / \"bundle.json\", encoding=\"utf-8\") as f:\n",
+    "col_offset": 13,
+    "end_col_offset": 5,
+    "filename": "./tests/test_bundle_generator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 71,
+    "line_range": [
+      71,
+      72,
+      73
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "70     assert (repo / \".git\").exists()\n71     commit = subprocess.check_output(\n72         [\"git\", \"-C\", str(repo), \"rev-parse\", \"HEAD\"], text=True\n73     ).strip()\n74     with open(repo / \"bundle.json\", encoding=\"utf-8\") as f:\n",
+    "col_offset": 13,
+    "end_col_offset": 5,
+    "filename": "./tests/test_bundle_generator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 71,
+    "line_range": [
+      71,
+      72,
+      73
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "77 \n78     log = subprocess.check_output(\n79         [\"git\", \"-C\", str(remote), \"log\", \"--oneline\"], text=True\n80     )\n81     assert commit[:7] in log\n",
+    "col_offset": 10,
+    "end_col_offset": 5,
+    "filename": "./tests/test_bundle_generator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 78,
+    "line_range": [
+      78,
+      79,
+      80
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "77 \n78     log = subprocess.check_output(\n79         [\"git\", \"-C\", str(remote), \"log\", \"--oneline\"], text=True\n80     )\n81     assert commit[:7] in log\n",
+    "col_offset": 10,
+    "end_col_offset": 5,
+    "filename": "./tests/test_bundle_generator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 78,
+    "line_range": [
+      78,
+      79,
+      80
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "1 import subprocess\n2 from pathlib import Path\n3 \n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./tests/test_git_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 1,
+    "line_range": [
+      1
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "12 \n13     assert (tmp_path / \".git\").exists()\n14     out = subprocess.check_output(\n",
+    "col_offset": 4,
+    "end_col_offset": 39,
+    "filename": "./tests/test_git_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 13,
+    "line_range": [
+      13
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "13     assert (tmp_path / \".git\").exists()\n14     out = subprocess.check_output(\n15         [\"git\", \"-C\", str(tmp_path), \"rev-parse\", \"HEAD\"], text=True\n16     ).strip()\n17     assert out == sha\n",
+    "col_offset": 10,
+    "end_col_offset": 5,
+    "filename": "./tests/test_git_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 14,
+    "line_range": [
+      14,
+      15,
+      16
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "13     assert (tmp_path / \".git\").exists()\n14     out = subprocess.check_output(\n15         [\"git\", \"-C\", str(tmp_path), \"rev-parse\", \"HEAD\"], text=True\n16     ).strip()\n17     assert out == sha\n",
+    "col_offset": 10,
+    "end_col_offset": 5,
+    "filename": "./tests/test_git_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 14,
+    "line_range": [
+      14,
+      15,
+      16
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "16     ).strip()\n17     assert out == sha\n18 \n",
+    "col_offset": 4,
+    "end_col_offset": 21,
+    "filename": "./tests/test_git_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 17,
+    "line_range": [
+      17
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "21     remote = tmp_path / \"remote.git\"\n22     subprocess.run([\"git\", \"init\", \"--bare\", str(remote)], check=True)\n23 \n",
+    "col_offset": 4,
+    "end_col_offset": 70,
+    "filename": "./tests/test_git_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 22,
+    "line_range": [
+      22
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "21     remote = tmp_path / \"remote.git\"\n22     subprocess.run([\"git\", \"init\", \"--bare\", str(remote)], check=True)\n23 \n",
+    "col_offset": 4,
+    "end_col_offset": 70,
+    "filename": "./tests/test_git_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 22,
+    "line_range": [
+      22
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "31 \n32     log = subprocess.check_output(\n33         [\"git\", \"-C\", str(remote), \"log\", \"--oneline\"], text=True\n34     )\n35     assert \"first\" in log\n",
+    "col_offset": 10,
+    "end_col_offset": 5,
+    "filename": "./tests/test_git_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Starting a process with a partial executable path",
+    "line_number": 32,
+    "line_range": [
+      32,
+      33,
+      34
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b607_start_process_with_partial_path.html",
+    "test_id": "B607",
+    "test_name": "start_process_with_partial_path"
+  },
+  {
+    "code": "31 \n32     log = subprocess.check_output(\n33         [\"git\", \"-C\", str(remote), \"log\", \"--oneline\"], text=True\n34     )\n35     assert \"first\" in log\n",
+    "col_offset": 10,
+    "end_col_offset": 5,
+    "filename": "./tests/test_git_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 32,
+    "line_range": [
+      32,
+      33,
+      34
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "34     )\n35     assert \"first\" in log\n",
+    "col_offset": 4,
+    "end_col_offset": 25,
+    "filename": "./tests/test_git_utils.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 35,
+    "line_range": [
+      35
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

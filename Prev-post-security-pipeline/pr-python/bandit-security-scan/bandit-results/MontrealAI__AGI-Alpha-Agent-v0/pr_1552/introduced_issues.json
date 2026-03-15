@@ -1,0 +1,42 @@
+[
+  {
+    "code": "46 \n47             assert not errors, f\"Console errors: {errors}\"\n48             assert page.evaluate(\"navigator.serviceWorker.controller !== null\")\n",
+    "col_offset": 12,
+    "end_col_offset": 58,
+    "filename": "./tests/test_sw_offline_reload.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 47,
+    "line_range": [
+      47
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "47             assert not errors, f\"Console errors: {errors}\"\n48             assert page.evaluate(\"navigator.serviceWorker.controller !== null\")\n49             browser.close()\n",
+    "col_offset": 12,
+    "end_col_offset": 79,
+    "filename": "./tests/test_sw_offline_reload.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 48,
+    "line_range": [
+      48
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

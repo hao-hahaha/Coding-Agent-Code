@@ -1,0 +1,87 @@
+[
+  {
+    "code": "1 import json\n2 import subprocess\n3 from typing import List, Optional\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./claude_testing_v1.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 2,
+    "line_range": [
+      2
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "15         cmd.extend([\"--allowedTools\", *allowed_tools])\n16     result = subprocess.run(\n17         cmd,\n18         stdout=subprocess.PIPE,\n19         stderr=subprocess.PIPE,\n20         text=True,\n21     )\n22     if result.returncode != 0:\n",
+    "col_offset": 13,
+    "end_col_offset": 5,
+    "filename": "./claude_testing_v1.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 16,
+    "line_range": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "15     output = run_claude_json(\"hello\", allowed_tools=[\"Bash\"])\n16     assert isinstance(output, dict)\n17     assert output\n",
+    "col_offset": 4,
+    "end_col_offset": 35,
+    "filename": "./tests/test_claude_testing_v1.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 16,
+    "line_range": [
+      16
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "16     assert isinstance(output, dict)\n17     assert output\n",
+    "col_offset": 4,
+    "end_col_offset": 17,
+    "filename": "./tests/test_claude_testing_v1.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 17,
+    "line_range": [
+      17
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

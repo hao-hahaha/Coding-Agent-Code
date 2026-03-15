@@ -1,0 +1,4523 @@
+{
+  "errors": [],
+  "generated_at": "2026-03-14T13:18:34Z",
+  "metrics": {
+    "./docs/app.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 16,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./src/json_repair/__init__.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 4,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./src/json_repair/__main__.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 3,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./src/json_repair/json_context.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 33,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./src/json_repair/json_parser.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 646,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./src/json_repair/json_repair.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 228,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./src/json_repair/object_comparer.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 30,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./src/json_repair/string_file_wrapper.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 92,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./tests/profiler.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 291,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./tests/test_json_repair.py": {
+      "CONFIDENCE.HIGH": 171,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 171,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 994,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./tests/test_performance.py": {
+      "CONFIDENCE.HIGH": 8,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 8,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 64,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 179,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 179,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 2401,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "10 def test_basic_types_valid():\n11     assert repair_json(\"True\", return_objects=True) == \"\"\n12     assert repair_json(\"False\", return_objects=True) == \"\"\n",
+      "col_offset": 4,
+      "end_col_offset": 57,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 11,
+      "line_range": [
+        11
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "11     assert repair_json(\"True\", return_objects=True) == \"\"\n12     assert repair_json(\"False\", return_objects=True) == \"\"\n13     assert repair_json(\"Null\", return_objects=True) == \"\"\n",
+      "col_offset": 4,
+      "end_col_offset": 58,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 12,
+      "line_range": [
+        12
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "12     assert repair_json(\"False\", return_objects=True) == \"\"\n13     assert repair_json(\"Null\", return_objects=True) == \"\"\n14     assert repair_json(\"1\", return_objects=True) == 1\n",
+      "col_offset": 4,
+      "end_col_offset": 57,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 13,
+      "line_range": [
+        13
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "13     assert repair_json(\"Null\", return_objects=True) == \"\"\n14     assert repair_json(\"1\", return_objects=True) == 1\n15     assert repair_json(\"[]\", return_objects=True) == []\n",
+      "col_offset": 4,
+      "end_col_offset": 53,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 14,
+      "line_range": [
+        14
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "14     assert repair_json(\"1\", return_objects=True) == 1\n15     assert repair_json(\"[]\", return_objects=True) == []\n16     assert repair_json(\"[1, 2, 3, 4]\", return_objects=True) == [1, 2, 3, 4]\n",
+      "col_offset": 4,
+      "end_col_offset": 55,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 15,
+      "line_range": [
+        15
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "15     assert repair_json(\"[]\", return_objects=True) == []\n16     assert repair_json(\"[1, 2, 3, 4]\", return_objects=True) == [1, 2, 3, 4]\n17     assert repair_json(\"{}\", return_objects=True) == {}\n",
+      "col_offset": 4,
+      "end_col_offset": 75,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 16,
+      "line_range": [
+        16
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "16     assert repair_json(\"[1, 2, 3, 4]\", return_objects=True) == [1, 2, 3, 4]\n17     assert repair_json(\"{}\", return_objects=True) == {}\n18     assert repair_json(\n",
+      "col_offset": 4,
+      "end_col_offset": 55,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 17,
+      "line_range": [
+        17
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "17     assert repair_json(\"{}\", return_objects=True) == {}\n18     assert repair_json(\n19         '{ \"key\": \"value\", \"key2\": 1, \"key3\": True }', return_objects=True\n20     ) == {\"key\": \"value\", \"key2\": 1, \"key3\": True}\n21 \n",
+      "col_offset": 4,
+      "end_col_offset": 50,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 18,
+      "line_range": [
+        18,
+        19,
+        20
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "23 def test_basic_types_invalid():\n24     assert repair_json(\"true\", return_objects=True)\n25     assert not repair_json(\"false\", return_objects=True)\n",
+      "col_offset": 4,
+      "end_col_offset": 51,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 24,
+      "line_range": [
+        24
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "24     assert repair_json(\"true\", return_objects=True)\n25     assert not repair_json(\"false\", return_objects=True)\n26     assert repair_json(\"null\", return_objects=True) is None\n",
+      "col_offset": 4,
+      "end_col_offset": 56,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 25,
+      "line_range": [
+        25
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "25     assert not repair_json(\"false\", return_objects=True)\n26     assert repair_json(\"null\", return_objects=True) is None\n27     assert repair_json(\"1.2\", return_objects=True) == 1.2\n",
+      "col_offset": 4,
+      "end_col_offset": 59,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 26,
+      "line_range": [
+        26
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "26     assert repair_json(\"null\", return_objects=True) is None\n27     assert repair_json(\"1.2\", return_objects=True) == 1.2\n28     assert repair_json(\"[\", return_objects=True) == []\n",
+      "col_offset": 4,
+      "end_col_offset": 57,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 27,
+      "line_range": [
+        27
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "27     assert repair_json(\"1.2\", return_objects=True) == 1.2\n28     assert repair_json(\"[\", return_objects=True) == []\n29     assert repair_json(\"[1, 2, 3, 4\", return_objects=True) == [1, 2, 3, 4]\n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 28,
+      "line_range": [
+        28
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "28     assert repair_json(\"[\", return_objects=True) == []\n29     assert repair_json(\"[1, 2, 3, 4\", return_objects=True) == [1, 2, 3, 4]\n30     assert repair_json(\"{\", return_objects=True) == {}\n",
+      "col_offset": 4,
+      "end_col_offset": 74,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 29,
+      "line_range": [
+        29
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "29     assert repair_json(\"[1, 2, 3, 4\", return_objects=True) == [1, 2, 3, 4]\n30     assert repair_json(\"{\", return_objects=True) == {}\n31     assert repair_json(\n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 30,
+      "line_range": [
+        30
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "30     assert repair_json(\"{\", return_objects=True) == {}\n31     assert repair_json(\n32         '{ \"key\": value, \"key2\": 1 \"key3\": null }', return_objects=True\n33     ) == {\"key\": \"value\", \"key2\": 1, \"key3\": None}\n34 \n",
+      "col_offset": 4,
+      "end_col_offset": 50,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 31,
+      "line_range": [
+        31,
+        32,
+        33
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "36 def test_valid_json():\n37     assert (\n38         repair_json('{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}')\n39         == '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'\n40     )\n41     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 37,
+      "line_range": [
+        37,
+        38,
+        39,
+        40
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "40     )\n41     assert (\n42         repair_json('{\"employees\":[\"John\", \"Anna\", \"Peter\"]} ')\n43         == '{\"employees\": [\"John\", \"Anna\", \"Peter\"]}'\n44     )\n45     assert repair_json('{\"key\": \"value:value\"}') == '{\"key\": \"value:value\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 41,
+      "line_range": [
+        41,
+        42,
+        43,
+        44
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "44     )\n45     assert repair_json('{\"key\": \"value:value\"}') == '{\"key\": \"value:value\"}'\n46     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 76,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 45,
+      "line_range": [
+        45
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "45     assert repair_json('{\"key\": \"value:value\"}') == '{\"key\": \"value:value\"}'\n46     assert (\n47         repair_json('{\"text\": \"The quick brown fox,\"}')\n48         == '{\"text\": \"The quick brown fox,\"}'\n49     )\n50     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 46,
+      "line_range": [
+        46,
+        47,
+        48,
+        49
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "49     )\n50     assert (\n51         repair_json('{\"text\": \"The quick brown fox won\\'t jump\"}')\n52         == '{\"text\": \"The quick brown fox won\\'t jump\"}'\n53     )\n54     assert repair_json('{\"key\": \"\"') == '{\"key\": \"\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 50,
+      "line_range": [
+        50,
+        51,
+        52,
+        53
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "53     )\n54     assert repair_json('{\"key\": \"\"') == '{\"key\": \"\"}'\n55     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 53,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 54,
+      "line_range": [
+        54
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "54     assert repair_json('{\"key\": \"\"') == '{\"key\": \"\"}'\n55     assert (\n56         repair_json('{\"key1\": {\"key2\": [1, 2, 3]}}') == '{\"key1\": {\"key2\": [1, 2, 3]}}'\n57     )\n58     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 55,
+      "line_range": [
+        55,
+        56,
+        57
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "57     )\n58     assert (\n59         repair_json('{\"key\": 12345678901234567890}') == '{\"key\": 12345678901234567890}'\n60     )\n61     assert repair_json('{\"key\": \"value\\u263a\"}') == '{\"key\": \"value\\\\u263a\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 58,
+      "line_range": [
+        58,
+        59,
+        60
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "60     )\n61     assert repair_json('{\"key\": \"value\\u263a\"}') == '{\"key\": \"value\\\\u263a\"}'\n62     assert repair_json('{\"key\": \"value\\\\nvalue\"}') == '{\"key\": \"value\\\\nvalue\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 77,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 61,
+      "line_range": [
+        61
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "61     assert repair_json('{\"key\": \"value\\u263a\"}') == '{\"key\": \"value\\\\u263a\"}'\n62     assert repair_json('{\"key\": \"value\\\\nvalue\"}') == '{\"key\": \"value\\\\nvalue\"}'\n63 \n",
+      "col_offset": 4,
+      "end_col_offset": 80,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 62,
+      "line_range": [
+        62
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "65 def test_brackets_edge_cases():\n66     assert repair_json(\"[{]\") == \"[{}]\"\n67     assert repair_json(\"   {  }   \") == \"{}\"\n",
+      "col_offset": 4,
+      "end_col_offset": 39,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 66,
+      "line_range": [
+        66
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "66     assert repair_json(\"[{]\") == \"[{}]\"\n67     assert repair_json(\"   {  }   \") == \"{}\"\n68     assert repair_json(\"[\") == \"[]\"\n",
+      "col_offset": 4,
+      "end_col_offset": 44,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 67,
+      "line_range": [
+        67
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "67     assert repair_json(\"   {  }   \") == \"{}\"\n68     assert repair_json(\"[\") == \"[]\"\n69     assert repair_json(\"]\") == '\"\"'\n",
+      "col_offset": 4,
+      "end_col_offset": 35,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 68,
+      "line_range": [
+        68
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "68     assert repair_json(\"[\") == \"[]\"\n69     assert repair_json(\"]\") == '\"\"'\n70     assert repair_json(\"{\") == \"{}\"\n",
+      "col_offset": 4,
+      "end_col_offset": 35,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 69,
+      "line_range": [
+        69
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "69     assert repair_json(\"]\") == '\"\"'\n70     assert repair_json(\"{\") == \"{}\"\n71     assert repair_json(\"}\") == '\"\"'\n",
+      "col_offset": 4,
+      "end_col_offset": 35,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 70,
+      "line_range": [
+        70
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "70     assert repair_json(\"{\") == \"{}\"\n71     assert repair_json(\"}\") == '\"\"'\n72     assert repair_json('{\"') == \"{}\"\n",
+      "col_offset": 4,
+      "end_col_offset": 35,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 71,
+      "line_range": [
+        71
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "71     assert repair_json(\"}\") == '\"\"'\n72     assert repair_json('{\"') == \"{}\"\n73     assert repair_json('[\"') == \"[]\"\n",
+      "col_offset": 4,
+      "end_col_offset": 36,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 72,
+      "line_range": [
+        72
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "72     assert repair_json('{\"') == \"{}\"\n73     assert repair_json('[\"') == \"[]\"\n74     assert repair_json(\"{foo: [}\") == '{\"foo\": []}'\n",
+      "col_offset": 4,
+      "end_col_offset": 36,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 73,
+      "line_range": [
+        73
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "73     assert repair_json('[\"') == \"[]\"\n74     assert repair_json(\"{foo: [}\") == '{\"foo\": []}'\n75 \n",
+      "col_offset": 4,
+      "end_col_offset": 51,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 74,
+      "line_range": [
+        74
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "77 def test_general_edge_cases():\n78     assert repair_json('\"') == '\"\"'\n79     assert repair_json(\"\\n\") == '\"\"'\n",
+      "col_offset": 4,
+      "end_col_offset": 35,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 78,
+      "line_range": [
+        78
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "78     assert repair_json('\"') == '\"\"'\n79     assert repair_json(\"\\n\") == '\"\"'\n80     assert repair_json(\" \") == '\"\"'\n",
+      "col_offset": 4,
+      "end_col_offset": 36,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 79,
+      "line_range": [
+        79
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "79     assert repair_json(\"\\n\") == '\"\"'\n80     assert repair_json(\" \") == '\"\"'\n81     assert repair_json(\"[[1\\n\\n]\") == \"[[1]]\"\n",
+      "col_offset": 4,
+      "end_col_offset": 35,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 80,
+      "line_range": [
+        80
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "80     assert repair_json(\" \") == '\"\"'\n81     assert repair_json(\"[[1\\n\\n]\") == \"[[1]]\"\n82     assert repair_json(\"string\") == '\"\"'\n",
+      "col_offset": 4,
+      "end_col_offset": 45,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 81,
+      "line_range": [
+        81
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "81     assert repair_json(\"[[1\\n\\n]\") == \"[[1]]\"\n82     assert repair_json(\"string\") == '\"\"'\n83     assert repair_json(\"stringbeforeobject {}\") == \"{}\"\n",
+      "col_offset": 4,
+      "end_col_offset": 40,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 82,
+      "line_range": [
+        82
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "82     assert repair_json(\"string\") == '\"\"'\n83     assert repair_json(\"stringbeforeobject {}\") == \"{}\"\n84 \n",
+      "col_offset": 4,
+      "end_col_offset": 55,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 83,
+      "line_range": [
+        83
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "86 def test_mixed_data_types():\n87     assert (\n88         repair_json('  {\"key\": true, \"key2\": false, \"key3\": null}')\n89         == '{\"key\": true, \"key2\": false, \"key3\": null}'\n90     )\n91     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 87,
+      "line_range": [
+        87,
+        88,
+        89,
+        90
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "90     )\n91     assert (\n92         repair_json('{\"key\": TRUE, \"key2\": FALSE, \"key3\": Null}   ')\n93         == '{\"key\": true, \"key2\": false, \"key3\": null}'\n94     )\n95 \n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 91,
+      "line_range": [
+        91,
+        92,
+        93,
+        94
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "97 def test_missing_and_mixed_quotes():\n98     assert (\n99         repair_json(\n100             \"{'key': 'string', 'key2': false, \\\"key3\\\": null, \\\"key4\\\": unquoted}\"\n101         )\n102         == '{\"key\": \"string\", \"key2\": false, \"key3\": null, \"key4\": \"unquoted\"}'\n103     )\n104     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 98,
+      "line_range": [
+        98,
+        99,
+        100,
+        101,
+        102,
+        103
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "103     )\n104     assert (\n105         repair_json('{\"name\": \"John\", \"age\": 30, \"city\": \"New York')\n106         == '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'\n107     )\n108     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 104,
+      "line_range": [
+        104,
+        105,
+        106,
+        107
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "107     )\n108     assert (\n109         repair_json('{\"name\": \"John\", \"age\": 30, city: \"New York\"}')\n110         == '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'\n111     )\n112     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 108,
+      "line_range": [
+        108,
+        109,
+        110,
+        111
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "111     )\n112     assert (\n113         repair_json('{\"name\": \"John\", \"age\": 30, \"city\": New York}')\n114         == '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'\n115     )\n116     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 112,
+      "line_range": [
+        112,
+        113,
+        114,
+        115
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "115     )\n116     assert (\n117         repair_json('{\"name\": John, \"age\": 30, \"city\": \"New York\"}')\n118         == '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'\n119     )\n120     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 116,
+      "line_range": [
+        116,
+        117,
+        118,
+        119
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "119     )\n120     assert (\n121         repair_json('{\u201cslanted_delimiter\u201d: \"value\"}')\n122         == '{\"slanted_delimiter\": \"value\"}'\n123     )\n124     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 120,
+      "line_range": [
+        120,
+        121,
+        122,
+        123
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "123     )\n124     assert (\n125         repair_json('{\"name\": \"John\", \"age\": 30, \"city\": \"New')\n126         == '{\"name\": \"John\", \"age\": 30, \"city\": \"New\"}'\n127     )\n128     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 124,
+      "line_range": [
+        124,
+        125,
+        126,
+        127
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "127     )\n128     assert (\n129         repair_json('{\"name\": \"John\", \"age\": 30, \"city\": \"New York, \"gender\": \"male\"}')\n130         == '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\", \"gender\": \"male\"}'\n131     )\n132 \n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 128,
+      "line_range": [
+        128,
+        129,
+        130,
+        131
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "132 \n133     assert (\n134         repair_json('[{\"key\": \"value\", COMMENT \"notes\": \"lorem \"ipsum\", sic.\" }]')\n135         == '[{\"key\": \"value\", \"notes\": \"lorem \\\\\"ipsum\\\\\", sic.\"}]'\n136     )\n137     assert repair_json('{\"key\": \"\"value\"}') == '{\"key\": \"value\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 133,
+      "line_range": [
+        133,
+        134,
+        135,
+        136
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "136     )\n137     assert repair_json('{\"key\": \"\"value\"}') == '{\"key\": \"value\"}'\n138     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 65,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 137,
+      "line_range": [
+        137
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "137     assert repair_json('{\"key\": \"\"value\"}') == '{\"key\": \"value\"}'\n138     assert (\n139         repair_json('{\"key\": \"value\", 5: \"value\"}') == '{\"key\": \"value\", \"5\": \"value\"}'\n140     )\n141     assert repair_json('{\"foo\": \"\\\\\"bar\\\\\"\"') == '{\"foo\": \"\\\\\"bar\\\\\"\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 138,
+      "line_range": [
+        138,
+        139,
+        140
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "140     )\n141     assert repair_json('{\"foo\": \"\\\\\"bar\\\\\"\"') == '{\"foo\": \"\\\\\"bar\\\\\"\"}'\n142     assert repair_json('{\"\" key\":\"val\"') == '{\" key\": \"val\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 71,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 141,
+      "line_range": [
+        141
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "141     assert repair_json('{\"foo\": \"\\\\\"bar\\\\\"\"') == '{\"foo\": \"\\\\\"bar\\\\\"\"}'\n142     assert repair_json('{\"\" key\":\"val\"') == '{\" key\": \"val\"}'\n143     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 61,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 142,
+      "line_range": [
+        142
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "142     assert repair_json('{\"\" key\":\"val\"') == '{\" key\": \"val\"}'\n143     assert (\n144         repair_json('{\"key\": value \"key2\" : \"value2\" ')\n145         == '{\"key\": \"value\", \"key2\": \"value2\"}'\n146     )\n147     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 143,
+      "line_range": [
+        143,
+        144,
+        145,
+        146
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "146     )\n147     assert (\n148         repair_json('{\"key\": \"lorem ipsum ... \"sic \" tamet. ...}')\n149         == '{\"key\": \"lorem ipsum ... \\\\\"sic \\\\\" tamet. ...\"}'\n150     )\n151     assert repair_json('{\"key\": value , }') == '{\"key\": \"value\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 147,
+      "line_range": [
+        147,
+        148,
+        149,
+        150
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "150     )\n151     assert repair_json('{\"key\": value , }') == '{\"key\": \"value\"}'\n152     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 65,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 151,
+      "line_range": [
+        151
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "151     assert repair_json('{\"key\": value , }') == '{\"key\": \"value\"}'\n152     assert (\n153         repair_json('{\"comment\": \"lorem, \"ipsum\" sic \"tamet\". To improve\"}')\n154         == '{\"comment\": \"lorem, \\\\\"ipsum\\\\\" sic \\\\\"tamet\\\\\". To improve\"}'\n155     )\n156     assert repair_json('{\"key\": \"v\"alu\"e\"} key:') == '{\"key\": \"v\\\\\"alu\\\\\"e\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 152,
+      "line_range": [
+        152,
+        153,
+        154,
+        155
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "155     )\n156     assert repair_json('{\"key\": \"v\"alu\"e\"} key:') == '{\"key\": \"v\\\\\"alu\\\\\"e\"}'\n157 \n",
+      "col_offset": 4,
+      "end_col_offset": 77,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 156,
+      "line_range": [
+        156
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "159 def test_array_edge_cases():\n160     assert repair_json(\"[1, 2, 3,\") == \"[1, 2, 3]\"\n161     assert repair_json(\"[1, 2, 3, ...]\") == \"[1, 2, 3]\"\n",
+      "col_offset": 4,
+      "end_col_offset": 50,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 160,
+      "line_range": [
+        160
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "160     assert repair_json(\"[1, 2, 3,\") == \"[1, 2, 3]\"\n161     assert repair_json(\"[1, 2, 3, ...]\") == \"[1, 2, 3]\"\n162     assert repair_json(\"[1, 2, ... , 3]\") == \"[1, 2, 3]\"\n",
+      "col_offset": 4,
+      "end_col_offset": 55,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 161,
+      "line_range": [
+        161
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "161     assert repair_json(\"[1, 2, 3, ...]\") == \"[1, 2, 3]\"\n162     assert repair_json(\"[1, 2, ... , 3]\") == \"[1, 2, 3]\"\n163     assert repair_json(\"[1, 2, '...', 3]\") == '[1, 2, \"...\", 3]'\n",
+      "col_offset": 4,
+      "end_col_offset": 56,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 162,
+      "line_range": [
+        162
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "162     assert repair_json(\"[1, 2, ... , 3]\") == \"[1, 2, 3]\"\n163     assert repair_json(\"[1, 2, '...', 3]\") == '[1, 2, \"...\", 3]'\n164     assert repair_json(\"[true, false, null, ...]\") == \"[true, false, null]\"\n",
+      "col_offset": 4,
+      "end_col_offset": 64,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 163,
+      "line_range": [
+        163
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "163     assert repair_json(\"[1, 2, '...', 3]\") == '[1, 2, \"...\", 3]'\n164     assert repair_json(\"[true, false, null, ...]\") == \"[true, false, null]\"\n165     assert repair_json('[\"a\" \"b\" \"c\" 1') == '[\"a\", \"b\", \"c\", 1]'\n",
+      "col_offset": 4,
+      "end_col_offset": 75,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 164,
+      "line_range": [
+        164
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "164     assert repair_json(\"[true, false, null, ...]\") == \"[true, false, null]\"\n165     assert repair_json('[\"a\" \"b\" \"c\" 1') == '[\"a\", \"b\", \"c\", 1]'\n166     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 64,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 165,
+      "line_range": [
+        165
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "165     assert repair_json('[\"a\" \"b\" \"c\" 1') == '[\"a\", \"b\", \"c\", 1]'\n166     assert (\n167         repair_json('{\"employees\":[\"John\", \"Anna\",')\n168         == '{\"employees\": [\"John\", \"Anna\"]}'\n169     )\n170     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 166,
+      "line_range": [
+        166,
+        167,
+        168,
+        169
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "169     )\n170     assert (\n171         repair_json('{\"employees\":[\"John\", \"Anna\", \"Peter')\n172         == '{\"employees\": [\"John\", \"Anna\", \"Peter\"]}'\n173     )\n174     assert repair_json('{\"key1\": {\"key2\": [1, 2, 3') == '{\"key1\": {\"key2\": [1, 2, 3]}}'\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 170,
+      "line_range": [
+        170,
+        171,
+        172,
+        173
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "173     )\n174     assert repair_json('{\"key1\": {\"key2\": [1, 2, 3') == '{\"key1\": {\"key2\": [1, 2, 3]}}'\n175     assert repair_json('{\"key\": [\"value]}') == '{\"key\": [\"value\"]}'\n",
+      "col_offset": 4,
+      "end_col_offset": 87,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 174,
+      "line_range": [
+        174
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "174     assert repair_json('{\"key1\": {\"key2\": [1, 2, 3') == '{\"key1\": {\"key2\": [1, 2, 3]}}'\n175     assert repair_json('{\"key\": [\"value]}') == '{\"key\": [\"value\"]}'\n176     assert repair_json('[\"lorem \"ipsum\" sic\"]') == '[\"lorem \\\\\"ipsum\\\\\" sic\"]'\n",
+      "col_offset": 4,
+      "end_col_offset": 67,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 175,
+      "line_range": [
+        175
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "175     assert repair_json('{\"key\": [\"value]}') == '{\"key\": [\"value\"]}'\n176     assert repair_json('[\"lorem \"ipsum\" sic\"]') == '[\"lorem \\\\\"ipsum\\\\\" sic\"]'\n177     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 78,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 176,
+      "line_range": [
+        176
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "176     assert repair_json('[\"lorem \"ipsum\" sic\"]') == '[\"lorem \\\\\"ipsum\\\\\" sic\"]'\n177     assert (\n178         repair_json('{\"key1\": [\"value1\", \"value2\"}, \"key2\": [\"value3\", \"value4\"]}')\n179         == '{\"key1\": [\"value1\", \"value2\"], \"key2\": [\"value3\", \"value4\"]}'\n180     )\n181     assert repair_json('[ \"value\", /* comment */ \"value2\" ]') == '[\"value\", \"value2\"]'\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 177,
+      "line_range": [
+        177,
+        178,
+        179,
+        180
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "180     )\n181     assert repair_json('[ \"value\", /* comment */ \"value2\" ]') == '[\"value\", \"value2\"]'\n182     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 86,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 181,
+      "line_range": [
+        181
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "181     assert repair_json('[ \"value\", /* comment */ \"value2\" ]') == '[\"value\", \"value2\"]'\n182     assert (\n183         repair_json('{\"key\": [\"value\" \"value1\" \"value2\"]}')\n184         == '{\"key\": [\"value\", \"value1\", \"value2\"]}'\n185     )\n186     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 182,
+      "line_range": [
+        182,
+        183,
+        184,
+        185
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "185     )\n186     assert (\n187         repair_json(\n188             '{\"key\": [\"lorem \"ipsum\" dolor \"sit\" amet, \"consectetur\" \", \"lorem \"ipsum\" dolor\", \"lorem\"]}'\n189         )\n190         == '{\"key\": [\"lorem \\\\\"ipsum\\\\\" dolor \\\\\"sit\\\\\" amet, \\\\\"consectetur\\\\\" \", \"lorem \\\\\"ipsum\\\\\" dolor\", \"lorem\"]}'\n191     )\n192     assert repair_json('{\"k\"e\"y\": \"value\"}') == '{\"k\\\\\"e\\\\\"y\": \"value\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 186,
+      "line_range": [
+        186,
+        187,
+        188,
+        189,
+        190,
+        191
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "191     )\n192     assert repair_json('{\"k\"e\"y\": \"value\"}') == '{\"k\\\\\"e\\\\\"y\": \"value\"}'\n193 \n",
+      "col_offset": 4,
+      "end_col_offset": 72,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 192,
+      "line_range": [
+        192
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "195 def test_escaping():\n196     assert repair_json(\"'\\\"'\") == '\"\"'\n197     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 38,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 196,
+      "line_range": [
+        196
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "196     assert repair_json(\"'\\\"'\") == '\"\"'\n197     assert (\n198         repair_json('{\"key\": \\'string\"\\n\\t\\\\le\\'') == '{\"key\": \"string\\\\\"\\\\n\\\\t\\\\\\\\le\"}'\n199     )\n200     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 197,
+      "line_range": [
+        197,
+        198,
+        199
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "199     )\n200     assert (\n201         repair_json(\n202             r'{\"real_content\": \"Some string: Some other string \\t Some string <a href=\\\"https://domain.com\\\">Some link</a>\"'\n203         )\n204         == r'{\"real_content\": \"Some string: Some other string \\t Some string <a href=\\\"https://domain.com\\\">Some link</a>\"}'\n205     )\n206     assert repair_json('{\"key_1\\n\": \"value\"}') == '{\"key_1\": \"value\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 200,
+      "line_range": [
+        200,
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "205     )\n206     assert repair_json('{\"key_1\\n\": \"value\"}') == '{\"key_1\": \"value\"}'\n207     assert repair_json('{\"key\\t_\": \"value\"}') == '{\"key\\\\t_\": \"value\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 70,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 206,
+      "line_range": [
+        206
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "206     assert repair_json('{\"key_1\\n\": \"value\"}') == '{\"key_1\": \"value\"}'\n207     assert repair_json('{\"key\\t_\": \"value\"}') == '{\"key\\\\t_\": \"value\"}'\n208 \n",
+      "col_offset": 4,
+      "end_col_offset": 71,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 207,
+      "line_range": [
+        207
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "210 def test_object_edge_cases():\n211     assert repair_json(\"{       \") == \"{}\"\n212     assert repair_json('{\"\": \"value\"') == '{\"\": \"value\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 42,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 211,
+      "line_range": [
+        211
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "211     assert repair_json(\"{       \") == \"{}\"\n212     assert repair_json('{\"\": \"value\"') == '{\"\": \"value\"}'\n213     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 57,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 212,
+      "line_range": [
+        212
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "212     assert repair_json('{\"\": \"value\"') == '{\"\": \"value\"}'\n213     assert (\n214         repair_json('{\"value_1\": true, COMMENT \"value_2\": \"data\"}')\n215         == '{\"value_1\": true, \"value_2\": \"data\"}'\n216     )\n217     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 213,
+      "line_range": [
+        213,
+        214,
+        215,
+        216
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "216     )\n217     assert (\n218         repair_json('{\"value_1\": true, SHOULD_NOT_EXIST \"value_2\": \"data\" AAAA }')\n219         == '{\"value_1\": true, \"value_2\": \"data\"}'\n220     )\n221     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 217,
+      "line_range": [
+        217,
+        218,
+        219,
+        220
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "220     )\n221     assert (\n222         repair_json('{\"\" : true, \"key2\": \"value2\"}') == '{\"\": true, \"key2\": \"value2\"}'\n223     )\n224     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 221,
+      "line_range": [
+        221,
+        222,
+        223
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "223     )\n224     assert (\n225         repair_json(\n226             \"\"\"{\"\"answer\"\":[{\"\"traits\"\":''Female aged 60+'',\"\"answer1\"\":\"\"5\"\"}]}\"\"\"\n227         )\n228         == '{\"answer\": [{\"traits\": \"Female aged 60+\", \"answer1\": \"5\"}]}'\n229     )\n230     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 224,
+      "line_range": [
+        224,
+        225,
+        226,
+        227,
+        228,
+        229
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "229     )\n230     assert (\n231         repair_json('{ \"words\": abcdef\", \"numbers\": 12345\", \"words2\": ghijkl\" }')\n232         == '{\"words\": \"abcdef\", \"numbers\": 12345, \"words2\": \"ghijkl\"}'\n233     )\n234     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 230,
+      "line_range": [
+        230,
+        231,
+        232,
+        233
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "233     )\n234     assert (\n235         repair_json(\"\"\"{\"number\": 1,\"reason\": \"According...\"\"ans\": \"YES\"}\"\"\")\n236         == '{\"number\": 1, \"reason\": \"According...\", \"ans\": \"YES\"}'\n237     )\n238     assert repair_json(\"\"\"{ \"a\" : \"{ b\": {} }\" }\"\"\") == '{\"a\": \"{ b\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 234,
+      "line_range": [
+        234,
+        235,
+        236,
+        237
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "237     )\n238     assert repair_json(\"\"\"{ \"a\" : \"{ b\": {} }\" }\"\"\") == '{\"a\": \"{ b\"}'\n239     assert repair_json(\"\"\"{\"b\": \"xxxxx\" true}\"\"\") == '{\"b\": \"xxxxx\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 70,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 238,
+      "line_range": [
+        238
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "238     assert repair_json(\"\"\"{ \"a\" : \"{ b\": {} }\" }\"\"\") == '{\"a\": \"{ b\"}'\n239     assert repair_json(\"\"\"{\"b\": \"xxxxx\" true}\"\"\") == '{\"b\": \"xxxxx\"}'\n240     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 69,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 239,
+      "line_range": [
+        239
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "239     assert repair_json(\"\"\"{\"b\": \"xxxxx\" true}\"\"\") == '{\"b\": \"xxxxx\"}'\n240     assert (\n241         repair_json('{\"key\": \"Lorem \"ipsum\" s,\"}') == '{\"key\": \"Lorem \\\\\"ipsum\\\\\" s,\"}'\n242     )\n243     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 240,
+      "line_range": [
+        240,
+        241,
+        242
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "242     )\n243     assert (\n244         repair_json('{\"lorem\": ipsum, sic, datum.\",}')\n245         == '{\"lorem\": \"ipsum, sic, datum.\"}'\n246     )\n247     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 243,
+      "line_range": [
+        243,
+        244,
+        245,
+        246
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "246     )\n247     assert (\n248         repair_json(\n249             '{\"lorem\": sic tamet. \"ipsum\": sic tamet, quick brown fox. \"sic\": ipsum}'\n250         )\n251         == '{\"lorem\": \"sic tamet.\", \"ipsum\": \"sic tamet\", \"sic\": \"ipsum\"}'\n252     )\n253     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 247,
+      "line_range": [
+        247,
+        248,
+        249,
+        250,
+        251,
+        252
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "252     )\n253     assert (\n254         repair_json('{\"lorem_ipsum\": \"sic tamet, quick brown fox. }')\n255         == '{\"lorem_ipsum\": \"sic tamet, quick brown fox.\"}'\n256     )\n257     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 253,
+      "line_range": [
+        253,
+        254,
+        255,
+        256
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "256     )\n257     assert (\n258         repair_json('{\"key\":value, \" key2\":\"value2\" }')\n259         == '{\"key\": \"value\", \" key2\": \"value2\"}'\n260     )\n261     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 257,
+      "line_range": [
+        257,
+        258,
+        259,
+        260
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "260     )\n261     assert (\n262         repair_json('{\"key\":value \"key2\":\"value2\" }')\n263         == '{\"key\": \"value\", \"key2\": \"value2\"}'\n264     )\n265     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 261,
+      "line_range": [
+        261,
+        262,
+        263,
+        264
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "264     )\n265     assert (\n266         repair_json(\"{'text': 'words{words in brackets}more words'}\")\n267         == '{\"text\": \"words{words in brackets}more words\"}'\n268     )\n269     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 265,
+      "line_range": [
+        265,
+        266,
+        267,
+        268
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "268     )\n269     assert (\n270         repair_json(\"{text:words{words in brackets}}\")\n271         == '{\"text\": \"words{words in brackets}\"}'\n272     )\n273     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 269,
+      "line_range": [
+        269,
+        270,
+        271,
+        272
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "272     )\n273     assert (\n274         repair_json(\"{text:words{words in brackets}m}\")\n275         == '{\"text\": \"words{words in brackets}m\"}'\n276     )\n277     assert repair_json('{\"key\": \"value, value2\"```') == '{\"key\": \"value, value2\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 273,
+      "line_range": [
+        273,
+        274,
+        275,
+        276
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "276     )\n277     assert repair_json('{\"key\": \"value, value2\"```') == '{\"key\": \"value, value2\"}'\n278     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 82,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 277,
+      "line_range": [
+        277
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "277     assert repair_json('{\"key\": \"value, value2\"```') == '{\"key\": \"value, value2\"}'\n278     assert (\n279         repair_json(\"{key:value,key2:value2}\") == '{\"key\": \"value\", \"key2\": \"value2\"}'\n280     )\n281     assert repair_json('{\"key:\"value\"}') == '{\"key\": \"value\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 278,
+      "line_range": [
+        278,
+        279,
+        280
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "280     )\n281     assert repair_json('{\"key:\"value\"}') == '{\"key\": \"value\"}'\n282     assert repair_json('{\"key:value}') == '{\"key\": \"value\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 62,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 281,
+      "line_range": [
+        281
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "281     assert repair_json('{\"key:\"value\"}') == '{\"key\": \"value\"}'\n282     assert repair_json('{\"key:value}') == '{\"key\": \"value\"}'\n283     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 60,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 282,
+      "line_range": [
+        282
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "282     assert repair_json('{\"key:value}') == '{\"key\": \"value\"}'\n283     assert (\n284         repair_json('[{\"lorem\": {\"ipsum\": \"sic\"}, \"\"\"\" \"lorem\": {\"ipsum\": \"sic\"}]')\n285         == '[{\"lorem\": {\"ipsum\": \"sic\"}}, {\"lorem\": {\"ipsum\": \"sic\"}}]'\n286     )\n287     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 283,
+      "line_range": [
+        283,
+        284,
+        285,
+        286
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "286     )\n287     assert (\n288         repair_json('{ \"key\": { \"key2\": \"value2\" // comment }, \"key3\": \"value3\" }')\n289         == '{\"key\": {\"key2\": \"value2\"}, \"key3\": \"value3\"}'\n290     )\n291     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 287,
+      "line_range": [
+        287,
+        288,
+        289,
+        290
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "290     )\n291     assert (\n292         repair_json('{ \"key\": { \"key2\": \"value2\" # comment }, \"key3\": \"value3\" }')\n293         == '{\"key\": {\"key2\": \"value2\"}, \"key3\": \"value3\"}'\n294     )\n295     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 291,
+      "line_range": [
+        291,
+        292,
+        293,
+        294
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "294     )\n295     assert (\n296         repair_json('{ \"key\": { \"key2\": \"value2\" /* comment */ }, \"key3\": \"value3\" }')\n297         == '{\"key\": {\"key2\": \"value2\"}, \"key3\": \"value3\"}'\n298     )\n299     assert repair_json('{ \"key\": \"value\" /* comment') == '{\"key\": \"value\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 295,
+      "line_range": [
+        295,
+        296,
+        297,
+        298
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "298     )\n299     assert repair_json('{ \"key\": \"value\" /* comment') == '{\"key\": \"value\"}'\n300     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 75,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 299,
+      "line_range": [
+        299
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "299     assert repair_json('{ \"key\": \"value\" /* comment') == '{\"key\": \"value\"}'\n300     assert (\n301         repair_json(\n302             '{ \"key\": [\"arrayvalue\"], [\"arrayvalue1\"], [\"arrayvalue2\"], \"key3\": \"value3\" }'\n303         )\n304         == '{\"key\": [\"arrayvalue\", \"arrayvalue1\", \"arrayvalue2\"], \"key3\": \"value3\"}'\n305     )\n306     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 300,
+      "line_range": [
+        300,
+        301,
+        302,
+        303,
+        304,
+        305
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "305     )\n306     assert (\n307         repair_json('{ \"key\": [\"arrayvalue\"], \"key3\": \"value3\", [\"arrayvalue1\"] }')\n308         == '{\"key\": [\"arrayvalue\"], \"key3\": \"value3\", \"arrayvalue1\": \"\"}'\n309     )\n310 \n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 306,
+      "line_range": [
+        306,
+        307,
+        308,
+        309
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "312 def test_number_edge_cases():\n313     assert (\n314         repair_json(' - { \"test_key\": [\"test_value\", \"test_value2\"] }')\n315         == '{\"test_key\": [\"test_value\", \"test_value2\"]}'\n316     )\n317     assert repair_json('{\"key\": 1/3}') == '{\"key\": \"1/3\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 313,
+      "line_range": [
+        313,
+        314,
+        315,
+        316
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "316     )\n317     assert repair_json('{\"key\": 1/3}') == '{\"key\": \"1/3\"}'\n318     assert repair_json('{\"key\": .25}') == '{\"key\": 0.25}'\n",
+      "col_offset": 4,
+      "end_col_offset": 58,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 317,
+      "line_range": [
+        317
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "317     assert repair_json('{\"key\": 1/3}') == '{\"key\": \"1/3\"}'\n318     assert repair_json('{\"key\": .25}') == '{\"key\": 0.25}'\n319     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 57,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 318,
+      "line_range": [
+        318
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "318     assert repair_json('{\"key\": .25}') == '{\"key\": 0.25}'\n319     assert (\n320         repair_json('{\"here\": \"now\", \"key\": 1/3, \"foo\": \"bar\"}')\n321         == '{\"here\": \"now\", \"key\": \"1/3\", \"foo\": \"bar\"}'\n322     )\n323     assert repair_json('{\"key\": 12345/67890}') == '{\"key\": \"12345/67890\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 319,
+      "line_range": [
+        319,
+        320,
+        321,
+        322
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "322     )\n323     assert repair_json('{\"key\": 12345/67890}') == '{\"key\": \"12345/67890\"}'\n324     assert repair_json(\"[105,12\") == \"[105, 12]\"\n",
+      "col_offset": 4,
+      "end_col_offset": 74,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 323,
+      "line_range": [
+        323
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "323     assert repair_json('{\"key\": 12345/67890}') == '{\"key\": \"12345/67890\"}'\n324     assert repair_json(\"[105,12\") == \"[105, 12]\"\n325     assert repair_json('{\"key\", 105,12,') == '{\"key\": \"105,12\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 48,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 324,
+      "line_range": [
+        324
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "324     assert repair_json(\"[105,12\") == \"[105, 12]\"\n325     assert repair_json('{\"key\", 105,12,') == '{\"key\": \"105,12\"}'\n326     assert repair_json('{\"key\": 1/3, \"foo\": \"bar\"}') == '{\"key\": \"1/3\", \"foo\": \"bar\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 64,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 325,
+      "line_range": [
+        325
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "325     assert repair_json('{\"key\", 105,12,') == '{\"key\": \"105,12\"}'\n326     assert repair_json('{\"key\": 1/3, \"foo\": \"bar\"}') == '{\"key\": \"1/3\", \"foo\": \"bar\"}'\n327     assert repair_json('{\"key\": 10-20}') == '{\"key\": \"10-20\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 86,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 326,
+      "line_range": [
+        326
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "326     assert repair_json('{\"key\": 1/3, \"foo\": \"bar\"}') == '{\"key\": \"1/3\", \"foo\": \"bar\"}'\n327     assert repair_json('{\"key\": 10-20}') == '{\"key\": \"10-20\"}'\n328     assert repair_json('{\"key\": 1.1.1}') == '{\"key\": \"1.1.1\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 62,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 327,
+      "line_range": [
+        327
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "327     assert repair_json('{\"key\": 10-20}') == '{\"key\": \"10-20\"}'\n328     assert repair_json('{\"key\": 1.1.1}') == '{\"key\": \"1.1.1\"}'\n329     assert repair_json(\"[- \") == \"[]\"\n",
+      "col_offset": 4,
+      "end_col_offset": 62,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 328,
+      "line_range": [
+        328
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "328     assert repair_json('{\"key\": 1.1.1}') == '{\"key\": \"1.1.1\"}'\n329     assert repair_json(\"[- \") == \"[]\"\n330     assert repair_json('{\"key\": 1. }') == '{\"key\": 1.0}'\n",
+      "col_offset": 4,
+      "end_col_offset": 37,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 329,
+      "line_range": [
+        329
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "329     assert repair_json(\"[- \") == \"[]\"\n330     assert repair_json('{\"key\": 1. }') == '{\"key\": 1.0}'\n331     assert repair_json('{\"key\": 1e10 }') == '{\"key\": 10000000000.0}'\n",
+      "col_offset": 4,
+      "end_col_offset": 56,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 330,
+      "line_range": [
+        330
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "330     assert repair_json('{\"key\": 1. }') == '{\"key\": 1.0}'\n331     assert repair_json('{\"key\": 1e10 }') == '{\"key\": 10000000000.0}'\n332     assert repair_json('{\"key\": 1e }') == '{\"key\": 1}'\n",
+      "col_offset": 4,
+      "end_col_offset": 68,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 331,
+      "line_range": [
+        331
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "331     assert repair_json('{\"key\": 1e10 }') == '{\"key\": 10000000000.0}'\n332     assert repair_json('{\"key\": 1e }') == '{\"key\": 1}'\n333     assert repair_json('{\"key\": 1notanumber }') == '{\"key\": \"1notanumber\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 332,
+      "line_range": [
+        332
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "332     assert repair_json('{\"key\": 1e }') == '{\"key\": 1}'\n333     assert repair_json('{\"key\": 1notanumber }') == '{\"key\": \"1notanumber\"}'\n334     assert repair_json(\"[1, 2notanumber]\") == '[1, \"2notanumber\"]'\n",
+      "col_offset": 4,
+      "end_col_offset": 75,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 333,
+      "line_range": [
+        333
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "333     assert repair_json('{\"key\": 1notanumber }') == '{\"key\": \"1notanumber\"}'\n334     assert repair_json(\"[1, 2notanumber]\") == '[1, \"2notanumber\"]'\n335 \n",
+      "col_offset": 4,
+      "end_col_offset": 66,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 334,
+      "line_range": [
+        334
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "337 def test_markdown():\n338     assert (\n339         repair_json('{ \"content\": \"[LINK](\"https://google.com\")\" }')\n340         == '{\"content\": \"[LINK](\\\\\"https://google.com\\\\\")\"}'\n341     )\n342     assert repair_json('{ \"content\": \"[LINK](\" }') == '{\"content\": \"[LINK](\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 338,
+      "line_range": [
+        338,
+        339,
+        340,
+        341
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "341     )\n342     assert repair_json('{ \"content\": \"[LINK](\" }') == '{\"content\": \"[LINK](\"}'\n343     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 78,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 342,
+      "line_range": [
+        342
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "342     assert repair_json('{ \"content\": \"[LINK](\" }') == '{\"content\": \"[LINK](\"}'\n343     assert (\n344         repair_json('{ \"content\": \"[LINK](\", \"key\": true }')\n345         == '{\"content\": \"[LINK](\", \"key\": true}'\n346     )\n347 \n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 343,
+      "line_range": [
+        343,
+        344,
+        345,
+        346
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "349 def test_leading_trailing_characters():\n350     assert repair_json('````{ \"key\": \"value\" }```') == '{\"key\": \"value\"}'\n351     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 73,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 350,
+      "line_range": [
+        350
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "350     assert repair_json('````{ \"key\": \"value\" }```') == '{\"key\": \"value\"}'\n351     assert (\n352         repair_json(\"\"\"{    \"a\": \"\",    \"b\": [ { \"c\": 1} ] \\n}```\"\"\")\n353         == '{\"a\": \"\", \"b\": [{\"c\": 1}]}'\n354     )\n355     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 351,
+      "line_range": [
+        351,
+        352,
+        353,
+        354
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "354     )\n355     assert (\n356         repair_json(\n357             \"Based on the information extracted, here is the filled JSON output: ```json { 'a': 'b' } ```\"\n358         )\n359         == '{\"a\": \"b\"}'\n360     )\n361     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 355,
+      "line_range": [
+        355,
+        356,
+        357,
+        358,
+        359,
+        360
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "360     )\n361     assert (\n362         repair_json(\"\"\"\n363                        The next 64 elements are:\n364                        ```json\n365                        { \"key\": \"value\" }\n366                        ```\"\"\")\n367         == '{\"key\": \"value\"}'\n368     )\n369 \n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 361,
+      "line_range": [
+        361,
+        362,
+        363,
+        364,
+        365,
+        366,
+        367,
+        368
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "371 def test_multiple_jsons():\n372     assert repair_json(\"[]{}\") == \"[[], {}]\"\n373     assert repair_json(\"{}[]{}\") == \"[{}, [], {}]\"\n",
+      "col_offset": 4,
+      "end_col_offset": 44,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 372,
+      "line_range": [
+        372
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "372     assert repair_json(\"[]{}\") == \"[[], {}]\"\n373     assert repair_json(\"{}[]{}\") == \"[{}, [], {}]\"\n374     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 50,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 373,
+      "line_range": [
+        373
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "373     assert repair_json(\"{}[]{}\") == \"[{}, [], {}]\"\n374     assert (\n375         repair_json('{\"key\":\"value\"}[1,2,3,True]')\n376         == '[{\"key\": \"value\"}, [1, 2, 3, true]]'\n377     )\n378     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 374,
+      "line_range": [
+        374,
+        375,
+        376,
+        377
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "377     )\n378     assert (\n379         repair_json(\n380             'lorem ```json {\"key\":\"value\"} ``` ipsum ```json [1,2,3,True] ``` 42'\n381         )\n382         == '[{\"key\": \"value\"}, [1, 2, 3, true]]'\n383     )\n384     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 378,
+      "line_range": [
+        378,
+        379,
+        380,
+        381,
+        382,
+        383
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "383     )\n384     assert (\n385         repair_json('[{\"key\":\"value\"}][{\"key\":\"value_after\"}]')\n386         == '[{\"key\": \"value_after\"}]'\n387     )\n388 \n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 384,
+      "line_range": [
+        384,
+        385,
+        386,
+        387
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "391     # Test with valid JSON strings\n392     assert repair_json(\"[]\", return_objects=True) == []\n393     assert repair_json(\"{}\", return_objects=True) == {}\n",
+      "col_offset": 4,
+      "end_col_offset": 55,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 392,
+      "line_range": [
+        392
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "392     assert repair_json(\"[]\", return_objects=True) == []\n393     assert repair_json(\"{}\", return_objects=True) == {}\n394     assert repair_json(\n",
+      "col_offset": 4,
+      "end_col_offset": 55,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 393,
+      "line_range": [
+        393
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "393     assert repair_json(\"{}\", return_objects=True) == {}\n394     assert repair_json(\n395         '{\"key\": true, \"key2\": false, \"key3\": null}', return_objects=True\n396     ) == {\"key\": True, \"key2\": False, \"key3\": None}\n397     assert repair_json(\n",
+      "col_offset": 4,
+      "end_col_offset": 51,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 394,
+      "line_range": [
+        394,
+        395,
+        396
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "396     ) == {\"key\": True, \"key2\": False, \"key3\": None}\n397     assert repair_json(\n398         '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}', return_objects=True\n399     ) == {\n400         \"name\": \"John\",\n401         \"age\": 30,\n402         \"city\": \"New York\",\n403     }\n404     assert repair_json(\"[1, 2, 3, 4]\", return_objects=True) == [1, 2, 3, 4]\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 397,
+      "line_range": [
+        397,
+        398,
+        399,
+        400,
+        401,
+        402,
+        403
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "403     }\n404     assert repair_json(\"[1, 2, 3, 4]\", return_objects=True) == [1, 2, 3, 4]\n405     assert repair_json(\n",
+      "col_offset": 4,
+      "end_col_offset": 75,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 404,
+      "line_range": [
+        404
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "404     assert repair_json(\"[1, 2, 3, 4]\", return_objects=True) == [1, 2, 3, 4]\n405     assert repair_json(\n406         '{\"employees\":[\"John\", \"Anna\", \"Peter\"]} ', return_objects=True\n407     ) == {\"employees\": [\"John\", \"Anna\", \"Peter\"]}\n408     assert repair_json(\n",
+      "col_offset": 4,
+      "end_col_offset": 49,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 405,
+      "line_range": [
+        405,
+        406,
+        407
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "407     ) == {\"employees\": [\"John\", \"Anna\", \"Peter\"]}\n408     assert repair_json(\n409         \"\"\"\n410 {\n411   \"resourceType\": \"Bundle\",\n412   \"id\": \"1\",\n413   \"type\": \"collection\",\n414   \"entry\": [\n415     {\n416       \"resource\": {\n417         \"resourceType\": \"Patient\",\n418         \"id\": \"1\",\n419         \"name\": [\n420           {\"use\": \"official\", \"family\": \"Corwin\", \"given\": [\"Keisha\", \"Sunny\"], \"prefix\": [\"Mrs.\"},\n421           {\"use\": \"maiden\", \"family\": \"Goodwin\", \"given\": [\"Keisha\", \"Sunny\"], \"prefix\": [\"Mrs.\"]}\n422         ]\n423       }\n424     }\n425   ]\n426 }\n427 \"\"\",\n428         return_objects=True,\n429     ) == {\n430         \"resourceType\": \"Bundle\",\n431         \"id\": \"1\",\n432         \"type\": \"collection\",\n433         \"entry\": [\n434             {\n435                 \"resource\": {\n436                     \"resourceType\": \"Patient\",\n437                     \"id\": \"1\",\n438                     \"name\": [\n439                         {\n440                             \"use\": \"official\",\n441                             \"family\": \"Corwin\",\n442                             \"given\": [\"Keisha\", \"Sunny\"],\n443                             \"prefix\": [\"Mrs.\"],\n444                         },\n445                         {\n446                             \"use\": \"maiden\",\n447                             \"family\": \"Goodwin\",\n448                             \"given\": [\"Keisha\", \"Sunny\"],\n449                             \"prefix\": [\"Mrs.\"],\n450                         },\n451                     ],\n452                 }\n453             }\n454         ],\n455     }\n456     assert repair_json(\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 408,
+      "line_range": [
+        408,
+        409,
+        410,
+        411,
+        412,
+        413,
+        414,
+        415,
+        416,
+        417,
+        418,
+        419,
+        420,
+        421,
+        422,
+        423,
+        424,
+        425,
+        426,
+        427,
+        428,
+        429,
+        430,
+        431,
+        432,
+        433,
+        434,
+        435,
+        436,
+        437,
+        438,
+        439,
+        440,
+        441,
+        442,
+        443,
+        444,
+        445,
+        446,
+        447,
+        448,
+        449,
+        450,
+        451,
+        452,
+        453,
+        454,
+        455
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "455     }\n456     assert repair_json(\n457         '{\\n\"html\": \"<h3 id=\"aaa\">Waarom meer dan 200 Technical Experts - \"Passie voor techniek\"?</h3>\"}',\n458         return_objects=True,\n459     ) == {\n460         \"html\": '<h3 id=\"aaa\">Waarom meer dan 200 Technical Experts - \"Passie voor techniek\"?</h3>'\n461     }\n462     assert repair_json(\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 456,
+      "line_range": [
+        456,
+        457,
+        458,
+        459,
+        460,
+        461
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "461     }\n462     assert repair_json(\n463         \"\"\"\n464         [\n465             {\n466                 \"foo\": \"Foo bar baz\",\n467                 \"tag\": \"#foo-bar-baz\"\n468             },\n469             {\n470                 \"foo\": \"foo bar \"foobar\" foo bar baz.\",\n471                 \"tag\": \"#foo-bar-foobar\"\n472             }\n473         ]\n474         \"\"\",\n475         return_objects=True,\n476     ) == [\n477         {\"foo\": \"Foo bar baz\", \"tag\": \"#foo-bar-baz\"},\n478         {\"foo\": 'foo bar \"foobar\" foo bar baz.', \"tag\": \"#foo-bar-foobar\"},\n479     ]\n480 \n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 462,
+      "line_range": [
+        462,
+        463,
+        464,
+        465,
+        466,
+        467,
+        468,
+        469,
+        470,
+        471,
+        472,
+        473,
+        474,
+        475,
+        476,
+        477,
+        478,
+        479
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "482 def test_repair_json_skip_json_loads():\n483     assert (\n484         repair_json('{\"key\": true, \"key2\": false, \"key3\": null}', skip_json_loads=True)\n485         == '{\"key\": true, \"key2\": false, \"key3\": null}'\n486     )\n487     assert repair_json(\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 483,
+      "line_range": [
+        483,
+        484,
+        485,
+        486
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "486     )\n487     assert repair_json(\n488         '{\"key\": true, \"key2\": false, \"key3\": null}',\n489         return_objects=True,\n490         skip_json_loads=True,\n491     ) == {\"key\": True, \"key2\": False, \"key3\": None}\n492     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 51,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 487,
+      "line_range": [
+        487,
+        488,
+        489,
+        490,
+        491
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "491     ) == {\"key\": True, \"key2\": False, \"key3\": None}\n492     assert (\n493         repair_json('{\"key\": true, \"key2\": false, \"key3\": }', skip_json_loads=True)\n494         == '{\"key\": true, \"key2\": false, \"key3\": \"\"}'\n495     )\n496     assert loads('{\"key\": true, \"key2\": false, \"key3\": }', skip_json_loads=True) == {\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 492,
+      "line_range": [
+        492,
+        493,
+        494,
+        495
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "495     )\n496     assert loads('{\"key\": true, \"key2\": false, \"key3\": }', skip_json_loads=True) == {\n497         \"key\": True,\n498         \"key2\": False,\n499         \"key3\": \"\",\n500     }\n501 \n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 496,
+      "line_range": [
+        496,
+        497,
+        498,
+        499,
+        500
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "506     # Use chunk_length 2 to test the buffering feature\n507     assert from_file(filename=os.path.join(path, \"invalid.json\")) == [\n508         {\n509             \"_id\": \"655b66256574f09bdae8abe8\",\n510             \"index\": 0,\n511             \"guid\": \"31082ae3-b0f3-4406-90f4-cc450bd4379d\",\n512             \"isActive\": False,\n513             \"balance\": \"$2,562.78\",\n514             \"picture\": \"http://placehold.it/32x32\",\n515             \"age\": 32,\n516             \"eyeColor\": \"brown\",\n517             \"name\": \"Glover Rivas\",\n518             \"gender\": \"male\",\n519             \"company\": \"EMPIRICA\",\n520             \"email\": \"gloverrivas@empirica.com\",\n521             \"phone\": \"+1 (842) 507-3063\",\n522             \"address\": \"536 Montague Terrace, Jenkinsville, Kentucky, 2235\",\n523             \"about\": \"Mollit consectetur excepteur voluptate tempor dolore ullamco enim irure ullamco non enim officia. Voluptate occaecat proident laboris ea Lorem cupidatat reprehenderit nisi nisi aliqua. Amet nulla ipsum deserunt excepteur amet ad aute aute ex. Et enim minim sit veniam est quis dolor nisi sunt quis eiusmod in. Amet eiusmod cillum sunt occaecat dolor laboris voluptate in eiusmod irure aliqua duis.\",\n524             \"registered\": \"2023-11-18T09:32:36 -01:00\",\n525             \"latitude\": 36.26102,\n526             \"longitude\": -91.304608,\n527             \"tags\": [\"non\", \"tempor\", \"do\", \"ullamco\", \"dolore\", \"sunt\", \"ipsum\"],\n528             \"friends\": [\n529                 {\"id\": 0, \"name\": \"Cara Shepherd\"},\n530                 {\"id\": 1, \"name\": \"Mason Farley\"},\n531                 {\"id\": 2, \"name\": \"Harriet Cochran\"},\n532             ],\n533             \"greeting\": \"Hello, Glover Rivas! You have 7 unread messages.\",\n534             \"favoriteFruit\": \"strawberry\",\n535         },\n536         {\n537             \"_id\": \"655b662585364bc57278bb6f\",\n538             \"index\": 1,\n539             \"guid\": \"0dea7a3a-f812-4dde-b78d-7a9b58e5da05\",\n540             \"isActive\": True,\n541             \"balance\": \"$1,359.48\",\n542             \"picture\": \"http://placehold.it/32x32\",\n543             \"age\": 38,\n544             \"eyeColor\": \"brown\",\n545             \"name\": \"Brandi Moreno\",\n546             \"gender\": \"female\",\n547             \"company\": \"MARQET\",\n548             \"email\": \"brandimoreno@marqet.com\",\n549             \"phone\": \"+1 (850) 434-2077\",\n550             \"address\": \"537 Doone Court, Waiohinu, Michigan, 3215\",\n551             \"about\": \"Irure proident adipisicing do Lorem do incididunt in laborum in eiusmod eiusmod ad elit proident. Eiusmod dolor ex magna magna occaecat. Nulla deserunt velit ex exercitation et irure sunt. Cupidatat ut excepteur ea quis labore sint cupidatat incididunt amet eu consectetur cillum ipsum proident. Occaecat exercitation aute laborum dolor proident reprehenderit laborum in voluptate culpa. Exercitation nulla adipisicing culpa aute est deserunt ea nisi deserunt consequat occaecat ut et non. Incididunt ex exercitation dolor dolor anim cillum dolore.\",\n552             \"registered\": \"2015-09-03T11:47:15 -02:00\",\n553             \"latitude\": -19.768953,\n554             \"longitude\": 8.948458,\n555             \"tags\": [\n556                 \"laboris\",\n557                 \"occaecat\",\n558                 \"laborum\",\n559                 \"laborum\",\n560                 \"ex\",\n561                 \"cillum\",\n562                 \"occaecat\",\n563             ],\n564             \"friends\": [\n565                 {\"id\": 0, \"name\": \"Erna Kelly\"},\n566                 {\"id\": 1, \"name\": \"Black Mays\"},\n567                 {\"id\": 2, \"name\": \"Davis Buck\"},\n568             ],\n569             \"greeting\": \"Hello, Brandi Moreno! You have 1 unread messages.\",\n570             \"favoriteFruit\": \"apple\",\n571         },\n572         {\n573             \"_id\": \"655b6625870da431bcf5e0c2\",\n574             \"index\": 2,\n575             \"guid\": \"b17f6e3f-c898-4334-abbf-05cf222f143b\",\n576             \"isActive\": False,\n577             \"balance\": \"$1,493.77\",\n578             \"picture\": \"http://placehold.it/32x32\",\n579             \"age\": 20,\n580             \"eyeColor\": \"brown\",\n581             \"name\": \"Moody Meadows\",\n582             \"gender\": \"male\",\n583             \"company\": \"OPTIQUE\",\n584             \"email\": \"moodymeadows@optique.com\",\n585             \"phone\": \"+1 (993) 566-3041\",\n586             \"address\": \"766 Osborn Street, Bath, Maine, 7666\",\n587             \"about\": \"Non commodo excepteur nostrud qui adipisicing aliquip dolor minim nulla culpa proident. In ad cupidatat ea mollit ex est do deserunt proident nostrud. Cillum id id eiusmod amet exercitation nostrud cillum sunt deserunt dolore deserunt eiusmod mollit. Ut ex tempor ad laboris voluptate labore id officia fugiat exercitation amet.\",\n588             \"registered\": \"2015-01-16T02:48:28 -01:00\",\n589             \"latitude\": -25.847327,\n590             \"longitude\": 63.95991,\n591             \"tags\": [\n592                 \"aute\",\n593                 \"commodo\",\n594                 \"adipisicing\",\n595                 \"nostrud\",\n596                 \"duis\",\n597                 \"mollit\",\n598                 \"ut\",\n599             ],\n600             \"friends\": [\n601                 {\"id\": 0, \"name\": \"Lacey Cash\"},\n602                 {\"id\": 1, \"name\": \"Gabrielle Harmon\"},\n603                 {\"id\": 2, \"name\": \"Ellis Lambert\"},\n604             ],\n605             \"greeting\": \"Hello, Moody Meadows! You have 4 unread messages.\",\n606             \"favoriteFruit\": \"strawberry\",\n607         },\n608         {\n609             \"_id\": \"655b6625f3e1bf422220854e\",\n610             \"index\": 3,\n611             \"guid\": \"92229883-2bfd-4974-a08c-1b506b372e46\",\n612             \"isActive\": False,\n613             \"balance\": \"$2,215.34\",\n614             \"picture\": \"http://placehold.it/32x32\",\n615             \"age\": 22,\n616             \"eyeColor\": \"brown\",\n617             \"name\": \"Heath Nguyen\",\n618             \"gender\": \"male\",\n619             \"company\": \"BLEENDOT\",\n620             \"email\": \"heathnguyen@bleendot.com\",\n621             \"phone\": \"+1 (989) 512-2797\",\n622             \"address\": \"135 Milton Street, Graniteville, Nebraska, 276\",\n623             \"about\": \"Consequat aliquip irure Lorem cupidatat nulla magna ullamco nulla voluptate adipisicing anim consectetur tempor aliquip. Magna aliqua nulla eu tempor esse proident. Proident fugiat ad ex Lorem reprehenderit dolor aliquip labore labore aliquip. Deserunt aute enim ea minim officia anim culpa sint commodo. Cillum consectetur excepteur aliqua exercitation Lorem veniam voluptate.\",\n624             \"registered\": \"2016-07-06T01:31:07 -02:00\",\n625             \"latitude\": -60.997048,\n626             \"longitude\": -102.397885,\n627             \"tags\": [\"do\", \"ad\", \"consequat\", \"irure\", \"tempor\", \"elit\", \"minim\"],\n628             \"friends\": [\n629                 {\"id\": 0, \"name\": \"Walker Hernandez\"},\n630                 {\"id\": 1, \"name\": \"Maria Lane\"},\n631                 {\"id\": 2, \"name\": \"Mcknight Barron\"},\n632             ],\n633             \"greeting\": \"Hello, Heath Nguyen! You have 4 unread messages.\",\n634             \"favoriteFruit\": \"apple\",\n635         },\n636         {\n637             \"_id\": \"655b6625519a5b5e4b6742bf\",\n638             \"index\": 4,\n639             \"guid\": \"c5dc685f-6d0d-4173-b4cf-f5df29a1e8ef\",\n640             \"isActive\": True,\n641             \"balance\": \"$1,358.90\",\n642             \"picture\": \"http://placehold.it/32x32\",\n643             \"age\": 33,\n644             \"eyeColor\": \"brown\",\n645             \"name\": \"Deidre Duke\",\n646             \"gender\": \"female\",\n647             \"company\": \"OATFARM\",\n648             \"email\": \"deidreduke@oatfarm.com\",\n649             \"phone\": \"+1 (875) 587-3256\",\n650             \"address\": \"487 Schaefer Street, Wattsville, West Virginia, 4506\",\n651             \"about\": \"Laboris eu nulla esse magna sit eu deserunt non est aliqua exercitation commodo. Ad occaecat qui qui laborum dolore anim Lorem. Est qui occaecat irure enim deserunt enim aliqua ex deserunt incididunt esse. Quis in minim laboris proident non mollit. Magna ea do labore commodo. Et elit esse esse occaecat officia ipsum nisi.\",\n652             \"registered\": \"2021-09-12T04:17:08 -02:00\",\n653             \"latitude\": 68.609781,\n654             \"longitude\": -87.509134,\n655             \"tags\": [\n656                 \"mollit\",\n657                 \"cupidatat\",\n658                 \"irure\",\n659                 \"sit\",\n660                 \"consequat\",\n661                 \"anim\",\n662                 \"fugiat\",\n663             ],\n664             \"friends\": [\n665                 {\"id\": 0, \"name\": \"Bean Paul\"},\n666                 {\"id\": 1, \"name\": \"Cochran Hubbard\"},\n667                 {\"id\": 2, \"name\": \"Rodgers Atkinson\"},\n668             ],\n669             \"greeting\": \"Hello, Deidre Duke! You have 6 unread messages.\",\n670             \"favoriteFruit\": \"apple\",\n671         },\n672         {\n673             \"_id\": \"655b6625a19b3f7e5f82f0ea\",\n674             \"index\": 5,\n675             \"guid\": \"75f3c264-baa1-47a0-b21c-4edac23d9935\",\n676             \"isActive\": True,\n677             \"balance\": \"$3,554.36\",\n678             \"picture\": \"http://placehold.it/32x32\",\n679             \"age\": 26,\n680             \"eyeColor\": \"blue\",\n681             \"name\": \"Lydia Holland\",\n682             \"gender\": \"female\",\n683             \"company\": \"ESCENTA\",\n684             \"email\": \"lydiaholland@escenta.com\",\n685             \"phone\": \"+1 (927) 482-3436\",\n686             \"address\": \"554 Rockaway Parkway, Kohatk, Montana, 6316\",\n687             \"about\": \"Consectetur ea est labore commodo laborum mollit pariatur non enim. Est dolore et non laboris tempor. Ea incididunt ut adipisicing cillum labore officia tempor eiusmod commodo. Cillum fugiat ex consectetur ut nostrud anim nostrud exercitation ut duis in ea. Eu et id fugiat est duis eiusmod ullamco quis officia minim sint ea nisi in.\",\n688             \"registered\": \"2018-03-13T01:48:56 -01:00\",\n689             \"latitude\": -88.495799,\n690             \"longitude\": 71.840667,\n691             \"tags\": [\n692                 \"veniam\",\n693                 \"minim\",\n694                 \"consequat\",\n695                 \"consequat\",\n696                 \"incididunt\",\n697                 \"consequat\",\n698                 \"elit\",\n699             ],\n700             \"friends\": [\n701                 {\"id\": 0, \"name\": \"Debra Massey\"},\n702                 {\"id\": 1, \"name\": \"Weiss Savage\"},\n703                 {\"id\": 2, \"name\": \"Shannon Guerra\"},\n704             ],\n705             \"greeting\": \"Hello, Lydia Holland! You have 5 unread messages.\",\n706             \"favoriteFruit\": \"banana\",\n707         },\n708     ]\n709     assert from_file(filename=os.path.join(path, \"invalid.json\"), chunk_length=2) == [\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 507,
+      "line_range": [
+        507,
+        508,
+        509,
+        510,
+        511,
+        512,
+        513,
+        514,
+        515,
+        516,
+        517,
+        518,
+        519,
+        520,
+        521,
+        522,
+        523,
+        524,
+        525,
+        526,
+        527,
+        528,
+        529,
+        530,
+        531,
+        532,
+        533,
+        534,
+        535,
+        536,
+        537,
+        538,
+        539,
+        540,
+        541,
+        542,
+        543,
+        544,
+        545,
+        546,
+        547,
+        548,
+        549,
+        550,
+        551,
+        552,
+        553,
+        554,
+        555,
+        556,
+        557,
+        558,
+        559,
+        560,
+        561,
+        562,
+        563,
+        564,
+        565,
+        566,
+        567,
+        568,
+        569,
+        570,
+        571,
+        572,
+        573,
+        574,
+        575,
+        576,
+        577,
+        578,
+        579,
+        580,
+        581,
+        582,
+        583,
+        584,
+        585,
+        586,
+        587,
+        588,
+        589,
+        590,
+        591,
+        592,
+        593,
+        594,
+        595,
+        596,
+        597,
+        598,
+        599,
+        600,
+        601,
+        602,
+        603,
+        604,
+        605,
+        606,
+        607,
+        608,
+        609,
+        610,
+        611,
+        612,
+        613,
+        614,
+        615,
+        616,
+        617,
+        618,
+        619,
+        620,
+        621,
+        622,
+        623,
+        624,
+        625,
+        626,
+        627,
+        628,
+        629,
+        630,
+        631,
+        632,
+        633,
+        634,
+        635,
+        636,
+        637,
+        638,
+        639,
+        640,
+        641,
+        642,
+        643,
+        644,
+        645,
+        646,
+        647,
+        648,
+        649,
+        650,
+        651,
+        652,
+        653,
+        654,
+        655,
+        656,
+        657,
+        658,
+        659,
+        660,
+        661,
+        662,
+        663,
+        664,
+        665,
+        666,
+        667,
+        668,
+        669,
+        670,
+        671,
+        672,
+        673,
+        674,
+        675,
+        676,
+        677,
+        678,
+        679,
+        680,
+        681,
+        682,
+        683,
+        684,
+        685,
+        686,
+        687,
+        688,
+        689,
+        690,
+        691,
+        692,
+        693,
+        694,
+        695,
+        696,
+        697,
+        698,
+        699,
+        700,
+        701,
+        702,
+        703,
+        704,
+        705,
+        706,
+        707,
+        708
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "708     ]\n709     assert from_file(filename=os.path.join(path, \"invalid.json\"), chunk_length=2) == [\n710         {\n711             \"_id\": \"655b66256574f09bdae8abe8\",\n712             \"index\": 0,\n713             \"guid\": \"31082ae3-b0f3-4406-90f4-cc450bd4379d\",\n714             \"isActive\": False,\n715             \"balance\": \"$2,562.78\",\n716             \"picture\": \"http://placehold.it/32x32\",\n717             \"age\": 32,\n718             \"eyeColor\": \"brown\",\n719             \"name\": \"Glover Rivas\",\n720             \"gender\": \"male\",\n721             \"company\": \"EMPIRICA\",\n722             \"email\": \"gloverrivas@empirica.com\",\n723             \"phone\": \"+1 (842) 507-3063\",\n724             \"address\": \"536 Montague Terrace, Jenkinsville, Kentucky, 2235\",\n725             \"about\": \"Mollit consectetur excepteur voluptate tempor dolore ullamco enim irure ullamco non enim officia. Voluptate occaecat proident laboris ea Lorem cupidatat reprehenderit nisi nisi aliqua. Amet nulla ipsum deserunt excepteur amet ad aute aute ex. Et enim minim sit veniam est quis dolor nisi sunt quis eiusmod in. Amet eiusmod cillum sunt occaecat dolor laboris voluptate in eiusmod irure aliqua duis.\",\n726             \"registered\": \"2023-11-18T09:32:36 -01:00\",\n727             \"latitude\": 36.26102,\n728             \"longitude\": -91.304608,\n729             \"tags\": [\"non\", \"tempor\", \"do\", \"ullamco\", \"dolore\", \"sunt\", \"ipsum\"],\n730             \"friends\": [\n731                 {\"id\": 0, \"name\": \"Cara Shepherd\"},\n732                 {\"id\": 1, \"name\": \"Mason Farley\"},\n733                 {\"id\": 2, \"name\": \"Harriet Cochran\"},\n734             ],\n735             \"greeting\": \"Hello, Glover Rivas! You have 7 unread messages.\",\n736             \"favoriteFruit\": \"strawberry\",\n737         },\n738         {\n739             \"_id\": \"655b662585364bc57278bb6f\",\n740             \"index\": 1,\n741             \"guid\": \"0dea7a3a-f812-4dde-b78d-7a9b58e5da05\",\n742             \"isActive\": True,\n743             \"balance\": \"$1,359.48\",\n744             \"picture\": \"http://placehold.it/32x32\",\n745             \"age\": 38,\n746             \"eyeColor\": \"brown\",\n747             \"name\": \"Brandi Moreno\",\n748             \"gender\": \"female\",\n749             \"company\": \"MARQET\",\n750             \"email\": \"brandimoreno@marqet.com\",\n751             \"phone\": \"+1 (850) 434-2077\",\n752             \"address\": \"537 Doone Court, Waiohinu, Michigan, 3215\",\n753             \"about\": \"Irure proident adipisicing do Lorem do incididunt in laborum in eiusmod eiusmod ad elit proident. Eiusmod dolor ex magna magna occaecat. Nulla deserunt velit ex exercitation et irure sunt. Cupidatat ut excepteur ea quis labore sint cupidatat incididunt amet eu consectetur cillum ipsum proident. Occaecat exercitation aute laborum dolor proident reprehenderit laborum in voluptate culpa. Exercitation nulla adipisicing culpa aute est deserunt ea nisi deserunt consequat occaecat ut et non. Incididunt ex exercitation dolor dolor anim cillum dolore.\",\n754             \"registered\": \"2015-09-03T11:47:15 -02:00\",\n755             \"latitude\": -19.768953,\n756             \"longitude\": 8.948458,\n757             \"tags\": [\n758                 \"laboris\",\n759                 \"occaecat\",\n760                 \"laborum\",\n761                 \"laborum\",\n762                 \"ex\",\n763                 \"cillum\",\n764                 \"occaecat\",\n765             ],\n766             \"friends\": [\n767                 {\"id\": 0, \"name\": \"Erna Kelly\"},\n768                 {\"id\": 1, \"name\": \"Black Mays\"},\n769                 {\"id\": 2, \"name\": \"Davis Buck\"},\n770             ],\n771             \"greeting\": \"Hello, Brandi Moreno! You have 1 unread messages.\",\n772             \"favoriteFruit\": \"apple\",\n773         },\n774         {\n775             \"_id\": \"655b6625870da431bcf5e0c2\",\n776             \"index\": 2,\n777             \"guid\": \"b17f6e3f-c898-4334-abbf-05cf222f143b\",\n778             \"isActive\": False,\n779             \"balance\": \"$1,493.77\",\n780             \"picture\": \"http://placehold.it/32x32\",\n781             \"age\": 20,\n782             \"eyeColor\": \"brown\",\n783             \"name\": \"Moody Meadows\",\n784             \"gender\": \"male\",\n785             \"company\": \"OPTIQUE\",\n786             \"email\": \"moodymeadows@optique.com\",\n787             \"phone\": \"+1 (993) 566-3041\",\n788             \"address\": \"766 Osborn Street, Bath, Maine, 7666\",\n789             \"about\": \"Non commodo excepteur nostrud qui adipisicing aliquip dolor minim nulla culpa proident. In ad cupidatat ea mollit ex est do deserunt proident nostrud. Cillum id id eiusmod amet exercitation nostrud cillum sunt deserunt dolore deserunt eiusmod mollit. Ut ex tempor ad laboris voluptate labore id officia fugiat exercitation amet.\",\n790             \"registered\": \"2015-01-16T02:48:28 -01:00\",\n791             \"latitude\": -25.847327,\n792             \"longitude\": 63.95991,\n793             \"tags\": [\n794                 \"aute\",\n795                 \"commodo\",\n796                 \"adipisicing\",\n797                 \"nostrud\",\n798                 \"duis\",\n799                 \"mollit\",\n800                 \"ut\",\n801             ],\n802             \"friends\": [\n803                 {\"id\": 0, \"name\": \"Lacey Cash\"},\n804                 {\"id\": 1, \"name\": \"Gabrielle Harmon\"},\n805                 {\"id\": 2, \"name\": \"Ellis Lambert\"},\n806             ],\n807             \"greeting\": \"Hello, Moody Meadows! You have 4 unread messages.\",\n808             \"favoriteFruit\": \"strawberry\",\n809         },\n810         {\n811             \"_id\": \"655b6625f3e1bf422220854e\",\n812             \"index\": 3,\n813             \"guid\": \"92229883-2bfd-4974-a08c-1b506b372e46\",\n814             \"isActive\": False,\n815             \"balance\": \"$2,215.34\",\n816             \"picture\": \"http://placehold.it/32x32\",\n817             \"age\": 22,\n818             \"eyeColor\": \"brown\",\n819             \"name\": \"Heath Nguyen\",\n820             \"gender\": \"male\",\n821             \"company\": \"BLEENDOT\",\n822             \"email\": \"heathnguyen@bleendot.com\",\n823             \"phone\": \"+1 (989) 512-2797\",\n824             \"address\": \"135 Milton Street, Graniteville, Nebraska, 276\",\n825             \"about\": \"Consequat aliquip irure Lorem cupidatat nulla magna ullamco nulla voluptate adipisicing anim consectetur tempor aliquip. Magna aliqua nulla eu tempor esse proident. Proident fugiat ad ex Lorem reprehenderit dolor aliquip labore labore aliquip. Deserunt aute enim ea minim officia anim culpa sint commodo. Cillum consectetur excepteur aliqua exercitation Lorem veniam voluptate.\",\n826             \"registered\": \"2016-07-06T01:31:07 -02:00\",\n827             \"latitude\": -60.997048,\n828             \"longitude\": -102.397885,\n829             \"tags\": [\"do\", \"ad\", \"consequat\", \"irure\", \"tempor\", \"elit\", \"minim\"],\n830             \"friends\": [\n831                 {\"id\": 0, \"name\": \"Walker Hernandez\"},\n832                 {\"id\": 1, \"name\": \"Maria Lane\"},\n833                 {\"id\": 2, \"name\": \"Mcknight Barron\"},\n834             ],\n835             \"greeting\": \"Hello, Heath Nguyen! You have 4 unread messages.\",\n836             \"favoriteFruit\": \"apple\",\n837         },\n838         {\n839             \"_id\": \"655b6625519a5b5e4b6742bf\",\n840             \"index\": 4,\n841             \"guid\": \"c5dc685f-6d0d-4173-b4cf-f5df29a1e8ef\",\n842             \"isActive\": True,\n843             \"balance\": \"$1,358.90\",\n844             \"picture\": \"http://placehold.it/32x32\",\n845             \"age\": 33,\n846             \"eyeColor\": \"brown\",\n847             \"name\": \"Deidre Duke\",\n848             \"gender\": \"female\",\n849             \"company\": \"OATFARM\",\n850             \"email\": \"deidreduke@oatfarm.com\",\n851             \"phone\": \"+1 (875) 587-3256\",\n852             \"address\": \"487 Schaefer Street, Wattsville, West Virginia, 4506\",\n853             \"about\": \"Laboris eu nulla esse magna sit eu deserunt non est aliqua exercitation commodo. Ad occaecat qui qui laborum dolore anim Lorem. Est qui occaecat irure enim deserunt enim aliqua ex deserunt incididunt esse. Quis in minim laboris proident non mollit. Magna ea do labore commodo. Et elit esse esse occaecat officia ipsum nisi.\",\n854             \"registered\": \"2021-09-12T04:17:08 -02:00\",\n855             \"latitude\": 68.609781,\n856             \"longitude\": -87.509134,\n857             \"tags\": [\n858                 \"mollit\",\n859                 \"cupidatat\",\n860                 \"irure\",\n861                 \"sit\",\n862                 \"consequat\",\n863                 \"anim\",\n864                 \"fugiat\",\n865             ],\n866             \"friends\": [\n867                 {\"id\": 0, \"name\": \"Bean Paul\"},\n868                 {\"id\": 1, \"name\": \"Cochran Hubbard\"},\n869                 {\"id\": 2, \"name\": \"Rodgers Atkinson\"},\n870             ],\n871             \"greeting\": \"Hello, Deidre Duke! You have 6 unread messages.\",\n872             \"favoriteFruit\": \"apple\",\n873         },\n874         {\n875             \"_id\": \"655b6625a19b3f7e5f82f0ea\",\n876             \"index\": 5,\n877             \"guid\": \"75f3c264-baa1-47a0-b21c-4edac23d9935\",\n878             \"isActive\": True,\n879             \"balance\": \"$3,554.36\",\n880             \"picture\": \"http://placehold.it/32x32\",\n881             \"age\": 26,\n882             \"eyeColor\": \"blue\",\n883             \"name\": \"Lydia Holland\",\n884             \"gender\": \"female\",\n885             \"company\": \"ESCENTA\",\n886             \"email\": \"lydiaholland@escenta.com\",\n887             \"phone\": \"+1 (927) 482-3436\",\n888             \"address\": \"554 Rockaway Parkway, Kohatk, Montana, 6316\",\n889             \"about\": \"Consectetur ea est labore commodo laborum mollit pariatur non enim. Est dolore et non laboris tempor. Ea incididunt ut adipisicing cillum labore officia tempor eiusmod commodo. Cillum fugiat ex consectetur ut nostrud anim nostrud exercitation ut duis in ea. Eu et id fugiat est duis eiusmod ullamco quis officia minim sint ea nisi in.\",\n890             \"registered\": \"2018-03-13T01:48:56 -01:00\",\n891             \"latitude\": -88.495799,\n892             \"longitude\": 71.840667,\n893             \"tags\": [\n894                 \"veniam\",\n895                 \"minim\",\n896                 \"consequat\",\n897                 \"consequat\",\n898                 \"incididunt\",\n899                 \"consequat\",\n900                 \"elit\",\n901             ],\n902             \"friends\": [\n903                 {\"id\": 0, \"name\": \"Debra Massey\"},\n904                 {\"id\": 1, \"name\": \"Weiss Savage\"},\n905                 {\"id\": 2, \"name\": \"Shannon Guerra\"},\n906             ],\n907             \"greeting\": \"Hello, Lydia Holland! You have 5 unread messages.\",\n908             \"favoriteFruit\": \"banana\",\n909         },\n910     ]\n911 \n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 709,
+      "line_range": [
+        709,
+        710,
+        711,
+        712,
+        713,
+        714,
+        715,
+        716,
+        717,
+        718,
+        719,
+        720,
+        721,
+        722,
+        723,
+        724,
+        725,
+        726,
+        727,
+        728,
+        729,
+        730,
+        731,
+        732,
+        733,
+        734,
+        735,
+        736,
+        737,
+        738,
+        739,
+        740,
+        741,
+        742,
+        743,
+        744,
+        745,
+        746,
+        747,
+        748,
+        749,
+        750,
+        751,
+        752,
+        753,
+        754,
+        755,
+        756,
+        757,
+        758,
+        759,
+        760,
+        761,
+        762,
+        763,
+        764,
+        765,
+        766,
+        767,
+        768,
+        769,
+        770,
+        771,
+        772,
+        773,
+        774,
+        775,
+        776,
+        777,
+        778,
+        779,
+        780,
+        781,
+        782,
+        783,
+        784,
+        785,
+        786,
+        787,
+        788,
+        789,
+        790,
+        791,
+        792,
+        793,
+        794,
+        795,
+        796,
+        797,
+        798,
+        799,
+        800,
+        801,
+        802,
+        803,
+        804,
+        805,
+        806,
+        807,
+        808,
+        809,
+        810,
+        811,
+        812,
+        813,
+        814,
+        815,
+        816,
+        817,
+        818,
+        819,
+        820,
+        821,
+        822,
+        823,
+        824,
+        825,
+        826,
+        827,
+        828,
+        829,
+        830,
+        831,
+        832,
+        833,
+        834,
+        835,
+        836,
+        837,
+        838,
+        839,
+        840,
+        841,
+        842,
+        843,
+        844,
+        845,
+        846,
+        847,
+        848,
+        849,
+        850,
+        851,
+        852,
+        853,
+        854,
+        855,
+        856,
+        857,
+        858,
+        859,
+        860,
+        861,
+        862,
+        863,
+        864,
+        865,
+        866,
+        867,
+        868,
+        869,
+        870,
+        871,
+        872,
+        873,
+        874,
+        875,
+        876,
+        877,
+        878,
+        879,
+        880,
+        881,
+        882,
+        883,
+        884,
+        885,
+        886,
+        887,
+        888,
+        889,
+        890,
+        891,
+        892,
+        893,
+        894,
+        895,
+        896,
+        897,
+        898,
+        899,
+        900,
+        901,
+        902,
+        903,
+        904,
+        905,
+        906,
+        907,
+        908,
+        909,
+        910
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "917             tmp.write(\"{key:value}\")\n918         assert from_file(filename=temp_path, logging=True) == (\n919             {\"key\": \"value\"},\n920             [\n921                 {\n922                     \"text\": \"While parsing a string, we found a literal instead of a quote\",\n923                     \"context\": \"{key:value}\",\n924                 },\n925                 {\n926                     \"context\": \"{key:value}\",\n927                     \"text\": \"While parsing a string missing the left delimiter in object key context, we found a :, stopping here\",\n928                 },\n929                 {\n930                     \"text\": \"While parsing a string, we missed the closing quote, ignoring\",\n931                     \"context\": \"{key:value}\",\n932                 },\n933                 {\n934                     \"text\": \"While parsing a string, we found a literal instead of a quote\",\n935                     \"context\": \"{key:value}\",\n936                 },\n937                 {\n938                     \"context\": \"{key:value}\",\n939                     \"text\": \"While parsing a string missing the left delimiter in object value context, we found a , or } and we couldn't determine that a right delimiter was present. Stopping here\",\n940                 },\n941                 {\n942                     \"text\": \"While parsing a string, we missed the closing quote, ignoring\",\n943                     \"context\": \"{key:value}\",\n944                 },\n945             ],\n946         )\n947         assert from_file(filename=temp_path, logging=True, chunk_length=2) == (\n",
+      "col_offset": 8,
+      "end_col_offset": 9,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 918,
+      "line_range": [
+        918,
+        919,
+        920,
+        921,
+        922,
+        923,
+        924,
+        925,
+        926,
+        927,
+        928,
+        929,
+        930,
+        931,
+        932,
+        933,
+        934,
+        935,
+        936,
+        937,
+        938,
+        939,
+        940,
+        941,
+        942,
+        943,
+        944,
+        945,
+        946
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "946         )\n947         assert from_file(filename=temp_path, logging=True, chunk_length=2) == (\n948             {\"key\": \"value\"},\n949             [\n950                 {\n951                     \"text\": \"While parsing a string, we found a literal instead of a quote\",\n952                     \"context\": \"{key:value}\",\n953                 },\n954                 {\n955                     \"context\": \"{key:value}\",\n956                     \"text\": \"While parsing a string missing the left delimiter in object key context, we found a :, stopping here\",\n957                 },\n958                 {\n959                     \"text\": \"While parsing a string, we missed the closing quote, ignoring\",\n960                     \"context\": \"{key:value}\",\n961                 },\n962                 {\n963                     \"text\": \"While parsing a string, we found a literal instead of a quote\",\n964                     \"context\": \"{key:value}\",\n965                 },\n966                 {\n967                     \"context\": \"{key:value}\",\n968                     \"text\": \"While parsing a string missing the left delimiter in object value context, we found a , or } and we couldn't determine that a right delimiter was present. Stopping here\",\n969                 },\n970                 {\n971                     \"text\": \"While parsing a string, we missed the closing quote, ignoring\",\n972                     \"context\": \"{key:value}\",\n973                 },\n974             ],\n975         )\n976     finally:\n",
+      "col_offset": 8,
+      "end_col_offset": 9,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 947,
+      "line_range": [
+        947,
+        948,
+        949,
+        950,
+        951,
+        952,
+        953,
+        954,
+        955,
+        956,
+        957,
+        958,
+        959,
+        960,
+        961,
+        962,
+        963,
+        964,
+        965,
+        966,
+        967,
+        968,
+        969,
+        970,
+        971,
+        972,
+        973,
+        974,
+        975
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "985             tmp.write(\"x\" * 5 * 1024 * 1024)  # 5 MB\n986         assert from_file(filename=temp_path, logging=True) == (\"\", [])\n987 \n",
+      "col_offset": 8,
+      "end_col_offset": 70,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 986,
+      "line_range": [
+        986
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "993 def test_ensure_ascii():\n994     assert (\n995         repair_json(\"{'test_\u4e2d\u56fd\u4eba_ascii':'\u7edf\u4e00\u7801'}\", ensure_ascii=False)\n996         == '{\"test_\u4e2d\u56fd\u4eba_ascii\": \"\u7edf\u4e00\u7801\"}'\n997     )\n998 \n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 994,
+      "line_range": [
+        994,
+        995,
+        996,
+        997
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1003     # The default repair result is unstable.\n1004     assert repair_json('{\"key\": \"val\\\\', stream_stable=False) == '{\"key\": \"val\\\\\\\\\"}'\n1005     assert repair_json('{\"key\": \"val\\\\n', stream_stable=False) == '{\"key\": \"val\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 85,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1004,
+      "line_range": [
+        1004
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1004     assert repair_json('{\"key\": \"val\\\\', stream_stable=False) == '{\"key\": \"val\\\\\\\\\"}'\n1005     assert repair_json('{\"key\": \"val\\\\n', stream_stable=False) == '{\"key\": \"val\"}'\n1006     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 82,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1005,
+      "line_range": [
+        1005
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1005     assert repair_json('{\"key\": \"val\\\\n', stream_stable=False) == '{\"key\": \"val\"}'\n1006     assert (\n1007         repair_json('{\"key\": \"val\\\\n123,`key2:value2', stream_stable=False)\n1008         == '{\"key\": \"val\\\\n123\", \"key2\": \"value2\"}'\n1009     )\n1010     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1006,
+      "line_range": [
+        1006,
+        1007,
+        1008,
+        1009
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1009     )\n1010     assert (\n1011         repair_json('{\"key\": \"val\\\\n123,`key2:value2`\"}', stream_stable=True)\n1012         == '{\"key\": \"val\\\\n123,`key2:value2`\"}'\n1013     )\n1014     # stream_stable = True\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1010,
+      "line_range": [
+        1010,
+        1011,
+        1012,
+        1013
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1014     # stream_stable = True\n1015     assert repair_json('{\"key\": \"val\\\\', stream_stable=True) == '{\"key\": \"val\"}'\n1016     assert repair_json('{\"key\": \"val\\\\n', stream_stable=True) == '{\"key\": \"val\\\\n\"}'\n",
+      "col_offset": 4,
+      "end_col_offset": 80,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1015,
+      "line_range": [
+        1015
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1015     assert repair_json('{\"key\": \"val\\\\', stream_stable=True) == '{\"key\": \"val\"}'\n1016     assert repair_json('{\"key\": \"val\\\\n', stream_stable=True) == '{\"key\": \"val\\\\n\"}'\n1017     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 84,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1016,
+      "line_range": [
+        1016
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1016     assert repair_json('{\"key\": \"val\\\\n', stream_stable=True) == '{\"key\": \"val\\\\n\"}'\n1017     assert (\n1018         repair_json('{\"key\": \"val\\\\n123,`key2:value2', stream_stable=True)\n1019         == '{\"key\": \"val\\\\n123,`key2:value2\"}'\n1020     )\n1021     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1017,
+      "line_range": [
+        1017,
+        1018,
+        1019,
+        1020
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1020     )\n1021     assert (\n1022         repair_json('{\"key\": \"val\\\\n123,`key2:value2`\"}', stream_stable=True)\n1023         == '{\"key\": \"val\\\\n123,`key2:value2`\"}'\n1024     )\n1025 \n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1021,
+      "line_range": [
+        1021,
+        1022,
+        1023,
+        1024
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1035         captured = capsys.readouterr()\n1036         assert captured.out == '{\\n\"key\": \"value\"\\n}\\n'\n1037 \n",
+      "col_offset": 8,
+      "end_col_offset": 55,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1036,
+      "line_range": [
+        1036
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1042             out = tmp.read()\n1043         assert out == '{\\n\"key\": \"value\"\\n}'\n1044 \n",
+      "col_offset": 8,
+      "end_col_offset": 44,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1043,
+      "line_range": [
+        1043
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1048             out = tmp.read()\n1049         assert out == '{\\n\"key\": \"value\"\\n}'\n1050 \n",
+      "col_offset": 8,
+      "end_col_offset": 44,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1049,
+      "line_range": [
+        1049
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1063     captured = capsys.readouterr()\n1064     assert captured.out == expected_output\n",
+      "col_offset": 4,
+      "end_col_offset": 42,
+      "filename": "./tests/test_json_repair.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1064,
+      "line_range": [
+        1064
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "24     # Assert that the average time is below the threshold\n25     assert mean_time < max_time, (\n26         f\"Benchmark exceeded threshold: {mean_time:.3f}s > {max_time:.3f}s\"\n27     )\n28 \n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_performance.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 25,
+      "line_range": [
+        25,
+        26,
+        27
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "39     # Assert that the average time is below the threshold\n40     assert mean_time < max_time, (\n41         f\"Benchmark exceeded threshold: {mean_time:.3f}s > {max_time:.3f}s\"\n42     )\n43 \n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_performance.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 40,
+      "line_range": [
+        40,
+        41,
+        42
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "53     # Assert that the average time is below the threshold\n54     assert mean_time < max_time, (\n55         f\"Benchmark exceeded threshold: {mean_time:.3f}s > {max_time:.3f}s\"\n56     )\n57 \n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_performance.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 54,
+      "line_range": [
+        54,
+        55,
+        56
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "67     # Assert that the average time is below the threshold\n68     assert mean_time < max_time, (\n69         f\"Benchmark exceeded threshold: {mean_time:.3f}s > {max_time:.3f}s\"\n70     )\n71 \n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_performance.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 68,
+      "line_range": [
+        68,
+        69,
+        70
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "81     # Assert that the average time is below the threshold\n82     assert mean_time < max_time, (\n83         f\"Benchmark exceeded threshold: {mean_time:.3f}s > {max_time:.3f}s\"\n84     )\n85 \n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_performance.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 82,
+      "line_range": [
+        82,
+        83,
+        84
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "95     # Assert that the average time is below the threshold\n96     assert mean_time < max_time, (\n97         f\"Benchmark exceeded threshold: {mean_time:.3f}s > {max_time:.3f}s\"\n98     )\n99 \n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_performance.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 96,
+      "line_range": [
+        96,
+        97,
+        98
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "109     # Assert that the average time is below the threshold\n110     assert mean_time < max_time, (\n111         f\"Benchmark exceeded threshold: {mean_time:.3f}s > {max_time:.3f}s\"\n112     )\n113 \n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_performance.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 110,
+      "line_range": [
+        110,
+        111,
+        112
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "123     # Assert that the average time is below the threshold\n124     assert mean_time < max_time, (\n125         f\"Benchmark exceeded threshold: {mean_time:.3f}s > {max_time:.3f}s\"\n126     )\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/test_performance.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 124,
+      "line_range": [
+        124,
+        125,
+        126
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    }
+  ]
+}

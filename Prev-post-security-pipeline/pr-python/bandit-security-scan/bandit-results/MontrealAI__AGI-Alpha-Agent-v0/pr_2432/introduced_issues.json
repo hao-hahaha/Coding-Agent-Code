@@ -1,0 +1,22 @@
+[
+  {
+    "code": "246         _log.warning(DISCLAIMER)\n247         if API_TOKEN == \"REPLACE_ME_TOKEN\":\n248             _log.error(\"API_TOKEN is set to the default 'REPLACE_ME_TOKEN'. \" \"Edit .env to use a strong secret.\")\n",
+    "col_offset": 24,
+    "end_col_offset": 42,
+    "filename": "./src/interface/api_server.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'REPLACE_ME_TOKEN'",
+    "line_number": 247,
+    "line_range": [
+      247
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b105_hardcoded_password_string.html",
+    "test_id": "B105",
+    "test_name": "hardcoded_password_string"
+  }
+]

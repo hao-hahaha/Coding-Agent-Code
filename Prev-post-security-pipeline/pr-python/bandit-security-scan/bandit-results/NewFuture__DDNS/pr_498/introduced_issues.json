@@ -1,0 +1,102 @@
+[
+  {
+    "code": "17         super(TestAliesaProvider, self).setUp()\n18         self.provider = AliesaProvider(auth_id=\"test_access_key\", auth_token=\"test_secret_key\")\n19 \n",
+    "col_offset": 24,
+    "end_col_offset": 95,
+    "filename": "./tests/test_provider_aliesa.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'test_secret_key'",
+    "line_number": 18,
+    "line_range": [
+      18
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b106_hardcoded_password_funcarg.html",
+    "test_id": "B106",
+    "test_name": "hardcoded_password_funcarg"
+  },
+  {
+    "code": "26         \"\"\"Test AliesaProvider initialization with basic configuration\"\"\"\n27         provider = AliesaProvider(auth_id=\"test_access_key\", auth_token=\"test_secret_key\")\n28         self.assertEqual(provider.auth_id, \"test_access_key\")\n",
+    "col_offset": 19,
+    "end_col_offset": 90,
+    "filename": "./tests/test_provider_aliesa.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'test_secret_key'",
+    "line_number": 27,
+    "line_range": [
+      27
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b106_hardcoded_password_funcarg.html",
+    "test_id": "B106",
+    "test_name": "hardcoded_password_funcarg"
+  },
+  {
+    "code": "34         with self.assertRaises(ValueError):\n35             AliesaProvider(auth_id=\"\", auth_token=\"\")\n36 \n",
+    "col_offset": 12,
+    "end_col_offset": 53,
+    "filename": "./tests/test_provider_aliesa.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: ''",
+    "line_number": 35,
+    "line_range": [
+      35
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b106_hardcoded_password_funcarg.html",
+    "test_id": "B106",
+    "test_name": "hardcoded_password_funcarg"
+  },
+  {
+    "code": "345         super(TestAliesaProviderIntegration, self).setUp()\n346         self.provider = AliesaProvider(auth_id=\"test_access_key\", auth_token=\"test_secret_key\")\n347 \n",
+    "col_offset": 24,
+    "end_col_offset": 95,
+    "filename": "./tests/test_provider_aliesa.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'test_secret_key'",
+    "line_number": 346,
+    "line_range": [
+      346
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b106_hardcoded_password_funcarg.html",
+    "test_id": "B106",
+    "test_name": "hardcoded_password_funcarg"
+  },
+  {
+    "code": "476         super(TestAliesaProviderAPIResponse, self).setUp()\n477         self.provider = AliesaProvider(auth_id=\"test_access_key\", auth_token=\"test_secret_key\")\n478 \n",
+    "col_offset": 24,
+    "end_col_offset": 95,
+    "filename": "./tests/test_provider_aliesa.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'test_secret_key'",
+    "line_number": 477,
+    "line_range": [
+      477
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b106_hardcoded_password_funcarg.html",
+    "test_id": "B106",
+    "test_name": "hardcoded_password_funcarg"
+  }
+]

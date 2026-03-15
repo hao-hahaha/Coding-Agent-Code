@@ -1,0 +1,110 @@
+[
+  {
+    "code": "34 import resource\n35 import subprocess\n36 import sys\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./alpha_factory_v1/demos/meta_agentic_agi_v3/curriculum/azr_engine.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 35,
+    "line_range": [
+      35
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "79         resource.setrlimit(resource.RLIMIT_CPU, (SOFT_T, SOFT_T))\n80     except Exception:\n81         pass  # non‑POSIX platforms\n82 \n",
+    "col_offset": 4,
+    "end_col_offset": 12,
+    "filename": "./alpha_factory_v1/demos/meta_agentic_agi_v3/curriculum/azr_engine.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 80,
+    "line_range": [
+      80,
+      81
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "92         try:\n93             proc = subprocess.Popen(\n94                 [sys.executable, script],\n95                 stdin=subprocess.PIPE,\n96                 stdout=subprocess.PIPE,\n97                 stderr=subprocess.PIPE,\n98                 text=True,\n99             )\n100             try:\n",
+    "col_offset": 19,
+    "end_col_offset": 13,
+    "filename": "./alpha_factory_v1/demos/meta_agentic_agi_v3/curriculum/azr_engine.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 93,
+    "line_range": [
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "154             return max((b.complexity for b in cc_visit(py_src) if b.lineno == 1), default=1.0)\n155         except Exception:\n156             pass\n157     # Fallback: #nodes / 10  (heuristic)\n",
+    "col_offset": 8,
+    "end_col_offset": 16,
+    "filename": "./alpha_factory_v1/demos/meta_agentic_agi_v3/curriculum/azr_engine.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 155,
+    "line_range": [
+      155,
+      156
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "208         self.log = logger or (lambda m: LOG.info(m))\n209         self._rng = random.Random(RNG_SEED)\n210 \n",
+    "col_offset": 20,
+    "end_col_offset": 43,
+    "filename": "./alpha_factory_v1/demos/meta_agentic_agi_v3/curriculum/azr_engine.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 209,
+    "line_range": [
+      209
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  }
+]

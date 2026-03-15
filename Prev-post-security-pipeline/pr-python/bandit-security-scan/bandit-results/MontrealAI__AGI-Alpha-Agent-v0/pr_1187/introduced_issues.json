@@ -1,0 +1,24 @@
+[
+  {
+    "code": "53     diff_ratio = diff_bits / max_bits\n54     assert diff_ratio <= 0.001, (\n55         f\"Checksum differs by {diff_ratio*100:.3f}% (threshold 0.1%)\"\n56     )\n",
+    "col_offset": 4,
+    "end_col_offset": 5,
+    "filename": "./tests/test_checksum.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 54,
+    "line_range": [
+      54,
+      55,
+      56
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

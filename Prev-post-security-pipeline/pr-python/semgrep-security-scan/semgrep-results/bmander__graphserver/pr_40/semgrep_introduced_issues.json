@@ -1,0 +1,52 @@
+[
+  {
+    "check_id": "python.flask.security.audit.app-run-param-config.avoid_app_run_with_bad_host",
+    "path": "pygs/graphserver/cli.py",
+    "start": {
+      "line": 377,
+      "col": 5,
+      "offset": 12427
+    },
+    "end": {
+      "line": 377,
+      "col": 39,
+      "offset": 12461
+    },
+    "extra": {
+      "message": "Running flask app with host 0.0.0.0 could expose the server publicly.",
+      "metadata": {
+        "cwe": [
+          "CWE-668: Exposure of Resource to Wrong Sphere"
+        ],
+        "owasp": [
+          "A01:2021 - Broken Access Control",
+          "A01:2025 - Broken Access Control"
+        ],
+        "category": "security",
+        "technology": [
+          "flask"
+        ],
+        "references": [
+          "https://owasp.org/Top10/A01_2021-Broken_Access_Control"
+        ],
+        "subcategory": [
+          "vuln"
+        ],
+        "likelihood": "HIGH",
+        "impact": "MEDIUM",
+        "confidence": "HIGH",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Other"
+        ],
+        "source": "https://semgrep.dev/r/python.flask.security.audit.app-run-param-config.avoid_app_run_with_bad_host",
+        "shortlink": "https://sg.run/eLby"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  }
+]

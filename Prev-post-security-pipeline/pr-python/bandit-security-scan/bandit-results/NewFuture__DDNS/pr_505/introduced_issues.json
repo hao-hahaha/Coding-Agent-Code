@@ -1,0 +1,22 @@
+[
+  {
+    "code": "19         self.auth_id = \"test_username\"\n20         self.auth_token = \"test_password\"\n21 \n",
+    "col_offset": 26,
+    "end_col_offset": 41,
+    "filename": "./tests/test_provider_noip.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'test_password'",
+    "line_number": 20,
+    "line_range": [
+      20
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b105_hardcoded_password_string.html",
+    "test_id": "B105",
+    "test_name": "hardcoded_password_string"
+  }
+]

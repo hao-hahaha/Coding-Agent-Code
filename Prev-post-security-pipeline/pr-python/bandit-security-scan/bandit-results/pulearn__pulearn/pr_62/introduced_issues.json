@@ -1,0 +1,82 @@
+[
+  {
+    "code": "77     # Verify that the classifier is fitted\n78     assert pu_estimator.estimator_fitted is True\n79     assert pu_estimator.c > 0\n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/test_elkanoto_edge_cases.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 78,
+    "line_range": [
+      78
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "78     assert pu_estimator.estimator_fitted is True\n79     assert pu_estimator.c > 0\n80 \n",
+    "col_offset": 4,
+    "end_col_offset": 29,
+    "filename": "./tests/test_elkanoto_edge_cases.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 79,
+    "line_range": [
+      79
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "105     # Verify that the classifier is fitted\n106     assert pu_estimator.estimator_fitted is True\n107     # c can be 0 if the classifier predicts all as negative, which is valid\n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/test_elkanoto_edge_cases.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 106,
+    "line_range": [
+      106
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "107     # c can be 0 if the classifier predicts all as negative, which is valid\n108     assert pu_estimator.c >= 0\n",
+    "col_offset": 4,
+    "end_col_offset": 30,
+    "filename": "./tests/test_elkanoto_edge_cases.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 108,
+    "line_range": [
+      108
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

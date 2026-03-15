@@ -1,0 +1,42 @@
+[
+  {
+    "code": "291             \"SIM_RESULTS_DIR\",\n292             os.path.join(os.getenv(\"ALPHA_DATA_DIR\", \"/tmp/alphafactory\"), \"simulations\"),\n293         )\n",
+    "col_offset": 53,
+    "end_col_offset": 72,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/interface/cli.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 377,
+      "link": "https://cwe.mitre.org/data/definitions/377.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Probable insecure usage of temp file/directory.",
+    "line_number": 292,
+    "line_range": [
+      292
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b108_hardcoded_tmp_directory.html",
+    "test_id": "B108",
+    "test_name": "hardcoded_tmp_directory"
+  },
+  {
+    "code": "16         sigma = statistics.pstdev(vals)\n17         assert all(abs(v - mean) < 2 * sigma + 1e-12 for v in vals)\n18 \n",
+    "col_offset": 8,
+    "end_col_offset": 67,
+    "filename": "./tests/test_foresight.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 17,
+    "line_range": [
+      17
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

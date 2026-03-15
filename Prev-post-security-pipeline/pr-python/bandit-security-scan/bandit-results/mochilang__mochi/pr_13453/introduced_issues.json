@@ -1,0 +1,22 @@
+[
+  {
+    "code": "8 for pair in [[\"d41d8cd98f00b204e9800998ecf8427e\", \"\"], [\"0cc175b9c0f1b6a831c399e269772661\", \"a\"], [\"900150983cd24fb0d6963f7d28e17f72\", \"abc\"], [\"f96b697d7cb7938d525a2f31aaf161d0\", \"message digest\"], [\"c3fcd3d76192e4007dfb496cca67e13b\", \"abcdefghijklmnopqrstuvwxyz\"], [\"d174ab98d277d9f5a5611c2c9f419d9f\", \"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789\"], [\"57edf4a22be3c955ac49da2e2107b67a\", \"12345678901234567890\" + \"123456789012345678901234567890123456789012345678901234567890\"], [\"e38ca1d920c4b8b8d3946b2c72f01680\", \"The quick brown fox jumped over the lazy dog's back\"]]:\n9     sum = hashlib.md5(pair[1].encode()).hexdigest()\n10     if sum != pair[0]:\n",
+    "col_offset": 10,
+    "end_col_offset": 39,
+    "filename": "./tests/rosetta/transpiler/Python/md5.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 327,
+      "link": "https://cwe.mitre.org/data/definitions/327.html"
+    },
+    "issue_severity": "HIGH",
+    "issue_text": "Use of weak MD5 hash for security. Consider usedforsecurity=False",
+    "line_number": 9,
+    "line_range": [
+      9
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b324_hashlib.html",
+    "test_id": "B324",
+    "test_name": "hashlib"
+  }
+]

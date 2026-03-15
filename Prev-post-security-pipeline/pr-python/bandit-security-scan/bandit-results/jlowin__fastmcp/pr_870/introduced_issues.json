@@ -1,0 +1,2877 @@
+[
+  {
+    "code": "78         identifier = dict(hook=hook, method=method)\n79         assert actual_times == times, (\n80             f\"Expected {times} calls for {identifier}, \"\n81             f\"but was called {actual_times} times\"\n82         )\n83         return True\n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 79,
+    "line_range": [
+      79,
+      80,
+      81,
+      82
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "87         calls = self.get_calls(hook=hook, method=method)\n88         assert len(calls) == 0, f\"Expected {hook!r} to not be called\"\n89         return True\n",
+    "col_offset": 8,
+    "end_col_offset": 69,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 88,
+    "line_range": [
+      88
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "156 \n157         assert recording_middleware.assert_called(times=3)\n158         assert recording_middleware.assert_called(method=\"tools/call\", times=3)\n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 157,
+    "line_range": [
+      157
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "157         assert recording_middleware.assert_called(times=3)\n158         assert recording_middleware.assert_called(method=\"tools/call\", times=3)\n159         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 79,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 158,
+    "line_range": [
+      158
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "158         assert recording_middleware.assert_called(method=\"tools/call\", times=3)\n159         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n160         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 159,
+    "line_range": [
+      159
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "159         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n160         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n161         assert recording_middleware.assert_called(hook=\"on_call_tool\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 160,
+    "line_range": [
+      160
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "160         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n161         assert recording_middleware.assert_called(hook=\"on_call_tool\", times=1)\n162 \n",
+    "col_offset": 8,
+    "end_col_offset": 79,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 161,
+    "line_range": [
+      161
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "168 \n169         assert recording_middleware.assert_called(times=3)\n170         assert recording_middleware.assert_called(method=\"resources/read\", times=3)\n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 169,
+    "line_range": [
+      169
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "169         assert recording_middleware.assert_called(times=3)\n170         assert recording_middleware.assert_called(method=\"resources/read\", times=3)\n171         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 83,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 170,
+    "line_range": [
+      170
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "170         assert recording_middleware.assert_called(method=\"resources/read\", times=3)\n171         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n172         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 171,
+    "line_range": [
+      171
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "171         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n172         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n173         assert recording_middleware.assert_called(hook=\"on_read_resource\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 172,
+    "line_range": [
+      172
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "172         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n173         assert recording_middleware.assert_called(hook=\"on_read_resource\", times=1)\n174 \n",
+    "col_offset": 8,
+    "end_col_offset": 83,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 173,
+    "line_range": [
+      173
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "180 \n181         assert recording_middleware.assert_called(times=3)\n182         assert recording_middleware.assert_called(method=\"resources/read\", times=3)\n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 181,
+    "line_range": [
+      181
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "181         assert recording_middleware.assert_called(times=3)\n182         assert recording_middleware.assert_called(method=\"resources/read\", times=3)\n183         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 83,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 182,
+    "line_range": [
+      182
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "182         assert recording_middleware.assert_called(method=\"resources/read\", times=3)\n183         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n184         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 183,
+    "line_range": [
+      183
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "183         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n184         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n185         assert recording_middleware.assert_called(hook=\"on_read_resource\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 184,
+    "line_range": [
+      184
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "184         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n185         assert recording_middleware.assert_called(hook=\"on_read_resource\", times=1)\n186 \n",
+    "col_offset": 8,
+    "end_col_offset": 83,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 185,
+    "line_range": [
+      185
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "192 \n193         assert recording_middleware.assert_called(times=3)\n194         assert recording_middleware.assert_called(method=\"prompts/get\", times=3)\n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 193,
+    "line_range": [
+      193
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "193         assert recording_middleware.assert_called(times=3)\n194         assert recording_middleware.assert_called(method=\"prompts/get\", times=3)\n195         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 80,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 194,
+    "line_range": [
+      194
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "194         assert recording_middleware.assert_called(method=\"prompts/get\", times=3)\n195         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n196         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 195,
+    "line_range": [
+      195
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "195         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n196         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n197         assert recording_middleware.assert_called(hook=\"on_get_prompt\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 196,
+    "line_range": [
+      196
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "196         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n197         assert recording_middleware.assert_called(hook=\"on_get_prompt\", times=1)\n198 \n",
+    "col_offset": 8,
+    "end_col_offset": 80,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 197,
+    "line_range": [
+      197
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "204 \n205         assert recording_middleware.assert_called(times=3)\n206         assert recording_middleware.assert_called(method=\"tools/list\", times=3)\n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 205,
+    "line_range": [
+      205
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "205         assert recording_middleware.assert_called(times=3)\n206         assert recording_middleware.assert_called(method=\"tools/list\", times=3)\n207         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 79,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 206,
+    "line_range": [
+      206
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "206         assert recording_middleware.assert_called(method=\"tools/list\", times=3)\n207         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n208         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 207,
+    "line_range": [
+      207
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "207         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n208         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n209         assert recording_middleware.assert_called(hook=\"on_list_tools\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 208,
+    "line_range": [
+      208
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "208         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n209         assert recording_middleware.assert_called(hook=\"on_list_tools\", times=1)\n210 \n",
+    "col_offset": 8,
+    "end_col_offset": 80,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 209,
+    "line_range": [
+      209
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "216 \n217         assert recording_middleware.assert_called(times=3)\n218         assert recording_middleware.assert_called(method=\"resources/list\", times=3)\n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 217,
+    "line_range": [
+      217
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "217         assert recording_middleware.assert_called(times=3)\n218         assert recording_middleware.assert_called(method=\"resources/list\", times=3)\n219         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 83,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 218,
+    "line_range": [
+      218
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "218         assert recording_middleware.assert_called(method=\"resources/list\", times=3)\n219         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n220         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 219,
+    "line_range": [
+      219
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "219         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n220         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n221         assert recording_middleware.assert_called(hook=\"on_list_resources\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 220,
+    "line_range": [
+      220
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "220         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n221         assert recording_middleware.assert_called(hook=\"on_list_resources\", times=1)\n222 \n",
+    "col_offset": 8,
+    "end_col_offset": 84,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 221,
+    "line_range": [
+      221
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "228 \n229         assert recording_middleware.assert_called(times=3)\n230         assert recording_middleware.assert_called(\n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 229,
+    "line_range": [
+      229
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "229         assert recording_middleware.assert_called(times=3)\n230         assert recording_middleware.assert_called(\n231             method=\"resources/templates/list\", times=3\n232         )\n233         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 230,
+    "line_range": [
+      230,
+      231,
+      232
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "232         )\n233         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n234         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 233,
+    "line_range": [
+      233
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "233         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n234         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n235         assert recording_middleware.assert_called(\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 234,
+    "line_range": [
+      234
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "234         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n235         assert recording_middleware.assert_called(\n236             hook=\"on_list_resource_templates\", times=1\n237         )\n238 \n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 235,
+    "line_range": [
+      235,
+      236,
+      237
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "244 \n245         assert recording_middleware.assert_called(times=3)\n246         assert recording_middleware.assert_called(method=\"prompts/list\", times=3)\n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 245,
+    "line_range": [
+      245
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "245         assert recording_middleware.assert_called(times=3)\n246         assert recording_middleware.assert_called(method=\"prompts/list\", times=3)\n247         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 81,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 246,
+    "line_range": [
+      246
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "246         assert recording_middleware.assert_called(method=\"prompts/list\", times=3)\n247         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n248         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 247,
+    "line_range": [
+      247
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "247         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n248         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n249         assert recording_middleware.assert_called(hook=\"on_list_prompts\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 248,
+    "line_range": [
+      248
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "248         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n249         assert recording_middleware.assert_called(hook=\"on_list_prompts\", times=1)\n250 \n",
+    "col_offset": 8,
+    "end_col_offset": 82,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 249,
+    "line_range": [
+      249
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "305 \n306         assert recording_middleware.assert_called(times=3)\n307         assert recording_middleware.assert_called(method=\"tools/call\", times=3)\n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 306,
+    "line_range": [
+      306
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "306         assert recording_middleware.assert_called(times=3)\n307         assert recording_middleware.assert_called(method=\"tools/call\", times=3)\n308         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 79,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 307,
+    "line_range": [
+      307
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "307         assert recording_middleware.assert_called(method=\"tools/call\", times=3)\n308         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n309         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 308,
+    "line_range": [
+      308
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "308         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n309         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n310         assert recording_middleware.assert_called(hook=\"on_call_tool\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 309,
+    "line_range": [
+      309
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "309         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n310         assert recording_middleware.assert_called(hook=\"on_call_tool\", times=1)\n311 \n",
+    "col_offset": 8,
+    "end_col_offset": 79,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 310,
+    "line_range": [
+      310
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "311 \n312         assert nested_middleware.assert_called(times=0)\n313 \n",
+    "col_offset": 8,
+    "end_col_offset": 55,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 312,
+    "line_range": [
+      312
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "325 \n326         assert recording_middleware.assert_called(times=3)\n327         assert recording_middleware.assert_called(method=\"tools/call\", times=3)\n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 326,
+    "line_range": [
+      326
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "326         assert recording_middleware.assert_called(times=3)\n327         assert recording_middleware.assert_called(method=\"tools/call\", times=3)\n328         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 79,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 327,
+    "line_range": [
+      327
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "327         assert recording_middleware.assert_called(method=\"tools/call\", times=3)\n328         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n329         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 328,
+    "line_range": [
+      328
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "328         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n329         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n330         assert recording_middleware.assert_called(hook=\"on_call_tool\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 329,
+    "line_range": [
+      329
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "329         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n330         assert recording_middleware.assert_called(hook=\"on_call_tool\", times=1)\n331 \n",
+    "col_offset": 8,
+    "end_col_offset": 79,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 330,
+    "line_range": [
+      330
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "331 \n332         assert nested_middleware.assert_called(times=3)\n333         assert nested_middleware.assert_called(method=\"tools/call\", times=3)\n",
+    "col_offset": 8,
+    "end_col_offset": 55,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 332,
+    "line_range": [
+      332
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "332         assert nested_middleware.assert_called(times=3)\n333         assert nested_middleware.assert_called(method=\"tools/call\", times=3)\n334         assert nested_middleware.assert_called(hook=\"on_message\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 76,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 333,
+    "line_range": [
+      333
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "333         assert nested_middleware.assert_called(method=\"tools/call\", times=3)\n334         assert nested_middleware.assert_called(hook=\"on_message\", times=1)\n335         assert nested_middleware.assert_called(hook=\"on_request\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 74,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 334,
+    "line_range": [
+      334
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "334         assert nested_middleware.assert_called(hook=\"on_message\", times=1)\n335         assert nested_middleware.assert_called(hook=\"on_request\", times=1)\n336         assert nested_middleware.assert_called(hook=\"on_call_tool\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 74,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 335,
+    "line_range": [
+      335
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "335         assert nested_middleware.assert_called(hook=\"on_request\", times=1)\n336         assert nested_middleware.assert_called(hook=\"on_call_tool\", times=1)\n337 \n",
+    "col_offset": 8,
+    "end_col_offset": 76,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 336,
+    "line_range": [
+      336
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "349 \n350         assert recording_middleware.assert_called(times=3)\n351         assert recording_middleware.assert_called(method=\"resources/read\", times=3)\n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 350,
+    "line_range": [
+      350
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "350         assert recording_middleware.assert_called(times=3)\n351         assert recording_middleware.assert_called(method=\"resources/read\", times=3)\n352         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 83,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 351,
+    "line_range": [
+      351
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "351         assert recording_middleware.assert_called(method=\"resources/read\", times=3)\n352         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n353         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 352,
+    "line_range": [
+      352
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "352         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n353         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n354         assert recording_middleware.assert_called(hook=\"on_read_resource\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 353,
+    "line_range": [
+      353
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "353         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n354         assert recording_middleware.assert_called(hook=\"on_read_resource\", times=1)\n355 \n",
+    "col_offset": 8,
+    "end_col_offset": 83,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 354,
+    "line_range": [
+      354
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "355 \n356         assert nested_middleware.assert_called(times=0)\n357 \n",
+    "col_offset": 8,
+    "end_col_offset": 55,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 356,
+    "line_range": [
+      356
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "369 \n370         assert recording_middleware.assert_called(times=3)\n371         assert recording_middleware.assert_called(method=\"resources/read\", times=3)\n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 370,
+    "line_range": [
+      370
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "370         assert recording_middleware.assert_called(times=3)\n371         assert recording_middleware.assert_called(method=\"resources/read\", times=3)\n372         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 83,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 371,
+    "line_range": [
+      371
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "371         assert recording_middleware.assert_called(method=\"resources/read\", times=3)\n372         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n373         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 372,
+    "line_range": [
+      372
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "372         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n373         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n374         assert recording_middleware.assert_called(hook=\"on_read_resource\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 373,
+    "line_range": [
+      373
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "373         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n374         assert recording_middleware.assert_called(hook=\"on_read_resource\", times=1)\n375 \n",
+    "col_offset": 8,
+    "end_col_offset": 83,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 374,
+    "line_range": [
+      374
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "375 \n376         assert nested_middleware.assert_called(times=3)\n377         assert nested_middleware.assert_called(method=\"resources/read\", times=3)\n",
+    "col_offset": 8,
+    "end_col_offset": 55,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 376,
+    "line_range": [
+      376
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "376         assert nested_middleware.assert_called(times=3)\n377         assert nested_middleware.assert_called(method=\"resources/read\", times=3)\n378         assert nested_middleware.assert_called(hook=\"on_message\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 80,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 377,
+    "line_range": [
+      377
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "377         assert nested_middleware.assert_called(method=\"resources/read\", times=3)\n378         assert nested_middleware.assert_called(hook=\"on_message\", times=1)\n379         assert nested_middleware.assert_called(hook=\"on_request\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 74,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 378,
+    "line_range": [
+      378
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "378         assert nested_middleware.assert_called(hook=\"on_message\", times=1)\n379         assert nested_middleware.assert_called(hook=\"on_request\", times=1)\n380         assert nested_middleware.assert_called(hook=\"on_read_resource\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 74,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 379,
+    "line_range": [
+      379
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "379         assert nested_middleware.assert_called(hook=\"on_request\", times=1)\n380         assert nested_middleware.assert_called(hook=\"on_read_resource\", times=1)\n381 \n",
+    "col_offset": 8,
+    "end_col_offset": 80,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 380,
+    "line_range": [
+      380
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "393 \n394         assert recording_middleware.assert_called(times=3)\n395         assert recording_middleware.assert_called(method=\"resources/read\", times=3)\n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 394,
+    "line_range": [
+      394
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "394         assert recording_middleware.assert_called(times=3)\n395         assert recording_middleware.assert_called(method=\"resources/read\", times=3)\n396         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 83,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 395,
+    "line_range": [
+      395
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "395         assert recording_middleware.assert_called(method=\"resources/read\", times=3)\n396         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n397         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 396,
+    "line_range": [
+      396
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "396         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n397         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n398         assert recording_middleware.assert_called(hook=\"on_read_resource\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 397,
+    "line_range": [
+      397
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "397         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n398         assert recording_middleware.assert_called(hook=\"on_read_resource\", times=1)\n399 \n",
+    "col_offset": 8,
+    "end_col_offset": 83,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 398,
+    "line_range": [
+      398
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "399 \n400         assert nested_middleware.assert_called(times=0)\n401 \n",
+    "col_offset": 8,
+    "end_col_offset": 55,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 400,
+    "line_range": [
+      400
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "413 \n414         assert recording_middleware.assert_called(times=3)\n415         assert recording_middleware.assert_called(method=\"resources/read\", times=3)\n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 414,
+    "line_range": [
+      414
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "414         assert recording_middleware.assert_called(times=3)\n415         assert recording_middleware.assert_called(method=\"resources/read\", times=3)\n416         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 83,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 415,
+    "line_range": [
+      415
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "415         assert recording_middleware.assert_called(method=\"resources/read\", times=3)\n416         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n417         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 416,
+    "line_range": [
+      416
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "416         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n417         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n418         assert recording_middleware.assert_called(hook=\"on_read_resource\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 417,
+    "line_range": [
+      417
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "417         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n418         assert recording_middleware.assert_called(hook=\"on_read_resource\", times=1)\n419 \n",
+    "col_offset": 8,
+    "end_col_offset": 83,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 418,
+    "line_range": [
+      418
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "419 \n420         assert nested_middleware.assert_called(times=3)\n421         assert nested_middleware.assert_called(method=\"resources/read\", times=3)\n",
+    "col_offset": 8,
+    "end_col_offset": 55,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 420,
+    "line_range": [
+      420
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "420         assert nested_middleware.assert_called(times=3)\n421         assert nested_middleware.assert_called(method=\"resources/read\", times=3)\n422         assert nested_middleware.assert_called(hook=\"on_message\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 80,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 421,
+    "line_range": [
+      421
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "421         assert nested_middleware.assert_called(method=\"resources/read\", times=3)\n422         assert nested_middleware.assert_called(hook=\"on_message\", times=1)\n423         assert nested_middleware.assert_called(hook=\"on_request\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 74,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 422,
+    "line_range": [
+      422
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "422         assert nested_middleware.assert_called(hook=\"on_message\", times=1)\n423         assert nested_middleware.assert_called(hook=\"on_request\", times=1)\n424         assert nested_middleware.assert_called(hook=\"on_read_resource\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 74,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 423,
+    "line_range": [
+      423
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "423         assert nested_middleware.assert_called(hook=\"on_request\", times=1)\n424         assert nested_middleware.assert_called(hook=\"on_read_resource\", times=1)\n425 \n",
+    "col_offset": 8,
+    "end_col_offset": 80,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 424,
+    "line_range": [
+      424
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "437 \n438         assert recording_middleware.assert_called(times=3)\n439         assert recording_middleware.assert_called(method=\"prompts/get\", times=3)\n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 438,
+    "line_range": [
+      438
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "438         assert recording_middleware.assert_called(times=3)\n439         assert recording_middleware.assert_called(method=\"prompts/get\", times=3)\n440         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 80,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 439,
+    "line_range": [
+      439
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "439         assert recording_middleware.assert_called(method=\"prompts/get\", times=3)\n440         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n441         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 440,
+    "line_range": [
+      440
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "440         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n441         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n442         assert recording_middleware.assert_called(hook=\"on_get_prompt\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 441,
+    "line_range": [
+      441
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "441         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n442         assert recording_middleware.assert_called(hook=\"on_get_prompt\", times=1)\n443 \n",
+    "col_offset": 8,
+    "end_col_offset": 80,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 442,
+    "line_range": [
+      442
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "443 \n444         assert nested_middleware.assert_called(times=0)\n445 \n",
+    "col_offset": 8,
+    "end_col_offset": 55,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 444,
+    "line_range": [
+      444
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "457 \n458         assert recording_middleware.assert_called(times=3)\n459         assert recording_middleware.assert_called(method=\"prompts/get\", times=3)\n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 458,
+    "line_range": [
+      458
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "458         assert recording_middleware.assert_called(times=3)\n459         assert recording_middleware.assert_called(method=\"prompts/get\", times=3)\n460         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 80,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 459,
+    "line_range": [
+      459
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "459         assert recording_middleware.assert_called(method=\"prompts/get\", times=3)\n460         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n461         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 460,
+    "line_range": [
+      460
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "460         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n461         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n462         assert recording_middleware.assert_called(hook=\"on_get_prompt\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 461,
+    "line_range": [
+      461
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "461         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n462         assert recording_middleware.assert_called(hook=\"on_get_prompt\", times=1)\n463 \n",
+    "col_offset": 8,
+    "end_col_offset": 80,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 462,
+    "line_range": [
+      462
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "463 \n464         assert nested_middleware.assert_called(times=3)\n465         assert nested_middleware.assert_called(method=\"prompts/get\", times=3)\n",
+    "col_offset": 8,
+    "end_col_offset": 55,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 464,
+    "line_range": [
+      464
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "464         assert nested_middleware.assert_called(times=3)\n465         assert nested_middleware.assert_called(method=\"prompts/get\", times=3)\n466         assert nested_middleware.assert_called(hook=\"on_message\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 465,
+    "line_range": [
+      465
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "465         assert nested_middleware.assert_called(method=\"prompts/get\", times=3)\n466         assert nested_middleware.assert_called(hook=\"on_message\", times=1)\n467         assert nested_middleware.assert_called(hook=\"on_request\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 74,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 466,
+    "line_range": [
+      466
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "466         assert nested_middleware.assert_called(hook=\"on_message\", times=1)\n467         assert nested_middleware.assert_called(hook=\"on_request\", times=1)\n468         assert nested_middleware.assert_called(hook=\"on_get_prompt\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 74,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 467,
+    "line_range": [
+      467
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "467         assert nested_middleware.assert_called(hook=\"on_request\", times=1)\n468         assert nested_middleware.assert_called(hook=\"on_get_prompt\", times=1)\n469 \n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 468,
+    "line_range": [
+      468
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "481 \n482         assert recording_middleware.assert_called(times=3)\n483         assert recording_middleware.assert_called(method=\"tools/list\", times=3)\n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 482,
+    "line_range": [
+      482
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "482         assert recording_middleware.assert_called(times=3)\n483         assert recording_middleware.assert_called(method=\"tools/list\", times=3)\n484         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 79,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 483,
+    "line_range": [
+      483
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "483         assert recording_middleware.assert_called(method=\"tools/list\", times=3)\n484         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n485         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 484,
+    "line_range": [
+      484
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "484         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n485         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n486         assert recording_middleware.assert_called(hook=\"on_list_tools\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 485,
+    "line_range": [
+      485
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "485         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n486         assert recording_middleware.assert_called(hook=\"on_list_tools\", times=1)\n487 \n",
+    "col_offset": 8,
+    "end_col_offset": 80,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 486,
+    "line_range": [
+      486
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "487 \n488         assert nested_middleware.assert_called(times=3)\n489         assert nested_middleware.assert_called(method=\"tools/list\", times=3)\n",
+    "col_offset": 8,
+    "end_col_offset": 55,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 488,
+    "line_range": [
+      488
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "488         assert nested_middleware.assert_called(times=3)\n489         assert nested_middleware.assert_called(method=\"tools/list\", times=3)\n490         assert nested_middleware.assert_called(hook=\"on_message\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 76,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 489,
+    "line_range": [
+      489
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "489         assert nested_middleware.assert_called(method=\"tools/list\", times=3)\n490         assert nested_middleware.assert_called(hook=\"on_message\", times=1)\n491         assert nested_middleware.assert_called(hook=\"on_request\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 74,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 490,
+    "line_range": [
+      490
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "490         assert nested_middleware.assert_called(hook=\"on_message\", times=1)\n491         assert nested_middleware.assert_called(hook=\"on_request\", times=1)\n492         assert nested_middleware.assert_called(hook=\"on_list_tools\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 74,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 491,
+    "line_range": [
+      491
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "491         assert nested_middleware.assert_called(hook=\"on_request\", times=1)\n492         assert nested_middleware.assert_called(hook=\"on_list_tools\", times=1)\n493 \n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 492,
+    "line_range": [
+      492
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "505 \n506         assert recording_middleware.assert_called(times=3)\n507         assert recording_middleware.assert_called(method=\"resources/list\", times=3)\n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 506,
+    "line_range": [
+      506
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "506         assert recording_middleware.assert_called(times=3)\n507         assert recording_middleware.assert_called(method=\"resources/list\", times=3)\n508         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 83,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 507,
+    "line_range": [
+      507
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "507         assert recording_middleware.assert_called(method=\"resources/list\", times=3)\n508         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n509         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 508,
+    "line_range": [
+      508
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "508         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n509         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n510         assert recording_middleware.assert_called(hook=\"on_list_resources\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 509,
+    "line_range": [
+      509
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "509         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n510         assert recording_middleware.assert_called(hook=\"on_list_resources\", times=1)\n511 \n",
+    "col_offset": 8,
+    "end_col_offset": 84,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 510,
+    "line_range": [
+      510
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "511 \n512         assert nested_middleware.assert_called(times=3)\n513         assert nested_middleware.assert_called(method=\"resources/list\", times=3)\n",
+    "col_offset": 8,
+    "end_col_offset": 55,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 512,
+    "line_range": [
+      512
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "512         assert nested_middleware.assert_called(times=3)\n513         assert nested_middleware.assert_called(method=\"resources/list\", times=3)\n514         assert nested_middleware.assert_called(hook=\"on_message\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 80,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 513,
+    "line_range": [
+      513
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "513         assert nested_middleware.assert_called(method=\"resources/list\", times=3)\n514         assert nested_middleware.assert_called(hook=\"on_message\", times=1)\n515         assert nested_middleware.assert_called(hook=\"on_request\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 74,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 514,
+    "line_range": [
+      514
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "514         assert nested_middleware.assert_called(hook=\"on_message\", times=1)\n515         assert nested_middleware.assert_called(hook=\"on_request\", times=1)\n516         assert nested_middleware.assert_called(hook=\"on_list_resources\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 74,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 515,
+    "line_range": [
+      515
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "515         assert nested_middleware.assert_called(hook=\"on_request\", times=1)\n516         assert nested_middleware.assert_called(hook=\"on_list_resources\", times=1)\n517 \n",
+    "col_offset": 8,
+    "end_col_offset": 81,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 516,
+    "line_range": [
+      516
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "529 \n530         assert recording_middleware.assert_called(times=3)\n531         assert recording_middleware.assert_called(\n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 530,
+    "line_range": [
+      530
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "530         assert recording_middleware.assert_called(times=3)\n531         assert recording_middleware.assert_called(\n532             method=\"resources/templates/list\", times=3\n533         )\n534         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 531,
+    "line_range": [
+      531,
+      532,
+      533
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "533         )\n534         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n535         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 534,
+    "line_range": [
+      534
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "534         assert recording_middleware.assert_called(hook=\"on_message\", times=1)\n535         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n536         assert recording_middleware.assert_called(\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 535,
+    "line_range": [
+      535
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "535         assert recording_middleware.assert_called(hook=\"on_request\", times=1)\n536         assert recording_middleware.assert_called(\n537             hook=\"on_list_resource_templates\", times=1\n538         )\n539 \n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 536,
+    "line_range": [
+      536,
+      537,
+      538
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "539 \n540         assert nested_middleware.assert_called(times=3)\n541         assert nested_middleware.assert_called(\n",
+    "col_offset": 8,
+    "end_col_offset": 55,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 540,
+    "line_range": [
+      540
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "540         assert nested_middleware.assert_called(times=3)\n541         assert nested_middleware.assert_called(\n542             method=\"resources/templates/list\", times=3\n543         )\n544         assert nested_middleware.assert_called(hook=\"on_message\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 541,
+    "line_range": [
+      541,
+      542,
+      543
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "543         )\n544         assert nested_middleware.assert_called(hook=\"on_message\", times=1)\n545         assert nested_middleware.assert_called(hook=\"on_request\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 74,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 544,
+    "line_range": [
+      544
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "544         assert nested_middleware.assert_called(hook=\"on_message\", times=1)\n545         assert nested_middleware.assert_called(hook=\"on_request\", times=1)\n546         assert nested_middleware.assert_called(\n",
+    "col_offset": 8,
+    "end_col_offset": 74,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 545,
+    "line_range": [
+      545
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "545         assert nested_middleware.assert_called(hook=\"on_request\", times=1)\n546         assert nested_middleware.assert_called(\n547             hook=\"on_list_resource_templates\", times=1\n548         )\n549 \n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 546,
+    "line_range": [
+      546,
+      547,
+      548
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "560 \n561         assert recording_middleware.assert_called(times=6)\n562         assert recording_middleware.assert_called(method=\"tools/call\", times=3)\n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 561,
+    "line_range": [
+      561
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "561         assert recording_middleware.assert_called(times=6)\n562         assert recording_middleware.assert_called(method=\"tools/call\", times=3)\n563         assert recording_middleware.assert_called(method=\"tools/list\", times=3)\n",
+    "col_offset": 8,
+    "end_col_offset": 79,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 562,
+    "line_range": [
+      562
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "562         assert recording_middleware.assert_called(method=\"tools/call\", times=3)\n563         assert recording_middleware.assert_called(method=\"tools/list\", times=3)\n564         assert recording_middleware.assert_called(hook=\"on_message\", times=2)\n",
+    "col_offset": 8,
+    "end_col_offset": 79,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 563,
+    "line_range": [
+      563
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "563         assert recording_middleware.assert_called(method=\"tools/list\", times=3)\n564         assert recording_middleware.assert_called(hook=\"on_message\", times=2)\n565         assert recording_middleware.assert_called(hook=\"on_request\", times=2)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 564,
+    "line_range": [
+      564
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "564         assert recording_middleware.assert_called(hook=\"on_message\", times=2)\n565         assert recording_middleware.assert_called(hook=\"on_request\", times=2)\n566         assert recording_middleware.assert_called(hook=\"on_call_tool\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 77,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 565,
+    "line_range": [
+      565
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "565         assert recording_middleware.assert_called(hook=\"on_request\", times=2)\n566         assert recording_middleware.assert_called(hook=\"on_call_tool\", times=1)\n567         assert recording_middleware.assert_called(hook=\"on_list_tools\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 79,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 566,
+    "line_range": [
+      566
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "566         assert recording_middleware.assert_called(hook=\"on_call_tool\", times=1)\n567         assert recording_middleware.assert_called(hook=\"on_list_tools\", times=1)\n",
+    "col_offset": 8,
+    "end_col_offset": 80,
+    "filename": "./tests/server/middleware/test_middleware.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 567,
+    "line_range": [
+      567
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "code": "7     score = lead_time.lead_signal_improvement(history, forecast, months=3, threshold=1.1)\n8     assert score >= 0.15\n9 \n",
+    "col_offset": 4,
+    "end_col_offset": 24,
+    "filename": "./tests/test_lead_time_evaluator.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 8,
+    "line_range": [
+      8
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

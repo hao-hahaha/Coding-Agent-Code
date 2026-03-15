@@ -1,0 +1,622 @@
+[
+  {
+    "code": "131         cached_data = _get_ai_model_costs_from_cache()\n132         assert cached_data is not None\n133         assert cached_data.get(\"version\") == 2\n",
+    "col_offset": 8,
+    "end_col_offset": 38,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 132,
+    "line_range": [
+      132
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "132         assert cached_data is not None\n133         assert cached_data.get(\"version\") == 2\n134         assert cached_data.get(\"costs\") is None\n",
+    "col_offset": 8,
+    "end_col_offset": 46,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 133,
+    "line_range": [
+      133
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "133         assert cached_data.get(\"version\") == 2\n134         assert cached_data.get(\"costs\") is None\n135         assert cached_data.get(\"models\") is not None\n",
+    "col_offset": 8,
+    "end_col_offset": 47,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 134,
+    "line_range": [
+      134
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "134         assert cached_data.get(\"costs\") is None\n135         assert cached_data.get(\"models\") is not None\n136 \n",
+    "col_offset": 8,
+    "end_col_offset": 52,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 135,
+    "line_range": [
+      135
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "137         models = cached_data.get(\"models\")\n138         assert models is not None\n139         assert len(models) == 2\n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 138,
+    "line_range": [
+      138
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "138         assert models is not None\n139         assert len(models) == 2\n140 \n",
+    "col_offset": 8,
+    "end_col_offset": 31,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 139,
+    "line_range": [
+      139
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "142         gpt4_model = models[\"gpt-4\"]\n143         assert gpt4_model.get(\"inputPerToken\") == 0.0000003\n144         assert gpt4_model.get(\"outputPerToken\") == 0.00000165\n",
+    "col_offset": 8,
+    "end_col_offset": 59,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 143,
+    "line_range": [
+      143
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "143         assert gpt4_model.get(\"inputPerToken\") == 0.0000003\n144         assert gpt4_model.get(\"outputPerToken\") == 0.00000165\n145         assert gpt4_model.get(\"outputReasoningPerToken\") == 0.0\n",
+    "col_offset": 8,
+    "end_col_offset": 61,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 144,
+    "line_range": [
+      144
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "144         assert gpt4_model.get(\"outputPerToken\") == 0.00000165\n145         assert gpt4_model.get(\"outputReasoningPerToken\") == 0.0\n146         assert gpt4_model.get(\"inputCachedPerToken\") == 0.0\n",
+    "col_offset": 8,
+    "end_col_offset": 63,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 145,
+    "line_range": [
+      145
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "145         assert gpt4_model.get(\"outputReasoningPerToken\") == 0.0\n146         assert gpt4_model.get(\"inputCachedPerToken\") == 0.0\n147 \n",
+    "col_offset": 8,
+    "end_col_offset": 59,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 146,
+    "line_range": [
+      146
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "149         gpt5_model = models[\"gpt-5\"]\n150         assert gpt5_model.get(\"inputPerToken\") == 0.00000055\n151         assert gpt5_model.get(\"outputPerToken\") == 0.0000022\n",
+    "col_offset": 8,
+    "end_col_offset": 60,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 150,
+    "line_range": [
+      150
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "150         assert gpt5_model.get(\"inputPerToken\") == 0.00000055\n151         assert gpt5_model.get(\"outputPerToken\") == 0.0000022\n152         assert gpt5_model.get(\"outputReasoningPerToken\") == 0.00000055\n",
+    "col_offset": 8,
+    "end_col_offset": 60,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 151,
+    "line_range": [
+      151
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "151         assert gpt5_model.get(\"outputPerToken\") == 0.0000022\n152         assert gpt5_model.get(\"outputReasoningPerToken\") == 0.00000055\n153         assert gpt5_model.get(\"inputCachedPerToken\") == 0.00000055\n",
+    "col_offset": 8,
+    "end_col_offset": 70,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 152,
+    "line_range": [
+      152
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "152         assert gpt5_model.get(\"outputReasoningPerToken\") == 0.00000055\n153         assert gpt5_model.get(\"inputCachedPerToken\") == 0.00000055\n154 \n",
+    "col_offset": 8,
+    "end_col_offset": 66,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 153,
+    "line_range": [
+      153
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "191         cached_data = _get_ai_model_costs_from_cache()\n192         assert cached_data is not None\n193         models = cached_data.get(\"models\")\n",
+    "col_offset": 8,
+    "end_col_offset": 38,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 192,
+    "line_range": [
+      192
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "193         models = cached_data.get(\"models\")\n194         assert models is not None\n195         assert len(models) == 3\n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 194,
+    "line_range": [
+      194
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "194         assert models is not None\n195         assert len(models) == 3\n196 \n",
+    "col_offset": 8,
+    "end_col_offset": 31,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 195,
+    "line_range": [
+      195
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "198         gpt4_model = models[\"gpt-4\"]\n199         assert gpt4_model.get(\"inputPerToken\") == 0.03\n200         assert gpt4_model.get(\"outputPerToken\") == 0.06\n",
+    "col_offset": 8,
+    "end_col_offset": 54,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 199,
+    "line_range": [
+      199
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "199         assert gpt4_model.get(\"inputPerToken\") == 0.03\n200         assert gpt4_model.get(\"outputPerToken\") == 0.06\n201         assert gpt4_model.get(\"outputReasoningPerToken\") == 0.0  # Missing should default to 0.0\n",
+    "col_offset": 8,
+    "end_col_offset": 55,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 200,
+    "line_range": [
+      200
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "200         assert gpt4_model.get(\"outputPerToken\") == 0.06\n201         assert gpt4_model.get(\"outputReasoningPerToken\") == 0.0  # Missing should default to 0.0\n202         assert gpt4_model.get(\"inputCachedPerToken\") == 0.0\n",
+    "col_offset": 8,
+    "end_col_offset": 63,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 201,
+    "line_range": [
+      201
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "201         assert gpt4_model.get(\"outputReasoningPerToken\") == 0.0  # Missing should default to 0.0\n202         assert gpt4_model.get(\"inputCachedPerToken\") == 0.0\n203 \n",
+    "col_offset": 8,
+    "end_col_offset": 59,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 202,
+    "line_range": [
+      202
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "205         another_model = models[\"another-model\"]\n206         assert another_model.get(\"inputPerToken\") == 0.0  # Invalid \"invalid\" -> 0.0\n207         assert another_model.get(\"outputPerToken\") == 0.02\n",
+    "col_offset": 8,
+    "end_col_offset": 56,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 206,
+    "line_range": [
+      206
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "206         assert another_model.get(\"inputPerToken\") == 0.0  # Invalid \"invalid\" -> 0.0\n207         assert another_model.get(\"outputPerToken\") == 0.02\n208 \n",
+    "col_offset": 8,
+    "end_col_offset": 58,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 207,
+    "line_range": [
+      207
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "210         no_pricing_model = models[\"no-pricing-model\"]\n211         assert no_pricing_model.get(\"inputPerToken\") == 0.0\n212         assert no_pricing_model.get(\"outputPerToken\") == 0.0\n",
+    "col_offset": 8,
+    "end_col_offset": 59,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 211,
+    "line_range": [
+      211
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "211         assert no_pricing_model.get(\"inputPerToken\") == 0.0\n212         assert no_pricing_model.get(\"outputPerToken\") == 0.0\n213         assert no_pricing_model.get(\"outputReasoningPerToken\") == 0.0\n",
+    "col_offset": 8,
+    "end_col_offset": 60,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 212,
+    "line_range": [
+      212
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "212         assert no_pricing_model.get(\"outputPerToken\") == 0.0\n213         assert no_pricing_model.get(\"outputReasoningPerToken\") == 0.0\n214         assert no_pricing_model.get(\"inputCachedPerToken\") == 0.0\n",
+    "col_offset": 8,
+    "end_col_offset": 69,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 213,
+    "line_range": [
+      213
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "213         assert no_pricing_model.get(\"outputReasoningPerToken\") == 0.0\n214         assert no_pricing_model.get(\"inputCachedPerToken\") == 0.0\n215 \n",
+    "col_offset": 8,
+    "end_col_offset": 65,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 214,
+    "line_range": [
+      214
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "232         cached_data = _get_ai_model_costs_from_cache()\n233         assert cached_data is None\n234 \n",
+    "col_offset": 8,
+    "end_col_offset": 34,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 233,
+    "line_range": [
+      233
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "248         cached_data = _get_ai_model_costs_from_cache()\n249         assert cached_data is None\n250 \n",
+    "col_offset": 8,
+    "end_col_offset": 34,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 249,
+    "line_range": [
+      249
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "266         cached_data = _get_ai_model_costs_from_cache()\n267         assert cached_data is None\n268 \n",
+    "col_offset": 8,
+    "end_col_offset": 34,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 267,
+    "line_range": [
+      267
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "271         cached_data = _get_ai_model_costs_from_cache()\n272         assert cached_data is None\n",
+    "col_offset": 8,
+    "end_col_offset": 34,
+    "filename": "./tests/sentry/tasks/test_ai_agent_monitoring.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 272,
+    "line_range": [
+      272
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

@@ -1,0 +1,470 @@
+[
+  {
+    "code": "17 \n18         assert Model.model_json_schema() == {\n19             \"type\": \"object\",\n20             \"properties\": {\n21                 \"a\": {\"type\": \"integer\", \"title\": \"A\"},\n22                 \"c\": {\"type\": \"integer\", \"title\": \"C\"},\n23             },\n24             \"required\": [\"a\", \"c\"],\n25             \"title\": \"Model\",\n26         }\n",
+    "col_offset": 8,
+    "end_col_offset": 9,
+    "filename": "./api/api/routers/_common_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 18,
+    "line_range": [
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "58 \n59         assert result.id == \"test-model-id\"\n60         assert result.maker == \"OpenAI\"\n",
+    "col_offset": 8,
+    "end_col_offset": 43,
+    "filename": "./api/api/routers/mcp/_mcp_models_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 59,
+    "line_range": [
+      59
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "59         assert result.id == \"test-model-id\"\n60         assert result.maker == \"OpenAI\"\n61         assert result.display_name == \"GPT-4\"\n",
+    "col_offset": 8,
+    "end_col_offset": 39,
+    "filename": "./api/api/routers/mcp/_mcp_models_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 60,
+    "line_range": [
+      60
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "60         assert result.maker == \"OpenAI\"\n61         assert result.display_name == \"GPT-4\"\n62         assert result.cost_per_input_token_usd == 0.001\n",
+    "col_offset": 8,
+    "end_col_offset": 45,
+    "filename": "./api/api/routers/mcp/_mcp_models_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 61,
+    "line_range": [
+      61
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "61         assert result.display_name == \"GPT-4\"\n62         assert result.cost_per_input_token_usd == 0.001\n63         assert result.cost_per_output_token_usd == 0.002\n",
+    "col_offset": 8,
+    "end_col_offset": 55,
+    "filename": "./api/api/routers/mcp/_mcp_models_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 62,
+    "line_range": [
+      62
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "62         assert result.cost_per_input_token_usd == 0.001\n63         assert result.cost_per_output_token_usd == 0.002\n64         assert result.release_date == \"2024-01-15\"\n",
+    "col_offset": 8,
+    "end_col_offset": 56,
+    "filename": "./api/api/routers/mcp/_mcp_models_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 63,
+    "line_range": [
+      63
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "63         assert result.cost_per_output_token_usd == 0.002\n64         assert result.release_date == \"2024-01-15\"\n65 \n",
+    "col_offset": 8,
+    "end_col_offset": 50,
+    "filename": "./api/api/routers/mcp/_mcp_models_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 64,
+    "line_range": [
+      64
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "68         expected_supports = [\"tool_calling\", \"json_mode\", \"input_image\"]  # parallel_tool_calls is False, so excluded\n69         assert sorted(result.supports) == sorted(expected_supports)\n70 \n",
+    "col_offset": 8,
+    "end_col_offset": 67,
+    "filename": "./api/api/routers/mcp/_mcp_models_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 69,
+    "line_range": [
+      69
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "78         # \"structured_output\" and \"json_mode\" appear because the field names are \"supports_structured_output\" and \"supports_json_mode\"\n79         assert \"json_mode\" in result.supports  # Current behavior - not filtered\n80         # support_system_messages should be filtered because it's an exact match\n",
+    "col_offset": 8,
+    "end_col_offset": 45,
+    "filename": "./api/api/routers/mcp/_mcp_models_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 79,
+    "line_range": [
+      79
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "80         # support_system_messages should be filtered because it's an exact match\n81         assert \"system_messages\" not in result.supports  # This one IS filtered\n82 \n",
+    "col_offset": 8,
+    "end_col_offset": 55,
+    "filename": "./api/api/routers/mcp/_mcp_models_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 81,
+    "line_range": [
+      81
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "104         expected_supports = [\"json_mode\", \"structured_output\"]  # These pass the filter\n105         assert sorted(result.supports) == sorted(expected_supports)\n106 \n",
+    "col_offset": 8,
+    "end_col_offset": 67,
+    "filename": "./api/api/routers/mcp/_mcp_models_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 105,
+    "line_range": [
+      105
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "134         ]\n135         assert sorted(result.supports) == sorted(expected_supports)\n136 \n",
+    "col_offset": 8,
+    "end_col_offset": 67,
+    "filename": "./api/api/routers/mcp/_mcp_models_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 135,
+    "line_range": [
+      135
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "151 \n152         assert result.cost_per_input_token_usd == 0.05\n153         assert result.cost_per_output_token_usd == 0.15\n",
+    "col_offset": 8,
+    "end_col_offset": 54,
+    "filename": "./api/api/routers/mcp/_mcp_models_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 152,
+    "line_range": [
+      152
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "152         assert result.cost_per_input_token_usd == 0.05\n153         assert result.cost_per_output_token_usd == 0.15\n154 \n",
+    "col_offset": 8,
+    "end_col_offset": 55,
+    "filename": "./api/api/routers/mcp/_mcp_models_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 153,
+    "line_range": [
+      153
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "168 \n169         assert result.release_date == expected_iso\n170 \n",
+    "col_offset": 8,
+    "end_col_offset": 50,
+    "filename": "./api/api/routers/mcp/_mcp_models_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 169,
+    "line_range": [
+      169
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "190         # Should use first provider's pricing\n191         assert result.cost_per_input_token_usd == 0.001  # From first provider\n192         assert result.cost_per_output_token_usd == 0.002  # From first provider\n",
+    "col_offset": 8,
+    "end_col_offset": 55,
+    "filename": "./api/api/routers/mcp/_mcp_models_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 191,
+    "line_range": [
+      191
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "191         assert result.cost_per_input_token_usd == 0.001  # From first provider\n192         assert result.cost_per_output_token_usd == 0.002  # From first provider\n193 \n",
+    "col_offset": 8,
+    "end_col_offset": 56,
+    "filename": "./api/api/routers/mcp/_mcp_models_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 192,
+    "line_range": [
+      192
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "210         expected_supports = [\"custom_feature\", \"another_thing\"]\n211         assert sorted(result.supports) == sorted(expected_supports)\n212 \n",
+    "col_offset": 8,
+    "end_col_offset": 67,
+    "filename": "./api/api/routers/mcp/_mcp_models_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 211,
+    "line_range": [
+      211
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "231         # Only the real supports field should be included\n232         assert result.supports == [\"real_feature\"]\n",
+    "col_offset": 8,
+    "end_col_offset": 50,
+    "filename": "./api/api/routers/mcp/_mcp_models_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 232,
+    "line_range": [
+      232
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "56 \n57     assert exc_info.value.status_code == 401\n58     assert exc_info.value.detail == \"Missing bearer token\"\n",
+    "col_offset": 4,
+    "end_col_offset": 44,
+    "filename": "./api/api/routers/mcp/_mcp_server_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 57,
+    "line_range": [
+      57
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "57     assert exc_info.value.status_code == 401\n58     assert exc_info.value.detail == \"Missing bearer token\"\n59 \n",
+    "col_offset": 4,
+    "end_col_offset": 58,
+    "filename": "./api/api/routers/mcp/_mcp_server_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 58,
+    "line_range": [
+      58
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "101 \n102     assert exc_info.value.status_code == 401\n103     assert exc_info.value.detail == \"Invalid bearer token\"\n",
+    "col_offset": 4,
+    "end_col_offset": 44,
+    "filename": "./api/api/routers/mcp/_mcp_server_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 102,
+    "line_range": [
+      102
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "102     assert exc_info.value.status_code == 401\n103     assert exc_info.value.detail == \"Invalid bearer token\"\n",
+    "col_offset": 4,
+    "end_col_offset": 58,
+    "filename": "./api/api/routers/mcp/_mcp_server_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 103,
+    "line_range": [
+      103
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

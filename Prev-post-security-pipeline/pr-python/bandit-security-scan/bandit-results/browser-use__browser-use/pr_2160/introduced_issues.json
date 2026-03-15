@@ -1,0 +1,22 @@
+[
+  {
+    "code": "1121 \t\t\t# Execute the generated code in the module's namespace\n1122 \t\t\texec(generated_code, module.__dict__)\n1123 \n",
+    "col_offset": 3,
+    "end_col_offset": 40,
+    "filename": "./eval/service.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Use of exec detected.",
+    "line_number": 1122,
+    "line_range": [
+      1122
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b102_exec_used.html",
+    "test_id": "B102",
+    "test_name": "exec_used"
+  }
+]

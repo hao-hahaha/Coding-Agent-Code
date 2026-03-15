@@ -1,0 +1,22 @@
+[
+  {
+    "code": "33     # Load TruthfulQA dataset from Hugging Face\n34     dataset = load_dataset(\"truthful_qa\", generation_type)\n35 \n",
+    "col_offset": 14,
+    "end_col_offset": 58,
+    "filename": "./environments/truthful_qa/truthful_qa.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 494,
+      "link": "https://cwe.mitre.org/data/definitions/494.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Unsafe Hugging Face Hub download without revision pinning in load_dataset()",
+    "line_number": 34,
+    "line_range": [
+      34
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b615_huggingface_unsafe_download.html",
+    "test_id": "B615",
+    "test_name": "huggingface_unsafe_download"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "code": "51     result = adapter.generate_text(\"hi\")\n52     assert result == \"ok\"\n53 \n",
+    "col_offset": 4,
+    "end_col_offset": 25,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_adapters.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 52,
+    "line_range": [
+      52
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "65     result = asyncio.run(adapter.invoke_tool(\"foo\", {\"a\": 1}))\n66     assert result == {\"ok\": True}\n67 \n",
+    "col_offset": 4,
+    "end_col_offset": 33,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_adapters.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 66,
+    "line_range": [
+      66
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "code": "287 \n288         scenario = hashlib.sha1(sim_id.encode()).hexdigest()\n289         orch = getattr(app_f.state, \"orchestrator\", None)\n",
+    "col_offset": 19,
+    "end_col_offset": 48,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/interface/api_server.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 327,
+      "link": "https://cwe.mitre.org/data/definitions/327.html"
+    },
+    "issue_severity": "HIGH",
+    "issue_text": "Use of weak SHA1 hash for security. Consider usedforsecurity=False",
+    "line_number": 288,
+    "line_range": [
+      288
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b324_hashlib.html",
+    "test_id": "B324",
+    "test_name": "hashlib"
+  }
+]

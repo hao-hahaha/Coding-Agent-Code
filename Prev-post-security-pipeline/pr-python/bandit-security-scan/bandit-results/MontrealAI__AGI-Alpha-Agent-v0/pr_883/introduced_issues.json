@@ -1,0 +1,23 @@
+[
+  {
+    "code": "137                     asyncio.run(ledger.stop_merkle_task())\n138                 except Exception:  # pragma: no cover - best effort cleanup\n139                     pass\n140             if hasattr(ledger, \"close\"):\n",
+    "col_offset": 16,
+    "end_col_offset": 24,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/interface/cli.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 138,
+    "line_range": [
+      138,
+      139
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  }
+]

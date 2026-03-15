@@ -1,0 +1,22 @@
+[
+  {
+    "code": "420         case DestinationType.SENTRY_REGION:\n421             assert payload.region_name is not None  # guaranteed by database constraint\n422             region = get_region_by_name(name=payload.region_name)\n",
+    "col_offset": 12,
+    "end_col_offset": 50,
+    "filename": "./src/sentry/hybridcloud/tasks/deliver_webhooks.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 421,
+    "line_range": [
+      421
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

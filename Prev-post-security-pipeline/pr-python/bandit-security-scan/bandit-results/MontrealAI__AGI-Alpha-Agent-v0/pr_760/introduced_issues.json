@@ -1,0 +1,183 @@
+[
+  {
+    "code": "80     while len(offspring) < mu:\n81         a, b = random.sample(pop, 2)\n82         cut = random.randint(1, len(a.genome) - 1)\n",
+    "col_offset": 15,
+    "end_col_offset": 36,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/simulation/mats.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 81,
+    "line_range": [
+      81
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "81         a, b = random.sample(pop, 2)\n82         cut = random.randint(1, len(a.genome) - 1)\n83         child_genome = a.genome[:cut] + b.genome[cut:]\n",
+    "col_offset": 14,
+    "end_col_offset": 50,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/simulation/mats.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 82,
+    "line_range": [
+      82
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "83         child_genome = a.genome[:cut] + b.genome[cut:]\n84         if random.random() < 0.1:\n85             idx = random.randrange(len(child_genome))\n",
+    "col_offset": 11,
+    "end_col_offset": 26,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/simulation/mats.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 84,
+    "line_range": [
+      84
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "84         if random.random() < 0.1:\n85             idx = random.randrange(len(child_genome))\n86             child_genome[idx] += random.uniform(-1, 1)\n",
+    "col_offset": 18,
+    "end_col_offset": 53,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/simulation/mats.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 85,
+    "line_range": [
+      85
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "85             idx = random.randrange(len(child_genome))\n86             child_genome[idx] += random.uniform(-1, 1)\n87         offspring.append(Individual(child_genome))\n",
+    "col_offset": 33,
+    "end_col_offset": 54,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/simulation/mats.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 86,
+    "line_range": [
+      86
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "41                     asyncio.create_task(res)\n42             except Exception:  # noqa: BLE001\n43                 pass\n44 \n",
+    "col_offset": 12,
+    "end_col_offset": 20,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/src/utils/messaging.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Try, Except, Pass detected.",
+    "line_number": 42,
+    "line_range": [
+      42,
+      43
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+    "test_id": "B110",
+    "test_name": "try_except_pass"
+  },
+  {
+    "code": "7 def test_cli_exec() -> None:\n8     assert True\n",
+    "col_offset": 4,
+    "end_col_offset": 15,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_demo_cli.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 8,
+    "line_range": [
+      8
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "10     results = forecast.simulate_years(secs, 2)\n11     assert len(results) == 2\n",
+    "col_offset": 4,
+    "end_col_offset": 28,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_forecast.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 11,
+    "line_range": [
+      11
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "14     new = mats.nsga2_step(pop, fn, mu=4)\n15     assert len(new) == 4\n",
+    "col_offset": 4,
+    "end_col_offset": 24,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_mats.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 15,
+    "line_range": [
+      15
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

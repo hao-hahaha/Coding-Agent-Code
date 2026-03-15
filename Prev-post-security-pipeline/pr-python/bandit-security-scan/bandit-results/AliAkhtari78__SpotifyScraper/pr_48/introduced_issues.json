@@ -1,0 +1,525 @@
+[
+  {
+    "code": "19 import shutil\n20 import subprocess\n21 import sys\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./mcp_test_runner.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 20,
+    "line_range": [
+      20
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "78     \n79     result = subprocess.run(cmd, env=env)\n80     return result.returncode == 0\n",
+    "col_offset": 13,
+    "end_col_offset": 41,
+    "filename": "./mcp_test_runner.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 79,
+    "line_range": [
+      79
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "5 \n6 import subprocess\n7 import json\n",
+    "col_offset": 0,
+    "end_col_offset": 17,
+    "filename": "./scripts/verify_github_actions.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 6,
+    "line_range": [
+      6
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "14     try:\n15         result = subprocess.run(cmd, capture_output=True, text=True, check=True)\n16         return True, result.stdout\n",
+    "col_offset": 17,
+    "end_col_offset": 80,
+    "filename": "./scripts/verify_github_actions.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 15,
+    "line_range": [
+      15
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  },
+  {
+    "code": "65         # Verify album field is present\n66         assert \"album\" in track_data\n67         assert track_data[\"album\"] is not None\n",
+    "col_offset": 8,
+    "end_col_offset": 36,
+    "filename": "./tests/unit/test_track_album.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 66,
+    "line_range": [
+      66
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "66         assert \"album\" in track_data\n67         assert track_data[\"album\"] is not None\n68         assert \"name\" in track_data[\"album\"]\n",
+    "col_offset": 8,
+    "end_col_offset": 46,
+    "filename": "./tests/unit/test_track_album.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 67,
+    "line_range": [
+      67
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "67         assert track_data[\"album\"] is not None\n68         assert \"name\" in track_data[\"album\"]\n69         assert track_data[\"album\"][\"name\"] == expected_track_data[\"album\"][\"name\"]\n",
+    "col_offset": 8,
+    "end_col_offset": 44,
+    "filename": "./tests/unit/test_track_album.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 68,
+    "line_range": [
+      68
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "68         assert \"name\" in track_data[\"album\"]\n69         assert track_data[\"album\"][\"name\"] == expected_track_data[\"album\"][\"name\"]\n70 \n",
+    "col_offset": 8,
+    "end_col_offset": 82,
+    "filename": "./tests/unit/test_track_album.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 69,
+    "line_range": [
+      69
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "94         # Verify album field is present\n95         assert \"album\" in track\n96         assert track[\"album\"] is not None\n",
+    "col_offset": 8,
+    "end_col_offset": 31,
+    "filename": "./tests/unit/test_track_album.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 95,
+    "line_range": [
+      95
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "95         assert \"album\" in track\n96         assert track[\"album\"] is not None\n97         assert \"name\" in track[\"album\"]\n",
+    "col_offset": 8,
+    "end_col_offset": 41,
+    "filename": "./tests/unit/test_track_album.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 96,
+    "line_range": [
+      96
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "96         assert track[\"album\"] is not None\n97         assert \"name\" in track[\"album\"]\n98         assert track[\"album\"][\"name\"] == \"A Night At The Opera (2011 Remaster)\"\n",
+    "col_offset": 8,
+    "end_col_offset": 39,
+    "filename": "./tests/unit/test_track_album.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 97,
+    "line_range": [
+      97
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "97         assert \"name\" in track[\"album\"]\n98         assert track[\"album\"][\"name\"] == \"A Night At The Opera (2011 Remaster)\"\n",
+    "col_offset": 8,
+    "end_col_offset": 79,
+    "filename": "./tests/unit/test_track_album.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 98,
+    "line_range": [
+      98
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "95             # Verify album field is present\n96             assert \"album\" in track_data, \"Album field is missing from track data\"\n97             assert track_data[\"album\"] is not None, \"Album field is None\"\n",
+    "col_offset": 12,
+    "end_col_offset": 82,
+    "filename": "./tests/unit/test_track_album_mcp.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 96,
+    "line_range": [
+      96
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "96             assert \"album\" in track_data, \"Album field is missing from track data\"\n97             assert track_data[\"album\"] is not None, \"Album field is None\"\n98             assert \"name\" in track_data[\"album\"], \"Album name is missing\"\n",
+    "col_offset": 12,
+    "end_col_offset": 73,
+    "filename": "./tests/unit/test_track_album_mcp.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 97,
+    "line_range": [
+      97
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "97             assert track_data[\"album\"] is not None, \"Album field is None\"\n98             assert \"name\" in track_data[\"album\"], \"Album name is missing\"\n99             assert track_data[\"album\"][\"name\"], \"Album name is empty\"\n",
+    "col_offset": 12,
+    "end_col_offset": 73,
+    "filename": "./tests/unit/test_track_album_mcp.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 98,
+    "line_range": [
+      98
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "98             assert \"name\" in track_data[\"album\"], \"Album name is missing\"\n99             assert track_data[\"album\"][\"name\"], \"Album name is empty\"\n100             \n",
+    "col_offset": 12,
+    "end_col_offset": 69,
+    "filename": "./tests/unit/test_track_album_mcp.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 99,
+    "line_range": [
+      99
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "101             # Verify album name matches expected value\n102             assert track_data[\"album\"][\"name\"] == \"A Night At The Opera (2011 Remaster)\", \\\n103                 f\"Album name mismatch: {track_data['album']['name']} != A Night At The Opera (2011 Remaster)\"\n104         finally:\n",
+    "col_offset": 12,
+    "end_col_offset": 109,
+    "filename": "./tests/unit/test_track_album_mcp.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 102,
+    "line_range": [
+      102,
+      103
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "150             # Verify album field is present\n151             assert \"album\" in track, \"Album field is missing from client track data\"\n152             assert track[\"album\"] is not None, \"Client returned album field as None\"\n",
+    "col_offset": 12,
+    "end_col_offset": 84,
+    "filename": "./tests/unit/test_track_album_mcp.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 151,
+    "line_range": [
+      151
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "151             assert \"album\" in track, \"Album field is missing from client track data\"\n152             assert track[\"album\"] is not None, \"Client returned album field as None\"\n153             assert \"name\" in track[\"album\"], \"Album name is missing from client track data\"\n",
+    "col_offset": 12,
+    "end_col_offset": 84,
+    "filename": "./tests/unit/test_track_album_mcp.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 152,
+    "line_range": [
+      152
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "152             assert track[\"album\"] is not None, \"Client returned album field as None\"\n153             assert \"name\" in track[\"album\"], \"Album name is missing from client track data\"\n154             assert track[\"album\"][\"name\"], \"Album name from client is empty\"\n",
+    "col_offset": 12,
+    "end_col_offset": 91,
+    "filename": "./tests/unit/test_track_album_mcp.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 153,
+    "line_range": [
+      153
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "153             assert \"name\" in track[\"album\"], \"Album name is missing from client track data\"\n154             assert track[\"album\"][\"name\"], \"Album name from client is empty\"\n155             \n",
+    "col_offset": 12,
+    "end_col_offset": 76,
+    "filename": "./tests/unit/test_track_album_mcp.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 154,
+    "line_range": [
+      154
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "156             # Verify album name matches expected value\n157             assert track[\"album\"][\"name\"] == \"A Night At The Opera (2011 Remaster)\", \\\n158                 f\"Album name from client mismatch: {track['album']['name']} != A Night At The Opera (2011 Remaster)\"\n159         finally:\n",
+    "col_offset": 12,
+    "end_col_offset": 116,
+    "filename": "./tests/unit/test_track_album_mcp.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 157,
+    "line_range": [
+      157,
+      158
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "203             # Verify the album data was extracted correctly\n204             assert album_data is not None, \"Album data not extracted from JSON-LD\"\n205             assert \"name\" in album_data, \"Album name missing from JSON-LD extraction\"\n",
+    "col_offset": 12,
+    "end_col_offset": 82,
+    "filename": "./tests/unit/test_track_album_mcp.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 204,
+    "line_range": [
+      204
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "204             assert album_data is not None, \"Album data not extracted from JSON-LD\"\n205             assert \"name\" in album_data, \"Album name missing from JSON-LD extraction\"\n206             assert album_data[\"name\"] == \"A Night At The Opera (2011 Remaster)\", \\\n",
+    "col_offset": 12,
+    "end_col_offset": 85,
+    "filename": "./tests/unit/test_track_album_mcp.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 205,
+    "line_range": [
+      205
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "205             assert \"name\" in album_data, \"Album name missing from JSON-LD extraction\"\n206             assert album_data[\"name\"] == \"A Night At The Opera (2011 Remaster)\", \\\n207                 f\"Album name from JSON-LD incorrect: {album_data['name']}\"\n208             \n",
+    "col_offset": 12,
+    "end_col_offset": 74,
+    "filename": "./tests/unit/test_track_album_mcp.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 206,
+    "line_range": [
+      206,
+      207
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "209             # Verify this matches what would be used in the track data\n210             assert album_data[\"type\"] == \"album\", \"Album type incorrect\"\n211             \n",
+    "col_offset": 12,
+    "end_col_offset": 72,
+    "filename": "./tests/unit/test_track_album_mcp.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 210,
+    "line_range": [
+      210
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

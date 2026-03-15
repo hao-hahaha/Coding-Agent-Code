@@ -1,0 +1,170 @@
+[
+  {
+    "code": "64     # Verify that knowledge is included in planning when present\n65     assert \"AI systems require careful training\" in task_summary, \\\n66         \"Knowledge content should be present in task summary when knowledge exists\"\n67     assert '\"agent_knowledge\"' in task_summary, \\\n",
+    "col_offset": 4,
+    "end_col_offset": 83,
+    "filename": "./tests/utilities/test_knowledge_planning.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 65,
+    "line_range": [
+      65,
+      66
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "66         \"Knowledge content should be present in task summary when knowledge exists\"\n67     assert '\"agent_knowledge\"' in task_summary, \\\n68         \"agent_knowledge field should be present in task summary when knowledge exists\"\n69 \n",
+    "col_offset": 4,
+    "end_col_offset": 87,
+    "filename": "./tests/utilities/test_knowledge_planning.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 67,
+    "line_range": [
+      67,
+      68
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "70     # Verify that knowledge is properly formatted\n71     assert isinstance(task.agent.knowledge_sources, list), \\\n72         \"Knowledge sources should be stored in a list\"\n73     assert len(task.agent.knowledge_sources) > 0, \\\n",
+    "col_offset": 4,
+    "end_col_offset": 54,
+    "filename": "./tests/utilities/test_knowledge_planning.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 71,
+    "line_range": [
+      71,
+      72
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "72         \"Knowledge sources should be stored in a list\"\n73     assert len(task.agent.knowledge_sources) > 0, \\\n74         \"At least one knowledge source should be present\"\n75     assert task.agent.knowledge_sources[0].content in task_summary, \\\n",
+    "col_offset": 4,
+    "end_col_offset": 57,
+    "filename": "./tests/utilities/test_knowledge_planning.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 73,
+    "line_range": [
+      73,
+      74
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "74         \"At least one knowledge source should be present\"\n75     assert task.agent.knowledge_sources[0].content in task_summary, \\\n76         \"Knowledge source content should be included in task summary\"\n77 \n",
+    "col_offset": 4,
+    "end_col_offset": 69,
+    "filename": "./tests/utilities/test_knowledge_planning.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 75,
+    "line_range": [
+      75,
+      76
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "78     # Verify that other expected components are still present\n79     assert task.description in task_summary, \\\n80         \"Task description should be present in task summary\"\n81     assert task.expected_output in task_summary, \\\n",
+    "col_offset": 4,
+    "end_col_offset": 60,
+    "filename": "./tests/utilities/test_knowledge_planning.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 79,
+    "line_range": [
+      79,
+      80
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "80         \"Task description should be present in task summary\"\n81     assert task.expected_output in task_summary, \\\n82         \"Expected output should be present in task summary\"\n83     assert agent.role in task_summary, \\\n",
+    "col_offset": 4,
+    "end_col_offset": 59,
+    "filename": "./tests/utilities/test_knowledge_planning.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 81,
+    "line_range": [
+      81,
+      82
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "82         \"Expected output should be present in task summary\"\n83     assert agent.role in task_summary, \\\n84         \"Agent role should be present in task summary\"\n",
+    "col_offset": 4,
+    "end_col_offset": 54,
+    "filename": "./tests/utilities/test_knowledge_planning.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 83,
+    "line_range": [
+      83,
+      84
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "code": "28     entries = [json.loads(line) for line in mem_file.read_text(encoding=\"utf-8\").splitlines()]\n29     assert [e[\"idx\"] for e in entries] == list(range(3))\n30 \n",
+    "col_offset": 4,
+    "end_col_offset": 56,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_memory_agent_file_persistence.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 29,
+    "line_range": [
+      29
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "31     agent2 = memory_agent.MemoryAgent(bus, ledger, str(mem_file))\n32     assert [r[\"idx\"] for r in agent2.records] == list(range(3))\n33 \n",
+    "col_offset": 4,
+    "end_col_offset": 63,
+    "filename": "./alpha_factory_v1/demos/alpha_agi_insight_v1/tests/test_memory_agent_file_persistence.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 32,
+    "line_range": [
+      32
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

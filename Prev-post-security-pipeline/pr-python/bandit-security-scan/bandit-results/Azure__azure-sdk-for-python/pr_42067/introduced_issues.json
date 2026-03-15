@@ -1,0 +1,22 @@
+[
+  {
+    "code": "40     from urllib.parse import quote\n41 import xml.etree.ElementTree as ET\n42 \n",
+    "col_offset": 0,
+    "end_col_offset": 34,
+    "filename": "./sdk/resources/azure-mgmt-resource/azure/mgmt/resource/databoundaries/_utils/serialization.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 20,
+      "link": "https://cwe.mitre.org/data/definitions/20.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Using xml.etree.ElementTree to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.",
+    "line_number": 41,
+    "line_range": [
+      41
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b405-import-xml-etree",
+    "test_id": "B405",
+    "test_name": "blacklist"
+  }
+]

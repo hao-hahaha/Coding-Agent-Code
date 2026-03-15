@@ -1,0 +1,202 @@
+[
+  {
+    "code": "180     # Verify outputs\n181     assert len(predictions) == len(X)\n182     assert probabilities.shape == (len(X), 2)\n",
+    "col_offset": 4,
+    "end_col_offset": 37,
+    "filename": "./tests/test_elkanoto.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 181,
+    "line_range": [
+      181
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "181     assert len(predictions) == len(X)\n182     assert probabilities.shape == (len(X), 2)\n183     assert np.all((predictions == 0) | (predictions == 1))\n",
+    "col_offset": 4,
+    "end_col_offset": 45,
+    "filename": "./tests/test_elkanoto.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 182,
+    "line_range": [
+      182
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "182     assert probabilities.shape == (len(X), 2)\n183     assert np.all((predictions == 0) | (predictions == 1))\n184     assert np.all(probabilities >= 0)  # Probabilities should be non-negative\n",
+    "col_offset": 4,
+    "end_col_offset": 58,
+    "filename": "./tests/test_elkanoto.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 183,
+    "line_range": [
+      183
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "183     assert np.all((predictions == 0) | (predictions == 1))\n184     assert np.all(probabilities >= 0)  # Probabilities should be non-negative\n185     assert pu_estimator.classes_.tolist() == [0, 1]  # XGBoost uses 0/1 labels\n",
+    "col_offset": 4,
+    "end_col_offset": 37,
+    "filename": "./tests/test_elkanoto.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 184,
+    "line_range": [
+      184
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "184     assert np.all(probabilities >= 0)  # Probabilities should be non-negative\n185     assert pu_estimator.classes_.tolist() == [0, 1]  # XGBoost uses 0/1 labels\n186 \n",
+    "col_offset": 4,
+    "end_col_offset": 51,
+    "filename": "./tests/test_elkanoto.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 185,
+    "line_range": [
+      185
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "201     # Verify outputs\n202     assert len(weighted_predictions) == len(X)\n203     assert weighted_probabilities.shape == (len(X), 2)\n",
+    "col_offset": 4,
+    "end_col_offset": 46,
+    "filename": "./tests/test_elkanoto.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 202,
+    "line_range": [
+      202
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "202     assert len(weighted_predictions) == len(X)\n203     assert weighted_probabilities.shape == (len(X), 2)\n204     assert np.all((weighted_predictions == 0) | (weighted_predictions == 1))\n",
+    "col_offset": 4,
+    "end_col_offset": 54,
+    "filename": "./tests/test_elkanoto.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 203,
+    "line_range": [
+      203
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "203     assert weighted_probabilities.shape == (len(X), 2)\n204     assert np.all((weighted_predictions == 0) | (weighted_predictions == 1))\n205     assert np.all(weighted_probabilities >= 0)  # Non-negative probabilities\n",
+    "col_offset": 4,
+    "end_col_offset": 76,
+    "filename": "./tests/test_elkanoto.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 204,
+    "line_range": [
+      204
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "204     assert np.all((weighted_predictions == 0) | (weighted_predictions == 1))\n205     assert np.all(weighted_probabilities >= 0)  # Non-negative probabilities\n206     assert weighted_pu_estimator.classes_.tolist() == [0, 1]  # XGBoost 0/1\n",
+    "col_offset": 4,
+    "end_col_offset": 46,
+    "filename": "./tests/test_elkanoto.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 205,
+    "line_range": [
+      205
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "205     assert np.all(weighted_probabilities >= 0)  # Non-negative probabilities\n206     assert weighted_pu_estimator.classes_.tolist() == [0, 1]  # XGBoost 0/1\n",
+    "col_offset": 4,
+    "end_col_offset": 60,
+    "filename": "./tests/test_elkanoto.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 206,
+    "line_range": [
+      206
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

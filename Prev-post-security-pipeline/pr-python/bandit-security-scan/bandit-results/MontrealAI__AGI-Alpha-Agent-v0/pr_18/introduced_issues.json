@@ -1,0 +1,22 @@
+[
+  {
+    "code": "13 def get(url: str, **kwargs):\n14     with _request.urlopen(url) as resp:\n15         data = resp.read().decode()\n",
+    "col_offset": 9,
+    "end_col_offset": 30,
+    "filename": "./alpha_factory_v1/requests.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 22,
+      "link": "https://cwe.mitre.org/data/definitions/22.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.",
+    "line_number": 14,
+    "line_range": [
+      14
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b310-urllib-urlopen",
+    "test_id": "B310",
+    "test_name": "blacklist"
+  }
+]

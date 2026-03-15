@@ -1,0 +1,42 @@
+[
+  {
+    "code": "78         print(f\"Downloading model from {model_url}\")\n79         urllib.request.urlretrieve(model_url, model_path)\n80         print(f\"Model downloaded to {model_path}\")\n",
+    "col_offset": 8,
+    "end_col_offset": 57,
+    "filename": "./face_recognition/6d_repnet_360/convert_to_onnx.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 22,
+      "link": "https://cwe.mitre.org/data/definitions/22.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.",
+    "line_number": 79,
+    "line_range": [
+      79
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b310-urllib-urlopen",
+    "test_id": "B310",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "90     \n91     saved_state_dict = torch.load(model_path, map_location='cpu')\n92     if 'model_state_dict' in saved_state_dict:\n",
+    "col_offset": 23,
+    "end_col_offset": 65,
+    "filename": "./face_recognition/6d_repnet_360/convert_to_onnx.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 502,
+      "link": "https://cwe.mitre.org/data/definitions/502.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Use of unsafe PyTorch load",
+    "line_number": 91,
+    "line_range": [
+      91
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b614_pytorch_load.html",
+    "test_id": "B614",
+    "test_name": "pytorch_load"
+  }
+]

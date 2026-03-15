@@ -1,0 +1,44 @@
+[
+  {
+    "code": "432         else:\n433             import subprocess\n434             import shlex\n",
+    "col_offset": 12,
+    "end_col_offset": 29,
+    "filename": "./sibernetic_c302.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Consider possible security implications associated with the subprocess module.",
+    "line_number": 433,
+    "line_range": [
+      433
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+    "test_id": "B404",
+    "test_name": "blacklist"
+  },
+  {
+    "code": "435 \n436             res = subprocess.run(\n437                 shlex.split(command), cwd=run_dir, env=env, capture_output=True\n438             )\n439             if res.returncode == 0:\n",
+    "col_offset": 18,
+    "end_col_offset": 13,
+    "filename": "./sibernetic_c302.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 78,
+      "link": "https://cwe.mitre.org/data/definitions/78.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "subprocess call - check for execution of untrusted input.",
+    "line_number": 436,
+    "line_range": [
+      436,
+      437,
+      438
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
+    "test_id": "B603",
+    "test_name": "subprocess_without_shell_equals_true"
+  }
+]

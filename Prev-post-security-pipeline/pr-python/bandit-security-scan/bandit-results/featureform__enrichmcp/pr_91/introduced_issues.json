@@ -1,0 +1,82 @@
+[
+  {
+    "code": "70     data = json.loads(result.content[0].text)\n71     assert len(data[\"items\"]) == 2\n72     assert data[\"has_next\"]\n",
+    "col_offset": 4,
+    "end_col_offset": 34,
+    "filename": "./tests/test_sqlalchemy_mcp_use.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 71,
+    "line_range": [
+      71
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "71     assert len(data[\"items\"]) == 2\n72     assert data[\"has_next\"]\n73 \n",
+    "col_offset": 4,
+    "end_col_offset": 27,
+    "filename": "./tests/test_sqlalchemy_mcp_use.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 72,
+    "line_range": [
+      72
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "78     data2 = json.loads(result2.content[0].text)\n79     assert len(data2[\"items\"]) == 1\n80     assert not data2[\"has_next\"]\n",
+    "col_offset": 4,
+    "end_col_offset": 35,
+    "filename": "./tests/test_sqlalchemy_mcp_use.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 79,
+    "line_range": [
+      79
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "79     assert len(data2[\"items\"]) == 1\n80     assert not data2[\"has_next\"]\n81 \n",
+    "col_offset": 4,
+    "end_col_offset": 32,
+    "filename": "./tests/test_sqlalchemy_mcp_use.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 80,
+    "line_range": [
+      80
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

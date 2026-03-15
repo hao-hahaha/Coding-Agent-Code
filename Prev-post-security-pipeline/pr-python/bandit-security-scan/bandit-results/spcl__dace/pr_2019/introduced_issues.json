@@ -1,0 +1,942 @@
+[
+  {
+    "code": "316     sdfg(A=a, B=b)\n317     assert np.allclose(b[0:5], a[0:5]), \"Output B does not match expected values.\"\n318 \n",
+    "col_offset": 4,
+    "end_col_offset": 82,
+    "filename": "./tests/undefined_symbol_in_sdfg_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 317,
+    "line_range": [
+      317
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "375     # Both arrays should be in the arglist\n376     assert 'A' in arglist\n377     assert 'B' in arglist\n",
+    "col_offset": 4,
+    "end_col_offset": 25,
+    "filename": "./tests/undefined_symbol_in_sdfg_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 376,
+    "line_range": [
+      376
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "376     assert 'A' in arglist\n377     assert 'B' in arglist\n378     # If found is True, the undefined symbol should be in the arglist\n",
+    "col_offset": 4,
+    "end_col_offset": 25,
+    "filename": "./tests/undefined_symbol_in_sdfg_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 377,
+    "line_range": [
+      377
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "379     if found:\n380         assert '?' in arglist\n381     else:\n",
+    "col_offset": 8,
+    "end_col_offset": 29,
+    "filename": "./tests/undefined_symbol_in_sdfg_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 380,
+    "line_range": [
+      380
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "381     else:\n382         assert 'N' in arglist\n383         assert '?' not in arglist\n",
+    "col_offset": 8,
+    "end_col_offset": 29,
+    "filename": "./tests/undefined_symbol_in_sdfg_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 382,
+    "line_range": [
+      382
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "382         assert 'N' in arglist\n383         assert '?' not in arglist\n384 \n",
+    "col_offset": 8,
+    "end_col_offset": 33,
+    "filename": "./tests/undefined_symbol_in_sdfg_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 383,
+    "line_range": [
+      383
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "14     us = symbolic.UndefinedSymbol()\n15     assert us.name == '?'\n16     assert isinstance(us, symbolic.symbol)\n",
+    "col_offset": 4,
+    "end_col_offset": 25,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 15,
+    "line_range": [
+      15
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "15     assert us.name == '?'\n16     assert isinstance(us, symbolic.symbol)\n17     assert isinstance(us, symbolic.UndefinedSymbol)\n",
+    "col_offset": 4,
+    "end_col_offset": 42,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 16,
+    "line_range": [
+      16
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "16     assert isinstance(us, symbolic.symbol)\n17     assert isinstance(us, symbolic.UndefinedSymbol)\n18 \n",
+    "col_offset": 4,
+    "end_col_offset": 51,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 17,
+    "line_range": [
+      17
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "25     # Test various operations\n26     assert isinstance(us + s, symbolic.UndefinedSymbol)\n27     assert isinstance(s + us, symbolic.UndefinedSymbol)\n",
+    "col_offset": 4,
+    "end_col_offset": 55,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 26,
+    "line_range": [
+      26
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "26     assert isinstance(us + s, symbolic.UndefinedSymbol)\n27     assert isinstance(s + us, symbolic.UndefinedSymbol)\n28     assert isinstance(us - s, symbolic.UndefinedSymbol)\n",
+    "col_offset": 4,
+    "end_col_offset": 55,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 27,
+    "line_range": [
+      27
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "27     assert isinstance(s + us, symbolic.UndefinedSymbol)\n28     assert isinstance(us - s, symbolic.UndefinedSymbol)\n29     assert isinstance(s - us, symbolic.UndefinedSymbol)\n",
+    "col_offset": 4,
+    "end_col_offset": 55,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 28,
+    "line_range": [
+      28
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "28     assert isinstance(us - s, symbolic.UndefinedSymbol)\n29     assert isinstance(s - us, symbolic.UndefinedSymbol)\n30     assert isinstance(us * s, symbolic.UndefinedSymbol)\n",
+    "col_offset": 4,
+    "end_col_offset": 55,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 29,
+    "line_range": [
+      29
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "29     assert isinstance(s - us, symbolic.UndefinedSymbol)\n30     assert isinstance(us * s, symbolic.UndefinedSymbol)\n31     assert isinstance(s * us, symbolic.UndefinedSymbol)\n",
+    "col_offset": 4,
+    "end_col_offset": 55,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 30,
+    "line_range": [
+      30
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "30     assert isinstance(us * s, symbolic.UndefinedSymbol)\n31     assert isinstance(s * us, symbolic.UndefinedSymbol)\n32     assert isinstance(us / s, symbolic.UndefinedSymbol)\n",
+    "col_offset": 4,
+    "end_col_offset": 55,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 31,
+    "line_range": [
+      31
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "31     assert isinstance(s * us, symbolic.UndefinedSymbol)\n32     assert isinstance(us / s, symbolic.UndefinedSymbol)\n33     assert isinstance(s / us, symbolic.UndefinedSymbol)\n",
+    "col_offset": 4,
+    "end_col_offset": 55,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 32,
+    "line_range": [
+      32
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "32     assert isinstance(us / s, symbolic.UndefinedSymbol)\n33     assert isinstance(s / us, symbolic.UndefinedSymbol)\n34 \n",
+    "col_offset": 4,
+    "end_col_offset": 55,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 33,
+    "line_range": [
+      33
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "36     expr = (us * 2 + s) / 4\n37     assert isinstance(expr, symbolic.UndefinedSymbol)\n38 \n",
+    "col_offset": 4,
+    "end_col_offset": 53,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 37,
+    "line_range": [
+      37
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "45     # Test that symbolic.inequal_symbols handles UndefinedSymbol\n46     assert symbolic.inequal_symbols(us, s) is True\n47     assert symbolic.inequal_symbols(s, us) is True\n",
+    "col_offset": 4,
+    "end_col_offset": 50,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 46,
+    "line_range": [
+      46
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "46     assert symbolic.inequal_symbols(us, s) is True\n47     assert symbolic.inequal_symbols(s, us) is True\n48 \n",
+    "col_offset": 4,
+    "end_col_offset": 50,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 47,
+    "line_range": [
+      47
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "50     expr_with_us = us * s + 5\n51     assert symbolic.issymbolic(expr_with_us)\n52 \n",
+    "col_offset": 4,
+    "end_col_offset": 44,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 51,
+    "line_range": [
+      51
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "58 \n59     assert symbolic.issymbolic(us)\n60     assert symbolic.issymbolic(us + s)\n",
+    "col_offset": 4,
+    "end_col_offset": 34,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 59,
+    "line_range": [
+      59
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "59     assert symbolic.issymbolic(us)\n60     assert symbolic.issymbolic(us + s)\n61     assert symbolic.issymbolic(s * us)\n",
+    "col_offset": 4,
+    "end_col_offset": 38,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 60,
+    "line_range": [
+      60
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "60     assert symbolic.issymbolic(us + s)\n61     assert symbolic.issymbolic(s * us)\n62 \n",
+    "col_offset": 4,
+    "end_col_offset": 38,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 61,
+    "line_range": [
+      61
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "92 \n93     assert isinstance(expr1, symbolic.UndefinedSymbol)\n94     assert isinstance(expr2, symbolic.UndefinedSymbol)\n",
+    "col_offset": 4,
+    "end_col_offset": 54,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 93,
+    "line_range": [
+      93
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "93     assert isinstance(expr1, symbolic.UndefinedSymbol)\n94     assert isinstance(expr2, symbolic.UndefinedSymbol)\n95     assert isinstance(expr3, symbolic.UndefinedSymbol)\n",
+    "col_offset": 4,
+    "end_col_offset": 54,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 94,
+    "line_range": [
+      94
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "94     assert isinstance(expr2, symbolic.UndefinedSymbol)\n95     assert isinstance(expr3, symbolic.UndefinedSymbol)\n96     assert isinstance(expr4, symbolic.UndefinedSymbol)\n",
+    "col_offset": 4,
+    "end_col_offset": 54,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 95,
+    "line_range": [
+      95
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "95     assert isinstance(expr3, symbolic.UndefinedSymbol)\n96     assert isinstance(expr4, symbolic.UndefinedSymbol)\n97 \n",
+    "col_offset": 4,
+    "end_col_offset": 54,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 96,
+    "line_range": [
+      96
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "98     # Test symbolic operations that involve UndefinedSymbol\n99     assert symbolic.issymbolic(expr1) is True\n100     assert symbolic.issymbolic(expr2) is True\n",
+    "col_offset": 4,
+    "end_col_offset": 45,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 99,
+    "line_range": [
+      99
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "99     assert symbolic.issymbolic(expr1) is True\n100     assert symbolic.issymbolic(expr2) is True\n101     assert symbolic.inequal_symbols(expr1, expr2) is True\n",
+    "col_offset": 4,
+    "end_col_offset": 45,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 100,
+    "line_range": [
+      100
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "100     assert symbolic.issymbolic(expr2) is True\n101     assert symbolic.inequal_symbols(expr1, expr2) is True\n102 \n",
+    "col_offset": 4,
+    "end_col_offset": 57,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 101,
+    "line_range": [
+      101
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "116     # Test inequal_symbols with expressions containing UndefinedSymbol\n117     assert inequal_symbols(sympy.Abs(us), s) is True\n118     assert inequal_symbols(s, sympy.sin(us + 5)) is True\n",
+    "col_offset": 4,
+    "end_col_offset": 52,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 117,
+    "line_range": [
+      117
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "117     assert inequal_symbols(sympy.Abs(us), s) is True\n118     assert inequal_symbols(s, sympy.sin(us + 5)) is True\n119 \n",
+    "col_offset": 4,
+    "end_col_offset": 56,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 118,
+    "line_range": [
+      118
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "121     result = int_ceil(us, 2)\n122     assert symbolic.is_undefined(result)\n123 \n",
+    "col_offset": 4,
+    "end_col_offset": 40,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 122,
+    "line_range": [
+      122
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "124     # Test with sympy function application - should be treated as undefined\n125     assert symbolic.is_undefined(sympy.sin(us))\n126     with pytest.raises(TypeError):\n",
+    "col_offset": 4,
+    "end_col_offset": 47,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 125,
+    "line_range": [
+      125
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "135     # Test with UndefinedSymbol directly\n136     assert symbolic.is_undefined(us) is True\n137 \n",
+    "col_offset": 4,
+    "end_col_offset": 44,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 136,
+    "line_range": [
+      136
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "138     # Test with regular symbol\n139     assert symbolic.is_undefined(s) is False\n140 \n",
+    "col_offset": 4,
+    "end_col_offset": 44,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 139,
+    "line_range": [
+      139
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "141     # Test with constants\n142     assert symbolic.is_undefined(5) is False\n143     assert symbolic.is_undefined(5.5) is False\n",
+    "col_offset": 4,
+    "end_col_offset": 44,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 142,
+    "line_range": [
+      142
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "142     assert symbolic.is_undefined(5) is False\n143     assert symbolic.is_undefined(5.5) is False\n144 \n",
+    "col_offset": 4,
+    "end_col_offset": 46,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 143,
+    "line_range": [
+      143
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "145     # Test with expressions containing UndefinedSymbol\n146     assert symbolic.is_undefined(s + us) is True\n147     assert symbolic.is_undefined(s * us) is True\n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 146,
+    "line_range": [
+      146
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "146     assert symbolic.is_undefined(s + us) is True\n147     assert symbolic.is_undefined(s * us) is True\n148     assert symbolic.is_undefined(sympy.sin(us)) is True\n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 147,
+    "line_range": [
+      147
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "147     assert symbolic.is_undefined(s * us) is True\n148     assert symbolic.is_undefined(sympy.sin(us)) is True\n149 \n",
+    "col_offset": 4,
+    "end_col_offset": 55,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 148,
+    "line_range": [
+      148
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "150     # Test with expressions not containing UndefinedSymbol\n151     assert symbolic.is_undefined(s + 5) is False\n152     assert symbolic.is_undefined(s * s) is False\n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 151,
+    "line_range": [
+      151
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "151     assert symbolic.is_undefined(s + 5) is False\n152     assert symbolic.is_undefined(s * s) is False\n153     assert symbolic.is_undefined(sympy.sin(s)) is False\n",
+    "col_offset": 4,
+    "end_col_offset": 48,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 152,
+    "line_range": [
+      152
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "152     assert symbolic.is_undefined(s * s) is False\n153     assert symbolic.is_undefined(sympy.sin(s)) is False\n154 \n",
+    "col_offset": 4,
+    "end_col_offset": 55,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 153,
+    "line_range": [
+      153
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "155     # Test with string inputs\n156     assert symbolic.is_undefined(\"?\") is True\n157     assert symbolic.is_undefined(\"N\") is False\n",
+    "col_offset": 4,
+    "end_col_offset": 45,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 156,
+    "line_range": [
+      156
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "156     assert symbolic.is_undefined(\"?\") is True\n157     assert symbolic.is_undefined(\"N\") is False\n158 \n",
+    "col_offset": 4,
+    "end_col_offset": 46,
+    "filename": "./tests/undefined_symbol_test.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 157,
+    "line_range": [
+      157
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

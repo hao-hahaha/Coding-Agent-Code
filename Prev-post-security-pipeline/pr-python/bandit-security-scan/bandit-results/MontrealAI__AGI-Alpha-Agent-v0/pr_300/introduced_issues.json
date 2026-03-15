@@ -1,0 +1,22 @@
+[
+  {
+    "code": "38     \"\"\"Return a randomly selected alpha opportunity.\"\"\"\n39     pick = random.choice(SAMPLE_ALPHA)\n40     LEDGER.write_text(json.dumps(pick, indent=2))\n",
+    "col_offset": 11,
+    "end_col_offset": 38,
+    "filename": "./alpha_factory_v1/demos/omni_factory_demo/alpha_discovery_stub.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 330,
+      "link": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+    "line_number": 39,
+    "line_range": [
+      39
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b311-random",
+    "test_id": "B311",
+    "test_name": "blacklist"
+  }
+]

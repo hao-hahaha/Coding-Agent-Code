@@ -1,0 +1,36 @@
+[
+  {
+    "code": "17             placeholders = ', '.join(['?'] * len(normalized_tags))\n18             query = f\"\"\"\n19                 SELECT id\n20                 FROM POCKET_PICK\n21                 WHERE id IN (\n22                     SELECT id\n23                     FROM POCKET_PICK\n24                     WHERE (\n25                         SELECT COUNT(*)\n26                         FROM json_each(tags)\n27                         WHERE json_each.value IN ({placeholders})\n28                     ) = ?\n29                 )\n30                 ORDER BY created DESC\n31                 LIMIT ?\n32             \"\"\"\n33             params = [*normalized_tags, len(normalized_tags), command.limit]\n",
+    "col_offset": 24,
+    "end_col_offset": 50,
+    "filename": "./src/mcp_server_pocket_pick/modules/functionality/list_ids.py",
+    "issue_confidence": "LOW",
+    "issue_cwe": {
+      "id": 89,
+      "link": "https://cwe.mitre.org/data/definitions/89.html"
+    },
+    "issue_severity": "MEDIUM",
+    "issue_text": "Possible SQL injection vector through string-based query construction.",
+    "line_number": 18,
+    "line_range": [
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b608_hardcoded_sql_expressions.html",
+    "test_id": "B608",
+    "test_name": "hardcoded_sql_expressions"
+  }
+]

@@ -1,0 +1,222 @@
+[
+  {
+    "code": "45 \n46         h = hashlib.sha1(diff.encode()).hexdigest()\n47         entry = json.dumps({\"diff\": diff, \"parent\": parent})\n",
+    "col_offset": 12,
+    "end_col_offset": 39,
+    "filename": "./src/archive/manager.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 327,
+      "link": "https://cwe.mitre.org/data/definitions/327.html"
+    },
+    "issue_severity": "HIGH",
+    "issue_text": "Use of weak SHA1 hash for security. Consider usedforsecurity=False",
+    "line_number": 46,
+    "line_range": [
+      46
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b324_hashlib.html",
+    "test_id": "B324",
+    "test_name": "hashlib"
+  },
+  {
+    "code": "13     monkeypatch.setattr(\"src.self_edit.tools.REPO_ROOT\", tmp_path)\n14     assert _tool_roundtrip()\n15 \n",
+    "col_offset": 4,
+    "end_col_offset": 28,
+    "filename": "./tests/test_archive_policy.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 14,
+    "line_range": [
+      14
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "26     monkeypatch.setattr(manager, \"_tool_roundtrip\", lambda: True)\n27     assert mgr.admit(diff, parent)\n28     h = hashlib.sha1(diff.encode()).hexdigest()\n",
+    "col_offset": 4,
+    "end_col_offset": 34,
+    "filename": "./tests/test_archive_policy.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 27,
+    "line_range": [
+      27
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "27     assert mgr.admit(diff, parent)\n28     h = hashlib.sha1(diff.encode()).hexdigest()\n29     stored = mgr.db.get_state(f\"patch:{h}\")\n",
+    "col_offset": 8,
+    "end_col_offset": 35,
+    "filename": "./tests/test_archive_policy.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 327,
+      "link": "https://cwe.mitre.org/data/definitions/327.html"
+    },
+    "issue_severity": "HIGH",
+    "issue_text": "Use of weak SHA1 hash for security. Consider usedforsecurity=False",
+    "line_number": 28,
+    "line_range": [
+      28
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b324_hashlib.html",
+    "test_id": "B324",
+    "test_name": "hashlib"
+  },
+  {
+    "code": "29     stored = mgr.db.get_state(f\"patch:{h}\")\n30     assert json.loads(stored) == {\"diff\": diff, \"parent\": parent}\n31 \n",
+    "col_offset": 4,
+    "end_col_offset": 65,
+    "filename": "./tests/test_archive_policy.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 30,
+    "line_range": [
+      30
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "33     monkeypatch.setattr(manager, \"run_preflight\", lambda _repo: (_ for _ in ()).throw(RuntimeError()))\n34     assert not mgr.admit(diff2, parent)\n35     h2 = hashlib.sha1(diff2.encode()).hexdigest()\n",
+    "col_offset": 4,
+    "end_col_offset": 39,
+    "filename": "./tests/test_archive_policy.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 34,
+    "line_range": [
+      34
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "34     assert not mgr.admit(diff2, parent)\n35     h2 = hashlib.sha1(diff2.encode()).hexdigest()\n36     assert mgr.db.get_state(f\"patch:{h2}\") is None\n",
+    "col_offset": 9,
+    "end_col_offset": 37,
+    "filename": "./tests/test_archive_policy.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 327,
+      "link": "https://cwe.mitre.org/data/definitions/327.html"
+    },
+    "issue_severity": "HIGH",
+    "issue_text": "Use of weak SHA1 hash for security. Consider usedforsecurity=False",
+    "line_number": 35,
+    "line_range": [
+      35
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b324_hashlib.html",
+    "test_id": "B324",
+    "test_name": "hashlib"
+  },
+  {
+    "code": "35     h2 = hashlib.sha1(diff2.encode()).hexdigest()\n36     assert mgr.db.get_state(f\"patch:{h2}\") is None\n37 \n",
+    "col_offset": 4,
+    "end_col_offset": 50,
+    "filename": "./tests/test_archive_policy.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 36,
+    "line_range": [
+      36
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "40     monkeypatch.setattr(manager, \"_tool_roundtrip\", lambda: False)\n41     assert not mgr.admit(diff3, parent)\n42     h3 = hashlib.sha1(diff3.encode()).hexdigest()\n",
+    "col_offset": 4,
+    "end_col_offset": 39,
+    "filename": "./tests/test_archive_policy.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 41,
+    "line_range": [
+      41
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "41     assert not mgr.admit(diff3, parent)\n42     h3 = hashlib.sha1(diff3.encode()).hexdigest()\n43     assert mgr.db.get_state(f\"patch:{h3}\") is None\n",
+    "col_offset": 9,
+    "end_col_offset": 37,
+    "filename": "./tests/test_archive_policy.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 327,
+      "link": "https://cwe.mitre.org/data/definitions/327.html"
+    },
+    "issue_severity": "HIGH",
+    "issue_text": "Use of weak SHA1 hash for security. Consider usedforsecurity=False",
+    "line_number": 42,
+    "line_range": [
+      42
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b324_hashlib.html",
+    "test_id": "B324",
+    "test_name": "hashlib"
+  },
+  {
+    "code": "42     h3 = hashlib.sha1(diff3.encode()).hexdigest()\n43     assert mgr.db.get_state(f\"patch:{h3}\") is None\n",
+    "col_offset": 4,
+    "end_col_offset": 50,
+    "filename": "./tests/test_archive_policy.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 43,
+    "line_range": [
+      43
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

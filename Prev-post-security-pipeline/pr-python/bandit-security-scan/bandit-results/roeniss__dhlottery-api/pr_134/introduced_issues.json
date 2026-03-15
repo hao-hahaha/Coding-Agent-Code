@@ -1,0 +1,122 @@
+[
+  {
+    "code": "14 \n15     assert user.username == \"user\"\n16     assert user.password == \"pass\"\n",
+    "col_offset": 4,
+    "end_col_offset": 34,
+    "filename": "./tests/dhapi/port/test_credentials_provider.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 15,
+    "line_range": [
+      15
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "15     assert user.username == \"user\"\n16     assert user.password == \"pass\"\n17 \n",
+    "col_offset": 4,
+    "end_col_offset": 34,
+    "filename": "./tests/dhapi/port/test_credentials_provider.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 16,
+    "line_range": [
+      16
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "15     assert user.username == \"user\"\n16     assert user.password == \"pass\"\n17 \n",
+    "col_offset": 28,
+    "end_col_offset": 34,
+    "filename": "./tests/dhapi/port/test_credentials_provider.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'pass'",
+    "line_number": 16,
+    "line_range": [
+      16
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b105_hardcoded_password_string.html",
+    "test_id": "B105",
+    "test_name": "hardcoded_password_string"
+  },
+  {
+    "code": "18     path = tmp_path / \".dhapi\" / \"credentials\"\n19     assert path.exists()\n20     with open(path, \"r\", encoding=\"UTF-8\") as f:\n",
+    "col_offset": 4,
+    "end_col_offset": 24,
+    "filename": "./tests/dhapi/port/test_credentials_provider.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 19,
+    "line_range": [
+      19
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "21         config = tomli.loads(f.read())\n22     assert config[\"default\"][\"username\"] == \"user\"\n23     assert config[\"default\"][\"password\"] == \"pass\"\n",
+    "col_offset": 4,
+    "end_col_offset": 50,
+    "filename": "./tests/dhapi/port/test_credentials_provider.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 22,
+    "line_range": [
+      22
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  },
+  {
+    "code": "22     assert config[\"default\"][\"username\"] == \"user\"\n23     assert config[\"default\"][\"password\"] == \"pass\"\n24 \n",
+    "col_offset": 4,
+    "end_col_offset": 50,
+    "filename": "./tests/dhapi/port/test_credentials_provider.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 23,
+    "line_range": [
+      23
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

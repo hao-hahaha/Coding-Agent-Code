@@ -1,0 +1,413 @@
+[
+  {
+    "check_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+    "path": "btcrecover/btcrpass.py",
+    "start": {
+      "line": 5628,
+      "col": 22,
+      "offset": 274063
+    },
+    "end": {
+      "line": 5628,
+      "col": 48,
+      "offset": 274089
+    },
+    "extra": {
+      "message": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "metadata": {
+        "owasp": [
+          "A08:2017 - Insecure Deserialization",
+          "A08:2021 - Software and Data Integrity Failures",
+          "A08:2025 - Software or Data Integrity Failures"
+        ],
+        "cwe": [
+          "CWE-502: Deserialization of Untrusted Data"
+        ],
+        "references": [
+          "https://docs.python.org/3/library/pickle.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Insecure Deserialization "
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.deserialization.pickle.avoid-pickle",
+        "shortlink": "https://sg.run/OPwB"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+    "path": "btcrecover/btcrpass.py",
+    "start": {
+      "line": 5637,
+      "col": 26,
+      "offset": 274499
+    },
+    "end": {
+      "line": 5637,
+      "col": 52,
+      "offset": 274525
+    },
+    "extra": {
+      "message": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "metadata": {
+        "owasp": [
+          "A08:2017 - Insecure Deserialization",
+          "A08:2021 - Software and Data Integrity Failures",
+          "A08:2025 - Software or Data Integrity Failures"
+        ],
+        "cwe": [
+          "CWE-502: Deserialization of Untrusted Data"
+        ],
+        "references": [
+          "https://docs.python.org/3/library/pickle.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Insecure Deserialization "
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.deserialization.pickle.avoid-pickle",
+        "shortlink": "https://sg.run/OPwB"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.insecure-hash-algorithms.insecure-hash-algorithm-sha1",
+    "path": "btcrecover/btcrpass.py",
+    "start": {
+      "line": 6451,
+      "col": 16,
+      "offset": 330984
+    },
+    "end": {
+      "line": 6451,
+      "col": 30,
+      "offset": 330998
+    },
+    "extra": {
+      "message": "Detected SHA1 hash algorithm which is considered insecure. SHA1 is not collision resistant and is therefore not suitable as a cryptographic signature. Use SHA256 or SHA3 instead.",
+      "fix": "hashlib.sha256()",
+      "metadata": {
+        "source-rule-url": "https://github.com/PyCQA/bandit/blob/d5f8fa0d89d7b11442fc6ec80ca42953974354c8/bandit/blacklists/calls.py#L59",
+        "cwe": [
+          "CWE-327: Use of a Broken or Risky Cryptographic Algorithm"
+        ],
+        "owasp": [
+          "A03:2017 - Sensitive Data Exposure",
+          "A02:2021 - Cryptographic Failures",
+          "A04:2025 - Cryptographic Failures"
+        ],
+        "bandit-code": "B303",
+        "asvs": {
+          "control_id": "6.2.2 Insecure Custom Algorithm",
+          "control_url": "https://github.com/OWASP/ASVS/blob/master/4.0/en/0x14-V6-Cryptography.md#v62-algorithms",
+          "section": "V6 Stored Cryptography Verification Requirements",
+          "version": "4"
+        },
+        "references": [
+          "https://www.schneier.com/blog/archives/2012/10/when_will_we_se.html",
+          "https://www.trendmicro.com/vinfo/us/security/news/vulnerabilities-and-exploits/sha-1-collision-signals-the-end-of-the-algorithm-s-viability",
+          "http://2012.sharcs.org/slides/stevens.pdf",
+          "https://pycryptodome.readthedocs.io/en/latest/src/hash/sha3_256.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "subcategory": [
+          "vuln"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "MEDIUM",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Cryptographic Issues"
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.insecure-hash-algorithms.insecure-hash-algorithm-sha1",
+        "shortlink": "https://sg.run/ydYx"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.insecure-hash-algorithms.insecure-hash-algorithm-sha1",
+    "path": "btcrecover/btcrpass.py",
+    "start": {
+      "line": 7103,
+      "col": 25,
+      "offset": 366883
+    },
+    "end": {
+      "line": 7103,
+      "col": 39,
+      "offset": 366897
+    },
+    "extra": {
+      "message": "Detected SHA1 hash algorithm which is considered insecure. SHA1 is not collision resistant and is therefore not suitable as a cryptographic signature. Use SHA256 or SHA3 instead.",
+      "fix": "hashlib.sha256()",
+      "metadata": {
+        "source-rule-url": "https://github.com/PyCQA/bandit/blob/d5f8fa0d89d7b11442fc6ec80ca42953974354c8/bandit/blacklists/calls.py#L59",
+        "cwe": [
+          "CWE-327: Use of a Broken or Risky Cryptographic Algorithm"
+        ],
+        "owasp": [
+          "A03:2017 - Sensitive Data Exposure",
+          "A02:2021 - Cryptographic Failures",
+          "A04:2025 - Cryptographic Failures"
+        ],
+        "bandit-code": "B303",
+        "asvs": {
+          "control_id": "6.2.2 Insecure Custom Algorithm",
+          "control_url": "https://github.com/OWASP/ASVS/blob/master/4.0/en/0x14-V6-Cryptography.md#v62-algorithms",
+          "section": "V6 Stored Cryptography Verification Requirements",
+          "version": "4"
+        },
+        "references": [
+          "https://www.schneier.com/blog/archives/2012/10/when_will_we_se.html",
+          "https://www.trendmicro.com/vinfo/us/security/news/vulnerabilities-and-exploits/sha-1-collision-signals-the-end-of-the-algorithm-s-viability",
+          "http://2012.sharcs.org/slides/stevens.pdf",
+          "https://pycryptodome.readthedocs.io/en/latest/src/hash/sha3_256.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "subcategory": [
+          "vuln"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "MEDIUM",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Cryptographic Issues"
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.insecure-hash-algorithms.insecure-hash-algorithm-sha1",
+        "shortlink": "https://sg.run/ydYx"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.insecure-hash-algorithms.insecure-hash-algorithm-sha1",
+    "path": "btcrecover/btcrpass.py",
+    "start": {
+      "line": 7476,
+      "col": 35,
+      "offset": 385914
+    },
+    "end": {
+      "line": 7476,
+      "col": 82,
+      "offset": 385961
+    },
+    "extra": {
+      "message": "Detected SHA1 hash algorithm which is considered insecure. SHA1 is not collision resistant and is therefore not suitable as a cryptographic signature. Use SHA256 or SHA3 instead.",
+      "fix": "hashlib.sha256(repr(token_lists).encode('utf-8'))",
+      "metadata": {
+        "source-rule-url": "https://github.com/PyCQA/bandit/blob/d5f8fa0d89d7b11442fc6ec80ca42953974354c8/bandit/blacklists/calls.py#L59",
+        "cwe": [
+          "CWE-327: Use of a Broken or Risky Cryptographic Algorithm"
+        ],
+        "owasp": [
+          "A03:2017 - Sensitive Data Exposure",
+          "A02:2021 - Cryptographic Failures",
+          "A04:2025 - Cryptographic Failures"
+        ],
+        "bandit-code": "B303",
+        "asvs": {
+          "control_id": "6.2.2 Insecure Custom Algorithm",
+          "control_url": "https://github.com/OWASP/ASVS/blob/master/4.0/en/0x14-V6-Cryptography.md#v62-algorithms",
+          "section": "V6 Stored Cryptography Verification Requirements",
+          "version": "4"
+        },
+        "references": [
+          "https://www.schneier.com/blog/archives/2012/10/when_will_we_se.html",
+          "https://www.trendmicro.com/vinfo/us/security/news/vulnerabilities-and-exploits/sha-1-collision-signals-the-end-of-the-algorithm-s-viability",
+          "http://2012.sharcs.org/slides/stevens.pdf",
+          "https://pycryptodome.readthedocs.io/en/latest/src/hash/sha3_256.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "subcategory": [
+          "vuln"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "MEDIUM",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Cryptographic Issues"
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.insecure-hash-algorithms.insecure-hash-algorithm-sha1",
+        "shortlink": "https://sg.run/ydYx"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.insecure-hash-algorithms.insecure-hash-algorithm-sha1",
+    "path": "btcrecover/btcrpass.py",
+    "start": {
+      "line": 7498,
+      "col": 43,
+      "offset": 387361
+    },
+    "end": {
+      "line": 7498,
+      "col": 57,
+      "offset": 387375
+    },
+    "extra": {
+      "message": "Detected SHA1 hash algorithm which is considered insecure. SHA1 is not collision resistant and is therefore not suitable as a cryptographic signature. Use SHA256 or SHA3 instead.",
+      "fix": "hashlib.sha256()",
+      "metadata": {
+        "source-rule-url": "https://github.com/PyCQA/bandit/blob/d5f8fa0d89d7b11442fc6ec80ca42953974354c8/bandit/blacklists/calls.py#L59",
+        "cwe": [
+          "CWE-327: Use of a Broken or Risky Cryptographic Algorithm"
+        ],
+        "owasp": [
+          "A03:2017 - Sensitive Data Exposure",
+          "A02:2021 - Cryptographic Failures",
+          "A04:2025 - Cryptographic Failures"
+        ],
+        "bandit-code": "B303",
+        "asvs": {
+          "control_id": "6.2.2 Insecure Custom Algorithm",
+          "control_url": "https://github.com/OWASP/ASVS/blob/master/4.0/en/0x14-V6-Cryptography.md#v62-algorithms",
+          "section": "V6 Stored Cryptography Verification Requirements",
+          "version": "4"
+        },
+        "references": [
+          "https://www.schneier.com/blog/archives/2012/10/when_will_we_se.html",
+          "https://www.trendmicro.com/vinfo/us/security/news/vulnerabilities-and-exploits/sha-1-collision-signals-the-end-of-the-algorithm-s-viability",
+          "http://2012.sharcs.org/slides/stevens.pdf",
+          "https://pycryptodome.readthedocs.io/en/latest/src/hash/sha3_256.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "subcategory": [
+          "vuln"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "MEDIUM",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Cryptographic Issues"
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.insecure-hash-algorithms.insecure-hash-algorithm-sha1",
+        "shortlink": "https://sg.run/ydYx"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  },
+  {
+    "check_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+    "path": "btcrecover/btcrpass.py",
+    "start": {
+      "line": 8845,
+      "col": 5,
+      "offset": 456429
+    },
+    "end": {
+      "line": 8845,
+      "col": 42,
+      "offset": 456466
+    },
+    "extra": {
+      "message": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "metadata": {
+        "owasp": [
+          "A08:2017 - Insecure Deserialization",
+          "A08:2021 - Software and Data Integrity Failures",
+          "A08:2025 - Software or Data Integrity Failures"
+        ],
+        "cwe": [
+          "CWE-502: Deserialization of Untrusted Data"
+        ],
+        "references": [
+          "https://docs.python.org/3/library/pickle.html"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "Insecure Deserialization "
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.deserialization.pickle.avoid-pickle",
+        "shortlink": "https://sg.run/OPwB"
+      },
+      "severity": "WARNING",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  }
+]

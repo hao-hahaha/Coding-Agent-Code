@@ -1,0 +1,22 @@
+[
+  {
+    "code": "48     mod = importlib.import_module(\"alpha_factory_v1.demos.self_healing_repo.agent_selfheal_entrypoint\")\n49     assert mod.apply_patch_and_retst is mod.apply_and_test\n",
+    "col_offset": 4,
+    "end_col_offset": 58,
+    "filename": "./tests/test_selfheal_import_stubs.py",
+    "issue_confidence": "HIGH",
+    "issue_cwe": {
+      "id": 703,
+      "link": "https://cwe.mitre.org/data/definitions/703.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+    "line_number": 49,
+    "line_range": [
+      49
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b101_assert_used.html",
+    "test_id": "B101",
+    "test_name": "assert_used"
+  }
+]

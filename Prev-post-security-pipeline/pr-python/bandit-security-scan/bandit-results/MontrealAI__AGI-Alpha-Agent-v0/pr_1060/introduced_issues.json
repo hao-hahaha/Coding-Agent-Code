@@ -1,0 +1,22 @@
+[
+  {
+    "code": "151 # Backward compatibility: allow deprecated NEO4J_PASS\n152 if CFG.NEO4J_PASSWORD == \"neo4j\" and (os.getenv(\"NEO4J_PASS\") or CFG.NEO4J_PASS):\n153     CFG.NEO4J_PASSWORD = os.getenv(\"NEO4J_PASS\", CFG.NEO4J_PASS or \"neo4j\")\n",
+    "col_offset": 25,
+    "end_col_offset": 32,
+    "filename": "./alpha_factory_v1/backend/memory_fabric.py",
+    "issue_confidence": "MEDIUM",
+    "issue_cwe": {
+      "id": 259,
+      "link": "https://cwe.mitre.org/data/definitions/259.html"
+    },
+    "issue_severity": "LOW",
+    "issue_text": "Possible hardcoded password: 'neo4j'",
+    "line_number": 152,
+    "line_range": [
+      152
+    ],
+    "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b105_hardcoded_password_string.html",
+    "test_id": "B105",
+    "test_name": "hardcoded_password_string"
+  }
+]

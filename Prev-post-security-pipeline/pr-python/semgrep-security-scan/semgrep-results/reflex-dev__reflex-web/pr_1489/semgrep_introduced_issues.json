@@ -1,0 +1,57 @@
+[
+  {
+    "check_id": "python.lang.security.use-defused-xml.use-defused-xml",
+    "path": "scripts/check_dead_links.py",
+    "start": {
+      "line": 11,
+      "col": 1,
+      "offset": 177
+    },
+    "end": {
+      "line": 11,
+      "col": 35,
+      "offset": 211
+    },
+    "extra": {
+      "message": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "metadata": {
+        "owasp": [
+          "A04:2017 - XML External Entities (XXE)",
+          "A05:2021 - Security Misconfiguration",
+          "A02:2025 - Security Misconfiguration"
+        ],
+        "cwe": [
+          "CWE-611: Improper Restriction of XML External Entity Reference"
+        ],
+        "references": [
+          "https://docs.python.org/3/library/xml.html",
+          "https://github.com/tiran/defusedxml",
+          "https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing"
+        ],
+        "category": "security",
+        "technology": [
+          "python"
+        ],
+        "cwe2022-top25": true,
+        "cwe2021-top25": true,
+        "subcategory": [
+          "audit"
+        ],
+        "likelihood": "LOW",
+        "impact": "MEDIUM",
+        "confidence": "LOW",
+        "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+        "vulnerability_class": [
+          "XML Injection"
+        ],
+        "source": "https://semgrep.dev/r/python.lang.security.use-defused-xml.use-defused-xml",
+        "shortlink": "https://sg.run/kX47"
+      },
+      "severity": "ERROR",
+      "fingerprint": "requires login",
+      "lines": "requires login",
+      "validation_state": "NO_VALIDATOR",
+      "engine_kind": "OSS"
+    }
+  }
+]
