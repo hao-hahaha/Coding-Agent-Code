@@ -26,7 +26,7 @@ def download_zip(owner: str, repo: str, sha: str, out_zip: Path) -> None:
     out_zip.parent.mkdir(parents=True, exist_ok=True)
 
     url = f"https://github.com/{owner}/{repo}/archive/{sha}.zip"
-    r = requests.get(url, stream=True, timeout=60)
+    r = requests.get(url, stream=True, timeout=6000)
     r.raise_for_status()
 
     with open(out_zip, "wb") as f:

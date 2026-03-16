@@ -53,7 +53,7 @@ def run_one_pr(row):
             cmd,
             capture_output=True,
             text=True,
-            timeout=900  # 15 min timeout
+            timeout=2800  # 15 min timeout
         )
 
         return {
