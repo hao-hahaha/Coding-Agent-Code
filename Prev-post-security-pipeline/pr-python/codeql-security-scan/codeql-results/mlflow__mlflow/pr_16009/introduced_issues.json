@@ -1,0 +1,611 @@
+[
+  {
+    "ruleId": "py/partial-ssrf",
+    "ruleIndex": 41,
+    "rule": {
+      "id": "py/partial-ssrf",
+      "index": 41
+    },
+    "message": {
+      "text": "Part of the URL of this request depends on a [user-provided value](1)."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "mlflow/server/handlers.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 15
+          },
+          "region": {
+            "startLine": 1455,
+            "startColumn": 16,
+            "endColumn": 96
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "80ce4be69edf3edc:1",
+      "primaryLocationStartColumnFingerprint": "11"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "mlflow/server/handlers.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 15
+                    },
+                    "region": {
+                      "startLine": 17,
+                      "startColumn": 51,
+                      "endColumn": 58
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for ImportMember"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "mlflow/server/handlers.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 15
+                    },
+                    "region": {
+                      "startLine": 17,
+                      "startColumn": 51,
+                      "endColumn": 58
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for request"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "mlflow/server/handlers.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 15
+                    },
+                    "region": {
+                      "startLine": 1451,
+                      "startColumn": 12,
+                      "endColumn": 19
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for request"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "mlflow/server/handlers.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 15
+                    },
+                    "region": {
+                      "startLine": 1451,
+                      "startColumn": 5,
+                      "endColumn": 9
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for args"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "mlflow/server/handlers.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 15
+                    },
+                    "region": {
+                      "startLine": 1452,
+                      "startColumn": 20,
+                      "endColumn": 24
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for args"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "mlflow/server/handlers.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 15
+                    },
+                    "region": {
+                      "startLine": 1452,
+                      "startColumn": 20,
+                      "endColumn": 44
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "dict.get",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "mlflow/server/handlers.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 15
+                    },
+                    "region": {
+                      "startLine": 1452,
+                      "startColumn": 5,
+                      "endColumn": 17
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for gateway_path"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "mlflow/server/handlers.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 15
+                    },
+                    "region": {
+                      "startLine": 1455,
+                      "startColumn": 49,
+                      "endColumn": 79
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "mlflow/server/handlers.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 15
+                    },
+                    "region": {
+                      "startLine": 17,
+                      "startColumn": 51,
+                      "endColumn": 58
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for ImportMember"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "mlflow/server/handlers.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 15
+                    },
+                    "region": {
+                      "startLine": 17,
+                      "startColumn": 51,
+                      "endColumn": 58
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for request"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "mlflow/server/handlers.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 15
+                    },
+                    "region": {
+                      "startLine": 1451,
+                      "startColumn": 28,
+                      "endColumn": 35
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for request"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "mlflow/server/handlers.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 15
+                    },
+                    "region": {
+                      "startLine": 1451,
+                      "startColumn": 5,
+                      "endColumn": 9
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for args"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "mlflow/server/handlers.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 15
+                    },
+                    "region": {
+                      "startLine": 1452,
+                      "startColumn": 20,
+                      "endColumn": 24
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for args"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "mlflow/server/handlers.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 15
+                    },
+                    "region": {
+                      "startLine": 1452,
+                      "startColumn": 20,
+                      "endColumn": 44
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "dict.get",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "mlflow/server/handlers.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 15
+                    },
+                    "region": {
+                      "startLine": 1452,
+                      "startColumn": 5,
+                      "endColumn": 17
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for gateway_path"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "mlflow/server/handlers.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 15
+                    },
+                    "region": {
+                      "startLine": 1455,
+                      "startColumn": 49,
+                      "endColumn": 79
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "mlflow/server/handlers.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 15
+                    },
+                    "region": {
+                      "startLine": 17,
+                      "startColumn": 51,
+                      "endColumn": 58
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for ImportMember"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "mlflow/server/handlers.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 15
+                    },
+                    "region": {
+                      "startLine": 17,
+                      "startColumn": 51,
+                      "endColumn": 58
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for request"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "mlflow/server/handlers.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 15
+                    },
+                    "region": {
+                      "startLine": 1451,
+                      "startColumn": 57,
+                      "endColumn": 64
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for request"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "mlflow/server/handlers.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 15
+                    },
+                    "region": {
+                      "startLine": 1451,
+                      "startColumn": 5,
+                      "endColumn": 9
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for args"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "mlflow/server/handlers.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 15
+                    },
+                    "region": {
+                      "startLine": 1452,
+                      "startColumn": 20,
+                      "endColumn": 24
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for args"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "mlflow/server/handlers.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 15
+                    },
+                    "region": {
+                      "startLine": 1452,
+                      "startColumn": 20,
+                      "endColumn": 44
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "dict.get",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "mlflow/server/handlers.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 15
+                    },
+                    "region": {
+                      "startLine": 1452,
+                      "startColumn": 5,
+                      "endColumn": 17
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for gateway_path"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "mlflow/server/handlers.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 15
+                    },
+                    "region": {
+                      "startLine": 1455,
+                      "startColumn": 49,
+                      "endColumn": 79
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "mlflow/server/handlers.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 15
+          },
+          "region": {
+            "startLine": 17,
+            "startColumn": 51,
+            "endColumn": 58
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "mlflow/server/handlers.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 15
+          },
+          "region": {
+            "startLine": 17,
+            "startColumn": 51,
+            "endColumn": 58
+          }
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "mlflow/server/handlers.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 15
+          },
+          "region": {
+            "startLine": 1455,
+            "startColumn": 49,
+            "endColumn": 79
+          }
+        }
+      }
+    ]
+  }
+]
