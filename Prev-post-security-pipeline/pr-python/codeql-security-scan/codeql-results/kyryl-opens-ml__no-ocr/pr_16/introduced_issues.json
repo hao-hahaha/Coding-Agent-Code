@@ -1,0 +1,1933 @@
+[
+  {
+    "ruleId": "py/path-injection",
+    "ruleIndex": 35,
+    "rule": {
+      "id": "py/path-injection",
+      "index": 35
+    },
+    "message": {
+      "text": "This path depends on a [user-provided value](1).\nThis path depends on a [user-provided value](2)."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 189,
+            "startColumn": 19,
+            "endColumn": 33
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "4fce5fcd256c7933:1",
+      "primaryLocationStartColumnFingerprint": "10"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 170,
+                      "startColumn": 44,
+                      "endColumn": 51
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for user_id"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 184,
+                      "startColumn": 5,
+                      "endColumn": 19
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_info_path"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 189,
+                      "startColumn": 19,
+                      "endColumn": 33
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_info_path"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 170,
+                      "startColumn": 70,
+                      "endColumn": 79
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_name"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 184,
+                      "startColumn": 5,
+                      "endColumn": 19
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_info_path"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 189,
+                      "startColumn": 19,
+                      "endColumn": 33
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_info_path"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 170,
+            "startColumn": 44,
+            "endColumn": 51
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "id": 2,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 170,
+            "startColumn": 70,
+            "endColumn": 79
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 170,
+            "startColumn": 44,
+            "endColumn": 51
+          }
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 170,
+            "startColumn": 70,
+            "endColumn": 79
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ruleId": "py/path-injection",
+    "ruleIndex": 35,
+    "rule": {
+      "id": "py/path-injection",
+      "index": 35
+    },
+    "message": {
+      "text": "This path depends on a [user-provided value](1).\nThis path depends on a [user-provided value](2)."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 276,
+            "startColumn": 5,
+            "endColumn": 13
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "5ab75122dd5f6b16:1",
+      "primaryLocationStartColumnFingerprint": "0"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 258,
+                      "startColumn": 5,
+                      "endColumn": 12
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for user_id"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 275,
+                      "startColumn": 5,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_dir"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 276,
+                      "startColumn": 5,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_dir"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 260,
+                      "startColumn": 5,
+                      "endColumn": 14
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_name"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 275,
+                      "startColumn": 5,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_dir"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 276,
+                      "startColumn": 5,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_dir"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 258,
+            "startColumn": 5,
+            "endColumn": 12
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "id": 2,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 260,
+            "startColumn": 5,
+            "endColumn": 14
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 258,
+            "startColumn": 5,
+            "endColumn": 12
+          }
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 260,
+            "startColumn": 5,
+            "endColumn": 14
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ruleId": "py/path-injection",
+    "ruleIndex": 35,
+    "rule": {
+      "id": "py/path-injection",
+      "index": 35
+    },
+    "message": {
+      "text": "This path depends on a [user-provided value](1).\nThis path depends on a [user-provided value](2)."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 284,
+            "startColumn": 19,
+            "endColumn": 28
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "63589dcacbf2517f:1",
+      "primaryLocationStartColumnFingerprint": "10"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 258,
+                      "startColumn": 5,
+                      "endColumn": 12
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for user_id"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 275,
+                      "startColumn": 5,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_dir"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 283,
+                      "startColumn": 9,
+                      "endColumn": 18
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for file_path"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 284,
+                      "startColumn": 19,
+                      "endColumn": 28
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for file_path"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 260,
+                      "startColumn": 5,
+                      "endColumn": 14
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_name"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 275,
+                      "startColumn": 5,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_dir"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 283,
+                      "startColumn": 9,
+                      "endColumn": 18
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for file_path"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 284,
+                      "startColumn": 19,
+                      "endColumn": 28
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for file_path"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 258,
+            "startColumn": 5,
+            "endColumn": 12
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "id": 2,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 260,
+            "startColumn": 5,
+            "endColumn": 14
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 258,
+            "startColumn": 5,
+            "endColumn": 12
+          }
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 260,
+            "startColumn": 5,
+            "endColumn": 14
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ruleId": "py/path-injection",
+    "ruleIndex": 35,
+    "rule": {
+      "id": "py/path-injection",
+      "index": 35
+    },
+    "message": {
+      "text": "This path depends on a [user-provided value](1)."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 325,
+            "startColumn": 27,
+            "endColumn": 41
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "77be0c50a64ca968:1",
+      "primaryLocationStartColumnFingerprint": "18"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 307,
+                      "startColumn": 15,
+                      "endColumn": 22
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for user_id"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 316,
+                      "startColumn": 5,
+                      "endColumn": 21
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for user_storage_dir"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 324,
+                      "startColumn": 9,
+                      "endColumn": 23
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_info_path"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 325,
+                      "startColumn": 27,
+                      "endColumn": 41
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_info_path"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 307,
+            "startColumn": 15,
+            "endColumn": 22
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 307,
+            "startColumn": 15,
+            "endColumn": 22
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ruleId": "py/path-injection",
+    "ruleIndex": 35,
+    "rule": {
+      "id": "py/path-injection",
+      "index": 35
+    },
+    "message": {
+      "text": "This path depends on a [user-provided value](1)."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 327,
+            "startColumn": 27,
+            "endColumn": 41
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "bd17ef0a916dd0db:1",
+      "primaryLocationStartColumnFingerprint": "10"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 307,
+                      "startColumn": 15,
+                      "endColumn": 22
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for user_id"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 316,
+                      "startColumn": 5,
+                      "endColumn": 21
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for user_storage_dir"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 324,
+                      "startColumn": 9,
+                      "endColumn": 23
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_info_path"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 327,
+                      "startColumn": 27,
+                      "endColumn": 41
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_info_path"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 307,
+            "startColumn": 15,
+            "endColumn": 22
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 307,
+            "startColumn": 15,
+            "endColumn": 22
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ruleId": "py/path-injection",
+    "ruleIndex": 35,
+    "rule": {
+      "id": "py/path-injection",
+      "index": 35
+    },
+    "message": {
+      "text": "This path depends on a [user-provided value](1).\nThis path depends on a [user-provided value](2)."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 371,
+            "startColumn": 19,
+            "endColumn": 33
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "bd17ef0a916dd0db:3",
+      "primaryLocationStartColumnFingerprint": "10"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 359,
+                      "startColumn": 14,
+                      "endColumn": 21
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for user_id"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 363,
+                      "startColumn": 5,
+                      "endColumn": 19
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_info_path"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 371,
+                      "startColumn": 19,
+                      "endColumn": 33
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_info_path"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 359,
+                      "startColumn": 28,
+                      "endColumn": 37
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_name"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 363,
+                      "startColumn": 5,
+                      "endColumn": 19
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_info_path"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 371,
+                      "startColumn": 19,
+                      "endColumn": 33
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_info_path"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 359,
+                      "startColumn": 28,
+                      "endColumn": 37
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_name"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 366,
+                      "startColumn": 9,
+                      "endColumn": 23
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_info_path"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 371,
+                      "startColumn": 19,
+                      "endColumn": 33
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_info_path"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 359,
+            "startColumn": 14,
+            "endColumn": 21
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "id": 2,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 359,
+            "startColumn": 28,
+            "endColumn": 37
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 359,
+            "startColumn": 14,
+            "endColumn": 21
+          }
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 359,
+            "startColumn": 28,
+            "endColumn": 37
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ruleId": "py/path-injection",
+    "ruleIndex": 35,
+    "rule": {
+      "id": "py/path-injection",
+      "index": 35
+    },
+    "message": {
+      "text": "This path depends on a [user-provided value](1).\nThis path depends on a [user-provided value](2)."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 391,
+            "startColumn": 23,
+            "endColumn": 31
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "a43946b99def8cbe:1",
+      "primaryLocationStartColumnFingerprint": "18"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 379,
+                      "startColumn": 17,
+                      "endColumn": 24
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for user_id"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 390,
+                      "startColumn": 5,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_dir"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 391,
+                      "startColumn": 23,
+                      "endColumn": 31
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_dir"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 379,
+                      "startColumn": 31,
+                      "endColumn": 40
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_name"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 390,
+                      "startColumn": 5,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_dir"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 391,
+                      "startColumn": 23,
+                      "endColumn": 31
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_dir"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 379,
+            "startColumn": 17,
+            "endColumn": 24
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "id": 2,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 379,
+            "startColumn": 31,
+            "endColumn": 40
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 379,
+            "startColumn": 17,
+            "endColumn": 24
+          }
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 379,
+            "startColumn": 31,
+            "endColumn": 40
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ruleId": "py/path-injection",
+    "ruleIndex": 35,
+    "rule": {
+      "id": "py/path-injection",
+      "index": 35
+    },
+    "message": {
+      "text": "This path depends on a [user-provided value](1).\nThis path depends on a [user-provided value](2)."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 393,
+            "startColumn": 27,
+            "endColumn": 35
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "d0f916679164ca77:1",
+      "primaryLocationStartColumnFingerprint": "14"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 379,
+                      "startColumn": 17,
+                      "endColumn": 24
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for user_id"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 390,
+                      "startColumn": 5,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_dir"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 393,
+                      "startColumn": 27,
+                      "endColumn": 35
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_dir"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 379,
+                      "startColumn": 31,
+                      "endColumn": 40
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_name"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 390,
+                      "startColumn": 5,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_dir"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 393,
+                      "startColumn": 27,
+                      "endColumn": 35
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for case_dir"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 379,
+            "startColumn": 17,
+            "endColumn": 24
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "id": 2,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 379,
+            "startColumn": 31,
+            "endColumn": 40
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 379,
+            "startColumn": 17,
+            "endColumn": 24
+          }
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 379,
+            "startColumn": 31,
+            "endColumn": 40
+          }
+        }
+      }
+    ]
+  }
+]

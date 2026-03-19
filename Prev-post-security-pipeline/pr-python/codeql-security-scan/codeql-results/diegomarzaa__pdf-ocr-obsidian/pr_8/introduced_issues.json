@@ -1,0 +1,1550 @@
+[
+  {
+    "ruleId": "py/path-injection",
+    "ruleIndex": 35,
+    "rule": {
+      "id": "py/path-injection",
+      "index": 35
+    },
+    "message": {
+      "text": "This path depends on a [user-provided value](1)."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "app.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 206,
+            "startColumn": 26,
+            "endColumn": 36
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "5ac51329c53f5b0e:1",
+      "primaryLocationStartColumnFingerprint": "13"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 9,
+                      "startColumn": 26,
+                      "endColumn": 33
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for ImportMember"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 9,
+                      "startColumn": 26,
+                      "endColumn": 33
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for request"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 231,
+                      "startColumn": 27,
+                      "endColumn": 34
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for request"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 273,
+                      "startColumn": 22,
+                      "endColumn": 34
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 273,
+                      "startColumn": 22,
+                      "endColumn": 56
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "dict.get",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 273,
+                      "startColumn": 5,
+                      "endColumn": 19
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for page_separator"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 289,
+                      "startColumn": 61,
+                      "endColumn": 75
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for page_separator"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 54,
+                      "startColumn": 73,
+                      "endColumn": 87
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for page_separator"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 161,
+                      "startColumn": 9,
+                      "endColumn": 18
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for separator"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 162,
+                      "startColumn": 9,
+                      "endColumn": 31
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for final_markdown_content"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 180,
+                      "startColumn": 16,
+                      "endColumn": 119
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Tuple"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 288,
+                      "startColumn": 87,
+                      "endLine": 290,
+                      "endColumn": 14
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for process_pdf()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 288,
+                      "startColumn": 13,
+                      "endColumn": 31
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for processed_pdf_base"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 294,
+                      "startColumn": 13,
+                      "endColumn": 34
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for individual_output_dir"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 295,
+                      "startColumn": 32,
+                      "endColumn": 53
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for individual_output_dir"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 202,
+                      "startColumn": 24,
+                      "endColumn": 34
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for source_dir"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 206,
+                      "startColumn": 26,
+                      "endColumn": 36
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for source_dir"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 9,
+                      "startColumn": 26,
+                      "endColumn": 33
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for ImportMember"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 9,
+                      "startColumn": 26,
+                      "endColumn": 33
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for request"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 234,
+                      "startColumn": 13,
+                      "endColumn": 20
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for request"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 273,
+                      "startColumn": 22,
+                      "endColumn": 34
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 273,
+                      "startColumn": 22,
+                      "endColumn": 56
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "dict.get",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 273,
+                      "startColumn": 5,
+                      "endColumn": 19
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for page_separator"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 289,
+                      "startColumn": 61,
+                      "endColumn": 75
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for page_separator"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 54,
+                      "startColumn": 73,
+                      "endColumn": 87
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for page_separator"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 161,
+                      "startColumn": 9,
+                      "endColumn": 18
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for separator"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 162,
+                      "startColumn": 9,
+                      "endColumn": 31
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for final_markdown_content"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 180,
+                      "startColumn": 16,
+                      "endColumn": 119
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Tuple"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 288,
+                      "startColumn": 87,
+                      "endLine": 290,
+                      "endColumn": 14
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for process_pdf()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 288,
+                      "startColumn": 13,
+                      "endColumn": 84
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Tuple"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 288,
+                      "startColumn": 13,
+                      "endColumn": 31
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for processed_pdf_base"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 294,
+                      "startColumn": 13,
+                      "endColumn": 34
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for individual_output_dir"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 295,
+                      "startColumn": 32,
+                      "endColumn": 53
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for individual_output_dir"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 202,
+                      "startColumn": 24,
+                      "endColumn": 34
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for source_dir"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 206,
+                      "startColumn": 26,
+                      "endColumn": 36
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for source_dir"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 9,
+                      "startColumn": 26,
+                      "endColumn": 33
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for ImportMember"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 9,
+                      "startColumn": 26,
+                      "endColumn": 33
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for request"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 242,
+                      "startColumn": 19,
+                      "endColumn": 26
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for request"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 273,
+                      "startColumn": 22,
+                      "endColumn": 34
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 273,
+                      "startColumn": 22,
+                      "endColumn": 56
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "dict.get",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 273,
+                      "startColumn": 5,
+                      "endColumn": 19
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for page_separator"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 289,
+                      "startColumn": 61,
+                      "endColumn": 75
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for page_separator"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 54,
+                      "startColumn": 73,
+                      "endColumn": 87
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for page_separator"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 161,
+                      "startColumn": 9,
+                      "endColumn": 18
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for separator"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 162,
+                      "startColumn": 9,
+                      "endColumn": 31
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for final_markdown_content"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 180,
+                      "startColumn": 16,
+                      "endColumn": 119
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Tuple"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 288,
+                      "startColumn": 87,
+                      "endLine": 290,
+                      "endColumn": 14
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for process_pdf()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 288,
+                      "startColumn": 13,
+                      "endColumn": 84
+                    }
+                  },
+                  "message": {
+                    "text": "IterableElement"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 288,
+                      "startColumn": 13,
+                      "endColumn": 84
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Tuple [Tuple element at index 0]"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 288,
+                      "startColumn": 13,
+                      "endColumn": 31
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for processed_pdf_base"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 294,
+                      "startColumn": 13,
+                      "endColumn": 34
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for individual_output_dir"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 295,
+                      "startColumn": 32,
+                      "endColumn": 53
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for individual_output_dir"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 202,
+                      "startColumn": 24,
+                      "endColumn": 34
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for source_dir"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 206,
+                      "startColumn": 26,
+                      "endColumn": 36
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for source_dir"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 9,
+                      "startColumn": 26,
+                      "endColumn": 33
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for ImportMember"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 9,
+                      "startColumn": 26,
+                      "endColumn": 33
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for request"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 273,
+                      "startColumn": 22,
+                      "endColumn": 29
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for request"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 273,
+                      "startColumn": 22,
+                      "endColumn": 34
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 273,
+                      "startColumn": 22,
+                      "endColumn": 56
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "dict.get",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 273,
+                      "startColumn": 5,
+                      "endColumn": 19
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for page_separator"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 289,
+                      "startColumn": 61,
+                      "endColumn": 75
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for page_separator"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 54,
+                      "startColumn": 73,
+                      "endColumn": 87
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for page_separator"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 161,
+                      "startColumn": 9,
+                      "endColumn": 18
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for separator"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 162,
+                      "startColumn": 9,
+                      "endColumn": 31
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for final_markdown_content"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 180,
+                      "startColumn": 16,
+                      "endColumn": 119
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Tuple"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 288,
+                      "startColumn": 87,
+                      "endLine": 290,
+                      "endColumn": 14
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for process_pdf()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 288,
+                      "startColumn": 13,
+                      "endColumn": 31
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for processed_pdf_base"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 294,
+                      "startColumn": 13,
+                      "endColumn": 34
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for individual_output_dir"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 295,
+                      "startColumn": 32,
+                      "endColumn": 53
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for individual_output_dir"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 202,
+                      "startColumn": 24,
+                      "endColumn": 34
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for source_dir"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 206,
+                      "startColumn": 26,
+                      "endColumn": 36
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for source_dir"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "app.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 9,
+            "startColumn": 26,
+            "endColumn": 33
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "app.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 9,
+            "startColumn": 26,
+            "endColumn": 33
+          }
+        }
+      }
+    ]
+  }
+]

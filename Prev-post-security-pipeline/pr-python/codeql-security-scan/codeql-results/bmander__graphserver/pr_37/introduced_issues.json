@@ -1,0 +1,380 @@
+[
+  {
+    "ruleId": "py/stack-trace-exposure",
+    "ruleIndex": 1,
+    "rule": {
+      "id": "py/stack-trace-exposure",
+      "index": 1
+    },
+    "message": {
+      "text": "[Stack trace information](1) flows to this location and may be exposed to an external user."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "pygs/graphserver/ext/routeserver/routeserver.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 359,
+            "startColumn": 25,
+            "endColumn": 29
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "cc3971c1033a015f:1",
+      "primaryLocationStartColumnFingerprint": "16"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "pygs/graphserver/ext/routeserver/routeserver.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 146,
+                      "startColumn": 29,
+                      "endColumn": 30
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for e"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "pygs/graphserver/ext/routeserver/routeserver.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 147,
+                      "startColumn": 20,
+                      "endColumn": 49
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "pygs/graphserver/ext/routeserver/routeserver.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 345,
+                      "startColumn": 16,
+                      "endLine": 357,
+                      "endColumn": 10
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "pygs/graphserver/ext/routeserver/routeserver.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 345,
+                      "startColumn": 9,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for data"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "pygs/graphserver/ext/routeserver/routeserver.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 359,
+                      "startColumn": 25,
+                      "endColumn": 29
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for data"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "pygs/graphserver/ext/routeserver/routeserver.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 146,
+            "startColumn": 29,
+            "endColumn": 30
+          }
+        },
+        "message": {
+          "text": "Stack trace information"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "pygs/graphserver/ext/routeserver/routeserver.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 146,
+            "startColumn": 29,
+            "endColumn": 30
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ruleId": "py/stack-trace-exposure",
+    "ruleIndex": 1,
+    "rule": {
+      "id": "py/stack-trace-exposure",
+      "index": 1
+    },
+    "message": {
+      "text": "[Stack trace information](1) flows to this location and may be exposed to an external user."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "pygs/graphserver/ext/routeserver/routeserver.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 380,
+            "startColumn": 25,
+            "endColumn": 29
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "fbd88820ab78cf3c:1",
+      "primaryLocationStartColumnFingerprint": "16"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "pygs/graphserver/ext/routeserver/routeserver.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 146,
+                      "startColumn": 29,
+                      "endColumn": 30
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for e"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "pygs/graphserver/ext/routeserver/routeserver.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 147,
+                      "startColumn": 20,
+                      "endColumn": 49
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "pygs/graphserver/ext/routeserver/routeserver.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 196,
+                      "startColumn": 16,
+                      "endLine": 208,
+                      "endColumn": 10
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "pygs/graphserver/ext/routeserver/routeserver.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 364,
+                      "startColumn": 16,
+                      "endLine": 378,
+                      "endColumn": 10
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "pygs/graphserver/ext/routeserver/routeserver.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 364,
+                      "startColumn": 9,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for data"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "pygs/graphserver/ext/routeserver/routeserver.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 380,
+                      "startColumn": 25,
+                      "endColumn": 29
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for data"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "pygs/graphserver/ext/routeserver/routeserver.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 146,
+            "startColumn": 29,
+            "endColumn": 30
+          }
+        },
+        "message": {
+          "text": "Stack trace information"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "pygs/graphserver/ext/routeserver/routeserver.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 146,
+            "startColumn": 29,
+            "endColumn": 30
+          }
+        }
+      }
+    ]
+  }
+]

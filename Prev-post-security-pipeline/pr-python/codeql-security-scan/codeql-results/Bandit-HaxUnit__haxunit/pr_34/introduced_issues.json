@@ -1,0 +1,231 @@
+[
+  {
+    "ruleId": "py/clear-text-logging-sensitive-data",
+    "ruleIndex": 28,
+    "rule": {
+      "id": "py/clear-text-logging-sensitive-data",
+      "index": 28
+    },
+    "message": {
+      "text": "This expression logs [sensitive data (password)](1) as clear text."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "main.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 211,
+            "startColumn": 13,
+            "endLine": 214,
+            "endColumn": 48
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "885eceb7624e914f:1",
+      "primaryLocationStartColumnFingerprint": "0"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "main.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 446,
+                      "startColumn": 21,
+                      "endColumn": 38
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "main.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 444,
+                      "startColumn": 9,
+                      "endColumn": 18
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for chaos_cmd"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "main.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 450,
+                      "startColumn": 18,
+                      "endColumn": 27
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for chaos_cmd"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "main.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 264,
+                      "startColumn": 19,
+                      "endColumn": 22
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for cmd"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "main.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 275,
+                      "startColumn": 9,
+                      "endColumn": 12
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for cmd"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "main.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 278,
+                      "startColumn": 31,
+                      "endColumn": 34
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for cmd"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "main.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 198,
+                      "startColumn": 32,
+                      "endColumn": 36
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for text"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "main.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 211,
+                      "startColumn": 13,
+                      "endLine": 214,
+                      "endColumn": 48
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "main.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 446,
+            "startColumn": 21,
+            "endColumn": 38
+          }
+        },
+        "message": {
+          "text": "sensitive data (password)"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "main.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 446,
+            "startColumn": 21,
+            "endColumn": 38
+          }
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,228 @@
+[
+  {
+    "ruleId": "py/stack-trace-exposure",
+    "ruleIndex": 1,
+    "rule": {
+      "id": "py/stack-trace-exposure",
+      "index": 1
+    },
+    "message": {
+      "text": "[Stack trace information](1) flows to this location and may be exposed to an external user."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "server/tasks.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 70,
+            "startColumn": 24,
+            "endColumn": 41
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "417658bd3cfddaab:1",
+      "primaryLocationStartColumnFingerprint": "15"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "server/tasks.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 68,
+                      "startColumn": 25,
+                      "endColumn": 26
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for e"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "server/tasks.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 70,
+                      "startColumn": 24,
+                      "endColumn": 41
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Dict"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "server/tasks.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 68,
+            "startColumn": 25,
+            "endColumn": 26
+          }
+        },
+        "message": {
+          "text": "Stack trace information"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "server/tasks.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 68,
+            "startColumn": 25,
+            "endColumn": 26
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ruleId": "py/stack-trace-exposure",
+    "ruleIndex": 1,
+    "rule": {
+      "id": "py/stack-trace-exposure",
+      "index": 1
+    },
+    "message": {
+      "text": "[Stack trace information](1) flows to this location and may be exposed to an external user."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "server/github_integration.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 107,
+            "startColumn": 24,
+            "endColumn": 71
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "a71bad6bbaea503c:1",
+      "primaryLocationStartColumnFingerprint": "15"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "server/github_integration.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 105,
+                      "startColumn": 25,
+                      "endColumn": 26
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for e"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "server/github_integration.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 107,
+                      "startColumn": 24,
+                      "endColumn": 71
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Dict"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "server/github_integration.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 105,
+            "startColumn": 25,
+            "endColumn": 26
+          }
+        },
+        "message": {
+          "text": "Stack trace information"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "server/github_integration.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 105,
+            "startColumn": 25,
+            "endColumn": 26
+          }
+        }
+      }
+    ]
+  }
+]

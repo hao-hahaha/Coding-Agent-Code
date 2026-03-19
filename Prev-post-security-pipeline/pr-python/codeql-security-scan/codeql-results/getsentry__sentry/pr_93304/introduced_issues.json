@@ -1,0 +1,123 @@
+[
+  {
+    "ruleId": "py/log-injection",
+    "ruleIndex": 44,
+    "rule": {
+      "id": "py/log-injection",
+      "index": 44
+    },
+    "message": {
+      "text": "This log entry depends on a [user-provided value](1)."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "src/sentry/issues/endpoints/browser_reporting_collector.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 214
+          },
+          "region": {
+            "startLine": 41,
+            "startColumn": 54,
+            "endColumn": 84
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "536e9fbef048a108:1",
+      "primaryLocationStartColumnFingerprint": "45"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/sentry/issues/endpoints/browser_reporting_collector.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 214
+                    },
+                    "region": {
+                      "startLine": 37,
+                      "startColumn": 20,
+                      "endColumn": 27
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for request"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/sentry/issues/endpoints/browser_reporting_collector.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 214
+                    },
+                    "region": {
+                      "startLine": 41,
+                      "startColumn": 54,
+                      "endColumn": 84
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Dict"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "src/sentry/issues/endpoints/browser_reporting_collector.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 214
+          },
+          "region": {
+            "startLine": 37,
+            "startColumn": 20,
+            "endColumn": 27
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "src/sentry/issues/endpoints/browser_reporting_collector.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 214
+          },
+          "region": {
+            "startLine": 37,
+            "startColumn": 20,
+            "endColumn": 27
+          }
+        }
+      }
+    ]
+  }
+]

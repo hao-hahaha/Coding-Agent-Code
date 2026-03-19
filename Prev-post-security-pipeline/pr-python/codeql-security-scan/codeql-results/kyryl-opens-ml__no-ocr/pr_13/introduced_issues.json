@@ -1,0 +1,172 @@
+[
+  {
+    "ruleId": "py/log-injection",
+    "ruleIndex": 44,
+    "rule": {
+      "id": "py/log-injection",
+      "index": 44
+    },
+    "message": {
+      "text": "This log entry depends on a [user-provided value](1)."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/search.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 163,
+            "startColumn": 17,
+            "endColumn": 23
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "660facb15c792390:1",
+      "primaryLocationStartColumnFingerprint": "12"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 111,
+                      "startColumn": 5,
+                      "endColumn": 15
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for user_query"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 141,
+                      "startColumn": 42,
+                      "endColumn": 52
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for user_query"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/search.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 142,
+                      "startColumn": 44,
+                      "endColumn": 54
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for user_query"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/search.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 147,
+                      "startColumn": 5,
+                      "endColumn": 11
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for prompt"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "no-ocr-api/np_ocr/search.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 163,
+                      "startColumn": 17,
+                      "endColumn": 23
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for prompt"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 111,
+            "startColumn": 5,
+            "endColumn": 15
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "no-ocr-api/np_ocr/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 111,
+            "startColumn": 5,
+            "endColumn": 15
+          }
+        }
+      }
+    ]
+  }
+]

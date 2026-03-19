@@ -1,0 +1,292 @@
+[
+  {
+    "ruleId": "py/partial-ssrf",
+    "ruleIndex": 41,
+    "rule": {
+      "id": "py/partial-ssrf",
+      "index": 41
+    },
+    "message": {
+      "text": "Part of the URL of this request depends on a [user-provided value](1)."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "alpha_factory_v1/requests.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 84,
+            "startColumn": 11,
+            "endColumn": 79
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "e79d0930b801ae70:1",
+      "primaryLocationStartColumnFingerprint": "6"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "alpha_factory_v1/demos/alpha_agi_business_v1/gradio_dashboard.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 2
+                    },
+                    "region": {
+                      "startLine": 25,
+                      "startColumn": 19,
+                      "endColumn": 24
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for limit"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "alpha_factory_v1/demos/alpha_agi_business_v1/gradio_dashboard.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 2
+                    },
+                    "region": {
+                      "startLine": 27,
+                      "startColumn": 59,
+                      "endColumn": 71
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Dict"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "alpha_factory_v1/requests.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 103,
+                      "startColumn": 5,
+                      "endColumn": 11
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for params"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "alpha_factory_v1/requests.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 108,
+                      "startColumn": 37,
+                      "endColumn": 43
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for params"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "alpha_factory_v1/requests.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 62,
+                      "startColumn": 5,
+                      "endColumn": 11
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for params"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "alpha_factory_v1/requests.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 69,
+                      "startColumn": 34,
+                      "endColumn": 40
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for params"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "alpha_factory_v1/requests.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 69,
+                      "startColumn": 17,
+                      "endColumn": 53
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "index": 0,
+                    "toolComponent": {
+                      "index": 1
+                    },
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "alpha_factory_v1/requests.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 69,
+                      "startColumn": 9,
+                      "endColumn": 14
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for query"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "alpha_factory_v1/requests.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 70,
+                      "startColumn": 9,
+                      "endColumn": 12
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for url"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "alpha_factory_v1/requests.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 84,
+                      "startColumn": 28,
+                      "endColumn": 31
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for url"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "alpha_factory_v1/demos/alpha_agi_business_v1/gradio_dashboard.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 2
+          },
+          "region": {
+            "startLine": 25,
+            "startColumn": 19,
+            "endColumn": 24
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "alpha_factory_v1/demos/alpha_agi_business_v1/gradio_dashboard.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 2
+          },
+          "region": {
+            "startLine": 25,
+            "startColumn": 19,
+            "endColumn": 24
+          }
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "alpha_factory_v1/requests.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 84,
+            "startColumn": 28,
+            "endColumn": 31
+          }
+        }
+      }
+    ]
+  }
+]

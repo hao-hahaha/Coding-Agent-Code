@@ -1,0 +1,172 @@
+[
+  {
+    "ruleId": "py/tarslip",
+    "ruleIndex": 45,
+    "rule": {
+      "id": "py/tarslip",
+      "index": 45
+    },
+    "message": {
+      "text": "This file extraction depends on a [potentially untrusted source](1)."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "alpha_factory_v1/demos/alpha_agi_insight_v1/src/evolution_worker.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 8
+          },
+          "region": {
+            "startLine": 31,
+            "startColumn": 5,
+            "endColumn": 7
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "14a1c706ef1ad0ab:1",
+      "primaryLocationStartColumnFingerprint": "0"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "alpha_factory_v1/demos/alpha_agi_insight_v1/src/evolution_worker.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 8
+                    },
+                    "region": {
+                      "startLine": 64,
+                      "startColumn": 18,
+                      "endColumn": 48
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "alpha_factory_v1/demos/alpha_agi_insight_v1/src/evolution_worker.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 8
+                    },
+                    "region": {
+                      "startLine": 64,
+                      "startColumn": 52,
+                      "endColumn": 54
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for tf"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "alpha_factory_v1/demos/alpha_agi_insight_v1/src/evolution_worker.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 8
+                    },
+                    "region": {
+                      "startLine": 65,
+                      "startColumn": 31,
+                      "endColumn": 33
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for tf"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "alpha_factory_v1/demos/alpha_agi_insight_v1/src/evolution_worker.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 8
+                    },
+                    "region": {
+                      "startLine": 24,
+                      "startColumn": 19,
+                      "endColumn": 21
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for tf"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "alpha_factory_v1/demos/alpha_agi_insight_v1/src/evolution_worker.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 8
+                    },
+                    "region": {
+                      "startLine": 31,
+                      "startColumn": 5,
+                      "endColumn": 7
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for tf"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "alpha_factory_v1/demos/alpha_agi_insight_v1/src/evolution_worker.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 8
+          },
+          "region": {
+            "startLine": 64,
+            "startColumn": 18,
+            "endColumn": 48
+          }
+        },
+        "message": {
+          "text": "potentially untrusted source"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "alpha_factory_v1/demos/alpha_agi_insight_v1/src/evolution_worker.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 8
+          },
+          "region": {
+            "startLine": 64,
+            "startColumn": 18,
+            "endColumn": 48
+          }
+        }
+      }
+    ]
+  }
+]

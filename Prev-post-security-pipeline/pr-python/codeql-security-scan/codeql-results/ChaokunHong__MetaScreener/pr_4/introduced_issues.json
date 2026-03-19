@@ -1,0 +1,638 @@
+[
+  {
+    "ruleId": "py/url-redirection",
+    "ruleIndex": 2,
+    "rule": {
+      "id": "py/url-redirection",
+      "index": 2
+    },
+    "message": {
+      "text": "Untrusted URL redirection depends on a [user-provided value](1)."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "app.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 233,
+            "startColumn": 21,
+            "endColumn": 57
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "f9ce64877520cb9a:1",
+      "primaryLocationStartColumnFingerprint": "16"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 10,
+                      "startColumn": 43,
+                      "endColumn": 50
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for ImportMember"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 10,
+                      "startColumn": 43,
+                      "endColumn": 50
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for request"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 230,
+                      "startColumn": 12,
+                      "endColumn": 19
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for request"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 233,
+                      "startColumn": 21,
+                      "endColumn": 57
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for BoolExpr"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 10,
+                      "startColumn": 43,
+                      "endColumn": 50
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for ImportMember"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 10,
+                      "startColumn": 43,
+                      "endColumn": 50
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for request"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 233,
+                      "startColumn": 21,
+                      "endColumn": 28
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for request"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 233,
+                      "startColumn": 21,
+                      "endColumn": 57
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for BoolExpr"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "app.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 10,
+            "startColumn": 43,
+            "endColumn": 50
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "app.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 10,
+            "startColumn": 43,
+            "endColumn": 50
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ruleId": "py/url-redirection",
+    "ruleIndex": 2,
+    "rule": {
+      "id": "py/url-redirection",
+      "index": 2
+    },
+    "message": {
+      "text": "Untrusted URL redirection depends on a [user-provided value](1)."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "app.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 1803,
+            "startColumn": 25,
+            "endColumn": 80
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "facd092ab4ffd849:1",
+      "primaryLocationStartColumnFingerprint": "16"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 10,
+                      "startColumn": 43,
+                      "endColumn": 50
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for ImportMember"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 10,
+                      "startColumn": 43,
+                      "endColumn": 50
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for request"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 1803,
+                      "startColumn": 25,
+                      "endColumn": 32
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for request"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 1803,
+                      "startColumn": 25,
+                      "endColumn": 80
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for BoolExpr"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "app.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 10,
+            "startColumn": 43,
+            "endColumn": 50
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "app.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 10,
+            "startColumn": 43,
+            "endColumn": 50
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ruleId": "py/log-injection",
+    "ruleIndex": 44,
+    "rule": {
+      "id": "py/log-injection",
+      "index": 44
+    },
+    "message": {
+      "text": "This log entry depends on a [user-provided value](1)."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "app.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 1755,
+            "startColumn": 28,
+            "endColumn": 96
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "369ddec8da5be2ae:1",
+      "primaryLocationStartColumnFingerprint": "19"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 1750,
+                      "startColumn": 28,
+                      "endColumn": 44
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for batch_session_id"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 1755,
+                      "startColumn": 28,
+                      "endColumn": 96
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "app.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 1750,
+            "startColumn": 28,
+            "endColumn": 44
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "app.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 1750,
+            "startColumn": 28,
+            "endColumn": 44
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ruleId": "py/log-injection",
+    "ruleIndex": 44,
+    "rule": {
+      "id": "py/log-injection",
+      "index": 44
+    },
+    "message": {
+      "text": "This log entry depends on a [user-provided value](1)."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "app.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 1790,
+            "startColumn": 28,
+            "endColumn": 106
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "aa6224c2cab27769:1",
+      "primaryLocationStartColumnFingerprint": "19"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 1785,
+                      "startColumn": 32,
+                      "endColumn": 48
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for batch_session_id"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 1790,
+                      "startColumn": 28,
+                      "endColumn": 106
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "app.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 1785,
+            "startColumn": 32,
+            "endColumn": 48
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "app.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 1785,
+            "startColumn": 32,
+            "endColumn": 48
+          }
+        }
+      }
+    ]
+  }
+]

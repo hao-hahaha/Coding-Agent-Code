@@ -1,0 +1,1664 @@
+[
+  {
+    "ruleId": "py/clear-text-logging-sensitive-data",
+    "ruleIndex": 28,
+    "rule": {
+      "id": "py/clear-text-logging-sensitive-data",
+      "index": 28
+    },
+    "message": {
+      "text": "This expression logs [sensitive data (secret)](1) as clear text."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "scripts/verify_github_actions.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 91,
+            "startColumn": 23,
+            "endColumn": 45
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "df3ae399c9c3b7fc:1",
+      "primaryLocationStartColumnFingerprint": "6"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 84,
+                      "startColumn": 15,
+                      "endColumn": 30
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for check_secrets()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 88,
+                      "startColumn": 35,
+                      "endColumn": 42
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for secrets"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 88,
+                      "startColumn": 35,
+                      "endColumn": 50
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "dict.items",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 88,
+                      "startColumn": 13,
+                      "endColumn": 19
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for secret"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 91,
+                      "startColumn": 23,
+                      "endColumn": 45
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 84,
+                      "startColumn": 15,
+                      "endColumn": 30
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for check_secrets()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 84,
+                      "startColumn": 5,
+                      "endColumn": 12
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for secrets"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 88,
+                      "startColumn": 35,
+                      "endColumn": 42
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for secrets"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 88,
+                      "startColumn": 35,
+                      "endColumn": 50
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "dict.items",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 88,
+                      "startColumn": 13,
+                      "endColumn": 31
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Tuple"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 88,
+                      "startColumn": 13,
+                      "endColumn": 19
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for secret"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 91,
+                      "startColumn": 23,
+                      "endColumn": 45
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 84,
+                      "startColumn": 15,
+                      "endColumn": 30
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for check_secrets()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 88,
+                      "startColumn": 35,
+                      "endColumn": 42
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for secrets"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 88,
+                      "startColumn": 35,
+                      "endColumn": 50
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "dict.items",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 88,
+                      "startColumn": 13,
+                      "endColumn": 31
+                    }
+                  },
+                  "message": {
+                    "text": "IterableElement"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 88,
+                      "startColumn": 13,
+                      "endColumn": 31
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Tuple [Tuple element at index 0]"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 88,
+                      "startColumn": 13,
+                      "endColumn": 19
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for secret"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 91,
+                      "startColumn": 23,
+                      "endColumn": 45
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "scripts/verify_github_actions.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 84,
+            "startColumn": 15,
+            "endColumn": 30
+          }
+        },
+        "message": {
+          "text": "sensitive data (secret)"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "scripts/verify_github_actions.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 84,
+            "startColumn": 15,
+            "endColumn": 30
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ruleId": "py/clear-text-logging-sensitive-data",
+    "ruleIndex": 28,
+    "rule": {
+      "id": "py/clear-text-logging-sensitive-data",
+      "index": 28
+    },
+    "message": {
+      "text": "This expression logs [sensitive data (secret)](1) as clear text."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "scripts/verify_github_actions.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 97,
+            "startColumn": 23,
+            "endColumn": 45
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "e3242c61ecf6705a:1",
+      "primaryLocationStartColumnFingerprint": "6"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 84,
+                      "startColumn": 15,
+                      "endColumn": 30
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for check_secrets()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 94,
+                      "startColumn": 35,
+                      "endColumn": 42
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for secrets"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 94,
+                      "startColumn": 35,
+                      "endColumn": 50
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "dict.items",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 94,
+                      "startColumn": 13,
+                      "endColumn": 19
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for secret"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 97,
+                      "startColumn": 23,
+                      "endColumn": 45
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 84,
+                      "startColumn": 15,
+                      "endColumn": 30
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for check_secrets()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 84,
+                      "startColumn": 5,
+                      "endColumn": 12
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for secrets"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 94,
+                      "startColumn": 35,
+                      "endColumn": 42
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for secrets"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 94,
+                      "startColumn": 35,
+                      "endColumn": 50
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "dict.items",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 94,
+                      "startColumn": 13,
+                      "endColumn": 31
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Tuple"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 94,
+                      "startColumn": 13,
+                      "endColumn": 19
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for secret"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 97,
+                      "startColumn": 23,
+                      "endColumn": 45
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 84,
+                      "startColumn": 15,
+                      "endColumn": 30
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for check_secrets()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 94,
+                      "startColumn": 35,
+                      "endColumn": 42
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for secrets"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 94,
+                      "startColumn": 35,
+                      "endColumn": 50
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "dict.items",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 94,
+                      "startColumn": 13,
+                      "endColumn": 31
+                    }
+                  },
+                  "message": {
+                    "text": "IterableElement"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 94,
+                      "startColumn": 13,
+                      "endColumn": 31
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Tuple [Tuple element at index 0]"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 94,
+                      "startColumn": 13,
+                      "endColumn": 19
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for secret"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 97,
+                      "startColumn": 23,
+                      "endColumn": 45
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "scripts/verify_github_actions.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 84,
+            "startColumn": 15,
+            "endColumn": 30
+          }
+        },
+        "message": {
+          "text": "sensitive data (secret)"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "scripts/verify_github_actions.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 84,
+            "startColumn": 15,
+            "endColumn": 30
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ruleId": "py/clear-text-logging-sensitive-data",
+    "ruleIndex": 28,
+    "rule": {
+      "id": "py/clear-text-logging-sensitive-data",
+      "index": 28
+    },
+    "message": {
+      "text": "This expression logs [sensitive data (secret)](1) as clear text."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "scripts/verify_github_actions.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 130,
+            "startColumn": 15,
+            "endColumn": 78
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "d27804d786f7ee76:1",
+      "primaryLocationStartColumnFingerprint": "6"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 84,
+                      "startColumn": 15,
+                      "endColumn": 30
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for check_secrets()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 122,
+                      "startColumn": 39,
+                      "endColumn": 46
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for secrets"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 122,
+                      "startColumn": 39,
+                      "endColumn": 54
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "dict.items",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 122,
+                      "startColumn": 24,
+                      "endLine": 123,
+                      "endColumn": 86
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for .0"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 122,
+                      "startColumn": 31,
+                      "endColumn": 32
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for s"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 122,
+                      "startColumn": 25,
+                      "endColumn": 26
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Yield"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 122,
+                      "startColumn": 24,
+                      "endLine": 123,
+                      "endColumn": 86
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for ListComp"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 122,
+                      "startColumn": 5,
+                      "endColumn": 21
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for missing_optional"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 130,
+                      "startColumn": 15,
+                      "endColumn": 78
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 84,
+                      "startColumn": 15,
+                      "endColumn": 30
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for check_secrets()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 84,
+                      "startColumn": 5,
+                      "endColumn": 12
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for secrets"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 122,
+                      "startColumn": 39,
+                      "endColumn": 46
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for secrets"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 122,
+                      "startColumn": 39,
+                      "endColumn": 54
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "dict.items",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 122,
+                      "startColumn": 24,
+                      "endLine": 123,
+                      "endColumn": 86
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for .0"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 122,
+                      "startColumn": 31,
+                      "endColumn": 35
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Tuple"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 122,
+                      "startColumn": 31,
+                      "endColumn": 32
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for s"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 122,
+                      "startColumn": 25,
+                      "endColumn": 26
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Yield"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 122,
+                      "startColumn": 24,
+                      "endLine": 123,
+                      "endColumn": 86
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for ListComp"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 122,
+                      "startColumn": 5,
+                      "endColumn": 21
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for missing_optional"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 130,
+                      "startColumn": 15,
+                      "endColumn": 78
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 84,
+                      "startColumn": 15,
+                      "endColumn": 30
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for check_secrets()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 122,
+                      "startColumn": 39,
+                      "endColumn": 46
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for secrets"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 122,
+                      "startColumn": 39,
+                      "endColumn": 54
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "dict.items",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 122,
+                      "startColumn": 24,
+                      "endLine": 123,
+                      "endColumn": 86
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for .0"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 122,
+                      "startColumn": 31,
+                      "endColumn": 35
+                    }
+                  },
+                  "message": {
+                    "text": "IterableElement"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 122,
+                      "startColumn": 31,
+                      "endColumn": 35
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Tuple [Tuple element at index 0]"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 122,
+                      "startColumn": 31,
+                      "endColumn": 32
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for s"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 122,
+                      "startColumn": 25,
+                      "endColumn": 26
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Yield"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 122,
+                      "startColumn": 24,
+                      "endLine": 123,
+                      "endColumn": 86
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for ListComp"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 122,
+                      "startColumn": 5,
+                      "endColumn": 21
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for missing_optional"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "scripts/verify_github_actions.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 130,
+                      "startColumn": 15,
+                      "endColumn": 78
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "scripts/verify_github_actions.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 84,
+            "startColumn": 15,
+            "endColumn": 30
+          }
+        },
+        "message": {
+          "text": "sensitive data (secret)"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "scripts/verify_github_actions.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 84,
+            "startColumn": 15,
+            "endColumn": 30
+          }
+        }
+      }
+    ]
+  }
+]

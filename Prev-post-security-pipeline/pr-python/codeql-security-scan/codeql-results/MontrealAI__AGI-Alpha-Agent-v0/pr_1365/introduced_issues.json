@@ -1,0 +1,53 @@
+[
+  {
+    "ruleId": "py/incomplete-url-substring-sanitization",
+    "ruleIndex": 18,
+    "rule": {
+      "id": "py/incomplete-url-substring-sanitization",
+      "index": 18
+    },
+    "message": {
+      "text": "The string [https://api.openai.com](1) may be at an arbitrary position in the sanitized URL."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "tests/security/test_csp.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 29,
+            "startColumn": 20,
+            "endColumn": 54
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "f7e6f08eeb07b35f:1",
+      "primaryLocationStartColumnFingerprint": "7"
+    },
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "tests/security/test_csp.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 29,
+            "startColumn": 20,
+            "endColumn": 44
+          }
+        },
+        "message": {
+          "text": "https://api.openai.com"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,53 @@
+[
+  {
+    "ruleId": "py/incomplete-url-substring-sanitization",
+    "ruleIndex": 18,
+    "rule": {
+      "id": "py/incomplete-url-substring-sanitization",
+      "index": 18
+    },
+    "message": {
+      "text": "The string [skyvern.com](1) may be at an arbitrary position in the sanitized URL."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "skyvern/cli/commands.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 477,
+            "startColumn": 54,
+            "endColumn": 79
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "cbb14e51fa619fcd:1",
+      "primaryLocationStartColumnFingerprint": "37"
+    },
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "skyvern/cli/commands.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 477,
+            "startColumn": 54,
+            "endColumn": 67
+          }
+        },
+        "message": {
+          "text": "skyvern.com"
+        }
+      }
+    ]
+  }
+]

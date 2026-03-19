@@ -1,0 +1,115 @@
+[
+  {
+    "ruleId": "py/clear-text-logging-sensitive-data",
+    "ruleIndex": 28,
+    "rule": {
+      "id": "py/clear-text-logging-sensitive-data",
+      "index": 28
+    },
+    "message": {
+      "text": "This expression logs [sensitive data (private)](1) as clear text."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "test_comprehensive.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 2
+          },
+          "region": {
+            "startLine": 82,
+            "startColumn": 15,
+            "endColumn": 64
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "b2d4cf4203292792:1",
+      "primaryLocationStartColumnFingerprint": "6"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "test_comprehensive.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 2
+                    },
+                    "region": {
+                      "startLine": 82,
+                      "startColumn": 41,
+                      "endColumn": 62
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "test_comprehensive.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 2
+                    },
+                    "region": {
+                      "startLine": 82,
+                      "startColumn": 15,
+                      "endColumn": 64
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "test_comprehensive.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 2
+          },
+          "region": {
+            "startLine": 82,
+            "startColumn": 41,
+            "endColumn": 62
+          }
+        },
+        "message": {
+          "text": "sensitive data (private)"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "test_comprehensive.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 2
+          },
+          "region": {
+            "startLine": 82,
+            "startColumn": 41,
+            "endColumn": 62
+          }
+        }
+      }
+    ]
+  }
+]

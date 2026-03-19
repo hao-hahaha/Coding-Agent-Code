@@ -1,0 +1,1186 @@
+[
+  {
+    "ruleId": "py/clear-text-storage-sensitive-data",
+    "ruleIndex": 27,
+    "rule": {
+      "id": "py/clear-text-storage-sensitive-data",
+      "index": 27
+    },
+    "message": {
+      "text": "This expression stores [sensitive data (password)](1) as clear text.\nThis expression stores [sensitive data (password)](2) as clear text.\nThis expression stores [sensitive data (password)](3) as clear text.\nThis expression stores [sensitive data (password)](4) as clear text."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "releases/build/installer.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 273,
+            "startColumn": 21,
+            "endColumn": 25
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "60ce2045f04da3bc:1",
+      "primaryLocationStartColumnFingerprint": "8"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 265,
+                      "startColumn": 32,
+                      "endColumn": 39
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for api_key"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 269,
+                      "startColumn": 51,
+                      "endColumn": 79
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 269,
+                      "startColumn": 16,
+                      "endColumn": 86
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "re.sub",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 269,
+                      "startColumn": 9,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for data"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 270,
+                      "startColumn": 93,
+                      "endColumn": 97
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for data"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 270,
+                      "startColumn": 16,
+                      "endColumn": 98
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "re.sub",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 270,
+                      "startColumn": 9,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for data"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 271,
+                      "startColumn": 80,
+                      "endColumn": 84
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for data"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 271,
+                      "startColumn": 16,
+                      "endColumn": 85
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "re.sub",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 271,
+                      "startColumn": 9,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for data"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 273,
+                      "startColumn": 21,
+                      "endColumn": 25
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for data"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 340,
+                      "startColumn": 52,
+                      "endColumn": 64
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 265,
+                      "startColumn": 32,
+                      "endColumn": 39
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for api_key"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 269,
+                      "startColumn": 51,
+                      "endColumn": 79
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 269,
+                      "startColumn": 16,
+                      "endColumn": 86
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "re.sub",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 269,
+                      "startColumn": 9,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for data"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 270,
+                      "startColumn": 93,
+                      "endColumn": 97
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for data"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 270,
+                      "startColumn": 16,
+                      "endColumn": 98
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "re.sub",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 270,
+                      "startColumn": 9,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for data"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 271,
+                      "startColumn": 80,
+                      "endColumn": 84
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for data"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 271,
+                      "startColumn": 16,
+                      "endColumn": 85
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "re.sub",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 271,
+                      "startColumn": 9,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for data"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 273,
+                      "startColumn": 21,
+                      "endColumn": 25
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for data"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 369,
+                      "startColumn": 60,
+                      "endColumn": 72
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 265,
+                      "startColumn": 32,
+                      "endColumn": 39
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for api_key"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 269,
+                      "startColumn": 51,
+                      "endColumn": 79
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 269,
+                      "startColumn": 16,
+                      "endColumn": 86
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "re.sub",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 269,
+                      "startColumn": 9,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for data"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 270,
+                      "startColumn": 93,
+                      "endColumn": 97
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for data"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 270,
+                      "startColumn": 16,
+                      "endColumn": 98
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "re.sub",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 270,
+                      "startColumn": 9,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for data"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 271,
+                      "startColumn": 80,
+                      "endColumn": 84
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for data"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 271,
+                      "startColumn": 16,
+                      "endColumn": 85
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "re.sub",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 271,
+                      "startColumn": 9,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for data"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 273,
+                      "startColumn": 21,
+                      "endColumn": 25
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for data"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 378,
+                      "startColumn": 48,
+                      "endColumn": 60
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 265,
+                      "startColumn": 32,
+                      "endColumn": 39
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for api_key"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 269,
+                      "startColumn": 51,
+                      "endColumn": 79
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 269,
+                      "startColumn": 16,
+                      "endColumn": 86
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "re.sub",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 269,
+                      "startColumn": 9,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for data"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 270,
+                      "startColumn": 93,
+                      "endColumn": 97
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for data"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 270,
+                      "startColumn": 16,
+                      "endColumn": 98
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "re.sub",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 270,
+                      "startColumn": 9,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for data"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 271,
+                      "startColumn": 80,
+                      "endColumn": 84
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for data"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 271,
+                      "startColumn": 16,
+                      "endColumn": 85
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "re.sub",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 271,
+                      "startColumn": 9,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for data"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "releases/build/installer.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 273,
+                      "startColumn": 21,
+                      "endColumn": 25
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for data"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "releases/build/installer.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 265,
+            "startColumn": 32,
+            "endColumn": 39
+          }
+        },
+        "message": {
+          "text": "sensitive data (password)"
+        }
+      },
+      {
+        "id": 2,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "releases/build/installer.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 340,
+            "startColumn": 52,
+            "endColumn": 64
+          }
+        },
+        "message": {
+          "text": "sensitive data (password)"
+        }
+      },
+      {
+        "id": 3,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "releases/build/installer.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 369,
+            "startColumn": 60,
+            "endColumn": 72
+          }
+        },
+        "message": {
+          "text": "sensitive data (password)"
+        }
+      },
+      {
+        "id": 4,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "releases/build/installer.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 378,
+            "startColumn": 48,
+            "endColumn": 60
+          }
+        },
+        "message": {
+          "text": "sensitive data (password)"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "releases/build/installer.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 265,
+            "startColumn": 32,
+            "endColumn": 39
+          }
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "releases/build/installer.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 340,
+            "startColumn": 52,
+            "endColumn": 64
+          }
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "releases/build/installer.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 369,
+            "startColumn": 60,
+            "endColumn": 72
+          }
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "releases/build/installer.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 378,
+            "startColumn": 48,
+            "endColumn": 60
+          }
+        }
+      }
+    ]
+  }
+]

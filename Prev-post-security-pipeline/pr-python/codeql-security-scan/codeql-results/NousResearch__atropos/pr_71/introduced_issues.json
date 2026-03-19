@@ -1,0 +1,457 @@
+[
+  {
+    "ruleId": "py/stack-trace-exposure",
+    "ruleIndex": 1,
+    "rule": {
+      "id": "py/stack-trace-exposure",
+      "index": 1
+    },
+    "message": {
+      "text": "[Stack trace information](1) flows to this location and may be exposed to an external user."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "environments/community/ufc_prediction_env/ufc_predictor_ui.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 2
+          },
+          "region": {
+            "startLine": 102,
+            "startColumn": 24,
+            "endColumn": 59
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "732a95ae7a04cbc:1",
+      "primaryLocationStartColumnFingerprint": "15"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "environments/community/ufc_prediction_env/ufc_predictor_ui.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 2
+                    },
+                    "region": {
+                      "startLine": 101,
+                      "startColumn": 25,
+                      "endColumn": 26
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for e"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "environments/community/ufc_prediction_env/ufc_predictor_ui.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 2
+                    },
+                    "region": {
+                      "startLine": 102,
+                      "startColumn": 24,
+                      "endColumn": 59
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Dict"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "environments/community/ufc_prediction_env/ufc_predictor_ui.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 2
+          },
+          "region": {
+            "startLine": 101,
+            "startColumn": 25,
+            "endColumn": 26
+          }
+        },
+        "message": {
+          "text": "Stack trace information"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "environments/community/ufc_prediction_env/ufc_predictor_ui.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 2
+          },
+          "region": {
+            "startLine": 101,
+            "startColumn": 25,
+            "endColumn": 26
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ruleId": "py/flask-debug",
+    "ruleIndex": 20,
+    "rule": {
+      "id": "py/flask-debug",
+      "index": 20
+    },
+    "message": {
+      "text": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "environments/community/ufc_prediction_env/ufc_predictor_ui.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 2
+          },
+          "region": {
+            "startLine": 106,
+            "startColumn": 5,
+            "endColumn": 24
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "592eb5113a7053ce:1",
+      "primaryLocationStartColumnFingerprint": "0"
+    }
+  },
+  {
+    "ruleId": "py/insecure-temporary-file",
+    "ruleIndex": 24,
+    "rule": {
+      "id": "py/insecure-temporary-file",
+      "index": 24
+    },
+    "message": {
+      "text": "Call to deprecated function tempfile.mktemp may be insecure."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "environments/community/pytorch_optimizer_coding/FOB/pytorch_fob/engine/slurm.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 3
+          },
+          "region": {
+            "startLine": 54,
+            "startColumn": 9,
+            "endColumn": 39
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "fc6d9438adb76467:1",
+      "primaryLocationStartColumnFingerprint": "4"
+    }
+  },
+  {
+    "ruleId": "py/path-injection",
+    "ruleIndex": 35,
+    "rule": {
+      "id": "py/path-injection",
+      "index": 35
+    },
+    "message": {
+      "text": "This path depends on a [user-provided value](1)."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "environments/community/dynastai/src/web/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 5
+          },
+          "region": {
+            "startLine": 322,
+            "startColumn": 25,
+            "endColumn": 36
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "4596c33cd17f80b:1",
+      "primaryLocationStartColumnFingerprint": "12"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "environments/community/dynastai/src/web/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 233,
+                      "startColumn": 21,
+                      "endColumn": 28
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for request"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "environments/community/dynastai/src/web/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 284,
+                      "startColumn": 9,
+                      "endColumn": 20
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for stdout_file"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "environments/community/dynastai/src/web/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 322,
+                      "startColumn": 25,
+                      "endColumn": 36
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for stdout_file"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "environments/community/dynastai/src/web/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 5
+          },
+          "region": {
+            "startLine": 233,
+            "startColumn": 21,
+            "endColumn": 28
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "environments/community/dynastai/src/web/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 5
+          },
+          "region": {
+            "startLine": 233,
+            "startColumn": 21,
+            "endColumn": 28
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ruleId": "py/path-injection",
+    "ruleIndex": 35,
+    "rule": {
+      "id": "py/path-injection",
+      "index": 35
+    },
+    "message": {
+      "text": "This path depends on a [user-provided value](1)."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "environments/community/dynastai/src/web/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 5
+          },
+          "region": {
+            "startLine": 323,
+            "startColumn": 25,
+            "endColumn": 36
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "2d1088d4dd24f8a1:1",
+      "primaryLocationStartColumnFingerprint": "12"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "environments/community/dynastai/src/web/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 233,
+                      "startColumn": 21,
+                      "endColumn": 28
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for request"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "environments/community/dynastai/src/web/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 287,
+                      "startColumn": 9,
+                      "endColumn": 20
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for stderr_file"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "environments/community/dynastai/src/web/api.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 323,
+                      "startColumn": 25,
+                      "endColumn": 36
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for stderr_file"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "environments/community/dynastai/src/web/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 5
+          },
+          "region": {
+            "startLine": 233,
+            "startColumn": 21,
+            "endColumn": 28
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "environments/community/dynastai/src/web/api.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 5
+          },
+          "region": {
+            "startLine": 233,
+            "startColumn": 21,
+            "endColumn": 28
+          }
+        }
+      }
+    ]
+  }
+]

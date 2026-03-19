@@ -1,0 +1,614 @@
+[
+  {
+    "ruleId": "py/weak-sensitive-data-hashing",
+    "ruleIndex": 10,
+    "rule": {
+      "id": "py/weak-sensitive-data-hashing",
+      "index": 10
+    },
+    "message": {
+      "text": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](2) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](3) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](4) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "codebase-architectures/atomic-composable-architecture/atom/auth.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 36,
+            "startColumn": 29,
+            "endColumn": 55
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "c91140ff5a47ae4b:1",
+      "primaryLocationStartColumnFingerprint": "24"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "codebase-architectures/atomic-composable-architecture/atom/auth.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 21,
+                      "startColumn": 19,
+                      "endColumn": 27
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for password"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "codebase-architectures/atomic-composable-architecture/atom/auth.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 36,
+                      "startColumn": 29,
+                      "endColumn": 55
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "codebase-architectures/atomic-composable-architecture/atom/auth.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 39,
+                      "startColumn": 21,
+                      "endColumn": 29
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for password"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "codebase-architectures/atomic-composable-architecture/atom/auth.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 51,
+                      "startColumn": 40,
+                      "endColumn": 48
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for password"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "codebase-architectures/atomic-composable-architecture/atom/auth.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 21,
+                      "startColumn": 19,
+                      "endColumn": 27
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for password"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "codebase-architectures/atomic-composable-architecture/atom/auth.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 36,
+                      "startColumn": 29,
+                      "endColumn": 55
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "codebase-architectures/atomic-composable-architecture/atom/auth.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 54,
+                      "startColumn": 34,
+                      "endColumn": 42
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for password"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "codebase-architectures/atomic-composable-architecture/atom/auth.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 72,
+                      "startColumn": 43,
+                      "endColumn": 51
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for password"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "codebase-architectures/atomic-composable-architecture/atom/auth.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 21,
+                      "startColumn": 19,
+                      "endColumn": 27
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for password"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "codebase-architectures/atomic-composable-architecture/atom/auth.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 36,
+                      "startColumn": 29,
+                      "endColumn": 55
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "codebase-architectures/atomic-composable-architecture/atom/auth.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 87,
+                      "startColumn": 33,
+                      "endColumn": 41
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for password"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "codebase-architectures/atomic-composable-architecture/atom/auth.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 102,
+                      "startColumn": 24,
+                      "endColumn": 32
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for password"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "codebase-architectures/atomic-composable-architecture/atom/auth.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 39,
+                      "startColumn": 21,
+                      "endColumn": 29
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for password"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "codebase-architectures/atomic-composable-architecture/atom/auth.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 51,
+                      "startColumn": 40,
+                      "endColumn": 48
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for password"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "codebase-architectures/atomic-composable-architecture/atom/auth.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 21,
+                      "startColumn": 19,
+                      "endColumn": 27
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for password"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "codebase-architectures/atomic-composable-architecture/atom/auth.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 0
+                    },
+                    "region": {
+                      "startLine": 36,
+                      "startColumn": 29,
+                      "endColumn": 55
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "codebase-architectures/atomic-composable-architecture/atom/auth.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 21,
+            "startColumn": 19,
+            "endColumn": 27
+          }
+        },
+        "message": {
+          "text": "Sensitive data (password)"
+        }
+      },
+      {
+        "id": 2,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "codebase-architectures/atomic-composable-architecture/atom/auth.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 39,
+            "startColumn": 21,
+            "endColumn": 29
+          }
+        },
+        "message": {
+          "text": "Sensitive data (password)"
+        }
+      },
+      {
+        "id": 3,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "codebase-architectures/atomic-composable-architecture/atom/auth.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 54,
+            "startColumn": 34,
+            "endColumn": 42
+          }
+        },
+        "message": {
+          "text": "Sensitive data (password)"
+        }
+      },
+      {
+        "id": 4,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "codebase-architectures/atomic-composable-architecture/atom/auth.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 87,
+            "startColumn": 33,
+            "endColumn": 41
+          }
+        },
+        "message": {
+          "text": "Sensitive data (password)"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "codebase-architectures/atomic-composable-architecture/atom/auth.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 21,
+            "startColumn": 19,
+            "endColumn": 27
+          }
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "codebase-architectures/atomic-composable-architecture/atom/auth.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 39,
+            "startColumn": 21,
+            "endColumn": 29
+          }
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "codebase-architectures/atomic-composable-architecture/atom/auth.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 54,
+            "startColumn": 34,
+            "endColumn": 42
+          }
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "codebase-architectures/atomic-composable-architecture/atom/auth.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 87,
+            "startColumn": 33,
+            "endColumn": 41
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ruleId": "py/clear-text-logging-sensitive-data",
+    "ruleIndex": 28,
+    "rule": {
+      "id": "py/clear-text-logging-sensitive-data",
+      "index": 28
+    },
+    "message": {
+      "text": "This expression logs [sensitive data (private)](1) as clear text."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "codebase-architectures/atomic-composable-architecture/atom/notifications.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 173,
+            "startColumn": 11,
+            "endColumn": 38
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "6527ca58efe0ccb2:1",
+      "primaryLocationStartColumnFingerprint": "6"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "codebase-architectures/atomic-composable-architecture/atom/notifications.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 161,
+                      "startColumn": 27,
+                      "endColumn": 39
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for phone_number"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "codebase-architectures/atomic-composable-architecture/atom/notifications.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 173,
+                      "startColumn": 11,
+                      "endColumn": 38
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "codebase-architectures/atomic-composable-architecture/atom/notifications.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 161,
+            "startColumn": 27,
+            "endColumn": 39
+          }
+        },
+        "message": {
+          "text": "sensitive data (private)"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "codebase-architectures/atomic-composable-architecture/atom/notifications.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 161,
+            "startColumn": 27,
+            "endColumn": 39
+          }
+        }
+      }
+    ]
+  }
+]

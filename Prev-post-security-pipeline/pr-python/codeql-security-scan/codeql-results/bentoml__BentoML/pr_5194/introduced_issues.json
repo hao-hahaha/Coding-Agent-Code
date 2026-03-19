@@ -1,0 +1,1773 @@
+[
+  {
+    "ruleId": "py/clear-text-logging-sensitive-data",
+    "ruleIndex": 28,
+    "rule": {
+      "id": "py/clear-text-logging-sensitive-data",
+      "index": 28
+    },
+    "message": {
+      "text": "This expression logs [sensitive data (secret)](1) as clear text."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "src/bentoml/_internal/bento/bento.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 3
+          },
+          "region": {
+            "startLine": 294,
+            "startColumn": 76,
+            "endColumn": 85
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "fb6da2a09f19ff73:1",
+      "primaryLocationStartColumnFingerprint": "63"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 132,
+                      "startColumn": 33,
+                      "endColumn": 45
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 126,
+                      "startColumn": 29,
+                      "endLine": 134,
+                      "endColumn": 18
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for List"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 124,
+                      "startColumn": 29,
+                      "endLine": 136,
+                      "endColumn": 14
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for .0"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 126,
+                      "startColumn": 21,
+                      "endColumn": 22
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for k"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 125,
+                      "startColumn": 17,
+                      "endColumn": 21
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Yield"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 124,
+                      "startColumn": 29,
+                      "endLine": 136,
+                      "endColumn": 14
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for DictComp"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 124,
+                      "startColumn": 13,
+                      "endColumn": 17
+                    }
+                  },
+                  "message": {
+                    "text": "[post] ControlFlowNode for self [Attribute cfg_dict]"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 138,
+                      "startColumn": 13,
+                      "endColumn": 17
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for self [Attribute cfg_dict]"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 179,
+                      "startColumn": 22,
+                      "endColumn": 26
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for self [Attribute cfg_dict]"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 179,
+                      "startColumn": 22,
+                      "endColumn": 35
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 179,
+                      "startColumn": 22,
+                      "endColumn": 48
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "dict.get",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 179,
+                      "startColumn": 9,
+                      "endColumn": 19
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for bento_name"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 187,
+                      "startColumn": 34,
+                      "endColumn": 44
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for bento_name"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 330,
+                      "startColumn": 5,
+                      "endColumn": 17
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for project_path"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 350,
+                      "startColumn": 23,
+                      "endColumn": 35
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for project_path"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/bentos.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 382,
+                      "startColumn": 5,
+                      "endColumn": 14
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for build_ctx"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/bentos.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 435,
+                      "startColumn": 19,
+                      "endColumn": 28
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for build_ctx"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/bento/bento.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 3
+                    },
+                    "region": {
+                      "startLine": 239,
+                      "startColumn": 9,
+                      "endColumn": 18
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for build_ctx"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/bento/bento.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 3
+                    },
+                    "region": {
+                      "startLine": 252,
+                      "startColumn": 9,
+                      "endColumn": 18
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for build_ctx"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/bento/bento.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 3
+                    },
+                    "region": {
+                      "startLine": 294,
+                      "startColumn": 76,
+                      "endColumn": 85
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for build_ctx"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 132,
+                      "startColumn": 33,
+                      "endColumn": 45
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 132,
+                      "startColumn": 22,
+                      "endColumn": 45
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Tuple [Tuple element at index 1]"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 126,
+                      "startColumn": 29,
+                      "endLine": 134,
+                      "endColumn": 18
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for List [List element, Tuple element at index 1]"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 124,
+                      "startColumn": 29,
+                      "endLine": 136,
+                      "endColumn": 14
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for .0 [List element, Tuple element at index 1]"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 126,
+                      "startColumn": 21,
+                      "endColumn": 25
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Tuple [Tuple element at index 1]"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 126,
+                      "startColumn": 24,
+                      "endColumn": 25
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for v"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 125,
+                      "startColumn": 17,
+                      "endColumn": 21
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Yield"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 124,
+                      "startColumn": 29,
+                      "endLine": 136,
+                      "endColumn": 14
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for DictComp"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 124,
+                      "startColumn": 13,
+                      "endColumn": 17
+                    }
+                  },
+                  "message": {
+                    "text": "[post] ControlFlowNode for self [Attribute cfg_dict]"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 138,
+                      "startColumn": 13,
+                      "endColumn": 17
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for self [Attribute cfg_dict]"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 179,
+                      "startColumn": 22,
+                      "endColumn": 26
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for self [Attribute cfg_dict]"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 179,
+                      "startColumn": 22,
+                      "endColumn": 35
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 179,
+                      "startColumn": 22,
+                      "endColumn": 48
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "dict.get",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 179,
+                      "startColumn": 9,
+                      "endColumn": 19
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for bento_name"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 187,
+                      "startColumn": 34,
+                      "endColumn": 44
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for bento_name"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 330,
+                      "startColumn": 5,
+                      "endColumn": 17
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for project_path"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 350,
+                      "startColumn": 23,
+                      "endColumn": 35
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for project_path"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/bentos.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 382,
+                      "startColumn": 5,
+                      "endColumn": 14
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for build_ctx"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/bentos.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 435,
+                      "startColumn": 19,
+                      "endColumn": 28
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for build_ctx"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/bento/bento.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 3
+                    },
+                    "region": {
+                      "startLine": 239,
+                      "startColumn": 9,
+                      "endColumn": 18
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for build_ctx"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/bento/bento.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 3
+                    },
+                    "region": {
+                      "startLine": 252,
+                      "startColumn": 9,
+                      "endColumn": 18
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for build_ctx"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/bento/bento.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 3
+                    },
+                    "region": {
+                      "startLine": 294,
+                      "startColumn": 76,
+                      "endColumn": 85
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for build_ctx"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 132,
+                      "startColumn": 33,
+                      "endColumn": 45
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 132,
+                      "startColumn": 22,
+                      "endColumn": 45
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Tuple"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 126,
+                      "startColumn": 29,
+                      "endLine": 134,
+                      "endColumn": 18
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for List [List element]"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 124,
+                      "startColumn": 29,
+                      "endLine": 136,
+                      "endColumn": 14
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for .0 [List element]"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 126,
+                      "startColumn": 21,
+                      "endColumn": 25
+                    }
+                  },
+                  "message": {
+                    "text": "IterableSequence"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 126,
+                      "startColumn": 21,
+                      "endColumn": 22
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for k"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 125,
+                      "startColumn": 17,
+                      "endColumn": 21
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Yield"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 124,
+                      "startColumn": 29,
+                      "endLine": 136,
+                      "endColumn": 14
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for DictComp"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 124,
+                      "startColumn": 13,
+                      "endColumn": 17
+                    }
+                  },
+                  "message": {
+                    "text": "[post] ControlFlowNode for self [Attribute cfg_dict]"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 138,
+                      "startColumn": 13,
+                      "endColumn": 17
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for self [Attribute cfg_dict]"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 179,
+                      "startColumn": 22,
+                      "endColumn": 26
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for self [Attribute cfg_dict]"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 179,
+                      "startColumn": 22,
+                      "endColumn": 35
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 179,
+                      "startColumn": 22,
+                      "endColumn": 48
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "dict.get",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 179,
+                      "startColumn": 9,
+                      "endColumn": 19
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for bento_name"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 187,
+                      "startColumn": 34,
+                      "endColumn": 44
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for bento_name"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 330,
+                      "startColumn": 5,
+                      "endColumn": 17
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for project_path"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 350,
+                      "startColumn": 23,
+                      "endColumn": 35
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for project_path"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/bentos.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 382,
+                      "startColumn": 5,
+                      "endColumn": 14
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for build_ctx"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/bentos.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 435,
+                      "startColumn": 19,
+                      "endColumn": 28
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for build_ctx"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/bento/bento.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 3
+                    },
+                    "region": {
+                      "startLine": 239,
+                      "startColumn": 9,
+                      "endColumn": 18
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for build_ctx"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/bento/bento.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 3
+                    },
+                    "region": {
+                      "startLine": 252,
+                      "startColumn": 9,
+                      "endColumn": 18
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for build_ctx"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/bento/bento.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 3
+                    },
+                    "region": {
+                      "startLine": 294,
+                      "startColumn": 76,
+                      "endColumn": 85
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for build_ctx"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 132,
+                      "startColumn": 33,
+                      "endColumn": 45
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 126,
+                      "startColumn": 29,
+                      "endLine": 134,
+                      "endColumn": 18
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for List"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 124,
+                      "startColumn": 29,
+                      "endLine": 136,
+                      "endColumn": 14
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for .0"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 126,
+                      "startColumn": 24,
+                      "endColumn": 25
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for v"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 125,
+                      "startColumn": 17,
+                      "endColumn": 21
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Yield"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 124,
+                      "startColumn": 29,
+                      "endLine": 136,
+                      "endColumn": 14
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for DictComp"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 124,
+                      "startColumn": 13,
+                      "endColumn": 17
+                    }
+                  },
+                  "message": {
+                    "text": "[post] ControlFlowNode for self [Attribute cfg_dict]"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 138,
+                      "startColumn": 13,
+                      "endColumn": 17
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for self [Attribute cfg_dict]"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 179,
+                      "startColumn": 22,
+                      "endColumn": 26
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for self [Attribute cfg_dict]"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 179,
+                      "startColumn": 22,
+                      "endColumn": 35
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 179,
+                      "startColumn": 22,
+                      "endColumn": 48
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "dict.get",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 179,
+                      "startColumn": 9,
+                      "endColumn": 19
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for bento_name"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 187,
+                      "startColumn": 34,
+                      "endColumn": 44
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for bento_name"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 330,
+                      "startColumn": 5,
+                      "endColumn": 17
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for project_path"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/cloud/deployment.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 350,
+                      "startColumn": 23,
+                      "endColumn": 35
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for project_path"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/bentos.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 382,
+                      "startColumn": 5,
+                      "endColumn": 14
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for build_ctx"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/bentos.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 435,
+                      "startColumn": 19,
+                      "endColumn": 28
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for build_ctx"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/bento/bento.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 3
+                    },
+                    "region": {
+                      "startLine": 239,
+                      "startColumn": 9,
+                      "endColumn": 18
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for build_ctx"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/bento/bento.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 3
+                    },
+                    "region": {
+                      "startLine": 252,
+                      "startColumn": 9,
+                      "endColumn": 18
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for build_ctx"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/bentoml/_internal/bento/bento.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 3
+                    },
+                    "region": {
+                      "startLine": 294,
+                      "startColumn": 76,
+                      "endColumn": 85
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for build_ctx"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "src/bentoml/_internal/cloud/deployment.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 4
+          },
+          "region": {
+            "startLine": 132,
+            "startColumn": 33,
+            "endColumn": 45
+          }
+        },
+        "message": {
+          "text": "sensitive data (secret)"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "src/bentoml/_internal/cloud/deployment.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 4
+          },
+          "region": {
+            "startLine": 132,
+            "startColumn": 33,
+            "endColumn": 45
+          }
+        }
+      }
+    ]
+  }
+]

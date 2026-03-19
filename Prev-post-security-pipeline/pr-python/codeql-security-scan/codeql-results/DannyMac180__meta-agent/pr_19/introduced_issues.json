@@ -1,0 +1,34 @@
+[
+  {
+    "ruleId": "py/jinja2/autoescape-false",
+    "ruleIndex": 47,
+    "rule": {
+      "id": "py/jinja2/autoescape-false",
+      "index": 47
+    },
+    "message": {
+      "text": "Using jinja2 templates with autoescape=False can potentially allow XSS attacks."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "src/meta_agent/generators/tool_code_generator.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 44,
+            "startColumn": 38,
+            "endLine": 48,
+            "endColumn": 14
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "9b6b0996a09bb350:1",
+      "primaryLocationStartColumnFingerprint": "25"
+    }
+  }
+]

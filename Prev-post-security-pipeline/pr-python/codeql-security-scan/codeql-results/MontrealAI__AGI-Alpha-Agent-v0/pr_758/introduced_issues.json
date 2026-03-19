@@ -1,0 +1,123 @@
+[
+  {
+    "ruleId": "py/log-injection",
+    "ruleIndex": 44,
+    "rule": {
+      "id": "py/log-injection",
+      "index": 44
+    },
+    "message": {
+      "text": "This log entry depends on a [user-provided value](1)."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "alpha_factory_v1/backend/rpc_server.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 6
+          },
+          "region": {
+            "startLine": 57,
+            "startColumn": 44,
+            "endColumn": 54
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "52afe0532ff6dfee:1",
+      "primaryLocationStartColumnFingerprint": "39"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "alpha_factory_v1/backend/rpc_server.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 6
+                    },
+                    "region": {
+                      "startLine": 54,
+                      "startColumn": 15,
+                      "endColumn": 19
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for task"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "alpha_factory_v1/backend/rpc_server.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 6
+                    },
+                    "region": {
+                      "startLine": 57,
+                      "startColumn": 44,
+                      "endColumn": 54
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "alpha_factory_v1/backend/rpc_server.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 6
+          },
+          "region": {
+            "startLine": 54,
+            "startColumn": 15,
+            "endColumn": 19
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "alpha_factory_v1/backend/rpc_server.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 6
+          },
+          "region": {
+            "startLine": 54,
+            "startColumn": 15,
+            "endColumn": 19
+          }
+        }
+      }
+    ]
+  }
+]

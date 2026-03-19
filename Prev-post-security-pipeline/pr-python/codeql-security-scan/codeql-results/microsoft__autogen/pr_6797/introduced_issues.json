@@ -1,0 +1,824 @@
+[
+  {
+    "ruleId": "py/path-injection",
+    "ruleIndex": 35,
+    "rule": {
+      "id": "py/path-injection",
+      "index": 35
+    },
+    "message": {
+      "text": "This path depends on a [user-provided value](1)."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "python/packages/autogen-studio/autogenstudio/teammanager/teammanager.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 4
+          },
+          "region": {
+            "startLine": 47,
+            "startColumn": 16,
+            "endColumn": 20
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "7cf6bd7bf633ef67:1",
+      "primaryLocationStartColumnFingerprint": "7"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/web/routes/ws.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 22,
+                      "startColumn": 5,
+                      "endColumn": 14
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for websocket"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/web/routes/ws.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 82,
+                      "startColumn": 17,
+                      "endColumn": 28
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for raw_message"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/web/routes/ws.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 83,
+                      "startColumn": 17,
+                      "endColumn": 24
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for message"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "Decoding-JSON",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/web/routes/ws.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 90,
+                      "startColumn": 35,
+                      "endColumn": 42
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for message"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/web/routes/ws.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 90,
+                      "startColumn": 35,
+                      "endColumn": 61
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "dict.get",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/web/routes/ws.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 90,
+                      "startColumn": 21,
+                      "endColumn": 32
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for team_config"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/web/routes/ws.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 93,
+                      "startColumn": 83,
+                      "endColumn": 94
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for team_config"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/web/managers/connection.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 6
+                    },
+                    "region": {
+                      "startLine": 86,
+                      "startColumn": 84,
+                      "endColumn": 95
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for team_config"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/web/managers/connection.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 6
+                    },
+                    "region": {
+                      "startLine": 114,
+                      "startColumn": 33,
+                      "endColumn": 44
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for team_config"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/teammanager/teammanager.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 106,
+                      "startColumn": 9,
+                      "endColumn": 20
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for team_config"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/teammanager/teammanager.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 122,
+                      "startColumn": 44,
+                      "endColumn": 55
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for team_config"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/teammanager/teammanager.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 77,
+                      "startColumn": 9,
+                      "endColumn": 20
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for team_config"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/teammanager/teammanager.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 83,
+                      "startColumn": 48,
+                      "endColumn": 59
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for team_config"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/teammanager/teammanager.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 44,
+                      "startColumn": 30,
+                      "endColumn": 34
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for path"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/teammanager/teammanager.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 46,
+                      "startColumn": 9,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for path"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/teammanager/teammanager.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 47,
+                      "startColumn": 16,
+                      "endColumn": 20
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for path"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "python/packages/autogen-studio/autogenstudio/web/routes/ws.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 5
+          },
+          "region": {
+            "startLine": 22,
+            "startColumn": 5,
+            "endColumn": 14
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "python/packages/autogen-studio/autogenstudio/web/routes/ws.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 5
+          },
+          "region": {
+            "startLine": 22,
+            "startColumn": 5,
+            "endColumn": 14
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ruleId": "py/path-injection",
+    "ruleIndex": 35,
+    "rule": {
+      "id": "py/path-injection",
+      "index": 35
+    },
+    "message": {
+      "text": "This path depends on a [user-provided value](1)."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "python/packages/autogen-studio/autogenstudio/teammanager/teammanager.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 4
+          },
+          "region": {
+            "startLine": 50,
+            "startColumn": 34,
+            "endColumn": 38
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "3a4064113fcbd4ab:1",
+      "primaryLocationStartColumnFingerprint": "25"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/web/routes/ws.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 22,
+                      "startColumn": 5,
+                      "endColumn": 14
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for websocket"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/web/routes/ws.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 82,
+                      "startColumn": 17,
+                      "endColumn": 28
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for raw_message"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/web/routes/ws.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 83,
+                      "startColumn": 17,
+                      "endColumn": 24
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for message"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "Decoding-JSON",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/web/routes/ws.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 90,
+                      "startColumn": 35,
+                      "endColumn": 42
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for message"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/web/routes/ws.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 90,
+                      "startColumn": 35,
+                      "endColumn": 61
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "dict.get",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/web/routes/ws.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 90,
+                      "startColumn": 21,
+                      "endColumn": 32
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for team_config"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/web/routes/ws.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 93,
+                      "startColumn": 83,
+                      "endColumn": 94
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for team_config"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/web/managers/connection.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 6
+                    },
+                    "region": {
+                      "startLine": 86,
+                      "startColumn": 84,
+                      "endColumn": 95
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for team_config"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/web/managers/connection.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 6
+                    },
+                    "region": {
+                      "startLine": 114,
+                      "startColumn": 33,
+                      "endColumn": 44
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for team_config"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/teammanager/teammanager.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 106,
+                      "startColumn": 9,
+                      "endColumn": 20
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for team_config"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/teammanager/teammanager.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 122,
+                      "startColumn": 44,
+                      "endColumn": 55
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for team_config"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/teammanager/teammanager.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 77,
+                      "startColumn": 9,
+                      "endColumn": 20
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for team_config"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/teammanager/teammanager.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 83,
+                      "startColumn": 48,
+                      "endColumn": 59
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for team_config"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/teammanager/teammanager.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 44,
+                      "startColumn": 30,
+                      "endColumn": 34
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for path"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/teammanager/teammanager.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 46,
+                      "startColumn": 9,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for path"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "python/packages/autogen-studio/autogenstudio/teammanager/teammanager.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 4
+                    },
+                    "region": {
+                      "startLine": 50,
+                      "startColumn": 34,
+                      "endColumn": 38
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for path"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "python/packages/autogen-studio/autogenstudio/web/routes/ws.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 5
+          },
+          "region": {
+            "startLine": 22,
+            "startColumn": 5,
+            "endColumn": 14
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "python/packages/autogen-studio/autogenstudio/web/routes/ws.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 5
+          },
+          "region": {
+            "startLine": 22,
+            "startColumn": 5,
+            "endColumn": 14
+          }
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,53 @@
+[
+  {
+    "ruleId": "py/incomplete-url-substring-sanitization",
+    "ruleIndex": 18,
+    "rule": {
+      "id": "py/incomplete-url-substring-sanitization",
+      "index": 18
+    },
+    "message": {
+      "text": "The string [github.com/](1) may be at an arbitrary position in the sanitized URL."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "core/utils.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 47,
+            "startColumn": 12,
+            "endColumn": 41
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "14a04e7dc7b646e8:1",
+      "primaryLocationStartColumnFingerprint": "7"
+    },
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "core/utils.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 47,
+            "startColumn": 27,
+            "endColumn": 40
+          }
+        },
+        "message": {
+          "text": "github.com/"
+        }
+      }
+    ]
+  }
+]

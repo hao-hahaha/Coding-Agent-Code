@@ -1,0 +1,53 @@
+[
+  {
+    "ruleId": "py/incomplete-url-substring-sanitization",
+    "ruleIndex": 18,
+    "rule": {
+      "id": "py/incomplete-url-substring-sanitization",
+      "index": 18
+    },
+    "message": {
+      "text": "The string [https://open.spotify.com](1) may be at an arbitrary position in the sanitized URL."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "track_extractor.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 60,
+            "startColumn": 12,
+            "endColumn": 54
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "3fc17d6a2809b11e:1",
+      "primaryLocationStartColumnFingerprint": "7"
+    },
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "track_extractor.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 60,
+            "startColumn": 27,
+            "endColumn": 53
+          }
+        },
+        "message": {
+          "text": "https://open.spotify.com"
+        }
+      }
+    ]
+  }
+]

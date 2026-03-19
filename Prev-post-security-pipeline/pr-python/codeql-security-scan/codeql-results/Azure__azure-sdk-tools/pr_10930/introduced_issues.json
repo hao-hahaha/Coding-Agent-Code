@@ -1,0 +1,115 @@
+[
+  {
+    "ruleId": "py/log-injection",
+    "ruleIndex": 44,
+    "rule": {
+      "id": "py/log-injection",
+      "index": 44
+    },
+    "message": {
+      "text": "This log entry depends on a [user-provided value](1)."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "packages/python-packages/apiview-copilot/app.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 3
+          },
+          "region": {
+            "startLine": 58,
+            "startColumn": 24,
+            "endColumn": 59
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "c92925d819c9255:1",
+      "primaryLocationStartColumnFingerprint": "15"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "packages/python-packages/apiview-copilot/app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 3
+                    },
+                    "region": {
+                      "startLine": 53,
+                      "startColumn": 24,
+                      "endColumn": 32
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for language"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "packages/python-packages/apiview-copilot/app.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 3
+                    },
+                    "region": {
+                      "startLine": 58,
+                      "startColumn": 24,
+                      "endColumn": 59
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "packages/python-packages/apiview-copilot/app.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 3
+          },
+          "region": {
+            "startLine": 53,
+            "startColumn": 24,
+            "endColumn": 32
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "packages/python-packages/apiview-copilot/app.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 3
+          },
+          "region": {
+            "startLine": 53,
+            "startColumn": 24,
+            "endColumn": 32
+          }
+        }
+      }
+    ]
+  }
+]
