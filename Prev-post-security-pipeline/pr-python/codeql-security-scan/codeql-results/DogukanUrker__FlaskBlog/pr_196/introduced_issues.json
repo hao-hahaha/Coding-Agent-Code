@@ -1,0 +1,652 @@
+[
+  {
+    "ruleId": "py/url-redirection",
+    "ruleIndex": 2,
+    "rule": {
+      "id": "py/url-redirection",
+      "index": 2
+    },
+    "message": {
+      "text": "Untrusted URL redirection depends on a [user-provided value](1)."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "app/routes/category.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 63,
+            "startColumn": 25,
+            "endColumn": 48
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "e1597236de5eeed1:1",
+      "primaryLocationStartColumnFingerprint": "16"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app/routes/category.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 22,
+                      "startColumn": 14,
+                      "endColumn": 22
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for category"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app/routes/category.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 63,
+                      "startColumn": 25,
+                      "endColumn": 48
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "app/routes/category.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 22,
+            "startColumn": 14,
+            "endColumn": 22
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "app/routes/category.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 22,
+            "startColumn": 14,
+            "endColumn": 22
+          }
+        }
+      }
+    ]
+  },
+  {
+    "ruleId": "py/sql-injection",
+    "ruleIndex": 14,
+    "rule": {
+      "id": "py/sql-injection",
+      "index": 14
+    },
+    "message": {
+      "text": "This SQL query depends on a [user-provided value](1).\nThis SQL query depends on a [user-provided value](2).\nThis SQL query depends on a [user-provided value](3).\nThis SQL query depends on a [user-provided value](4)."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "app/utils/paginate.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 5
+          },
+          "region": {
+            "startLine": 37,
+            "startColumn": 20,
+            "endColumn": 54
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "669ff8e06c918fe5:1",
+      "primaryLocationStartColumnFingerprint": "15"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app/routes/category.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 22,
+                      "startColumn": 24,
+                      "endColumn": 26
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for by"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app/routes/category.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 71,
+                      "startColumn": 9,
+                      "endColumn": 78
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app/utils/paginate.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 8,
+                      "startColumn": 42,
+                      "endColumn": 54
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for select_query"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app/utils/paginate.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 37,
+                      "startColumn": 20,
+                      "endColumn": 54
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app/routes/category.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 22,
+                      "startColumn": 40,
+                      "endColumn": 44
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for sort"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app/routes/category.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 71,
+                      "startColumn": 9,
+                      "endColumn": 78
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app/utils/paginate.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 8,
+                      "startColumn": 42,
+                      "endColumn": 54
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for select_query"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app/utils/paginate.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 37,
+                      "startColumn": 20,
+                      "endColumn": 54
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app/routes/index.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 6
+                    },
+                    "region": {
+                      "startLine": 31,
+                      "startColumn": 11,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for by"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app/routes/index.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 6
+                    },
+                    "region": {
+                      "startLine": 64,
+                      "startColumn": 9,
+                      "endColumn": 21
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for select_query"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app/routes/index.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 6
+                    },
+                    "region": {
+                      "startLine": 69,
+                      "startColumn": 9,
+                      "endColumn": 21
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for select_query"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app/utils/paginate.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 8,
+                      "startColumn": 42,
+                      "endColumn": 54
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for select_query"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app/utils/paginate.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 37,
+                      "startColumn": 20,
+                      "endColumn": 54
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app/routes/index.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 6
+                    },
+                    "region": {
+                      "startLine": 31,
+                      "startColumn": 21,
+                      "endColumn": 25
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for sort"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app/routes/index.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 6
+                    },
+                    "region": {
+                      "startLine": 59,
+                      "startColumn": 9,
+                      "endColumn": 21
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for select_query"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app/routes/index.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 6
+                    },
+                    "region": {
+                      "startLine": 69,
+                      "startColumn": 9,
+                      "endColumn": 21
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for select_query"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app/utils/paginate.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 8,
+                      "startColumn": 42,
+                      "endColumn": 54
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for select_query"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "app/utils/paginate.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 5
+                    },
+                    "region": {
+                      "startLine": 37,
+                      "startColumn": 20,
+                      "endColumn": 54
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Fstring"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "app/routes/category.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 22,
+            "startColumn": 24,
+            "endColumn": 26
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "id": 2,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "app/routes/category.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 22,
+            "startColumn": 40,
+            "endColumn": 44
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "id": 3,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "app/routes/index.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 6
+          },
+          "region": {
+            "startLine": 31,
+            "startColumn": 11,
+            "endColumn": 13
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "id": 4,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "app/routes/index.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 6
+          },
+          "region": {
+            "startLine": 31,
+            "startColumn": 21,
+            "endColumn": 25
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "app/routes/category.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 22,
+            "startColumn": 24,
+            "endColumn": 26
+          }
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "app/routes/category.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          },
+          "region": {
+            "startLine": 22,
+            "startColumn": 40,
+            "endColumn": 44
+          }
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "app/routes/index.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 6
+          },
+          "region": {
+            "startLine": 31,
+            "startColumn": 11,
+            "endColumn": 13
+          }
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "app/routes/index.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 6
+          },
+          "region": {
+            "startLine": 31,
+            "startColumn": 21,
+            "endColumn": 25
+          }
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,1491 @@
+[
+  {
+    "ruleId": "py/clear-text-logging-sensitive-data",
+    "ruleIndex": 28,
+    "rule": {
+      "id": "py/clear-text-logging-sensitive-data",
+      "index": 28
+    },
+    "message": {
+      "text": "This expression logs [sensitive data (password)](1) as clear text.\nThis expression logs [sensitive data (password)](2) as clear text."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "keep/providers/openshift_provider/openshift_provider.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 70
+          },
+          "region": {
+            "startLine": 688,
+            "startColumn": 15,
+            "endColumn": 22
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "3700e29dd758da97:1",
+      "primaryLocationStartColumnFingerprint": "6"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/trello_provider/trello_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 51
+                    },
+                    "region": {
+                      "startLine": 65,
+                      "startColumn": 26,
+                      "endColumn": 60
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/trello_provider/trello_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 51
+                    },
+                    "region": {
+                      "startLine": 65,
+                      "startColumn": 9,
+                      "endColumn": 23
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for trello_api_key"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/trello_provider/trello_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 51
+                    },
+                    "region": {
+                      "startLine": 68,
+                      "startColumn": 9,
+                      "endColumn": 20
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for request_url"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/trello_provider/trello_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 51
+                    },
+                    "region": {
+                      "startLine": 69,
+                      "startColumn": 9,
+                      "endColumn": 17
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for response"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/trello_provider/trello_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 51
+                    },
+                    "region": {
+                      "startLine": 76,
+                      "startColumn": 9,
+                      "endColumn": 14
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for cards"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/trello_provider/trello_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 51
+                    },
+                    "region": {
+                      "startLine": 77,
+                      "startColumn": 16,
+                      "endColumn": 63
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Dict"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/base/base_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 52
+                    },
+                    "region": {
+                      "startLine": 383,
+                      "startColumn": 19,
+                      "endColumn": 40
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/base/base_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 52
+                    },
+                    "region": {
+                      "startLine": 383,
+                      "startColumn": 9,
+                      "endColumn": 16
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for results"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/base/base_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 52
+                    },
+                    "region": {
+                      "startLine": 396,
+                      "startColumn": 16,
+                      "endColumn": 23
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for results"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/http_provider/http_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 59
+                    },
+                    "region": {
+                      "startLine": 66,
+                      "startColumn": 16,
+                      "endLine": 75,
+                      "endColumn": 10
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/base/base_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 52
+                    },
+                    "region": {
+                      "startLine": 192,
+                      "startColumn": 19,
+                      "endColumn": 41
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/base/base_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 52
+                    },
+                    "region": {
+                      "startLine": 192,
+                      "startColumn": 9,
+                      "endColumn": 16
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for results"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/base/base_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 52
+                    },
+                    "region": {
+                      "startLine": 200,
+                      "startColumn": 16,
+                      "endColumn": 44
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for IfExp"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/openshift_provider/openshift_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 70
+                    },
+                    "region": {
+                      "startLine": 687,
+                      "startColumn": 19,
+                      "endColumn": 124
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/openshift_provider/openshift_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 70
+                    },
+                    "region": {
+                      "startLine": 687,
+                      "startColumn": 9,
+                      "endColumn": 16
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for restart"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/openshift_provider/openshift_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 70
+                    },
+                    "region": {
+                      "startLine": 688,
+                      "startColumn": 15,
+                      "endColumn": 22
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for restart"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/trello_provider/trello_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 51
+                    },
+                    "region": {
+                      "startLine": 65,
+                      "startColumn": 26,
+                      "endColumn": 60
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/trello_provider/trello_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 51
+                    },
+                    "region": {
+                      "startLine": 65,
+                      "startColumn": 9,
+                      "endColumn": 23
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for trello_api_key"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/trello_provider/trello_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 51
+                    },
+                    "region": {
+                      "startLine": 68,
+                      "startColumn": 9,
+                      "endColumn": 20
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for request_url"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/trello_provider/trello_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 51
+                    },
+                    "region": {
+                      "startLine": 69,
+                      "startColumn": 9,
+                      "endColumn": 17
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for response"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/trello_provider/trello_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 51
+                    },
+                    "region": {
+                      "startLine": 76,
+                      "startColumn": 9,
+                      "endColumn": 14
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for cards"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/trello_provider/trello_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 51
+                    },
+                    "region": {
+                      "startLine": 77,
+                      "startColumn": 16,
+                      "endColumn": 63
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Dict"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/base/base_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 52
+                    },
+                    "region": {
+                      "startLine": 383,
+                      "startColumn": 19,
+                      "endColumn": 40
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/base/base_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 52
+                    },
+                    "region": {
+                      "startLine": 383,
+                      "startColumn": 9,
+                      "endColumn": 16
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for results"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/base/base_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 52
+                    },
+                    "region": {
+                      "startLine": 396,
+                      "startColumn": 16,
+                      "endColumn": 23
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for results"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/github_workflows_provider/github_workflows_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 58
+                    },
+                    "region": {
+                      "startLine": 56,
+                      "startColumn": 18,
+                      "endColumn": 62
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/github_workflows_provider/github_workflows_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 58
+                    },
+                    "region": {
+                      "startLine": 56,
+                      "startColumn": 9,
+                      "endColumn": 15
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for result"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/github_workflows_provider/github_workflows_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 58
+                    },
+                    "region": {
+                      "startLine": 69,
+                      "startColumn": 16,
+                      "endColumn": 22
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for result"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/base/base_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 52
+                    },
+                    "region": {
+                      "startLine": 192,
+                      "startColumn": 19,
+                      "endColumn": 41
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/base/base_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 52
+                    },
+                    "region": {
+                      "startLine": 192,
+                      "startColumn": 9,
+                      "endColumn": 16
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for results"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/base/base_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 52
+                    },
+                    "region": {
+                      "startLine": 200,
+                      "startColumn": 16,
+                      "endColumn": 44
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for IfExp"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/openshift_provider/openshift_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 70
+                    },
+                    "region": {
+                      "startLine": 687,
+                      "startColumn": 19,
+                      "endColumn": 124
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/openshift_provider/openshift_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 70
+                    },
+                    "region": {
+                      "startLine": 687,
+                      "startColumn": 9,
+                      "endColumn": 16
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for restart"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/openshift_provider/openshift_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 70
+                    },
+                    "region": {
+                      "startLine": 688,
+                      "startColumn": 15,
+                      "endColumn": 22
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for restart"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/trello_provider/trello_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 51
+                    },
+                    "region": {
+                      "startLine": 66,
+                      "startColumn": 28,
+                      "endColumn": 64
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/trello_provider/trello_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 51
+                    },
+                    "region": {
+                      "startLine": 66,
+                      "startColumn": 9,
+                      "endColumn": 25
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for trello_api_token"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/trello_provider/trello_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 51
+                    },
+                    "region": {
+                      "startLine": 68,
+                      "startColumn": 9,
+                      "endColumn": 20
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for request_url"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/trello_provider/trello_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 51
+                    },
+                    "region": {
+                      "startLine": 69,
+                      "startColumn": 9,
+                      "endColumn": 17
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for response"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/trello_provider/trello_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 51
+                    },
+                    "region": {
+                      "startLine": 76,
+                      "startColumn": 9,
+                      "endColumn": 14
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for cards"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/trello_provider/trello_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 51
+                    },
+                    "region": {
+                      "startLine": 77,
+                      "startColumn": 16,
+                      "endColumn": 63
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Dict"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/base/base_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 52
+                    },
+                    "region": {
+                      "startLine": 383,
+                      "startColumn": 19,
+                      "endColumn": 40
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/base/base_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 52
+                    },
+                    "region": {
+                      "startLine": 383,
+                      "startColumn": 9,
+                      "endColumn": 16
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for results"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/base/base_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 52
+                    },
+                    "region": {
+                      "startLine": 396,
+                      "startColumn": 16,
+                      "endColumn": 23
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for results"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/http_provider/http_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 59
+                    },
+                    "region": {
+                      "startLine": 66,
+                      "startColumn": 16,
+                      "endLine": 75,
+                      "endColumn": 10
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/base/base_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 52
+                    },
+                    "region": {
+                      "startLine": 192,
+                      "startColumn": 19,
+                      "endColumn": 41
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/base/base_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 52
+                    },
+                    "region": {
+                      "startLine": 192,
+                      "startColumn": 9,
+                      "endColumn": 16
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for results"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/base/base_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 52
+                    },
+                    "region": {
+                      "startLine": 200,
+                      "startColumn": 16,
+                      "endColumn": 44
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for IfExp"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/openshift_provider/openshift_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 70
+                    },
+                    "region": {
+                      "startLine": 687,
+                      "startColumn": 19,
+                      "endColumn": 124
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/openshift_provider/openshift_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 70
+                    },
+                    "region": {
+                      "startLine": 687,
+                      "startColumn": 9,
+                      "endColumn": 16
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for restart"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/openshift_provider/openshift_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 70
+                    },
+                    "region": {
+                      "startLine": 688,
+                      "startColumn": 15,
+                      "endColumn": 22
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for restart"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/trello_provider/trello_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 51
+                    },
+                    "region": {
+                      "startLine": 66,
+                      "startColumn": 28,
+                      "endColumn": 64
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/trello_provider/trello_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 51
+                    },
+                    "region": {
+                      "startLine": 66,
+                      "startColumn": 9,
+                      "endColumn": 25
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for trello_api_token"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/trello_provider/trello_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 51
+                    },
+                    "region": {
+                      "startLine": 68,
+                      "startColumn": 9,
+                      "endColumn": 20
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for request_url"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/trello_provider/trello_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 51
+                    },
+                    "region": {
+                      "startLine": 69,
+                      "startColumn": 9,
+                      "endColumn": 17
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for response"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/trello_provider/trello_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 51
+                    },
+                    "region": {
+                      "startLine": 76,
+                      "startColumn": 9,
+                      "endColumn": 14
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for cards"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/trello_provider/trello_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 51
+                    },
+                    "region": {
+                      "startLine": 77,
+                      "startColumn": 16,
+                      "endColumn": 63
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Dict"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/base/base_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 52
+                    },
+                    "region": {
+                      "startLine": 383,
+                      "startColumn": 19,
+                      "endColumn": 40
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/base/base_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 52
+                    },
+                    "region": {
+                      "startLine": 383,
+                      "startColumn": 9,
+                      "endColumn": 16
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for results"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/base/base_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 52
+                    },
+                    "region": {
+                      "startLine": 396,
+                      "startColumn": 16,
+                      "endColumn": 23
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for results"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/github_workflows_provider/github_workflows_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 58
+                    },
+                    "region": {
+                      "startLine": 56,
+                      "startColumn": 18,
+                      "endColumn": 62
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/github_workflows_provider/github_workflows_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 58
+                    },
+                    "region": {
+                      "startLine": 56,
+                      "startColumn": 9,
+                      "endColumn": 15
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for result"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/github_workflows_provider/github_workflows_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 58
+                    },
+                    "region": {
+                      "startLine": 69,
+                      "startColumn": 16,
+                      "endColumn": 22
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for result"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/base/base_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 52
+                    },
+                    "region": {
+                      "startLine": 192,
+                      "startColumn": 19,
+                      "endColumn": 41
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/base/base_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 52
+                    },
+                    "region": {
+                      "startLine": 192,
+                      "startColumn": 9,
+                      "endColumn": 16
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for results"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/base/base_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 52
+                    },
+                    "region": {
+                      "startLine": 200,
+                      "startColumn": 16,
+                      "endColumn": 44
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for IfExp"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/openshift_provider/openshift_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 70
+                    },
+                    "region": {
+                      "startLine": 687,
+                      "startColumn": 19,
+                      "endColumn": 124
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/openshift_provider/openshift_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 70
+                    },
+                    "region": {
+                      "startLine": 687,
+                      "startColumn": 9,
+                      "endColumn": 16
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for restart"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "keep/providers/openshift_provider/openshift_provider.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 70
+                    },
+                    "region": {
+                      "startLine": 688,
+                      "startColumn": 15,
+                      "endColumn": 22
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for restart"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "keep/providers/trello_provider/trello_provider.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 51
+          },
+          "region": {
+            "startLine": 65,
+            "startColumn": 26,
+            "endColumn": 60
+          }
+        },
+        "message": {
+          "text": "sensitive data (password)"
+        }
+      },
+      {
+        "id": 2,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "keep/providers/trello_provider/trello_provider.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 51
+          },
+          "region": {
+            "startLine": 66,
+            "startColumn": 28,
+            "endColumn": 64
+          }
+        },
+        "message": {
+          "text": "sensitive data (password)"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "keep/providers/trello_provider/trello_provider.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 51
+          },
+          "region": {
+            "startLine": 65,
+            "startColumn": 26,
+            "endColumn": 60
+          }
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "keep/providers/trello_provider/trello_provider.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 51
+          },
+          "region": {
+            "startLine": 66,
+            "startColumn": 28,
+            "endColumn": 64
+          }
+        }
+      }
+    ]
+  }
+]

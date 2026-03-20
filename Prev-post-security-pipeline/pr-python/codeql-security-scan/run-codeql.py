@@ -103,7 +103,7 @@ def main(part_id=None, num_parts=None):
         & df["merge_commit_sha"].notna()
     ].copy()
     df["pr_number"] = df["pr_number"].astype(int)
-
+    df = df[df["owner"].str.lower() != "azure"].copy()
     # ========= 分块 =========
     if part_id is not None and num_parts is not None:
 

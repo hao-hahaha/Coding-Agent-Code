@@ -1,0 +1,53 @@
+[
+  {
+    "ruleId": "py/incomplete-url-substring-sanitization",
+    "ruleIndex": 18,
+    "rule": {
+      "id": "py/incomplete-url-substring-sanitization",
+      "index": 18
+    },
+    "message": {
+      "text": "The string [slack.com](1) may be at an arbitrary position in the sanitized URL."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "alpha_factory_v1/demos/alpha_agi_insight_v1/src/utils/alerts.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 27,
+            "startColumn": 8,
+            "endColumn": 27
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "f0582127079b53eb:1",
+      "primaryLocationStartColumnFingerprint": "3"
+    },
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "alpha_factory_v1/demos/alpha_agi_insight_v1/src/utils/alerts.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          },
+          "region": {
+            "startLine": 27,
+            "startColumn": 8,
+            "endColumn": 19
+          }
+        },
+        "message": {
+          "text": "slack.com"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,237 @@
+[
+  {
+    "ruleId": "py/log-injection",
+    "ruleIndex": 44,
+    "rule": {
+      "id": "py/log-injection",
+      "index": 44
+    },
+    "message": {
+      "text": "This log entry depends on a [user-provided value](1)."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "api/api/routers/tasks.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 17
+          },
+          "region": {
+            "startLine": 487,
+            "startColumn": 65,
+            "endColumn": 87
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "f5dbc8e6bfde6714:1",
+      "primaryLocationStartColumnFingerprint": "52"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "api/api/routers/tasks.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 17
+                    },
+                    "region": {
+                      "startLine": 399,
+                      "startColumn": 5,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for agent_id"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "api/api/routers/tasks.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 17
+                    },
+                    "region": {
+                      "startLine": 497,
+                      "startColumn": 15,
+                      "endColumn": 35
+                    }
+                  },
+                  "message": {
+                    "text": "Capturing closure argument [captured Local Variable agent_id]"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "api/api/routers/tasks.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 17
+                    },
+                    "region": {
+                      "startLine": 477,
+                      "startColumn": 25,
+                      "endColumn": 33
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for agent_id"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "api/api/routers/tasks.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 17
+                    },
+                    "region": {
+                      "startLine": 487,
+                      "startColumn": 65,
+                      "endColumn": 87
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Dict"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "api/api/routers/tasks.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 17
+                    },
+                    "region": {
+                      "startLine": 399,
+                      "startColumn": 5,
+                      "endColumn": 13
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for agent_id"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "api/api/routers/tasks.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 17
+                    },
+                    "region": {
+                      "startLine": 497,
+                      "startColumn": 15,
+                      "endColumn": 35
+                    }
+                  },
+                  "message": {
+                    "text": "Capturing closure argument [captured Local Variable agent_id]"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "api/api/routers/tasks.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 17
+                    },
+                    "region": {
+                      "startLine": 487,
+                      "startColumn": 78,
+                      "endColumn": 86
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for agent_id"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "api/api/routers/tasks.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 17
+                    },
+                    "region": {
+                      "startLine": 487,
+                      "startColumn": 65,
+                      "endColumn": 87
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Dict"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "api/api/routers/tasks.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 17
+          },
+          "region": {
+            "startLine": 399,
+            "startColumn": 5,
+            "endColumn": 13
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "api/api/routers/tasks.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 17
+          },
+          "region": {
+            "startLine": 399,
+            "startColumn": 5,
+            "endColumn": 13
+          }
+        }
+      }
+    ]
+  }
+]

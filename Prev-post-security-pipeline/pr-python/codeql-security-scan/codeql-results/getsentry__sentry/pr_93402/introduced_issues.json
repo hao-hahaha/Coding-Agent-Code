@@ -1,0 +1,115 @@
+[
+  {
+    "ruleId": "py/stack-trace-exposure",
+    "ruleIndex": 1,
+    "rule": {
+      "id": "py/stack-trace-exposure",
+      "index": 1
+    },
+    "message": {
+      "text": "[Stack trace information](1) flows to this location and may be exposed to an external user."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "src/sentry/api/endpoints/project_details.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 55
+          },
+          "region": {
+            "startLine": 358,
+            "startColumn": 47,
+            "endColumn": 53
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "ab2aef393daac717:1",
+      "primaryLocationStartColumnFingerprint": "34"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/sentry/api/endpoints/project_details.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 55
+                    },
+                    "region": {
+                      "startLine": 357,
+                      "startColumn": 41,
+                      "endColumn": 42
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for e"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/sentry/api/endpoints/project_details.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 55
+                    },
+                    "region": {
+                      "startLine": 358,
+                      "startColumn": 47,
+                      "endColumn": 53
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for str()"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "src/sentry/api/endpoints/project_details.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 55
+          },
+          "region": {
+            "startLine": 357,
+            "startColumn": 41,
+            "endColumn": 42
+          }
+        },
+        "message": {
+          "text": "Stack trace information"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "src/sentry/api/endpoints/project_details.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 55
+          },
+          "region": {
+            "startLine": 357,
+            "startColumn": 41,
+            "endColumn": 42
+          }
+        }
+      }
+    ]
+  }
+]

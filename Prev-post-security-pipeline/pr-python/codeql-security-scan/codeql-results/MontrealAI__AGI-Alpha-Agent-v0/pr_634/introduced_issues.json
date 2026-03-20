@@ -1,0 +1,305 @@
+[
+  {
+    "ruleId": "py/path-injection",
+    "ruleIndex": 35,
+    "rule": {
+      "id": "py/path-injection",
+      "index": 35
+    },
+    "message": {
+      "text": "This path depends on a [user-provided value](1)."
+    },
+    "locations": [
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "alpha_factory_v1/backend/orchestrator.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 3
+          },
+          "region": {
+            "startLine": 355,
+            "startColumn": 29,
+            "endColumn": 49
+          }
+        }
+      }
+    ],
+    "partialFingerprints": {
+      "primaryLocationLineHash": "111bb2965e268c5b:1",
+      "primaryLocationStartColumnFingerprint": "8"
+    },
+    "codeFlows": [
+      {
+        "threadFlows": [
+          {
+            "locations": [
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "alpha_factory_v1/backend/orchestrator.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 3
+                    },
+                    "region": {
+                      "startLine": 339,
+                      "startColumn": 40,
+                      "endColumn": 44
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for file"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "alpha_factory_v1/backend/orchestrator.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 3
+                    },
+                    "region": {
+                      "startLine": 348,
+                      "startColumn": 34,
+                      "endColumn": 50
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute()"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "alpha_factory_v1/backend/orchestrator.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 3
+                    },
+                    "region": {
+                      "startLine": 348,
+                      "startColumn": 18,
+                      "endColumn": 51
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute() [Attribute filelist, List element, Attribute filename]"
+                  }
+                },
+                "taxa": [
+                  {
+                    "index": 0,
+                    "toolComponent": {
+                      "index": 1
+                    },
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "alpha_factory_v1/backend/orchestrator.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 3
+                    },
+                    "region": {
+                      "startLine": 348,
+                      "startColumn": 55,
+                      "endColumn": 57
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for zf [Attribute filelist, List element, Attribute filename]"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "alpha_factory_v1/backend/orchestrator.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 3
+                    },
+                    "region": {
+                      "startLine": 351,
+                      "startColumn": 29,
+                      "endColumn": 31
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for zf [Attribute filelist, List element, Attribute filename]"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "alpha_factory_v1/backend/orchestrator.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 3
+                    },
+                    "region": {
+                      "startLine": 351,
+                      "startColumn": 29,
+                      "endColumn": 42
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute() [List element, Attribute filename]"
+                  }
+                },
+                "taxa": [
+                  {
+                    "index": 1,
+                    "toolComponent": {
+                      "index": 1
+                    },
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "alpha_factory_v1/backend/orchestrator.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 3
+                    },
+                    "region": {
+                      "startLine": 351,
+                      "startColumn": 21,
+                      "endColumn": 25
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for info [Attribute filename]"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "alpha_factory_v1/backend/orchestrator.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 3
+                    },
+                    "region": {
+                      "startLine": 355,
+                      "startColumn": 36,
+                      "endColumn": 40
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for info [Attribute filename]"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "alpha_factory_v1/backend/orchestrator.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 3
+                    },
+                    "region": {
+                      "startLine": 355,
+                      "startColumn": 36,
+                      "endColumn": 49
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for Attribute"
+                  }
+                }
+              },
+              {
+                "location": {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "alpha_factory_v1/backend/orchestrator.py",
+                      "uriBaseId": "%SRCROOT%",
+                      "index": 3
+                    },
+                    "region": {
+                      "startLine": 355,
+                      "startColumn": 29,
+                      "endColumn": 49
+                    }
+                  },
+                  "message": {
+                    "text": "ControlFlowNode for BinaryExpr"
+                  }
+                },
+                "taxa": [
+                  {
+                    "id": "AdditionalTaintStep",
+                    "properties": {
+                      "CodeQL/DataflowRole": "step"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relatedLocations": [
+      {
+        "id": 1,
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "alpha_factory_v1/backend/orchestrator.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 3
+          },
+          "region": {
+            "startLine": 339,
+            "startColumn": 40,
+            "endColumn": 44
+          }
+        },
+        "message": {
+          "text": "user-provided value"
+        }
+      },
+      {
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "alpha_factory_v1/backend/orchestrator.py",
+            "uriBaseId": "%SRCROOT%",
+            "index": 3
+          },
+          "region": {
+            "startLine": 339,
+            "startColumn": 40,
+            "endColumn": 44
+          }
+        }
+      }
+    ]
+  }
+]
